@@ -215,18 +215,6 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-
-              <div className="absolute -bottom-6 -left-6 bg-slate-800 border border-amber-500/30 rounded-2xl p-5 shadow-2xl">
-                <div className="flex items-center space-x-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-xl flex items-center justify-center">
-                    <CheckCircle className="w-7 h-7 text-amber-400" />
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">NEBOSH Diploma</div>
-                    <div className="text-gray-400 text-sm">Graduate IOSH</div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
