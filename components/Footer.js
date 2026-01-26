@@ -63,8 +63,13 @@ export default function Footer() {
             <address className="not-italic space-y-3 text-gray-400 text-sm">
               <p>Warrington, Cheshire, UK</p>
               <p>
-                <a href="mailto:info@rmtsolutions.co.uk" className="hover:text-amber-400 transition">
-                  info@rmtsolutions.co.uk
+                <a href="mailto:ricky@rmtsolutions.co.uk" className="hover:text-amber-400 transition">
+                  ricky@rmtsolutions.co.uk
+                </a>
+              </p>
+              <p>
+                <a href="tel:+447803808093" className="hover:text-amber-400 transition">
+                  07803 808093
                 </a>
               </p>
             </address>
