@@ -15,20 +15,53 @@ export default function ContactPage() {
   })
 
   const [status, setStatus] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // In production, this would submit to your backend or email service
-    setStatus('Thank you for your enquiry. We will be in touch within 24 hours.')
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      service: '',
-      equipment: '',
-      message: '',
-    })
+    setIsSubmitting(true)
+    setStatus('')
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'ab804a58-66f9-44c4-8ad3-a2b6a2895839',
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || 'Not provided',
+          company: formData.company || 'Not provided',
+          service: formData.service,
+          equipment: formData.equipment || 'Not specified',
+          message: formData.message,
+          subject: `New Lift Plan Enquiry from ${formData.name}`,
+        }),
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        setStatus('Thank you for your enquiry. We will be in touch within 24 hours.')
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          service: '',
+          equipment: '',
+          message: '',
+        })
+      } else {
+        setStatus('Something went wrong. Please email us directly at ricky@rmtsolutions.co.uk')
+      }
+    } catch (error) {
+      setStatus('Something went wrong. Please email us directly at ricky@rmtsolutions.co.uk')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e) => {
@@ -200,10 +233,11 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="btn-primary w-full flex items-center justify-center"
+                    disabled={isSubmitting}
+                    className="btn-primary w-full flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Send className="w-5 h-5 mr-2" />
-                    Send Enquiry
+                    {isSubmitting ? 'Sending...' : 'Send Enquiry'}
                   </button>
                 </form>
               </div>
