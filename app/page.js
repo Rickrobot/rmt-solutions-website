@@ -15,7 +15,7 @@ const jsonLd = {
   alternateName: ['RMT Solutions', 'RMT Lift Planning'],
   description: 'Professional lift planning consultancy providing LOLER compliant lift plans, tower crane compliance contracts, steel erection planning, and excavator lift plans.',
   url: 'https://www.rmtsolutions.co.uk',
-  email: 'info@rmtsolutions.co.uk',
+  email: 'ricky@rmtsolutions.co.uk',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Warrington',
@@ -359,7 +359,7 @@ export default function HomePage() {
             <Link href="/contact" className="btn-primary">
               Request a Quote
             </Link>
-            <a href="mailto:info@rmtsolutions.co.uk" className="btn-secondary">
+            <a href="mailto:ricky@rmtsolutions.co.uk" className="btn-secondary">
               Email Us
             </a>
           </div>

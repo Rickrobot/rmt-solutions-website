@@ -237,8 +237,19 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-gray-400 text-sm mb-1">Email</div>
-                      <a href="mailto:info@rmtsolutions.co.uk" className="text-white hover:text-amber-400 transition">
-                        info@rmtsolutions.co.uk
+                      <a href="mailto:ricky@rmtsolutions.co.uk" className="text-white hover:text-amber-400 transition">
+                        ricky@rmtsolutions.co.uk
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 bg-slate-700/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-5 h-5 text-amber-400" />
+                    </div>
+                    <div>
+                      <div className="text-gray-400 text-sm mb-1">Phone</div>
+                      <a href="tel:+447803808093" className="text-white hover:text-amber-400 transition">
+                        07803 808093
                       </a>
                     </div>
                   </div>
