@@ -1,10 +1,29 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  images: {
-    unoptimized: true,
+  async redirects() {
+    return [
+      {
+        source: '/telehandler-lift-plan',
+        destination: '/services/lift-plans',
+        permanent: true,
+      },
+      {
+        source: '/telehandler-lift-plan/',
+        destination: '/services/lift-plans',
+        permanent: true,
+      },
+      {
+        source: '/excavator-lift-plan',
+        destination: '/services/lift-plans',
+        permanent: true,
+      },
+      {
+        source: '/excavator-lift-plan/',
+        destination: '/services/lift-plans',
+        permanent: true,
+      },
+    ]
   },
-  trailingSlash: true,
 }
 
 module.exports = nextConfig
