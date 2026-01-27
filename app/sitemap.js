@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://www.rmtsolutions.co.uk'
+  const baseUrl = 'https://www.rmtsafetysolutions.com'
   
   return [
     {
