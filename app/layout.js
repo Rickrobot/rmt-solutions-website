@@ -50,7 +50,7 @@ export const metadata = {
     canonical: 'https://www.rmtsafetysolutions.com',
   },
   verification: {
-    google: 'google4e6e964bf88d8528',
+    google: 'eeLZ-jEjj3GZI9Oj5ynprEilSKWFjCk3eamJqs7B5L4',
   },
 }
 
