@@ -115,13 +115,13 @@ export default function HomePage() {
       title: 'Manchester Development',
       description: '18-month tower crane AP contract.',
       category: 'Tower Crane',
-      image: null,
+      image: '/images/residential-tower-crane.webp',
     },
     {
       title: 'Utility Pipeline',
       description: 'Series of excavator lift plans for 3km pipeline.',
       category: 'Excavator',
-      image: null,
+      image: '/images/precast-concrete-lift.webp',
     },
   ]
 
