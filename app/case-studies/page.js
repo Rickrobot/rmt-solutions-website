@@ -15,7 +15,7 @@ export default function CaseStudiesPage() {
       duration: '18 months',
       description: 'Appointed Person contract for major residential development with 2 tower cranes. 8-weekly audits, lift plan review, and on-call support throughout.',
       highlights: ['2 tower cranes', '18-month contract', '8-weekly audits', '500+ lift plans reviewed'],
-      image: null,
+      image: '/images/residential-tower-crane.webp',
     },
     {
       title: 'Industrial Warehouse - Midlands',
@@ -23,7 +23,7 @@ export default function CaseStudiesPage() {
       duration: '8 weeks',
       description: 'Complete lift planning for 15,000m² warehouse steel frame erection including tandem lifts for heavy portal rafters.',
       highlights: ['15,000m² frame', 'Tandem lifts', '2 mobile cranes', 'Fabrication drawing review'],
-      image: '/images/mobile-crane-steel-erection.webp',
+      image: '/images/warehouse-steel-erection.webp',
     },
     {
       title: 'Precast Concrete Installation',
@@ -31,7 +31,7 @@ export default function CaseStudiesPage() {
       duration: '12 weeks',
       description: 'Lift planning for precast concrete element installation on commercial building. Multiple crane positions and complex logistics.',
       highlights: ['Precast elements to 12t', 'Multiple crane positions', 'Tight site access', 'Traffic management'],
-      image: '/images/mobile-crane-steel-erection.webp',
+      image: '/images/precast-concrete-lift.webp',
     },
     {
       title: 'Utilities Infrastructure',
@@ -39,7 +39,7 @@ export default function CaseStudiesPage() {
       duration: '6 months',
       description: 'Series of excavator lift plans for 3km pipeline installation including trench box handling and pipe installation.',
       highlights: ['3km pipeline', '50+ lift plans', 'Remote delivery', '48hr turnaround'],
-      image: null,
+      image: '/images/excavator-pipeline.webp',
     },
     {
       title: 'Commercial Office Development',
@@ -47,7 +47,7 @@ export default function CaseStudiesPage() {
       duration: '24 months',
       description: 'Ongoing AP contract for city centre office development with complex logistics and multiple subcontractors.',
       highlights: ['City centre site', 'Complex logistics', 'Multiple subcontractors', 'Lift plan checking'],
-      image: null,
+      image: '/images/office-development.webp',
     },
     {
       title: 'Retail Park Extension',
@@ -55,7 +55,7 @@ export default function CaseStudiesPage() {
       duration: '6 weeks',
       description: 'Lift planning for retail unit steel frame extension with live retail operations adjacent.',
       highlights: ['Live retail adjacent', 'Restricted hours', '2,500m² extension', 'Exclusion zone management'],
-      image: '/images/mobile-crane-steel-erection.webp',
+      image: '/images/retail-extension.webp',
     },
   ]
 
