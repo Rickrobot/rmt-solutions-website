@@ -579,6 +579,220 @@ const blogPosts = {
       </div>
     `,
   },
+  'excavator-lift-plans-complete-guide': {
+    title: 'Excavator Lift Plans: A Complete Guide for UK Contractors',
+    description: 'Complete guide to excavator lift plans under LOLER 1998. Learn when you need a lift plan for excavator lifting operations, requirements, and compliance.',
+    category: 'Planning',
+    readTime: '8 min read',
+    date: 'January 31, 2026',
+    image: '/images/precast-concrete-lift.webp',
+    content: `
+      <p class="lead">Excavators are primarily designed for digging, but they're frequently used for lifting operations on UK construction sites. While this versatility makes them invaluable, it also creates legal obligations under LOLER 1998.</p>
+
+      <h2>When Do You Need a Lift Plan for Excavator Operations?</h2>
+      <p>Under LOLER 1998, any lifting operation must be properly planned by a competent person. For excavators, this means you need a formal lift plan whenever the machine is used to lift and move loads rather than just digging.</p>
+
+      <p>The key distinction is simple: if the excavator bucket is replaced with lifting equipment (chains, slings, shackles) or if you're using the bucket itself to lift rather than dig, you're conducting a lifting operation that requires planning under LOLER.</p>
+
+      <h3>Common Excavator Lifting Operations</h3>
+      <ul>
+        <li><strong>Drainage and utilities work</strong> - Lifting concrete pipes, manholes, and precast chambers</li>
+        <li><strong>Groundworks</strong> - Moving precast pads, kerb stones, and road gullies</li>
+        <li><strong>General construction</strong> - Lifting materials to elevated areas and positioning steelwork</li>
+        <li><strong>Demolition support</strong> - Controlled lifting of materials and equipment</li>
+      </ul>
+
+      <h2>Legal Requirements for Excavator Lifting</h2>
+      <p>LOLER Regulation 8 requires that every lifting operation must be properly planned by a competent person, appropriately supervised, and carried out safely. For excavator lifting, this typically means engaging a CPCS Appointed Person.</p>
+
+      <h2>What Must an Excavator Lift Plan Include?</h2>
+      <p>A compliant excavator lift plan documents the safe system of work including:</p>
+      <ul>
+        <li>Excavator details and lifting capacity at various radii</li>
+        <li>Specification of lifting accessories (chains, slings, shackles)</li>
+        <li>Load description, weight, and centre of gravity</li>
+        <li>Ground bearing capacity assessment</li>
+        <li>Identification of overhead hazards and underground services</li>
+        <li>Step-by-step lifting sequence</li>
+        <li>Risk assessment and control measures</li>
+      </ul>
+
+      <h2>Understanding Excavator Lifting Capacity</h2>
+      <p>Unlike mobile cranes with published lifting capacities, excavators have limited manufacturer guidance for lifting operations. Safe lifting capacity is typically 50-75% of the maximum theoretical capacity to account for dynamic effects, ground conditions, and wear.</p>
+
+      <h2>Ground Conditions for Excavator Lifting</h2>
+      <p>Ground bearing capacity is critical for safe operations. An excavator under load applies significantly more pressure to the ground than during normal digging. The Appointed Person must assess soil type, proximity to excavations, and requirements for ground mats.</p>
+
+      <h2>Supervision and Communication</h2>
+      <p>Most excavator lifting operations require a trained slinger signaller who attaches the load, directs the operation using standard hand signals, and supervises safe execution.</p>
+
+      <h2>When to Engage an Appointed Person</h2>
+      <p>While simple excavator lifting operations might be planned by experienced site staff, engaging a CPCS Appointed Person provides legal compliance assurance, technical expertise, risk management, and professional documentation suitable for HSE inspection.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
+        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need an Excavator Lift Plan?</h3>
+        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant excavator lift plans from a CPCS Appointed Person with 35 years of construction industry experience.</p>
+        <a href="/contact" class="btn-primary inline-block">Contact Us Today</a>
+      </div>
+    `,
+  },
+  'cpcs-appointed-person-guide': {
+    title: 'CPCS Appointed Person: What They Do and Why You Need One',
+    description: 'Understanding the CPCS Appointed Person role in UK construction. Learn what an A61 Appointed Person does, when you need one, and LOLER compliance requirements.',
+    category: 'Compliance',
+    readTime: '9 min read',
+    date: 'January 31, 2026',
+    image: '/images/mobile-crane-steel-erection.webp',
+    content: `
+      <p class="lead">The CPCS Appointed Person (A61) qualification is the gold standard for lifting operations planning in UK construction. This comprehensive guide explains everything contractors need to know about Appointed Persons.</p>
+
+      <h2>What is a CPCS Appointed Person?</h2>
+      <p>An Appointed Person is someone designated to plan lifting operations under LOLER 1998. The CPCS A61 card is the industry-recognized qualification demonstrating competence to fulfill this critical safety role.</p>
+
+      <h2>CPCS A61 Qualification</h2>
+      <p>The qualification is structured in two levels:</p>
+      <ul>
+        <li><strong>A61 Basic</strong> - Qualifies holders to plan routine lifts with mobile cranes, excavators, and telehandlers</li>
+        <li><strong>A61 Advanced</strong> - Extends competence to tower cranes, tandem lifts, and complex operations requiring detailed engineering</li>
+      </ul>
+
+      <h2>When Do You Need an Appointed Person?</h2>
+      <p>BS 7121-1 provides clear guidance. An Appointed Person must plan lifts when:</p>
+      <ul>
+        <li>Risk to persons exists from the load or equipment</li>
+        <li>Specialist knowledge is required for load calculations or ground assessment</li>
+        <li>Mobile cranes are used</li>
+        <li>Multiple lifts are planned as part of a project</li>
+      </ul>
+
+      <p>On active construction sites, these criteria apply to almost all lifting operations.</p>
+
+      <h2>What Does an Appointed Person Actually Do?</h2>
+      <p>The role extends beyond writing lift plans. Responsibilities include:</p>
+      <ul>
+        <li><strong>Pre-planning assessment</strong> - Site visits, information gathering, resource assessment</li>
+        <li><strong>Creating lift plans</strong> - Equipment specification, load details, site layout, procedures, risk assessment</li>
+        <li><strong>Supervision and oversight</strong> - Pre-lift briefings, monitoring compliance, authority to stop work</li>
+      </ul>
+
+      <h2>Benefits of Using a CPCS Appointed Person</h2>
+      <h3>Legal Protection</h3>
+      <ul>
+        <li>Lifts planned by someone demonstrably competent</li>
+        <li>Documentation meets regulatory requirements</li>
+        <li>Evidence available for HSE inspections</li>
+      </ul>
+
+      <h3>Technical Expertise</h3>
+      <ul>
+        <li>Proper load calculations prevent overloading</li>
+        <li>Ground conditions correctly assessed</li>
+        <li>Appropriate equipment specified</li>
+      </ul>
+
+      <h3>Practical Experience</h3>
+      <p>An experienced Appointed Person brings industry knowledge, problem-solving ability, and a professional network for specialist support.</p>
+
+      <h2>How to Select an Appointed Person</h2>
+      <p>Look for:</p>
+      <ul>
+        <li>Valid CPCS A61 card (blue or red)</li>
+        <li>Relevant sector experience</li>
+        <li>Clear communication and professional attributes</li>
+        <li>Proactive safety culture</li>
+      </ul>
+
+      <h2>In-House vs Contracted Appointed Persons</h2>
+      <p>Many contractors use a hybrid approach: in-house Appointed Persons for routine work with consultants for complex operations or peak demand periods.</p>
+
+      <h2>The Future of Appointed Person Services</h2>
+      <p>Technology is changing how Appointed Persons work through lift planning software, 3D modeling, and remote collaboration. Despite technological advancement, core skills—technical judgment, risk assessment, and practical planning—remain fundamentally human activities.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
+        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need an Appointed Person?</h3>
+        <p class="text-gray-300 mb-6">RMT Solutions is run by Ricky Marsh, a CPCS Appointed Person (A61) with 35 years of construction industry experience and over 1,000 lift plans delivered.</p>
+        <a href="/contact" class="btn-primary inline-block">Contact Us Today</a>
+      </div>
+    `,
+  },
+  'common-lift-planning-mistakes': {
+    title: 'Common Lift Planning Mistakes (And How to Avoid Them)',
+    description: 'Learn the most common lift planning mistakes UK contractors make and how to avoid them. Expert advice on LOLER compliance, safety, and professional lift planning.',
+    category: 'Planning',
+    readTime: '10 min read',
+    date: 'January 31, 2026',
+    image: '/images/warehouse-steel-erection.webp',
+    content: `
+      <p class="lead">After reviewing over 1,000 lift plans across 35 years in construction, certain mistakes appear repeatedly. This guide examines the most common lift planning errors and how to avoid them.</p>
+
+      <h2>Mistake 1: Underestimating Load Weights</h2>
+      <p>The most fundamental error is not knowing what you're actually lifting. A 900mm diameter concrete pipe 3 meters long weighs approximately 2.5 tonnes—what appears manageable can quickly exceed equipment capacity.</p>
+
+      <h3>How to Avoid It</h3>
+      <ul>
+        <li>Always verify weights from manufacturer data sheets</li>
+        <li>Include weight of all lifting accessories</li>
+        <li>Apply realistic contingency (typically 10-15%)</li>
+        <li>Document weight sources with the lift plan</li>
+      </ul>
+
+      <h2>Mistake 2: Inadequate Ground Assessment</h2>
+      <p>Ground conditions beneath lifting equipment are critical to stability, yet proper assessment is frequently overlooked. Visual assessment alone is insufficient.</p>
+
+      <h3>How to Avoid It</h3>
+      <ul>
+        <li>Identify soil type and condition properly</li>
+        <li>Calculate actual bearing pressures</li>
+        <li>Use ground mats sized appropriately</li>
+        <li>Maintain safe distances from excavations</li>
+      </ul>
+
+      <h2>Mistake 3: Failing to Identify Overhead Hazards</h2>
+      <p>Overhead power lines and structures create exclusion zones. Failure to identify these has caused numerous fatalities in UK construction.</p>
+
+      <h3>How to Avoid It</h3>
+      <ul>
+        <li>Walk the entire site looking specifically for overhead lines</li>
+        <li>Apply HSE Guidance Note GS6 clearance distances</li>
+        <li>Implement physical exclusion zone barriers</li>
+        <li>Consider line diversion for major projects</li>
+      </ul>
+
+      <h2>Mistake 4: Inadequate Communication Planning</h2>
+      <p>Even perfectly planned lifts fail without effective communication between all involved parties.</p>
+
+      <h3>How to Avoid It</h3>
+      <ul>
+        <li>Brief all personnel before every complex lift</li>
+        <li>Designate one person to communicate with operator</li>
+        <li>Use standardized BS 7121 hand signals</li>
+        <li>Test communications before lifting begins</li>
+      </ul>
+
+      <h2>Mistake 5: No Plan for Changing Conditions</h2>
+      <p>Lift plans based on ideal conditions often fail to account for reality. Specify maximum wind speeds, define decision points, and build flexibility into plans.</p>
+
+      <h2>Mistake 6: Ignoring Manufacturer Instructions</h2>
+      <p>Equipment manufacturers provide load charts for good reason, yet these are frequently ignored. Always consult manufacturer data and stay within specified limits.</p>
+
+      <h2>Mistake 7: Poor Rigging Practices</h2>
+      <p>How loads are attached to lifting equipment is critical. Plan rigging in detail, understand sling angle effects, and inspect all rigging before use.</p>
+
+      <h2>Mistake 8: Not Documenting the Plan</h2>
+      <p>Even when operations are properly planned, failing to document creates compliance and safety issues. Document all non-routine lifts in writing.</p>
+
+      <h2>Conclusion: Learning from Mistakes</h2>
+      <p>Every mistake discussed here has caused real accidents, delays, and regulatory action in UK construction. The good news is every one is avoidable through proper training, careful planning, and adherence to best practices.</p>
+
+      <p>Key themes: Competence matters. Documentation is essential. Details matter. For contractors serious about lifting safety, learning from others' mistakes is far less painful than repeating them.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
+        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Avoid These Mistakes</h3>
+        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant lift planning from a CPCS Appointed Person with 35 years of experience. Professional planning, thorough documentation, and expert oversight.</p>
+        <a href="/contact" class="btn-primary inline-block">Contact Us Today</a>
+      </div>
+    `,
+  },
 };
 
 // Generate metadata for each blog post
