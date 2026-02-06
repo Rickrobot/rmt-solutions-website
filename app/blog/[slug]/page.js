@@ -400,7 +400,7 @@ const blogPosts = {
 
       <h2>When to Use a Mobile Crane</h2>
 
-      <h3>✅ Best for:</h3>
+      <h3>Best for:</h3>
 
       <h4>1. Short-Duration Projects</h4>
       <p>If your lifting requirement is a day or two—such as a single steel frame erection, precast installation, or equipment placement—mobile cranes are perfect. You pay for the hours you use, not ongoing rental.</p>
@@ -417,7 +417,7 @@ const blogPosts = {
       <h4>5. Budget-Conscious Projects</h4>
       <p>For short-term needs, mobile crane hire is more economical. You avoid the installation costs, foundation works, and long-term rental fees of tower cranes.</p>
 
-      <h3>❌ Not ideal when:</h3>
+      <h3>Not ideal when:</h3>
       <ul>
         <li>You need continuous lifting operations over weeks/months</li>
         <li>Working in very tight spaces with no room for crane setup</li>
@@ -428,7 +428,7 @@ const blogPosts = {
 
       <h2>When to Use a Tower Crane</h2>
 
-      <h3>✅ Best for:</h3>
+      <h3>Best for:</h3>
 
       <h4>1. Long-Duration Projects</h4>
       <p>Multi-storey buildings, large residential developments, and major commercial projects spanning months benefit enormously from tower cranes. Despite the high installation cost, the daily rental rate is relatively low, making them economical over time.</p>
@@ -445,40 +445,13 @@ const blogPosts = {
       <h4>5. Multiple Subcontractors</h4>
       <p>Tower cranes serve the entire site. Different trades can use them throughout the project—groundwork teams for piling rigs, frame contractors for steel or concrete, MEP contractors for plant—making them versatile site assets.</p>
 
-      <h3>❌ Not ideal when:</h3>
+      <h3>Not ideal when:</h3>
       <ul>
         <li>Project duration is less than 4-6 weeks</li>
         <li>Only a few heavy lifts are required</li>
         <li>Site is too small to justify the installation cost</li>
         <li>You need to lift very heavy single items beyond tower crane capacity</li>
       </ul>
-
-      <h2>Cost Comparison</h2>
-
-      <h3>Mobile Cranes</h3>
-      <p><strong>Typical costs (rough guide):</strong></p>
-      <ul>
-        <li>20-tonne mobile crane: £300-500/day</li>
-        <li>50-tonne mobile crane: £600-900/day</li>
-        <li>100-tonne+ all-terrain crane: £1,500-3,000/day</li>
-        <li>Plus transport, setup time, and operator</li>
-      </ul>
-
-      <p><strong>One-off costs:</strong> Lift plan (£150-400), potential ground protection (£500+), traffic management if on public roads</p>
-
-      <h3>Tower Cranes</h3>
-      <p><strong>Typical costs:</strong></p>
-      <ul>
-        <li>Installation: £8,000-15,000</li>
-        <li>Dismantling: £8,000-15,000</li>
-        <li>Weekly rental: £800-1,500</li>
-        <li>Operator: £600-800/week</li>
-        <li>Foundation: £3,000-8,000</li>
-      </ul>
-
-      <p><strong>Ongoing costs:</strong> Appointed Person contract (£300-600/month), 8-weekly inspections (£300-500), lift plan reviews</p>
-
-      <p><strong>Break-even point:</strong> Usually around 8-12 weeks. Beyond this, tower cranes become more economical than repeated mobile crane hires.</p>
 
       <h2>Planning and Compliance</h2>
 
@@ -503,63 +476,18 @@ const blogPosts = {
         <li>Regular audits and inspections</li>
       </ul>
 
-      <p>Tower cranes have significantly more regulatory requirements, but these are spread over the project duration.</p>
-
-      <h2>Practical Considerations</h2>
-
-      <h3>Ground Conditions</h3>
-      <p><strong>Mobile cranes:</strong> Need firm, level ground. Often require ground protection mats or crane pads. Poor ground = expensive preparation or bigger crane.</p>
-
-      <p><strong>Tower cranes:</strong> Need a properly designed foundation, but once installed, ground conditions around the site matter less.</p>
-
-      <h3>Weather Sensitivity</h3>
-      <p><strong>Mobile cranes:</strong> More weather-sensitive. High winds reduce capacity and may stop work entirely. Rain affects ground conditions.</p>
-
-      <p><strong>Tower cranes:</strong> Also affected by high winds but have specific operating wind speeds. Generally more consistent in varied weather.</p>
-
-      <h3>Flexibility</h3>
-      <p><strong>Mobile cranes:</strong> Ultimate flexibility—different crane for different lifts if needed. Can bring in specialized equipment.</p>
-
-      <p><strong>Tower cranes:</strong> Fixed position limits some flexibility, but newer slewing and luffing cranes offer good coverage.</p>
-
-      <h2>Real-World Examples</h2>
-
-      <h3>Example 1: Industrial Warehouse (15,000m²)</h3>
-      <p><strong>Choice:</strong> Mobile crane</p>
-      <p><strong>Reason:</strong> 8-week steel erection program. One mobile crane positioned around the perimeter as steel progresses. More economical than tower crane installation for this duration.</p>
-
-      <h3>Example 2: Residential Tower Block (18 months)</h3>
-      <p><strong>Choice:</strong> Tower crane</p>
-      <p><strong>Reason:</strong> Continuous lifting of concrete, formwork, rebar, and materials over 18 months. Tower crane essential for efficiency and cost control.</p>
-
-      <h3>Example 3: Precast Car Park (12 weeks)</h3>
-      <p><strong>Choice:</strong> Mobile crane</p>
-      <p><strong>Reason:</strong> Heavy precast elements up to 12 tonnes, but project duration just at the break-even point. Mobile crane chosen for flexibility in positioning for each deck level.</p>
-
-      <h3>Example 4: City Centre Office (24 months)</h3>
-      <p><strong>Choice:</strong> 2 x Tower cranes</p>
-      <p><strong>Reason:</strong> Restricted site, no room for mobile crane access, long project duration. Two tower cranes provide complete site coverage.</p>
-
       <h2>Making Your Decision</h2>
       <p>Use this decision tree:</p>
 
       <ol>
-        <li><strong>Project duration less than 6 weeks?</strong> → Likely mobile crane</li>
-        <li><strong>Project duration more than 12 weeks?</strong> → Likely tower crane</li>
-        <li><strong>Between 6-12 weeks?</strong> → Depends on lift frequency and site access</li>
-        <li><strong>Very heavy single lifts?</strong> → Likely mobile crane</li>
-        <li><strong>Continuous daily lifting?</strong> → Likely tower crane</li>
-        <li><strong>Restricted site access?</strong> → Likely tower crane</li>
-        <li><strong>Good access and space?</strong> → Mobile crane viable</li>
+        <li><strong>Project duration less than 6 weeks?</strong> Likely mobile crane</li>
+        <li><strong>Project duration more than 12 weeks?</strong> Likely tower crane</li>
+        <li><strong>Between 6-12 weeks?</strong> Depends on lift frequency and site access</li>
+        <li><strong>Very heavy single lifts?</strong> Likely mobile crane</li>
+        <li><strong>Continuous daily lifting?</strong> Likely tower crane</li>
+        <li><strong>Restricted site access?</strong> Likely tower crane</li>
+        <li><strong>Good access and space?</strong> Mobile crane viable</li>
       </ol>
-
-      <h2>Can You Use Both?</h2>
-      <p>Absolutely! Many projects use tower cranes for ongoing work and supplement with mobile cranes for specific heavy lifts. For example:</p>
-      <ul>
-        <li>Tower crane for daily materials handling</li>
-        <li>Mobile crane to install plant on the roof</li>
-        <li>Mobile crane to install the tower crane itself!</li>
-      </ul>
 
       <h2>How RMT Solutions Can Help</h2>
       <p>Choosing the right crane is critical. We provide:</p>
@@ -790,6 +718,315 @@ const blogPosts = {
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Avoid These Mistakes</h3>
         <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant lift planning from a CPCS Appointed Person with 35 years of experience. Professional planning, thorough documentation, and expert oversight.</p>
         <a href="/contact" class="btn-primary inline-block">Contact Us Today</a>
+      </div>
+    `,
+  },
+  'telehandler-lift-plans-complete-guide': {
+    title: 'Telehandler Lift Plans: A Complete Guide for UK Contractors',
+    description: 'Complete guide to telehandler lift plans under LOLER 1998. Covers fixed-frame and 360 slew machines, load charts, stabiliser requirements, and LOLER compliance for telehandler lifting operations.',
+    category: 'Planning',
+    readTime: '9 min read',
+    date: 'February 6, 2026',
+    image: '/images/precast-concrete-lift.webp',
+    content: `
+      <p class="lead">Telehandlers are among the most versatile machines on UK construction sites. Originally designed as rough terrain forklifts, they are now routinely used for lifting and placing suspended loads — operations that bring them firmly within the scope of LOLER 1998. Despite this, telehandler lift plans remain one of the most commonly overlooked requirements in construction planning.</p>
+
+      <h2>When Does a Telehandler Need a Lift Plan?</h2>
+      <p>Under LOLER 1998, every lifting operation must be properly planned by a competent person, appropriately supervised, and carried out in a safe manner. A telehandler requires a formal lift plan whenever it is used for crane duties — that is, lifting and moving suspended loads using chains, slings, or other lifting accessories attached to the machine.</p>
+
+      <p>Common telehandler lifting operations that require a lift plan include:</p>
+      <ul>
+        <li>Lifting steel beams, columns, or structural elements using a hook attachment</li>
+        <li>Placing precast concrete units such as lintels, padstones, or cladding panels</li>
+        <li>Lifting mechanical and electrical plant to height</li>
+        <li>Placing materials on scaffolding or at elevated positions using suspended loads</li>
+        <li>Any operation where a load is suspended from the telehandler using lifting accessories</li>
+      </ul>
+
+      <p>It is worth noting that routine materials handling — such as moving pallets on forks — does not normally require a formal lift plan, although a risk assessment is still needed. The distinction is whether the load is freely suspended from the machine. Once a load hangs from chains, slings, or a lifting beam attached to the telehandler, LOLER applies in full.</p>
+
+      <h2>Fixed-Frame vs 360 Slew Telehandlers</h2>
+      <p>One of the most important considerations in telehandler lift planning is the type of machine being used. Fixed-frame and 360 degree slew telehandlers have fundamentally different stability characteristics, and the lift plan must account for these differences.</p>
+
+      <h3>Fixed-Frame Telehandlers</h3>
+      <p>Fixed-frame telehandlers are the most common type found on UK construction sites. The boom is mounted on a chassis that does not rotate, meaning the entire machine must be repositioned to change the direction of the lift. Key planning considerations include:</p>
+      <ul>
+        <li><strong>Forward stability:</strong> The primary risk is forward tipping. The load chart is based on the load moment relative to the front axle tipping line</li>
+        <li><strong>Boom extension and angle:</strong> Lifting capacity reduces significantly as the boom extends and lowers. A telehandler rated at 4 tonnes at minimum radius may only manage 1 tonne at full extension</li>
+        <li><strong>Stabilisers:</strong> Many fixed-frame telehandlers have deployable stabilisers that significantly increase lifting capacity. The lift plan must specify whether stabilisers are deployed and confirm adequate ground conditions beneath them</li>
+        <li><strong>Ground gradient:</strong> Fixed-frame machines are particularly sensitive to operating on slopes. The lift plan should specify maximum permissible gradients</li>
+        <li><strong>Rear axle loading:</strong> When lifting heavy loads at extended radius, the rear axle can lose ground contact. This must be assessed</li>
+      </ul>
+
+      <h3>360 Degree Slew Telehandlers</h3>
+      <p>360 degree slew telehandlers (also known as roto telehandlers) feature a rotating upper structure similar to an excavator. This provides much greater versatility but introduces additional planning complexity:</p>
+      <ul>
+        <li><strong>Multi-directional stability:</strong> Because the boom can slew through 360 degrees, the machine must be stable in all directions. Tipping can occur over the side as well as the front</li>
+        <li><strong>Load charts vary with slew angle:</strong> Lifting capacity changes depending on the angle of the boom relative to the chassis. Over-the-front capacity is different from over-the-side capacity</li>
+        <li><strong>Stabiliser configuration matters:</strong> Most 360 degree machines require all stabilisers fully deployed for crane duties. Partial deployment drastically reduces capacity and may not be permitted for suspended loads</li>
+        <li><strong>Counterweight:</strong> Some 360 degree telehandlers have removable counterweight options that affect capacity. The lift plan must specify the counterweight configuration</li>
+        <li><strong>Slew restriction:</strong> Where site conditions limit the safe slewing arc, the lift plan should define permitted slew angles</li>
+      </ul>
+
+      <h2>What Should a Telehandler Lift Plan Include?</h2>
+      <p>A LOLER-compliant telehandler lift plan must address the specific risks of the operation. While the exact content varies with each lift, a thorough telehandler lift plan typically covers the following areas.</p>
+
+      <h3>Machine Specification</h3>
+      <p>The lift plan must identify the specific telehandler to be used, not just the generic type. This includes the make, model, maximum rated capacity, and boom configuration. It must also confirm that the machine is fitted with a suitable lifting attachment — typically a crane hook or dedicated lifting jib — and that this attachment is included in the machine's current thorough examination certificate under LOLER.</p>
+
+      <h3>Load Details</h3>
+      <p>Accurate load information is essential. The plan must record the weight of the load, its dimensions, the centre of gravity (particularly for asymmetric loads), and any factors that could affect the load during the lift such as wind loading on large flat panels or retained water in hollow sections. The weight of all lifting accessories — slings, shackles, spreader beams — must be included in the total suspended load.</p>
+
+      <h3>Radius and Capacity Verification</h3>
+      <p>This is where telehandler lift plans differ most from simple crane lift plans. The lift plan must demonstrate that the telehandler has adequate capacity at the actual working radius. For telehandlers, the working radius changes as the boom extends and raises, and small changes can have a dramatic effect on capacity.</p>
+
+      <p>The plan should include a clear capacity check showing the manufacturer's rated capacity at the planned radius and boom configuration, the total load including rigging weight, and the resulting percentage utilisation. Industry best practice is to keep utilisation below 80% for routine lifts to provide a safety margin for dynamic loading effects.</p>
+
+      <h3>Ground Conditions</h3>
+      <p>Ground conditions are critical for telehandler operations. The lift plan must assess:</p>
+      <ul>
+        <li>Ground bearing capacity at the operating position and under each stabiliser pad</li>
+        <li>Proximity to excavations, trenches, or soft ground that could affect stability</li>
+        <li>Surface gradient and whether it falls within the machine's permitted operating limits</li>
+        <li>Requirements for timber mats, steel plates, or other load-spreading measures under stabiliser pads</li>
+        <li>Underground services, voids, or basements that could be affected by machine loading</li>
+      </ul>
+
+      <h3>Site-Specific Hazards</h3>
+      <p>Every lift plan must address the hazards present at the specific location. For telehandler operations, common considerations include:</p>
+      <ul>
+        <li>Overhead power lines and minimum approach distances</li>
+        <li>Adjacent structures, scaffolding, or other obstructions within the operating radius</li>
+        <li>Other plant and vehicle movements in the area</li>
+        <li>Pedestrian routes and exclusion zones beneath and around the lift</li>
+        <li>Weather limitations — particularly wind speeds for large or high-surface-area loads</li>
+      </ul>
+
+      <h3>Personnel and Communication</h3>
+      <p>The plan must identify the key personnel involved in the lift:</p>
+      <ul>
+        <li>The Appointed Person responsible for planning the lift</li>
+        <li>The lift supervisor overseeing the operation on site</li>
+        <li>The telehandler operator, who must hold appropriate CPCS or equivalent certification</li>
+        <li>The slinger/signaller(s) responsible for attaching loads and directing the operator</li>
+        <li>The communication method to be used — hand signals, radio, or direct verbal where visibility allows</li>
+      </ul>
+
+      <h2>Common Mistakes in Telehandler Lift Plans</h2>
+      <p>Having reviewed hundreds of telehandler lift plans submitted by subcontractors, certain mistakes appear repeatedly.</p>
+
+      <h3>Using the Wrong Load Chart</h3>
+      <p>This is the single most common error. Telehandler load charts vary significantly depending on the configuration — stabilisers deployed vs retracted, attachment type, counterweight fitted vs removed. Using the wrong chart can make a lift appear safe when it is actually beyond the machine's capacity. Always verify which load chart applies to the actual planned configuration.</p>
+
+      <h3>Ignoring Attachment Weight</h3>
+      <p>The weight of the lifting attachment itself — the crane hook, jib, or man basket frame — reduces the available capacity. A crane jib attachment can weigh several hundred kilograms. This must be deducted from the machine's rated capacity before assessing whether the load can be lifted safely.</p>
+
+      <h3>Underestimating Radius</h3>
+      <p>Telehandler operators sometimes need to extend the boom further than initially planned to reach the landing position. If the lift plan has been calculated at minimum radius with little margin, any additional extension can push the machine beyond its safe working load. Always plan for the maximum radius that might be needed, not the minimum.</p>
+
+      <h3>Inadequate Ground Assessment</h3>
+      <p>Telehandlers exert significant ground pressure through their stabiliser pads, particularly 360 degree slew machines lifting at extended radius. Failing to assess ground bearing capacity or provide adequate spreading mats is a common and potentially dangerous oversight.</p>
+
+      <h3>No Thorough Examination for Lifting Accessories</h3>
+      <p>When a telehandler is used for crane duties, the lifting attachment (hook, jib, etc.) becomes a lifting accessory under LOLER. It must have a current thorough examination certificate. Slings, shackles, and any other rigging equipment used must also be examined. Missing or expired certificates are a frequent finding during lift plan reviews.</p>
+
+      <h2>CPCS Categories for Telehandler Operations</h2>
+      <p>Operators must hold the correct CPCS card for the type of telehandler being used:</p>
+      <ul>
+        <li><strong>A17 — Telescopic Handler:</strong> Covers standard fixed-frame telehandlers</li>
+        <li><strong>A17E — 360 Slew Telescopic Handler:</strong> Required for roto/360 degree slew machines. An A17 card alone is not sufficient for 360 degree machines</li>
+      </ul>
+
+      <p>For crane duties specifically, operators should also have training and assessment in the use of the specific lifting attachment fitted. This is often covered under the CPCS scheme but should be verified in the lift plan.</p>
+
+      <h2>Thorough Examination Requirements</h2>
+      <p>Under LOLER Regulation 9, telehandlers used for lifting operations must undergo thorough examination:</p>
+      <ul>
+        <li><strong>Before first use:</strong> Unless the machine has an EC Declaration of Conformity and has not been previously used for lifting</li>
+        <li><strong>At regular intervals:</strong> At least every 12 months for the machine itself. Where lifting accessories are used (crane hook, jib, slings), these must be examined at least every 6 months</li>
+        <li><strong>After exceptional circumstances:</strong> Following any incident, significant modification, or prolonged period out of service</li>
+      </ul>
+
+      <p>The lift plan should confirm that all thorough examination reports are current and that any defects identified have been rectified before the lift proceeds.</p>
+
+      <h2>Planning Telehandler Lifts Near Structures</h2>
+      <p>Telehandlers are frequently used for lifting operations in confined or congested areas — placing steelwork inside partially completed structures, lifting materials over hoarding, or working adjacent to occupied buildings. These lifts require particular attention in the plan.</p>
+
+      <p>The boom's swept path must be assessed to ensure it can reach the required position without contacting structures. For 360 degree machines, the tail swing of the superstructure must be checked — it extends beyond the chassis and can strike adjacent walls, scaffolding, or vehicles. Minimum clearances should be specified in the plan, and banksmen positioned where the operator's visibility is restricted.</p>
+
+      <h2>Wind Limitations for Telehandler Lifts</h2>
+      <p>Wind is a significant factor for telehandler lifting operations. Unlike larger cranes, telehandlers have relatively low lifting capacity at extended radius, meaning even moderate wind loading on the load can consume a significant portion of the available capacity margin.</p>
+
+      <p>The lift plan should specify a maximum wind speed for the operation. For loads with large surface areas — such as cladding panels, mesh reinforcement, or sheeting — lower wind limits may be necessary. As a general guideline, most telehandler crane duty operations should cease when sustained wind speeds exceed 20 mph, with lower limits for high-surface-area loads or operations at extended boom reach.</p>
+
+      <h2>How RMT Solutions Can Help</h2>
+      <p>Telehandler lift plans may seem straightforward, but the variables involved — machine configuration, attachment type, ground conditions, and site-specific hazards — make professional planning essential. An incorrect load chart selection or an overlooked ground condition can have serious consequences.</p>
+
+      <p>RMT Solutions provides LOLER-compliant telehandler lift plans prepared by a CPCS Appointed Person with 35 years of construction industry experience. We handle both fixed-frame and 360 degree slew telehandler operations, with plans tailored to your specific machine, site conditions, and lifting requirements.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
+        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need a Telehandler Lift Plan?</h3>
+        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant telehandler lift plans for fixed-frame and 360 degree slew machines. Fast turnaround from a CPCS Appointed Person with 35 years of experience.</p>
+        <a href="/contact" class="btn-primary inline-block">Get a Quote</a>
+      </div>
+    `,
+  },
+  'lorry-loader-lift-plans-guide': {
+    title: 'Lorry Loader Lift Plans: LOLER Compliance Guide for UK Contractors',
+    description: 'Complete guide to lorry loader (HIAB) lift plans under LOLER 1998. Covers vehicle positioning, stabiliser requirements, load charts, and compliance for truck-mounted crane operations.',
+    category: 'Planning',
+    readTime: '9 min read',
+    date: 'February 6, 2026',
+    image: '/images/precast-concrete-lift.webp',
+    content: `
+      <p class="lead">Lorry loaders — commonly known by the brand name HIAB, though this is just one of several manufacturers — are truck-mounted cranes used extensively across UK construction for loading, unloading, and placing materials. Their convenience and availability make them one of the most frequently used pieces of lifting equipment on construction sites, yet lorry loader lift plans are among the most commonly deficient documents submitted for review.</p>
+
+      <h2>When Does a Lorry Loader Need a Lift Plan?</h2>
+      <p>Under LOLER 1998, every lifting operation must be properly planned by a competent person. For lorry loaders, this means a lift plan is required whenever the crane is used to lift and move loads. This includes the most routine delivery operations that many contractors assume are too simple to plan.</p>
+
+      <p>Operations that require a lorry loader lift plan include:</p>
+      <ul>
+        <li>Unloading materials from the delivery vehicle — steel, timber, precast units, plant, and equipment</li>
+        <li>Loading materials or waste onto the vehicle for removal</li>
+        <li>Placing materials at specific locations on site rather than simply offloading to the ground</li>
+        <li>Lifting and positioning modular or prefabricated units</li>
+        <li>Any operation where a load is suspended from the lorry loader crane</li>
+      </ul>
+
+      <p>A common misconception is that routine deliveries do not need lift plans because the lorry loader operator handles the lifting. This is incorrect. LOLER does not distinguish between routine and complex lifts — all lifting operations must be planned. The level of detail in the plan should be proportionate to the risk, but the requirement for planning exists regardless of how straightforward the lift appears.</p>
+
+      <h2>Lorry Loader Configuration and Capacity</h2>
+      <p>Understanding lorry loader configurations is essential for accurate lift planning. Unlike mobile cranes or telehandlers, lorry loaders have characteristics that are unique to truck-mounted equipment.</p>
+
+      <h3>Crane Position on the Vehicle</h3>
+      <p>Lorry loaders are typically mounted in one of two positions:</p>
+      <ul>
+        <li><strong>Behind-cab mounting:</strong> The most common arrangement, where the crane is mounted between the cab and the load bed. This provides the best stability for most operations but limits the crane's reach to the rear of the vehicle</li>
+        <li><strong>Rear mounting:</strong> The crane is fitted at the rear of the chassis. This is common on vehicles used for specific applications such as skip loading or placing operations where access from the rear is preferred</li>
+      </ul>
+
+      <p>The crane position affects the stability characteristics and load chart of the machine. A behind-cab mounted crane lifting over the rear of the vehicle behaves differently from one lifting over the side, and the lift plan must account for the actual direction of lift.</p>
+
+      <h3>Boom Type</h3>
+      <p>Modern lorry loaders use hydraulic knuckle boom cranes with multiple extensions. The crane's capacity reduces with each extension section deployed, and the load chart must be read correctly for the actual boom configuration being used. Some lorry loaders are also fitted with fly jibs or manual extensions that further increase reach at reduced capacity — these must be specifically identified in the lift plan.</p>
+
+      <h3>Stabiliser Systems</h3>
+      <p>Lorry loader stabilisers come in several configurations, each with different effects on lifting capacity:</p>
+      <ul>
+        <li><strong>Full extension stabilisers:</strong> Legs extend to the sides of the vehicle, providing maximum stability. Most load charts show maximum capacity with stabilisers fully extended</li>
+        <li><strong>Intermediate positions:</strong> Some stabiliser systems allow partial deployment. The load chart may show different capacities for different extension positions, but partial deployment always reduces capacity compared to full extension</li>
+        <li><strong>No stabilisers (on tyres):</strong> Some lighter lorry loaders can operate without stabilisers for reduced loads. This dramatically reduces capacity and is only safe within the specific parameters shown on the relevant load chart</li>
+      </ul>
+
+      <p>The lift plan must specify the stabiliser configuration to be used and confirm that the load chart capacity is based on that specific configuration. Using the wrong stabiliser setting is a common cause of lorry loader incidents.</p>
+
+      <h2>What Should a Lorry Loader Lift Plan Include?</h2>
+      <p>A LOLER-compliant lorry loader lift plan must be proportionate to the risk involved, but should always address the following elements.</p>
+
+      <h3>Vehicle Positioning</h3>
+      <p>Where the lorry parks on site is one of the most critical elements of a lorry loader lift plan, and is often the area given least attention. The plan must consider:</p>
+      <ul>
+        <li><strong>Ground conditions:</strong> The vehicle and stabiliser pads will impose significant loads on the ground. The plan must assess whether the ground can support these loads without subsidence. On made-up ground, near excavations, or over underground services, this assessment is critical</li>
+        <li><strong>Level ground:</strong> Lorry loaders should ideally operate on level ground. Where this is not possible, the gradient must be within the manufacturer's permitted limits</li>
+        <li><strong>Stabiliser footprint:</strong> Adequate space must be available for full stabiliser deployment. On narrow roads, adjacent to kerbs, or in confined site areas, full extension may not be possible — in which case, the reduced capacity must be used in the plan</li>
+        <li><strong>Access and egress:</strong> The vehicle must be able to reach the offloading position and leave safely, including consideration of overhead obstructions and turning circles</li>
+        <li><strong>Proximity to live traffic:</strong> Many lorry loader operations take place on or adjacent to public roads. Traffic management requirements must be addressed in the plan</li>
+      </ul>
+
+      <h3>Load Information</h3>
+      <p>Accurate load data is essential. The plan must record:</p>
+      <ul>
+        <li>The weight of each item to be lifted, obtained from delivery documentation, manufacturer's data, or by calculation</li>
+        <li>The dimensions and centre of gravity of the load</li>
+        <li>The weight of all lifting accessories — slings, chains, shackles, spreader beams — which must be added to the load weight</li>
+        <li>Whether multiple items are to be lifted simultaneously and the combined weight</li>
+      </ul>
+
+      <h3>Radius and Capacity Check</h3>
+      <p>The lift plan must demonstrate that the lorry loader has adequate capacity at the working radius for each phase of the lift. For lorry loaders, the critical point is often the maximum radius — the furthest point the load must reach during the operation.</p>
+
+      <p>Lorry loader capacity reduces dramatically with radius. A machine rated at 10 tonne-metres might lift 2,500kg at 4 metres radius but only 1,000kg at 10 metres. The plan must check capacity at the actual maximum radius required, not at minimum radius.</p>
+
+      <p>Where multiple items are being offloaded to different positions, the plan should check capacity for the most onerous lift — typically the heaviest item at the greatest radius.</p>
+
+      <h3>Ground Bearing Pressure</h3>
+      <p>Lorry loader stabilisers can impose very high point loads on the ground. A fully loaded lorry with the crane lifting at extended radius can place several tonnes through each stabiliser pad. The lift plan must:</p>
+      <ul>
+        <li>Calculate the maximum stabiliser reaction forces based on the manufacturer's data</li>
+        <li>Assess the ground bearing capacity at the planned operating position</li>
+        <li>Specify load-spreading measures where necessary — typically timber mats or steel plates under the stabiliser pads</li>
+        <li>Consider the effect of recent weather on ground conditions, particularly on unpaved surfaces</li>
+      </ul>
+
+      <h3>Hazard Assessment</h3>
+      <p>Site-specific hazards must be identified and addressed. Common hazards for lorry loader operations include:</p>
+      <ul>
+        <li><strong>Overhead power lines:</strong> Lorry loader booms can reach considerable heights. Any overhead power lines within the working area or along the access route must be identified, with minimum approach distances calculated</li>
+        <li><strong>Underground services:</strong> Stabiliser pad loads can damage shallow underground services. Service plans should be reviewed and trial holes considered where records are uncertain</li>
+        <li><strong>Pedestrians and other workers:</strong> Exclusion zones must be established beneath and around the lift. On public roads, pedestrian management may be required</li>
+        <li><strong>Other vehicles:</strong> On active construction sites or public roads, other vehicle movements must be managed during the lifting operation</li>
+        <li><strong>Wind:</strong> Wind limits should be specified, particularly for loads with large surface areas</li>
+      </ul>
+
+      <h2>Lorry Loader Operations on Public Roads</h2>
+      <p>Many lorry loader operations — particularly material deliveries — take place on or immediately adjacent to public highways. These operations introduce additional planning requirements.</p>
+
+      <p>Traffic management must be arranged in accordance with Chapter 8 of the Traffic Signs Manual where the operation affects the public highway. This may require advance signing, temporary traffic signals, or a road closure depending on the nature and duration of the work. The lift plan should reference the traffic management plan and confirm that appropriate measures are in place before the lifting operation begins.</p>
+
+      <p>Vehicle positioning on public roads is constrained by road width, adjacent properties, and the need to maintain traffic flow where possible. The lift plan must work within these constraints, which may mean accepting reduced stabiliser extension and therefore reduced lifting capacity.</p>
+
+      <h2>Common Mistakes in Lorry Loader Lift Plans</h2>
+      <p>From years of reviewing lorry loader lift plans submitted by subcontractors, these are the mistakes that appear most frequently.</p>
+
+      <h3>No Plan at All</h3>
+      <p>The most common problem is the complete absence of a lift plan. Many contractors treat lorry loader deliveries as routine operations that do not require planning. This is a direct breach of LOLER and leaves both the contractor and the principal contractor exposed to enforcement action.</p>
+
+      <h3>Generic Plans Not Specific to the Site</h3>
+      <p>Some operators carry a single generic lift plan that they use for every delivery regardless of the site. A lift plan must be specific to the actual operation — the site conditions, the loads being lifted, the vehicle position, and the hazards present. A plan that does not address the specific circumstances of the lift is not compliant with LOLER.</p>
+
+      <h3>Using the Wrong Load Chart Configuration</h3>
+      <p>Load charts for lorry loaders show different capacities for different stabiliser configurations and boom arrangements. Using the fully-extended stabiliser chart when the vehicle will be operating with stabilisers partially deployed — as is common on narrow roads — can result in the machine being overloaded.</p>
+
+      <h3>Ignoring Vehicle Load Condition</h3>
+      <p>The stability of a lorry loader changes as materials are offloaded from the vehicle. A fully loaded vehicle is more stable than an empty one when lifting from the opposite side to the crane. The lift plan should consider the vehicle's load condition at each stage of the offloading sequence, particularly for the final lifts when the vehicle is lightest.</p>
+
+      <h3>No Ground Assessment</h3>
+      <p>Failing to assess ground conditions beneath stabiliser pads is a frequent and potentially serious oversight. This is particularly dangerous on construction sites where ground has been recently excavated and backfilled, or where underground services or basements exist beneath the operating area.</p>
+
+      <h2>Operator Competence</h2>
+      <p>Lorry loader operators must hold appropriate competence certification. Under CPCS, the relevant category is:</p>
+      <ul>
+        <li><strong>A36 — Lorry Loader:</strong> The standard category for operating lorry-mounted cranes</li>
+      </ul>
+
+      <p>In addition to CPCS certification, operators should be familiar with the specific machine they are operating, including its load chart, stabiliser system, and any fitted safety systems such as rated capacity indicators (RCIs) or load moment indicators (LMIs). Many modern lorry loaders are fitted with sophisticated electronic management systems that limit operation within the safe working envelope — operators must understand how these systems function and must never override or disable them.</p>
+
+      <h2>Thorough Examination and Inspection</h2>
+      <p>Lorry loaders used for lifting must undergo thorough examination under LOLER Regulation 9:</p>
+      <ul>
+        <li><strong>The crane:</strong> Must be thoroughly examined at least every 12 months</li>
+        <li><strong>Lifting accessories:</strong> All slings, chains, shackles, and other accessories used in conjunction with the lorry loader must be examined at least every 6 months</li>
+        <li><strong>After installation or reassembly:</strong> Following any significant repair or modification to the crane</li>
+      </ul>
+
+      <p>In addition to thorough examination, the operator should conduct a pre-use check before each shift, inspecting the crane, stabilisers, hydraulic hoses, and controls for visible defects or damage. The lift plan should require confirmation that the pre-use check has been completed satisfactorily.</p>
+
+      <h2>Planning Multi-Drop Deliveries</h2>
+      <p>Many lorry loader operations involve multiple deliveries to different locations on the same site, or to multiple sites in a single day. Each offloading position is effectively a separate lifting operation and should be assessed individually.</p>
+
+      <p>Where a lorry loader will operate at multiple positions on the same site, the lift plan can cover all positions provided each one is assessed for ground conditions, overhead hazards, vehicle positioning, and capacity at the required radius. A plan that only assesses one position and assumes all others are the same is inadequate.</p>
+
+      <p>For regular repeat deliveries to the same site — such as ongoing steel or concrete deliveries during a construction programme — a standing lift plan can be prepared covering the standard offloading positions. This should be reviewed if site conditions change, and each delivery should still be confirmed against the plan before lifting commences.</p>
+
+      <h2>How RMT Solutions Can Help</h2>
+      <p>Lorry loader operations may be routine, but the planning requirements are not optional. Every delivery involving a lorry loader crane is a lifting operation under LOLER, and every one needs a plan. The consequences of getting it wrong range from HSE enforcement notices and fines to serious injuries and fatalities.</p>
+
+      <p>RMT Solutions provides LOLER-compliant lorry loader lift plans prepared by a CPCS Appointed Person with 35 years of construction industry experience. Whether you need a one-off plan for a complex delivery or a standing plan for regular site deliveries, we ensure your operations are properly planned and compliant.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
+        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need a Lorry Loader Lift Plan?</h3>
+        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant lorry loader lift plans for all types of truck-mounted crane operations. Fast turnaround from a CPCS Appointed Person with 35 years of experience.</p>
+        <a href="/contact" class="btn-primary inline-block">Get a Quote</a>
       </div>
     `,
   },
