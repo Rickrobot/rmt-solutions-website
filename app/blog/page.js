@@ -67,6 +67,24 @@ const blogPosts = [
     date: 'January 31, 2026',
     image: '/images/warehouse-steel-erection.webp',
   },
+  {
+    slug: 'telehandler-lift-plans-complete-guide',
+    title: 'Telehandler Lift Plans: A Complete Guide for UK Contractors',
+    excerpt: 'Everything UK contractors need to know about telehandler lift plans. Covers fixed-frame and 360\u00b0 slew machines, LOLER requirements, load charts, and common planning mistakes.',
+    category: 'Planning',
+    readTime: '9 min read',
+    date: 'February 6, 2026',
+    image: '/images/precast-concrete-lift.webp',
+  },
+  {
+    slug: 'lorry-loader-lift-plans-guide',
+    title: 'Lorry Loader Lift Plans: LOLER Compliance Guide for UK Contractors',
+    excerpt: 'Everything UK contractors need to know about lorry loader (HIAB) lift plans. Covers vehicle positioning, stabiliser requirements, LOLER compliance, and common planning mistakes.',
+    category: 'Planning',
+    readTime: '9 min read',
+    date: 'February 6, 2026',
+    image: '/images/precast-concrete-lift.webp',
+  },
 ];
 
 export default function BlogPage() {
