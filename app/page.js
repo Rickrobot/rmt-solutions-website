@@ -266,10 +266,10 @@ export default function HomePage() {
                   Ensure all lifting operations on your site are LOLER compliant before work begins.
                 </p>
                 <Link
-                  href="/contact"
+                  href="/services/lift-plan-checking"
                   className="inline-flex items-center text-amber-400 hover:text-amber-300 font-semibold"
                 >
-                  Discuss your requirements
+                  Learn more about our checking service
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </div>
