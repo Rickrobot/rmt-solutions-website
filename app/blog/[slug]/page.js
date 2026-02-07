@@ -112,9 +112,9 @@ const blogPosts = {
       <p>At RMT Solutions, we specialise in LOLER compliant lift planning. As a CPCS Appointed Person with 35 years of construction experience, I provide:</p>
 
       <ul>
-        <li>Detailed written lift plans complying with LOLER Regulation 8</li>
-        <li>Appointed Person contracts for ongoing compliance</li>
-        <li>Review and checking of subcontractor lift plans</li>
+        <li><a href="/services/lift-plans">Detailed written lift plans</a> complying with LOLER Regulation 8</li>
+        <li><a href="/services/tower-crane">Appointed Person contracts</a> for ongoing compliance</li>
+        <li><a href="/services/lift-plan-checking">Review and checking of subcontractor lift plans</a></li>
         <li>Site visits and supervision where required</li>
         <li>Expert advice on equipment selection and planning</li>
       </ul>
@@ -122,7 +122,7 @@ const blogPosts = {
       <h2>Common LOLER Questions</h2>
 
       <h3>Do I need a lift plan for an excavator?</h3>
-      <p>Yes, if the excavator is being used for lifting rather than just digging. Once you attach lifting accessories (chains, slings), it becomes lifting equipment under LOLER and requires proper planning.</p>
+      <p>Yes, if the excavator is being used for lifting rather than just digging. Once you attach lifting accessories (chains, slings), it becomes lifting equipment under LOLER and requires proper planning. See our <a href="/blog/excavator-lift-plans-complete-guide">complete guide to excavator lift plans</a> for more detail.</p>
 
       <h3>Who is responsible for LOLER compliance on site?</h3>
       <p>Ultimately, the duty holder—usually the main contractor or whoever controls the site. However, everyone involved has responsibilities, including equipment hirers, subcontractors, and operatives.</p>
@@ -131,7 +131,7 @@ const blogPosts = {
       <p>Thorough examination reports must be kept until the next examination is completed. Lift plans should be kept for the duration of the project plus a reasonable period afterwards (typically 3-6 months minimum).</p>
 
       <h3>Can I do my own lift planning?</h3>
-      <p>Only if you are competent to do so. For complex lifts, you need someone with appropriate training and qualifications—typically a CPCS Appointed Person A61.</p>
+      <p>Only if you are competent to do so. For complex lifts, you need someone with appropriate training and qualifications—typically a <a href="/blog/cpcs-appointed-person-guide">CPCS Appointed Person A61</a>.</p>
 
       <h2>Conclusion</h2>
       <p>LOLER compliance isn't optional—it's a legal requirement that protects lives. Proper lift planning by a competent person is the cornerstone of safe lifting operations.</p>
@@ -350,11 +350,11 @@ const blogPosts = {
       <p>We provide lift planning services for all types of lifting operations:</p>
 
       <ul>
-        <li><strong>Tower Crane Contracts:</strong> Ongoing Appointed Person support throughout your project</li>
-        <li><strong>Mobile Crane Lift Plans:</strong> Including site visits and ground assessments</li>
-        <li><strong>Excavator Lift Plans:</strong> Fast turnaround for pipeline and utilities work</li>
-        <li><strong>Steel Erection Planning:</strong> Comprehensive planning for structural steel projects</li>
-        <li><strong>Lift Plan Review:</strong> Checking subcontractor submissions for compliance</li>
+        <li><strong><a href="/services/tower-crane">Tower Crane Contracts:</a></strong> Ongoing Appointed Person support throughout your project</li>
+        <li><strong><a href="/services/lift-plans">Mobile Crane Lift Plans:</a></strong> Including site visits and ground assessments</li>
+        <li><strong><a href="/services/lift-plans">Excavator Lift Plans:</a></strong> Fast turnaround for pipeline and utilities work</li>
+        <li><strong><a href="/services/steel-erection">Steel Erection Planning:</a></strong> Comprehensive planning for structural steel projects</li>
+        <li><strong><a href="/services/lift-plan-checking">Lift Plan Review:</a></strong> Checking subcontractor submissions for compliance</li>
       </ul>
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
@@ -495,8 +495,8 @@ const blogPosts = {
       <ul>
         <li><strong>Crane Selection Advice:</strong> Independent recommendations based on your project</li>
         <li><strong>Cost-Benefit Analysis:</strong> Compare options to find the most economical solution</li>
-        <li><strong>Lift Planning:</strong> Detailed plans for mobile crane operations</li>
-        <li><strong>Tower Crane Contracts:</strong> Full Appointed Person support for tower crane projects</li>
+        <li><strong><a href="/services/lift-plans">Lift Planning:</a></strong> Detailed plans for mobile crane operations</li>
+        <li><strong><a href="/services/tower-crane">Tower Crane Contracts:</a></strong> Full Appointed Person support for tower crane projects</li>
         <li><strong>Hybrid Solutions:</strong> Planning for projects using both types</li>
       </ul>
 
@@ -555,11 +555,11 @@ const blogPosts = {
       <p>Most excavator lifting operations require a trained slinger signaller who attaches the load, directs the operation using standard hand signals, and supervises safe execution.</p>
 
       <h2>When to Engage an Appointed Person</h2>
-      <p>While simple excavator lifting operations might be planned by experienced site staff, engaging a CPCS Appointed Person provides legal compliance assurance, technical expertise, risk management, and professional documentation suitable for HSE inspection.</p>
+      <p>While simple excavator lifting operations might be planned by experienced site staff, engaging a <a href="/blog/cpcs-appointed-person-guide">CPCS Appointed Person</a> provides legal compliance assurance, technical expertise, risk management, and professional documentation suitable for HSE inspection.</p>
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need an Excavator Lift Plan?</h3>
-        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant excavator lift plans from a CPCS Appointed Person with 35 years of construction industry experience.</p>
+        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant <a href="/services/lift-plans">excavator lift plans</a> from a CPCS Appointed Person with 35 years of construction industry experience.</p>
         <a href="/contact" class="btn-primary inline-block">Contact Us Today</a>
       </div>
     `,
@@ -581,7 +581,7 @@ const blogPosts = {
       <p>The qualification is structured in two levels:</p>
       <ul>
         <li><strong>A61 Basic</strong> - Qualifies holders to plan routine lifts with mobile cranes, excavators, and telehandlers</li>
-        <li><strong>A61 Advanced</strong> - Extends competence to tower cranes, tandem lifts, and complex operations requiring detailed engineering</li>
+        <li><strong>A61 Advanced</strong> - Extends competence to <a href="/blog/mobile-crane-vs-tower-crane">tower cranes</a>, tandem lifts, and complex operations requiring detailed engineering</li>
       </ul>
 
       <h2>When Do You Need an Appointed Person?</h2>
@@ -638,7 +638,7 @@ const blogPosts = {
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need an Appointed Person?</h3>
-        <p class="text-gray-300 mb-6">RMT Solutions is run by Ricky Marsh, a CPCS Appointed Person (A61) with 35 years of construction industry experience and over 1,000 lift plans delivered.</p>
+        <p class="text-gray-300 mb-6">RMT Solutions is run by Ricky Marsh, a CPCS Appointed Person (A61) with 35 years of construction industry experience and over 1,000 lift plans delivered. We provide <a href="/services/lift-plans">lift plan writing</a>, <a href="/services/tower-crane">tower crane contracts</a>, and <a href="/services/lift-plan-checking">lift plan checking</a> services.</p>
         <a href="/contact" class="btn-primary inline-block">Contact Us Today</a>
       </div>
     `,
@@ -716,7 +716,7 @@ const blogPosts = {
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Avoid These Mistakes</h3>
-        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant lift planning from a CPCS Appointed Person with 35 years of experience. Professional planning, thorough documentation, and expert oversight.</p>
+        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant lift planning from a CPCS Appointed Person with 35 years of experience. We offer <a href="/services/lift-plans">professional lift plan writing</a> and <a href="/services/lift-plan-checking">independent lift plan checking</a> to ensure your operations are safe and compliant.</p>
         <a href="/contact" class="btn-primary inline-block">Contact Us Today</a>
       </div>
     `,
@@ -732,7 +732,7 @@ const blogPosts = {
       <p class="lead">Telehandlers are among the most versatile machines on UK construction sites. Originally designed as rough terrain forklifts, they are now routinely used for lifting and placing suspended loads — operations that bring them firmly within the scope of LOLER 1998. Despite this, telehandler lift plans remain one of the most commonly overlooked requirements in construction planning.</p>
 
       <h2>When Does a Telehandler Need a Lift Plan?</h2>
-      <p>Under LOLER 1998, every lifting operation must be properly planned by a competent person, appropriately supervised, and carried out in a safe manner. A telehandler requires a formal lift plan whenever it is used for crane duties — that is, lifting and moving suspended loads using chains, slings, or other lifting accessories attached to the machine.</p>
+      <p>Under <a href="/blog/what-is-loler-complete-guide">LOLER 1998</a>, every lifting operation must be properly planned by a competent person, appropriately supervised, and carried out in a safe manner. A telehandler requires a formal lift plan whenever it is used for crane duties — that is, lifting and moving suspended loads using chains, slings, or other lifting accessories attached to the machine.</p>
 
       <p>Common telehandler lifting operations that require a lift plan include:</p>
       <ul>
@@ -813,7 +813,7 @@ const blogPosts = {
       </ul>
 
       <h2>Common Mistakes in Telehandler Lift Plans</h2>
-      <p>Having reviewed hundreds of telehandler lift plans submitted by subcontractors, certain mistakes appear repeatedly.</p>
+      <p>Having reviewed hundreds of telehandler lift plans submitted by subcontractors, certain <a href="/blog/common-lift-planning-mistakes">mistakes appear repeatedly</a>.</p>
 
       <h3>Using the Wrong Load Chart</h3>
       <p>This is the single most common error. Telehandler load charts vary significantly depending on the configuration — stabilisers deployed vs retracted, attachment type, counterweight fitted vs removed. Using the wrong chart can make a lift appear safe when it is actually beyond the machine's capacity. Always verify which load chart applies to the actual planned configuration.</p>
@@ -866,7 +866,7 @@ const blogPosts = {
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need a Telehandler Lift Plan?</h3>
-        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant telehandler lift plans for fixed-frame and 360 degree slew machines. Fast turnaround from a CPCS Appointed Person with 35 years of experience.</p>
+        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant <a href="/services/lift-plans">telehandler lift plans</a> for fixed-frame and 360 degree slew machines. Fast turnaround from a CPCS Appointed Person with 35 years of experience.</p>
         <a href="/contact" class="btn-primary inline-block">Get a Quote</a>
       </div>
     `,
@@ -882,7 +882,7 @@ const blogPosts = {
       <p class="lead">Lorry loaders — commonly known by the brand name HIAB, though this is just one of several manufacturers — are truck-mounted cranes used extensively across UK construction for loading, unloading, and placing materials. Their convenience and availability make them one of the most frequently used pieces of lifting equipment on construction sites, yet lorry loader lift plans are among the most commonly deficient documents submitted for review.</p>
 
       <h2>When Does a Lorry Loader Need a Lift Plan?</h2>
-      <p>Under LOLER 1998, every lifting operation must be properly planned by a competent person. For lorry loaders, this means a lift plan is required whenever the crane is used to lift and move loads. This includes the most routine delivery operations that many contractors assume are too simple to plan.</p>
+      <p>Under <a href="/blog/what-is-loler-complete-guide">LOLER 1998</a>, every lifting operation must be properly planned by a competent person. For lorry loaders, this means a lift plan is required whenever the crane is used to lift and move loads. This includes the most routine delivery operations that many contractors assume are too simple to plan.</p>
 
       <p>Operations that require a lorry loader lift plan include:</p>
       <ul>
@@ -1025,7 +1025,7 @@ const blogPosts = {
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need a Lorry Loader Lift Plan?</h3>
-        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant lorry loader lift plans for all types of truck-mounted crane operations. Fast turnaround from a CPCS Appointed Person with 35 years of experience.</p>
+        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant <a href="/services/lift-plans">lorry loader lift plans</a> for all types of truck-mounted crane operations. Fast turnaround from a CPCS Appointed Person with 35 years of experience.</p>
         <a href="/contact" class="btn-primary inline-block">Get a Quote</a>
       </div>
     `,
