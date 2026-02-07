@@ -9,6 +9,31 @@ export const metadata = {
   keywords: ['steel erection', 'structural steel', 'steel frame', 'tandem lifts', 'crane selection', 'erection sequence'],
 }
 
+const serviceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Steel Erection Lift Planning',
+  description: 'Complete lift planning for structural steel erection including fabrication drawing reviews, erection sequences, crane selection, and tandem lift coordination. CPCS Appointed Person services.',
+  provider: {
+    '@type': 'ProfessionalService',
+    '@id': 'https://www.rmtsafetysolutions.com/#business',
+    name: 'RMT Solutions Ltd',
+  },
+  areaServed: { '@type': 'Country', name: 'United Kingdom' },
+  serviceType: 'Steel Erection Lift Planning',
+  url: 'https://www.rmtsafetysolutions.com/services/steel-erection',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Steel Erection Planning Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Fabrication Drawing Review' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Erection Sequence Planning' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile Crane Selection' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Tandem Lift Coordination' } },
+    ],
+  },
+}
+
 export default function SteelErectionPage() {
   const services = [
     { icon: FileText, title: 'Fabrication Drawing Review', description: 'Analysis of steel fabrication drawings to identify weights, lift points, and erection requirements' },
@@ -28,6 +53,12 @@ export default function SteelErectionPage() {
 
   return (
     <>
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-slate-900">
