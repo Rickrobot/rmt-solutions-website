@@ -14,8 +14,8 @@ const jsonLd = {
   name: 'RMT Solutions Ltd',
   alternateName: ['RMT Solutions', 'RMT Lift Planning'],
   description: 'Professional lift planning consultancy providing LOLER compliant lift plans, tower crane compliance contracts, steel erection planning, and excavator lift plans.',
-  url: 'https://www.rmtsafetysolutions.com', telephone: '+447803808093',
-  email: 'ricky@rmtsolutions.co.uk',
+  url: 'https://www.rmtsafetysolutions.com', 
+  email: 'ricky@rmtsolutions.co.uk', telephone: '+447803808093',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Warrington',
