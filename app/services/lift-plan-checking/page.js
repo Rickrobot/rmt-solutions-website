@@ -10,9 +10,38 @@ export const metadata = {
   },
 };
 
+const serviceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Lift Plan Checking Service',
+  description: 'Independent Appointed Person review of subcontractor lift plans for tier 1 contractors. Ensuring LOLER compliance before lifting operations begin on site.',
+  provider: {
+    '@type': 'ProfessionalService',
+    '@id': 'https://www.rmtsafetysolutions.com/#business',
+    name: 'RMT Solutions Ltd',
+  },
+  areaServed: { '@type': 'Country', name: 'United Kingdom' },
+  serviceType: 'Lift Plan Checking and Review',
+  url: 'https://www.rmtsafetysolutions.com/services/lift-plan-checking',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Lift Plan Checking Options',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ad-Hoc Lift Plan Checking' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ongoing Lift Plan Checking Contract' } },
+    ],
+  },
+};
+
 export default function LiftPlanChecking() {
   return (
     <>
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20">
         <div className="absolute inset-0 bg-slate-900">
@@ -336,4 +365,3 @@ export default function LiftPlanChecking() {
     </>
   );
 }
-
