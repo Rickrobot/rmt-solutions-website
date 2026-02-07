@@ -6,6 +6,12 @@ export const metadata = {
   title: 'Tower Crane Contracts | Appointed Person Compliance Services',
   description: 'Ongoing tower crane Appointed Person contracts with 8-weekly audits, documentation management, and on-call support. LOLER and BS 7121 compliance for UK construction sites.',
   keywords: ['tower crane', 'appointed person', 'crane compliance', 'tower crane contract', 'BS 7121', 'crane audits'],
+  openGraph: {
+    title: 'Tower Crane Contracts | Appointed Person Compliance Services',
+    description: 'Ongoing tower crane Appointed Person contracts with 8-weekly audits, documentation management, and on-call support. LOLER and BS 7121 compliance.',
+    url: 'https://www.rmtsafetysolutions.com/services/tower-crane',
+    images: ['/images/residential-tower-crane.webp'],
+  },
 }
 
 const serviceJsonLd = {
