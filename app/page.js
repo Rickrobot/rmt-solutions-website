@@ -227,11 +227,10 @@ export default function HomePage() {
           <p className="text-center text-gray-500 text-sm font-semibold tracking-widest uppercase mb-10">
             Trusted by leading UK contractors for lift planning
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 opacity-50">
-            <span className="text-gray-600 font-display font-bold text-xl">TIER 1 CONTRACTOR</span>
-            <span className="text-gray-600 font-display font-bold text-xl">MAIN CONTRACTOR</span>
-            <span className="text-gray-600 font-display font-bold text-xl">CONSTRUCTION CO</span>
-            <span className="text-gray-600 font-display font-bold text-xl">CIVIL ENGINEERS</span>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16">
+            <span className="text-gray-400 font-display font-bold text-xl">WATES</span>
+            <span className="text-gray-400 font-display font-bold text-xl">CADDICK</span>
+            <span className="text-gray-400 font-display font-bold text-xl">GMI</span>
           </div>
         </div>
       </section>
