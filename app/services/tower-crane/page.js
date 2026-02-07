@@ -8,6 +8,31 @@ export const metadata = {
   keywords: ['tower crane', 'appointed person', 'crane compliance', 'tower crane contract', 'BS 7121', 'crane audits'],
 }
 
+const serviceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Tower Crane Compliance Contracts',
+  description: 'Ongoing Appointed Person contracts for tower crane operations with 8-weekly audits, documentation management, and on-call support. LOLER and BS 7121 compliance for UK construction sites.',
+  provider: {
+    '@type': 'ProfessionalService',
+    '@id': 'https://www.rmtsafetysolutions.com/#business',
+    name: 'RMT Solutions Ltd',
+  },
+  areaServed: { '@type': 'Country', name: 'United Kingdom' },
+  serviceType: 'Tower Crane Appointed Person Contract',
+  url: 'https://www.rmtsafetysolutions.com/services/tower-crane',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Tower Crane Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '8-Weekly Compliance Audits' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Crane Documentation Management' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'On-Call Appointed Person Support' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Lift Plan Review and Approval' } },
+    ],
+  },
+}
+
 export default function TowerCranePage() {
   const contractIncludes = [
     { icon: Calendar, title: '8-Weekly Audits', description: 'Regular compliance audits to maintain BS 7121 standards throughout your project' },
@@ -31,6 +56,12 @@ export default function TowerCranePage() {
 
   return (
     <>
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-slate-900">
