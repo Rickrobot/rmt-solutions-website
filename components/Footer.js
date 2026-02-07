@@ -9,7 +9,7 @@ const services = [
     { name: 'Steel Erection Planning', href: '/services/steel-erection' },
     { name: 'Lift Plan Checking', href: '/services/lift-plan-checking' },
   ]
-  ]
+ 
 
   const qualifications = [
     'CPCS Appointed Person A61',
