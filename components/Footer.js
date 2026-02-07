@@ -1,12 +1,14 @@
 import Link from 'next/link'
 
 export default function Footer() {
-  const services = [
+const services = [
     { name: 'Lift Plan Writing', href: '/services/lift-plans' },
     { name: 'Excavator Lift Plans', href: '/services/lift-plans#excavator' },
     { name: 'Mobile Crane Lift Plans', href: '/services/lift-plans#mobile-crane' },
     { name: 'Tower Crane Contracts', href: '/services/tower-crane' },
     { name: 'Steel Erection Planning', href: '/services/steel-erection' },
+    { name: 'Lift Plan Checking', href: '/services/lift-plan-checking' },
+  ]
   ]
 
   const qualifications = [
