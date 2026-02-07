@@ -9,6 +9,31 @@ export const metadata = {
   keywords: ['lift plans', 'excavator lift plan', 'telehandler lift plan', 'mobile crane lift plan', 'lorry loader lift plan', 'LOLER compliant'],
 }
 
+const serviceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'LOLER Compliant Lift Plans',
+  description: 'Professional lift plan writing for excavators, telehandlers, lorry loaders, and mobile cranes. LOLER compliant lift plans from a CPCS Appointed Person with fast turnaround, UK-wide.',
+  provider: {
+    '@type': 'ProfessionalService',
+    '@id': 'https://www.rmtsafetysolutions.com/#business',
+    name: 'RMT Solutions Ltd',
+  },
+  areaServed: { '@type': 'Country', name: 'United Kingdom' },
+  serviceType: 'Lift Plan Writing',
+  url: 'https://www.rmtsafetysolutions.com/services/lift-plans',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Lift Plan Services by Equipment Type',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Excavator Lift Plans' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Telehandler Lift Plans' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Lorry Loader Lift Plans' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile Crane Lift Plans' } },
+    ],
+  },
+}
+
 export default function LiftPlansPage() {
   const equipmentTypes = [
     {
@@ -54,6 +79,12 @@ export default function LiftPlansPage() {
 
   return (
     <>
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-slate-900">
