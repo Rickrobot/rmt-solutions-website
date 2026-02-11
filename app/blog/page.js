@@ -86,7 +86,24 @@ const blogPosts = [
     image: '/images/precast-concrete-lift.webp',
   },
 ];
-
+{
+    slug: 'what-is-a-lift-plan',
+    title: 'What is a Lift Plan? The Complete Guide for UK Construction',
+    excerpt: 'What is a lift plan and why do you need one? Complete guide to what a lift plan contains, when one is required under LOLER, who can write one, and common mistakes to avoid.',
+    category: 'Compliance',
+    readTime: '10 min read',
+    date: 'February 11, 2026',
+    image: '/images/warehouse-steel-erection.webp',
+  },
+  {
+    slug: 'what-does-a-lift-plan-checking-service-involve',
+    title: 'What Does a Lift Plan Checking Service Involve?',
+    excerpt: 'What does a lift plan checking service involve and why do tier 1 contractors need one? Learn what gets checked, common rejection reasons, and how professional review improves site safety.',
+    category: 'Services',
+    readTime: '9 min read',
+    date: 'February 11, 2026',
+    image: '/images/precast-concrete-lift.webp',
+  },
 export default function BlogPage() {
   return (
     <>
