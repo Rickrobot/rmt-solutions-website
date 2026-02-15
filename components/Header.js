@@ -1,16 +1,31 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+
+  const services = [
+    { name: 'Lift Plan Writing', href: '/services/lift-plans' },
+    { name: 'Excavator Lift Plans', href: '/services/excavator-lift-plans' },
+    { name: 'Telehandler Lift Plans', href: '/services/telehandler-lift-plans' },
+    { name: 'Lorry Loader Lift Plans', href: '/services/lorry-loader-lift-plans' },
+    { name: 'Mobile Crane Lift Plans', href: '/services/mobile-crane-lift-plans' },
+    { name: 'Tower Crane Contracts', href: '/services/tower-crane' },
+    { name: 'Steel Erection Planning', href: '/services/steel-erection' },
+    { name: 'Lift Plan Checking', href: '/services/lift-plan-checking' },
+    { name: 'Lifting Operations Audit', href: '/services/lifting-operations-audit' },
+  ]
+
   const navigation = [
-    { name: 'Services', href: '/#services' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'About', href: '/about' },
     { name: 'Resources', href: '/resources' },
   ]
+
   return (
     <nav className="fixed w-full z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,8 +42,35 @@ export default function Header() {
               </span>
             </div>
           </Link>
+
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
+            {/* Services Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
+              <button className="flex items-center text-gray-400 hover:text-amber-400 transition font-medium">
+                Services
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-900 border border-slate-800 rounded-xl shadow-xl py-2">
+                  {services.map((service) => (
+                    <Link
+                      key={service.name}
+                      href={service.href}
+                      className="block px-4 py-2 text-gray-400 hover:text-amber-400 hover:bg-slate-800/50 transition"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -45,6 +87,7 @@ export default function Header() {
               Get a Quote
             </Link>
           </div>
+
           {/* Mobile menu button */}
           <button
             className="lg:hidden text-gray-400 hover:text-white"
@@ -54,10 +97,35 @@ export default function Header() {
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-slate-800">
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-2">
+              {/* Mobile Services Accordion */}
+              <button
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="flex items-center justify-between text-gray-400 hover:text-amber-400 transition font-medium px-4 py-2"
+              >
+                Services
+                <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {servicesOpen && (
+                <div className="pl-6 space-y-1">
+                  {services.map((service) => (
+                    <Link
+                      key={service.name}
+                      href={service.href}
+                      className="block text-gray-500 hover:text-amber-400 transition px-4 py-2 text-sm"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+
               {navigation.map((item) => (
                 <Link
                   key={item.name}
