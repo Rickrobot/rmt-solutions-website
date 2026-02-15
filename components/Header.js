@@ -51,22 +51,24 @@ export default function Header() {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button className="flex items-center text-gray-400 hover:text-amber-400 transition font-medium">
+              <button className="flex items-center text-gray-400 hover:text-amber-400 transition font-medium py-6">
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-900 border border-slate-800 rounded-xl shadow-xl py-2">
-                  {services.map((service) => (
-                    <Link
-                      key={service.name}
-                      href={service.href}
-                      className="block px-4 py-2 text-gray-400 hover:text-amber-400 hover:bg-slate-800/50 transition"
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 pt-0 w-64">
+                  <div className="bg-slate-900 border border-slate-800 rounded-xl shadow-xl py-2">
+                    {services.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="block px-4 py-2 text-gray-400 hover:text-amber-400 hover:bg-slate-800/50 transition"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
