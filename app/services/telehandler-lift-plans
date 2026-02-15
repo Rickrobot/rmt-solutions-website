@@ -1,0 +1,57 @@
+import Link from 'next/link'
+
+export const metadata = {
+  title: 'Telehandler Lift Plans UK | LOLER Compliant',
+  description: 'Professional telehandler lift plans from a CPCS Appointed Person. LOLER compliant plans for all telehandler lifting operations. Fast 24hr turnaround. UK-wide service.',
+  keywords: 'telehandler lift plan, telehandler lifting operations, telescopic handler lift plan, LOLER telehandler',
+}
+
+export default function TelehandlerLiftPlansPage() {
+  return (
+    <>
+      {/* Hero */}
+      <section className="bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
+          <p className="text-amber-400 font-medium mb-4">CPCS Appointed Person A61</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Telehandler Lift Plans UK</h1>
+          <p className="text-xl text-slate-300 max-w-3xl mb-8">
+            Professional telehandler lift plans prepared by a CPCS Appointed Person with 35+ years of construction 
+            experience. LOLER compliant lift plans for all telescopic handler lifting operations.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Link href="/contact" className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-900 px-8 py-3 rounded-xl font-semibold transition">
+              Request a Quote
+            </Link>
+            <a href="tel:+447803808093" className="border border-slate-700 hover:border-amber-400 text-white px-8 py-3 rounded-xl font-semibold transition">
+              Call: 07803 808093
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Understanding */}
+      <section className="py-16 bg-slate-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-white mb-8">Understanding Telehandler Lifting Operations</h2>
+          <p className="text-lg text-slate-300 mb-8">
+            Telehandlers are among the most versatile machines on UK construction sites. Beyond handling palletised 
+            materials, they are frequently used for suspended loads, personnel access, and specialist attachments.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {['Lifting with suspended loads using hooks or lifting jibs', 'Personnel access using approved MEWPs', 
+              'Placing materials at height', 'Lifting with brick grabs and block clamps'].map((item) => (
+              <div key={item} className="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+                <p className="text-slate-300">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What We Provide */}
+      <section className="py-16 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-white mb-12">Complete Lift Planning Package</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              { title: 'Machine Verification', items: ['Telehandler specification review', 'Attachment capacity verification', 'Thorough examination certificate check'
