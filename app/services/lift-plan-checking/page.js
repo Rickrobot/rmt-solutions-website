@@ -1,367 +1,388 @@
-import Link from 'next/link';
+
+import Image from 'next/image'
+import Link from 'next/link'
 
 export const metadata = {
-  title: 'Lift Plan Checking Service | Independent AP Review | RMT Solutions',
-  description: 'Independent lift plan checking service for tier 1 contractors. CPCS Appointed Person review of subcontractor lift plans to ensure LOLER compliance before work begins. Fast turnaround, thorough review.',
-  openGraph: {
-    title: 'Lift Plan Checking Service | Independent AP Review | RMT Solutions',
-    description: 'Independent lift plan checking service for tier 1 contractors. CPCS Appointed Person review of subcontractor lift plans for LOLER compliance.',
-    url: 'https://www.rmtsafetysolutions.com/services/lift-plan-checking',
-  },
-};
+  title: 'Lift Plan Checking Service UK | Independent AP Review | RMT Solutions',
+  description: 'Independent Appointed Person lift plan checking service for tier 1 contractors. Ensure subcontractor lift plans are LOLER compliant before work begins. Fast 24hr review.',
+  keywords: 'lift plan checking service, lift plan review, appointed person lift plan check, LOLER lift plan review, independent lift plan verification',
+}
 
-const serviceJsonLd = {
+const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Lift Plan Checking Service',
-  description: 'Independent Appointed Person review of subcontractor lift plans for tier 1 contractors. Ensuring LOLER compliance before lifting operations begin on site.',
   provider: {
-    '@type': 'ProfessionalService',
-    '@id': 'https://www.rmtsafetysolutions.com/#business',
-    name: 'RMT Solutions Ltd',
+    '@type': 'LocalBusiness',
+    name: 'RMT Solutions',
+    telephone: '+447803808093',
   },
+  description: 'Independent Appointed Person review of lift plans for tier 1 contractors. Verify subcontractor lift plans are LOLER compliant before work begins.',
   areaServed: { '@type': 'Country', name: 'United Kingdom' },
-  serviceType: 'Lift Plan Checking and Review',
-  url: 'https://www.rmtsafetysolutions.com/services/lift-plan-checking',
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Lift Plan Checking Options',
-    itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ad-Hoc Lift Plan Checking' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ongoing Lift Plan Checking Contract' } },
-    ],
-  },
-};
+}
 
-export default function LiftPlanChecking() {
+export default function LiftPlanCheckingPage() {
   return (
     <>
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20">
-        <div className="absolute inset-0 bg-slate-900">
-          <div className="absolute inset-0 construction-pattern"></div>
-          <div className="absolute inset-0 grid-bg"></div>
+      {/* Hero */}
+      <section className="relative bg-slate-900 text-white">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/services/lift-plan-checking-clipboard-inspection.webp"
+            alt="Construction professionals reviewing lift plan documentation - Independent lift plan checking service"
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
         </div>
-        <div className="hero-overlay absolute inset-0"></div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="mb-8 text-sm">
-            <Link href="/" className="text-gray-400 hover:text-amber-400 transition">Home</Link>
-            <span className="text-gray-600 mx-2">/</span>
-            <span className="text-gray-500">Lift Plan Checking</span>
-          </nav>
-
-          <span className="bg-amber-500/20 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full inline-block mb-6">
-            For Tier 1 Contractors
-          </span>
-
-          <h1 className="font-display text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight max-w-4xl">
-            Lift Plan Checking Service
-          </h1>
-
-          <p className="text-xl text-gray-300 max-w-3xl mb-8">
-            Independent Appointed Person review of lift plans submitted by subcontractors. Ensure every lifting operation on your site is LOLER compliant before work begins. Fast turnaround from a CPCS A61 qualified professional.
+        <div className="relative max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
+          <p className="text-blue-400 font-medium mb-4">For Tier 1 Contractors</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Lift Plan Checking Service</h1>
+          <p className="text-xl text-slate-300 max-w-3xl mb-8">
+            Independent Appointed Person review of lift plans submitted by subcontractors, crane hire companies, 
+            and suppliers. We ensure every lifting operation on your site is LOLER compliant before work begins.
           </p>
-
-          <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="btn-primary inline-block">
-              Discuss Your Requirements
+          <div className="flex flex-wrap gap-4 mb-8">
+            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+              Request a Quote
             </Link>
+            <a href="tel:+447803808093" className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+              Call: 07803 808093
+            </a>
+          </div>
+          <div className="flex flex-wrap gap-8 text-sm">
+            <div><span className="text-blue-400 font-bold text-2xl">24hr</span><br />Turnaround</div>
+            <div><span className="text-blue-400 font-bold text-2xl">Expert</span><br />AP Review</div>
+            <div><span className="text-blue-400 font-bold text-2xl">Tier 1</span><br />Approved</div>
           </div>
         </div>
       </section>
 
       {/* Why You Need This */}
-      <section className="py-20 bg-slate-950">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-amber-400 text-sm font-semibold tracking-wider uppercase">The Problem</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mt-4">
-              Why Subcontractor Lift Plans Need Checking
-            </h2>
-          </div>
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">Why You Need Independent Lift Plan Checking</h2>
+          <p className="text-lg text-slate-600 mb-8">
+            As a principal contractor, you have duties under CDM 2015 to ensure safe systems of work on your site. 
+            This includes the lifting operations carried out by your subcontractors and suppliers.
+          </p>
+          <p className="text-lg text-slate-600 mb-8">
+            But how do you know if the lift plans you receive are actually adequate?
+          </p>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="prose-custom">
-              <p className="text-gray-300 text-lg mb-6">
-                As a principal contractor, you are legally responsible for ensuring that all lifting operations on your site are properly planned under LOLER. When subcontractors submit lift plans, you need confidence that those plans are compliant, technically sound, and safe to execute.
-              </p>
-              <p className="text-gray-300 text-lg mb-6">
-                The reality is that many subcontractor lift plans contain errors. After reviewing over 1,000 lift plans, the most common problems include incorrect load chart references, missing ground bearing assessments, inadequate rigging specifications, and plans that are generic templates rather than site-specific documents.
-              </p>
-              <p className="text-gray-300 text-lg">
-                An independent lift plan check by a qualified Appointed Person catches these issues before they become problems on site. It protects your workers, demonstrates due diligence, and provides the audit trail that HSE inspectors expect to see.
-              </p>
+          <div className="bg-red-50 border border-red-200 p-8 rounded-xl mb-8">
+            <h3 className="text-xl font-semibold text-red-800 mb-4">Common Problems We Find</h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                'Incorrect capacity readings from load charts',
+                'Ground bearing not properly assessed',
+                'Wrong crane configuration specified',
+                'Risk assessments missing key hazards',
+                "Method statements that don't match the lift plan",
+                "Rigging arrangements that won't work",
+                'Lifting accessories undersized or incorrect',
+              ].map((problem) => (
+                <div key={problem} className="flex items-start gap-3">
+                  <span className="text-red-600 mt-1">✗</span>
+                  <span className="text-red-800">{problem}</span>
+                </div>
+              ))}
             </div>
           </div>
+
+          <p className="text-slate-700 font-medium text-lg">
+            A lift plan that looks professional can still contain fundamental errors. Independent checking catches 
+            problems before they become incidents.
+          </p>
         </div>
       </section>
 
-      {/* What We Check */}
-      <section className="py-20 bg-slate-900">
+      {/* What We Review */}
+      <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-amber-400 text-sm font-semibold tracking-wider uppercase">Our Review</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mt-4">
-              What We Check in Every Lift Plan
-            </h2>
-          </div>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12">What We Review</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
-              <h3 className="text-white font-display text-xl font-bold mb-4">Load Information</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Load weights verified against manufacturer data or calculation</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Centre of gravity correctly identified for asymmetric loads</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Weight of all lifting accessories included in total load</span>
-                </li>
+            <div className="bg-white p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">Technical Accuracy</h3>
+              <ul className="space-y-3 text-slate-600">
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Crane/equipment capacity verified against manufacturer data</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Load weight and centre of gravity correctly assessed</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Radii and heights properly calculated</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Configuration (boom length, counterweight, etc.) appropriate</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Ground bearing loads calculated and addressed</li>
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
-              <h3 className="text-white font-display text-xl font-bold mb-4">Equipment &amp; Capacity</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Correct load chart used for the specific machine configuration</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Capacity checked at actual working radius, not minimum radius</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Equipment suitable for the operation with adequate safety margin</span>
-                </li>
+            <div className="bg-white p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">Regulatory Compliance</h3>
+              <ul className="space-y-3 text-slate-600">
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>LOLER requirements met</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>BS 7121 principles applied (where relevant)</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Equipment thorough examination referenced</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Lifting accessories properly specified</li>
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
-              <h3 className="text-white font-display text-xl font-bold mb-4">Ground &amp; Stability</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Ground bearing capacity assessed for operating position</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Outrigger/stabiliser loads calculated and spreading specified</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Proximity to excavations and soft ground considered</span>
-                </li>
+            <div className="bg-white p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">Risk Assessment Quality</h3>
+              <ul className="space-y-3 text-slate-600">
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>All foreseeable hazards identified</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Control measures adequate</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Residual risk acceptable</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Site-specific factors addressed</li>
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
-              <h3 className="text-white font-display text-xl font-bold mb-4">Hazards &amp; Safety</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Overhead hazards identified with correct clearance distances</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Exclusion zones defined and appropriate for the operation</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Communication, supervision, and emergency procedures adequate</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
-              <h3 className="text-white font-display text-xl font-bold mb-4">Rigging &amp; Accessories</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Sling capacities adequate for load weight and angle</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Rigging arrangement suitable for load geometry</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Thorough examination certificates current for all accessories</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
-              <h3 className="text-white font-display text-xl font-bold mb-4">Documentation &amp; Compliance</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Plan meets LOLER Regulation 8 requirements</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Plan prepared by someone demonstrably competent</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  <span>Site-specific rather than generic template</span>
-                </li>
+            <div className="bg-white p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">Method Statement Workability</h3>
+              <ul className="space-y-3 text-slate-600">
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Step-by-step procedure logical and complete</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Matches the lift plan drawing</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Roles and responsibilities clear</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Communication arrangements specified</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-20 bg-slate-950">
+      {/* What You Receive */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-amber-400 text-sm font-semibold tracking-wider uppercase">Process</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mt-4">
-              How Our Checking Service Works
-            </h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">What You Receive</h2>
+
+          <div className="bg-slate-50 p-8 rounded-xl">
+            <h3 className="text-xl font-semibold text-slate-900 mb-4">Check Report</h3>
+            <p className="text-slate-600 mb-6">A clear summary identifying:</p>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-green-100 p-4 rounded-lg text-center">
+                <span className="text-green-700 font-bold text-lg">Approved</span>
+              </div>
+              <div className="bg-yellow-100 p-4 rounded-lg text-center">
+                <span className="text-yellow-700 font-bold text-lg">Approved with Comments</span>
+              </div>
+              <div className="bg-red-100 p-4 rounded-lg text-center">
+                <span className="text-red-700 font-bold text-lg">Not Approved</span>
+              </div>
+            </div>
+
+            <ul className="mt-6 space-y-2 text-slate-600">
+              <li>• Issues found with explanations</li>
+              <li>• Required amendments</li>
+              <li>• Recommendations for improvement</li>
+            </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="py-16 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold mb-12">The Checking Process</h2>
 
           <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-amber-400 font-display text-5xl font-bold mb-4">01</div>
-              <h3 className="text-white font-display text-lg font-bold mb-2">Submit</h3>
-              <p className="text-gray-400 text-sm">Subcontractor submits their lift plan to you. You forward it to us by email for independent review.</p>
-            </div>
-            <div className="text-center">
-              <div className="text-amber-400 font-display text-5xl font-bold mb-4">02</div>
-              <h3 className="text-white font-display text-lg font-bold mb-2">Review</h3>
-              <p className="text-gray-400 text-sm">We conduct a thorough technical review against LOLER requirements, checking every element of the plan.</p>
-            </div>
-            <div className="text-center">
-              <div className="text-amber-400 font-display text-5xl font-bold mb-4">03</div>
-              <h3 className="text-white font-display text-lg font-bold mb-2">Report</h3>
-              <p className="text-gray-400 text-sm">You receive a clear written assessment — approved, approved with comments, or rejected with specific reasons.</p>
-            </div>
-            <div className="text-center">
-              <div className="text-amber-400 font-display text-5xl font-bold mb-4">04</div>
-              <h3 className="text-white font-display text-lg font-bold mb-2">Resolve</h3>
-              <p className="text-gray-400 text-sm">If issues are found, we work with you and the subcontractor to resolve them before the lift proceeds.</p>
-            </div>
+            {[
+              { step: '1', title: 'Submission', desc: 'You send us the lift plan package: lift plan drawing, risk assessment, method statement, and equipment certificates.' },
+              { step: '2', title: 'Review', desc: 'Our CPCS Appointed Person reviews the complete package, verifies calculations, and assesses adequacy.' },
+              { step: '3', title: 'Report', desc: 'You receive a clear check report within 24 hours with approval status and detailed findings.' },
+              { step: '4', title: 'Re-submission', desc: 'If amendments are required, the subcontractor revises and resubmits for verification.' },
+            ].map((item) => (
+              <div key={item.step} className="text-center">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                  {item.step}
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                <p className="text-slate-300">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Common Issues Found */}
-      <section className="py-20 bg-slate-900">
+      {/* Who Uses This */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <span className="text-amber-400 text-sm font-semibold tracking-wider uppercase">What We Find</span>
-              <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mt-4">
-                Common Issues We Catch
-              </h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12">Who Uses This Service?</h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="border border-slate-200 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">Tier 1 Main Contractors</h3>
+              <p className="text-slate-600 mb-4">
+                You're receiving lift plans from multiple subcontractors and suppliers daily.
+              </p>
+              <ul className="text-slate-600 space-y-2">
+                <li>✓ Confidence that lifting operations are properly planned</li>
+                <li>✓ Documented due diligence</li>
+                <li>✓ Reduced risk of incidents and enforcement action</li>
+                <li>✓ Consistent standards across all subcontractors</li>
+              </ul>
             </div>
 
-            <div className="space-y-4">
-              <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 flex items-start gap-4">
-                <svg className="w-6 h-6 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-                <div>
-                  <h3 className="text-white font-bold mb-1">Wrong load chart configuration</h3>
-                  <p className="text-gray-400 text-sm">Capacity shown for stabilisers fully deployed when the site only allows partial deployment. Machine appears to have capacity when it actually does not.</p>
-                </div>
-              </div>
+            <div className="border border-slate-200 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">Project Managers</h3>
+              <p className="text-slate-600 mb-4">
+                You need to sign off lift plans but may not have the technical expertise to verify the detail.
+              </p>
+              <ul className="text-slate-600 space-y-2">
+                <li>✓ Expert review supporting your approval decisions</li>
+                <li>✓ Clear reports you can understand and act on</li>
+                <li>✓ Technical backup when challenging subcontractor submissions</li>
+              </ul>
+            </div>
 
-              <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 flex items-start gap-4">
-                <svg className="w-6 h-6 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-                <div>
-                  <h3 className="text-white font-bold mb-1">No ground bearing assessment</h3>
-                  <p className="text-gray-400 text-sm">Plan assumes firm ground without any assessment. On construction sites with made-up ground, backfilled trenches, or underground services, this is a serious oversight.</p>
-                </div>
-              </div>
-
-              <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 flex items-start gap-4">
-                <svg className="w-6 h-6 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-                <div>
-                  <h3 className="text-white font-bold mb-1">Generic template not site-specific</h3>
-                  <p className="text-gray-400 text-sm">Same lift plan used for every site with only the project name changed. No reference to actual site conditions, specific hazards, or the particular equipment being used.</p>
-                </div>
-              </div>
-
-              <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 flex items-start gap-4">
-                <svg className="w-6 h-6 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-                <div>
-                  <h3 className="text-white font-bold mb-1">Rigging weight not included in total load</h3>
-                  <p className="text-gray-400 text-sm">Load weight stated but slings, shackles, and other rigging not added. On operations close to capacity, this omission can mean the machine is overloaded.</p>
-                </div>
-              </div>
-
-              <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 flex items-start gap-4">
-                <svg className="w-6 h-6 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-                <div>
-                  <h3 className="text-white font-bold mb-1">Missing or expired thorough examination certificates</h3>
-                  <p className="text-gray-400 text-sm">Lifting accessories referenced in the plan but no current thorough examination documentation provided. A direct breach of LOLER Regulation 9.</p>
-                </div>
-              </div>
+            <div className="border border-slate-200 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">Health & Safety Managers</h3>
+              <p className="text-slate-600 mb-4">
+                You're responsible for site safety but can't be an expert in every discipline.
+              </p>
+              <ul className="text-slate-600 space-y-2">
+                <li>✓ Specialist lift planning expertise on tap</li>
+                <li>✓ Independent verification of subcontractor competence</li>
+                <li>✓ Evidence of robust checking systems</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Engagement Options */}
-      <section className="py-20 bg-slate-950">
+      {/* Good vs Poor */}
+      <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-amber-400 text-sm font-semibold tracking-wider uppercase">Options</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mt-4">
-              How to Engage Our Checking Service
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8">
-              <h3 className="text-amber-400 font-display text-xl font-bold mb-4">Ad-Hoc Checking</h3>
-              <p className="text-gray-400 mb-4">Submit lift plans as and when they arrive. We review each one individually and return our assessment, typically within 24 hours.</p>
-              <p className="text-gray-400 text-sm">Ideal for contractors who receive lift plans occasionally or need a one-off review for a specific project.</p>
-            </div>
-
-            <div className="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8">
-              <h3 className="text-amber-400 font-display text-xl font-bold mb-4">Ongoing Contract</h3>
-              <p className="text-gray-400 mb-4">A retained service where we review all lift plans submitted to your site for the duration of the project. Fixed monthly fee covering unlimited plan reviews.</p>
-              <p className="text-gray-400 text-sm">Ideal for tier 1 contractors managing multiple subcontractors and high volumes of lift plans across one or more projects.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-slate-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
-            Need Lift Plans Checked?
-          </h2>
-          <p className="text-gray-300 text-lg mb-8">
-            Get in touch to discuss your requirements. Whether you need a single plan reviewed or ongoing checking for a major project, we provide fast, thorough, independent assessment.
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">What Makes a Good Lift Plan?</h2>
+          <p className="text-lg text-slate-600 mb-8">
+            Through thousands of lift plan reviews, we've identified what separates good lift plans from poor ones:
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="btn-primary inline-block">
-              Discuss Your Requirements
-            </Link>
-            <Link href="mailto:ricky@rmtsolutions.co.uk" className="text-amber-400 hover:text-amber-300 transition inline-flex items-center gap-2 px-6 py-3">
-              Email Us
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-green-50 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-green-800 mb-4">Good Lift Plans Have:</h3>
+              <ul className="space-y-3 text-green-800">
+                <li className="flex items-start gap-3"><span className="text-green-600">✓</span>Clear drawings showing equipment position, radii, and load path to scale</li>
+                <li className="flex items-start gap-3"><span className="text-green-600">✓</span>Verified capacity with specific duty chart references</li>
+                <li className="flex items-start gap-3"><span className="text-green-600">✓</span>Ground assessment addressing actual site conditions</li>
+                <li className="flex items-start gap-3"><span className="text-green-600">✓</span>Complete risk assessments covering equipment-specific and site-specific hazards</li>
+                <li className="flex items-start gap-3"><span className="text-green-600">✓</span>Workable method statements that match the drawing</li>
+              </ul>
+            </div>
+
+            <div className="bg-red-50 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-red-800 mb-4">Poor Lift Plans Often Have:</h3>
+              <ul className="space-y-3 text-red-800">
+                <li className="flex items-start gap-3"><span className="text-red-600">✗</span>Generic content copied without site-specific adaptation</li>
+                <li className="flex items-start gap-3"><span className="text-red-600">✗</span>Missing calculations or "calculations available on request"</li>
+                <li className="flex items-start gap-3"><span className="text-red-600">✗</span>Assumed ground conditions without verification requirements</li>
+                <li className="flex items-start gap-3"><span className="text-red-600">✗</span>Incomplete risk assessments missing obvious hazards</li>
+                <li className="flex items-start gap-3"><span className="text-red-600">✗</span>Method statements that don't provide useful guidance</li>
+              </ul>
+            </div>
+          </div>
+
+          <p className="mt-8 text-slate-700 font-medium">
+            We don't just check boxes - we assess whether the lift plan will actually work safely on your site.
+          </p>
+        </div>
+      </section>
+
+      {/* Service Options */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-12">Service Options</h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="border-2 border-slate-200 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">Per-Plan Checking</h3>
+              <p className="text-slate-600 mb-4">Individual lift plan reviews charged per submission. Ideal for:</p>
+              <ul className="text-slate-600 space-y-2">
+                <li>• Occasional checking requirements</li>
+                <li>• Specific complex lifts</li>
+                <li>• Projects with few lifting operations</li>
+              </ul>
+            </div>
+
+            <div className="border-2 border-blue-500 p-8 rounded-xl bg-blue-50">
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">Retained Service</h3>
+              <p className="text-slate-600 mb-4">Agreed monthly fee for unlimited lift plan checking. Ideal for:</p>
+              <ul className="text-slate-600 space-y-2">
+                <li>• Large projects with frequent submissions</li>
+                <li>• Multi-site operations</li>
+                <li>• Long-term contractor relationships</li>
+              </ul>
+            </div>
+
+            <div className="border-2 border-slate-200 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">On-Site Presence</h3>
+              <p className="text-slate-600 mb-4">CPCS Appointed Person attendance at your site for:</p>
+              <ul className="text-slate-600 space-y-2">
+                <li>• Real-time lift plan review</li>
+                <li>• Pre-lift briefings</li>
+                <li>• Complex operation supervision</li>
+                <li>• Lifting operations audits</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link href="/contact" className="text-blue-600 hover:text-blue-700 font-medium">
+              Contact us to discuss the right option for your project →
             </Link>
           </div>
-          <p className="text-gray-500 text-sm mt-6">Based in Warrington, Cheshire • Serving contractors across the UK</p>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-12">Frequently Asked Questions</h2>
+          
+          <div className="space-y-6">
+            {[
+              {
+                q: 'How quickly can you turn around a lift plan check?',
+                a: 'Standard service is 24 hours from receipt of complete documentation. Urgent same-day review is available for critical path operations - just let us know when you submit.',
+              },
+              {
+                q: 'What if a lift plan fails your check?',
+                a: "We provide a clear report explaining what's wrong and what's needed to fix it. The subcontractor amends their submission and resubmits. We verify the amendments (included in the original check fee for straightforward issues).",
+              },
+              {
+                q: 'Do you check lift plans from all crane companies?',
+                a: "Yes. We're independent of any crane hire company, so we review submissions from any supplier objectively. Some crane companies provide better documentation than others - we assess each submission on its merits.",
+              },
+              {
+                q: 'What if I disagree with my subcontractor about a lift plan?',
+                a: 'We can provide independent assessment and, if needed, explain our findings directly to your subcontractor. Having an independent expert view often resolves disputes efficiently.',
+              },
+            ].map((faq) => (
+              <div key={faq.q} className="bg-white p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-slate-900 mb-3">{faq.q}</h3>
+                <p className="text-slate-600">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-blue-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-4">Get Started</h2>
+          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+            Contact us to discuss your lift plan checking requirements.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/contact" className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-medium transition-colors">
+              Request a Quote
+            </Link>
+            <a href="tel:+447803808093" className="bg-white/20 hover:bg-white/30 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+              Call: 07803 808093
+            </a>
+          </div>
         </div>
       </section>
     </>
-  );
+  )
 }
