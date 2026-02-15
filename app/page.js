@@ -105,6 +105,13 @@ export default function HomePage() {
     },
   ]
 
+  const liftPlanTypes = [
+    { name: 'Excavator Lift Plans', href: '/services/excavator-lift-plans' },
+    { name: 'Telehandler Lift Plans', href: '/services/telehandler-lift-plans' },
+    { name: 'Mobile Crane Lift Plans', href: '/services/mobile-crane-lift-plans' },
+    { name: 'Lorry Loader Lift Plans', href: '/services/lorry-loader-lift-plans' },
+  ]
+
   const caseStudies = [
     {
       title: 'Industrial Warehouse',
@@ -250,6 +257,22 @@ export default function HomePage() {
             ))}
           </div>
 
+          {/* Lift Plan Types Grid */}
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+            {liftPlanTypes.map((type) => (
+              <Link
+                key={type.name}
+                href={type.href}
+                className="bg-slate-900 border border-slate-800 hover:border-amber-400 rounded-xl p-6 text-center transition group"
+              >
+                <span className="text-white font-semibold group-hover:text-amber-400 transition">
+                  {type.name}
+                </span>
+                <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-amber-400 mx-auto mt-2 transition" />
+              </Link>
+            ))}
+          </div>
+
           {/* Lift Plan Checking */}
           <div className="mt-12 bg-gradient-to-r from-slate-800/50 to-slate-900/50 rounded-3xl p-8 md:p-12 border border-slate-700/50">
             <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -280,6 +303,41 @@ export default function HomePage() {
                 <div className="bg-slate-800/50 rounded-2xl p-6 text-center">
                   <div className="text-3xl font-display font-bold text-amber-400">Expert</div>
                   <div className="text-gray-400 text-sm mt-1">AP Review</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Lifting Operations Audit */}
+          <div className="mt-8 bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-12">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+                  Compliance Assurance
+                </span>
+                <h3 className="font-display text-3xl font-bold text-white mb-4">
+                  Lifting Operations Audit
+                </h3>
+                <p className="text-gray-300 mb-6">
+                  Independent assessment of your lifting operations, procedures, and compliance. 
+                  Evaluate your systems against LOLER, BS 7121, and industry best practice.
+                </p>
+                <Link
+                  href="/services/lifting-operations-audit"
+                  className="inline-flex items-center text-amber-400 hover:text-amber-300 font-semibold"
+                >
+                  Learn more about our audit service
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-slate-800/50 rounded-2xl p-6 text-center">
+                  <div className="text-3xl font-display font-bold text-amber-400">Site</div>
+                  <div className="text-gray-400 text-sm mt-1">& Desktop</div>
+                </div>
+                <div className="bg-slate-800/50 rounded-2xl p-6 text-center">
+                  <div className="text-3xl font-display font-bold text-amber-400">Full</div>
+                  <div className="text-gray-400 text-sm mt-1">Report</div>
                 </div>
               </div>
             </div>
