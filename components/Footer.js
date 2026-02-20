@@ -1,15 +1,17 @@
 import Link from 'next/link'
 
 export default function Footer() {
-const services = [
+  const services = [
     { name: 'Lift Plan Writing', href: '/services/lift-plans' },
-    { name: 'Excavator Lift Plans', href: '/services/lift-plans#excavator' },
-    { name: 'Mobile Crane Lift Plans', href: '/services/lift-plans#mobile-crane' },
+    { name: 'Excavator Lift Plans', href: '/services/excavator-lift-plans' },
+    { name: 'Telehandler Lift Plans', href: '/services/telehandler-lift-plans' },
+    { name: 'Lorry Loader Lift Plans', href: '/services/lorry-loader-lift-plans' },
+    { name: 'Mobile Crane Lift Plans', href: '/services/mobile-crane-lift-plans' },
     { name: 'Tower Crane Contracts', href: '/services/tower-crane' },
     { name: 'Steel Erection Planning', href: '/services/steel-erection' },
     { name: 'Lift Plan Checking', href: '/services/lift-plan-checking' },
+    { name: 'Lifting Operations Audit', href: '/services/lifting-operations-audit' },
   ]
- 
 
   const qualifications = [
     'CPCS Appointed Person A61',
@@ -56,6 +58,20 @@ const services = [
               {qualifications.map((qual) => (
                 <li key={qual}>{qual}</li>
               ))}
+            </ul>
+
+            <h4 className="text-white font-display font-semibold mt-8 mb-6">Free Resources</h4>
+            <ul className="space-y-3 text-gray-400 text-sm">
+              <li>
+                <Link href="/resources" className="hover:text-amber-400 transition">
+                  Resources Overview
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources/excavator-lift-plan-templates" className="hover:text-amber-400 transition">
+                  Free Lift Plan Templates
+                </Link>
+              </li>
             </ul>
           </div>
 
