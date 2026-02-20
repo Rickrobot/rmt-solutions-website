@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://www.rmtsolutions.co.uk'
+  const baseUrl = 'https://www.rmtsafetysolutions.com'
   
   return [
     {
@@ -90,6 +90,12 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/resources/excavator-lift-plan-templates`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/resources/telehandler-lift-plan-templates`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
