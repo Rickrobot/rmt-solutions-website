@@ -22,7 +22,8 @@ export default function Header() {
 
   const resources = [
     { name: 'Resources Overview', href: '/resources' },
-    { name: 'Free Lift Plan Templates', href: '/resources/excavator-lift-plan-templates' },
+    { name: 'Excavator Lift Plan Templates', href: '/resources/excavator-lift-plan-templates' },
+    { name: 'Telehandler Lift Plan Templates', href: '/resources/telehandler-lift-plan-templates' },
   ]
 
   const navigation = [
