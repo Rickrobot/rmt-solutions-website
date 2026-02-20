@@ -6,6 +6,7 @@ import { Menu, X, ChevronDown } from 'lucide-react'
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [resourcesOpen, setResourcesOpen] = useState(false)
 
   const services = [
     { name: 'Lift Plan Writing', href: '/services/lift-plans' },
@@ -19,11 +20,15 @@ export default function Header() {
     { name: 'Lifting Operations Audit', href: '/services/lifting-operations-audit' },
   ]
 
+  const resources = [
+    { name: 'Resources Overview', href: '/resources' },
+    { name: 'Free Lift Plan Templates', href: '/resources/excavator-lift-plan-templates' },
+  ]
+
   const navigation = [
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'About', href: '/about' },
-    { name: 'Resources', href: '/resources' },
   ]
 
   return (
@@ -82,6 +87,35 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
+
+            {/* Resources Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setResourcesOpen(true)}
+              onMouseLeave={() => setResourcesOpen(false)}
+            >
+              <button className="flex items-center text-gray-400 hover:text-amber-400 transition font-medium py-6">
+                Resources
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              
+              {resourcesOpen && (
+                <div className="absolute top-full right-0 pt-0 w-64">
+                  <div className="bg-slate-900 border border-slate-800 rounded-xl shadow-xl py-2">
+                    {resources.map((resource) => (
+                      <Link
+                        key={resource.name}
+                        href={resource.href}
+                        className="block px-4 py-2 text-gray-400 hover:text-amber-400 hover:bg-slate-800/50 transition"
+                      >
+                        {resource.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
             <Link
               href="/contact"
               className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-900 px-6 py-3 rounded-xl font-semibold transition shadow-lg shadow-amber-500/20"
@@ -138,6 +172,31 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
+
+              {/* Mobile Resources Accordion */}
+              <button
+                onClick={() => setResourcesOpen(!resourcesOpen)}
+                className="flex items-center justify-between text-gray-400 hover:text-amber-400 transition font-medium px-4 py-2"
+              >
+                Resources
+                <ChevronDown className={`w-4 h-4 transition-transform ${resourcesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {resourcesOpen && (
+                <div className="pl-6 space-y-1">
+                  {resources.map((resource) => (
+                    <Link
+                      key={resource.name}
+                      href={resource.href}
+                      className="block text-gray-500 hover:text-amber-400 transition px-4 py-2 text-sm"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {resource.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+
               <Link
                 href="/contact"
                 className="bg-gradient-to-r from-amber-500 to-amber-600 text-slate-900 px-6 py-3 rounded-xl font-semibold text-center mx-4"
