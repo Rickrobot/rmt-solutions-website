@@ -20,6 +20,7 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    // Service Pages
     {
       url: `${baseUrl}/services/lift-plans`,
       lastModified: new Date(),
@@ -39,6 +40,43 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/services/excavator-lift-plans`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/telehandler-lift-plans`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/lorry-loader-lift-plans`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/mobile-crane-lift-plans`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/lift-plan-checking`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/lifting-operations-audit`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    // Case Studies & Resources
+    {
       url: `${baseUrl}/case-studies`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -49,6 +87,43 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/resources/excavator-lift-plan-templates`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    // Blog Posts
+    {
+      url: `${baseUrl}/blog/why-every-excavator-lift-needs-a-written-plan`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/loler-lift-plan-requirements-what-contractors-must-know`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/excavator-lift-capacity-charts-how-to-read-and-use-them`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/appointed-person-lifting-operations-role-explained`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/common-excavator-lifting-mistakes-and-how-to-avoid-them`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.7,
     },
   ]
 }
