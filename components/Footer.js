@@ -69,7 +69,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/resources/excavator-lift-plan-templates" className="hover:text-amber-400 transition">
-                  Free Lift Plan Templates
+                  Excavator Lift Plan Templates
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources/telehandler-lift-plan-templates" className="hover:text-amber-400 transition">
+                  Telehandler Lift Plan Templates
                 </Link>
               </li>
             </ul>
