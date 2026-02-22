@@ -14,6 +14,15 @@ export const metadata = {
 // Blog posts data - we'll expand this
 const blogPosts = [
   {
+    slug: 'lift-plan-checking-what-gets-checked-and-why-plans-get-rejected',
+    title: 'Lift Plan Checking: What Gets Checked, Why Plans Get Rejected, and How to Get Yours Right First Time',
+    excerpt: 'What actually gets checked during a lift plan review? Learn what causes lift plans to fail, common rejection reasons, and how to get your plans approved first time from an Appointed Person with 35 years of experience.',
+    category: 'Services',
+    readTime: '12 min read',
+    date: 'February 22, 2026',
+    image: '/images/precast-concrete-lift.webp',
+  },
+  {
     slug: 'what-is-a-lift-plan',
     title: 'What is a Lift Plan? The Complete Guide for UK Construction',
     excerpt: 'What is a lift plan and why do you need one? Complete guide to what a lift plan contains, when one is required under LOLER, who can write one, and common mistakes to avoid.',
