@@ -1494,8 +1494,10 @@ const blogPosts = {
       </div>
 
       <p><strong>About the Author:</strong> Ricky Marsh is a CPCS Appointed Person (A61) with 35 years of construction industry experience. He holds NEBOSH National Diploma and Graduate IOSH qualifications, and provides <a href="/services/lift-plan-checking">lift plan checking services</a> to tier 1 contractors across the UK through <a href="/">RMT Solutions</a>.</p>
-    `,
+   `,
   },
+};
+
 // Generate metadata for each blog post
 export async function generateMetadata({ params }) {
   const post = blogPosts[params.slug];
