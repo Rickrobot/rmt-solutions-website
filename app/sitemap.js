@@ -1,6 +1,5 @@
 export default function sitemap() {
   const baseUrl = 'https://www.rmtsafetysolutions.com';
-
   const routes = [
     {
       url: baseUrl,
@@ -87,7 +86,6 @@ export default function sitemap() {
       priority: 0.7,
     },
   ];
-
   const blogRoutes = [
     {
       url: `${baseUrl}/blog`,
@@ -96,36 +94,18 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected`,
+      lastModified: new Date('2026-02-22'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/blog/what-is-a-lift-plan`,
-      lastModified: new Date('2026-01-28'),
+      lastModified: new Date('2026-02-11'),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/blog/lorry-loader-lift-plans-guide`,
-      lastModified: new Date('2026-01-28'),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/what-is-loler-complete-guide`,
-      lastModified: new Date('2026-01-28'),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/when-do-you-need-lift-plan`,
-      lastModified: new Date('2026-01-28'),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/mobile-crane-vs-tower-crane`,
-      lastModified: new Date('2026-01-28'),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-  ];
-
-  return [...routes, ...blogRoutes];
-}
+      url: `${baseUrl}/blog/what-does-a-lift-plan-checking-service-involve`,
+      lastModified: new Date('2026-02-11'),
+      changeFreque
