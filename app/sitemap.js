@@ -1,13 +1,7 @@
 export default function sitemap() {
   const baseUrl = 'https://www.rmtsafetysolutions.com';
   const routes = [
-  {
-      url: `${baseUrl}/blog/lifting-operations-audit-what-to-expect`,
-      lastModified: new Date('2026-02-23'),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
+     {
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: 'weekly',
@@ -93,7 +87,12 @@ export default function sitemap() {
     },
   ];
   const blogRoutes = [
-    {
+   {
+      url: `${baseUrl}/blog/lifting-operations-audit-what-to-expect`,
+      lastModified: new Date('2026-02-23'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
