@@ -113,4 +113,8 @@ export default function sitemap() {
     {
       url: `${baseUrl}/blog/what-does-a-lift-plan-checking-service-involve`,
       lastModified: new Date('2026-02-11'),
-      changeFreque
+     changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog`,
