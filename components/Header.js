@@ -21,6 +21,7 @@ export default function Header() {
     { name: 'Tower Crane Contracts', href: '/services/tower-crane' },
     { name: 'Steel Erection Planning', href: '/services/steel-erection' },
     { name: 'Lifting Operations Audit', href: '/services/lifting-operations-audit' },
+    { name: 'Aerial Site Surveys', href: '/services/aerial-site-surveys' },
   ]
 
   const navigation = [
