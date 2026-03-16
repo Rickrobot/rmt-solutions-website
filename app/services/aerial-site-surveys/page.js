@@ -1,21 +1,21 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Aerial Site Surveys for Lift Planning | Drone Surveys | RMT Solutions',
-  description: 'Aerial site surveys using drone technology to support lift planning and lifting operations. GVC qualified with CAA Operational Authorisation. Better site data for better lift plans.',
-  keywords: 'aerial site survey, drone survey lift planning, drone survey construction site, aerial survey crane planning, UAV site survey UK, drone site inspection lifting operations, GVC drone pilot, CAA operational authorisation',
+  title: 'Aerial Surveys & Construction Site Photography | Drone Surveys | RMT Solutions',
+  description: 'Aerial site surveys and construction site photography from a CPCS Appointed Person with GVC qualification and CAA Operational Authorisation. Drone and ground-level photography for lift planning, progress monitoring, and project documentation.',
+  keywords: 'aerial site survey, drone survey lift planning, drone survey construction site, construction site photography, aerial survey crane planning, UAV site survey UK, construction progress photography, site photography contractor, GVC drone pilot, CAA operational authorisation',
 }
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Aerial Site Surveys for Lift Planning',
+  name: 'Aerial Surveys & Construction Site Photography',
   provider: {
     '@type': 'LocalBusiness',
     name: 'RMT Solutions',
     telephone: '+447803808093',
   },
-  description: 'Aerial site surveys using drone technology to support lift planning, crane positioning, and lifting operations assessment. Conducted by a CPCS Appointed Person with GVC qualification and CAA Operational Authorisation.',
+  description: 'Aerial site surveys and construction site photography to support lift planning, crane positioning, progress monitoring, and project documentation. Conducted by a CPCS Appointed Person with GVC qualification and CAA Operational Authorisation.',
   areaServed: { '@type': 'Country', name: 'United Kingdom' },
 }
 
@@ -44,15 +44,23 @@ const faqSchema = {
       name: 'Can you fly drones near tower cranes and other construction equipment?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Our CAA Operational Authorisation covers flight in congested areas. All flights near construction equipment are planned with appropriate risk assessments, and we coordinate with site management to ensure safe operations. Tower crane jib positions and other overhead equipment are factored into every flight plan.',
+        text: 'Yes. Our CAA Operational Authorisation covers flight in congested areas. All flights near construction equipment are planned with appropriate risk assessments, and we coordinate with site management to ensure safe operations.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What areas of the UK do you cover for drone surveys?',
+      name: 'Do you offer ground-level site photography as well as aerial?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We provide aerial site surveys across the UK. Based in Warrington, Cheshire, we can attend sites nationwide for projects where aerial survey data would materially improve the quality of the lift plan.',
+        text: 'Yes. We provide both aerial and ground-level construction site photography. Because we hold CPCS, NEBOSH, and CSCS qualifications, we can work safely and independently on live construction sites without requiring an escort or additional supervision.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What areas of the UK do you cover?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We provide aerial surveys and site photography across the UK. Based in Warrington, Cheshire, we can attend sites nationwide.',
       },
     },
   ],
@@ -67,12 +75,13 @@ export default function AerialSiteSurveysPage() {
       {/* Hero */}
       <section className="relative bg-slate-900 text-white">
         <div className="relative max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
-          <p className="text-blue-400 font-medium mb-4">Drone-Assisted Lift Planning</p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Aerial Site Surveys</h1>
+          <p className="text-blue-400 font-medium mb-4">Aerial &amp; Ground-Level</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Aerial Surveys &amp; Site Photography</h1>
           <p className="text-xl text-slate-300 max-w-3xl mb-8">
-            Aerial site surveys using drone technology to provide accurate, up-to-date site data 
-            for lift planning and lifting operations. Conducted by a CPCS Appointed Person who 
-            understands exactly what the lift plan needs — not just a drone pilot taking photographs.
+            Aerial site surveys and construction site photography from someone who understands 
+            construction sites — not just cameras. Drone and ground-level photography for lift planning, 
+            progress monitoring, safety documentation, and project records. Conducted by a CPCS 
+            Appointed Person with GVC qualification and CAA Operational Authorisation.
           </p>
           <div className="flex flex-wrap gap-4 mb-8">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
@@ -93,36 +102,130 @@ export default function AerialSiteSurveysPage() {
       {/* The Difference */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Why Our Aerial Surveys Are Different</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">Why Our Service Is Different</h2>
           <p className="text-lg text-slate-600 mb-6">
-            Most drone survey companies can take aerial photographs of a construction site. What they 
-            cannot do is look at that site through the eyes of an Appointed Person and identify what 
-            matters for a lifting operation.
+            Most drone and photography companies can take pictures of a construction site. What they 
+            cannot do is look at that site through the eyes of someone with 35 years of construction 
+            experience and understand what they are looking at.
           </p>
           <p className="text-lg text-slate-600 mb-6">
-            When we conduct an aerial site survey, we are not simply capturing images. We are assessing 
-            the site from the perspective of someone who will plan or review lifting operations on it. 
-            We know what to look for because we know what a lift plan needs — crane access routes, 
-            ground conditions at potential setup positions, overhead obstructions, proximity to structures, 
-            exclusion zone boundaries, and the spatial relationships between all of these elements.
+            We are not a photography company that occasionally works on construction sites. We are a 
+            lift planning consultancy that offers aerial surveys and site photography as a natural 
+            extension of the work we already do. We hold the site qualifications to work safely and 
+            independently on live construction sites — CPCS, NEBOSH, CSCS — so we do not need an 
+            escort, we do not need a site induction explaining what a crane is, and we do not create 
+            additional management overhead for your site team.
           </p>
           <p className="text-lg text-slate-600">
-            The result is aerial survey data that feeds directly into practical, accurate lift plans — 
-            not generic photography that someone else then has to interpret.
+            The result is photography and survey data captured by someone who knows what matters 
+            on a construction site — because we work on them every day.
           </p>
         </div>
       </section>
 
-      {/* What We Capture */}
+      {/* Two Services */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">What We Capture</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12">What We Offer</h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-sm border-2 border-blue-500">
+              <h3 className="text-2xl font-semibold text-slate-900 mb-4">Aerial Surveys</h3>
+              <p className="text-slate-600 mb-6">
+                Drone-based aerial surveys of construction sites using high-resolution imagery. 
+                Particularly valuable for lift planning, where overhead views of the site reveal 
+                information that is difficult or impossible to assess from ground level.
+              </p>
+              <ul className="space-y-3 text-slate-600">
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>High-resolution overhead site imagery</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Crane access routes and setup positions</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Overhead obstructions and hazard identification</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Ground conditions assessment from above</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Tower crane jib zones and overlapping areas</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Site progress overview and comparison over time</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-sm border-2 border-slate-200">
+              <h3 className="text-2xl font-semibold text-slate-900 mb-4">Site Photography</h3>
+              <p className="text-slate-600 mb-6">
+                Ground-level construction site photography for project documentation, progress 
+                records, safety evidence, and stakeholder reporting. Professional quality from 
+                someone who can work independently on a live site.
+              </p>
+              <ul className="space-y-3 text-slate-600">
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Construction progress photography</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Lifting operations documentation</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Safety and compliance evidence capture</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Pre-lift site condition records</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Stakeholder and client progress reports</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Combined aerial and ground-level packages</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Supports Lift Planning */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">How Aerial Surveys Support Lift Planning</h2>
+          <p className="text-lg text-slate-600 mb-8">
+            When we conduct an aerial survey for lift planning, we are not simply capturing images. We are 
+            assessing the site from the perspective of someone who will plan or review lifting operations on it. 
+            We know what to look for because we know what a lift plan needs.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="border border-slate-200 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">Writing Lift Plans</h3>
+              <p className="text-slate-600 mb-4">
+                When we write a lift plan for a site we have not physically visited, the aerial survey 
+                provides the site-specific data that makes the plan accurate and practical. We can see 
+                actual conditions rather than relying on drawings that may be out of date.
+              </p>
+              <Link href="/services/lift-plans" className="text-blue-600 hover:text-blue-700 font-medium text-sm">
+                Lift plan writing service →
+              </Link>
+            </div>
+
+            <div className="border border-slate-200 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">Reviewing Lift Plans</h3>
+              <p className="text-slate-600 mb-4">
+                When reviewing a submitted lift plan, aerial imagery allows us to verify whether the 
+                plan reflects actual site conditions. If a plan shows clear access but the survey shows 
+                a congested site, that discrepancy needs addressing before the lift proceeds.
+              </p>
+              <Link href="/services/lift-plan-review" className="text-blue-600 hover:text-blue-700 font-medium text-sm">
+                Lift plan review service →
+              </Link>
+            </div>
+
+            <div className="border border-slate-200 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">Tower Crane Projects</h3>
+              <p className="text-slate-600 mb-4">
+                On long-duration tower crane contracts, periodic aerial surveys track how the site 
+                changes — new structures, additional cranes, changing access routes. This ensures 
+                lift planning keeps pace with reality on the ground.
+              </p>
+              <Link href="/services/tower-crane" className="text-blue-600 hover:text-blue-700 font-medium text-sm">
+                Tower crane contracts →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Capture - Aerial */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-12">What We Capture — Aerial</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm">
               <h3 className="text-xl font-semibold text-slate-900 mb-4">Site Layout &amp; Access</h3>
               <ul className="space-y-3 text-slate-600">
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Overhead imagery showing actual site layout, access routes, and working areas</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Overhead imagery showing actual site layout and working areas</li>
                 <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Crane access routes and potential setup positions</li>
                 <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Vehicle access constraints and turning areas</li>
                 <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Material storage and laydown areas</li>
@@ -142,7 +245,7 @@ export default function AerialSiteSurveysPage() {
             <div className="bg-white p-8 rounded-xl shadow-sm">
               <h3 className="text-xl font-semibold text-slate-900 mb-4">Ground Conditions</h3>
               <ul className="space-y-3 text-slate-600">
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Visual assessment of ground conditions at planned operating positions</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Visual assessment of ground at planned operating positions</li>
                 <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Evidence of made-up ground, backfilled trenches, or soft areas</li>
                 <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Drainage routes and areas prone to waterlogging</li>
                 <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Surface conditions for outrigger and stabiliser positions</li>
@@ -153,7 +256,7 @@ export default function AerialSiteSurveysPage() {
               <h3 className="text-xl font-semibold text-slate-900 mb-4">Lifting Operation Context</h3>
               <ul className="space-y-3 text-slate-600">
                 <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Load pick-up and landing positions relative to site features</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Exclusion zone requirements based on actual site conditions</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Exclusion zone requirements based on actual conditions</li>
                 <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Pedestrian and vehicle routes that may be affected</li>
                 <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Proximity of occupied areas and public spaces</li>
               </ul>
@@ -162,49 +265,49 @@ export default function AerialSiteSurveysPage() {
         </div>
       </section>
 
-      {/* How It Supports Lift Planning */}
+      {/* Site Photography Uses */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">How Aerial Surveys Support Lift Planning</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">Construction Site Photography</h2>
+          <p className="text-lg text-slate-600 mb-8">
+            Ground-level site photography for clients who need professional documentation of their 
+            construction projects. Because we already hold the qualifications and site experience to 
+            work on live construction sites, we can attend your site and work independently without 
+            creating additional management burden for your team.
+          </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="border border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Writing Lift Plans</h3>
-              <p className="text-slate-600 mb-4">
-                When we write a lift plan for a site we have not physically visited, the aerial survey 
-                provides the site-specific data that makes the plan accurate and practical. We can see the 
-                actual conditions rather than relying on drawings that may be out of date or photographs 
-                taken by someone who does not know what a lift planner needs to see.
-              </p>
-              <Link href="/services/lift-plans" className="text-blue-600 hover:text-blue-700 font-medium text-sm">
-                Lift plan writing service →
-              </Link>
-            </div>
-
-            <div className="border border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Reviewing Lift Plans</h3>
-              <p className="text-slate-600 mb-4">
-                When reviewing a lift plan submitted by a subcontractor, aerial imagery of the site 
-                allows us to verify whether the plan reflects actual conditions. If a plan shows clear 
-                access and firm ground but the aerial survey shows a congested site with recent earthworks, 
-                that discrepancy needs addressing before the lift proceeds.
-              </p>
-              <Link href="/services/lift-plan-review" className="text-blue-600 hover:text-blue-700 font-medium text-sm">
-                Lift plan review service →
-              </Link>
-            </div>
-
-            <div className="border border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Tower Crane Projects</h3>
-              <p className="text-slate-600 mb-4">
-                On long-duration tower crane contracts, periodic aerial surveys track how the site changes 
-                over time — new structures, additional cranes, changing access routes, evolving exclusion 
-                zones. This ensures the lift planning keeps pace with the reality on the ground.
-              </p>
-              <Link href="/services/tower-crane" className="text-blue-600 hover:text-blue-700 font-medium text-sm">
-                Tower crane contracts →
-              </Link>
-            </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: 'Progress documentation',
+                desc: 'Regular photographic records of construction progress for client reporting, stakeholder updates, and project archives. Scheduled visits at agreed intervals to maintain a consistent visual record.',
+              },
+              {
+                title: 'Lifting operations records',
+                desc: 'Photographic evidence of lifting operations as they happen — crane setup, rigging, lift execution, and completion. Useful for compliance records, training material, and demonstrating safe working practices.',
+              },
+              {
+                title: 'Pre-lift site conditions',
+                desc: 'Photographic record of site conditions before a lifting operation takes place. Provides evidence of ground conditions, access arrangements, and exclusion zones as documented in the lift plan.',
+              },
+              {
+                title: 'Safety and compliance evidence',
+                desc: 'Photographs documenting safety arrangements, signage, exclusion zones, PPE compliance, and general site conditions. Supporting evidence for audits, inspections, and client assurance requirements.',
+              },
+              {
+                title: 'Combined aerial and ground packages',
+                desc: 'Aerial drone photography and ground-level photography delivered together in a single site visit. Provides a complete visual record of the site from every angle.',
+              },
+              {
+                title: 'Ad-hoc and incident documentation',
+                desc: 'One-off site visits to capture specific conditions, record an incident scene, or document a particular operation. Available at short notice when you need a qualified person on site with a camera.',
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-slate-50 p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-slate-600 text-sm">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -212,14 +315,14 @@ export default function AerialSiteSurveysPage() {
       {/* Process */}
       <section className="py-16 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12">The Survey Process</h2>
+          <h2 className="text-3xl font-bold mb-12">The Process</h2>
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { step: '1', title: 'Brief', desc: 'You tell us what lifting operations are planned and what you need to see. We tailor the survey to capture exactly what the lift plan requires.' },
-              { step: '2', title: 'Permissions', desc: 'We handle all flight permissions, airspace checks, and site-specific risk assessments. We coordinate with your site team to agree timing and any operational constraints.' },
-              { step: '3', title: 'Survey', desc: 'We attend site and conduct the aerial survey, capturing high-resolution imagery of the areas relevant to the planned lifting operations.' },
-              { step: '4', title: 'Delivery', desc: 'You receive the survey data — annotated imagery, overhead site photography, and our observations on anything relevant to the lift plan.' },
+              { step: '1', title: 'Brief', desc: 'You tell us what you need — aerial survey data for lift planning, progress photography, or a combined package. We tailor the visit to capture exactly what you require.' },
+              { step: '2', title: 'Permissions', desc: 'We handle all drone flight permissions, airspace checks, and risk assessments. We coordinate with your site team to agree timing and any operational constraints.' },
+              { step: '3', title: 'Site Visit', desc: 'We attend site and conduct the aerial survey and/or ground-level photography. No escort required — we hold the qualifications to work independently on your site.' },
+              { step: '4', title: 'Delivery', desc: 'You receive the survey data and photographs — annotated where relevant, organised by area or operation, and delivered within 24 hours of the site visit.' },
             ].map((item) => (
               <div key={item.step} className="text-center">
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
@@ -233,48 +336,14 @@ export default function AerialSiteSurveysPage() {
         </div>
       </section>
 
-      {/* Qualifications */}
+      {/* When to Use */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Qualifications &amp; Authorisations</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">When an Aerial Survey Adds Most Value</h2>
           <p className="text-lg text-slate-600 mb-8">
-            Our aerial surveys are conducted by someone who holds both the drone qualifications required 
-            by the CAA and the lifting industry qualifications needed to know what to look for. This 
-            combination is what makes the survey data directly useful for lift planning — rather than 
-            requiring interpretation by a separate specialist.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Drone Qualifications</h3>
-              <ul className="space-y-3 text-slate-600">
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>GVC (General VLOS Certificate) qualified pilot</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>CAA Operational Authorisation — permits flight in congested areas including active construction sites</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Full public liability insurance for drone operations</li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Lifting Industry Qualifications</h3>
-              <ul className="space-y-3 text-slate-600">
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>CPCS Appointed Person (A61)</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>35+ years construction industry experience</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>NEBOSH National Diploma</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Graduate IOSH</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* When to Use */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">When an Aerial Survey Adds Value</h2>
-          <p className="text-lg text-slate-600 mb-8">
-            Not every lifting operation needs a drone survey. For straightforward operations on well-documented 
-            sites, conventional information is usually sufficient. But there are situations where aerial 
-            survey data materially improves the quality and accuracy of the lift plan.
+            Not every lifting operation needs a drone survey. For straightforward operations on 
+            well-documented sites, conventional information is usually sufficient. But there are 
+            situations where aerial survey data materially improves the quality of the lift plan.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -282,15 +351,49 @@ export default function AerialSiteSurveysPage() {
               { title: 'Complex or congested sites', desc: 'Where multiple cranes, structures, and operations are in close proximity and accurate spatial information is critical to safe planning.' },
               { title: 'Sites that have changed since the drawings were produced', desc: 'Construction sites evolve constantly. An aerial survey shows the site as it is now, not as it was when the drawings were last updated.' },
               { title: 'Remote lift planning', desc: 'When the lift plan is being written off-site, aerial survey data provides the site-specific information that would otherwise require a physical visit.' },
-              { title: 'Tower crane installations and dismantles', desc: 'Aerial imagery of the site before a crane arrives helps confirm the planned crane position, access route, and any obstructions that might not be obvious from ground level.' },
+              { title: 'Tower crane installations and dismantles', desc: 'Aerial imagery before a crane arrives helps confirm the planned position, access route, and any obstructions not obvious from ground level.' },
               { title: 'Tandem lifts and multi-crane operations', desc: 'Operations involving multiple machines working in close proximity require precise understanding of the spatial relationships on site.' },
               { title: 'Disputes or verification', desc: 'When a submitted lift plan does not appear to reflect actual site conditions, aerial imagery provides objective evidence to resolve the question.' },
             ].map((item) => (
-              <div key={item.title} className="bg-slate-50 p-6 rounded-xl">
+              <div key={item.title} className="bg-white p-6 rounded-xl shadow-sm">
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.title}</h3>
                 <p className="text-slate-600 text-sm">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Qualifications */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">Qualifications &amp; Authorisations</h2>
+          <p className="text-lg text-slate-600 mb-8">
+            Our aerial surveys and site photography are conducted by someone who holds both the 
+            drone qualifications required by the CAA and the construction industry qualifications 
+            needed to work safely on live sites. This means no escorts, no additional supervision, 
+            and no delays while someone explains the site to an outsider.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-slate-50 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">Drone &amp; Photography</h3>
+              <ul className="space-y-3 text-slate-600">
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>GVC (General VLOS Certificate) qualified pilot</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>CAA Operational Authorisation — flight in congested areas including active construction sites</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Full public liability insurance for drone operations</li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">Construction Industry</h3>
+              <ul className="space-y-3 text-slate-600">
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>CPCS Appointed Person (A61)</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>35+ years construction industry experience</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>NEBOSH National Diploma</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Graduate IOSH</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -315,16 +418,20 @@ export default function AerialSiteSurveysPage() {
                 a: 'Yes. Our CAA Operational Authorisation covers flight in congested areas. All flights near construction equipment are planned with appropriate risk assessments, and we coordinate with site management to ensure safe operations. Tower crane jib positions and other overhead equipment are factored into every flight plan.',
               },
               {
+                q: 'Do you offer ground-level photography as well as aerial?',
+                a: 'Yes. We provide both aerial drone photography and ground-level construction site photography. Because we hold CPCS, NEBOSH, and CSCS qualifications, we can work safely and independently on live construction sites without requiring an escort or additional supervision.',
+              },
+              {
                 q: 'Can the aerial survey be combined with lift plan writing or review?',
                 a: 'Yes, and this is where the service delivers the most value. Because the person conducting the survey is also the Appointed Person writing or reviewing the lift plan, the survey data feeds directly into the planning process with no loss of information or misinterpretation between separate parties.',
               },
               {
                 q: 'What areas of the UK do you cover?',
-                a: 'We provide aerial site surveys across the UK. Based in Warrington, Cheshire, we attend sites nationwide for projects where aerial survey data would materially improve the quality of the lift plan.',
+                a: 'We provide aerial surveys and site photography across the UK. Based in Warrington, Cheshire, we attend sites nationwide.',
               },
               {
                 q: 'How long does a survey take?',
-                a: 'Most site surveys can be completed in a few hours, including setup, flight, and packdown. The exact duration depends on the size of the site and the scope of what needs to be captured. Survey data is typically delivered within 24 hours of the site visit.',
+                a: 'Most site surveys can be completed in a few hours, including setup, flight, and ground-level photography. The exact duration depends on the size of the site and the scope of what needs to be captured. All data is typically delivered within 24 hours of the site visit.',
               },
             ].map((faq) => (
               <div key={faq.q} className="bg-white p-6 rounded-xl">
@@ -339,11 +446,11 @@ export default function AerialSiteSurveysPage() {
       {/* CTA */}
       <section className="py-16 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Need an Aerial Site Survey?</h2>
+          <h2 className="text-3xl font-bold mb-4">Need Aerial Surveys or Site Photography?</h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Get in touch to discuss your requirements. Whether you need a standalone survey or 
-            aerial data as part of a lift planning package, we provide the site intelligence 
-            your lifting operations need.
+            Get in touch to discuss your requirements. Whether you need drone survey data for a 
+            lift plan, progress photography for a long-term project, or a combined package, we 
+            provide the site intelligence your project needs.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-medium transition-colors">
