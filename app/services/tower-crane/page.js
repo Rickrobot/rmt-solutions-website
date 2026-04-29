@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, Calendar, FileCheck, Phone, Shield } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
+import InlineQuoteForm from '@/components/InlineQuoteForm'
 
 export const metadata = {
   title: 'Tower Crane Contracts | Appointed Person Compliance Services',
@@ -171,6 +172,13 @@ export default function TowerCranePage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Inline quick-quote form */}
+      <section className="py-20 bg-slate-950">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <InlineQuoteForm serviceName="Tower Crane Contracts" heading="Get a quote for tower crane contracts" />
         </div>
       </section>
 

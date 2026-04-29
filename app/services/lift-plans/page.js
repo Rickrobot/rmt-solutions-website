@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, FileText, Truck, Shovel, Building2 } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
+import InlineQuoteForm from '@/components/InlineQuoteForm'
 
 export const metadata = {
   title: 'Lift Plans | Excavator, Telehandler, Mobile Crane Lift Plans',
@@ -240,6 +241,13 @@ export default function LiftPlansPage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Inline quick-quote form */}
+      <section className="py-20 bg-slate-950">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <InlineQuoteForm serviceName="Lift Plan Writing" heading="Get a quote for lift plan writing" />
         </div>
       </section>
 

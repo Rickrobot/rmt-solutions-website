@@ -1,7 +1,7 @@
 'use client'
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X, ChevronDown, Phone } from 'lucide-react'
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -155,6 +155,17 @@ export default function Header() {
               </Link>
             ))}
 
+            {/* Phone CTA — desktop */}
+            <a
+              href="tel:+447803808093"
+              className="flex items-center gap-2 text-amber-400 hover:text-amber-300 transition font-semibold"
+              aria-label="Call RMT Solutions on 07803 808093"
+            >
+              <Phone className="w-4 h-4" />
+              <span className="hidden xl:inline">07803 808093</span>
+              <span className="xl:hidden">Call</span>
+            </a>
+
             <Link
               href="/contact"
               className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-900 px-6 py-3 rounded-xl font-semibold transition shadow-lg shadow-amber-500/20"
@@ -219,7 +230,17 @@ export default function Header() {
                 </Link>
               ))}
 
-              <div className="pt-2 px-4">
+              <div className="pt-2 px-4 space-y-2">
+                {/* Phone CTA — mobile primary action */}
+                <a
+                  href="tel:+447803808093"
+                  className="flex items-center justify-center gap-2 bg-slate-800 border border-amber-500/40 text-amber-400 px-6 py-3 rounded-xl font-semibold text-center hover:bg-slate-700 transition"
+                  onClick={() => setMobileMenuOpen(false)}
+                  aria-label="Call RMT Solutions on 07803 808093"
+                >
+                  <Phone className="w-4 h-4" />
+                  Call 07803 808093
+                </a>
                 <Link
                   href="/contact"
                   className="block bg-gradient-to-r from-amber-500 to-amber-600 text-slate-900 px-6 py-3 rounded-xl font-semibold text-center"

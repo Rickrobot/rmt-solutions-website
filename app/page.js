@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FileText, Building2, Layers, ArrowRight, CheckCircle } from 'lucide-react'
+import { FileText, Building2, Layers, ArrowRight, CheckCircle, Phone } from 'lucide-react'
 import ServiceCard from '@/components/ui/ServiceCard'
 import StatCard from '@/components/ui/StatCard'
 import CaseStudyCard from '@/components/ui/CaseStudyCard'
@@ -196,10 +196,18 @@ export default function HomePage() {
                   Request a Lift Plan Quote
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link href="#services" className="btn-secondary text-center">
-                  View Services
-                </Link>
+                <a
+                  href="tel:+447803808093"
+                  className="btn-secondary flex items-center justify-center gap-2"
+                  aria-label="Call RMT Solutions on 07803 808093"
+                >
+                  <Phone className="w-5 h-5" />
+                  Call 07803 808093
+                </a>
               </div>
+              <p className="mt-4 text-sm text-gray-500">
+                Speak directly to a CPCS Appointed Person — same-day quotes UK-wide.
+              </p>
             </div>
 
             <div className="relative">
@@ -405,11 +413,22 @@ export default function HomePage() {
             <Link href="/contact" className="btn-primary">
               Request a Quote
             </Link>
-            <a href="mailto:ricky@rmtsolutions.co.uk" className="btn-secondary">
-              Email Us
+            <a
+              href="tel:+447803808093"
+              className="btn-secondary flex items-center justify-center gap-2"
+              aria-label="Call RMT Solutions on 07803 808093"
+            >
+              <Phone className="w-5 h-5" />
+              Call 07803 808093
             </a>
           </div>
-          <p className="text-gray-500 mt-10 text-sm">
+          <p className="text-gray-400 mt-6 text-sm">
+            Or email{' '}
+            <a href="mailto:ricky@rmtsolutions.co.uk" className="text-amber-400 hover:text-amber-300 underline">
+              ricky@rmtsolutions.co.uk
+            </a>
+          </p>
+          <p className="text-gray-500 mt-6 text-sm">
             Based in Warrington, Cheshire • Serving contractors across the UK
           </p>
         </div>
