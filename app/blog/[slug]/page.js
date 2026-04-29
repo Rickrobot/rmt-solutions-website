@@ -1687,8 +1687,45 @@ export default function BlogPost({ params }) {
     notFound();
   }
 
+  // BlogPosting / Article structured data — Google uses this for article rich
+  // results (author, date, reading time inline with the search snippet).
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.description,
+    image: [`https://www.rmtsafetysolutions.com${post.image}`],
+    datePublished: new Date(post.date).toISOString(),
+    dateModified: new Date(post.date).toISOString(),
+    author: {
+      '@type': 'Person',
+      name: 'Ricky Marsh',
+      jobTitle: 'CPCS Appointed Person (A61)',
+      url: 'https://www.rmtsafetysolutions.com/about',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'RMT Solutions Ltd',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.rmtsafetysolutions.com/favicon.svg',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://www.rmtsafetysolutions.com/blog/${params.slug}`,
+    },
+    articleSection: post.category,
+    keywords: post.keywords,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+
       {/* Hero Section */}
       <article className="relative pt-32 pb-20">
         <div className="absolute inset-0 bg-slate-900">

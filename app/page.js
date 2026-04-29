@@ -47,6 +47,14 @@ const jsonLd = {
     { '@type': 'EducationalOccupationalCredential', name: 'Graduate IOSH' },
   ],
   knowsAbout: ['LOLER 1998', 'Lifting Operations', 'Lift Planning', 'Tower Cranes', 'Mobile Cranes', 'Steel Erection', 'BS 7121'],
+  // sameAs disambiguates this entity to Google. Add LinkedIn company page,
+  // Companies House profile, and Google Business Profile URL once those
+  // are set up. Comment out any line that isn't live yet.
+  sameAs: [
+    // 'https://www.linkedin.com/company/rmt-solutions-ltd',
+    // 'https://find-and-update.company-information.service.gov.uk/company/XXXXXXXX',
+    // 'https://maps.google.com/?cid=XXXXXXXXXXXXXXX',
+  ],
 }
 
 const faqJsonLd = {

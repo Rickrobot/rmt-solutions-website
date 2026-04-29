@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
+import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Lorry Loader Lift Plans UK | HIAB Lift Plans | RMT Solutions',
@@ -23,10 +24,39 @@ const serviceSchema = {
   areaServed: { '@type': 'Country', name: 'United Kingdom' },
 }
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "Do lorry loaders need lift plans?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every lifting operation involving a lorry loader (HIAB) must be planned under LOLER 1998. This includes routine deliveries to construction sites where the lorry loader is used to offload bricks, blocks, scaffolding, or steel. The plan can be a generic plan covering routine deliveries, but specific lifts — over a building, into an excavation, near power lines — need a specific plan." }
+    },
+    {
+      "@type": "Question",
+      "name": "What CPCS card does a lorry loader operator need?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A CPCS A36 (Lorry Loader) card is the standard competence card for lorry loader operations in the UK construction industry. ALLMI also issue a recognised lorry loader operator certificate. The operator must hold the appropriate card for the size and type of crane fitted to the vehicle." }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between a HIAB and a lorry loader?",
+      "acceptedAnswer": { "@type": "Answer", "text": "HIAB is a brand name (Hiab AB, Sweden) that has become a generic term for any vehicle-mounted articulated crane. The correct technical term is 'lorry loader' or 'vehicle-mounted articulated crane'. Other major manufacturers include Palfinger, Fassi, Effer, and Atlas. Regardless of brand, all are governed by the same LOLER and BS 7121 requirements." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are HGV-mounted cranes covered by LOLER?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. LOLER 1998 applies to all lifting equipment used at work, including vehicle-mounted cranes operating on construction sites. The lorry loader requires a thorough examination certificate every 12 months for general lifting duties, or every 6 months if used to lift people. The lifting operation itself must be planned by a competent person." }
+    }
+  ],
+}
+
+
 export default function LorryLoaderLiftPlansPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
       <section className="relative bg-slate-900 text-white">
@@ -234,6 +264,8 @@ export default function LorryLoaderLiftPlansPage() {
           <InlineQuoteForm serviceName="Lorry Loader Lift Plans" heading="Get a quote for lorry loader lift plans" />
         </div>
       </section>
+
+      <RelatedServices currentSlug="lorry-loader-lift-plans" />
 
       {/* CTA */}
       <section className="py-16 bg-blue-600 text-white">

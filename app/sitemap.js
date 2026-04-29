@@ -86,6 +86,34 @@ export default function sitemap() {
     },
   ];
 
+  // Location pages — UK cities served. Slugs MUST match keys in
+  // app/locations/[slug]/page.js LOCATIONS dict.
+  const locationSlugs = [
+    'manchester',
+    'liverpool',
+    'leeds',
+    'birmingham',
+    'london',
+    'bristol',
+    'glasgow',
+    'edinburgh',
+  ];
+
+  const locationRoutes = [
+    {
+      url: `${baseUrl}/locations`,
+      lastModified: SITE_LAST_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    ...locationSlugs.map((slug) => ({
+      url: `${baseUrl}/locations/${slug}`,
+      lastModified: SITE_LAST_UPDATED,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    })),
+  ];
+
   // Blog posts — slug + publish date must match app/blog/[slug]/page.js
   const blogPosts = [
     { slug: 'what-is-a-lift-plan',                                              date: '2026-02-11' },
@@ -121,6 +149,7 @@ export default function sitemap() {
     ...staticRoutes,
     ...serviceRoutes,
     ...resourceRoutes,
+    ...locationRoutes,
     ...blogRoutes,
   ];
 }

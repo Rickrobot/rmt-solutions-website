@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
+import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Mobile Crane Lift Plans UK | LOLER Compliant | RMT Solutions',
@@ -22,10 +23,39 @@ const serviceSchema = {
   areaServed: { '@type': 'Country', name: 'United Kingdom' },
 }
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "When do you need a lift plan for a mobile crane?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Under LOLER 1998, every lifting operation involving a mobile crane must be planned by a competent person. This applies to all mobile crane lifts on UK construction sites, from routine offloads to complex tandem lifts. The complexity of the plan should be proportionate to the risks of the operation." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a mobile crane lift plan cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Mobile crane lift plan costs vary with complexity. A standard single-machine pick-and-place plan typically ranges from £150 to £400. Complex lifts involving site visits, tandem cranes, contract lifts, or operations near power lines or live infrastructure can cost £500 to £1,500 or more. We provide a fixed-price quote on every enquiry." }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a mobile crane lift plan include?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A compliant mobile crane lift plan includes load weight verification, crane selection and configuration with manufacturer's load chart, percentage utilisation calculation, rigging arrangement and sling details, ground bearing pressure assessment, site layout drawing with exclusion zones, hazard identification, weather limits, and named personnel including the Appointed Person, Lift Supervisor, Crane Supervisor, Operator, and Slinger/Signaller." }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is qualified to write a mobile crane lift plan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Lift plans for mobile cranes must be prepared by a competent person, which under BS 7121 and CPCS is typically a CPCS Appointed Person holding the A61 card. The Appointed Person must have the training, experience, and judgement to plan the specific type of lift involved." }
+    }
+  ],
+}
+
+
 export default function MobileCraneLiftPlansPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
       <section className="relative bg-slate-900 text-white">
@@ -303,6 +333,8 @@ export default function MobileCraneLiftPlansPage() {
           <InlineQuoteForm serviceName="Mobile Crane Lift Plans" heading="Get a quote for mobile crane lift plans" />
         </div>
       </section>
+
+      <RelatedServices currentSlug="mobile-crane-lift-plans" />
 
       {/* CTA */}
       <section className="py-16 bg-blue-600 text-white">

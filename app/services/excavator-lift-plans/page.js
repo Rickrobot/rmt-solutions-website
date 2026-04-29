@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
+import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Excavator Lift Plans UK | LOLER Compliant | RMT Solutions',
@@ -527,6 +528,8 @@ export default function ExcavatorLiftPlansPage() {
           <InlineQuoteForm serviceName="Excavator Lift Plans" heading="Get a quote for excavator lift plans" />
         </div>
       </section>
+
+      <RelatedServices currentSlug="excavator-lift-plans" />
 
       {/* CTA Section */}
       <section className="py-16 bg-slate-900 text-white">

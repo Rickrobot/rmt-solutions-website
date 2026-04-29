@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle, Calendar, FileCheck, Phone, Shield } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
+import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Tower Crane Contracts | Appointed Person Compliance Services',
@@ -40,6 +41,34 @@ const serviceJsonLd = {
   },
 }
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "What is a tower crane Appointed Person contract?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A tower crane Appointed Person (AP) contract is an ongoing engagement where an external CPCS A61 Appointed Person takes responsibility for planning lifting operations, auditing crane operations, and managing compliance documentation throughout the lifetime of one or more tower cranes on a project. It typically includes 8-weekly site audits, lift plan review, and on-call AP support for non-routine lifts." }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should tower cranes be audited?",
+      "acceptedAnswer": { "@type": "Answer", "text": "BS 7121 recommends regular planned audits of tower crane operations. Industry best practice is an 8-weekly cycle through the project lifetime, with additional audits triggered by significant changes — new operators, new lift types, new adjacent activities, or following any incident or near miss." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do tower cranes need a lift plan for every lift?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Every lifting operation must be planned under LOLER, but tower crane planning is usually handled in three layers: a generic site lift plan covering routine repetitive lifts (materials in, formwork around, kit movements), specific lift plans for any operation outside the generic plan envelope, and tandem or specialist lift plans for complex operations." }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between a tower crane LOLER inspection and an Appointed Person audit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A LOLER thorough examination is a statutory engineering inspection of the crane itself, carried out by a competent examiner every 6 to 12 months depending on duty. An AP audit is a planning and compliance review of how lifting operations are being conducted — paperwork, lift plans, briefings, supervision, slinger competence, communications — and it is in addition to, not a substitute for, LOLER thorough examination." }
+    }
+  ],
+}
+
+
 export default function TowerCranePage() {
   const contractIncludes = [
     { icon: Calendar, title: '8-Weekly Audits', description: 'Regular compliance audits to maintain BS 7121 standards throughout your project' },
@@ -68,6 +97,7 @@ export default function TowerCranePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -181,6 +211,8 @@ export default function TowerCranePage() {
           <InlineQuoteForm serviceName="Tower Crane Contracts" heading="Get a quote for tower crane contracts" />
         </div>
       </section>
+
+      <RelatedServices currentSlug="tower-crane" />
 
       {/* CTA */}
       <section className="py-24 bg-slate-950">
