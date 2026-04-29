@@ -36,10 +36,24 @@ const jsonLd = {
     { '@type': 'City', name: 'Birmingham' },
     { '@type': 'City', name: 'London' },
   ],
+  legalName: 'RMT Solutions Ltd',
+  // Companies House registration — Google uses this PropertyValue to
+  // disambiguate the legal entity from any other "RMT Solutions" worldwide.
+  identifier: {
+    '@type': 'PropertyValue',
+    propertyID: 'Companies House',
+    value: '08338653',
+  },
   founder: {
     '@type': 'Person',
     name: 'Ricky Marsh',
     jobTitle: 'CPCS Appointed Person (A61)',
+    // LinkedIn profile lives here (not on the Organization) because it is
+    // Ricky's personal profile, not a company page. This is the correct
+    // schema.org pattern for sole-consultant practices.
+    sameAs: [
+      'https://www.linkedin.com/in/ricky-marsh-certiosh-tier-2-cfrar-mifsm-88b72680/',
+    ],
   },
   hasCredential: [
     { '@type': 'EducationalOccupationalCredential', name: 'CPCS Appointed Person A61' },
@@ -47,13 +61,12 @@ const jsonLd = {
     { '@type': 'EducationalOccupationalCredential', name: 'Graduate IOSH' },
   ],
   knowsAbout: ['LOLER 1998', 'Lifting Operations', 'Lift Planning', 'Tower Cranes', 'Mobile Cranes', 'Steel Erection', 'BS 7121'],
-  // sameAs disambiguates this entity to Google. Add LinkedIn company page,
-  // Companies House profile, and Google Business Profile URL once those
-  // are set up. Comment out any line that isn't live yet.
+  // sameAs disambiguates the Organization to Google's Knowledge Graph.
+  // Add additional profiles (LinkedIn company page, X/Twitter, Facebook
+  // business page, YouTube channel etc.) here as they go live.
   sameAs: [
-    // 'https://www.linkedin.com/company/rmt-solutions-ltd',
-    // 'https://find-and-update.company-information.service.gov.uk/company/XXXXXXXX',
-    // 'https://maps.google.com/?cid=XXXXXXXXXXXXXXX',
+    'https://find-and-update.company-information.service.gov.uk/company/08338653',
+    'https://www.google.com/search?q=RMT+Solutions+Ltd+-+Health+%26+Safety+Consultancy&stick=H4sIAAAAAAAA_-NgU1I1qDAyTDa3NDA2TzIzS7ZIMjO3MqiwMEkxskhMSUpNSbVINDSxWMSqH-QbohCcn1NakpmfV6zgU5KioKvgkZqYU5KhoKYQnJiWWlKp4AyUKs0pScxLrgQASkhtkFsAAAA',
   ],
 }
 
