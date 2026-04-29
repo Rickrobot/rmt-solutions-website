@@ -34,7 +34,7 @@ export default function ContactPage() {
           email: formData.email,
           phone: formData.phone || 'Not provided',
           company: formData.company || 'Not provided',
-          service: formData.service,
+          service: formData.service || 'Not specified',
           equipment: formData.equipment || 'Not specified',
           message: formData.message,
           subject: `New Lift Plan Enquiry from ${formData.name}`,
@@ -101,9 +101,16 @@ export default function ContactPage() {
             {/* Form */}
             <div className="lg:col-span-2">
               <div className="bg-gradient-to-b from-slate-800/50 to-slate-900/50 rounded-3xl p-8 md:p-10 border border-slate-700/50">
-                <h2 className="font-display text-2xl font-bold text-white mb-8">
-                  Project Details
+                <h2 className="font-display text-2xl font-bold text-white mb-2">
+                  Tell us about your project
                 </h2>
+                <p className="text-gray-400 text-sm mb-8">
+                  Just three fields are required — the rest help us prepare a faster, more accurate quote.
+                  Prefer to talk?{' '}
+                  <a href="tel:+447803808093" className="text-amber-400 hover:text-amber-300 underline font-semibold">
+                    Call 07803 808093
+                  </a>.
+                </p>
 
                 {status && (
                   <div className="mb-8 p-4 bg-green-500/20 border border-green-500/30 rounded-xl text-green-400">
@@ -175,14 +182,13 @@ export default function ContactPage() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="service" className="block text-gray-300 font-medium mb-2">
-                        Service Required *
+                        Service Required
                       </label>
                       <select
                         id="service"
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
-                        required
                         className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition"
                       >
                         <option value="">Select a service</option>
@@ -225,8 +231,8 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      rows={5}
-                      placeholder="Please describe your lifting operation requirements, including location, timescales, and any specific challenges..."
+                      rows={4}
+                      placeholder="A few lines is plenty — equipment type, site location, rough timescale. We'll come back with questions if we need them."
                       className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition resize-none"
                     />
                   </div>
@@ -237,8 +243,11 @@ export default function ContactPage() {
                     className="btn-primary w-full flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Send className="w-5 h-5 mr-2" />
-                    {isSubmitting ? 'Sending...' : 'Send Enquiry'}
+                    {isSubmitting ? 'Sending...' : 'Send Enquiry — We Reply Within 24 Hours'}
                   </button>
+                  <p className="text-center text-gray-500 text-xs mt-4">
+                    Your details stay private. We never share enquiries with third parties.
+                  </p>
                 </form>
               </div>
             </div>

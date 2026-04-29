@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, FileText, Layers, Ruler, Users } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
+import InlineQuoteForm from '@/components/InlineQuoteForm'
 
 export const metadata = {
   title: 'Steel Erection Planning | Structural Steel Lift Plans',
@@ -196,6 +197,13 @@ export default function SteelErectionPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Inline quick-quote form */}
+      <section className="py-20 bg-slate-950">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <InlineQuoteForm serviceName="Steel Erection Planning" heading="Get a quote for steel erection planning" />
         </div>
       </section>
 

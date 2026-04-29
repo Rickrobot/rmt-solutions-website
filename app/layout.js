@@ -1,6 +1,8 @@
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import FloatingCallButton from '@/components/FloatingCallButton'
+import Analytics from '@/components/Analytics'
 
 export const metadata = {
   metadataBase: new URL('https://www.rmtsafetysolutions.com'),
@@ -65,9 +67,11 @@ export default function RootLayout({ children }) {
         <meta name="ICBM" content="53.3900, -2.5970" />
       </head>
       <body className="bg-slate-950 text-gray-100">
+        <Analytics />
         <Header />
         <main>{children}</main>
         <Footer />
+        <FloatingCallButton />
       </body>
     </html>
   )

@@ -1,6 +1,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import InlineQuoteForm from '@/components/InlineQuoteForm'
 
 export const metadata = {
   title: 'Excavator Lift Plans UK | LOLER Compliant | RMT Solutions',
@@ -517,6 +518,13 @@ export default function ExcavatorLiftPlansPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Inline quick-quote form */}
+      <section className="py-20 bg-slate-950">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <InlineQuoteForm serviceName="Excavator Lift Plans" heading="Get a quote for excavator lift plans" />
         </div>
       </section>
 
