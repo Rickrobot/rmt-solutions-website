@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, CheckCircle, Calendar, FileCheck, Phone, Shield } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 
@@ -71,6 +72,13 @@ export default function TowerCranePage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-slate-900">
+          <Image
+            src="/images/residential-tower-crane.webp"
+            alt="Tower crane on a UK residential construction site — Appointed Person tower crane compliance contract with BS 7121 audits and LOLER documentation management"
+            fill
+            className="object-cover opacity-25"
+            priority
+          />
           <div className="absolute inset-0 construction-pattern" />
           <div className="absolute inset-0 grid-bg" />
         </div>

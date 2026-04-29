@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'Aerial Surveys & Construction Site Photography | Drone Surveys | RMT Solutions',
@@ -74,6 +75,15 @@ export default function AerialSiteSurveysPage() {
 
       {/* Hero */}
       <section className="relative bg-slate-900 text-white">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/retail-extension.webp"
+            alt="Aerial site survey of UK construction site for crane planning and progress monitoring — drone survey by GVC qualified pilot with CAA Operational Authorisation"
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+        </div>
         <div className="relative max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
           <p className="text-blue-400 font-medium mb-4">Aerial &amp; Ground-Level</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Aerial Surveys &amp; Site Photography</h1>

@@ -11,7 +11,7 @@ export default function Header() {
   const timeoutRef = useRef(null)
 
   const services = [
-    { name: 'Lift Plan Writing', href: '/services/lift-plans' },
+    { name: 'Lift Plans', href: '/services/lift-plans' },
     { name: 'Lift Plan Checking', href: '/services/lift-plan-checking' },
     { name: 'Lift Plan Review', href: '/services/lift-plan-review' },
     { name: 'Excavator Lift Plans', href: '/services/excavator-lift-plans' },

@@ -96,7 +96,7 @@ export default function LiftPlansPage() {
         <div className="absolute inset-0 bg-slate-900">
           <Image
             src="/images/mobile-crane-steel-erection.webp"
-            alt="Mobile crane lift planning"
+            alt="Mobile crane on a UK construction site lifting steelwork — LOLER compliant lift plans for excavators, telehandlers, lorry loaders and mobile cranes"
             fill
             className="object-cover opacity-20"
           />

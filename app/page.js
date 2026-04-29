@@ -83,7 +83,7 @@ const faqJsonLd = {
 export default function HomePage() {
   const services = [
     {
-      title: 'Lift Plan Writing',
+      title: 'Lift Plans',
       description: 'LOLER compliant lift plans for all equipment. Excavator lift plans, telehandler lift plans, lorry loader lift plans, and mobile crane lift plans with fast turnaround.',
       features: ['Excavator lifting operations', 'Telehandler operations', 'Mobile crane lift plans', 'Lorry loader lift plans'],
       href: '/services/lift-plans',

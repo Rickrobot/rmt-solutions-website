@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'Lift Plan Review Service UK | Independent LOLER Compliance Review | RMT Solutions',
@@ -82,6 +83,15 @@ export default function LiftPlanReviewPage() {
 
       {/* Hero */}
       <section className="relative bg-slate-900 text-white">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/services/lift-plan-checking-clipboard-inspection.webp"
+            alt="Independent lift plan review and assessment by a CPCS Appointed Person — LOLER and BS 7121 compliant lift plan review service UK"
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+        </div>
         <div className="relative max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
           <p className="text-blue-400 font-medium mb-4">For Contractors &amp; Subcontractors</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Lift Plan Review Service</h1>

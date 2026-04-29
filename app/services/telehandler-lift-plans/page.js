@@ -1,5 +1,6 @@
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'Telehandler Lift Plans UK | LOLER Compliant | RMT Solutions',
@@ -22,8 +23,17 @@ export default function TelehandlerLiftPlansPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       {/* Hero */}
-      <section className="bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
+      <section className="relative bg-slate-900 text-white">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/precast-concrete-lift.webp"
+            alt="Telehandler lifting precast concrete on UK construction site - LOLER compliant telehandler lift plans"
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
           <p className="text-blue-400 font-medium mb-4">CPCS Appointed Person A61</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Telehandler Lift Plans UK</h1>
           <p className="text-xl text-slate-300 max-w-3xl mb-8">
