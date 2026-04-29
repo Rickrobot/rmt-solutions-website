@@ -1,6 +1,7 @@
 
 import Link from 'next/link'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
+import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Telehandler Lift Plans UK | LOLER Compliant | RMT Solutions',
@@ -17,10 +18,39 @@ const serviceSchema = {
   areaServed: { '@type': 'Country', name: 'United Kingdom' },
 }
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "Can a telehandler be used as a crane?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, but only when the telehandler is fitted with a certified lifting hook attachment, has a current thorough examination certificate covering crane duties, and the operation is planned as a lifting operation under LOLER. The operator also needs a CPCS A77C (telehandler) card with the supplementary suspended load endorsement." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do telehandler suspended-load lifts need a lift plan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whenever a telehandler is used to lift a suspended load — anything attached by slings, chains, or a hook — LOLER 1998 requires the operation to be planned by a competent person. Lifts on forks (palletised loads, brick packs) are not classed as crane duties, but any suspended load is." }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between forks and a hook on a telehandler?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Forks carry the load directly on the carriage, with the load weight acting as a fixed quantity. A hook attachment introduces a suspended load, which can swing, lift dynamically, and apply additional forces to the boom. Telehandler load charts for hook duties are different from fork duties — usually significantly lower — and the operation falls under LOLER." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which CPCS card does a telehandler operator need for lifting?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The base card is CPCS A77C (telescopic handler 360°) or A17 (telescopic handler all-types). For suspended-load lifting (hook duties) the operator needs the supplementary 'lifting suspended loads' endorsement, plus thorough examination on the lifting attachment." }
+    }
+  ],
+}
+
+
 export default function TelehandlerLiftPlansPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
       <section className="bg-slate-900 text-white">
@@ -164,6 +194,8 @@ export default function TelehandlerLiftPlansPage() {
           <InlineQuoteForm serviceName="Telehandler Lift Plans" heading="Get a quote for telehandler lift plans" />
         </div>
       </section>
+
+      <RelatedServices currentSlug="telehandler-lift-plans" />
 
       {/* CTA */}
       <section className="py-16 bg-blue-600 text-white">

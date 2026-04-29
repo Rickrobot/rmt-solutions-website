@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle, FileText, Layers, Ruler, Users } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
+import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Steel Erection Planning | Structural Steel Lift Plans',
@@ -41,6 +42,34 @@ const serviceJsonLd = {
   },
 }
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "What is steel erection planning?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Steel erection planning is the process of preparing a safe system of work for the lifting and installation of structural steelwork. It combines a lift plan, method statement, and risk assessment into an integrated document covering crane selection, rigging arrangements, sequence of erection, temporary stability, and the controls needed to manage risks to operatives and adjacent activities." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you need a lift plan for steel erection?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Steel erection involves multiple lifting operations, each of which must be planned under LOLER 1998 Regulation 8. In addition, BS 5531 (the British Standard for safety in erecting structural frames) requires a written method statement covering the erection sequence and temporary stability of the frame." }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is the Appointed Person for steel erection?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The Appointed Person for steel erection holds a CPCS A61 card and takes overall responsibility for planning the lifting operations. On most steel erection projects this person works alongside the structural engineer responsible for temporary stability, the steelwork contractor's site supervisor, and the principal contractor's temporary works coordinator." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long before steel arrives on site should the lift plan be ready?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Lift plans and erection method statements should be issued, reviewed, and approved by the principal contractor at least 7 to 10 working days before steel deliveries begin. This allows time for review comments, clash detection with other trades, and pre-start briefings with the erection team." }
+    }
+  ],
+}
+
+
 export default function SteelErectionPage() {
   const services = [
     { icon: FileText, title: 'Fabrication Drawing Review', description: 'Analysis of steel fabrication drawings to identify weights, lift points, and erection requirements' },
@@ -65,6 +94,7 @@ export default function SteelErectionPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -206,6 +236,8 @@ export default function SteelErectionPage() {
           <InlineQuoteForm serviceName="Steel Erection Planning" heading="Get a quote for steel erection planning" />
         </div>
       </section>
+
+      <RelatedServices currentSlug="steel-erection" />
 
       {/* CTA */}
       <section className="py-24 bg-slate-900">

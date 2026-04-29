@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
+import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Lifting Operations Audit UK | LOLER Compliance | RMT Solutions',
@@ -22,10 +23,39 @@ const serviceSchema = {
   areaServed: { '@type': 'Country', name: 'United Kingdom' },
 }
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "What is a lifting operations audit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A lifting operations audit is a systematic compliance review of how lifting is being managed on a construction site. It examines the lift plans in use, the competence of personnel, the condition and certification of equipment and accessories, the effectiveness of supervision, and the alignment between paperwork and what is actually happening on the ground. It produces a written report with findings, recommendations, and a remedial action plan." }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should lifting operations be audited?",
+      "acceptedAnswer": { "@type": "Answer", "text": "BS 7121 recommends regular planned audits of lifting operations throughout the project lifetime. Industry best practice on major construction sites is an 8-weekly audit cycle, with additional audits triggered by significant changes — new operators, new lift types, new adjacent activities, or following any incident or near miss." }
+    },
+    {
+      "@type": "Question",
+      "name": "Who can carry out a lifting operations audit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Lifting operations audits should be carried out by a competent person — typically a CPCS Appointed Person (A61) with current site experience and an understanding of BS 7121, LOLER 1998, and the project's specific lifting risks. Independent third-party auditors are often preferred because they are not subject to the project's commercial pressures." }
+    },
+    {
+      "@type": "Question",
+      "name": "What gets checked during a lifting operations audit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A typical audit covers: lift plans in use against actual operations, thorough examination certificates for all equipment and accessories, operator and slinger competencies, briefings and toolbox talk records, supervision arrangements, near-miss and incident records, ground conditions, exclusion zones, communications, weather monitoring, and the Lifting Coordinator's records of routine lifts." }
+    }
+  ],
+}
+
+
 export default function LiftingOperationsAuditPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
       <section className="relative bg-slate-900 text-white">
@@ -333,6 +363,8 @@ export default function LiftingOperationsAuditPage() {
           <InlineQuoteForm serviceName="Lifting Operations Audit" heading="Get a quote for lifting operations audit" />
         </div>
       </section>
+
+      <RelatedServices currentSlug="lifting-operations-audit" />
 
       {/* CTA */}
       <section className="py-16 bg-blue-600 text-white">

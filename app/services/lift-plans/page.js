@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle, FileText, Truck, Shovel, Building2 } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
+import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Lift Plans | Excavator, Telehandler, Mobile Crane Lift Plans',
@@ -40,6 +41,34 @@ const serviceJsonLd = {
     ],
   },
 }
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "How much does a lift plan cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Lift plan costs depend on complexity. A simple excavator or telehandler lift plan with a generic site assessment typically costs £150 to £300. Mobile crane and lorry loader lift plans usually fall in the £250 to £500 range. Complex multi-pick operations, tandem lifts, contract lifts, or plans needing a site visit can cost £500 to £1,500. We provide a fixed price on every enquiry — no hourly billing." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to write a lift plan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Standard excavator and telehandler lift plans are delivered within 24 to 48 hours of receiving the project information. Mobile crane and lorry loader plans usually take 2 to 5 working days depending on complexity. Plans requiring a site visit are agreed case by case. Urgent same-day plans can be arranged where the load and site information is already available." }
+    },
+    {
+      "@type": "Question",
+      "name": "What information do you need to write a lift plan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "To prepare a compliant lift plan we need: the load (weight, dimensions, lift points), the lifting equipment proposed (make, model, configuration), the site (address, ground conditions, overhead and underground services, adjacent activities), the operation (start position, end position, working radius, any obstructions), and the project (principal contractor, dates, communication route to the site team)." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you need a site visit to write a lift plan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For straightforward lifts with good site information and clear photographs or drawings, a site visit is not always required. For complex operations — tandem lifts, lifts near live infrastructure, lifts on poor ground, or anything outside routine practice — a site visit is recommended and is included in the quoted price. We discuss this on every enquiry before agreeing the scope." }
+    }
+  ],
+}
+
 
 export default function LiftPlansPage() {
   const equipmentTypes = [
@@ -91,6 +120,7 @@ export default function LiftPlansPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -250,6 +280,8 @@ export default function LiftPlansPage() {
           <InlineQuoteForm serviceName="Lift Plan Writing" heading="Get a quote for lift plan writing" />
         </div>
       </section>
+
+      <RelatedServices currentSlug="lift-plans" />
 
       {/* CTA */}
       <section className="py-24 bg-slate-900">

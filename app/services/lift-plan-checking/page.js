@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
+import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Lift Plan Checking Service UK | Independent AP Review | RMT Solutions',
@@ -22,10 +23,39 @@ const serviceSchema = {
   areaServed: { '@type': 'Country', name: 'United Kingdom' },
 }
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "What is lift plan checking?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Lift plan checking is the independent review of a lift plan prepared by another party — typically a subcontractor, crane hire firm, or third-party Appointed Person — to confirm it is technically correct, LOLER and BS 7121 compliant, and fit for the specific site conditions. The output is a written review with findings, recommendations, and a Category A (acceptable) or Category B (not acceptable as submitted) determination." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do lift plans get rejected?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The most common reasons lift plans get rejected are inaccurate or unverified load weights, wrong machine configuration on the load chart, capacity utilisation above the project threshold, missing thorough examination certificates, no site-specific hazard assessment, incorrect rigging calculations or sling angles, missing personnel competencies, and inadequate consideration of ground bearing pressure." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does lift plan checking take?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Standard lift plan checking turnaround is 24 to 48 hours from receipt of a complete plan. Complex plans involving tandem lifts, contract lifts, or significant site-specific risks may take 3 to 5 working days. Same-day reviews can be arranged for urgent operations." }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between lift plan checking and lift plan review?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The terms are often used interchangeably. Both involve an independent competent person assessing a lift plan for technical compliance and site suitability. Some clients reserve 'review' for a higher-level acceptance check by their Appointed Person, and 'checking' for the detailed technical line-by-line audit. Either way, the deliverable is a written record with findings and a clear pass/fail determination." }
+    }
+  ],
+}
+
+
 export default function LiftPlanCheckingPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
       <section className="relative bg-slate-900 text-white">
@@ -373,6 +403,8 @@ export default function LiftPlanCheckingPage() {
           <InlineQuoteForm serviceName="Lift Plan Checking" heading="Get a quote for lift plan checking" />
         </div>
       </section>
+
+      <RelatedServices currentSlug="lift-plan-checking" />
 
       {/* CTA */}
       <section className="py-16 bg-blue-600 text-white">

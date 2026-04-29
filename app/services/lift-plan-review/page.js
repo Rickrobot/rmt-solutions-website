@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
+import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Lift Plan Review Service UK | Independent LOLER Compliance Review | RMT Solutions',
@@ -480,6 +481,8 @@ export default function LiftPlanReviewPage() {
           <InlineQuoteForm serviceName="Lift Plan Review" heading="Get a quote for lift plan review" />
         </div>
       </section>
+
+      <RelatedServices currentSlug="lift-plan-review" />
 
       {/* CTA */}
       <section className="py-16 bg-blue-600 text-white">
