@@ -3,7 +3,7 @@ import { FileText, AlertTriangle, HelpCircle, BookOpen, Scale, Users } from 'luc
 import SectionHeader from '@/components/ui/SectionHeader'
 
 export const metadata = {
-  title: 'Free Lift Plan Templates & UK LOLER Guidance | RMT Solutions',
+  title: 'Free Lift Plan Templates & UK LOLER Guidance',
   description: 'Free downloadable lift plan templates, risk assessments and UK LOLER guidance for telehandlers, excavators and lorry-loaders. All aligned with BS 7121.',
 }
 
