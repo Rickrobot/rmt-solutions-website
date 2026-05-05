@@ -1662,7 +1662,7 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${post.title} | RMT Solutions Blog`,
+    title: post.title,
     description: post.description,
     openGraph: {
       title: post.title,
