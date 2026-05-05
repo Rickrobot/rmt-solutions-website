@@ -4,8 +4,8 @@ import { notFound } from 'next/navigation';
 // Blog posts content
 const blogPosts = {
   'what-is-a-lift-plan': {
-    title: 'What is a Lift Plan? The Complete Guide for UK Construction',
-    description: 'What is a lift plan and why do you need one? Complete guide covering what a lift plan contains, when one is required under LOLER, who can write one, and how to get it right first time.',
+    title: 'What is a Lift Plan? UK Construction Rules Under LOLER 1998',
+    description: 'A lift plan documents how a lifting operation will be done safely. See what UK contractors must include under LOLER 1998 and when one is legally required.',
     keywords: 'what is a lift plan, lift plan, lift plan UK, LOLER lift plan, lift plan construction, lift plan contents, who writes a lift plan, lift plan document, crane lift plan, lifting operation plan',
     category: 'Compliance',
     readTime: '10 min read',
@@ -295,8 +295,8 @@ const blogPosts = {
       <p><strong>About the Author:</strong> Ricky Marsh is a CPCS Appointed Person (A61) with 35 years of construction industry experience. He holds NEBOSH National Diploma and Graduate IOSH qualifications, and provides <a href="/services/lift-plan-checking">lift plan checking services</a> to tier 1 contractors across the UK through <a href="/">RMT Solutions</a>.</p>
     `,
   },  'what-is-loler-complete-guide': {
-    title: 'What is LOLER? A Complete Guide for UK Contractors',
-    description: 'Everything you need to know about LOLER regulations, compliance requirements, and why proper lift planning is essential for construction safety.',
+    title: 'LOLER 1998 Explained: A Plain-English Guide for UK Sites',
+    description: 'LOLER 1998 in plain English — who it applies to, what counts as lifting equipment, thorough examination intervals, and the most common compliance gaps on UK sites.',
     category: 'Compliance',
     readTime: '8 min read',
     date: 'January 28, 2026',
@@ -656,8 +656,8 @@ const blogPosts = {
     `,
   },
   'mobile-crane-vs-tower-crane': {
-    title: 'Mobile Crane vs Tower Crane: Which Should You Choose?',
-    description: 'Understand the differences between mobile and tower cranes, when to use each type, and how to make the right choice for your project.',
+    title: 'Mobile Crane vs Tower Crane: When to Use Each (UK Guide)',
+    description: 'Choosing between a mobile crane and a tower crane on a UK site? Compare reach, capacity, set-up time, cost and ground-bearing pressure to pick the right machine.',
     category: 'Equipment',
     readTime: '7 min read',
     date: 'January 28, 2026',
@@ -856,8 +856,8 @@ const blogPosts = {
     `,
   },
   'cpcs-appointed-person-guide': {
-    title: 'CPCS Appointed Person: What They Do and Why You Need One',
-    description: 'Understanding the CPCS Appointed Person role in UK construction. Learn what an A61 Appointed Person does, when you need one, and LOLER compliance requirements.',
+    title: 'CPCS A61 Appointed Person: Duties, Training & UK Lift Plans',
+    description: 'What does a CPCS A61 Appointed Person actually do? Their duties under LOLER 1998 and BS 7121, training routes, and when you must appoint one.',
     category: 'Compliance',
     readTime: '9 min read',
     date: 'January 31, 2026',
@@ -1497,8 +1497,8 @@ const blogPosts = {
    `,
   },
   'lifting-operations-audit-what-to-expect': {
-    title: 'Lifting Operations Audit: What Gets Checked and How to Prepare',
-    description: 'What does a lifting operations audit actually cover on a UK construction site? A practical guide from an Appointed Person covering what auditors examine, the most common findings, and how to prepare your site.',
+    title: 'Lifting Operations Audit: What Auditors Check & How to Pass',
+    description: 'What an independent lifting operations auditor checks — RAMS, LOLER, supervision, equipment — and the most common reasons UK sites fail.',
     keywords: 'lifting operations audit, lifting operations audit UK, lifting audit construction, LOLER audit, site lifting audit, lifting operations inspection, crane audit, lifting equipment audit, lifting safety audit, construction lifting compliance',
     category: 'Services',
     readTime: '14 min read',
