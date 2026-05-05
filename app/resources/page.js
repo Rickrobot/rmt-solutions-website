@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FileText, AlertTriangle, HelpCircle, BookOpen, Scale, Users } from 'lucide-react'
+import { FileText, AlertTriangle, HelpCircle, BookOpen, Scale, Users, ArrowRight } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 
 export const metadata = {
@@ -12,44 +12,50 @@ export default function ResourcesPage() {
     {
       icon: FileText,
       category: 'Guide',
-      title: 'How to Write a LOLER Compliant Lift Plan',
-      description: 'Step-by-step guide to creating lift plans that meet LOLER 1998 requirements. Covers risk assessment, method statements, and documentation.',
+      title: 'What is a Lift Plan? The Complete Guide',
+      description: 'What a lift plan contains, when one is required under LOLER, who can write one, and how to get it right first time.',
       readTime: '10 min read',
-    },
-    {
-      icon: Scale,
-      category: 'Compliance',
-      title: 'Understanding LOLER 1998 Requirements',
-      description: 'Your legal obligations when planning and supervising lifting operations in the UK. What the regulations require and how to comply.',
-      readTime: '8 min read',
+      slug: 'what-is-a-lift-plan',
     },
     {
       icon: HelpCircle,
-      category: 'FAQ',
-      title: 'When Do You Need an Appointed Person?',
-      description: 'Clarifying when an Appointed Person is legally required for your lifting operations and what their responsibilities include.',
-      readTime: '5 min read',
-    },
-    {
-      icon: AlertTriangle,
-      category: 'Safety',
-      title: 'Common Lift Planning Mistakes to Avoid',
-      description: 'Learn from common errors we see in lift plans submitted for review. Avoid delays and ensure your plans pass first time.',
-      readTime: '7 min read',
-    },
-    {
-      icon: BookOpen,
-      category: 'Reference',
-      title: 'BS 7121 Safe Use of Cranes Overview',
-      description: 'An introduction to the BS 7121 series of standards and how they apply to crane operations in the UK.',
+      category: 'Planning',
+      title: 'When Do You Need a Lift Plan?',
+      description: 'When a lift plan is legally required, what triggers LOLER compliance, and how to ensure your lifting operations are properly planned.',
       readTime: '6 min read',
+      slug: 'when-do-you-need-lift-plan',
     },
     {
       icon: Users,
       category: 'Roles',
-      title: 'Crane Supervisor vs Appointed Person',
-      description: 'Understanding the difference between these two key roles in lifting operations and when each is required.',
-      readTime: '5 min read',
+      title: 'CPCS Appointed Person: What They Do',
+      description: 'Understanding the A61 Appointed Person role in UK construction. What they do, when you need one, and LOLER compliance requirements.',
+      readTime: '9 min read',
+      slug: 'cpcs-appointed-person-guide',
+    },
+    {
+      icon: AlertTriangle,
+      category: 'Safety',
+      title: 'Common Lift Planning Mistakes',
+      description: 'The most common lift planning mistakes UK contractors make and how to avoid them. Expert advice on LOLER compliance and safety.',
+      readTime: '10 min read',
+      slug: 'common-lift-planning-mistakes',
+    },
+    {
+      icon: Scale,
+      category: 'Compliance',
+      title: 'Lift Plan Checking: Why Plans Get Rejected',
+      description: 'What actually gets checked during a lift plan review, common rejection reasons, and how to get your plans approved first time.',
+      readTime: '12 min read',
+      slug: 'lift-plan-checking-what-gets-checked-and-why-plans-get-rejected',
+    },
+    {
+      icon: BookOpen,
+      category: 'Equipment',
+      title: 'Excavator Lift Plans: Complete Guide',
+      description: 'Complete guide to excavator lift plans under LOLER 1998. When a plan is needed, requirements, and compliance.',
+      readTime: '8 min read',
+      slug: 'excavator-lift-plans-complete-guide',
     },
   ]
 
@@ -112,25 +118,42 @@ export default function ResourcesPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {resources.map((resource) => (
-              <article
-                key={resource.title}
-                className="bg-gradient-to-b from-slate-800/50 to-slate-900/50 rounded-3xl p-8 border border-slate-700/50 card-hover"
+              <Link
+                key={resource.slug}
+                href={`/blog/${resource.slug}`}
+                className="group block"
               >
-                <div className="flex items-center justify-between mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-xl flex items-center justify-center">
-                    <resource.icon className="w-6 h-6 text-amber-400" />
+                <article className="h-full bg-gradient-to-b from-slate-800/50 to-slate-900/50 rounded-3xl p-8 border border-slate-700/50 card-hover">
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-xl flex items-center justify-center">
+                      <resource.icon className="w-6 h-6 text-amber-400" />
+                    </div>
+                    <span className="text-gray-500 text-sm">{resource.readTime}</span>
                   </div>
-                  <span className="text-gray-500 text-sm">{resource.readTime}</span>
-                </div>
-                <span className="text-amber-400 text-xs font-semibold tracking-wider uppercase">
-                  {resource.category}
-                </span>
-                <h3 className="font-display text-xl font-bold text-white mt-2 mb-3">
-                  {resource.title}
-                </h3>
-                <p className="text-gray-400 text-sm">{resource.description}</p>
-              </article>
+                  <span className="text-amber-400 text-xs font-semibold tracking-wider uppercase">
+                    {resource.category}
+                  </span>
+                  <h3 className="font-display text-xl font-bold text-white mt-2 mb-3 group-hover:text-amber-400 transition">
+                    {resource.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-6">{resource.description}</p>
+                  <div className="flex items-center gap-2 text-amber-400 text-sm font-semibold group-hover:gap-3 transition-all">
+                    <span>Read article</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </div>
+                </article>
+              </Link>
             ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold transition"
+            >
+              <span>View all articles</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
