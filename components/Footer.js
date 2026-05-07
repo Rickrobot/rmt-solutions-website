@@ -17,23 +17,30 @@ export default function Footer() {
   // pages we most want to rank), then geographic logic. This matches the
   // /locations hub's CITIES order exactly so internal anchor text stays
   // consistent across the site.
+  //
+  // Anchor text uses "Crane Lift Plan [city]" rather than "Lift Plans [city]"
+  // because Google interprets "lift plans Manchester" as elevator services.
+  // Crane-prefixed anchors give the location pages a much better chance of
+  // ranking for actual crane/LOLER lift planning intent.
   const locations = [
-    { name: 'Lift Plans Manchester',  href: '/locations/manchester' },
-    { name: 'Lift Plans Liverpool',   href: '/locations/liverpool' },
-    { name: 'Lift Plans Salford',     href: '/locations/salford' },
-    { name: 'Lift Plans Stockport',   href: '/locations/stockport' },
-    { name: 'Lift Plans Trafford',    href: '/locations/trafford' },
-    { name: 'Lift Plans Wirral',      href: '/locations/wirral' },
-    { name: 'Lift Plans Leeds',       href: '/locations/leeds' },
-    { name: 'Lift Plans Birmingham',  href: '/locations/birmingham' },
-    { name: 'Lift Plans London',      href: '/locations/london' },
-    { name: 'All UK locations',       href: '/locations' },
+    { name: 'Crane Lift Plan Manchester',  href: '/locations/manchester' },
+    { name: 'Crane Lift Plan Liverpool',   href: '/locations/liverpool' },
+    { name: 'Crane Lift Plan Salford',     href: '/locations/salford' },
+    { name: 'Crane Lift Plan Stockport',   href: '/locations/stockport' },
+    { name: 'Crane Lift Plan Trafford',    href: '/locations/trafford' },
+    { name: 'Crane Lift Plan Wirral',      href: '/locations/wirral' },
+    { name: 'Crane Lift Plan Leeds',       href: '/locations/leeds' },
+    { name: 'Crane Lift Plan Birmingham',  href: '/locations/birmingham' },
+    { name: 'Crane Lift Plan London',      href: '/locations/london' },
+    { name: 'All UK locations',            href: '/locations' },
   ]
 
   const qualifications = [
     'CPCS Appointed Person A61',
     'NEBOSH National Diploma',
-    'Graduate IOSH',
+    'CertIOSH',
+    'MIIRSM',
+    'TIFSM',
     '35+ Years Experience',
   ]
 
