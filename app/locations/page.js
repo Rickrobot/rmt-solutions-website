@@ -101,28 +101,26 @@ const CITIES = [
 ]
 
 export const metadata = {
-  title: 'Lift Planning Services Across the UK | RMT Solutions',
+  title: 'Crane Lift Plan Services Across the UK',
   description:
-    'CPCS Appointed Person services and LOLER compliant lift plans across Manchester, Salford, Stockport, Trafford, Liverpool, Wirral, Leeds, Birmingham, London, Bristol, Glasgow and Edinburgh. Same-day quotes — call 07803 808093.',
+    'CPCS Appointed Person services and LOLER compliant crane lift plans across Manchester, Salford, Stockport, Trafford, Liverpool, Wirral, Leeds, Birmingham, London, Bristol, Glasgow and Edinburgh. Same-day quotes — call 07803 808093.',
   keywords: [
-    'lift plans uk',
-    'lift plans manchester',
-    'lift plans salford',
-    'lift plans stockport',
-    'lift plans trafford',
-    'lift plans liverpool',
-    'lift plans wirral',
-    'lift plans leeds',
-    'lift plans birmingham',
-    'lift plans london',
+    'crane lift plan uk',
+    'crane lift plan manchester',
+    'crane lift plan liverpool',
+    'crane lift plan leeds',
+    'crane lift plan birmingham',
+    'crane lift plan london',
+    'loler lift plan uk',
     'cpcs appointed person uk',
     'cpcs appointed person manchester',
     'cpcs appointed person liverpool',
+    'loler appointed person',
   ],
   openGraph: {
-    title: 'Lift Planning Services Across the UK | RMT Solutions',
+    title: 'Crane Lift Plan Services Across the UK',
     description:
-      'CPCS Appointed Person services and LOLER compliant lift plans across the UK. Manchester, Liverpool, Leeds, Birmingham, London, Bristol, Glasgow and Edinburgh.',
+      'CPCS Appointed Person services and LOLER compliant crane lift plans across the UK. Manchester, Liverpool, Leeds, Birmingham, London, Bristol, Glasgow and Edinburgh.',
     url: 'https://www.rmtsafetysolutions.com/locations',
     images: ['/images/mobile-crane-steel-erection.webp'],
   },
@@ -177,10 +175,10 @@ export default function LocationsHub() {
               UK-wide service from Warrington
             </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Lift Planning Services Across the UK
+              Crane Lift Plan Services Across the UK
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
-              We deliver LOLER compliant lift plans, lift plan checking, and CPCS Appointed Person contracts across the UK. Standard plans are produced remotely and turned around in 24-48 hours; site visits are scheduled for surveys, complex pre-lift briefings, and 8-weekly compliance audits.
+              We deliver LOLER compliant crane lift plans, lift plan checking, and CPCS Appointed Person contracts across the UK. Standard plans are produced remotely and turned around in 24-48 hours; site visits are scheduled for surveys, complex pre-lift briefings, and 8-weekly compliance audits.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -234,7 +232,7 @@ export default function LocationsHub() {
                     ~{c.travelMinutes} min from Warrington
                   </span>
                   <span className="inline-flex items-center text-amber-400 font-semibold text-sm">
-                    Lift plans {c.city}
+                    Crane lift plans {c.city}
                     <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </div>
