@@ -13,6 +13,23 @@ export default function Footer() {
     { name: 'Lifting Operations Audit', href: '/services/lifting-operations-audit' },
   ]
 
+  // Locations linked from the footer. Order: regional flagships first (the
+  // pages we most want to rank), then geographic logic. This matches the
+  // /locations hub's CITIES order exactly so internal anchor text stays
+  // consistent across the site.
+  const locations = [
+    { name: 'Lift Plans Manchester',  href: '/locations/manchester' },
+    { name: 'Lift Plans Liverpool',   href: '/locations/liverpool' },
+    { name: 'Lift Plans Salford',     href: '/locations/salford' },
+    { name: 'Lift Plans Stockport',   href: '/locations/stockport' },
+    { name: 'Lift Plans Trafford',    href: '/locations/trafford' },
+    { name: 'Lift Plans Wirral',      href: '/locations/wirral' },
+    { name: 'Lift Plans Leeds',       href: '/locations/leeds' },
+    { name: 'Lift Plans Birmingham',  href: '/locations/birmingham' },
+    { name: 'Lift Plans London',      href: '/locations/london' },
+    { name: 'All UK locations',       href: '/locations' },
+  ]
+
   const qualifications = [
     'CPCS Appointed Person A61',
     'NEBOSH National Diploma',
@@ -23,7 +40,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-950 border-t border-slate-800 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
@@ -33,7 +50,7 @@ export default function Footer() {
               <span className="text-xl font-display font-bold text-white">RMT Solutions</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Professional lift planning services from a CPCS Appointed Person. LOLER compliant lift plans for contractors across the UK.
+              Professional lift planning services from a CPCS Appointed Person. LOLER compliant lift plans for contractors across the UK — based in Warrington, working across Manchester, Liverpool and the North West.
             </p>
           </div>
 
@@ -51,7 +68,21 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Qualifications */}
+          {/* Locations */}
+          <div>
+            <h4 className="text-white font-display font-semibold mb-6">Locations Served</h4>
+            <ul className="space-y-3 text-gray-400 text-sm">
+              {locations.map((location) => (
+                <li key={location.name}>
+                  <Link href={location.href} className="hover:text-amber-400 transition">
+                    {location.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Qualifications + Contact */}
           <div>
             <h4 className="text-white font-display font-semibold mb-6">Qualifications</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
@@ -60,31 +91,9 @@ export default function Footer() {
               ))}
             </ul>
 
-            <h4 className="text-white font-display font-semibold mt-8 mb-6">Free Resources</h4>
-            <ul className="space-y-3 text-gray-400 text-sm">
-              <li>
-                <Link href="/resources" className="hover:text-amber-400 transition">
-                  Resources Overview
-                </Link>
-              </li>
-              <li>
-                <Link href="/resources/excavator-lift-plan-templates" className="hover:text-amber-400 transition">
-                  Excavator Lift Plan Templates
-                </Link>
-              </li>
-              <li>
-                <Link href="/resources/telehandler-lift-plan-templates" className="hover:text-amber-400 transition">
-                  Telehandler Lift Plan Templates
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-white font-display font-semibold mb-6">Contact</h4>
+            <h4 className="text-white font-display font-semibold mt-8 mb-6">Contact</h4>
             <address className="not-italic space-y-3 text-gray-400 text-sm">
-              <p>Warrington, Cheshire, UK</p>
+              <p>RMT Solutions Ltd<br />Warrington, Cheshire, UK</p>
               <p>
                 <a href="mailto:ricky@rmtsolutions.co.uk" className="hover:text-amber-400 transition">
                   ricky@rmtsolutions.co.uk
@@ -99,12 +108,27 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Service-area band — sitewide geographic signal that surfaces on
+            every page. Plain prose is preferred over a tag-cloud because
+            Google reads sentence context as more authoritative than lists. */}
+        <div className="border-t border-slate-800 pt-8 pb-2">
+          <p className="text-gray-500 text-sm leading-relaxed text-center max-w-4xl mx-auto">
+            Serving construction sites across Manchester, Liverpool, Warrington, Salford,
+            Stockport, Trafford, Bolton, Wigan, St Helens, Knowsley, Wirral, Birkenhead,
+            Sefton, Widnes, Runcorn, Chester and the wider North West — with same-day site
+            attendance practical across the M62 and M6 corridors.
+          </p>
+        </div>
+
         {/* Bottom bar */}
-        <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-slate-800 pt-8 mt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} RMT Solutions Ltd. LOLER Compliant Lift Planning Services UK.
           </p>
           <nav className="flex space-x-6 mt-4 md:mt-0">
+            <Link href="/locations" className="text-gray-500 hover:text-amber-400 transition text-sm">
+              Locations
+            </Link>
             <Link href="/sitemap.xml" className="text-gray-500 hover:text-amber-400 transition text-sm">
               Sitemap
             </Link>
