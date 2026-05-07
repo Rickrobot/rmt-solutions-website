@@ -100,6 +100,68 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Where We Work — geographic context for SEO. The About page is a
+          natural place for prose-driven local signals because Google reads
+          biographical pages with extra weight when looking for entity
+          locality. Mentions Warrington base, North West catchment, and the
+          named tier-1 cities we travel UK-wide for. */}
+      <section className="py-24 bg-slate-950 border-t border-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+              Service Area
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-8">
+              Where We Work
+            </h2>
+            <div className="space-y-6 text-gray-300 leading-relaxed text-lg">
+              <p>
+                RMT Solutions is based in Warrington, Cheshire — sat at the
+                junction of the M62 and the M6, half an hour from central
+                Manchester and forty minutes from Liverpool docks. That position
+                is deliberate. It puts every major North West construction
+                cluster within a single working day&apos;s reach: the Manchester
+                city-centre tower pipeline, MediaCityUK and Salford Quays,
+                Trafford Park&apos;s logistics estate, the Liverpool Waters and
+                Wirral Waters regeneration zones, and the Cheshire industrial
+                corridor through Widnes, Runcorn and Chester.
+              </p>
+              <p>
+                For our North West catchment — Manchester, Salford, Stockport,
+                Trafford, Bolton, Wigan, St Helens, Knowsley, Liverpool, the
+                Wirral, Sefton, Widnes, Runcorn and Chester — same-day site
+                attendance is standard, including unscheduled call-outs when
+                lifts get re-scoped on the morning of the operation. We work
+                across Greater Manchester and Merseyside as if they were a
+                single patch, because operationally they are.
+              </p>
+              <p>
+                Beyond the North West we travel UK-wide for tower crane
+                Appointed Person contracts, complex mobile crane lifts and
+                steel erection campaigns — Leeds, Birmingham, London, Bristol,
+                Glasgow and Edinburgh are all on the regular schedule. For
+                tower crane contracts the on-site cycle is typically eight-
+                weekly, which makes longer travel practical without compromising
+                response time when something needs attention between visits.
+              </p>
+              <p>
+                If you&apos;re running a project in any of these areas and need
+                LOLER compliant lift plans, an Appointed Person contract or
+                independent lift plan checking,{' '}
+                <Link href="/locations" className="text-amber-400 hover:text-amber-300 underline">
+                  see all UK locations
+                </Link>{' '}
+                or{' '}
+                <Link href="/contact" className="text-amber-400 hover:text-amber-300 underline">
+                  get in touch for a quote
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
