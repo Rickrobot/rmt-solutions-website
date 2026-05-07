@@ -5,15 +5,26 @@ import SectionHeader from '@/components/ui/SectionHeader'
 
 export const metadata = {
   title: 'About | CPCS Appointed Person with 35 Years Experience',
-  description: 'Meet Ricky Marsh, CPCS Appointed Person (A61) with 35 years in UK construction. NEBOSH Diploma qualified, Graduate IOSH member. Professional lift planning services.',
+  description: 'Meet Ricky Marsh, CPCS Appointed Person (A61 Reg: 40389279) with 35 years in UK construction. NEBOSH Diploma qualified, CertIOSH, MIIRSM and TIFSM member. Professional lift planning services.',
+  alternates: {
+    canonical: 'https://www.rmtsafetysolutions.com/about',
+  },
+  openGraph: {
+    title: 'About | CPCS Appointed Person with 35 Years Experience',
+    description: 'Meet Ricky Marsh, CPCS Appointed Person (A61 Reg: 40389279) with 35 years in UK construction. NEBOSH Diploma qualified, CertIOSH, MIIRSM and TIFSM member.',
+    url: 'https://www.rmtsafetysolutions.com/about',
+    type: 'profile',
+  },
 }
 
 export default function AboutPage() {
   const qualifications = [
-    { icon: Award, title: 'CPCS Appointed Person A61', description: 'Qualified Appointed Person for lifting operations planning and supervision' },
-    { icon: Shield, title: 'NEBOSH National Diploma', description: 'Advanced qualification in occupational health and safety management' },
-    { icon: Users, title: 'Graduate IOSH', description: 'Member of the Institution of Occupational Safety and Health' },
-    { icon: Clock, title: '35+ Years Experience', description: 'Decades of hands-on construction industry experience' },
+    { icon: Award, title: 'CPCS Appointed Person A61', description: 'Registration: 40389279. Qualified Appointed Person for lifting operations planning and supervision under LOLER 1998 and BS 7121.' },
+    { icon: Shield, title: 'NEBOSH National Diploma', description: 'Advanced qualification in occupational health and safety management.' },
+    { icon: Users, title: 'CertIOSH', description: 'Certified Member of the Institution of Occupational Safety and Health — IOSH\u2019s chartered-track grade reflecting demonstrated professional competence.' },
+    { icon: Shield, title: 'MIIRSM', description: 'Member of the International Institute of Risk and Safety Management.' },
+    { icon: Award, title: 'TIFSM', description: 'Technician Member of the Institute of Fire Safety Managers.' },
+    { icon: Clock, title: '35+ Years Experience', description: 'Decades of hands-on construction industry experience across manufacturing, civils and tier-1 main contractor projects.' },
   ]
 
   return (
