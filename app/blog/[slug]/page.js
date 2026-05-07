@@ -155,7 +155,7 @@ const blogPosts = {
         <a href="/contact" class="btn-primary inline-block">Get a Quote</a>
       </div>
 
-      <p><strong>About the Author:</strong> Ricky Marsh is a CPCS Appointed Person (A61) with 35 years of construction industry experience. He holds NEBOSH National Diploma and Graduate IOSH qualifications, and provides lift planning and lift plan checking services to contractors across the UK through <a href="/">RMT Solutions</a>.</p>
+      <p><strong>About the Author:</strong> Ricky Marsh is a CPCS Appointed Person (A61) with 35 years of construction industry experience. He holds NEBOSH National Diploma, CertIOSH, MIIRSM and TIFSM qualifications, and provides lift planning and lift plan checking services to contractors across the UK through <a href="/">RMT Solutions</a>.</p>
     `,
   },
   'what-does-a-lift-plan-checking-service-involve': {
@@ -292,7 +292,7 @@ const blogPosts = {
         <a href="/contact" class="btn-primary inline-block">Get a Quote</a>
       </div>
 
-      <p><strong>About the Author:</strong> Ricky Marsh is a CPCS Appointed Person (A61) with 35 years of construction industry experience. He holds NEBOSH National Diploma and Graduate IOSH qualifications, and provides <a href="/services/lift-plan-checking">lift plan checking services</a> to tier 1 contractors across the UK through <a href="/">RMT Solutions</a>.</p>
+      <p><strong>About the Author:</strong> Ricky Marsh is a CPCS Appointed Person (A61) with 35 years of construction industry experience. He holds NEBOSH National Diploma, CertIOSH, MIIRSM and TIFSM qualifications, and provides <a href="/services/lift-plan-checking">lift plan checking services</a> to tier 1 contractors across the UK through <a href="/">RMT Solutions</a>.</p>
     `,
   },  'what-is-loler-complete-guide': {
     title: 'LOLER 1998 Explained: A Plain-English Guide for UK Sites',
@@ -1493,7 +1493,7 @@ const blogPosts = {
         <a href="/contact" class="btn-primary inline-block">Get a Quote</a>
       </div>
 
-      <p><strong>About the Author:</strong> Ricky Marsh is a CPCS Appointed Person (A61) with 35 years of construction industry experience. He holds NEBOSH National Diploma and Graduate IOSH qualifications, and provides <a href="/services/lift-plan-checking">lift plan checking services</a> to tier 1 contractors across the UK through <a href="/">RMT Solutions</a>.</p>
+      <p><strong>About the Author:</strong> Ricky Marsh is a CPCS Appointed Person (A61) with 35 years of construction industry experience. He holds NEBOSH National Diploma, CertIOSH, MIIRSM and TIFSM qualifications, and provides <a href="/services/lift-plan-checking">lift plan checking services</a> to tier 1 contractors across the UK through <a href="/">RMT Solutions</a>.</p>
    `,
   },
   'lifting-operations-audit-what-to-expect': {
@@ -1646,7 +1646,7 @@ const blogPosts = {
         <a href="/contact" class="btn-primary inline-block">Get a Quote</a>
       </div>
 
-      <p><strong>About the Author:</strong> Ricky Marsh is a CPCS Appointed Person (A61) with 35 years of construction industry experience. He holds NEBOSH National Diploma and Graduate IOSH qualifications, and provides lift planning, <a href="/services/lift-plan-checking">lift plan checking</a>, and <a href="/services/lifting-operations-audit">lifting operations audit</a> services to contractors across the UK through <a href="/">RMT Solutions</a>.</p>
+      <p><strong>About the Author:</strong> Ricky Marsh is a CPCS Appointed Person (A61) with 35 years of construction industry experience. He holds NEBOSH National Diploma, CertIOSH, MIIRSM and TIFSM qualifications, and provides lift planning, <a href="/services/lift-plan-checking">lift plan checking</a>, and <a href="/services/lifting-operations-audit">lifting operations audit</a> services to contractors across the UK through <a href="/">RMT Solutions</a>.</p>
     `,
   },
 };
@@ -1664,11 +1664,15 @@ export async function generateMetadata({ params }) {
   return {
     title: post.title,
     description: post.description,
+    alternates: {
+      canonical: `https://www.rmtsafetysolutions.com/blog/${params.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
       url: `https://www.rmtsafetysolutions.com/blog/${params.slug}`,
       images: [post.image],
+      type: 'article',
     },
   };
 }
@@ -1804,7 +1808,7 @@ export default function BlogPost({ params }) {
               <div>
                 <h3 className="text-white font-display text-xl font-bold mb-2">Ricky Marsh</h3>
                 <p className="text-gray-400 text-sm mb-4">
-                  CPCS Appointed Person (A61) | NEBOSH National Diploma | Graduate IOSH
+                  CPCS Appointed Person (A61, Reg: 40389279) | NEBOSH National Diploma | CertIOSH | MIIRSM | TIFSM
                 </p>
                 <p className="text-gray-400 text-sm">
                   With 35 years of construction industry experience, Ricky provides expert lift planning and compliance services to contractors across the UK. Specializing in LOLER compliant lift plans, tower crane contracts, and steel erection planning.
