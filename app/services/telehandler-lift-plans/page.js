@@ -199,7 +199,7 @@ export default function TelehandlerLiftPlansPage() {
             </div>
             <div>
               <div className="text-2xl font-bold text-slate-900">NEBOSH</div>
-              <div className="text-sm text-slate-600">Construction Diploma · Grad IOSH</div>
+              <div className="text-sm text-slate-600">Construction Diploma · CertIOSH</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-slate-900">UK-wide</div>
@@ -521,8 +521,8 @@ export default function TelehandlerLiftPlansPage() {
                 desc: 'Trusted by leading UK contractors including Wates, Caddick and GMI — written to pass main-contractor scrutiny first time.',
               },
               {
-                title: 'NEBOSH Diploma · Grad IOSH',
-                desc: 'Construction-specific NEBOSH Diploma and Graduate IOSH membership. Risk assessment grounded in proper methodology.',
+                title: 'NEBOSH Diploma · CertIOSH · MIIRSM · TIFSM',
+                desc: 'Construction-specific NEBOSH National Diploma, CertIOSH (Certified IOSH member), MIIRSM and TIFSM. Risk assessment grounded in proper methodology.',
               },
               {
                 title: 'Fixed-fee, fast turnaround',
