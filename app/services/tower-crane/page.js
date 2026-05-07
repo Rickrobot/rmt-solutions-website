@@ -168,7 +168,7 @@ export default function TowerCranePage() {
   const trustBadges = [
     '35+ years lifting experience',
     'CPCS A61 Appointed Person',
-    'NEBOSH Diploma · Grad IOSH',
+    'NEBOSH Diploma · CertIOSH · MIIRSM · TIFSM',
     'UK-wide coverage',
   ]
 
@@ -249,8 +249,8 @@ export default function TowerCranePage() {
       body: 'Site-experienced Appointed Person — not a paper-only consultancy. We have run lifting operations on Tier 1 main contractor sites for decades.',
     },
     {
-      title: 'NEBOSH Construction Diploma · Grad IOSH',
-      body: 'Audits and lift plan reviews are signed off by a chartered-track H&S practitioner with the academic backing to defend decisions to your client and the HSE.',
+      title: 'NEBOSH Construction Diploma · CertIOSH · MIIRSM · TIFSM',
+      body: 'Audits and lift plan reviews are signed off by an experienced H&S practitioner with the academic backing and professional memberships to defend decisions to your client and the HSE.',
     },
     {
       title: 'Tier 1 contractor approved',
