@@ -22,11 +22,39 @@ const CITIES = [
     blurb: 'NOMA, Mayfield, Victoria North, ID Manchester and the Town Hall refurbishment make Manchester one of the most active lift planning markets in the UK.',
   },
   {
+    slug: 'salford',
+    city: 'Salford',
+    region: 'Greater Manchester',
+    travelMinutes: 30,
+    blurb: 'MediaCityUK, Salford Quays, the New Bailey and the wider Salford Crescent regeneration zone keep Salford among the busiest lift planning markets in Greater Manchester.',
+  },
+  {
+    slug: 'stockport',
+    city: 'Stockport',
+    region: 'Greater Manchester',
+    travelMinutes: 45,
+    blurb: 'Stockport town centre regeneration, the Mayoral Development Corporation pipeline and major data centre and industrial schemes drive sustained lifting work across the borough.',
+  },
+  {
+    slug: 'trafford',
+    city: 'Trafford',
+    region: 'Greater Manchester',
+    travelMinutes: 30,
+    blurb: 'Trafford Park, the Trafford Centre regeneration and a heavy logistics-warehouse pipeline make Trafford one of the highest-volume lifting markets in the North West.',
+  },
+  {
     slug: 'liverpool',
     city: 'Liverpool',
     region: 'Merseyside',
     travelMinutes: 40,
     blurb: 'Liverpool Waters, the Knowledge Quarter and the Anfield expansion drive consistent demand for LOLER compliant lift plans across Merseyside.',
+  },
+  {
+    slug: 'wirral',
+    city: 'Wirral',
+    region: 'Merseyside',
+    travelMinutes: 50,
+    blurb: 'Wirral Waters — Peel L&P\'s multi-decade dockside masterplan — together with the Birkenhead and Liscard regeneration pipeline make Wirral a strong and growing lift planning market.',
   },
   {
     slug: 'leeds',
@@ -75,15 +103,21 @@ const CITIES = [
 export const metadata = {
   title: 'Lift Planning Services Across the UK | RMT Solutions',
   description:
-    'CPCS Appointed Person services and LOLER compliant lift plans across Manchester, Liverpool, Leeds, Birmingham, London, Bristol, Glasgow and Edinburgh. Same-day quotes — call 07803 808093.',
+    'CPCS Appointed Person services and LOLER compliant lift plans across Manchester, Salford, Stockport, Trafford, Liverpool, Wirral, Leeds, Birmingham, London, Bristol, Glasgow and Edinburgh. Same-day quotes — call 07803 808093.',
   keywords: [
     'lift plans uk',
     'lift plans manchester',
+    'lift plans salford',
+    'lift plans stockport',
+    'lift plans trafford',
     'lift plans liverpool',
+    'lift plans wirral',
     'lift plans leeds',
     'lift plans birmingham',
     'lift plans london',
     'cpcs appointed person uk',
+    'cpcs appointed person manchester',
+    'cpcs appointed person liverpool',
   ],
   openGraph: {
     title: 'Lift Planning Services Across the UK | RMT Solutions',
