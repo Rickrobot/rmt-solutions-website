@@ -4,6 +4,14 @@ import CaseStudiesGrid from '@/components/CaseStudiesGrid'
 export const metadata = {
   title: 'Case Studies | Lift Planning Projects',
   description: 'Lift planning case studies from RMT Solutions. Tower crane contracts, steel erection projects, mobile crane lifts, and excavator operations across the UK.',
+  alternates: {
+    canonical: 'https://www.rmtsafetysolutions.com/case-studies',
+  },
+  openGraph: {
+    title: 'Case Studies | Lift Planning Projects',
+    description: 'Lift planning case studies from RMT Solutions across the UK.',
+    url: 'https://www.rmtsafetysolutions.com/case-studies',
+  },
 }
 
 export default function CaseStudiesPage() {
