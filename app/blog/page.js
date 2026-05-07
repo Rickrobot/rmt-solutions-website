@@ -1,9 +1,12 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Lift Planning Blog | Expert Advice & Guides | RMT Solutions',
+  title: 'Lift Planning Blog | Expert Advice & Guides',
   description: 'Expert lift planning advice, LOLER compliance guides, and construction safety insights from a CPCS Appointed Person with 35 years experience.',
   keywords: 'lift planning blog, LOLER guides, crane safety, appointed person advice, construction compliance, BS 7121',
+  alternates: {
+    canonical: 'https://www.rmtsafetysolutions.com/blog',
+  },
   openGraph: {
     title: 'Lift Planning Blog | Expert Advice & Guides',
     description: 'Expert lift planning advice and LOLER compliance guides from RMT Solutions.',
