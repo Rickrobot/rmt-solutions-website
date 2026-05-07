@@ -1,0 +1,210 @@
+SEO FIX SUMMARY — applied 7 May 2026
+=====================================
+
+23 files modified, 1 file added. All files JSX-parse-checked.
+
+FILES CHANGED
+-------------
+
+NEW FILE
+  app/contact/layout.js
+    - Added because contact/page.js is 'use client' and cannot export
+      metadata directly. This route-segment layout sets the proper
+      contact-page title, description, and canonical instead of
+      letting it inherit the homepage defaults.
+
+CANONICAL FIXES (root cause of the 25-pages-pointing-to-homepage bug)
+  Added per-page `alternates.canonical` to:
+    app/about/page.js
+    app/case-studies/page.js
+    app/blog/page.js
+    app/blog/[slug]/page.js                (in generateMetadata)
+    app/resources/page.js
+    app/resources/excavator-lift-plan-templates/page.js
+    app/resources/telehandler-lift-plan-templates/page.js
+    app/services/aerial-site-surveys/page.js
+    app/services/lift-plan-review/page.js
+    app/services/lift-plans/page.js
+    app/services/lifting-operations-audit/page.js
+    app/services/lorry-loader-lift-plans/page.js
+    app/services/steel-erection/page.js
+
+  (These pages did not have their own canonical, so they were inheriting
+  the global default in app/layout.js which points at the homepage.)
+
+  Service pages already with canonical (verified intact, not touched):
+    app/services/excavator-lift-plans/page.js
+    app/services/lift-plan-checking/page.js
+    app/services/mobile-crane-lift-plans/page.js
+    app/services/telehandler-lift-plans/page.js
+    app/services/tower-crane/page.js
+    app/locations/page.js
+    app/locations/[slug]/page.js
+
+TITLE TEMPLATE DEDUPLICATION
+  app/layout.js still has `template: '%s | RMT Solutions'` — this auto-
+  appends "| RMT Solutions" to every page title. Several pages had
+  already-included "| RMT Solutions" in their explicit titles, producing
+  the doubled "RMT Solutions | RMT Solutions" you saw in the audit.
+
+  Stripped "| RMT Solutions" from the explicit title of:
+    app/about/page.js                         (was: "About | CPCS ... Experience")
+    app/blog/page.js                          (was: "... Guides | RMT Solutions")
+    app/case-studies/page.js                  (already clean - no change)
+    app/locations/page.js                     (was: "Lift Planning Services Across the UK | RMT Solutions")
+    app/resources/excavator-lift-plan-templates/page.js
+    app/resources/telehandler-lift-plan-templates/page.js
+    app/services/aerial-site-surveys/page.js
+    app/services/lift-plan-review/page.js
+    app/services/lifting-operations-audit/page.js
+    app/services/lorry-loader-lift-plans/page.js
+    app/locations/[slug]/page.js              (all 12 city metaTitles)
+
+  Result: every page title now ends in "| RMT Solutions" exactly once,
+  appended by the layout template.
+
+CONTACT PAGE
+  Was inheriting homepage title verbatim because page.js is 'use client'
+  and cannot export metadata. Created app/contact/layout.js with:
+    title: 'Contact | Lift Plan Quote Within 4 Working Hours'
+    canonical: https://www.rmtsafetysolutions.com/contact
+
+CREDENTIALS (Graduate IOSH → CertIOSH + MIIRSM + TIFSM)
+  Replaced 16 instances across the codebase. All "Graduate IOSH" and
+  "Grad IOSH" references are now zero — verified by grep.
+
+  Key changes:
+    components/Footer.js
+      Qualifications list now shows:
+        CPCS Appointed Person A61
+        NEBOSH National Diploma
+        CertIOSH
+        MIIRSM
+        TIFSM
+        35+ Years Experience
+
+    app/page.js (homepage)
+      JSON-LD ProfessionalService.hasCredential rewritten to include:
+        - CPCS Appointed Person A61 (with identifier 40389279)
+        - NEBOSH National Diploma
+        - CertIOSH (Certified Member, IOSH)
+        - MIIRSM (Member, IIRSM)
+        - TIFSM (Technician, IFSM)
+        - GVC Drone Pilot (CAA)
+
+    app/about/page.js
+      - Updated meta description
+      - Added canonical
+      - Expanded qualifications array from 4 to 6 entries with full names
+        and proper descriptions
+      - CPCS A61 entry now includes Reg: 40389279
+
+    app/contact/page.js
+      Sidebar credentials list updated to the same 6 entries; CPCS A61
+      now shows Reg: 40389279
+
+    Service pages with credential stat blocks/cards updated:
+      app/services/excavator-lift-plans/page.js  (2 places)
+      app/services/telehandler-lift-plans/page.js (2 places)
+      app/services/lift-plan-checking/page.js     (2 places)
+      app/services/mobile-crane-lift-plans/page.js (2 places)
+      app/services/lift-plan-review/page.js       (1 list)
+      app/services/aerial-site-surveys/page.js    (1 list)
+      app/services/tower-crane/page.js            (2 places)
+
+    app/blog/[slug]/page.js
+      All 5 author bios updated:
+        - 4 paragraph bios at lines ~158, 295, 1496, 1649
+        - 1 sidebar credentials line ~1811
+      Each now reads: "NEBOSH National Diploma, CertIOSH, MIIRSM and
+      TIFSM qualifications". Sidebar shows CPCS reg number.
+
+LOCATION PAGES — SERP INTENT RE-TARGETING (the strategic fix)
+  The audit found that "Lift Plans Manchester" SERPs are dominated by
+  elevator/passenger lift companies (Northern Elevators, Sheridan Lifts,
+  Invalifts, etc.). Google interprets "lift plans + city" as elevator
+  services, not crane lift planning.
+
+  Changes to app/locations/[slug]/page.js:
+    - All 12 metaTitles changed from
+        "Lift Plans <City> | CPCS Appointed Person | RMT Solutions"
+      to
+        "Crane Lift Plan <City> | LOLER Appointed Person"
+      (template still adds "| RMT Solutions" automatically.)
+    - H1 changed from "Lift Plans in {city}" to "Crane Lift Plan in {city}"
+    - Form serviceName changed from "Lift Plans — {city}" to "Crane Lift Plan — {city}"
+    - Meta descriptions LEFT UNCHANGED — they already contain LOLER, CPCS,
+      tower crane, mobile crane, etc. which signal crane intent strongly.
+      Re-targeting at the title + H1 level is enough.
+
+  Changes to app/locations/page.js (hub):
+    - Title: "Crane Lift Plan Services Across the UK"
+    - H1:    "Crane Lift Plan Services Across the UK"
+    - Card link anchor text: "Crane lift plans {city}"
+    - keywords array re-targeted to crane/LOLER terms
+
+  Changes to components/Footer.js:
+    - Footer location link anchor text changed from "Lift Plans <City>"
+      to "Crane Lift Plan <City>" for all 9 footer city links.
+      This matters: internal anchor text drives ranking signals, and
+      consistent crane-prefixed anchors across the site will help Google
+      classify the location pages correctly.
+
+OTHER FIXES SPOTTED AND CORRECTED
+  app/resources/telehandler-lift-plan-templates/page.js
+    - openGraph url had a typo: rmtsafetysolutions.co.uk
+    - Corrected to .com (the live domain).
+
+POST-DEPLOYMENT CHECKLIST
+=========================
+1. Build locally: `npm run build` and confirm no errors. The pages should
+   build cleanly — all changes are within the existing patterns.
+
+2. Deploy to Vercel.
+
+3. Verify a few canonical fixes by viewing source on:
+     /about           — should canonical to itself
+     /contact         — should canonical to /contact
+     /blog/what-is-a-lift-plan — should canonical to itself
+     /services/lift-plan-review — should canonical to itself
+     /locations/manchester — should canonical to itself, title "Crane Lift Plan Manchester ..."
+
+4. Submit fresh sitemap in Google Search Console for both:
+     https://rmtsafetysolutions.com (bare)
+     https://www.rmtsafetysolutions.com (www)
+
+5. Submit URL inspection for the 5 highest-priority pages so Google
+   re-crawls them quickly:
+     /about
+     /contact
+     /services/lift-plan-review
+     /locations/manchester
+     /blog/what-is-a-lift-plan
+
+6. Optional: in Search Console > Removals, submit removal requests for
+   the legacy WordPress URLs that are still showing in SERPs:
+     /excavator-lift-plan/
+     /telehandler-lift-plan/
+     /lift-plan-consultancy/
+     /tower-crane-lift-plans/
+   They redirect correctly already; this just speeds up Google dropping
+   them from the index.
+
+7. Re-baseline rankings ~2 weeks after deploy. Expected outcomes:
+     - 25 pages stop pointing canonical at homepage → blog content,
+       /about, /contact, /resources should appear in SERPs for relevant
+       terms within 2-3 weeks.
+     - "Lift Plans Manchester" SERP is unwinnable; "Crane Lift Plan
+       Manchester" / "LOLER Appointed Person Manchester" / similar
+       are the new realistic targets. Expect movement over 4-8 weeks.
+     - Credentials updates may take longer to flow into Google's
+       Knowledge Graph (entity data updates are slower than rank
+       changes), but the JSON-LD now correctly states the real
+       credentials when Google does refresh.
+
+VERIFIED CLEAN
+==============
+  ✓ 0 occurrences of "Graduate IOSH" / "Grad IOSH" / "GradIOSH"
+  ✓ 0 metaTitles starting with "Lift Plans <city>"
+  ✓ 21/21 pages have alternates.canonical
+  ✓ All 25 changed files parse cleanly with Babel JSX parser
