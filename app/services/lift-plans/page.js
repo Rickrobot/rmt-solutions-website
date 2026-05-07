@@ -9,6 +9,9 @@ export const metadata = {
   title: 'Lift Plans | Excavator, Telehandler, Mobile Crane Lift Plans',
   description: 'LOLER compliant lift plans for excavators, telehandlers, lorry loaders, and mobile cranes. Professional lift plan writing service from a CPCS Appointed Person. Fast turnaround, UK-wide.',
   keywords: ['lift plans', 'excavator lift plan', 'telehandler lift plan', 'mobile crane lift plan', 'lorry loader lift plan', 'LOLER compliant'],
+  alternates: {
+    canonical: 'https://www.rmtsafetysolutions.com/services/lift-plans',
+  },
   openGraph: {
     title: 'Lift Plans | Excavator, Telehandler, Mobile Crane Lift Plans',
     description: 'LOLER compliant lift plans for excavators, telehandlers, lorry loaders, and mobile cranes. Professional lift plan writing service from a CPCS Appointed Person.',
