@@ -1,9 +1,12 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Free Excavator Lift Plan Template & Risk Assessment | CPA Compliant | RMT Solutions',
+  title: 'Free Excavator Lift Plan Template & Risk Assessment | CPA Compliant',
   description: 'Download free CPA/SFPSG compliant excavator lift plan template and lifting operations risk assessment. 23 pre-populated hazards, OPERC hand signals, LOLER compliant. Professional templates from a CPCS Appointed Person.',
   keywords: 'excavator lift plan template, free lift plan template, excavator risk assessment template, CPA compliant lift plan, LOLER lift plan template, excavator lifting operations risk assessment, SFPSG excavator guidance, lift plan template download UK',
+  alternates: {
+    canonical: 'https://www.rmtsafetysolutions.com/resources/excavator-lift-plan-templates',
+  },
   openGraph: {
     title: 'Free Excavator Lift Plan Template & Risk Assessment | CPA Compliant',
     description: 'Download free CPA/SFPSG compliant excavator lift plan template and risk assessment with 23 pre-populated hazards. Professional templates from a CPCS Appointed Person.',
