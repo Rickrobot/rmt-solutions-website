@@ -75,9 +75,12 @@ const jsonLd = {
     ],
   },
   hasCredential: [
-    { '@type': 'EducationalOccupationalCredential', name: 'CPCS Appointed Person A61' },
+    { '@type': 'EducationalOccupationalCredential', name: 'CPCS Appointed Person A61', identifier: '40389279' },
     { '@type': 'EducationalOccupationalCredential', name: 'NEBOSH National Diploma' },
-    { '@type': 'EducationalOccupationalCredential', name: 'Graduate IOSH' },
+    { '@type': 'EducationalOccupationalCredential', name: 'CertIOSH (Certified Member, Institution of Occupational Safety and Health)' },
+    { '@type': 'EducationalOccupationalCredential', name: 'MIIRSM (Member, International Institute of Risk and Safety Management)' },
+    { '@type': 'EducationalOccupationalCredential', name: 'TIFSM (Technician Member, Institute of Fire Safety Managers)' },
+    { '@type': 'EducationalOccupationalCredential', name: 'GVC Drone Pilot (CAA)' },
   ],
   knowsAbout: ['LOLER 1998', 'Lifting Operations', 'Lift Planning', 'Tower Cranes', 'Mobile Cranes', 'Steel Erection', 'BS 7121'],
   // sameAs disambiguates the Organization to Google's Knowledge Graph.
