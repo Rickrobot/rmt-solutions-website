@@ -28,10 +28,29 @@ const jsonLd = {
     latitude: 53.39,
     longitude: -2.597,
   },
+  // Geographic service signal for Google. Order: country first, then North
+  // West (the practical day-trip catchment from Warrington), then the rest
+  // of the named tier-1 cities. Warrington itself appears here even though
+  // it is the registered office — Google reads `areaServed` as the cities
+  // we *work in*, and we want Warrington in that set for local pack ranking.
   areaServed: [
     { '@type': 'Country', name: 'United Kingdom' },
+    { '@type': 'City', name: 'Warrington' },
     { '@type': 'City', name: 'Manchester' },
     { '@type': 'City', name: 'Liverpool' },
+    { '@type': 'City', name: 'Salford' },
+    { '@type': 'City', name: 'Stockport' },
+    { '@type': 'City', name: 'Trafford' },
+    { '@type': 'City', name: 'Bolton' },
+    { '@type': 'City', name: 'Wigan' },
+    { '@type': 'City', name: 'St Helens' },
+    { '@type': 'City', name: 'Knowsley' },
+    { '@type': 'City', name: 'Wirral' },
+    { '@type': 'City', name: 'Birkenhead' },
+    { '@type': 'City', name: 'Sefton' },
+    { '@type': 'City', name: 'Widnes' },
+    { '@type': 'City', name: 'Runcorn' },
+    { '@type': 'City', name: 'Chester' },
     { '@type': 'City', name: 'Leeds' },
     { '@type': 'City', name: 'Birmingham' },
     { '@type': 'City', name: 'London' },
@@ -268,6 +287,100 @@ export default function HomePage() {
             <span className="text-gray-400 font-display font-bold text-xl">CADDICK</span>
             <span className="text-gray-400 font-display font-bold text-xl">GMI</span>
           </div>
+        </div>
+      </section>
+
+      {/* Where We Work — geographic signal section. Surfaces our North West
+          catchment on the homepage so Google has a textual association
+          between the business and Manchester / Liverpool / Warrington
+          beyond schema-only signals. Each card links to a substantive
+          location page. */}
+      <section className="py-20 bg-slate-950" aria-labelledby="where-we-work">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+              Service Area
+            </span>
+            <h2 id="where-we-work" className="font-display text-4xl sm:text-5xl font-bold text-white mb-6">
+              Lift Planning Across the North West & UK
+            </h2>
+            <p className="text-gray-400 text-lg leading-relaxed">
+              Based in Warrington at the junction of the M62 and M6, we attend
+              construction sites across Greater Manchester, Merseyside and
+              Cheshire the same day — and travel UK-wide for tower crane
+              contracts and steel erection projects.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <Link
+              href="/locations/manchester"
+              className="group bg-slate-900 border border-slate-800 hover:border-amber-400 rounded-2xl p-8 transition"
+            >
+              <div className="text-amber-400 text-xs font-semibold tracking-widest uppercase mb-2">
+                35 minutes from Warrington
+              </div>
+              <h3 className="font-display text-2xl font-bold text-white group-hover:text-amber-400 transition mb-3">
+                Lift Plans Manchester
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                NOMA, Mayfield, MediaCityUK and the city-centre tower pipeline.
+                Tower crane contracts, mobile crane lifts and steel erection.
+              </p>
+              <span className="inline-flex items-center text-amber-400 text-sm font-semibold">
+                Manchester lift planning
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+              </span>
+            </Link>
+
+            <Link
+              href="/locations/liverpool"
+              className="group bg-slate-900 border border-slate-800 hover:border-amber-400 rounded-2xl p-8 transition"
+            >
+              <div className="text-amber-400 text-xs font-semibold tracking-widest uppercase mb-2">
+                40 minutes from Warrington
+              </div>
+              <h3 className="font-display text-2xl font-bold text-white group-hover:text-amber-400 transition mb-3">
+                Lift Plans Liverpool
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                Liverpool Waters, Knowledge Quarter and the Baltic Triangle.
+                Mobile crane plans, lift plan checking and tower crane AP cover.
+              </p>
+              <span className="inline-flex items-center text-amber-400 text-sm font-semibold">
+                Liverpool lift planning
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+              </span>
+            </Link>
+
+            <Link
+              href="/locations"
+              className="group bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 hover:border-amber-400 rounded-2xl p-8 transition"
+            >
+              <div className="text-amber-400 text-xs font-semibold tracking-widest uppercase mb-2">
+                Home turf
+              </div>
+              <h3 className="font-display text-2xl font-bold text-white group-hover:text-amber-400 transition mb-3">
+                Warrington & North West
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                Salford, Stockport, Trafford, Wirral, Bolton, Wigan, Widnes,
+                Runcorn, Chester — same-day attendance across the M62 corridor.
+              </p>
+              <span className="inline-flex items-center text-amber-400 text-sm font-semibold">
+                View all UK locations
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+              </span>
+            </Link>
+          </div>
+
+          <p className="text-center text-gray-500 text-sm leading-relaxed max-w-4xl mx-auto">
+            Also serving <Link href="/locations/leeds" className="text-gray-400 hover:text-amber-400 transition">Leeds</Link>
+            , <Link href="/locations/birmingham" className="text-gray-400 hover:text-amber-400 transition">Birmingham</Link>
+            , <Link href="/locations/london" className="text-gray-400 hover:text-amber-400 transition">London</Link>
+            , Bristol, Glasgow and Edinburgh — UK-wide coverage for tower crane
+            contracts and complex lifting operations.
+          </p>
         </div>
       </section>
 

@@ -14,7 +14,7 @@
 //       - Blog posts: keys of `blogPosts` in app/blog/[slug]/page.js
 //       - Resources subpages: app/resources/<segment>/page.js
 
-const SITE_LAST_UPDATED = new Date('2026-04-29');
+const SITE_LAST_UPDATED = new Date('2026-05-07');
 
 export default function sitemap() {
   const baseUrl = 'https://www.rmtsafetysolutions.com';
@@ -88,9 +88,16 @@ export default function sitemap() {
 
   // Location pages — UK cities served. Slugs MUST match keys in
   // app/locations/[slug]/page.js LOCATIONS dict.
+  // Order: regional flagships first (Manchester, Liverpool — the highest
+  // priority pages for local search), then North West satellite boroughs,
+  // then the rest of the UK tier-1 cities.
   const locationSlugs = [
     'manchester',
     'liverpool',
+    'salford',
+    'stockport',
+    'trafford',
+    'wirral',
     'leeds',
     'birmingham',
     'london',
