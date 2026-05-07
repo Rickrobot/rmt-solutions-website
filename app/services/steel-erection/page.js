@@ -9,6 +9,9 @@ export const metadata = {
   title: 'Steel Erection Planning | Structural Steel Lift Plans',
   description: 'Complete lift planning for structural steel erection. Fabrication drawing reviews, erection sequences, crane selection, tandem lifts. CPCS Appointed Person services.',
   keywords: ['steel erection', 'structural steel', 'steel frame', 'tandem lifts', 'crane selection', 'erection sequence'],
+  alternates: {
+    canonical: 'https://www.rmtsafetysolutions.com/services/steel-erection',
+  },
   openGraph: {
     title: 'Steel Erection Planning | Structural Steel Lift Plans',
     description: 'Complete lift planning for structural steel erection. Fabrication drawing reviews, erection sequences, crane selection, tandem lifts. CPCS Appointed Person services.',
