@@ -14,7 +14,7 @@ const LOCATIONS = {
   manchester: {
     city: 'Manchester',
     region: 'Greater Manchester',
-    metaTitle: 'Lift Plans Manchester | CPCS Appointed Person | RMT Solutions',
+    metaTitle: 'Crane Lift Plan Manchester | LOLER Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Manchester and Greater Manchester. CPCS Appointed Person services for tower crane, mobile crane, excavator and steel erection projects. Same-day quotes — call 07803 808093.',
     travelMinutes: 35,
@@ -32,7 +32,7 @@ const LOCATIONS = {
   salford: {
     city: 'Salford',
     region: 'Greater Manchester',
-    metaTitle: 'Lift Plans Salford | CPCS Appointed Person | RMT Solutions',
+    metaTitle: 'Crane Lift Plan Salford | LOLER Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Salford, MediaCityUK and Salford Quays. CPCS Appointed Person services for residential, commercial and broadcast-sector projects. Same-day quotes — call 07803 808093.',
     travelMinutes: 30,
@@ -50,7 +50,7 @@ const LOCATIONS = {
   stockport: {
     city: 'Stockport',
     region: 'Greater Manchester',
-    metaTitle: 'Lift Plans Stockport | CPCS Appointed Person | RMT Solutions',
+    metaTitle: 'Crane Lift Plan Stockport | LOLER Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Stockport and the Mayoral Development Corporation pipeline. CPCS Appointed Person services for town-centre, industrial and data-centre projects. Same-day quotes — call 07803 808093.',
     travelMinutes: 45,
@@ -68,7 +68,7 @@ const LOCATIONS = {
   trafford: {
     city: 'Trafford',
     region: 'Greater Manchester',
-    metaTitle: 'Lift Plans Trafford | CPCS Appointed Person | RMT Solutions',
+    metaTitle: 'Crane Lift Plan Trafford | LOLER Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Trafford Park, the Trafford Centre and the Trafford logistics belt. CPCS Appointed Person services for industrial and warehouse-sector projects. Same-day quotes — call 07803 808093.',
     travelMinutes: 30,
@@ -86,7 +86,7 @@ const LOCATIONS = {
   liverpool: {
     city: 'Liverpool',
     region: 'Merseyside',
-    metaTitle: 'Lift Plans Liverpool | CPCS Appointed Person | RMT Solutions',
+    metaTitle: 'Crane Lift Plan Liverpool | LOLER Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Liverpool and Merseyside. CPCS Appointed Person services for residential, commercial and infrastructure projects. Same-day quotes — call 07803 808093.',
     travelMinutes: 40,
@@ -104,7 +104,7 @@ const LOCATIONS = {
   wirral: {
     city: 'Wirral',
     region: 'Merseyside',
-    metaTitle: 'Lift Plans Wirral | CPCS Appointed Person | RMT Solutions',
+    metaTitle: 'Crane Lift Plan Wirral | LOLER Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Wirral, Birkenhead and Wirral Waters. CPCS Appointed Person services for residential, commercial and dockside regeneration projects. Same-day quotes — call 07803 808093.',
     travelMinutes: 50,
@@ -122,7 +122,7 @@ const LOCATIONS = {
   leeds: {
     city: 'Leeds',
     region: 'West Yorkshire',
-    metaTitle: 'Lift Plans Leeds | CPCS Appointed Person | RMT Solutions',
+    metaTitle: 'Crane Lift Plan Leeds | LOLER Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Leeds and West Yorkshire. CPCS Appointed Person services for SOYO, South Bank, Aire Park and major Yorkshire infrastructure. Same-day quotes — call 07803 808093.',
     travelMinutes: 75,
@@ -140,7 +140,7 @@ const LOCATIONS = {
   birmingham: {
     city: 'Birmingham',
     region: 'West Midlands',
-    metaTitle: 'Lift Plans Birmingham | CPCS Appointed Person | RMT Solutions',
+    metaTitle: 'Crane Lift Plan Birmingham | LOLER Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Birmingham and the West Midlands. CPCS Appointed Person services for HS2, Paradise, Smithfield and Big City Plan projects. Same-day quotes — call 07803 808093.',
     travelMinutes: 100,
@@ -158,7 +158,7 @@ const LOCATIONS = {
   london: {
     city: 'London',
     region: 'Greater London',
-    metaTitle: 'Lift Plans London | CPCS Appointed Person | RMT Solutions',
+    metaTitle: 'Crane Lift Plan London | LOLER Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across London. CPCS Appointed Person services for residential, commercial, infrastructure, and city-centre projects. Same-day quotes — call 07803 808093.',
     travelMinutes: 180,
@@ -176,7 +176,7 @@ const LOCATIONS = {
   bristol: {
     city: 'Bristol',
     region: 'South West',
-    metaTitle: 'Lift Plans Bristol | CPCS Appointed Person | RMT Solutions',
+    metaTitle: 'Crane Lift Plan Bristol | LOLER Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Bristol and the South West. CPCS Appointed Person services for Temple Quarter, Bristol Arena and major regional schemes. Same-day quotes — call 07803 808093.',
     travelMinutes: 180,
@@ -194,7 +194,7 @@ const LOCATIONS = {
   glasgow: {
     city: 'Glasgow',
     region: 'Scotland',
-    metaTitle: 'Lift Plans Glasgow | CPCS Appointed Person | RMT Solutions',
+    metaTitle: 'Crane Lift Plan Glasgow | LOLER Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Glasgow and the central belt. CPCS Appointed Person services for Buchanan Quarter, Sighthill, Glasgow Harbour and major Scottish infrastructure. Same-day quotes — call 07803 808093.',
     travelMinutes: 210,
@@ -212,7 +212,7 @@ const LOCATIONS = {
   edinburgh: {
     city: 'Edinburgh',
     region: 'Scotland',
-    metaTitle: 'Lift Plans Edinburgh | CPCS Appointed Person | RMT Solutions',
+    metaTitle: 'Crane Lift Plan Edinburgh | LOLER Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Edinburgh and Lothian. CPCS Appointed Person services for St James Quarter, Granton Waterfront, Haymarket and listed-building work. Same-day quotes — call 07803 808093.',
     travelMinutes: 240,
@@ -312,7 +312,7 @@ export default function LocationPage({ params }) {
           </div>
 
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Lift Plans in <span className="gradient-text">{loc.city}</span>
+            Crane Lift Plan in <span className="gradient-text">{loc.city}</span>
           </h1>
 
           <p className="text-xl text-gray-300 leading-relaxed max-w-3xl">
@@ -406,7 +406,7 @@ export default function LocationPage({ params }) {
       <section className="py-20 bg-slate-950">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <InlineQuoteForm
-            serviceName={`Lift Plans — ${loc.city}`}
+            serviceName={`Crane Lift Plan — ${loc.city}`}
             heading={`Get a quote for ${loc.city}`}
           />
         </div>
