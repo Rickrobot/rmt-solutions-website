@@ -1,13 +1,16 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Free Telehandler Lift Plan Templates UK | LOLER Compliant | RMT Solutions',
+  title: 'Free Telehandler Lift Plan Templates UK | LOLER Compliant',
   description: 'Download free telehandler lift plan templates for underslung/suspended load operations and fork-carried load operations. LOLER compliant, prepared by a CPCS Appointed Person.',
   keywords: 'telehandler lift plan template, telehandler lift plan template UK, telescopic handler lift plan template, telehandler lifting template free download, LOLER telehandler template',
+  alternates: {
+    canonical: 'https://www.rmtsafetysolutions.com/resources/telehandler-lift-plan-templates',
+  },
   openGraph: {
     title: 'Free Telehandler Lift Plan Templates UK | LOLER Compliant',
     description: 'Download free LOLER-compliant telehandler lift plan templates for suspended load and fork-carried operations. Prepared by a CPCS Appointed Person with 35+ years experience.',
-    url: 'https://www.rmtsafetysolutions.co.uk/resources/telehandler-lift-plan-templates',
+    url: 'https://www.rmtsafetysolutions.com/resources/telehandler-lift-plan-templates',
     type: 'website',
   },
 }
