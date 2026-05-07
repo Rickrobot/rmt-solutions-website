@@ -29,6 +29,60 @@ const LOCATIONS = {
     ],
   },
 
+  salford: {
+    city: 'Salford',
+    region: 'Greater Manchester',
+    metaTitle: 'Lift Plans Salford | CPCS Appointed Person | RMT Solutions',
+    metaDescription:
+      'LOLER compliant lift plans across Salford, MediaCityUK and Salford Quays. CPCS Appointed Person services for residential, commercial and broadcast-sector projects. Same-day quotes — call 07803 808093.',
+    travelMinutes: 30,
+    intro:
+      "Salford has been one of the highest-density construction markets in Greater Manchester for over a decade — driven by MediaCityUK, Salford Quays, the New Bailey commercial estate, the Salford Crescent regeneration framework, and an ongoing residential pipeline that consistently has more tower cranes in the air than most UK cities. We deliver LOLER compliant lift planning, lift plan checking, and Appointed Person contracts to main contractors, specialist lifting firms and steel erectors working across Salford and the wider M60 corridor.",
+    detail:
+      "Salford sites bring a distinctive mix of constraints — operational broadcast and live-event environments at MediaCityUK, dense residential overlooking on the Quays, listed-structure proximity around Chapel Street, and the busy A6 / Regent Road traffic interface that affects mobilisation, demobilisation and crane delivery routes. We are 30 minutes from central Salford via the M62 and M60, which makes same-day site visits straightforward for surveys, pre-lift briefings and 8-weekly compliance audits.",
+    projects: [
+      'Tower crane Appointed Person contract on a residential scheme overlooking Salford Quays',
+      'Mobile crane lift plans for façade installation on a New Bailey commercial block',
+      'Independent lift plan checking for a steel erector on a MediaCityUK extension',
+    ],
+  },
+
+  stockport: {
+    city: 'Stockport',
+    region: 'Greater Manchester',
+    metaTitle: 'Lift Plans Stockport | CPCS Appointed Person | RMT Solutions',
+    metaDescription:
+      'LOLER compliant lift plans across Stockport and the Mayoral Development Corporation pipeline. CPCS Appointed Person services for town-centre, industrial and data-centre projects. Same-day quotes — call 07803 808093.',
+    travelMinutes: 45,
+    intro:
+      "Stockport's town-centre regeneration, the Stockport Mayoral Development Corporation pipeline, the ongoing Stockport 8 transport interchange and a heavy run of industrial estate and data centre work across Bredbury, Reddish and Heaton make the borough one of the most consistent lift planning markets in Greater Manchester. We provide lift planning, lift plan checking, and Appointed Person services across Stockport, Cheadle, Bredbury and the wider M60 South corridor.",
+    detail:
+      "Stockport sites mix tight town-centre geometry — steep gradients, the Mersey valley topography around Merseyway, and listed-structure adjacency in the historic core — with high-volume warehouse, industrial and data centre work where ground bearing pressure and crane mat specification dominate the lift plan. We are 45 minutes from Stockport via the M62 and M60, with same-day site attendance practical for urgent surveys and pre-lift briefings.",
+    projects: [
+      'Lift plan reviews for a tower crane on a Stockport town-centre residential development',
+      'Mobile crane lift plans for steelwork erection on an industrial scheme in Bredbury',
+      'Lifting operations audit for a data centre fit-out in Heaton',
+    ],
+  },
+
+  trafford: {
+    city: 'Trafford',
+    region: 'Greater Manchester',
+    metaTitle: 'Lift Plans Trafford | CPCS Appointed Person | RMT Solutions',
+    metaDescription:
+      'LOLER compliant lift plans across Trafford Park, the Trafford Centre and the Trafford logistics belt. CPCS Appointed Person services for industrial and warehouse-sector projects. Same-day quotes — call 07803 808093.',
+    travelMinutes: 30,
+    intro:
+      "Trafford has long been one of the highest-volume industrial and logistics markets in the North West — Trafford Park is the largest industrial estate in Europe by floor area, and the borough's ongoing Trafford Centre regeneration, Carrington pipeline, and Manchester Ship Canal-side warehouse activity sustain a constant demand for lift planning. We work with main contractors, steel erectors and specialist plant hire firms across Trafford on LOLER compliant lift plans, plan checking, and Appointed Person contracts.",
+    detail:
+      "Trafford sites are distinguished by scale: large warehouse and distribution shed footprints with significant tandem-pick steel erection sequences, heavy plant deliveries off the M60 / M62 / M6, and the perennial ground bearing pressure questions that come with reclaimed industrial ground. We are 30 minutes from Trafford via the M62 and M60, which makes same-day site visits feasible for surveys, complex pre-lift briefings and 8-weekly compliance audits.",
+    projects: [
+      'Steel erection planning and lift plan review for a logistics shed at Trafford Park',
+      'Mobile crane lift plans for a warehouse extension in Carrington',
+      'Tandem lift plan for precast concrete delivery near the Trafford Centre',
+    ],
+  },
+
   liverpool: {
     city: 'Liverpool',
     region: 'Merseyside',
@@ -44,6 +98,24 @@ const LOCATIONS = {
       'Mobile crane lift plans for a residential development in the Baltic Triangle',
       'Tower crane compliance audits on a commercial scheme near Liverpool ONE',
       'Steel erection method statements for a logistics hub in Speke',
+    ],
+  },
+
+  wirral: {
+    city: 'Wirral',
+    region: 'Merseyside',
+    metaTitle: 'Lift Plans Wirral | CPCS Appointed Person | RMT Solutions',
+    metaDescription:
+      'LOLER compliant lift plans across Wirral, Birkenhead and Wirral Waters. CPCS Appointed Person services for residential, commercial and dockside regeneration projects. Same-day quotes — call 07803 808093.',
+    travelMinutes: 50,
+    intro:
+      "Wirral is in the early stages of one of the largest sustained regeneration programmes in the UK — Peel L&P's Wirral Waters masterplan along the Birkenhead docks, alongside Liscard town-centre renewal, the Hind Street regeneration zone and a strong residential pipeline through West Wirral. We deliver lift planning, plan checking, and Appointed Person services to main contractors, specialist lifting firms and steel erectors working across the peninsula.",
+    detail:
+      "Wirral sites — particularly along the docks — bring made-ground bearing pressure questions, Mersey wind exposure that materially affects in-service crane derating, and access constraints around the limited dock-road network and the Mersey Tunnel approaches. We are 50 minutes from Birkenhead via the M62 and M53, with same-day site attendance practical for surveys and pre-lift briefings.",
+    projects: [
+      'Tower crane Appointed Person contract on a Birkenhead waterfront residential scheme',
+      'Mobile crane lift plans for steel erection on a Wirral Waters commercial block',
+      'Lift plan checking for a tandem pick on a heritage-area refurbishment in Liscard',
     ],
   },
 
