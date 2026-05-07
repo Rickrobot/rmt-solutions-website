@@ -3,9 +3,18 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Aerial Surveys & Construction Site Photography | Drone Surveys | RMT Solutions',
+  title: 'Aerial Surveys & Construction Site Photography | Drone Surveys',
   description: 'Aerial site surveys and construction site photography from a CPCS Appointed Person with GVC qualification and CAA Operational Authorisation. Drone and ground-level photography for lift planning, progress monitoring, and project documentation.',
   keywords: 'aerial site survey, drone survey lift planning, drone survey construction site, construction site photography, aerial survey crane planning, UAV site survey UK, construction progress photography, site photography contractor, GVC drone pilot, CAA operational authorisation',
+  alternates: {
+    canonical: 'https://www.rmtsafetysolutions.com/services/aerial-site-surveys',
+  },
+  openGraph: {
+    title: 'Aerial Surveys & Construction Site Photography | Drone Surveys',
+    description: 'Aerial site surveys and construction site photography for lift planning and progress monitoring. CPCS Appointed Person with GVC and CAA Operational Authorisation.',
+    url: 'https://www.rmtsafetysolutions.com/services/aerial-site-surveys',
+    type: 'website',
+  },
 }
 
 const serviceSchema = {
@@ -390,10 +399,10 @@ export default function AerialSiteSurveysPage() {
             <div className="bg-slate-50 p-8 rounded-xl">
               <h3 className="text-xl font-semibold text-slate-900 mb-4">Construction Industry</h3>
               <ul className="space-y-3 text-slate-600">
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>CPCS Appointed Person (A61)</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>CPCS Appointed Person (A61) — Reg: 40389279</li>
                 <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>35+ years construction industry experience</li>
                 <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>NEBOSH National Diploma</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Graduate IOSH</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>CertIOSH · MIIRSM · TIFSM</li>
               </ul>
             </div>
           </div>
