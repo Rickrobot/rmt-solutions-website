@@ -209,7 +209,7 @@ export default function LiftPlanCheckingPage() {
             </div>
             <div>
               <div className="text-2xl font-bold text-slate-900">NEBOSH</div>
-              <div className="text-sm text-slate-600">Construction Diploma · Grad IOSH</div>
+              <div className="text-sm text-slate-600">Construction Diploma · CertIOSH</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-slate-900">UK-wide</div>
@@ -620,8 +620,8 @@ export default function LiftPlanCheckingPage() {
                 desc: 'Trusted on live projects by leading UK contractors including Wates, Caddick and GMI.',
               },
               {
-                title: 'NEBOSH Diploma · Grad IOSH',
-                desc: 'Construction-specific NEBOSH Diploma and Graduate IOSH membership behind every finding.',
+                title: 'NEBOSH Diploma · CertIOSH · MIIRSM · TIFSM',
+                desc: 'Construction-specific NEBOSH National Diploma, CertIOSH (Certified IOSH member), MIIRSM and TIFSM behind every finding.',
               },
               {
                 title: '17-point methodology',
