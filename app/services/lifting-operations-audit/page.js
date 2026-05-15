@@ -5,14 +5,14 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Lifting Operations Audit UK | LOLER Compliance',
+  title: 'Lifting Operations Audit | LOLER Compliance',
   description: 'Independent lifting operations audit by a CPCS Appointed Person. Assess LOLER compliance and lifting equipment management. Detailed reports.',
   keywords: 'lifting operations audit, LOLER compliance audit, crane audit, lifting equipment audit, construction site lifting audit',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lifting-operations-audit',
   },
   openGraph: {
-    title: 'Lifting Operations Audit UK | LOLER Compliance',
+    title: 'Lifting Operations Audit | LOLER Compliance',
     description: 'Independent lifting operations audit by a CPCS Appointed Person. Assess LOLER compliance and lifting equipment management.',
     url: 'https://www.rmtsafetysolutions.com/services/lifting-operations-audit',
     type: 'website',
