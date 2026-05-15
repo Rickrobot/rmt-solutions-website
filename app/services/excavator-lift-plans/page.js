@@ -6,7 +6,7 @@ import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Excavator Lift Plans UK | LOLER & ISO 10567 Compliant',
-  description: 'CPCS Appointed Person excavator lift plans for 180° and 360° machines. LOLER 1998 and ISO 10567 compliant. Quote within 4 working hours, plan delivered in 24–48 hours. Trusted by Tier 1 contractors.',
+  description: 'CPCS Appointed Person excavator lift plans for 180° and 360° machines. LOLER 1998 and ISO 10567 compliant. Plan delivered in 24–48 hours.',
   keywords: 'excavator lift plan UK, excavator lifting operations, 360 excavator lift plan, excavator lifting capacity, LOLER excavator lifting, ISO 10567, CPCS appointed person',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/excavator-lift-plans',
