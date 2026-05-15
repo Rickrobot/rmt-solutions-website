@@ -7,7 +7,10 @@ import Analytics from '@/components/Analytics'
 export const metadata = {
   metadataBase: new URL('https://www.rmtsafetysolutions.com'),
   title: {
-    default: 'Lift Plans UK | LOLER Compliant Lift Planning | Appointed Person | RMT Solutions',
+    // Homepage uses `default` as-is (no template applied). All child pages
+    // get the template appended automatically. Both kept ≤60 chars so they
+    // render in full on Google desktop SERPs.
+    default: 'LOLER Lift Plans UK | Appointed Person | RMT Solutions',
     template: '%s | RMT Solutions'
   },
   description: 'LOLER compliant lift plans from a CPCS Appointed Person with 35 years experience. Tower crane, mobile crane and excavator lift plans — UK-wide.',
@@ -31,7 +34,7 @@ export const metadata = {
     locale: 'en_GB',
     url: 'https://www.rmtsafetysolutions.com',
     siteName: 'RMT Solutions - Lift Planning Specialists',
-    title: 'Lift Plans UK | LOLER Compliant Lift Planning | RMT Solutions',
+    title: 'LOLER Lift Plans UK | Appointed Person | RMT Solutions',
     description: 'Professional lift planning from a CPCS Appointed Person with 35 years experience. Tower crane contracts, steel erection planning, excavator lift plans.',
     images: [
       {
