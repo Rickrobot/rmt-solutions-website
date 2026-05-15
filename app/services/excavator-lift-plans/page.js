@@ -5,14 +5,14 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Excavator Lift Plans UK | LOLER & ISO 10567 Compliant',
+  title: 'Excavator Lift Plans UK | ISO 10567 & LOLER',
   description: 'CPCS Appointed Person excavator lift plans for 180° and 360° machines. LOLER 1998 and ISO 10567 compliant. Plan delivered in 24–48 hours.',
   keywords: 'excavator lift plan UK, excavator lifting operations, 360 excavator lift plan, excavator lifting capacity, LOLER excavator lifting, ISO 10567, CPCS appointed person',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/excavator-lift-plans',
   },
   openGraph: {
-    title: 'Excavator Lift Plans UK | LOLER & ISO 10567 Compliant',
+    title: 'Excavator Lift Plans UK | ISO 10567 & LOLER',
     description: 'CPCS Appointed Person excavator lift plans for 180° and 360° machines. Quote within 4 working hours, plan delivered in 24–48 hours.',
     url: 'https://www.rmtsafetysolutions.com/services/excavator-lift-plans',
     type: 'website',
