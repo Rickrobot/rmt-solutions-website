@@ -1,0 +1,104 @@
+RMT SOLUTIONS — DEPLOY-ONLY PACKAGE
+====================================
+
+This zip contains ONLY the files that differ from your currently-live
+production deployment. Drop the contents of this zip on top of your
+repo (preserving the folder structure), then make the two deletions
+listed below, commit, and push.
+
+This is the round 2 SEO fixes + the hotfix for the Vercel build
+failure that happened on the first deploy attempt.
+
+==============================================================
+STEP 1 — Add / overwrite these 15 files in your repo
+==============================================================
+
+  NEW FILE (this path didn't exist before — Git will create it):
+    app/sitemap-feed/route.js
+
+  MODIFIED FILES (overwrite the existing versions in your repo):
+    next.config.js
+    app/layout.js
+    app/locations/[slug]/page.js
+    app/services/aerial-site-surveys/page.js
+    app/services/excavator-lift-plans/page.js
+    app/services/lift-plan-checking/page.js
+    app/services/lift-plan-review/page.js
+    app/services/lift-plans/page.js
+    app/services/lifting-operations-audit/page.js
+    app/services/lorry-loader-lift-plans/page.js
+    app/services/mobile-crane-lift-plans/page.js
+    app/services/steel-erection/page.js
+    app/services/telehandler-lift-plans/page.js
+    app/services/tower-crane/page.js
+
+==============================================================
+STEP 2 — Delete these from your repo (CRITICAL)
+==============================================================
+
+If you skip this step the Vercel build will fail with
+"two parallel pages that resolve to the same path."
+
+  DELETE the entire directory:
+    app/sitemap.xml/                  (and everything inside it)
+
+  DELETE the file (if it still exists from round 1):
+    app/sitemap.js
+
+In a terminal at the root of your repo, run:
+
+  git rm -rf app/sitemap.xml
+  git rm -f  app/sitemap.js          # ignore the error if the file doesn't exist
+
+==============================================================
+STEP 3 — Commit and push
+==============================================================
+
+  git add -A
+  git commit -m "SEO round 2 + sitemap-feed build hotfix"
+  git push
+
+Vercel will pick up the push and redeploy automatically.
+
+==============================================================
+STEP 4 — Verify after deploy
+==============================================================
+
+  - Visit https://www.rmtsafetysolutions.com/sitemap.xml
+      Expect: XML body served directly (NOT a redirect), with
+      <image:image> blocks scattered through the listings,
+      and roughly 45 URLs total.
+
+  - Quick eyeball check of a couple of page titles in Google later:
+      title text should no longer get cut off mid-word with an
+      ellipsis on the SERP.
+
+  - In Google Search Console > Sitemaps, re-submit
+      https://www.rmtsafetysolutions.com/sitemap.xml
+      so the new image sitemap entries are picked up next crawl.
+
+==============================================================
+WHAT EACH FILE DOES (in case you want to spot-check)
+==============================================================
+
+  next.config.js
+      Added an `async rewrites()` block at the top so the
+      canonical /sitemap.xml URL keeps working. The existing
+      `redirects()` block (82 WordPress legacy redirects) is
+      unchanged.
+
+  app/sitemap-feed/route.js
+      New custom sitemap route handler. Emits sitemap XML
+      directly so we can include <image:image> blocks — the
+      Next.js 14.2 framework helper silently drops the image
+      field. Exposed at /sitemap.xml via the rewrite above.
+
+  app/layout.js
+      Homepage default title trimmed so SERPs don't truncate it.
+
+  app/locations/[slug]/page.js
+      All 13 city pages have shorter metaTitles now.
+
+  app/services/*/page.js  (11 files)
+      Each service page has a shorter title to stay under
+      Google's ~60 character SERP truncation.

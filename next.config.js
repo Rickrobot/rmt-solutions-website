@@ -1,5 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Surface the custom sitemap route at the canonical /sitemap.xml URL.
+  // The handler itself lives at app/sitemap-feed/route.js because Next.js
+  // reserves `sitemap.{xml,js,ts}` as a metadata filename — having
+  // `app/sitemap.xml/` as a route directory breaks the build with
+  // "two parallel pages that resolve to the same path".
+  async rewrites() {
+    return [
+      {
+        source: '/sitemap.xml',
+        destination: '/sitemap-feed',
+      },
+    ]
+  },
   async redirects() {
     return [
       // ============================================
