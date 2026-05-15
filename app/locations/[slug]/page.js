@@ -14,7 +14,7 @@ const LOCATIONS = {
   warrington: {
     city: 'Warrington',
     region: 'Cheshire',
-    metaTitle: 'Crane Lift Plan Warrington | LOLER Appointed Person',
+    metaTitle: 'Lift Plan Warrington | Appointed Person',
     metaDescription:
       'LOLER compliant lift plans in Warrington and the M62 corridor from a CPCS Appointed Person based here. Same-day site attendance — call 07803 808093.',
     travelMinutes: 5,
@@ -32,7 +32,7 @@ const LOCATIONS = {
   manchester: {
     city: 'Manchester',
     region: 'Greater Manchester',
-    metaTitle: 'Crane Lift Plan Manchester | LOLER Appointed Person',
+    metaTitle: 'Lift Plan Manchester | Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Manchester and Greater Manchester. CPCS Appointed Person services for tower crane, mobile crane, excavator and steel erection projects. Same-day quotes — call 07803 808093.',
     travelMinutes: 35,
@@ -50,7 +50,7 @@ const LOCATIONS = {
   salford: {
     city: 'Salford',
     region: 'Greater Manchester',
-    metaTitle: 'Crane Lift Plan Salford | LOLER Appointed Person',
+    metaTitle: 'Lift Plan Salford | Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Salford, MediaCityUK and Salford Quays. CPCS Appointed Person services for residential, commercial and broadcast-sector projects. Same-day quotes — call 07803 808093.',
     travelMinutes: 30,
@@ -68,7 +68,7 @@ const LOCATIONS = {
   stockport: {
     city: 'Stockport',
     region: 'Greater Manchester',
-    metaTitle: 'Crane Lift Plan Stockport | LOLER Appointed Person',
+    metaTitle: 'Lift Plan Stockport | Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Stockport and the Mayoral Development Corporation pipeline. CPCS Appointed Person services for town-centre, industrial and data-centre projects. Same-day quotes — call 07803 808093.',
     travelMinutes: 45,
@@ -86,7 +86,7 @@ const LOCATIONS = {
   trafford: {
     city: 'Trafford',
     region: 'Greater Manchester',
-    metaTitle: 'Crane Lift Plan Trafford | LOLER Appointed Person',
+    metaTitle: 'Lift Plan Trafford | Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Trafford Park, the Trafford Centre and the Trafford logistics belt. CPCS Appointed Person services for industrial and warehouse-sector projects. Same-day quotes — call 07803 808093.',
     travelMinutes: 30,
@@ -104,7 +104,7 @@ const LOCATIONS = {
   liverpool: {
     city: 'Liverpool',
     region: 'Merseyside',
-    metaTitle: 'Crane Lift Plan Liverpool | LOLER Appointed Person',
+    metaTitle: 'Lift Plan Liverpool | Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Liverpool and Merseyside. CPCS Appointed Person services for residential, commercial and infrastructure projects. Same-day quotes — call 07803 808093.',
     travelMinutes: 40,
@@ -122,7 +122,7 @@ const LOCATIONS = {
   wirral: {
     city: 'Wirral',
     region: 'Merseyside',
-    metaTitle: 'Crane Lift Plan Wirral | LOLER Appointed Person',
+    metaTitle: 'Lift Plan Wirral | Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Wirral, Birkenhead and Wirral Waters. CPCS Appointed Person services for residential, commercial and dockside regeneration projects. Same-day quotes — call 07803 808093.',
     travelMinutes: 50,
@@ -140,7 +140,7 @@ const LOCATIONS = {
   leeds: {
     city: 'Leeds',
     region: 'West Yorkshire',
-    metaTitle: 'Crane Lift Plan Leeds | LOLER Appointed Person',
+    metaTitle: 'Lift Plan Leeds | Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Leeds and West Yorkshire. CPCS Appointed Person services for SOYO, South Bank, Aire Park and major Yorkshire infrastructure. Same-day quotes — call 07803 808093.',
     travelMinutes: 75,
@@ -158,7 +158,7 @@ const LOCATIONS = {
   birmingham: {
     city: 'Birmingham',
     region: 'West Midlands',
-    metaTitle: 'Crane Lift Plan Birmingham | LOLER Appointed Person',
+    metaTitle: 'Lift Plan Birmingham | Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Birmingham and the West Midlands. CPCS Appointed Person services for HS2, Paradise, Smithfield and Big City Plan projects. Same-day quotes — call 07803 808093.',
     travelMinutes: 100,
@@ -176,7 +176,7 @@ const LOCATIONS = {
   london: {
     city: 'London',
     region: 'Greater London',
-    metaTitle: 'Crane Lift Plan London | LOLER Appointed Person',
+    metaTitle: 'Lift Plan London | Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across London. CPCS Appointed Person services for residential, commercial, infrastructure, and city-centre projects. Same-day quotes — call 07803 808093.',
     travelMinutes: 180,
@@ -194,7 +194,7 @@ const LOCATIONS = {
   bristol: {
     city: 'Bristol',
     region: 'South West',
-    metaTitle: 'Crane Lift Plan Bristol | LOLER Appointed Person',
+    metaTitle: 'Lift Plan Bristol | Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Bristol and the South West. CPCS Appointed Person services for Temple Quarter, Bristol Arena and major regional schemes. Same-day quotes — call 07803 808093.',
     travelMinutes: 180,
@@ -212,7 +212,7 @@ const LOCATIONS = {
   glasgow: {
     city: 'Glasgow',
     region: 'Scotland',
-    metaTitle: 'Crane Lift Plan Glasgow | LOLER Appointed Person',
+    metaTitle: 'Lift Plan Glasgow | Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Glasgow and the central belt. CPCS Appointed Person services for Buchanan Quarter, Sighthill, Glasgow Harbour and major Scottish infrastructure. Same-day quotes — call 07803 808093.',
     travelMinutes: 210,
@@ -230,7 +230,7 @@ const LOCATIONS = {
   edinburgh: {
     city: 'Edinburgh',
     region: 'Scotland',
-    metaTitle: 'Crane Lift Plan Edinburgh | LOLER Appointed Person',
+    metaTitle: 'Lift Plan Edinburgh | Appointed Person',
     metaDescription:
       'LOLER compliant lift plans across Edinburgh and Lothian. CPCS Appointed Person services for St James Quarter, Granton Waterfront, Haymarket and listed-building work. Same-day quotes — call 07803 808093.',
     travelMinutes: 240,
