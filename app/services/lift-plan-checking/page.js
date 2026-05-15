@@ -5,14 +5,14 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Lift Plan Checking Service UK | Independent AP Review',
+  title: 'Lift Plan Checking UK | LOLER AP Review',
   description: 'Independent CPCS Appointed Person review of subcontractor lift plans. LOLER & BS 7121 check, Category A/B determination, 24–48 hour turnaround.',
   keywords: 'lift plan checking service, lift plan review, appointed person lift plan check, LOLER lift plan review, independent lift plan verification, category A lift plan, category B lift plan',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lift-plan-checking',
   },
   openGraph: {
-    title: 'Lift Plan Checking Service UK | Independent AP Review',
+    title: 'Lift Plan Checking UK | LOLER AP Review',
     description: 'Independent CPCS Appointed Person review of subcontractor lift plans. LOLER & BS 7121 compliance check, 24–48 hour turnaround.',
     url: 'https://www.rmtsafetysolutions.com/services/lift-plan-checking',
     type: 'website',
