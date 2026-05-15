@@ -15,6 +15,13 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 
 const CITIES = [
   {
+    slug: 'warrington',
+    city: 'Warrington',
+    region: 'Cheshire',
+    travelMinutes: 5,
+    blurb: 'Our home patch — the Omega logistics campus, Birchwood industrial estate, Stadium Quarter regeneration and town-centre framework drive consistent same-day lift planning work across the M62/M6 corridor.',
+  },
+  {
     slug: 'manchester',
     city: 'Manchester',
     region: 'Greater Manchester',
@@ -103,7 +110,7 @@ const CITIES = [
 export const metadata = {
   title: 'Crane Lift Plan Services Across the UK',
   description:
-    'CPCS Appointed Person services and LOLER compliant crane lift plans across Manchester, Salford, Stockport, Trafford, Liverpool, Wirral, Leeds, Birmingham, London, Bristol, Glasgow and Edinburgh. Same-day quotes — call 07803 808093.',
+    'CPCS Appointed Person services and LOLER compliant crane lift plans across Warrington, Manchester, Liverpool, Leeds, Birmingham, London, Bristol, Glasgow and Edinburgh. Same-day quotes — call 07803 808093.',
   keywords: [
     'crane lift plan uk',
     'crane lift plan manchester',
@@ -152,12 +159,25 @@ const collectionJsonLd = {
   },
 }
 
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.rmtsafetysolutions.com' },
+    { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://www.rmtsafetysolutions.com/locations' },
+  ],
+}
+
 export default function LocationsHub() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* Hero */}
