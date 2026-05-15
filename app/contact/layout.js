@@ -12,7 +12,7 @@
 export const metadata = {
   title: 'Contact | Lift Plan Quote Within 4 Working Hours',
   description:
-    'Contact RMT Solutions for LOLER compliant lift plans, lift plan checking and Appointed Person services. Quote within 4 working hours, plan delivered in 24\u201348 hours. Call 07803 808093 or email ricky@rmtsolutions.co.uk.',
+    'Contact RMT Solutions for LOLER compliant lift plans and Appointed Person services. Quote within 4 working hours. Call 07803 808093.',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/contact',
   },

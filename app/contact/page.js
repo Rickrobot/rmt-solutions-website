@@ -68,8 +68,73 @@ export default function ContactPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
+  // LocalBusiness / ContactPoint JSON-LD — gives Google an explicit, fully
+  // structured contact record (phone, email, postal locality, opening hours,
+  // service area) on the contact page itself. Distinct from the
+  // ProfessionalService schema on the homepage: this one is anchored to the
+  // contact URL so Sitelinks SERPs can pick it as a contact entry point.
+  const contactJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': 'https://www.rmtsafetysolutions.com/contact#localbusiness',
+    name: 'RMT Solutions Ltd',
+    image: 'https://www.rmtsafetysolutions.com/images/og-lift-planning.jpg',
+    url: 'https://www.rmtsafetysolutions.com/contact',
+    telephone: '+447803808093',
+    email: 'ricky@rmtsolutions.co.uk',
+    priceRange: '££',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Warrington',
+      addressRegion: 'Cheshire',
+      addressCountry: 'GB',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 53.39,
+      longitude: -2.597,
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '08:00',
+        closes: '18:00',
+      },
+    ],
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: '+447803808093',
+        email: 'ricky@rmtsolutions.co.uk',
+        contactType: 'customer service',
+        areaServed: 'GB',
+        availableLanguage: 'en-GB',
+      },
+    ],
+    areaServed: { '@type': 'Country', name: 'United Kingdom' },
+  }
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.rmtsafetysolutions.com' },
+      { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://www.rmtsafetysolutions.com/contact' },
+    ],
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-slate-900">
@@ -341,6 +406,35 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Map — Warrington office location. An embedded map on the contact
+          page reinforces the LocalBusiness schema with a visual signal, gives
+          Google a hard textual association between the page and Warrington,
+          and helps users orient before requesting a site visit. The iframe
+          uses the no-key Google Maps embed (search variant), which is the
+          standard pattern for static office locations. */}
+      <section className="pb-24 bg-slate-950" aria-labelledby="office-location">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="office-location" className="font-display text-2xl font-bold text-white mb-6 text-center">
+            Our Warrington Office
+          </h2>
+          <div className="rounded-3xl overflow-hidden border border-slate-700/50 shadow-2xl">
+            <iframe
+              src="https://www.google.com/maps?q=Warrington%2C+Cheshire%2C+UK&output=embed"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="RMT Solutions office location in Warrington, Cheshire"
+            />
+          </div>
+          <p className="text-center text-gray-500 text-sm mt-4">
+            Based at the M62/M6 junction — 35 minutes from Manchester, 40 from Liverpool, UK-wide service.
+          </p>
         </div>
       </section>
     </>
