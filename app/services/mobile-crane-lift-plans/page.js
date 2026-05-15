@@ -5,14 +5,14 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Mobile Crane Lift Plans UK | LOLER & BS 7121 Compliant',
+  title: 'Mobile Crane Lift Plans UK | BS 7121',
   description: 'CPCS Appointed Person mobile crane lift plans for all duty types. LOLER 1998 and BS 7121 compliant. Plan delivered in 24–48 hours.',
   keywords: 'mobile crane lift plan UK, crane lift plan, mobile crane lifting operations, BS 7121 lift plan, contract lift planning, CPCS appointed person, tandem lift plan',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/mobile-crane-lift-plans',
   },
   openGraph: {
-    title: 'Mobile Crane Lift Plans UK | LOLER & BS 7121 Compliant',
+    title: 'Mobile Crane Lift Plans UK | BS 7121',
     description: 'CPCS Appointed Person mobile crane lift plans for all duty types. Quote within 4 working hours, plan delivered in 24–48 hours.',
     url: 'https://www.rmtsafetysolutions.com/services/mobile-crane-lift-plans',
     type: 'website',
