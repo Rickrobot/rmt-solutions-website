@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FileText, AlertTriangle, HelpCircle, BookOpen, Scale, Users, ArrowRight } from 'lucide-react'
+import { FileText, AlertTriangle, HelpCircle, BookOpen, Scale, Users, ArrowRight, Download } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 
 export const metadata = {
@@ -67,6 +67,15 @@ export default function ResourcesPage() {
     },
   ]
 
+  // FAQ JSON-LD — emits structured data for the FAQs below, so they can
+  // surface as rich results in Google. The `faqs` array is the single
+  // source of truth; the schema mirrors it.
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [],
+  }
+
   const faqs = [
     {
       question: 'What is a LOLER compliant lift plan?',
@@ -90,8 +99,33 @@ export default function ResourcesPage() {
     },
   ]
 
+  // Populate the FAQ schema from the same source of truth as the on-page
+  // FAQ block, so they cannot drift apart.
+  faqJsonLd.mainEntity = faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  }))
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.rmtsafetysolutions.com' },
+      { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://www.rmtsafetysolutions.com/resources' },
+    ],
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-slate-900">
@@ -111,6 +145,74 @@ export default function ResourcesPage() {
             <p className="text-xl text-gray-300 leading-relaxed">
               Free guidance on lift planning, LOLER compliance, and lifting operations in the UK.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Free Templates — surfaces the actual template download pages
+          referenced in the title and meta description. Without this block
+          the resources page promises "free downloadable lift plan templates"
+          but only links to blog articles, which is exactly what the SEO
+          audit flagged. */}
+      <section className="py-20 bg-slate-950 border-b border-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+              Free Downloads
+            </span>
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-6">
+              Free Lift Plan Templates
+            </h2>
+            <p className="text-gray-400 text-lg leading-relaxed">
+              Downloadable LOLER and BS 7121 compliant lift plan templates for
+              the equipment we plan most often. Each template ships with an
+              example completion, a risk-assessment skeleton and a guidance
+              walkthrough from a CPCS Appointed Person.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <Link
+              href="/resources/excavator-lift-plan-templates"
+              className="group bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 hover:border-amber-400 rounded-2xl p-8 transition"
+            >
+              <div className="w-14 h-14 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-5">
+                <Download className="w-7 h-7 text-amber-400" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-white group-hover:text-amber-400 transition mb-3">
+                Excavator Lift Plan Template
+              </h3>
+              <p className="text-gray-400 leading-relaxed mb-5">
+                LOLER and ISO 10567 compliant excavator lift plan template
+                with worked example, capacity check and exclusion zone layout.
+                Suitable for 180° and 360° machines.
+              </p>
+              <span className="inline-flex items-center text-amber-400 font-semibold">
+                Download template
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+              </span>
+            </Link>
+
+            <Link
+              href="/resources/telehandler-lift-plan-templates"
+              className="group bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 hover:border-amber-400 rounded-2xl p-8 transition"
+            >
+              <div className="w-14 h-14 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-5">
+                <Download className="w-7 h-7 text-amber-400" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-white group-hover:text-amber-400 transition mb-3">
+                Telehandler Lift Plan Template
+              </h3>
+              <p className="text-gray-400 leading-relaxed mb-5">
+                LOLER compliant telehandler lift plan template for suspended
+                loads, work platforms and specialist attachments. Includes
+                A77C-aligned competence record fields.
+              </p>
+              <span className="inline-flex items-center text-amber-400 font-semibold">
+                Download template
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>
