@@ -5,14 +5,14 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Lorry Loader Lift Plans UK | HIAB Lift Plans',
+  title: 'Lorry Loader Lift Plans UK | HIAB Plans',
   description: 'Professional lorry loader lift plans from a CPCS Appointed Person. LOLER compliant HIAB crane plans for delivery operations and site lifting. 24hr turnaround.',
   keywords: 'lorry loader lift plan, HIAB lift plan, lorry mounted crane lift plan, loader crane lift plan, ALLMI lift plan',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lorry-loader-lift-plans',
   },
   openGraph: {
-    title: 'Lorry Loader Lift Plans UK | HIAB Lift Plans',
+    title: 'Lorry Loader Lift Plans UK | HIAB Plans',
     description: 'Professional lorry loader lift plans from a CPCS Appointed Person. LOLER compliant HIAB crane plans for delivery operations and site lifting.',
     url: 'https://www.rmtsafetysolutions.com/services/lorry-loader-lift-plans',
     type: 'website',
