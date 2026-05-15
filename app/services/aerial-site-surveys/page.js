@@ -3,14 +3,14 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Aerial Surveys & Construction Site Photography | Drone Surveys',
+  title: 'Aerial Site Surveys UK | Drone Photography',
   description: 'Aerial site surveys and construction photography from a CPCS Appointed Person with GVC drone pilot and CAA Operational Authorisation.',
   keywords: 'aerial site survey, drone survey lift planning, drone survey construction site, construction site photography, aerial survey crane planning, UAV site survey UK, construction progress photography, site photography contractor, GVC drone pilot, CAA operational authorisation',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/aerial-site-surveys',
   },
   openGraph: {
-    title: 'Aerial Surveys & Construction Site Photography | Drone Surveys',
+    title: 'Aerial Site Surveys UK | Drone Photography',
     description: 'Aerial site surveys and construction site photography for lift planning and progress monitoring. CPCS Appointed Person with GVC and CAA Operational Authorisation.',
     url: 'https://www.rmtsafetysolutions.com/services/aerial-site-surveys',
     type: 'website',
