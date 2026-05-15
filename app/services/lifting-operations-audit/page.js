@@ -6,7 +6,7 @@ import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Lifting Operations Audit UK | LOLER Compliance',
-  description: 'Independent lifting operations audit by a CPCS Appointed Person. Assess LOLER compliance, lift planning, and lifting equipment management. Detailed reports with recommendations.',
+  description: 'Independent lifting operations audit by a CPCS Appointed Person. Assess LOLER compliance and lifting equipment management. Detailed reports.',
   keywords: 'lifting operations audit, LOLER compliance audit, crane audit, lifting equipment audit, construction site lifting audit',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lifting-operations-audit',
