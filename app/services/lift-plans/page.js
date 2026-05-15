@@ -6,14 +6,14 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Lift Plans | Excavator, Telehandler, Mobile Crane Lift Plans',
+  title: 'Lift Plan Writing UK | LOLER Compliant',
   description: 'LOLER compliant lift plans for excavators, telehandlers, lorry loaders, and mobile cranes. Professional lift plan writing service from a CPCS Appointed Person. Fast turnaround, UK-wide.',
   keywords: ['lift plans', 'excavator lift plan', 'telehandler lift plan', 'mobile crane lift plan', 'lorry loader lift plan', 'LOLER compliant'],
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lift-plans',
   },
   openGraph: {
-    title: 'Lift Plans | Excavator, Telehandler, Mobile Crane Lift Plans',
+    title: 'Lift Plan Writing UK | LOLER Compliant',
     description: 'LOLER compliant lift plans for excavators, telehandlers, lorry loaders, and mobile cranes. Professional lift plan writing service from a CPCS Appointed Person.',
     url: 'https://www.rmtsafetysolutions.com/services/lift-plans',
     images: ['/images/mobile-crane-steel-erection.webp'],
