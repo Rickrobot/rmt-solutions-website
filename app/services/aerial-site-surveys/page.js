@@ -4,7 +4,7 @@ import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Aerial Surveys & Construction Site Photography | Drone Surveys',
-  description: 'Aerial site surveys and construction site photography from a CPCS Appointed Person with GVC qualification and CAA Operational Authorisation. Drone and ground-level photography for lift planning, progress monitoring, and project documentation.',
+  description: 'Aerial site surveys and construction photography from a CPCS Appointed Person with GVC drone pilot and CAA Operational Authorisation.',
   keywords: 'aerial site survey, drone survey lift planning, drone survey construction site, construction site photography, aerial survey crane planning, UAV site survey UK, construction progress photography, site photography contractor, GVC drone pilot, CAA operational authorisation',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/aerial-site-surveys',
