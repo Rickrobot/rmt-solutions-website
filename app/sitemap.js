@@ -14,10 +14,16 @@
 //       - Blog posts: keys of `blogPosts` in app/blog/[slug]/page.js
 //       - Resources subpages: app/resources/<segment>/page.js
 
-const SITE_LAST_UPDATED = new Date('2026-05-07');
+const SITE_LAST_UPDATED = new Date('2026-05-15');
 
 export default function sitemap() {
   const baseUrl = 'https://www.rmtsafetysolutions.com';
+
+  // Hero/social image used as the canonical visual for the homepage and
+  // top-level entry pages. Surfacing it via the sitemap image extension
+  // makes the URL eligible for Google Images and richer SERP previews.
+  const ogImage = `${baseUrl}/images/og-lift-planning.jpg`;
+  const heroImage = `${baseUrl}/images/mobile-crane-steel-erection.webp`;
 
   const staticRoutes = [
     {
@@ -25,24 +31,28 @@ export default function sitemap() {
       lastModified: SITE_LAST_UPDATED,
       changeFrequency: 'weekly',
       priority: 1.0,
+      images: [heroImage, ogImage],
     },
     {
       url: `${baseUrl}/about`,
       lastModified: SITE_LAST_UPDATED,
       changeFrequency: 'monthly',
       priority: 0.8,
+      images: [ogImage],
     },
     {
       url: `${baseUrl}/case-studies`,
       lastModified: SITE_LAST_UPDATED,
       changeFrequency: 'weekly',
       priority: 0.8,
+      images: [heroImage],
     },
     {
       url: `${baseUrl}/contact`,
       lastModified: SITE_LAST_UPDATED,
       changeFrequency: 'monthly',
       priority: 0.7,
+      images: [ogImage],
     },
   ];
 
@@ -63,6 +73,7 @@ export default function sitemap() {
     lastModified: SITE_LAST_UPDATED,
     changeFrequency: 'monthly',
     priority: 0.9,
+    images: [heroImage],
   }));
 
   const resourceRoutes = [
@@ -92,6 +103,7 @@ export default function sitemap() {
   // priority pages for local search), then North West satellite boroughs,
   // then the rest of the UK tier-1 cities.
   const locationSlugs = [
+    'warrington',
     'manchester',
     'liverpool',
     'salford',
