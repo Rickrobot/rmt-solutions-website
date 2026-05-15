@@ -5,16 +5,65 @@ import SectionHeader from '@/components/ui/SectionHeader'
 
 export const metadata = {
   title: 'About | CPCS Appointed Person with 35 Years Experience',
-  description: 'Meet Ricky Marsh, CPCS Appointed Person (A61 Reg: 40389279) with 35 years in UK construction. NEBOSH Diploma qualified, CertIOSH, MIIRSM and TIFSM member. Professional lift planning services.',
+  description: 'Meet Ricky Marsh, CPCS Appointed Person (A61, Reg 40389279) with 35 years in UK construction. NEBOSH Diploma, CertIOSH, MIIRSM, TIFSM.',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/about',
   },
   openGraph: {
     title: 'About | CPCS Appointed Person with 35 Years Experience',
-    description: 'Meet Ricky Marsh, CPCS Appointed Person (A61 Reg: 40389279) with 35 years in UK construction. NEBOSH Diploma qualified, CertIOSH, MIIRSM and TIFSM member.',
+    description: 'Meet Ricky Marsh, CPCS Appointed Person (A61, Reg 40389279) with 35 years in UK construction. NEBOSH Diploma, CertIOSH, MIIRSM, TIFSM.',
     url: 'https://www.rmtsafetysolutions.com/about',
     type: 'profile',
   },
+}
+
+// Person JSON-LD — explicitly identifies Ricky Marsh as a person entity
+// to Google's Knowledge Graph, with full credential list and worksFor
+// linkage back to the Organization defined on the homepage. The audit
+// flagged the About page as a high-authority signal location that lacked
+// person-level structured data.
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://www.rmtsafetysolutions.com/about#person',
+  name: 'Ricky Marsh',
+  givenName: 'Ricky',
+  familyName: 'Marsh',
+  jobTitle: 'CPCS Appointed Person (A61)',
+  description:
+    'CPCS Appointed Person (A61, Reg 40389279) and founder of RMT Solutions Ltd, with 35 years of UK construction industry experience. NEBOSH National Diploma qualified, CertIOSH, MIIRSM and TIFSM.',
+  url: 'https://www.rmtsafetysolutions.com/about',
+  email: 'ricky@rmtsolutions.co.uk',
+  telephone: '+447803808093',
+  worksFor: {
+    '@type': 'ProfessionalService',
+    '@id': 'https://www.rmtsafetysolutions.com/#business',
+    name: 'RMT Solutions Ltd',
+  },
+  hasCredential: [
+    { '@type': 'EducationalOccupationalCredential', name: 'CPCS Appointed Person A61', identifier: '40389279' },
+    { '@type': 'EducationalOccupationalCredential', name: 'NEBOSH National Diploma' },
+    { '@type': 'EducationalOccupationalCredential', name: 'CertIOSH (Certified Member, Institution of Occupational Safety and Health)' },
+    { '@type': 'EducationalOccupationalCredential', name: 'MIIRSM (Member, International Institute of Risk and Safety Management)' },
+    { '@type': 'EducationalOccupationalCredential', name: 'TIFSM (Technician Member, Institute of Fire Safety Managers)' },
+    { '@type': 'EducationalOccupationalCredential', name: 'GVC Drone Pilot (CAA)' },
+  ],
+  knowsAbout: ['LOLER 1998', 'BS 7121', 'Lifting Operations', 'Tower Cranes', 'Mobile Cranes', 'Steel Erection', 'ISO 10567'],
+  sameAs: [
+    'https://www.linkedin.com/in/ricky-marsh-certiosh-tier-2-cfrar-mifsm-88b72680/',
+  ],
+}
+
+// BreadcrumbList JSON-LD — gives Google the canonical position of this
+// page in the site hierarchy. Pages further from the root benefit most
+// from breadcrumb schema; About sits one level below the homepage.
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.rmtsafetysolutions.com' },
+    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://www.rmtsafetysolutions.com/about' },
+  ],
 }
 
 export default function AboutPage() {
@@ -29,6 +78,15 @@ export default function AboutPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-slate-900">
