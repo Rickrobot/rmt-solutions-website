@@ -3,14 +3,14 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Lift Plan Review UK | Independent LOLER Compliance Check',
+  title: 'Lift Plan Review UK | LOLER Compliance Check',
   description: 'Independent lift plan review by a CPCS Appointed Person against LOLER, BS 7121 and industry best practice. Fast turnaround, clear feedback.',
   keywords: 'lift plan review, lift plan review service, lifting plan review, crane lift plan review, independent lift plan review, lift plan review UK, LOLER lift plan review, lift plan assessment, appointed person lift plan review',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lift-plan-review',
   },
   openGraph: {
-    title: 'Lift Plan Review UK | Independent LOLER Compliance Check',
+    title: 'Lift Plan Review UK | LOLER Compliance Check',
     description: 'Independent lift plan review by a CPCS Appointed Person against LOLER, BS 7121, and industry best practice.',
     url: 'https://www.rmtsafetysolutions.com/services/lift-plan-review',
     type: 'website',
