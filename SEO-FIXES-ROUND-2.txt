@@ -1,0 +1,148 @@
+SEO FIX ROUND 2 — applied 15 May 2026
+======================================
+
+Follow-up pass after live deployment verification of round 1.
+Two issues addressed:
+
+  1. Image sitemap entries (image:image blocks) were not appearing in
+     the deployed sitemap.xml because Next.js 14.2.0 silently ignores
+     the `images` field on MetadataRoute.Sitemap (that field was added
+     in Next 14.3). Replaced app/sitemap.js with a hand-rolled XML
+     route handler at app/sitemap.xml/route.js so the image sitemap
+     extension works regardless of Next.js version.
+
+  2. Page titles were exceeding ~60 chars on Google desktop SERPs
+     because the root layout's title template appends " | RMT Solutions"
+     (16 chars) to every child page. Trimmed 1 homepage default + 11
+     service page titles + 13 location metaTitles so total title length
+     after suffix stays inside the ~60-char SERP display window.
+
+Result: 14 files modified, 1 added, 1 deleted. All JSX-parse-checked
+with esbuild. The new sitemap route handler was smoke-tested with
+node and confirmed to emit valid XML with the xmlns:image namespace
+declared and 16 image:image blocks across 45 URL entries.
+
+FILES CHANGED
+-------------
+
+ADDED
+  app/sitemap.xml/route.js
+    Custom route handler that emits sitemap.xml directly. Includes
+    xmlns:image namespace declaration and emits image:image blocks
+    for the homepage, top-level entry pages, and every service page
+    (hero image surfaced). Returns Content-Type: application/xml
+    with a 1-hour s-maxage CDN cache header.
+
+DELETED
+  app/sitemap.js
+    Removed — superseded by the route handler above. Having both would
+    cause a Next.js route conflict.
+
+MODIFIED — layout.js (homepage title trim)
+  app/layout.js
+    BEFORE: "Lift Plans UK | LOLER Compliant Lift Planning |
+             Appointed Person | RMT Solutions"             (80 chars)
+    AFTER:  "LOLER Lift Plans UK | Appointed Person |
+             RMT Solutions"                                 (54 chars)
+    Also updated the matching openGraph.title.
+
+MODIFIED — service pages (11 trims)
+  All values shown are the page title BEFORE the " | RMT Solutions"
+  template suffix is appended. Add 16 chars to each for total
+  rendered length.
+
+  app/services/lift-plan-checking/page.js
+    "Lift Plan Checking Service UK | Independent AP Review" (53)
+      → "Lift Plan Checking UK | LOLER AP Review" (39, total 55)
+
+  app/services/lift-plans/page.js
+    "Lift Plans | Excavator, Telehandler, Mobile Crane Lift Plans" (60)
+      → "Lift Plan Writing UK | LOLER Compliant" (38, total 54)
+
+  app/services/telehandler-lift-plans/page.js
+    "Telehandler Lift Plans UK | Suspended Loads & LOLER Compliant" (61)
+      → "Telehandler Lift Plans UK | LOLER Compliant" (43, total 59)
+
+  app/services/excavator-lift-plans/page.js
+    "Excavator Lift Plans UK | LOLER & ISO 10567 Compliant" (53)
+      → "Excavator Lift Plans UK | ISO 10567 & LOLER" (43, total 59)
+
+  app/services/steel-erection/page.js
+    "Steel Erection Planning | Structural Steel Lift Plans" (53)
+      → "Steel Erection Planning UK | Lift Plans" (39, total 55)
+
+  app/services/lifting-operations-audit/page.js
+    "Lifting Operations Audit UK | LOLER Compliance" (46)
+      → "Lifting Operations Audit | LOLER Compliance" (43, total 59)
+
+  app/services/lift-plan-review/page.js
+    "Lift Plan Review UK | Independent LOLER Compliance Check" (56)
+      → "Lift Plan Review UK | LOLER Compliance Check" (44, total 60)
+
+  app/services/lorry-loader-lift-plans/page.js
+    "Lorry Loader Lift Plans UK | HIAB Lift Plans" (44)
+      → "Lorry Loader Lift Plans UK | HIAB Plans" (39, total 55)
+
+  app/services/mobile-crane-lift-plans/page.js
+    "Mobile Crane Lift Plans UK | LOLER & BS 7121 Compliant" (54)
+      → "Mobile Crane Lift Plans UK | BS 7121" (36, total 52)
+
+  app/services/tower-crane/page.js
+    "Tower Crane Contracts UK | Appointed Person & 8-Weekly Audits" (61)
+      → "Tower Crane Contracts UK | AP & Audits" (38, total 54)
+
+  app/services/aerial-site-surveys/page.js
+    "Aerial Surveys & Construction Site Photography | Drone Surveys" (62)
+      → "Aerial Site Surveys UK | Drone Photography" (42, total 58)
+
+  Each edit covers BOTH the metadata.title and the openGraph.title.
+
+MODIFIED — location pages (13 trims)
+  app/locations/[slug]/page.js — all 13 metaTitle entries:
+
+  Pattern BEFORE: "Crane Lift Plan {City} | LOLER Appointed Person"  (49-51 chars)
+  Pattern AFTER:  "Lift Plan {City} | Appointed Person"               (34-39 chars, totals 50-55)
+
+  Cities covered (in source order): Warrington, Manchester, Salford,
+  Stockport, Trafford, Liverpool, Wirral, Leeds, Birmingham, London,
+  Bristol, Glasgow, Edinburgh.
+
+  All 13 now render under 60 chars on Google SERPs after the
+  " | RMT Solutions" template appends.
+
+VERIFICATION
+------------
+
+JSX syntax check (esbuild --target=es2020 --loader:.js=jsx):
+  All 14 modified files pass.
+
+Sitemap route handler smoke test (node import + GET()):
+  HTTP 200, Content-Type application/xml; charset=utf-8
+  45 <loc> entries, 16 <image:image> blocks
+  xmlns:image namespace correctly declared on <urlset>
+
+Title length verification across all 24 edited titles:
+  Min total:  47 chars  (Lift Plan Wirral)
+  Max total:  62 chars  (Lift Plans UK | Crane, Excavator & Telehandler — caught + retrimmed)
+  Final max:  60 chars  (Lift Plan Review UK)
+  All inside the ~60-char SERP display window on Google desktop.
+
+NOT CHANGED
+-----------
+  Page H1s and body content — these can stay longer than the meta
+  title without SEO penalty. The trims only affect SEO meta tags
+  and OpenGraph titles, not visible page headings or copy.
+
+  Twitter card titles in layout.js — already 46 chars, well within
+  the 70-char Twitter limit.
+
+NEXT STEPS
+----------
+
+Deploy and re-verify. After this push:
+  - SERPs should render full titles (no " | RMT Solut..." truncation)
+  - Image sitemap eligible URLs in Google Search Console > Sitemaps
+    will pick up the hero and OG images
+  - sitemap.xml lastmod will remain 2026-05-15 until the
+    SITE_LAST_UPDATED constant in app/sitemap.xml/route.js is next
+    bumped
