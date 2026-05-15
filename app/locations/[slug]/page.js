@@ -11,6 +11,24 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 // To add a city: add the slug + entry below, and update generateStaticParams.
 
 const LOCATIONS = {
+  warrington: {
+    city: 'Warrington',
+    region: 'Cheshire',
+    metaTitle: 'Crane Lift Plan Warrington | LOLER Appointed Person',
+    metaDescription:
+      'LOLER compliant lift plans in Warrington and the M62 corridor from a CPCS Appointed Person based here. Same-day site attendance — call 07803 808093.',
+    travelMinutes: 5,
+    intro:
+      "Warrington is home — RMT Solutions is based at the M62/M6 junction and we work across the borough every week. The Omega logistics campus, the Birchwood industrial estate, the Lingley Mere office pipeline, the Stadium Quarter regeneration and the ongoing Warrington town-centre framework keep lifting demand consistently high. We provide LOLER compliant lift planning, lift plan checking and Appointed Person services to main contractors, specialist lifting firms and steel erectors across Warrington, Penketh, Birchwood, Lymm and the wider M62/M6 corridor.",
+    detail:
+      "Working in Warrington is straightforward — we know the access constraints around Stockton Heath, the operational realities of the Omega and Birchwood industrial estates, the Manchester Ship Canal interface south of the town centre, and the railway oversail issues that recur on town-centre sites. Same-day site attendance is standard for surveys, pre-lift briefings and unscheduled call-outs; standard lift plans are turned around in 24-48 hours.",
+    projects: [
+      'Tower crane Appointed Person contract on a Warrington town-centre residential scheme',
+      'Mobile crane lift plans for a logistics warehouse at Omega',
+      'Lift plan checking for a Tier 1 contractor on a Birchwood industrial development',
+    ],
+  },
+
   manchester: {
     city: 'Manchester',
     region: 'Greater Manchester',
@@ -284,11 +302,27 @@ export default function LocationPage({ params }) {
     knowsAbout: ['LOLER 1998', 'BS 7121', 'Lift Planning', 'Appointed Person', loc.city],
   }
 
+  // BreadcrumbList JSON-LD — Home > Locations > {City}. Lets Google render
+  // breadcrumb trails in mobile SERPs and reinforces the site hierarchy.
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.rmtsafetysolutions.com' },
+      { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://www.rmtsafetysolutions.com/locations' },
+      { '@type': 'ListItem', position: 3, name: loc.city, item: `https://www.rmtsafetysolutions.com/locations/${params.slug}` },
+    ],
+  }
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* Hero */}
