@@ -4,14 +4,14 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Telehandler Lift Plans UK | Suspended Loads & LOLER Compliant',
+  title: 'Telehandler Lift Plans UK | LOLER Compliant',
   description: 'CPCS Appointed Person telehandler lift plans for suspended loads, work platforms and specialist attachments. LOLER 1998 compliant.',
   keywords: 'telehandler lift plan, telehandler lifting operations, telescopic handler lift plan, telehandler suspended load, A77C, LOLER telehandler, CPCS appointed person',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/telehandler-lift-plans',
   },
   openGraph: {
-    title: 'Telehandler Lift Plans UK | Suspended Loads & LOLER Compliant',
+    title: 'Telehandler Lift Plans UK | LOLER Compliant',
     description: 'CPCS Appointed Person telehandler lift plans for suspended loads, work platforms and specialist attachments. Quote within 4 working hours, plan in 24–48 hours.',
     url: 'https://www.rmtsafetysolutions.com/services/telehandler-lift-plans',
     type: 'website',
