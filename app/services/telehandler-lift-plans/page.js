@@ -5,7 +5,7 @@ import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Telehandler Lift Plans UK | Suspended Loads & LOLER Compliant',
-  description: 'CPCS Appointed Person telehandler lift plans for suspended loads, work platforms and specialist attachments. LOLER 1998 compliant. Quote within 4 working hours, plan delivered in 24–48 hours.',
+  description: 'CPCS Appointed Person telehandler lift plans for suspended loads, work platforms and specialist attachments. LOLER 1998 compliant.',
   keywords: 'telehandler lift plan, telehandler lifting operations, telescopic handler lift plan, telehandler suspended load, A77C, LOLER telehandler, CPCS appointed person',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/telehandler-lift-plans',
