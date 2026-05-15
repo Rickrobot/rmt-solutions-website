@@ -17,7 +17,7 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Tower Crane Contracts UK | Appointed Person & 8-Weekly Audits',
+  title: 'Tower Crane Contracts UK | AP & Audits',
   description:
     'Ongoing tower crane Appointed Person contracts under BS 7121-1 and LOLER 1998. 8-weekly audits, lift plan review, on-call AP support and full documentation pack. Tier 1 contractor approved.',
   keywords: [
@@ -32,7 +32,7 @@ export const metadata = {
   ],
   alternates: { canonical: 'https://www.rmtsafetysolutions.com/services/tower-crane' },
   openGraph: {
-    title: 'Tower Crane Contracts UK | Appointed Person & 8-Weekly Audits',
+    title: 'Tower Crane Contracts UK | AP & Audits',
     description:
       'Ongoing tower crane Appointed Person contracts. 8-weekly audits, lift plan review, on-call AP support and full documentation pack.',
     url: 'https://www.rmtsafetysolutions.com/services/tower-crane',
