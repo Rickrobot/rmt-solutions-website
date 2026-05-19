@@ -23,7 +23,7 @@
 //   - Every route listed here MUST exist in the app.
 
 const BASE_URL = 'https://www.rmtsafetysolutions.com';
-const SITE_LAST_UPDATED = '2026-05-15';
+const SITE_LAST_UPDATED = '2026-05-19';
 
 // Canonical images surfaced via the image sitemap extension. These give
 // the listed pages a hard image association in Google Search and make
@@ -34,6 +34,10 @@ const HERO_IMAGE = `${BASE_URL}/images/mobile-crane-steel-erection.webp`;
 const STATIC_ROUTES = [
   { path: '',              changefreq: 'weekly',  priority: '1.0', images: [HERO_IMAGE, OG_IMAGE] },
   { path: '/about',        changefreq: 'monthly', priority: '0.8', images: [OG_IMAGE] },
+  // Services hub — parent of every /services/{slug} leaf. Priority is
+  // set high (0.9) because every service leaf's BreadcrumbList JSON-LD
+  // points here, and Google needs to crawl it to validate that schema.
+  { path: '/services',     changefreq: 'monthly', priority: '0.9', images: [OG_IMAGE] },
   { path: '/case-studies', changefreq: 'weekly',  priority: '0.8', images: [HERO_IMAGE] },
   { path: '/contact',      changefreq: 'monthly', priority: '0.7', images: [OG_IMAGE] },
 ];
