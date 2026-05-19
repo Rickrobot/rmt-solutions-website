@@ -4,6 +4,209 @@ import { notFound } from 'next/navigation';
 
 // Blog posts content
 const blogPosts = {
+  'what-is-bs-7121-complete-guide': {
+    title: 'What is BS 7121? The Complete UK Guide to Safe Use of Cranes',
+    description: 'BS 7121 is the British Standard for the safe use of cranes. Learn what each part covers, how it links to LOLER 1998, and what UK contractors need to comply.',
+    keywords: 'bs 7121, what is bs 7121, bs 7121 part 1, bs 7121-1, bs 7121-3 mobile cranes, bs 7121-5 tower cranes, bs 7121-4 lorry loaders, safe use of cranes british standard, appointed person bs 7121, basic standard complex lift, lift categorisation, code of practice safe use of cranes',
+    category: 'Compliance',
+    readTime: '16 min read',
+    date: 'May 19, 2026',
+    dateModified: 'May 19, 2026',
+    image: '/images/mobile-crane-steel-erection.webp',
+    imageAlt: 'Mobile crane lifting a structural steel section during erection — operation governed by BS 7121 code of practice for safe use of cranes',
+    content: `
+      <p class="lead">If you have spent any time around UK lifting operations you will have seen "BS 7121" stamped across method statements, lift plans, tender returns, and contract specifications. It is referenced more frequently than almost any other technical standard in the industry — yet many of the people relying on it could not say with confidence what it actually contains, how its various parts fit together, or what its legal status really is. This guide explains BS 7121 in full: what it is, what each part covers, how it links to LOLER 1998, and what it means in practice for anyone planning or supervising crane operations on a UK site.</p>
+
+      <h2>What is BS 7121?</h2>
+      <p>BS 7121 is the British Standard for the safe use of cranes. Published by the British Standards Institution (BSI), it is the recognised UK code of practice covering every aspect of crane operations — planning, equipment selection, personnel competence, communication, supervision, and management. It is not a single document but a family of related standards, each addressing a different category of equipment or a different aspect of safe operation.</p>
+
+      <p>The full series title is "Code of practice for safe use of cranes," and the standard has been the benchmark reference for the UK crane industry for decades. The current foundation document is BS 7121-1:2016, which sets out general principles applicable to all crane operations. The other parts then deal with specific equipment types — mobile cranes, tower cranes, lorry loaders, overhead cranes — or specific aspects such as inspection and testing.</p>
+
+      <p>BS 7121 is published and maintained by BSI Standards Limited. It is developed and reviewed by committees made up of industry experts including crane manufacturers, hire companies, contractors, training bodies, the HSE, and trade associations such as the Construction Plant-hire Association (CPA). When changes occur in technology, regulation, or industry practice, the relevant parts are revised — which is why it is important to work to the current edition rather than an older one that may have been superseded.</p>
+
+      <h2>The Legal Status of BS 7121</h2>
+      <p>This is the question most often asked, and the answer matters: BS 7121 is not law. It is a voluntary standard, not a statutory instrument. There is no offence committed simply by failing to follow it. The actual statutory framework for lifting operations in the UK comes from the Health and Safety at Work etc. Act 1974 and the <a href="/blog/what-is-loler-complete-guide">Lifting Operations and Lifting Equipment Regulations 1998 (LOLER)</a>, supported by the Provision and Use of Work Equipment Regulations 1998 (PUWER) and the Construction (Design and Management) Regulations 2015.</p>
+
+      <p>That said, BS 7121 is the recognised means of demonstrating compliance with those legal duties. LOLER Regulation 8 requires that every lifting operation is properly planned by a competent person, appropriately supervised, and carried out in a safe manner — but it does not prescribe how. BS 7121 fills that gap by setting out, in detail, what proper planning, supervision, and safe operation look like in practice.</p>
+
+      <p>The HSE's Approved Code of Practice for LOLER (L113) cross-refers to BS 7121, and the courts have consistently treated the standard as the benchmark of reasonable practice. In practical terms this means that if you can show your lifting operations were planned and managed in accordance with BS 7121, you have a strong defence in the event of an incident or enforcement action. If you cannot, you have a problem — because the prosecution or the HSE inspector will use the standard as the yardstick against which your operation is measured.</p>
+
+      <p>Most tier 1 contractors and major clients now require BS 7121 compliance as a contractual condition. Tender returns are routinely rejected if they do not reference the standard. Prequalification questionnaires ask whether your lifting management system aligns with it. In effect, while it is not legally mandatory, BS 7121 has become commercially non-negotiable across UK construction.</p>
+
+      <h2>The Structure of BS 7121: A Family of Standards</h2>
+      <p>BS 7121 is best understood as a series of separately numbered parts that share a common framework but address different equipment types or different aspects of crane operation. The numbering is not always intuitive — there are gaps in the series, some parts have been withdrawn, and some standards have been moved between sub-parts and amendments over the years.</p>
+
+      <p>The parts most relevant to UK construction and industrial lifting are described below. The dates given are the current published editions at the time of writing — always check that you are referencing the latest version before using the standard on a project.</p>
+
+      <h3>BS 7121-1:2016 — General</h3>
+      <p>This is the foundation part of the series and the document everyone working with cranes should be familiar with. BS 7121-1:2016 sets out the general principles that apply to all crane operations regardless of equipment type. It defines the key roles in a lifting team, the planning duties of the Appointed Person, the categories of lift, the requirements for risk assessment and method statements, and the principles of supervision and communication.</p>
+
+      <p>If you only ever read one part of BS 7121, Part 1 is the one. It contains the conceptual framework on which all the other parts build. The 2016 edition consolidated and updated earlier editions and is the version currently in force.</p>
+
+      <h3>BS 7121-2 — Inspection, Testing and Thorough Examination</h3>
+      <p>Part 2 is itself a multi-part series covering the inspection, testing, and thorough examination of cranes and lifting equipment. It is structured into sub-parts for different equipment types — mobile cranes, tower cranes, lorry loaders, overhead cranes, and so on — and it supports LOLER Regulation 9, which requires lifting equipment to be subject to thorough examination by a competent person at defined intervals.</p>
+
+      <p>Part 2 is primarily aimed at the competent persons who carry out thorough examinations rather than at site users, but it is essential reading for anyone responsible for managing fleet compliance, planning maintenance programmes, or auditing lifting equipment certification on a project.</p>
+
+      <h3>BS 7121-3:2017 — Mobile Cranes</h3>
+      <p>Part 3 deals with the safe use of mobile cranes. It supplements Part 1 with specific guidance on the planning, setup, and operation of mobile cranes — from compact city cranes to large all-terrain machines and crawler cranes. It addresses ground bearing pressures, outrigger loadings, configuration selection, duty charts, and the management of dynamic effects during the lift.</p>
+
+      <p>If your project involves mobile cranes, BS 7121-3 is the standard your Appointed Person should be working to alongside Part 1. The 2017 edition is the current version.</p>
+
+      <h3>BS 7121-4:2010 — Lorry Loaders</h3>
+      <p>Part 4 covers <a href="/blog/lorry-loader-lift-plans-guide">lorry-mounted loader cranes</a> — commonly referred to in the UK as HIABs, although HIAB is actually a brand name rather than a generic term. The standard addresses both the lifting of suspended loads and the use of lorry loaders for materials handling, and it deals with issues specific to vehicle-mounted equipment such as stabiliser deployment, vehicle stability, and operation from elevated cabs.</p>
+
+      <p>Lorry loaders are involved in a disproportionately high number of lifting incidents in the UK, often because operators and site teams treat them as delivery equipment rather than as cranes. BS 7121-4 makes clear that they are cranes — and that the same planning, competence, and supervision requirements apply.</p>
+
+      <h3>BS 7121-5:2019 — Tower Cranes</h3>
+      <p>Part 5 addresses tower cranes. This is one of the most detailed parts of the series, reflecting the complexity and risk profile of tower crane operations. It covers planning, erection, climbing, dismantling, anti-collision systems, wind speed management, foundations, and the specific competence requirements for tower crane teams.</p>
+
+      <p>For any project running a tower crane, BS 7121-5 is essential alongside Parts 1 and 2. It also forms the backbone of the Construction Plant-hire Association's tower crane interest group guidance, which most major hire companies have adopted as their operating baseline.</p>
+
+      <h3>BS 7121-7 — Overhead Travelling Cranes</h3>
+      <p>Part 7 covers overhead travelling cranes — the gantry and bridge cranes found in factories, warehouses, fabrication yards, and steel mills. It addresses planning, operation, maintenance, and the management of multiple-crane environments where two or more overhead cranes may be working in the same bay.</p>
+
+      <h3>BS 7121-11 — Offshore Cranes</h3>
+      <p>Part 11 covers cranes used in offshore environments — fixed and floating installations, vessels, and offshore structures. It deals with the additional hazards of marine operations including vessel motion, dynamic loadings, weather windows, and the interaction between crane and structure in moving conditions.</p>
+
+      <h3>BS 7121-12 — Recovery Vehicles</h3>
+      <p>Part 12 addresses the use of lifting equipment on recovery vehicles. While this is less commonly referenced in construction, it is relevant for fleet operators and plant recovery contractors.</p>
+
+      <h3>BS 7121-13 — Hydraulic Gantries</h3>
+      <p>Part 13 covers hydraulic lifting gantries — the modular lifting frames used for installing heavy machinery, transformers, and process plant in environments where a mobile or overhead crane cannot be used.</p>
+
+      <h3>BS 7121-14 — Side Boom Pipelayers</h3>
+      <p>Part 14 covers side boom pipelayers — specialised tracked machines used predominantly in pipeline construction. It addresses the unique stability considerations of side-boom lifting and the management of tandem and multi-machine pipelaying operations.</p>
+
+      <p>Other parts have existed at various times — covering subjects such as articulated cranes and specific specialised equipment — and the series continues to evolve. The principle is always the same: Part 1 provides the general framework, and the equipment-specific parts deal with the particular considerations of each type of machine.</p>
+
+      <h2>Key Concepts from BS 7121-1</h2>
+      <p>Because Part 1 is the foundation document, it is worth examining the key concepts it introduces in more detail. These concepts run through every other part of the series and have become the working language of UK crane operations.</p>
+
+      <h3>The Lifting Team and Defined Roles</h3>
+      <p>BS 7121-1 defines the roles that together make up a lifting team. Each role has specific duties, competence requirements, and responsibilities. The principal roles are the Appointed Person, the Crane Supervisor (sometimes called the Lift Supervisor), the Crane Operator, and the Slinger/Signaller.</p>
+
+      <p>This role-based structure is one of the most important contributions of BS 7121. It removes ambiguity about who is responsible for what during a lifting operation. On a well-managed site every person involved in a lift knows their role, knows the duties that come with it, and knows who they are responsible to and for.</p>
+
+      <h3>The Appointed Person</h3>
+      <p>The <a href="/blog/cpcs-appointed-person-guide">Appointed Person</a> is the role most associated with BS 7121, and the standard sets out the duties in detail. The Appointed Person is responsible for the overall planning and management of the lifting operation. This includes carrying out the risk assessment, preparing the lift plan, selecting the equipment and personnel, briefing the team, and ensuring that the operation is properly supervised.</p>
+
+      <p>BS 7121-1 is clear that the Appointed Person must be competent — meaning that they have sufficient training, knowledge, experience, and authority to discharge the duties of the role. In UK construction this competence is typically demonstrated by holding a CPCS A61 Appointed Person card, although other qualifications can also serve. The Appointed Person does not have to be present on site for every lift, but they must remain accountable for the planning and management of every operation carried out under their authority.</p>
+
+      <h3>The Crane Supervisor</h3>
+      <p>The Crane Supervisor (Lift Supervisor) is present on site during the lifting operation. They are responsible for the safe execution of the lift as planned by the Appointed Person. This includes briefing the lifting team, checking that conditions match the plan, halting the lift if anything changes that takes it outside the parameters of the plan, and ensuring that the team works to the agreed sequence and exclusion zones.</p>
+
+      <h3>The Crane Operator and the Slinger/Signaller</h3>
+      <p>The Crane Operator is the person who physically controls the crane. They are responsible for operating the machine within its rated capacity, for carrying out daily pre-use checks, and for refusing to lift if they consider the operation unsafe.</p>
+
+      <p>The Slinger/Signaller is responsible for attaching the load to the crane, selecting and inspecting the lifting accessories, directing the operator using agreed hand signals or radio, and ensuring that landing areas are clear and prepared. On many operations the same person performs both the slinging and signalling functions; on larger or more complex lifts they may be separated, or there may be multiple slingers under the direction of a banksman.</p>
+
+      <h3>Lift Categorisation: Basic, Standard, and Complex</h3>
+      <p>One of the most practically important concepts in BS 7121-1 is the categorisation of lifts into three classes — Basic, Standard, and Complex. The category determines the level of planning, supervision, and documentation required, and it gives the Appointed Person a structured way of matching the planning effort to the risk of the operation.</p>
+
+      <p>A <strong>Basic Lift</strong> is a routine, repetitive lifting operation using a single crane with a known, well-defined load on a prepared site. Examples include daily materials handling with a tower crane, regular offloading at a delivery point, or moving palletised material in a workshop. Basic lifts can be covered by a generic written safe system of work or a schedule of common lifts that is approved by the Appointed Person, rather than requiring an individual lift plan for every operation.</p>
+
+      <p>A <strong>Standard Lift</strong> is a one-off lifting operation that is not particularly complex but does require individual planning. Examples include the erection of a structural steel frame, the placement of precast units, or the offloading of a piece of plant. Standard lifts require an individual lift plan prepared by the Appointed Person, with a method statement and risk assessment specific to the operation.</p>
+
+      <p>A <strong>Complex Lift</strong> is a lifting operation with significant risk or unusual features. Examples include tandem lifts using two or more cranes, lifts over occupied buildings or live infrastructure, lifts in proximity to overhead power lines, lifts of personnel, lifts at very high utilisation, and lifts where the load is asymmetric or its centre of gravity is uncertain. Complex lifts require detailed planning, scaled drawings, calculations of ground bearing pressures and rigging forces, specific wind speed limits, and additional levels of supervision and oversight.</p>
+
+      <p>The categorisation is made by the Appointed Person. There is no rigid formula — it is a judgement based on the load, the equipment, the environment, and the consequences of failure. What matters is that the categorisation is made deliberately and documented, and that the level of planning matches the category.</p>
+
+      <h3>Common Lifts and Schedules of Common Lifts</h3>
+      <p>BS 7121-1 recognises that producing an individual lift plan for every routine operation on a busy site is neither practical nor proportionate. The concept of a schedule of common lifts — sometimes called a generic lift plan — allows the Appointed Person to plan and document a range of repetitive lifting operations within a single document, provided they fall within defined parameters.</p>
+
+      <p>A schedule of common lifts typically covers daily materials handling with a tower crane, routine offloading at a defined delivery point, or repetitive operations such as panel hanging where the load type and lift parameters are known and consistent. Operations that fall outside the parameters of the schedule must have an individual lift plan prepared for them.</p>
+
+      <h3>Risk Assessment and Method Statement</h3>
+      <p>Every <a href="/blog/what-is-a-lift-plan">lift plan</a> prepared under BS 7121 must be supported by a risk assessment and a method statement. The risk assessment identifies the hazards of the operation and evaluates the risks. The method statement describes how the operation will be carried out safely. Together with the technical lift plan documentation — load weights, capacity calculations, rigging arrangements — these documents form the complete planning record for the operation.</p>
+
+      <h2>Mobile Cranes and BS 7121-3</h2>
+      <p>BS 7121-3 supplements Part 1 with specific guidance for mobile crane operations. Mobile cranes — all-terrain, rough-terrain, truck-mounted, and crawler — present specific planning challenges that the standard addresses in detail.</p>
+
+      <p>Ground bearing pressure is one of the central concerns. A mobile crane on outriggers concentrates very high loads onto a small footprint, and the ground beneath the outrigger pads must be capable of supporting those loads. BS 7121-3 sets out the principles for calculating outrigger loads, assessing ground capacity, and selecting appropriate spreader mats or engineered foundations where ground conditions are inadequate.</p>
+
+      <p>Configuration selection is another area. Mobile cranes can be operated in many different configurations — boom length, jib, counterweight, outrigger extension — and each configuration has its own duty chart. BS 7121-3 emphasises that the configuration selected must match the duty chart used in the lift plan and that any deviation invalidates the planning.</p>
+
+      <p>Dynamic effects, slewing, travelling with loads, and the management of free-on-wheels operations are also covered. The standard is the reference point that a competent <a href="/blog/cpcs-appointed-person-guide">Appointed Person</a> should be applying when preparing a mobile crane lift plan.</p>
+
+      <h2>Tower Cranes and BS 7121-5</h2>
+      <p>BS 7121-5 is the most detailed part of the series and reflects the complexity of tower crane operations on UK construction sites. It addresses the full lifecycle of a tower crane on a project — from initial selection and foundation design, through erection, climbing, in-service operation, and dismantling.</p>
+
+      <p>Anti-collision systems are now a major focus, particularly on multi-crane sites where the working envelopes of adjacent cranes overlap. BS 7121-5 sets out the principles for configuring and testing anti-collision and zoning systems, and the duties of the personnel responsible for them.</p>
+
+      <p>Wind management is another central concern. Tower cranes are particularly vulnerable to wind, and the standard sets out the principles for managing wind during operation, during out-of-service periods, and during erection and dismantling. Anemometer calibration, wind speed limits, and the duties of the supervisor in monitoring conditions are all addressed.</p>
+
+      <p>The standard also deals with the interaction between the tower crane and the wider site — load paths over occupied areas, exclusion zones, controlled lowering of small loads, and the management of multiple lifting teams sharing the same crane.</p>
+
+      <h2>Lorry Loaders and BS 7121-4</h2>
+      <p>BS 7121-4 addresses one of the most commonly misused categories of crane in UK construction. Lorry loaders are often treated as delivery equipment rather than as cranes, with the result that the same planning and competence standards applied to mobile and tower cranes are not always extended to them.</p>
+
+      <p>The standard makes clear that a lorry loader is a crane and that all the principles of BS 7121-1 — competent Appointed Person, planning proportionate to risk, qualified operators and slinger/signallers, safe systems of work — apply. It then adds specific guidance on stabiliser deployment, vehicle stability, the use of remote control, and the particular hazards of operating from or near the vehicle cab.</p>
+
+      <p>It is also important to recognise that the operator of a lorry loader on a UK construction site requires the correct CPCS or NPORS card, and the slinger/signaller — who is often the same delivery driver — must also be competent. Many incidents involving lorry loaders trace back to a failure to apply BS 7121 in the same way it would be applied to any other crane.</p>
+
+      <h2>How BS 7121 Supports LOLER Compliance</h2>
+      <p>Because the standard is not law but compliance with it satisfies the legal duties, it is worth being explicit about how the two interlock.</p>
+
+      <p>LOLER Regulation 8(1) requires that every lifting operation is properly planned by a competent person, appropriately supervised, and carried out in a safe manner. BS 7121-1 tells you what proper planning, appropriate supervision, and safe operation look like — through the Appointed Person role, the lift categorisation system, the schedule of common lifts, and the risk assessment and method statement requirements.</p>
+
+      <p>LOLER Regulation 9 requires thorough examination of lifting equipment at defined intervals. BS 7121-2 sets out how those examinations should be conducted and recorded, what the competent person should look at, and what the records should contain.</p>
+
+      <p>LOLER also requires that lifting equipment is suitable, correctly positioned and installed, and clearly marked with its safe working load. The equipment-specific parts of BS 7121 — Parts 3, 4, 5, 7, and so on — provide the detailed guidance on how to achieve this for each type of machine.</p>
+
+      <p>Working to BS 7121 does not by itself guarantee compliance with LOLER, because LOLER also imposes general management duties such as supervision, employee involvement, and management arrangements. But it goes a long way, and in the event of an incident or HSE inspection, demonstrating that you were working to the standard is the most effective way of showing that you discharged your legal duties competently.</p>
+
+      <h2>Common Gaps Where Sites Fall Short of BS 7121</h2>
+      <p>Having audited <a href="/blog/lifting-operations-audit-what-to-expect">lifting operations</a> on UK construction sites for many years, certain gaps between stated compliance with BS 7121 and actual practice on the ground appear repeatedly.</p>
+
+      <p>The most common is the misuse of lift categorisation. Operations that should be classified as Standard or Complex are routinely treated as Basic and covered by a generic schedule of common lifts, with the result that no individual planning takes place. The schedule itself, when reviewed, often does not actually fit the operations being carried out under it.</p>
+
+      <p>Another frequent gap is in the application of BS 7121-4 to lorry loader operations. Delivery vehicles arrive on site with no lift plan, the slinger/signaller role is taken by the driver without any formal competence check, and the lift proceeds as if it were a delivery rather than a lifting operation. This is one of the most common areas where the standard is referenced in tender documents but not actually applied on the ground.</p>
+
+      <p>Lifting team profiles — the documented records confirming who holds which qualifications — are often incomplete or out of date. The standard expects competent personnel in every role, but if the records cannot demonstrate competence, the operation cannot be shown to comply.</p>
+
+      <p>Anti-collision system management on multi-tower-crane sites is another area where actual practice often falls behind the standard. Zones are configured at the start of the job but not updated as the site progresses, and the responsibility for managing them is not clearly assigned to a competent person.</p>
+
+      <p>Finally, the relationship between the Appointed Person and the Crane Supervisor is sometimes blurred. The standard is clear that these are distinct roles with distinct duties. On smaller projects the same person may discharge both, but the duties of each role must still be performed. Where neither is happening properly, the lifting operation is effectively unplanned and unsupervised regardless of who is named on the paperwork.</p>
+
+      <h2>BS 7121 in Tenders and Contracts</h2>
+      <p>BS 7121 references are now standard in UK construction contracts. Tender documents typically require bidders to confirm that their lifting management system complies with the standard, that their Appointed Persons are competent to the BS 7121-1 definition, and that their <a href="/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected">lift plans</a> will be prepared and approved in accordance with it.</p>
+
+      <p>If you are responding to a tender that requires BS 7121 compliance, you need to be able to demonstrate it — not just claim it. This typically means producing a lifting management plan that maps your procedures to the relevant parts of the standard, identifying your Appointed Person and their qualifications, providing example lift plans, and confirming the arrangements for supervision and competence.</p>
+
+      <p>On the other side of the table, if you are evaluating tender returns, claims of BS 7121 compliance should be tested. A bidder that cannot produce evidence of how they apply the standard in practice is probably treating it as a tick box rather than a working framework.</p>
+
+      <h2>Current Editions and Keeping Up to Date</h2>
+      <p>British Standards are updated periodically as technology, regulation, and practice evolve. The current editions of the principal parts of BS 7121 are:</p>
+
+      <ul>
+        <li><strong>BS 7121-1:2016</strong> — Code of practice for safe use of cranes: General</li>
+        <li><strong>BS 7121-2 series</strong> — Inspection, testing and thorough examination, various sub-parts with different dates</li>
+        <li><strong>BS 7121-3:2017</strong> — Mobile cranes</li>
+        <li><strong>BS 7121-4:2010</strong> — Lorry loaders</li>
+        <li><strong>BS 7121-5:2019</strong> — Tower cranes</li>
+        <li><strong>BS 7121-7</strong> — Overhead travelling cranes (multiple sub-parts and amendments)</li>
+        <li><strong>BS 7121-11</strong> — Offshore cranes (current edition as published by BSI)</li>
+      </ul>
+
+      <p>Always verify the current edition before using the standard on a project — BSI publishes the up-to-date list on its website. Working to a superseded edition is itself a gap in compliance, because the courts and the HSE will measure the operation against the current standard, not the one in force when your procedures were written.</p>
+
+      <h2>How RMT Solutions Can Help</h2>
+      <p>RMT Solutions provides BS 7121-compliant lift planning, <a href="/services/lift-plan-checking">lift plan checking</a>, and <a href="/services/lifting-operations-audit">lifting operations audit</a> services for principal contractors, subcontractors, and clients across the UK. All work is carried out by a CPCS Appointed Person with 35 years of construction industry experience, working to the current editions of BS 7121 and the supporting British Standards.</p>
+
+      <p>We prepare <a href="/blog/what-is-a-lift-plan">lift plans</a> for all categories of lifting operation — Basic, Standard, and Complex — across the full range of equipment types including <a href="/blog/excavator-lift-plans-complete-guide">excavators</a>, <a href="/blog/telehandler-lift-plans-complete-guide">telehandlers</a>, <a href="/blog/lorry-loader-lift-plans-guide">lorry loaders</a>, mobile cranes, and tower cranes. We also provide independent review of subcontractor lift plans, lifting management plans for tender submissions, and on-site audits of lifting operations against BS 7121 requirements.</p>
+
+      <p>Whether you need a single lift plan reviewed, a complete lifting management framework developed for a major project, or independent assurance that your site is operating in line with the standard, we can help.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
+        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need BS 7121 Compliant Lift Planning?</h3>
+        <p class="text-gray-300 mb-6">RMT Solutions provides BS 7121-compliant lift planning, plan checking, and lifting operations audits across the UK. All work carried out by a CPCS Appointed Person with 35 years of construction experience.</p>
+        <a href="/contact" class="btn-primary inline-block">Get a Quote</a>
+      </div>
+
+      <p><strong>About the Author:</strong> Ricky Marsh is a CPCS Appointed Person (A61) with 35 years of construction industry experience. He holds NEBOSH National Diploma, CertIOSH, MIIRSM and TIFSM qualifications, and provides lift planning, <a href="/services/lift-plan-checking">lift plan checking</a>, and <a href="/services/lifting-operations-audit">lifting operations audit</a> services to contractors across the UK through <a href="/">RMT Solutions</a>.</p>
+    `,
+  },
   'what-is-a-lift-plan': {
     title: 'What is a Lift Plan? UK Construction Rules Under LOLER 1998',
     description: 'A lift plan documents how a lifting operation will be done safely. See what UK contractors must include under LOLER 1998 and when one is legally required.',
