@@ -1,9 +1,9 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Lift Planning Blog | Expert Advice & Guides',
   description: 'Expert lift planning advice, LOLER compliance guides, and construction safety insights from a CPCS Appointed Person with 35 years experience.',
-  keywords: 'lift planning blog, LOLER guides, crane safety, appointed person advice, construction compliance, BS 7121',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/blog',
   },
@@ -14,7 +14,17 @@ export const metadata = {
   },
 };
 
-// Blog posts data - we'll expand this
+// Blog posts data.
+//
+// Each post carries an imageAlt field so the index card images get an
+// alt that describes the image rather than restating the article title.
+// (Round-3 SEO fix — was previously alt={post.title}, which Google's
+// image-search ranking treats as low-signal because the same image was
+// being claimed to be about four different topics across the grid.)
+//
+// dateModified is intentionally separate from date so freshness signals
+// can be updated independently when posts are revised. Both default to
+// the original publication date.
 const blogPosts = [
   {
     slug: 'lifting-operations-audit-what-to-expect',
@@ -23,7 +33,9 @@ const blogPosts = [
     category: 'Services',
     readTime: '14 min read',
     date: 'February 23, 2026',
+    dateModified: 'February 23, 2026',
     image: '/images/warehouse-steel-erection.webp',
+    imageAlt: 'Mobile crane lifting steel roof truss during warehouse erection — lifting operation under audit conditions',
   },
   {
     slug: 'lift-plan-checking-what-gets-checked-and-why-plans-get-rejected',
@@ -32,7 +44,9 @@ const blogPosts = [
     category: 'Services',
     readTime: '12 min read',
     date: 'February 22, 2026',
+    dateModified: 'February 22, 2026',
     image: '/images/precast-concrete-lift.webp',
+    imageAlt: 'Precast concrete panel being lifted by mobile crane on a UK construction site',
   },
   {
     slug: 'what-is-a-lift-plan',
@@ -41,7 +55,9 @@ const blogPosts = [
     category: 'Compliance',
     readTime: '10 min read',
     date: 'February 11, 2026',
+    dateModified: 'February 11, 2026',
     image: '/images/warehouse-steel-erection.webp',
+    imageAlt: 'Steel roof structure being lifted into place during a warehouse build, illustrating a typical UK lift plan scenario',
   },
   {
     slug: 'what-does-a-lift-plan-checking-service-involve',
@@ -50,7 +66,9 @@ const blogPosts = [
     category: 'Services',
     readTime: '9 min read',
     date: 'February 11, 2026',
+    dateModified: 'February 11, 2026',
     image: '/images/precast-concrete-lift.webp',
+    imageAlt: 'Tandem precast lift in progress — the kind of plan that benefits from independent lift plan checking',
   },
   {
     slug: 'telehandler-lift-plans-complete-guide',
@@ -59,7 +77,9 @@ const blogPosts = [
     category: 'Planning',
     readTime: '9 min read',
     date: 'February 6, 2026',
+    dateModified: 'February 6, 2026',
     image: '/images/precast-concrete-lift.webp',
+    imageAlt: 'Lifting operation on a UK construction site — example of work requiring a telehandler lift plan',
   },
   {
     slug: 'lorry-loader-lift-plans-guide',
@@ -68,7 +88,9 @@ const blogPosts = [
     category: 'Planning',
     readTime: '9 min read',
     date: 'February 6, 2026',
+    dateModified: 'February 6, 2026',
     image: '/images/precast-concrete-lift.webp',
+    imageAlt: 'HIAB-style vehicle-mounted crane lifting a precast load on a UK construction site',
   },
   {
     slug: 'excavator-lift-plans-complete-guide',
@@ -77,7 +99,9 @@ const blogPosts = [
     category: 'Planning',
     readTime: '8 min read',
     date: 'January 31, 2026',
+    dateModified: 'January 31, 2026',
     image: '/images/precast-concrete-lift.webp',
+    imageAlt: '360° excavator lifting a precast section using object handling kit — typical UK excavator lift plan scenario',
   },
   {
     slug: 'cpcs-appointed-person-guide',
@@ -86,7 +110,9 @@ const blogPosts = [
     category: 'Compliance',
     readTime: '9 min read',
     date: 'January 31, 2026',
+    dateModified: 'January 31, 2026',
     image: '/images/mobile-crane-steel-erection.webp',
+    imageAlt: 'CPCS Appointed Person reviewing a mobile crane steel erection lifting operation on site',
   },
   {
     slug: 'common-lift-planning-mistakes',
@@ -95,7 +121,9 @@ const blogPosts = [
     category: 'Planning',
     readTime: '10 min read',
     date: 'January 31, 2026',
+    dateModified: 'January 31, 2026',
     image: '/images/warehouse-steel-erection.webp',
+    imageAlt: 'Steel beam being lifted during warehouse erection — common scenario where lift planning mistakes occur',
   },
   {
     slug: 'what-is-loler-complete-guide',
@@ -104,7 +132,9 @@ const blogPosts = [
     category: 'Compliance',
     readTime: '8 min read',
     date: 'January 28, 2026',
+    dateModified: 'January 28, 2026',
     image: '/images/warehouse-steel-erection.webp',
+    imageAlt: 'LOLER 1998 compliant lifting operation — steel erection on a UK industrial build',
   },
   {
     slug: 'when-do-you-need-lift-plan',
@@ -113,7 +143,9 @@ const blogPosts = [
     category: 'Planning',
     readTime: '6 min read',
     date: 'January 28, 2026',
+    dateModified: 'January 28, 2026',
     image: '/images/precast-concrete-lift.webp',
+    imageAlt: 'Precast concrete delivery lift — illustrating a typical operation that requires a LOLER lift plan',
   },
   {
     slug: 'mobile-crane-vs-tower-crane',
@@ -122,13 +154,70 @@ const blogPosts = [
     category: 'Equipment',
     readTime: '7 min read',
     date: 'January 28, 2026',
+    dateModified: 'January 28, 2026',
     image: '/images/residential-tower-crane.webp',
+    imageAlt: 'Tower crane operating above a UK residential development — comparison context for mobile vs tower crane selection',
   },
 ];
+
+// Blog + BreadcrumbList JSON-LD.
+// The Blog schema gives Google an explicit content graph for the blog
+// section with each post enumerated as a blogPost entry. The
+// BreadcrumbList schema (Home > Blog) unlocks breadcrumb display in
+// mobile SERPs and matches the structural-data depth on /about, /contact
+// and /locations/[slug].
+const blogJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  '@id': 'https://www.rmtsafetysolutions.com/blog#blog',
+  name: 'RMT Solutions — Lift Planning Blog',
+  description:
+    'Expert lift planning advice, LOLER compliance guides, and construction safety insights from a CPCS Appointed Person with 35 years experience.',
+  url: 'https://www.rmtsafetysolutions.com/blog',
+  inLanguage: 'en-GB',
+  publisher: {
+    '@type': 'Organization',
+    name: 'RMT Solutions Ltd',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.rmtsafetysolutions.com/images/rmt-logo-publisher.png',
+      width: 600,
+      height: 60,
+    },
+  },
+  blogPost: blogPosts.map((post) => ({
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    url: `https://www.rmtsafetysolutions.com/blog/${post.slug}`,
+    image: `https://www.rmtsafetysolutions.com${post.image}`,
+    datePublished: new Date(post.date).toISOString(),
+    dateModified: new Date(post.dateModified || post.date).toISOString(),
+    author: { '@type': 'Person', name: 'Ricky Marsh' },
+  })),
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.rmtsafetysolutions.com' },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.rmtsafetysolutions.com/blog' },
+  ],
+};
 
 export default function BlogPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-slate-900">
@@ -136,7 +225,7 @@ export default function BlogPage() {
           <div className="absolute inset-0 grid-bg"></div>
         </div>
         <div className="hero-overlay absolute inset-0"></div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
@@ -156,14 +245,22 @@ export default function BlogPage() {
       <section className="py-24 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
+            {blogPosts.map((post, index) => (
               <Link href={`/blog/${post.slug}`} key={post.slug}>
                 <article className="bg-gradient-to-b from-slate-800/50 to-slate-900/50 rounded-3xl overflow-hidden border border-slate-700/50 card-hover h-full flex flex-col">
-                  {/* Featured Image */}
+                  {/* Featured Image — Next.js Image with explicit dimensions
+                      reserves layout space (CLS protection), serves a
+                      responsive variant per viewport, and lets us mark the
+                      first three cards as priority since they're likely
+                      above the fold on most viewports. */}
                   <div className="h-56 bg-gradient-to-br from-slate-700 to-slate-800 relative overflow-hidden">
-                    <img 
-                      src={post.image} 
-                      alt={post.title}
+                    <Image
+                      src={post.image}
+                      alt={post.imageAlt || post.title}
+                      width={800}
+                      height={450}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      priority={index < 3}
                       className="w-full h-full object-cover"
                     />
                   </div>
