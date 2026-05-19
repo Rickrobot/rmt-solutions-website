@@ -27,6 +27,17 @@ export const metadata = {
 // the original publication date.
 const blogPosts = [
   {
+    slug: 'what-is-bs-7121-complete-guide',
+    title: 'What is BS 7121? The Complete UK Guide to Safe Use of Cranes',
+    excerpt: 'What is BS 7121? Complete guide to the British Standard for safe use of cranes — every part explained, how it links to LOLER 1998, and what UK contractors need to comply.',
+    category: 'Compliance',
+    readTime: '16 min read',
+    date: 'May 19, 2026',
+    dateModified: 'May 19, 2026',
+    image: '/images/mobile-crane-steel-erection.webp',
+    imageAlt: 'Mobile crane lifting a structural steel section during erection — operation governed by BS 7121 code of practice for safe use of cranes',
+  },
+  {
     slug: 'lifting-operations-audit-what-to-expect',
     title: 'Lifting Operations Audit: What Gets Checked and How to Prepare',
     excerpt: 'What does a lifting operations audit actually cover on a UK construction site? A practical guide from an Appointed Person covering what auditors examine, the most common findings, and how to prepare your site.',
