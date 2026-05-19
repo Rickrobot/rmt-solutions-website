@@ -81,6 +81,7 @@ const LOCATION_SLUGS = [
 ];
 
 const BLOG_POSTS = [
+  { slug: 'what-is-bs-7121-complete-guide',                                   date: '2026-05-19' },
   { slug: 'what-is-a-lift-plan',                                              date: '2026-02-11' },
   { slug: 'what-does-a-lift-plan-checking-service-involve',                   date: '2026-02-11' },
   { slug: 'what-is-loler-complete-guide',                                     date: '2026-01-28' },
