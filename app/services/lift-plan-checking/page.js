@@ -735,6 +735,85 @@ export default function LiftPlanCheckingPage() {
           </div>
         </div>
       </section>
+      {/* Available across the UK — reciprocates the inbound links from /locations/* */}
+      <section className="py-16 bg-slate-900 border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-8">
+            <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-3">
+              Available across the UK
+            </h2>
+            <p className="text-gray-400 leading-relaxed">
+              We deliver lift plan checking UK-wide. Plans are produced remotely from Warrington; site visits are scheduled where the work requires it. Pick your nearest city or call <a href="tel:+447803808093" className="text-amber-400 hover:text-amber-300 underline">07803 808093</a> to discuss your project.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+              <Link
+                key="warrington"
+                href="/locations/warrington"
+                className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-xl px-4 py-3 text-gray-200 hover:text-amber-400 font-medium text-sm transition"
+              >
+                Warrington →
+              </Link>
+              <Link
+                key="manchester"
+                href="/locations/manchester"
+                className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-xl px-4 py-3 text-gray-200 hover:text-amber-400 font-medium text-sm transition"
+              >
+                Manchester →
+              </Link>
+              <Link
+                key="liverpool"
+                href="/locations/liverpool"
+                className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-xl px-4 py-3 text-gray-200 hover:text-amber-400 font-medium text-sm transition"
+              >
+                Liverpool →
+              </Link>
+              <Link
+                key="leeds"
+                href="/locations/leeds"
+                className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-xl px-4 py-3 text-gray-200 hover:text-amber-400 font-medium text-sm transition"
+              >
+                Leeds →
+              </Link>
+              <Link
+                key="birmingham"
+                href="/locations/birmingham"
+                className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-xl px-4 py-3 text-gray-200 hover:text-amber-400 font-medium text-sm transition"
+              >
+                Birmingham →
+              </Link>
+              <Link
+                key="london"
+                href="/locations/london"
+                className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-xl px-4 py-3 text-gray-200 hover:text-amber-400 font-medium text-sm transition"
+              >
+                London →
+              </Link>
+              <Link
+                key="bristol"
+                href="/locations/bristol"
+                className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-xl px-4 py-3 text-gray-200 hover:text-amber-400 font-medium text-sm transition"
+              >
+                Bristol →
+              </Link>
+              <Link
+                key="glasgow"
+                href="/locations/glasgow"
+                className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-xl px-4 py-3 text-gray-200 hover:text-amber-400 font-medium text-sm transition"
+              >
+                Glasgow →
+              </Link>
+              <Link
+                key="edinburgh"
+                href="/locations/edinburgh"
+                className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-xl px-4 py-3 text-gray-200 hover:text-amber-400 font-medium text-sm transition"
+              >
+                Edinburgh →
+              </Link>
+          </div>
+        </div>
+      </section>
+
     </>
   )
 }
