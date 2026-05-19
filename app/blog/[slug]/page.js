@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 // Blog posts content
@@ -10,7 +11,9 @@ const blogPosts = {
     category: 'Compliance',
     readTime: '10 min read',
     date: 'February 11, 2026',
+    dateModified: 'February 11, 2026',
     image: '/images/warehouse-steel-erection.webp',
+    imageAlt: 'Steel roof structure being lifted into place during a warehouse build, illustrating a typical UK lift plan scenario',
     content: `
       <p class="lead">A lift plan is one of the most important documents on any UK construction site \u2014 yet it remains one of the most misunderstood. Whether you are a principal contractor managing a major project, a subcontractor organising a steel delivery, or a site manager trying to keep operations moving safely, understanding what a lift plan is, what it should contain, and when you need one is fundamental to LOLER compliance and site safety.</p>
 
@@ -165,7 +168,9 @@ const blogPosts = {
     category: 'Services',
     readTime: '9 min read',
     date: 'February 11, 2026',
+    dateModified: 'February 11, 2026',
     image: '/images/precast-concrete-lift.webp',
+    imageAlt: 'Tandem precast lift in progress — the kind of plan that benefits from independent lift plan checking',
     content: `
       <p class="lead">If you manage lifting operations on construction projects \u2014 particularly as a principal contractor or tier 1 main contractor \u2014 you will know that subcontractors are required to submit lift plans before carrying out any lifting work on your site. But how do you know whether those plans are actually any good? A lift plan checking service provides independent, competent review of submitted lift plans to ensure they are LOLER compliant, technically accurate, and safe to proceed.</p>
 
@@ -300,7 +305,9 @@ const blogPosts = {
     category: 'Compliance',
     readTime: '8 min read',
     date: 'January 28, 2026',
+    dateModified: 'January 28, 2026',
     image: '/images/warehouse-steel-erection.webp',
+    imageAlt: 'LOLER 1998 compliant lifting operation — steel erection on a UK industrial build',
     content: `
       <p class="lead">The Lifting Operations and Lifting Equipment Regulations 1998 (LOLER) is one of the most important pieces of health and safety legislation affecting construction sites across the UK. If you're a contractor, site manager, or anyone involved in lifting operations, understanding LOLER isn't just about compliance—it's about keeping people safe.</p>
 
@@ -442,7 +449,9 @@ const blogPosts = {
     category: 'Planning',
     readTime: '6 min read',
     date: 'January 28, 2026',
+    dateModified: 'January 28, 2026',
     image: '/images/precast-concrete-lift.webp',
+    imageAlt: 'Precast concrete delivery lift — illustrating a typical operation that requires a LOLER lift plan',
     content: `
       <p class="lead">One of the most common questions I get asked is: "Do I really need a lift plan for this?" The short answer is: yes, LOLER requires ALL lifting operations to be properly planned. But the level of planning detail varies depending on the complexity of the operation.</p>
 
@@ -661,7 +670,9 @@ const blogPosts = {
     category: 'Equipment',
     readTime: '7 min read',
     date: 'January 28, 2026',
+    dateModified: 'January 28, 2026',
     image: '/images/residential-tower-crane.webp',
+    imageAlt: 'Tower crane operating above a UK residential development — comparison context for mobile vs tower crane selection',
     content: `
       <p class="lead">Choosing between a mobile crane and a tower crane is one of the most important decisions in construction planning. Get it wrong and you'll face delays, increased costs, and potential safety issues. Get it right and your project runs smoothly. Here's everything you need to know.</p>
 
@@ -804,7 +815,9 @@ const blogPosts = {
     category: 'Planning',
     readTime: '8 min read',
     date: 'January 31, 2026',
+    dateModified: 'January 31, 2026',
     image: '/images/precast-concrete-lift.webp',
+    imageAlt: '360 degree excavator lifting a precast section using object handling kit — typical UK excavator lift plan scenario',
     content: `
       <p class="lead">Excavators are primarily designed for digging, but they're frequently used for lifting operations on UK construction sites. While this versatility makes them invaluable, it also creates legal obligations under LOLER 1998.</p>
 
@@ -861,7 +874,9 @@ const blogPosts = {
     category: 'Compliance',
     readTime: '9 min read',
     date: 'January 31, 2026',
+    dateModified: 'January 31, 2026',
     image: '/images/mobile-crane-steel-erection.webp',
+    imageAlt: 'CPCS Appointed Person reviewing a mobile crane steel erection lifting operation on site',
     content: `
       <p class="lead">The CPCS Appointed Person (A61) qualification is the gold standard for lifting operations planning in UK construction. This comprehensive guide explains everything contractors need to know about Appointed Persons.</p>
 
@@ -940,7 +955,9 @@ const blogPosts = {
     category: 'Planning',
     readTime: '10 min read',
     date: 'January 31, 2026',
+    dateModified: 'January 31, 2026',
     image: '/images/warehouse-steel-erection.webp',
+    imageAlt: 'Steel beam being lifted during warehouse erection — common scenario where lift planning mistakes occur',
     content: `
       <p class="lead">After reviewing over 1,000 lift plans across 35 years in construction, certain mistakes appear repeatedly. This guide examines the most common lift planning errors and how to avoid them.</p>
 
@@ -1018,7 +1035,9 @@ const blogPosts = {
     category: 'Planning',
     readTime: '9 min read',
     date: 'February 6, 2026',
+    dateModified: 'February 6, 2026',
     image: '/images/precast-concrete-lift.webp',
+    imageAlt: 'Lifting operation on a UK construction site — example of work requiring a telehandler lift plan',
     content: `
       <p class="lead">Telehandlers are among the most versatile machines on UK construction sites. Originally designed as rough terrain forklifts, they are now routinely used for lifting and placing suspended loads — operations that bring them firmly within the scope of LOLER 1998. Despite this, telehandler lift plans remain one of the most commonly overlooked requirements in construction planning.</p>
 
@@ -1168,7 +1187,9 @@ const blogPosts = {
     category: 'Planning',
     readTime: '9 min read',
     date: 'February 6, 2026',
+    dateModified: 'February 6, 2026',
     image: '/images/precast-concrete-lift.webp',
+    imageAlt: 'HIAB-style vehicle-mounted crane lifting a precast load on a UK construction site',
     content: `
       <p class="lead">Lorry loaders \u2014 commonly known by the brand name HIAB, though this is just one of several manufacturers \u2014 are truck-mounted cranes used extensively across UK construction for loading, unloading, and placing materials. Their convenience and availability make them one of the most frequently used pieces of lifting equipment on construction sites, yet lorry loader lift plans are among the most commonly deficient documents submitted for review.</p>
 
@@ -1329,7 +1350,9 @@ const blogPosts = {
     category: 'Services',
     readTime: '12 min read',
     date: 'February 22, 2026',
+    dateModified: 'February 22, 2026',
     image: '/images/precast-concrete-lift.webp',
+    imageAlt: 'Precast concrete panel being lifted by mobile crane on a UK construction site',
     content: `
       <p class="lead">A lift plan that looks complete can still be fundamentally wrong. Over 35 years reviewing lift plans for tier 1 contractors across the UK, I have seen the same problems appear thousands of times \u2014 plans that tick every box on the form but would not actually keep anyone safe on site. Plans where the numbers do not add up. Plans where the person who wrote them clearly never visited the site. Plans that would pass a cursory glance but fall apart the moment you start checking the detail.</p>
 
@@ -1503,7 +1526,9 @@ const blogPosts = {
     category: 'Services',
     readTime: '14 min read',
     date: 'February 23, 2026',
+    dateModified: 'February 23, 2026',
     image: '/images/warehouse-steel-erection.webp',
+    imageAlt: 'Mobile crane lifting steel roof truss during warehouse erection — lifting operation under audit conditions',
     content: `
       <p class="lead">A lifting operations audit is one of the most effective tools available to principal contractors and site managers for verifying that lifting activities on their projects are being managed safely and in compliance with LOLER 1998. Yet despite the term appearing regularly in construction contracts and tender documents, there is remarkably little practical guidance available on what a lifting operations audit actually involves, what the auditor examines, and what you should do to prepare for one.</p>
 
@@ -1693,6 +1718,15 @@ export default function BlogPost({ params }) {
 
   // BlogPosting / Article structured data — Google uses this for article rich
   // results (author, date, reading time inline with the search snippet).
+  //
+  // Round-3 SEO fixes applied:
+  //   - dateModified falls back to date but is now a separate field, so
+  //     individual posts can be marked as revised without touching their
+  //     original publication date. Google reads dateModified as a
+  //     freshness signal independent of datePublished.
+  //   - publisher.logo now references a proper 600x60 PNG at
+  //     /images/rmt-logo-publisher.png (was /favicon.svg, which is too
+  //     small and SVG-format — does not satisfy Article schema guidance).
   const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -1700,7 +1734,7 @@ export default function BlogPost({ params }) {
     description: post.description,
     image: [`https://www.rmtsafetysolutions.com${post.image}`],
     datePublished: new Date(post.date).toISOString(),
-    dateModified: new Date(post.date).toISOString(),
+    dateModified: new Date(post.dateModified || post.date).toISOString(),
     author: {
       '@type': 'Person',
       name: 'Ricky Marsh',
@@ -1712,7 +1746,9 @@ export default function BlogPost({ params }) {
       name: 'RMT Solutions Ltd',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.rmtsafetysolutions.com/favicon.svg',
+        url: 'https://www.rmtsafetysolutions.com/images/rmt-logo-publisher.png',
+        width: 600,
+        height: 60,
       },
     },
     mainEntityOfPage: {
@@ -1723,11 +1759,29 @@ export default function BlogPost({ params }) {
     keywords: post.keywords,
   };
 
+  // BreadcrumbList JSON-LD — Home > Blog > {Category} > {Post}. Mirrors
+  // the visible breadcrumb nav and unlocks breadcrumb display in mobile
+  // SERPs. Also matches the structural-data depth on /about, /contact
+  // and /locations/[slug].
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.rmtsafetysolutions.com' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.rmtsafetysolutions.com/blog' },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `https://www.rmtsafetysolutions.com/blog/${params.slug}` },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* Hero Section */}
@@ -1784,12 +1838,19 @@ export default function BlogPost({ params }) {
             </div>
           </div>
 
-          {/* Featured Image */}
-          <div className="rounded-3xl overflow-hidden mb-12">
-            <img 
-              src={post.image} 
-              alt={post.title}
-              className="w-full h-96 object-cover"
+          {/* Featured Image — Next.js Image with priority so the article
+              hero is preloaded (it is virtually always the LCP element on
+              a content page), explicit width/height reserves layout
+              space (CLS protection), and the alt falls back to a
+              constructed sentence if the post lacks an imageAlt field. */}
+          <div className="rounded-3xl overflow-hidden mb-12 relative w-full h-96">
+            <Image
+              src={post.image}
+              alt={post.imageAlt || `Featured image for ${post.title}`}
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
             />
           </div>
 
