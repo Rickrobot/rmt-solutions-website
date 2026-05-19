@@ -217,6 +217,68 @@ export default function ResourcesPage() {
         </div>
       </section>
 
+      {/* Understanding lift planning — long-form guide content. Added so
+          the resources page carries substantive body copy rather than
+          just template cards and link tiles. Internal links point to
+          service pages, location pages and the underlying blog guides,
+          which is what gives this section topical authority. */}
+      <section className="py-24 bg-slate-900 border-b border-slate-800/50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="prose-content text-gray-300 leading-relaxed space-y-6">
+            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase block">
+              Background
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white">
+              Understanding LOLER, BS 7121 and how lift plans actually get written
+            </h2>
+
+            <p>
+              Every lifting operation on a UK construction site has to be planned by a <strong>competent person</strong>, supervised by a <strong>competent person</strong>, and carried out under <strong>appropriate supervision</strong>. Those three phrases come straight out of Regulation 8 of the Lifting Operations and Lifting Equipment Regulations 1998 (LOLER), and they are the legal anchor for everything we do. The lift plan itself is the document that proves the planning was carried out properly — without it, you have a lifting operation that breaches LOLER 8 even if the lift goes off without incident.
+            </p>
+
+            <p>
+              In practice, BS 7121 — the British Standard for the safe use of cranes — is what most of the industry treats as the working interpretation of LOLER. Part 1 sets out the general principles. Part 2 deals with inspection and maintenance. Part 3 covers mobile cranes. Part 5 covers tower cranes. Part 13 covers hydraulic loader cranes (the kit you will see on a HIAB or lorry loader). If you are lifting with an excavator, you are also in the territory of ISO 10567 — the international standard for hydraulic excavator lift capacities — and that is where the 75% / 87% / 66% derating rules come from depending on whether you are lifting over the side, over the front, or with outriggers down.
+            </p>
+
+            <h3 className="font-display text-2xl font-bold text-white pt-4">
+              What a competent lift plan actually contains
+            </h3>
+
+            <p>
+              A LOLER-compliant lift plan is not a one-page risk assessment. The plans we produce on every <Link href="/services/lift-plans" className="text-amber-400 hover:text-amber-300 underline">lift plan writing</Link> job include load chart verification with documented capacity margin, ground bearing pressure calculations against site investigation data, exclusion zone and slew geometry drawn to scale, a method statement that anyone on site can follow, a briefing pack for the lift supervisor, and a competency record for everyone involved in the operation. If any one of those is missing, the plan will be rejected at <Link href="/services/lift-plan-checking" className="text-amber-400 hover:text-amber-300 underline">lift plan checking</Link> — and rightly so.
+            </p>
+
+            <p>
+              The single most common reason plans fail an independent review is that the load chart capacity has not been verified against the actual configuration on the day. A 50t crane on full outriggers at 12m radius does not lift 50t — it lifts whatever the manufacturer's load chart says for that specific configuration, and the lift plan has to show that calculation. The second most common failure mode is ground bearing pressure being assumed rather than calculated against site SI data. The third is exclusion zones drawn around the crane base instead of around the swept volume of the load.
+            </p>
+
+            <h3 className="font-display text-2xl font-bold text-white pt-4">
+              When you need a CPCS Appointed Person
+            </h3>
+
+            <p>
+              Strictly speaking, LOLER does not require a CPCS qualification — it requires competence. In practice, most principal contractors and most lifting equipment hire companies will only accept a lift plan signed by a <strong>CPCS A61 Appointed Person</strong>, because the A61 card is the recognised industry evidence that the person who wrote the plan has the underpinning knowledge to do so. If you are running a multi-year project with a tower crane in the ground, you will need an Appointed Person under contract — that is what our <Link href="/services/tower-crane" className="text-amber-400 hover:text-amber-300 underline">tower crane appointed person contracts</Link> cover. For one-off lifts with a mobile crane or excavator, you can engage an Appointed Person on a per-plan basis. Either way, the AP carries the planning duty under Regulation 8.
+            </p>
+
+            <h3 className="font-display text-2xl font-bold text-white pt-4">
+              Remote planning, site attendance, and how it works in practice
+            </h3>
+
+            <p>
+              Most of the lift planning work itself is desk-based. Capacity verification, ground bearing pressure calculations, exclusion zone geometry, and method statement drafting can all be produced remotely from drawings, the load schedule, and site investigation data. That is why we are able to turn standard plans around in 24–48 hours and keep fees competitive. Site attendance is scheduled around the work that genuinely needs it — pre-lift surveys for tandem or complex picks, exclusion zone walkthroughs, critical-lift briefings, and 8-weekly compliance audits on long-running contracts.
+            </p>
+
+            <p>
+              Travel time from our Warrington base ranges from 35 minutes to <Link href="/locations/manchester" className="text-amber-400 hover:text-amber-300 underline">Manchester</Link> to about 4 hours to <Link href="/locations/edinburgh" className="text-amber-400 hover:text-amber-300 underline">Edinburgh</Link>. Same-day site attendance is practical across the North West and feasible into the Midlands; further afield we plan visits 48–72 hours ahead. The plans themselves are written to the same standard regardless of where the site is — what varies by region is local context (oversail agreements, listed building constraints, access routes, which crane hire firms operate in the area), not the compliance baseline.
+            </p>
+
+            <p>
+              The guides below go deeper on individual topics — what triggers a LOLER lift plan, what gets checked during an independent review, the most common mistakes contractors make on real projects, and how planning differs between excavators, telehandlers, mobile cranes and lorry loaders. If you have a project coming up and need to talk through what the planning looks like, the fastest route is to call <a href="tel:+447803808093" className="text-amber-400 hover:text-amber-300 underline">07803 808093</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Resources Grid */}
       <section className="py-24 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
