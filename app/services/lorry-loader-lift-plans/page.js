@@ -210,6 +210,36 @@ export default function LorryLoaderLiftPlansPage() {
         </div>
       </section>
 
+      {/* Free Template — internal link to the resources download page so the
+          service page passes equity to the template page and gives visitors a
+          self-serve option alongside the paid service. */}
+      <section className="py-16 bg-amber-50 border-y border-amber-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="md:flex md:items-center md:justify-between gap-8">
+            <div className="md:max-w-2xl">
+              <p className="text-amber-700 font-semibold mb-2">FREE DOWNLOAD</p>
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">
+                Free Lorry Loader Lift Plan Template
+              </h2>
+              <p className="text-slate-700">
+                Drafting your own lift plan? Download our free 17-section lorry loader
+                lift plan template — aligned with BS 7121-4, LOLER 1998 and the ALLMI
+                Code of Practice, with a pre-populated 5×5 risk register that scales
+                from Basic to Complex lifts.
+              </p>
+            </div>
+            <div className="mt-6 md:mt-0 shrink-0">
+              <Link
+                href="/resources/lorry-loader-lift-plan-templates"
+                className="inline-block bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-xl font-semibold transition"
+              >
+                Get the free template →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Ground Bearing */}
       <section className="py-16 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
