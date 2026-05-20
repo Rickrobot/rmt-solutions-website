@@ -23,7 +23,7 @@
 //   - Every route listed here MUST exist in the app.
 
 const BASE_URL = 'https://www.rmtsafetysolutions.com';
-const SITE_LAST_UPDATED = '2026-05-19';
+const SITE_LAST_UPDATED = '2026-05-20';
 
 // Canonical images surfaced via the image sitemap extension. These give
 // the listed pages a hard image association in Google Search and make
@@ -60,6 +60,7 @@ const RESOURCE_ROUTES = [
   { path: '/resources',                                    priority: '0.7' },
   { path: '/resources/excavator-lift-plan-templates',      priority: '0.7' },
   { path: '/resources/telehandler-lift-plan-templates',    priority: '0.7' },
+  { path: '/resources/lorry-loader-lift-plan-templates',   priority: '0.7' },
 ];
 
 // Order: home patch (Warrington) first, then regional flagships, then
