@@ -1,17 +1,25 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Free Lorry Loader Lift Plan Template (.docx) | HIAB / ALLMI / BS 7121-4',
-  description: 'Download a free lorry loader / HIAB lift plan template. 17-section, BS 7121-1 & BS 7121-4 compliant, ALLMI-aligned, with 12 pre-populated hazards and 5×5 risk matrix. Universal Basic / Intermediate / Complex format from a CPCS Appointed Person.',
+  title: 'Free Lorry Loader Lift Plan Template (HIAB)',
+  description: 'Download a free lorry loader / HIAB lift plan template. 17-section, BS 7121-4 compliant, ALLMI-aligned, with 12 pre-populated hazards and a 5×5 risk matrix. From a CPCS Appointed Person.',
   keywords: 'lorry loader lift plan template, HIAB lift plan template, free lorry loader lift plan, ALLMI lift plan template, BS 7121-4 lorry loader, lorry mounted crane lift plan, loader crane lift plan, HIAB risk assessment template, LOLER lorry loader lift plan, lift plan template download UK',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/resources/lorry-loader-lift-plan-templates',
   },
   openGraph: {
-    title: 'Free Lorry Loader Lift Plan Template (.docx) | HIAB / ALLMI / BS 7121-4',
+    title: 'Free Lorry Loader Lift Plan Template (HIAB)',
     description: 'Download a free 17-section lorry loader / HIAB lift plan template, BS 7121-4 and ALLMI aligned, with 12 pre-populated hazards and a 5×5 risk matrix.',
     url: 'https://www.rmtsafetysolutions.com/resources/lorry-loader-lift-plan-templates',
     type: 'website',
+    images: [
+      {
+        url: 'https://www.rmtsafetysolutions.com/images/precast-concrete-lift.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Lorry loader (HIAB) vehicle-mounted crane lifting a precast load on a UK construction site',
+      },
+    ],
   },
 }
 
@@ -59,7 +67,11 @@ export default function LorryLoaderTemplatesPage() {
             against actual ground bearing data, ALLMI Lift Plan Calculator integration, lorry-loader-
             specific hazards (truck overturn, jib stowage, kerbside delivery), and BS 7121-4 — the
             standard that actually applies. This template has been written from a clean sheet against
-            those requirements and graded against a 17-point review.
+            those requirements and graded against a 17-point review. For the full background on
+            when a plan is required and how lorry loader operations are planned, see our{' '}
+            <Link href="/blog/lorry-loader-lift-plans-guide" className="text-amber-400 hover:text-amber-300 underline">
+              complete guide to lorry loader lift plans
+            </Link>.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -347,6 +359,44 @@ export default function LorryLoaderTemplatesPage() {
         </div>
       </section>
 
+      {/* FAQ — captures long-tail and "People also ask" style queries
+          (do you need a lift plan for a HIAB, which standard applies, who can
+          write one). FAQPage JSON-LD is emitted at the foot of the page. */}
+      <section className="py-16 bg-slate-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-white mb-8">Lorry Loader Lift Plan Template — FAQs</h2>
+          <div className="space-y-6">
+            {[
+              {
+                q: 'Do you need a lift plan for a lorry loader / HIAB?',
+                a: 'Yes. Under LOLER 1998 every lifting operation must be planned by a competent person, and that includes routine lorry loader and HIAB deliveries. The level of detail should be proportionate to the risk, but a plan is required whenever the crane lifts and moves a load — including offloading materials to the ground.',
+              },
+              {
+                q: 'Which standard applies to lorry loader lift plans?',
+                a: 'BS 7121-4:2010+A1:2013 (Safe use of cranes — Part 4: Lorry loaders) sits alongside the general BS 7121-1:2016, LOLER 1998, PUWER 1998 and the ALLMI Code of Practice for the Safe Use of Lorry Loaders. This template is structured against all of them.',
+              },
+              {
+                q: 'Is this lorry loader lift plan template really free?',
+                a: 'Yes — the template is free to download and use on your projects in Microsoft Word (.docx) format, with a PDF preview also available. It is provided as a starting point; you must adapt and complete it for your specific vehicle, load, site and lifting operation.',
+              },
+              {
+                q: 'Who can write or sign off a lorry loader lift plan?',
+                a: 'The plan must be prepared or reviewed by a competent person — in practice a CPCS or ALLMI Appointed Person. The lorry loader operator typically holds CPCS A36 (or the ALLMI equivalent). AP name, card type and registration number are required at review stage, and operative card numbers are verified on the day by the Principal Contractor.',
+              },
+              {
+                q: 'What is the difference between a Basic and a Complex lorry loader lift?',
+                a: 'A Basic lift is low-risk and routine; a Complex lift involves higher-risk factors such as tandem lifts, lifts over the public highway, proximity to overhead lines, or loads close to the loader\u2019s capacity. This universal template scales across Basic, Intermediate and Complex — you categorise the lift in Section 2 under BS 7121-1 Section 6 and complete the sections that apply.',
+              },
+            ].map((faq) => (
+              <div key={faq.q} className="bg-slate-950 border border-slate-800 p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-white mb-3">{faq.q}</h3>
+                <p className="text-slate-300">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA — Professional Service */}
       <section className="py-16 bg-gradient-to-r from-amber-500 to-amber-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -450,6 +500,59 @@ export default function LorryLoaderTemplatesPage() {
                 encodingFormat:
                   'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
                 url: 'https://www.rmtsafetysolutions.com/downloads/lorry-loader-lift-plan-template.docx',
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* FAQPage — mirrors the on-page FAQ block above as structured data. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Do you need a lift plan for a lorry loader / HIAB?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Under LOLER 1998 every lifting operation must be planned by a competent person, and that includes routine lorry loader and HIAB deliveries. The level of detail should be proportionate to the risk, but a plan is required whenever the crane lifts and moves a load — including offloading materials to the ground.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Which standard applies to lorry loader lift plans?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'BS 7121-4:2010+A1:2013 (Safe use of cranes — Part 4: Lorry loaders) sits alongside the general BS 7121-1:2016, LOLER 1998, PUWER 1998 and the ALLMI Code of Practice for the Safe Use of Lorry Loaders.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is this lorry loader lift plan template really free?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes — the template is free to download and use on your projects in Microsoft Word (.docx) format, with a PDF preview also available. It is provided as a starting point; you must adapt and complete it for your specific vehicle, load, site and lifting operation.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Who can write or sign off a lorry loader lift plan?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'The plan must be prepared or reviewed by a competent person — in practice a CPCS or ALLMI Appointed Person. The lorry loader operator typically holds CPCS A36 or the ALLMI equivalent. AP name, card type and registration number are required at review stage.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is the difference between a Basic and a Complex lorry loader lift?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'A Basic lift is low-risk and routine; a Complex lift involves higher-risk factors such as tandem lifts, lifts over the public highway, proximity to overhead lines, or loads close to the loader\u2019s capacity. This universal template scales across Basic, Intermediate and Complex.',
+                },
               },
             ],
           }),
