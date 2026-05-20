@@ -1436,7 +1436,7 @@ const blogPosts = {
       <p>The lift plan must specify the stabiliser configuration to be used and confirm that the load chart capacity is based on that specific configuration. Using the wrong stabiliser setting is a common cause of lorry loader incidents.</p>
 
       <h2>What Should a Lorry Loader Lift Plan Include?</h2>
-      <p>A LOLER-compliant lorry loader lift plan must be proportionate to the risk involved, but should always address the following elements.</p>
+      <p>A LOLER-compliant lorry loader lift plan must be proportionate to the risk involved, but should always address the following elements. If you want a head start, our <a href="/resources/lorry-loader-lift-plan-templates">free lorry loader lift plan template</a> sets out all 17 sections \u2014 aligned with BS 7121-4 and the ALLMI Code of Practice \u2014 with a pre-populated risk register you can adapt to your own operation.</p>
 
       <h3>Vehicle Positioning</h3>
       <p>Where the lorry parks on site is one of the most critical elements of a lorry loader lift plan, and is often the area given least attention. The plan must consider:</p>
@@ -1540,7 +1540,7 @@ const blogPosts = {
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need a Lorry Loader Lift Plan?</h3>
-        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant <a href="/services/lift-plans">lorry loader lift plans</a> for all types of truck-mounted crane operations. Fast turnaround from a CPCS Appointed Person with 35 years of experience.</p>
+        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant <a href="/services/lift-plans">lorry loader lift plans</a> for all types of truck-mounted crane operations. Fast turnaround from a CPCS Appointed Person with 35 years of experience. Prefer to draft your own? Start from our <a href="/resources/lorry-loader-lift-plan-templates">free lorry loader lift plan template</a>.</p>
         <a href="/contact" class="btn-primary inline-block">Get a Quote</a>
       </div>
     `,
