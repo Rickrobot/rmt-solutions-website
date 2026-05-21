@@ -53,6 +53,10 @@ const ALL_SERVICES = {
     title: 'Mobile Crane Lift Plans',
     description: 'Lift plans for hire and contract lifts. Tandem and complex-pick experience across the UK.',
   },
+  'overhead-gantry-crane-lift-plans': {
+    title: 'Overhead & Gantry Crane Lift Plans',
+    description: 'Lift plans for overhead travelling (EOT), gantry, bridge and jib cranes in factories and warehouses. BS 7121-7 compliant.',
+  },
   'aerial-site-surveys': {
     title: 'Aerial Site Surveys',
     description: 'Drone-led pre-lift site surveys to verify ground conditions, overhead obstructions, and access routes.',
@@ -72,6 +76,7 @@ const RELATED_MAP = {
   'telehandler-lift-plans':    ['excavator-lift-plans', 'lorry-loader-lift-plans', 'lift-plans'],
   'lorry-loader-lift-plans':   ['telehandler-lift-plans', 'mobile-crane-lift-plans', 'lift-plans'],
   'mobile-crane-lift-plans':   ['tower-crane', 'lift-plans', 'steel-erection'],
+  'overhead-gantry-crane-lift-plans': ['lift-plans', 'lift-plan-checking', 'steel-erection'],
   'aerial-site-surveys':       ['lift-plans', 'mobile-crane-lift-plans', 'tower-crane'],
 }
 
