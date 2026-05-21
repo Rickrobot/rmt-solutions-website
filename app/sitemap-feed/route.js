@@ -23,7 +23,7 @@
 //   - Every route listed here MUST exist in the app.
 
 const BASE_URL = 'https://www.rmtsafetysolutions.com';
-const SITE_LAST_UPDATED = '2026-05-20';
+const SITE_LAST_UPDATED = '2026-05-21';
 
 // Canonical images surfaced via the image sitemap extension. These give
 // the listed pages a hard image association in Google Search and make
@@ -167,6 +167,17 @@ function buildSitemapXml() {
       })
     );
   }
+
+  // Case study detail pages — each gets its own canonical image
+  entries.push(
+    buildUrlEntry({
+      loc: `${BASE_URL}/case-studies/chorlton-baths-balcony-lift`,
+      lastmod: SITE_LAST_UPDATED,
+      changefreq: 'yearly',
+      priority: '0.7',
+      images: [`${BASE_URL}/images/chorlton-baths-balcony-lift.jpg`],
+    })
+  );
 
   // Locations hub + city pages
   entries.push(
