@@ -1,8 +1,18 @@
 'use client'
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const caseStudies = [
+  {
+    title: 'Chorlton Baths Balcony Lift, Manchester',
+    category: 'Mobile Crane',
+    duration: 'Site visit',
+    description: 'Independent site verification of a mobile crane lifting operation installing steel balcony units on a Caddick development. Confirmed the set-up matched the approved lift plan and the public was segregated from the live highway.',
+    highlights: ['Steel balconies', 'Constrained urban site', 'Public segregation', 'BS 7121 / LOLER 1998'],
+    image: '/images/chorlton-baths-balcony-lift.jpg',
+    href: '/case-studies/chorlton-baths-balcony-lift',
+  },
   {
     title: 'Manchester Residential Development',
     category: 'Tower Crane',
@@ -97,49 +107,67 @@ export default function CaseStudiesGrid() {
         <p className="text-center text-gray-400">No case studies in this category yet.</p>
       ) : (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredStudies.map((study) => (
-            <article
-              key={study.title}
-              className="bg-gradient-to-b from-slate-800/50 to-slate-900/50 rounded-3xl overflow-hidden border border-slate-700/50 card-hover"
-            >
-              <div className="h-48 bg-gradient-to-br from-slate-700 to-slate-800 relative">
-                {study.image ? (
-                  <Image
-                    src={study.image}
-                    alt={study.title}
-                    fill
-                    className="object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center">
-                    <span className="text-6xl font-display font-bold text-slate-600/50">
-                      {study.category.charAt(0)}
+          {filteredStudies.map((study) => {
+            const cardInner = (
+              <>
+                <div className="h-48 bg-gradient-to-br from-slate-700 to-slate-800 relative">
+                  {study.image ? (
+                    <Image
+                      src={study.image}
+                      alt={study.title}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <span className="text-6xl font-display font-bold text-slate-600/50">
+                        {study.category.charAt(0)}
+                      </span>
+                    </div>
+                  )}
+                </div>
+                <div className="p-8">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="bg-amber-500/20 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full">
+                      {study.category}
                     </span>
+                    <span className="text-gray-500 text-sm">{study.duration}</span>
                   </div>
-                )}
-              </div>
-              <div className="p-8">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="bg-amber-500/20 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full">
-                    {study.category}
-                  </span>
-                  <span className="text-gray-500 text-sm">{study.duration}</span>
-                </div>
-                <h3 className="font-display text-xl font-bold text-white mb-3">{study.title}</h3>
-                <p className="text-gray-400 text-sm mb-6">{study.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {study.highlights.map((highlight) => (
-                    <span
-                      key={highlight}
-                      className="bg-slate-700/50 text-gray-300 text-xs px-3 py-1 rounded-full"
-                    >
-                      {highlight}
+                  <h3 className="font-display text-xl font-bold text-white mb-3">{study.title}</h3>
+                  <p className="text-gray-400 text-sm mb-6">{study.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {study.highlights.map((highlight) => (
+                      <span
+                        key={highlight}
+                        className="bg-slate-700/50 text-gray-300 text-xs px-3 py-1 rounded-full"
+                      >
+                        {highlight}
+                      </span>
+                    ))}
+                  </div>
+                  {study.href && (
+                    <span className="mt-6 inline-flex items-center text-amber-400 font-semibold text-sm">
+                      Read the case study
+                      <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
                     </span>
-                  ))}
+                  )}
                 </div>
-              </div>
-            </article>
-          ))}
+              </>
+            )
+
+            const cardClass =
+              'bg-gradient-to-b from-slate-800/50 to-slate-900/50 rounded-3xl overflow-hidden border border-slate-700/50 card-hover'
+
+            return study.href ? (
+              <Link key={study.title} href={study.href} className={`group block ${cardClass}`}>
+                {cardInner}
+              </Link>
+            ) : (
+              <article key={study.title} className={cardClass}>
+                {cardInner}
+              </article>
+            )
+          })}
         </div>
       )}
     </>
