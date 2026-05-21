@@ -228,7 +228,7 @@ const blogPosts = {
       <p>The term "lift plan" is used across the UK construction industry, though you may also hear it referred to as a lifting plan, a crane lift plan, or a lifting operation plan. Regardless of the terminology, the legal requirement is the same: LOLER Regulation 8(1) states that every lifting operation shall be properly planned by a competent person, appropriately supervised, and carried out in a safe manner.</p>
 
       <h2>When Do You Need a Lift Plan?</h2>
-      <p>The short answer is: whenever a lifting operation takes place. LOLER applies to all lifting operations carried out by all types of lifting equipment, not just cranes. This means a lift plan is required for operations involving:</p>
+      <p>The short answer is: whenever a lifting operation takes place. LOLER applies to all lifting operations carried out by all types of lifting equipment, not just cranes. We cover the triggers in depth in our guide to <a href="/blog/when-do-you-need-lift-plan">when you need a lift plan</a>, but in short, a lift plan is required for operations involving:</p>
 
       <ul>
         <li><strong>Mobile cranes</strong> \u2014 all lifts, from routine offloading to complex tandem lifts</li>
@@ -353,7 +353,7 @@ const blogPosts = {
       <h2>How RMT Solutions Can Help</h2>
       <p>Whether you need a lift plan written from scratch, an existing plan reviewed and checked, or ongoing lift planning support for a major project, RMT Solutions provides professional, LOLER-compliant lift planning services from a CPCS Appointed Person with 35 years of construction industry experience.</p>
 
-      <p>We prepare lift plans for all types of lifting equipment \u2014 <a href="/blog/excavator-lift-plans-complete-guide">excavators</a>, <a href="/blog/telehandler-lift-plans-complete-guide">telehandlers</a>, <a href="/blog/lorry-loader-lift-plans-guide">lorry loaders</a>, tower cranes, and mobile cranes \u2014 and provide <a href="/services/lift-plan-checking">lift plan checking services</a> for tier 1 contractors who need submitted plans reviewed by a qualified Appointed Person.</p>
+      <p>Our <a href="/services/lift-plans">lift plan writing service</a> covers all types of lifting equipment \u2014 <a href="/blog/excavator-lift-plans-complete-guide">excavators</a>, <a href="/blog/telehandler-lift-plans-complete-guide">telehandlers</a>, <a href="/blog/lorry-loader-lift-plans-guide">lorry loaders</a>, tower cranes, and mobile cranes \u2014 and we also provide <a href="/services/lift-plan-checking">lift plan checking services</a> for tier 1 contractors who need submitted plans reviewed by a qualified Appointed Person. You can also browse our free <a href="/resources">lift plan templates and LOLER guidance</a> to see exactly what a compliant plan should contain.</p>
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need a Lift Plan?</h3>
@@ -656,7 +656,7 @@ const blogPosts = {
     image: '/images/precast-concrete-lift.webp',
     imageAlt: 'Precast concrete delivery lift — illustrating a typical operation that requires a LOLER lift plan',
     content: `
-      <p class="lead">One of the most common questions I get asked is: "Do I really need a lift plan for this?" The short answer is: yes, LOLER requires ALL lifting operations to be properly planned. But the level of planning detail varies depending on the complexity of the operation.</p>
+      <p class="lead">One of the most common questions I get asked is: "Do I really need a lift plan for this?" The short answer is: yes, LOLER requires ALL lifting operations to be properly planned. But the level of planning detail varies depending on the complexity of the operation. If you are new to the subject, start with our guide to <a href="/blog/what-is-a-lift-plan">what a lift plan is</a> and then come back here for when one is required.</p>
 
       <h2>The Legal Requirement</h2>
       <p>LOLER Regulation 8 is crystal clear. It states that every lifting operation involving lifting equipment must be:</p>
@@ -854,11 +854,13 @@ const blogPosts = {
 
       <ul>
         <li><strong><a href="/services/tower-crane">Tower Crane Contracts:</a></strong> Ongoing Appointed Person support throughout your project</li>
-        <li><strong><a href="/services/lift-plans">Mobile Crane Lift Plans:</a></strong> Including site visits and ground assessments</li>
-        <li><strong><a href="/services/lift-plans">Excavator Lift Plans:</a></strong> Fast turnaround for pipeline and utilities work</li>
+        <li><strong><a href="/services/mobile-crane-lift-plans">Mobile Crane Lift Plans:</a></strong> Including site visits and ground assessments</li>
+        <li><strong><a href="/services/excavator-lift-plans">Excavator Lift Plans:</a></strong> Fast turnaround for pipeline and utilities work</li>
         <li><strong><a href="/services/steel-erection">Steel Erection Planning:</a></strong> Comprehensive planning for structural steel projects</li>
-        <li><strong><a href="/services/lift-plan-checking">Lift Plan Review:</a></strong> Checking subcontractor submissions for compliance</li>
+        <li><strong><a href="/services/lift-plan-review">Lift Plan Review:</a></strong> Checking subcontractor submissions for compliance</li>
       </ul>
+
+      <p>If you would rather start from a template, our <a href="/resources">free lift plan templates and LOLER guidance</a> show what a compliant plan looks like for each type of equipment. For the broader picture, see our complete guide to <a href="/blog/what-is-a-lift-plan">what a lift plan is</a>.</p>
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Not Sure if You Need a Lift Plan?</h3>
