@@ -18,6 +18,7 @@ export default function Header() {
     { name: 'Telehandler Lift Plans', href: '/services/telehandler-lift-plans' },
     { name: 'Lorry Loader Lift Plans', href: '/services/lorry-loader-lift-plans' },
     { name: 'Mobile Crane Lift Plans', href: '/services/mobile-crane-lift-plans' },
+    { name: 'Overhead & Gantry Crane Lift Plans', href: '/services/overhead-gantry-crane-lift-plans' },
     { name: 'Tower Crane Contracts', href: '/services/tower-crane' },
     { name: 'Steel Erection Planning', href: '/services/steel-erection' },
     { name: 'Lifting Operations Audit', href: '/services/lifting-operations-audit' },
