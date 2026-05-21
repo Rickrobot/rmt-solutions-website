@@ -45,6 +45,12 @@ const LOCATIONS = {
       'Lift plan reviews for a major industrial warehouse project off the M60',
       'Steel erection planning and review for a commercial office in MediaCityUK',
     ],
+    caseStudy: {
+      href: '/case-studies/chorlton-baths-balcony-lift',
+      title: 'Chorlton Baths balcony lift, Manchester',
+      blurb:
+        'Independent site verification of a mobile crane lifting steel balcony units into place on a constrained Manchester frontage, with a live highway alongside.',
+    },
   },
 
   salford: {
@@ -406,6 +412,22 @@ export default function LocationPage({ params }) {
                 </li>
               ))}
             </ul>
+
+            {loc.caseStudy && (
+              <Link
+                href={loc.caseStudy.href}
+                className="not-prose group block bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-2xl p-6 mb-10 transition"
+              >
+                <span className="text-amber-400 text-xs font-semibold tracking-widest uppercase mb-2 block">
+                  {loc.city} case study
+                </span>
+                <span className="text-white group-hover:text-amber-400 font-display text-xl font-bold transition flex items-center justify-between gap-3">
+                  {loc.caseStudy.title}
+                  <ArrowRight className="w-5 h-5 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition flex-shrink-0" />
+                </span>
+                <span className="text-gray-400 text-base mt-2 block">{loc.caseStudy.blurb}</span>
+              </Link>
+            )}
           </div>
         </div>
       </section>
