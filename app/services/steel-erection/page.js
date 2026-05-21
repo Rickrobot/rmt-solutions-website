@@ -188,8 +188,12 @@ export default function SteelErectionPage() {
                 Steel Structures We Plan
               </h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                We provide lift planning for steel erection projects of all sizes, from small portal 
-                frames to large multi-storey structures.
+                We provide lift planning for steel erection projects of all sizes, from small portal
+                frames to large multi-storey structures — see our{' '}
+                <Link href="/case-studies/chorlton-baths-balcony-lift" className="text-amber-400 hover:text-amber-300 underline">
+                  balcony lift verification at Chorlton Baths, Manchester
+                </Link>{' '}
+                for an example of a recent steel installation we attended on site.
               </p>
               <ul className="space-y-3">
                 {projectTypes.map((type) => (
