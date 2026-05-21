@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import CaseStudiesGrid from '@/components/CaseStudiesGrid'
 
@@ -23,6 +24,7 @@ export const metadata = {
 const SITE = 'https://www.rmtsafetysolutions.com'
 
 const CASE_STUDIES = [
+  { name: 'Chorlton Baths Balcony Lift, Manchester', category: 'Mobile Crane' },
   { name: 'Manchester Residential Development', category: 'Tower Crane' },
   { name: 'Industrial Warehouse - Midlands', category: 'Steel Erection' },
   { name: 'Precast Concrete Installation', category: 'Mobile Crane' },
@@ -108,6 +110,50 @@ export default function CaseStudiesPage() {
               Examples of lift planning projects we've delivered for contractors across the UK.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Featured case study — the one detailed write-up we link out to */}
+      <section className="py-24 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-6 block">
+            Featured Project
+          </span>
+          <Link
+            href="/case-studies/chorlton-baths-balcony-lift"
+            className="group block rounded-3xl overflow-hidden border border-slate-700/50 bg-gradient-to-b from-slate-800/50 to-slate-900/50 card-hover"
+          >
+            <div className="grid md:grid-cols-2">
+              <div className="relative h-64 md:h-auto md:min-h-[320px] bg-gradient-to-br from-slate-700 to-slate-800">
+                <Image
+                  src="/images/chorlton-baths-balcony-lift.jpg"
+                  alt="Mobile crane installing steel balcony units at Chorlton Baths, Manchester"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-8 lg:p-12 flex flex-col justify-center">
+                <div className="flex flex-wrap items-center gap-3 mb-4">
+                  <span className="bg-amber-500/20 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full">
+                    Mobile Crane
+                  </span>
+                  <span className="text-gray-500 text-sm">Chorlton Baths, Manchester</span>
+                </div>
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-4 group-hover:text-amber-400 transition">
+                  Balcony Lift Verification
+                </h2>
+                <p className="text-gray-400 mb-6 leading-relaxed">
+                  An independent site visit to confirm the arrangements and safety of a mobile crane
+                  lifting operation installing steel balcony units on a Caddick development — on a
+                  constrained urban frontage with a live highway alongside.
+                </p>
+                <span className="inline-flex items-center text-amber-400 font-semibold">
+                  Read the case study
+                  <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                </span>
+              </div>
+            </div>
+          </Link>
         </div>
       </section>
 
