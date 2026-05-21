@@ -150,11 +150,20 @@ export default function LiftPlanReviewPage() {
             before the lifting operation takes place. It is not about catching people out — it is about 
             catching errors before they become incidents.
           </p>
-          <p className="text-lg text-slate-600">
-            Under LOLER Regulation 8, every lifting operation must be properly planned by a competent 
-            person. For principal contractors, an independent review demonstrates due diligence. For 
-            subcontractors, having your plans reviewed before submission reduces the risk of rejection, 
+          <p className="text-lg text-slate-600 mb-6">
+            Under LOLER Regulation 8, every lifting operation must be properly planned by a competent
+            person. For principal contractors, an independent review demonstrates due diligence. For
+            subcontractors, having your plans reviewed before submission reduces the risk of rejection,
             delays, and the cost of standing time while issues are resolved.
+          </p>
+          <p className="text-lg text-slate-600">
+            Review is not always a desk exercise either — sometimes the right answer is to confirm the
+            set-up on the ground. Our{' '}
+            <Link href="/case-studies/chorlton-baths-balcony-lift" className="text-blue-600 hover:text-blue-700 underline">
+              Chorlton Baths balcony lift case study
+            </Link>{' '}
+            shows an independent site verification of a mobile crane operation — confirming the
+            arrangement matched the approved plan before the lift went ahead.
           </p>
         </div>
       </section>
