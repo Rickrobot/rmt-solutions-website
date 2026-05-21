@@ -1,0 +1,48 @@
+OVERHEAD & GANTRY CRANE LIFT PLANS — CONTENT CLUSTER
+Deployment package for www.rmtsafetysolutions.com
+Built: 21 May 2026
+
+This zip mirrors your repo structure. Drag the folders into your repo
+root on GitHub (or commit them); paths are already correct. Next.js
+14.2 App Router — new routes are new folders, so there are no file
+collisions on upload.
+
+------------------------------------------------------------------
+NEW FILES (4 — safe to upload, nothing overwritten)
+------------------------------------------------------------------
+app/services/overhead-gantry-crane-lift-plans/page.js
+    The new service page. /services/overhead-gantry-crane-lift-plans
+    Full metadata + Service, FAQPage and BreadcrumbList JSON-LD.
+
+app/resources/overhead-gantry-crane-lift-plan-templates/page.js
+    Resources landing page with the downloadable template.
+    /resources/overhead-gantry-crane-lift-plan-templates
+
+public/downloads/overhead-gantry-crane-lift-plan-template.docx
+    The downloadable Word template (BS 7121-7 / BS 7121-1 / LOLER 1998).
+
+public/images/services/overhead-gantry-crane-factory-uk.webp
+public/images/services/overhead-crane-steel-fabrication-lift.webp
+    Your own workshop photos of the Street overhead/gantry crane line
+    (from _DSC1016.jpg and _DSC1017.jpg), optimised to 1600px webp.
+    factory-uk = wide view of the gantry crane over the processing line;
+    steel-fabrication-lift = the Voortman drill/saw line view.
+
+------------------------------------------------------------------
+EDITED FILES (5 — these REPLACE the existing versions)
+------------------------------------------------------------------
+app/blog/[slug]/page.js   Added blog guide "overhead-crane-lift-plan-guide"
+app/blog/page.js          Added the new post to the blog index (top, newest)
+app/services/page.js      Added the service to the services hub
+app/sitemap-feed/route.js Added service slug + resource route + blog post
+components/RelatedServices.js  Registered the service + related-link map
+
+------------------------------------------------------------------
+NEW URLS GOING LIVE
+------------------------------------------------------------------
+/services/overhead-gantry-crane-lift-plans
+/resources/overhead-gantry-crane-lift-plan-templates
+/blog/overhead-crane-lift-plan-guide
+/downloads/overhead-gantry-crane-lift-plan-template.docx
+
+All 7 code files were JSX-parse validated before packaging.
