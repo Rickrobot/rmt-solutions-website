@@ -228,7 +228,7 @@ const blogPosts = {
       <p>The term "lift plan" is used across the UK construction industry, though you may also hear it referred to as a lifting plan, a crane lift plan, or a lifting operation plan. Regardless of the terminology, the legal requirement is the same: LOLER Regulation 8(1) states that every lifting operation shall be properly planned by a competent person, appropriately supervised, and carried out in a safe manner.</p>
 
       <h2>When Do You Need a Lift Plan?</h2>
-      <p>The short answer is: whenever a lifting operation takes place. LOLER applies to all lifting operations carried out by all types of lifting equipment, not just cranes. We cover the triggers in depth in our guide to <a href="/blog/when-do-you-need-lift-plan">when you need a lift plan</a>, but in short, a lift plan is required for operations involving:</p>
+      <p>The short answer is: whenever a lifting operation takes place. LOLER applies to all lifting operations carried out by all types of lifting equipment, not just cranes. This means a lift plan is required for operations involving:</p>
 
       <ul>
         <li><strong>Mobile cranes</strong> \u2014 all lifts, from routine offloading to complex tandem lifts</li>
@@ -353,7 +353,7 @@ const blogPosts = {
       <h2>How RMT Solutions Can Help</h2>
       <p>Whether you need a lift plan written from scratch, an existing plan reviewed and checked, or ongoing lift planning support for a major project, RMT Solutions provides professional, LOLER-compliant lift planning services from a CPCS Appointed Person with 35 years of construction industry experience.</p>
 
-      <p>Our <a href="/services/lift-plans">lift plan writing service</a> covers all types of lifting equipment \u2014 <a href="/blog/excavator-lift-plans-complete-guide">excavators</a>, <a href="/blog/telehandler-lift-plans-complete-guide">telehandlers</a>, <a href="/blog/lorry-loader-lift-plans-guide">lorry loaders</a>, tower cranes, and mobile cranes \u2014 and we also provide <a href="/services/lift-plan-checking">lift plan checking services</a> for tier 1 contractors who need submitted plans reviewed by a qualified Appointed Person. You can also browse our free <a href="/resources">lift plan templates and LOLER guidance</a> to see exactly what a compliant plan should contain.</p>
+      <p>We prepare lift plans for all types of lifting equipment \u2014 <a href="/blog/excavator-lift-plans-complete-guide">excavators</a>, <a href="/blog/telehandler-lift-plans-complete-guide">telehandlers</a>, <a href="/blog/lorry-loader-lift-plans-guide">lorry loaders</a>, tower cranes, and mobile cranes \u2014 and provide <a href="/services/lift-plan-checking">lift plan checking services</a> for tier 1 contractors who need submitted plans reviewed by a qualified Appointed Person.</p>
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need a Lift Plan?</h3>
@@ -656,7 +656,7 @@ const blogPosts = {
     image: '/images/precast-concrete-lift.webp',
     imageAlt: 'Precast concrete delivery lift — illustrating a typical operation that requires a LOLER lift plan',
     content: `
-      <p class="lead">One of the most common questions I get asked is: "Do I really need a lift plan for this?" The short answer is: yes, LOLER requires ALL lifting operations to be properly planned. But the level of planning detail varies depending on the complexity of the operation. If you are new to the subject, start with our guide to <a href="/blog/what-is-a-lift-plan">what a lift plan is</a> and then come back here for when one is required.</p>
+      <p class="lead">One of the most common questions I get asked is: "Do I really need a lift plan for this?" The short answer is: yes, LOLER requires ALL lifting operations to be properly planned. But the level of planning detail varies depending on the complexity of the operation.</p>
 
       <h2>The Legal Requirement</h2>
       <p>LOLER Regulation 8 is crystal clear. It states that every lifting operation involving lifting equipment must be:</p>
@@ -854,13 +854,11 @@ const blogPosts = {
 
       <ul>
         <li><strong><a href="/services/tower-crane">Tower Crane Contracts:</a></strong> Ongoing Appointed Person support throughout your project</li>
-        <li><strong><a href="/services/mobile-crane-lift-plans">Mobile Crane Lift Plans:</a></strong> Including site visits and ground assessments</li>
-        <li><strong><a href="/services/excavator-lift-plans">Excavator Lift Plans:</a></strong> Fast turnaround for pipeline and utilities work</li>
+        <li><strong><a href="/services/lift-plans">Mobile Crane Lift Plans:</a></strong> Including site visits and ground assessments</li>
+        <li><strong><a href="/services/lift-plans">Excavator Lift Plans:</a></strong> Fast turnaround for pipeline and utilities work</li>
         <li><strong><a href="/services/steel-erection">Steel Erection Planning:</a></strong> Comprehensive planning for structural steel projects</li>
-        <li><strong><a href="/services/lift-plan-review">Lift Plan Review:</a></strong> Checking subcontractor submissions for compliance</li>
+        <li><strong><a href="/services/lift-plan-checking">Lift Plan Review:</a></strong> Checking subcontractor submissions for compliance</li>
       </ul>
-
-      <p>If you would rather start from a template, our <a href="/resources">free lift plan templates and LOLER guidance</a> show what a compliant plan looks like for each type of equipment. For the broader picture, see our complete guide to <a href="/blog/what-is-a-lift-plan">what a lift plan is</a>.</p>
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Not Sure if You Need a Lift Plan?</h3>
@@ -1877,6 +1875,74 @@ const blogPosts = {
       </div>
 
       <p><strong>About the Author:</strong> Ricky Marsh is a CPCS Appointed Person (A61) with 35 years of construction industry experience. He holds NEBOSH National Diploma, CertIOSH, MIIRSM and TIFSM qualifications, and provides lift planning, <a href="/services/lift-plan-checking">lift plan checking</a>, and <a href="/services/lifting-operations-audit">lifting operations audit</a> services to contractors across the UK through <a href="/">RMT Solutions</a>.</p>
+    `,
+  },
+  'overhead-crane-lift-plan-guide': {
+    title: 'Do You Need a Lift Plan for an Overhead Crane? UK Guide (BS 7121-7)',
+    description: 'Do overhead, gantry and bridge cranes need a lift plan? A UK guide to LOLER and BS 7121-7 for factory and warehouse crane lifting — when a generic plan is enough and when you need a specific written plan.',
+    keywords: 'overhead crane lift plan, do you need a lift plan for an overhead crane, gantry crane lift plan, EOT crane lift plan, bridge crane lift plan, factory crane lift plan, BS 7121-7, LOLER overhead crane, tandem lift overhead crane, warehouse crane lifting, jib crane lift plan',
+    category: 'Lift Planning',
+    readTime: '13 min read',
+    date: 'May 21, 2026',
+    dateModified: 'May 21, 2026',
+    image: '/images/services/overhead-gantry-crane-factory-uk.webp',
+    imageAlt: 'Overhead travelling bridge crane lifting a steel load inside a UK factory — overhead crane lifting operation under LOLER and BS 7121-7',
+    content: `
+      <p class="lead">Mobile cranes get all the attention when people talk about lift plans, but the cranes that do most of the lifting in UK industry never leave the building. Overhead travelling cranes, gantries and bridge cranes lift millions of loads every day in factories, warehouses, fabrication shops, steel stockholders and engineering workshops — and because they are fixed plant that staff use constantly, the question of whether each lift needs a written lift plan is one of the most misunderstood areas in lifting safety. This guide answers it directly: when an overhead crane lift needs a specific written plan, when a generic plan is enough, and what the law and the standards actually require.</p>
+
+      <h2>Does an overhead crane need a lift plan?</h2>
+      <p>Yes — every lifting operation carried out with an overhead crane must be planned by a competent person. This is a legal requirement under the <a href="/blog/what-is-loler-complete-guide">Lifting Operations and Lifting Equipment Regulations 1998 (LOLER)</a>, Regulation 8, which applies to all lifting equipment regardless of whether it is a mobile crane on a construction site or a fixed overhead travelling crane bolted to a factory roof. There is no exemption for fixed plant.</p>
+
+      <p>What people really mean when they ask the question, though, is usually: "Do I need a separate, written lift plan for every single lift?" And the honest answer is no — not in the way you would for a one-off mobile crane lift. LOLER and <a href="/blog/what-is-bs-7121-complete-guide">BS 7121</a> recognise that overhead cranes are used for large volumes of repetitive, routine lifting, and the planning required must be proportionate to the risk. The key is knowing where the line falls between a routine lift that a generic plan covers and a non-routine lift that needs its own specific written plan.</p>
+
+      <h2>What the law and standards say</h2>
+      <p>The legal duty comes from LOLER 1998. Regulation 8(1) requires that every lifting operation involving lifting equipment is "properly planned by a competent person, appropriately supervised and carried out in a safe manner." That duty applies to overhead cranes exactly as it does to any other crane.</p>
+
+      <p>The recognised means of meeting that duty for overhead cranes is <strong>BS 7121-7</strong>, the part of the BS 7121 series dealing with the safe use of overhead travelling cranes. It sits underneath the general code of practice, <a href="/blog/what-is-bs-7121-complete-guide">BS 7121-1</a>, and addresses the planning, operation, examination and maintenance issues specific to bridge, gantry and overhead cranes in industrial settings. Like the rest of BS 7121, it is not law in itself — but it is the benchmark the HSE and the courts use to judge whether a lifting operation was properly planned, so in practice it is the standard you work to.</p>
+
+      <h2>Routine lifts vs non-routine lifts</h2>
+      <p>BS 7121-7 draws a sensible distinction between two kinds of overhead-crane lifting, and getting this right is the whole answer to "do I need a lift plan?"</p>
+
+      <h3>Routine, repetitive lifts</h3>
+      <p>Where the same kind of load is lifted in the same way, along the same route, in an unchanging environment — think a fabrication shop moving similar steel sections from a cutting bay to a welding bay all day — the lifting can be covered by a <em>generic lift plan</em> backed by a documented safe system of work. The competent person plans the activity once, the controls are built into how the bay operates, operators and slingers are trained and competent, and individual lifts do not each need a fresh written plan. This is entirely legitimate and is how the overwhelming majority of factory crane lifting is managed.</p>
+
+      <h3>Non-routine and higher-risk lifts</h3>
+      <p>As soon as a lift falls outside the routine pattern, it needs its own specific written lift plan prepared by a competent person. The common triggers are:</p>
+
+      <p>Tandem lifts using two or more cranes; lifting over occupied production areas or walkways; heavy or awkward one-off loads approaching the crane's safe working load; machinery, die or plant installation and removal; crane maintenance and component-change lifts; lifts using spreader or lifting beams; loads with an unusual or uncertain centre of gravity; and any lift specified by your duty holder or principal contractor. For a fuller treatment of the triggers across all equipment types, see <a href="/blog/when-do-you-need-lift-plan">when do you need a lift plan</a>.</p>
+
+      <h2>The hazards that make overhead crane planning different</h2>
+      <p>Overhead crane lifting carries a different hazard profile from a mobile crane, and the plan has to reflect it.</p>
+
+      <p><strong>Loads carried over people.</strong> Factories and warehouses are occupied. The single biggest cause of serious overhead-crane injury is a suspended load travelling over walkways, workstations or machinery. Routing the load and segregating people is central to any overhead crane plan.</p>
+
+      <p><strong>Pendant and radio control.</strong> Many overhead cranes are operated from the floor by an operator walking with the load on a pendant or radio remote. Walking backwards, poor sightlines and complacency create crush and trip hazards that the plan and safe system of work must control.</p>
+
+      <p><strong>Load swing, side-pulling and snatch loading.</strong> Dragging a load sideways, sudden starts and stops, or trying to free a snagged load all impose forces the crane was never rated for. The plan confirms the crane is used only for vertical lifting within its SWL.</p>
+
+      <p><strong>Two-blocking and over-hoist.</strong> Running the hook block into the crab can overload the rope and hoist. Limit switches must be working and never defeated.</p>
+
+      <p><strong>Tandem (twin-crane) lifts.</strong> Lifting one load on two cranes shares and shifts the load unpredictably, requires synchronised travel and hoist, and de-rates each crane. These are always high-risk and always need a specific written plan with an appointed person supervising.</p>
+
+      <h2>Overhead, gantry, bridge or jib — does the type matter?</h2>
+      <p>All of them are lifting equipment under LOLER and all are covered by BS 7121-7, but the configuration changes the planning checks. An <strong>overhead travelling (EOT) crane</strong> runs on building-mounted runway beams, so its wheel loads and end-stop forces feed into the structure. A <strong>goliath or gantry crane</strong> carries its own legs on floor or yard rails, so rail and wheel loading and pedestrian segregation dominate. A <strong>jib or pillar crane</strong> introduces slewing radius and SWL-at-reach considerations. A competent person matches the plan to the machine — which is exactly what our <a href="/services/overhead-gantry-crane-lift-plans">overhead and gantry crane lift plan service</a> does.</p>
+
+      <h2>What a good overhead crane lift plan contains</h2>
+      <p>A specific written plan for an overhead crane lift should cover the load (weight, dimensions and centre of gravity), confirmation that it stays within the crane SWL — de-rated where two cranes share it — the lifting accessories and below-the-hook devices with their WLLs, the travel route and exclusion zones with particular attention to loads over people, the roles of appointed person, supervisor, operator and slinger, and a method statement and risk assessment everyone has been briefed on. For the general anatomy of a plan, see <a href="/blog/what-is-a-lift-plan">what is a lift plan</a>.</p>
+
+      <h2>Who is competent to plan an overhead crane lift?</h2>
+      <p>LOLER requires planning by a "competent person," and for non-routine and complex overhead-crane lifts that means someone with the training and experience to act as an appointed person — typically a <a href="/blog/cpcs-appointed-person-guide">CPCS Appointed Person (A61)</a>. For routine production lifting the competent person who establishes the generic plan and safe system of work needs the appropriate level of competence for the risk, but does not need to re-plan every lift.</p>
+
+      <h2>How RMT Solutions can help</h2>
+      <p>RMT Solutions prepares <a href="/services/overhead-gantry-crane-lift-plans">overhead and gantry crane lift plans</a> for manufacturers, fabricators and facilities teams across the UK — from single workshop jib cranes to twin-crane tandem lifts in steel mills. Plans are prepared by a CPCS Appointed Person to BS 7121-7 and LOLER 1998, quoted within 4 working hours and delivered in 24–48 hours. If you already have a plan, our <a href="/services/lift-plan-checking">lift plan checking service</a> gives you an independent appointed-person review before anyone goes near a load.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
+        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need an Overhead Crane Lift Plan?</h3>
+        <p class="text-gray-300 mb-6">RMT Solutions prepares LOLER and BS 7121-7 compliant lift plans for overhead, gantry, bridge and jib cranes across the UK. Prepared by a CPCS Appointed Person with 35 years of experience.</p>
+        <a href="/contact" class="btn-primary inline-block">Get a Quote</a>
+      </div>
+
+      <p><strong>About the Author:</strong> Ricky Marsh is a CPCS Appointed Person (A61) with 35 years of construction industry experience. He holds NEBOSH National Diploma, CertIOSH, MIIRSM and TIFSM qualifications, and provides lift planning, <a href="/services/lift-plan-checking">lift plan checking</a>, and <a href="/services/overhead-gantry-crane-lift-plans">overhead crane lift plan</a> services to contractors and manufacturers across the UK through <a href="/">RMT Solutions</a>.</p>
     `,
   },
 };

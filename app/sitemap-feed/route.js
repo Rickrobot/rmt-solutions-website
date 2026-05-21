@@ -47,6 +47,7 @@ const SERVICE_SLUGS = [
   'telehandler-lift-plans',
   'lorry-loader-lift-plans',
   'mobile-crane-lift-plans',
+  'overhead-gantry-crane-lift-plans',
   'lift-plan-checking',
   'lift-plan-review',
   'lifting-operations-audit',
@@ -61,6 +62,7 @@ const RESOURCE_ROUTES = [
   { path: '/resources/excavator-lift-plan-templates',      priority: '0.7' },
   { path: '/resources/telehandler-lift-plan-templates',    priority: '0.7' },
   { path: '/resources/lorry-loader-lift-plan-templates',   priority: '0.7' },
+  { path: '/resources/overhead-gantry-crane-lift-plan-templates', priority: '0.7' },
 ];
 
 // Order: home patch (Warrington) first, then regional flagships, then
@@ -95,6 +97,7 @@ const BLOG_POSTS = [
   { slug: 'lorry-loader-lift-plans-guide',                                    date: '2026-02-06' },
   { slug: 'lift-plan-checking-what-gets-checked-and-why-plans-get-rejected',  date: '2026-02-22' },
   { slug: 'lifting-operations-audit-what-to-expect',                          date: '2026-02-23' },
+  { slug: 'overhead-crane-lift-plan-guide',                                   date: '2026-05-21' },
 ];
 
 // XML escaping for URLs/captions — sitemap content is typically ASCII-safe

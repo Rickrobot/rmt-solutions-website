@@ -27,6 +27,17 @@ export const metadata = {
 // the original publication date.
 const blogPosts = [
   {
+    slug: 'overhead-crane-lift-plan-guide',
+    title: 'Do You Need a Lift Plan for an Overhead Crane? UK Guide (BS 7121-7)',
+    excerpt: 'Do overhead, gantry and bridge cranes need a lift plan? A UK guide to LOLER and BS 7121-7 for factory and warehouse crane lifting — when a generic plan is enough and when you need a specific written plan.',
+    category: 'Lift Planning',
+    readTime: '13 min read',
+    date: 'May 21, 2026',
+    dateModified: 'May 21, 2026',
+    image: '/images/services/overhead-gantry-crane-factory-uk.webp',
+    imageAlt: 'Overhead travelling bridge crane lifting a steel load inside a UK factory — overhead crane lifting operation under LOLER and BS 7121-7',
+  },
+  {
     slug: 'what-is-bs-7121-complete-guide',
     title: 'What is BS 7121? The Complete UK Guide to Safe Use of Cranes',
     excerpt: 'What is BS 7121? Complete guide to the British Standard for safe use of cranes — every part explained, how it links to LOLER 1998, and what UK contractors need to comply.',

@@ -79,6 +79,14 @@ const SERVICES = [
       'CPCS Appointed Person mobile crane lift plans for all duty types. LOLER 1998 and BS 7121 compliant. Plan delivered in 24–48 hours.',
   },
   {
+    slug: 'overhead-gantry-crane-lift-plans',
+    name: 'Overhead & Gantry Crane Lift Plans',
+    icon: ClipboardCheck,
+    category: 'By plant type',
+    blurb:
+      'Lift plans for overhead travelling (EOT), gantry, bridge and jib cranes in factories, warehouses and fabrication yards. LOLER 1998 and BS 7121-7 compliant, including tandem lifts.',
+  },
+  {
     slug: 'tower-crane',
     name: 'Tower Crane Contracts',
     icon: Building2,
