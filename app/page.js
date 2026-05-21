@@ -1,181 +1,573 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import CaseStudiesGrid from '@/components/CaseStudiesGrid'
+import { FileText, Building2, Layers, ArrowRight, CheckCircle, Phone } from 'lucide-react'
+import ServiceCard from '@/components/ui/ServiceCard'
+import StatCard from '@/components/ui/StatCard'
+import CaseStudyCard from '@/components/ui/CaseStudyCard'
+import SectionHeader from '@/components/ui/SectionHeader'
 
-export const metadata = {
-  title: 'Case Studies | Lift Planning Projects',
-  description: 'Lift planning case studies from RMT Solutions. Tower crane contracts, steel erection projects, mobile crane lifts, and excavator operations across the UK.',
-  alternates: {
-    canonical: 'https://www.rmtsafetysolutions.com/case-studies',
-  },
-  openGraph: {
-    title: 'Case Studies | Lift Planning Projects',
-    description: 'Lift planning case studies from RMT Solutions across the UK.',
-    url: 'https://www.rmtsafetysolutions.com/case-studies',
-    images: ['/images/og-lift-planning.jpg'],
-  },
-}
-
-// CollectionPage / ItemList JSON-LD — exposes the case studies as a
-// structured collection. Mirrors the pattern on /locations and /services.
-// The list mirrors the in-page data in components/CaseStudiesGrid.js;
-// when adding a new case study, update both files so the schema stays
-// in sync with what is actually rendered.
-const SITE = 'https://www.rmtsafetysolutions.com'
-
-const CASE_STUDIES = [
-  { name: 'Chorlton Baths Balcony Lift, Manchester', category: 'Mobile Crane' },
-  { name: 'Manchester Residential Development', category: 'Tower Crane' },
-  { name: 'Industrial Warehouse - Midlands', category: 'Steel Erection' },
-  { name: 'Precast Concrete Installation', category: 'Mobile Crane' },
-  { name: 'Utilities Infrastructure', category: 'Excavator' },
-  { name: 'Commercial Office Development', category: 'Tower Crane' },
-  { name: 'Retail Park Extension', category: 'Steel Erection' },
-]
-
-const collectionJsonLd = {
+// JSON-LD Schema for SEO
+const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'CollectionPage',
-  name: 'Lift Planning Case Studies',
-  description:
-    'Examples of LOLER-compliant lift planning projects delivered by RMT Solutions across the UK — tower crane contracts, steel erection, mobile crane lifts and excavator operations.',
-  url: `${SITE}/case-studies`,
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'RMT Solutions Ltd',
-    url: SITE,
+  '@type': 'ProfessionalService',
+  '@id': 'https://www.rmtsafetysolutions.com/#business',
+  name: 'RMT Solutions Ltd',
+  alternateName: ['RMT Solutions', 'RMT Lift Planning'],
+  description: 'Professional lift planning consultancy providing LOLER compliant lift plans, tower crane compliance contracts, steel erection planning, and excavator lift plans.',
+  url: 'https://www.rmtsafetysolutions.com', 
+  email: 'ricky@rmtsolutions.co.uk',
+  telephone: '+447803808093',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Warrington',
+    addressRegion: 'Cheshire',
+    addressCountry: 'GB',
   },
-  mainEntity: {
-    '@type': 'ItemList',
-    numberOfItems: CASE_STUDIES.length,
-    itemListElement: CASE_STUDIES.map((c, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      item: {
-        '@type': 'CreativeWork',
-        name: c.name,
-        about: `${c.category} lift planning project`,
-        provider: {
-          '@type': 'ProfessionalService',
-          name: 'RMT Solutions Ltd',
-          url: SITE,
-        },
-      },
-    })),
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 53.39,
+    longitude: -2.597,
   },
-}
-
-const breadcrumbJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE },
-    { '@type': 'ListItem', position: 2, name: 'Case Studies', item: `${SITE}/case-studies` },
+  // Geographic service signal for Google. Order: country first, then North
+  // West (the practical day-trip catchment from Warrington), then the rest
+  // of the named tier-1 cities. Warrington itself appears here even though
+  // it is the registered office — Google reads `areaServed` as the cities
+  // we *work in*, and we want Warrington in that set for local pack ranking.
+  areaServed: [
+    { '@type': 'Country', name: 'United Kingdom' },
+    { '@type': 'City', name: 'Warrington' },
+    { '@type': 'City', name: 'Manchester' },
+    { '@type': 'City', name: 'Liverpool' },
+    { '@type': 'City', name: 'Salford' },
+    { '@type': 'City', name: 'Stockport' },
+    { '@type': 'City', name: 'Trafford' },
+    { '@type': 'City', name: 'Bolton' },
+    { '@type': 'City', name: 'Wigan' },
+    { '@type': 'City', name: 'St Helens' },
+    { '@type': 'City', name: 'Knowsley' },
+    { '@type': 'City', name: 'Wirral' },
+    { '@type': 'City', name: 'Birkenhead' },
+    { '@type': 'City', name: 'Sefton' },
+    { '@type': 'City', name: 'Widnes' },
+    { '@type': 'City', name: 'Runcorn' },
+    { '@type': 'City', name: 'Chester' },
+    { '@type': 'City', name: 'Leeds' },
+    { '@type': 'City', name: 'Birmingham' },
+    { '@type': 'City', name: 'London' },
+  ],
+  legalName: 'RMT Solutions Ltd',
+  // Companies House registration — Google uses this PropertyValue to
+  // disambiguate the legal entity from any other "RMT Solutions" worldwide.
+  identifier: {
+    '@type': 'PropertyValue',
+    propertyID: 'Companies House',
+    value: '08338653',
+  },
+  founder: {
+    '@type': 'Person',
+    name: 'Ricky Marsh',
+    jobTitle: 'CPCS Appointed Person (A61)',
+    // LinkedIn profile lives here (not on the Organization) because it is
+    // Ricky's personal profile, not a company page. This is the correct
+    // schema.org pattern for sole-consultant practices.
+    sameAs: [
+      'https://www.linkedin.com/in/ricky-marsh-certiosh-tier-2-cfrar-mifsm-88b72680/',
+    ],
+  },
+  hasCredential: [
+    { '@type': 'EducationalOccupationalCredential', name: 'CPCS Appointed Person A61', identifier: '40389279' },
+    { '@type': 'EducationalOccupationalCredential', name: 'NEBOSH National Diploma' },
+    { '@type': 'EducationalOccupationalCredential', name: 'CertIOSH (Certified Member, Institution of Occupational Safety and Health)' },
+    { '@type': 'EducationalOccupationalCredential', name: 'MIIRSM (Member, International Institute of Risk and Safety Management)' },
+    { '@type': 'EducationalOccupationalCredential', name: 'TIFSM (Technician Member, Institute of Fire Safety Managers)' },
+    { '@type': 'EducationalOccupationalCredential', name: 'GVC Drone Pilot (CAA)' },
+  ],
+  knowsAbout: ['LOLER 1998', 'Lifting Operations', 'Lift Planning', 'Tower Cranes', 'Mobile Cranes', 'Steel Erection', 'BS 7121'],
+  // sameAs disambiguates the Organization to Google's Knowledge Graph.
+  // Add additional profiles (LinkedIn company page, X/Twitter, Facebook
+  // business page, YouTube channel etc.) here as they go live.
+  sameAs: [
+    'https://find-and-update.company-information.service.gov.uk/company/08338653',
+    'https://www.google.com/search?q=RMT+Solutions+Ltd+-+Health+%26+Safety+Consultancy&stick=H4sIAAAAAAAA_-NgU1I1qDAyTDa3NDA2TzIzS7ZIMjO3MqiwMEkxskhMSUpNSbVINDSxWMSqH-QbohCcn1NakpmfV6zgU5KioKvgkZqYU5KhoKYQnJiWWlKp4AyUKs0pScxLrgQASkhtkFsAAAA',
   ],
 }
 
-export default function CaseStudiesPage() {
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is a LOLER compliant lift plan?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A LOLER compliant lift plan is a documented safe system of work for carrying out a lifting operation, as required by the Lifting Operations and Lifting Equipment Regulations 1998. It includes risk assessment, method statement, load calculations, equipment selection, and site layout drawings.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'When do I need an Appointed Person for lifting operations?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Under LOLER and BS 7121, an Appointed Person should plan lifts where there is risk of equipment or load striking a person, specialist knowledge is needed, mobile cranes are used, tandem lifts are required, or lifts occur near power lines.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does it take to produce a lift plan?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Standard lift plans for excavators and telehandlers can be delivered within 24-48 hours. Mobile crane lift plans requiring site visits may take 3-5 working days.',
+      },
+    },
+  ],
+}
+
+export default function HomePage() {
+  const services = [
+    {
+      title: 'Lift Plan Writing',
+      description: 'LOLER compliant lift plans for all equipment. Excavator lift plans, telehandler lift plans, lorry loader lift plans, and mobile crane lift plans with fast turnaround.',
+      features: ['Excavator lifting operations', 'Telehandler operations', 'Mobile crane lift plans', 'Lorry loader lift plans'],
+      href: '/services/lift-plans',
+      icon: FileText,
+    },
+    {
+      title: 'Tower Crane Contracts',
+      description: 'Ongoing Appointed Person contracts for tower crane compliance. 8-weekly audits, documentation management, and on-call support throughout your project.',
+      features: ['8-weekly compliance audits', 'BS 7121 compliance', 'Documentation management', 'On-call AP support'],
+      href: '/services/tower-crane',
+      icon: Building2,
+    },
+    {
+      title: 'Steel Erection Planning',
+      description: 'Complete lift planning for structural steel erection. Fabrication drawing reviews, erection sequences, crane selection, and tandem lift coordination.',
+      features: ['Fabrication drawing review', 'Erection sequence planning', 'Tandem lift coordination', 'Mobile crane selection'],
+      href: '/services/steel-erection',
+      icon: Layers,
+    },
+  ]
+
+  const liftPlanTypes = [
+    { name: 'Excavator Lift Plans', href: '/services/excavator-lift-plans' },
+    { name: 'Telehandler Lift Plans', href: '/services/telehandler-lift-plans' },
+    { name: 'Mobile Crane Lift Plans', href: '/services/mobile-crane-lift-plans' },
+    { name: 'Lorry Loader Lift Plans', href: '/services/lorry-loader-lift-plans' },
+  ]
+
+  const caseStudies = [
+    {
+      title: 'Industrial Warehouse',
+      description: 'Complete lift planning for 15,000m² steel frame erection.',
+      category: 'Steel Erection',
+      image: '/images/mobile-crane-steel-erection.webp',
+    },
+    {
+      title: 'Manchester Development',
+      description: '18-month tower crane AP contract.',
+      category: 'Tower Crane',
+      image: '/images/residential-tower-crane.webp',
+    },
+    {
+      title: 'Utility Pipeline',
+      description: 'Series of excavator lift plans for 3km pipeline.',
+      category: 'Excavator',
+      image: '/images/precast-concrete-lift.webp',
+    },
+  ]
+
+  const stats = [
+    { value: '40+', label: 'Fatal Injuries', sublabel: 'Per year from lifting operations' },
+    { value: '£1M+', label: 'Potential Fines', sublabel: 'For LOLER non-compliance' },
+    { value: '100%', label: 'AP Required', sublabel: 'For complex lifting operations' },
+    { value: '70%', label: 'Of Incidents', sublabel: 'Result from poor planning' },
+  ]
+
   return (
     <>
+      {/* JSON-LD Schema */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <header className="relative min-h-screen flex items-center pt-20 overflow-hidden">
         <div className="absolute inset-0 bg-slate-900">
+          <Image
+            src="/images/mobile-crane-steel-erection.webp"
+            alt="Mobile crane lifting steel at construction site - Professional LOLER compliant lift planning services UK"
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
           <div className="absolute inset-0 construction-pattern" />
           <div className="absolute inset-0 grid-bg" />
         </div>
         <div className="hero-overlay absolute inset-0" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <nav className="text-sm text-gray-400 mb-6" aria-label="Breadcrumb">
-              <Link href="/" className="hover:text-amber-400 transition">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-gray-300">Case Studies</span>
-            </nav>
-            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
-              Our Work
-            </span>
-            <h1 className="font-display text-5xl sm:text-6xl font-bold text-white mb-6">
-              Lift Planning <span className="gradient-text">Case Studies</span>
-            </h1>
-            <p className="text-xl text-gray-300 leading-relaxed">
-              Examples of lift planning projects we've delivered for contractors across the UK.
-            </p>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center bg-amber-500/10 border border-amber-500/30 rounded-full px-5 py-2.5 mb-8">
+                <span className="w-2 h-2 bg-amber-500 rounded-full mr-3 animate-pulse" />
+                <span className="text-amber-400 text-sm font-semibold tracking-wide">
+                  CPCS Appointed Person A61
+                </span>
+              </div>
+
+              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8">
+                <span className="text-white">Professional</span>
+                <br />
+                <span className="gradient-text">Lift Planning</span>
+                <br />
+                <span className="text-white">Services UK</span>
+              </h1>
+
+              <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
+                <strong>LOLER compliant lift plans</strong> from a qualified Appointed Person with{' '}
+                <strong>35 years construction industry experience</strong>. Tower crane contracts,
+                steel erection planning, mobile crane and excavator lift plans.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/contact" className="btn-primary flex items-center justify-center group">
+                  Request a Lift Plan Quote
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <a
+                  href="tel:+447803808093"
+                  className="btn-secondary flex items-center justify-center gap-2"
+                  aria-label="Call RMT Solutions on 07803 808093"
+                >
+                  <Phone className="w-5 h-5" />
+                  Call 07803 808093
+                </a>
+              </div>
+              <p className="mt-4 text-sm text-gray-500">
+                Speak directly to a CPCS Appointed Person — same-day quotes UK-wide.
+              </p>
+            </div>
+
+            <div className="relative">
+              <div className="stat-card rounded-3xl p-10 border border-slate-700/50 amber-glow">
+                <div className="grid grid-cols-2 gap-8">
+                  <div className="text-center p-6 rounded-2xl bg-slate-800/30">
+                    <div className="text-5xl font-display font-bold text-amber-400">35+</div>
+                    <div className="text-gray-400 mt-2 font-medium">Years Experience</div>
+                  </div>
+                  <div className="text-center p-6 rounded-2xl bg-slate-800/30">
+                    <div className="text-5xl font-display font-bold text-amber-400">1000+</div>
+                    <div className="text-gray-400 mt-2 font-medium">Lift Plans Delivered</div>
+                  </div>
+                  <div className="text-center p-6 rounded-2xl bg-slate-800/30">
+                    <div className="text-5xl font-display font-bold text-amber-400">100%</div>
+                    <div className="text-gray-400 mt-2 font-medium">LOLER Compliant</div>
+                  </div>
+                  <div className="text-center p-6 rounded-2xl bg-slate-800/30">
+                    <div className="text-5xl font-display font-bold text-amber-400">UK</div>
+                    <div className="text-gray-400 mt-2 font-medium">Wide Coverage</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Trusted By */}
+      <section className="py-16 bg-slate-900 border-y border-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-gray-500 text-sm font-semibold tracking-widest uppercase mb-10">
+            Trusted by leading UK contractors for lift planning
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16">
+            <span className="text-gray-400 font-display font-bold text-xl">WATES</span>
+            <span className="text-gray-400 font-display font-bold text-xl">CADDICK</span>
+            <span className="text-gray-400 font-display font-bold text-xl">GMI</span>
           </div>
         </div>
       </section>
 
-      {/* Featured case study — the one detailed write-up we link out to */}
-      <section className="py-24 bg-slate-900">
+      {/* Where We Work — geographic signal section. Surfaces our North West
+          catchment on the homepage so Google has a textual association
+          between the business and Manchester / Liverpool / Warrington
+          beyond schema-only signals. Each card links to a substantive
+          location page. */}
+      <section className="py-20 bg-slate-950" aria-labelledby="where-we-work">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-6 block">
-            Featured Project
-          </span>
-          <Link
-            href="/case-studies/chorlton-baths-balcony-lift"
-            className="group block rounded-3xl overflow-hidden border border-slate-700/50 bg-gradient-to-b from-slate-800/50 to-slate-900/50 card-hover"
-          >
-            <div className="grid md:grid-cols-2">
-              <div className="relative h-64 md:h-auto md:min-h-[320px] bg-gradient-to-br from-slate-700 to-slate-800">
-                <Image
-                  src="/images/chorlton-baths-balcony-lift.jpg"
-                  alt="Mobile crane installing steel balcony units at Chorlton Baths, Manchester"
-                  fill
-                  className="object-cover"
-                />
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+              Service Area
+            </span>
+            <h2 id="where-we-work" className="font-display text-4xl sm:text-5xl font-bold text-white mb-6">
+              Lift Planning Across the North West & UK
+            </h2>
+            <p className="text-gray-400 text-lg leading-relaxed">
+              Based in Warrington at the junction of the M62 and M6, we attend
+              construction sites across Greater Manchester, Merseyside and
+              Cheshire the same day — and travel UK-wide for tower crane
+              contracts and steel erection projects.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <Link
+              href="/locations/manchester"
+              className="group bg-slate-900 border border-slate-800 hover:border-amber-400 rounded-2xl p-8 transition"
+            >
+              <div className="text-amber-400 text-xs font-semibold tracking-widest uppercase mb-2">
+                35 minutes from Warrington
               </div>
-              <div className="p-8 lg:p-12 flex flex-col justify-center">
-                <div className="flex flex-wrap items-center gap-3 mb-4">
-                  <span className="bg-amber-500/20 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full">
-                    Mobile Crane
-                  </span>
-                  <span className="text-gray-500 text-sm">Chorlton Baths, Manchester</span>
-                </div>
-                <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-4 group-hover:text-amber-400 transition">
-                  Balcony Lift Verification
-                </h2>
-                <p className="text-gray-400 mb-6 leading-relaxed">
-                  An independent site visit to confirm the arrangements and safety of a mobile crane
-                  lifting operation installing steel balcony units on a Caddick development — on a
-                  constrained urban frontage with a live highway alongside.
-                </p>
-                <span className="inline-flex items-center text-amber-400 font-semibold">
-                  Read the case study
-                  <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
-                </span>
+              <h3 className="font-display text-2xl font-bold text-white group-hover:text-amber-400 transition mb-3">
+                Lift Plans Manchester
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                NOMA, Mayfield, MediaCityUK and the city-centre tower pipeline.
+                Tower crane contracts, mobile crane lifts and steel erection.
+              </p>
+              <span className="inline-flex items-center text-amber-400 text-sm font-semibold">
+                Manchester lift planning
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+              </span>
+            </Link>
+
+            <Link
+              href="/locations/liverpool"
+              className="group bg-slate-900 border border-slate-800 hover:border-amber-400 rounded-2xl p-8 transition"
+            >
+              <div className="text-amber-400 text-xs font-semibold tracking-widest uppercase mb-2">
+                40 minutes from Warrington
               </div>
-            </div>
-          </Link>
+              <h3 className="font-display text-2xl font-bold text-white group-hover:text-amber-400 transition mb-3">
+                Lift Plans Liverpool
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                Liverpool Waters, Knowledge Quarter and the Baltic Triangle.
+                Mobile crane plans, lift plan checking and tower crane AP cover.
+              </p>
+              <span className="inline-flex items-center text-amber-400 text-sm font-semibold">
+                Liverpool lift planning
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+              </span>
+            </Link>
+
+            <Link
+              href="/locations"
+              className="group bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 hover:border-amber-400 rounded-2xl p-8 transition"
+            >
+              <div className="text-amber-400 text-xs font-semibold tracking-widest uppercase mb-2">
+                Home turf
+              </div>
+              <h3 className="font-display text-2xl font-bold text-white group-hover:text-amber-400 transition mb-3">
+                Warrington & North West
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                Salford, Stockport, Trafford, Wirral, Bolton, Wigan, Widnes,
+                Runcorn, Chester — same-day attendance across the M62 corridor.
+              </p>
+              <span className="inline-flex items-center text-amber-400 text-sm font-semibold">
+                View all UK locations
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+              </span>
+            </Link>
+          </div>
+
+          <p className="text-center text-gray-500 text-sm leading-relaxed max-w-4xl mx-auto">
+            Also serving <Link href="/locations/leeds" className="text-gray-400 hover:text-amber-400 transition">Leeds</Link>
+            , <Link href="/locations/birmingham" className="text-gray-400 hover:text-amber-400 transition">Birmingham</Link>
+            , <Link href="/locations/london" className="text-gray-400 hover:text-amber-400 transition">London</Link>
+            , Bristol, Glasgow and Edinburgh — UK-wide coverage for tower crane
+            contracts and complex lifting operations.
+          </p>
         </div>
       </section>
 
-      {/* Case Studies Grid */}
+      {/* Services Section */}
+      <section id="services" className="py-24 bg-slate-950 construction-pattern">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            eyebrow="Lift Planning Services"
+            title="LOLER Compliant Lift Plans"
+            description="Professional lift planning services from a CPCS Appointed Person. Lift plans for excavators, telehandlers, lorry loaders, mobile cranes, tower cranes, and steel erection across the UK."
+          />
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {services.map((service) => (
+              <ServiceCard key={service.title} {...service} />
+            ))}
+          </div>
+
+          {/* Lift Plan Types Grid */}
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+            {liftPlanTypes.map((type) => (
+              <Link
+                key={type.name}
+                href={type.href}
+                className="bg-slate-900 border border-slate-800 hover:border-amber-400 rounded-xl p-6 text-center transition group"
+              >
+                <span className="text-white font-semibold group-hover:text-amber-400 transition">
+                  {type.name}
+                </span>
+                <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-amber-400 mx-auto mt-2 transition" />
+              </Link>
+            ))}
+          </div>
+
+          {/* Lift Plan Checking */}
+          <div className="mt-12 bg-gradient-to-r from-slate-800/50 to-slate-900/50 rounded-3xl p-8 md:p-12 border border-slate-700/50">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+                  For Tier 1 Contractors
+                </span>
+                <h3 className="font-display text-3xl font-bold text-white mb-4">
+                  Lift Plan Checking Service
+                </h3>
+                <p className="text-gray-300 mb-6">
+                  Independent Appointed Person review of lift plans submitted by subcontractors.
+                  Ensure all lifting operations on your site are LOLER compliant before work begins.
+                </p>
+                <Link
+                  href="/services/lift-plan-checking"
+                  className="inline-flex items-center text-amber-400 hover:text-amber-300 font-semibold"
+                >
+                  Learn more about our checking service
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-slate-800/50 rounded-2xl p-6 text-center">
+                  <div className="text-3xl font-display font-bold text-amber-400">24hr</div>
+                  <div className="text-gray-400 text-sm mt-1">Turnaround</div>
+                </div>
+                <div className="bg-slate-800/50 rounded-2xl p-6 text-center">
+                  <div className="text-3xl font-display font-bold text-amber-400">Expert</div>
+                  <div className="text-gray-400 text-sm mt-1">AP Review</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Lifting Operations Audit */}
+          <div className="mt-8 bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-12">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+                  Compliance Assurance
+                </span>
+                <h3 className="font-display text-3xl font-bold text-white mb-4">
+                  Lifting Operations Audit
+                </h3>
+                <p className="text-gray-300 mb-6">
+                  Independent assessment of your lifting operations, procedures, and compliance. 
+                  Evaluate your systems against LOLER, BS 7121, and industry best practice.
+                </p>
+                <Link
+                  href="/services/lifting-operations-audit"
+                  className="inline-flex items-center text-amber-400 hover:text-amber-300 font-semibold"
+                >
+                  Learn more about our audit service
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-slate-800/50 rounded-2xl p-6 text-center">
+                  <div className="text-3xl font-display font-bold text-amber-400">Site</div>
+                  <div className="text-gray-400 text-sm mt-1">& Desktop</div>
+                </div>
+                <div className="bg-slate-800/50 rounded-2xl p-6 text-center">
+                  <div className="text-3xl font-display font-bold text-amber-400">Full</div>
+                  <div className="text-gray-400 text-sm mt-1">Report</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Lift Planning Matters */}
+      <section className="py-24 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            eyebrow="Why Proper Lift Planning Matters"
+            title="UK Lifting Operations Safety"
+            description="Proper lift planning is a legal requirement under LOLER 1998 and essential for construction site safety"
+          />
+
+          <div className="grid md:grid-cols-4 gap-6">
+            {stats.map((stat) => (
+              <StatCard key={stat.label} {...stat} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies */}
       <section className="py-24 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <CaseStudiesGrid />
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
+            <div>
+              <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+                Our Work
+              </span>
+              <h2 className="font-display text-4xl sm:text-5xl font-bold text-white">
+                Lift Planning Case Studies
+              </h2>
+            </div>
+            <Link
+              href="/case-studies"
+              className="mt-6 md:mt-0 inline-flex items-center text-amber-400 hover:text-amber-300 font-semibold"
+            >
+              View all case studies
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {caseStudies.map((study) => (
+              <CaseStudyCard key={study.title} {...study} />
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-24 bg-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display text-4xl font-bold text-white mb-6">
-            Have a Similar Project?
+          <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-6">
+            Need a Lift Plan?
           </h2>
-          <p className="text-gray-400 text-xl mb-10">
-            Get in touch to discuss your lift planning requirements.
+          <p className="text-gray-400 text-xl mb-10 max-w-2xl mx-auto">
+            Contact us today for a quote. LOLER compliant lift plans from a CPCS Appointed Person
+            with 35 years experience.
           </p>
-          <Link href="/contact" className="btn-primary">
-            Request a Quote
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="btn-primary">
+              Request a Quote
+            </Link>
+            <a
+              href="tel:+447803808093"
+              className="btn-secondary flex items-center justify-center gap-2"
+              aria-label="Call RMT Solutions on 07803 808093"
+            >
+              <Phone className="w-5 h-5" />
+              Call 07803 808093
+            </a>
+          </div>
+          <p className="text-gray-400 mt-6 text-sm">
+            Or email{' '}
+            <a href="mailto:ricky@rmtsolutions.co.uk" className="text-amber-400 hover:text-amber-300 underline">
+              ricky@rmtsolutions.co.uk
+            </a>
+          </p>
+          <p className="text-gray-500 mt-6 text-sm">
+            Based in Warrington, Cheshire • Serving contractors across the UK
+          </p>
         </div>
       </section>
     </>
