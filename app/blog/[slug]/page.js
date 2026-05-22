@@ -43,6 +43,11 @@ const blogPosts = {
 
       <p>The parts most relevant to UK construction and industrial lifting are described below. The dates given are the current published editions at the time of writing — always check that you are referencing the latest version before using the standard on a project.</p>
 
+      <figure>
+        <img src="/images/blog/bs7121-family-of-standards-diagram.svg" alt="Diagram of the BS 7121 family of standards: BS 7121-1:2016 General as the foundation, with equipment-specific parts including Part 2 inspection and thorough examination, Part 3 mobile cranes, Part 4 lorry loaders, Part 5 tower cranes, Part 7 overhead travelling cranes, Part 11 offshore cranes, Part 12 recovery vehicles, Part 13 hydraulic gantries and Part 14 side boom pipelayers" width="1600" height="1100" loading="lazy" />
+        <figcaption>BS 7121 is a family of standards \u2014 Part 1 sets the general framework and each equipment-specific part builds on it.</figcaption>
+      </figure>
+
       <h3>BS 7121-1:2016 — General</h3>
       <p>This is the foundation part of the series and the document everyone working with cranes should be familiar with. BS 7121-1:2016 sets out the general principles that apply to all crane operations regardless of equipment type. It defines the key roles in a lifting team, the planning duties of the Appointed Person, the categories of lift, the requirements for risk assessment and method statements, and the principles of supervision and communication.</p>
 
@@ -258,6 +263,11 @@ const blogPosts = {
       <p>There is no single prescribed format for a lift plan. The HSE does not mandate a specific template, and different companies, crane hire firms, and Appointed Persons use different formats. What matters is that the plan addresses all the risks of the lifting operation and provides sufficient information for the lift to be carried out safely.</p>
 
       <p>That said, a comprehensive lift plan will typically address the following areas.</p>
+
+      <figure>
+        <img src="/images/blog/anatomy-of-a-lift-plan-diagram.svg" alt="Diagram showing the nine elements of a LOLER-compliant lift plan: description of the operation, load details, equipment selection, radius and capacity, rigging arrangement, ground conditions, site-specific hazards, personnel and roles, and sequence of operations" width="1600" height="1060" loading="lazy" />
+        <figcaption>The anatomy of a lift plan \u2014 the nine elements a competent person works through for every lifting operation under LOLER 1998.</figcaption>
+      </figure>
 
       <h3>Description of the Lifting Operation</h3>
       <p>The plan should clearly describe what is being lifted, from where, to where, and why. This sounds obvious, but many deficient lift plans fail at this first hurdle \u2014 they describe the equipment being used but not the actual operation being performed. A good lift plan gives the reader a clear picture of the entire lifting sequence.</p>
@@ -685,6 +695,11 @@ const blogPosts = {
 
       <h2>What "Properly Planned" Means</h2>
       <p>The HSE recognises that not every lift needs a 10-page written document. The planning should be proportionate to the risk. Let's break this down:</p>
+
+      <figure>
+        <img src="/images/blog/when-do-you-need-a-lift-plan-decision-flow.svg" alt="Decision-flow diagram: a lifting operation using lifting equipment triggers LOLER Regulation 8, which requires it to be planned by a competent person; if the lift is simple, routine and low-risk it needs proportionate planning such as a safe system of work or generic schedule, otherwise it needs a detailed written lift plan prepared by a CPCS Appointed Person" width="1600" height="1100" loading="lazy" />
+        <figcaption>How the level of planning scales with risk \u2014 every lift must be planned, but only complex or non-routine lifts need a full written lift plan.</figcaption>
+      </figure>
 
       <h3>Simple, Routine Lifts</h3>
       <p>For straightforward, repetitive lifting operations that are low risk, planning might consist of:</p>
@@ -1182,6 +1197,11 @@ const blogPosts = {
       <figure>
         <img src="/images/blog/lift-plan-rejected-red-pen-corrections.webp" alt="A printed lift plan on a site office desk marked up with red-pen corrections and circled notes, beside reading glasses and a hard hat \u2014 the kind of errors caught during an independent lift plan review" width="1600" height="1067" loading="lazy" />
         <figcaption>Most lift planning mistakes are avoidable \u2014 and the cheapest place to catch them is at the desk, before the plan ever reaches site.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="/images/blog/common-lift-planning-mistakes-overview.svg" alt="Overview graphic listing the eight most common lift planning mistakes: underestimating load weights, inadequate ground assessment, missing overhead hazards, inadequate communication planning, no plan for changing conditions, ignoring manufacturer load charts, poor rigging practices, and not documenting the plan" width="1600" height="920" loading="lazy" />
+        <figcaption>The eight mistakes that appear again and again in lift plans \u2014 each one covered in detail below.</figcaption>
       </figure>
 
       <h2>Mistake 1: Underestimating Load Weights</h2>
