@@ -1,20 +1,19 @@
-RMT — Two new blog hero images (Appointed Person + Lifting Operations Audit)
-============================================================================
+RMT — Final 2 blog hero images (LOLER + Common Lift Planning Mistakes)
+======================================================================
 Upload via GitHub web UI, keeping folder paths exactly. Files:
 
-  1. app/blog/[slug]/page.js                                          (EDITED)
-  2. public/images/services/appointed-person-reviewing-lift-plan-uk.webp  (NEW)
-  3. public/images/services/lifting-operations-audit-inspection-uk.webp   (NEW)
+  1. app/blog/[slug]/page.js                                             (EDITED)
+  2. public/images/services/loler-thorough-examination-lifting-equipment-uk.webp  (NEW)
+  3. public/images/services/lift-planning-site-desk-review-uk.webp                (NEW)
 
 Changes in page.js (image: + imageAlt: only):
-  - cpcs-appointed-person-guide            -> appointed-person-reviewing-lift-plan-uk.webp
-  - lifting-operations-audit-what-to-expect-> lifting-operations-audit-inspection-uk.webp
+  - what-is-loler-complete-guide   -> loler-thorough-examination-lifting-equipment-uk.webp
+  - common-lift-planning-mistakes  -> lift-planning-site-desk-review-uk.webp
 
-This builds on the previous deploy (telehandler image, 7 swaps, hero crop fix).
-Result: mobile-crane-steel-erection.webp is no longer reused; warehouse-steel-
-erection.webp now shared by only two remaining posts (common-lift-planning-
-mistakes and what-is-loler-complete-guide) — one more image clears that.
+RESULT: warehouse-steel-erection.webp is no longer used anywhere. Every one of
+the 14 blog posts now has a UNIQUE, topic-relevant hero with descriptive alt
+text. Image de-duplication across the blog is complete.
 
 After deploy: hard-refresh, and Request Indexing in Search Console for:
-  /blog/cpcs-appointed-person-guide
-  /blog/lifting-operations-audit-what-to-expect
+  /blog/what-is-loler-complete-guide
+  /blog/common-lift-planning-mistakes

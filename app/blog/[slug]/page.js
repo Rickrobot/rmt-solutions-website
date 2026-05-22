@@ -509,8 +509,8 @@ const blogPosts = {
     readTime: '8 min read',
     date: 'January 28, 2026',
     dateModified: 'January 28, 2026',
-    image: '/images/warehouse-steel-erection.webp',
-    imageAlt: 'LOLER 1998 compliant lifting operation — steel erection on a UK industrial build',
+    image: '/images/services/loler-thorough-examination-lifting-equipment-uk.webp',
+    imageAlt: 'Competent person carrying out a LOLER thorough examination of lifting equipment on a UK site, inspecting a hook and chain sling for defects',
     content: `
       <p class="lead">The Lifting Operations and Lifting Equipment Regulations 1998 (LOLER) is one of the most important pieces of health and safety legislation affecting construction sites across the UK. If you're a contractor, site manager, or anyone involved in lifting operations, understanding LOLER isn't just about compliance—it's about keeping people safe.</p>
 
@@ -1159,8 +1159,8 @@ const blogPosts = {
     readTime: '10 min read',
     date: 'January 31, 2026',
     dateModified: 'January 31, 2026',
-    image: '/images/warehouse-steel-erection.webp',
-    imageAlt: 'Steel beam being lifted during warehouse erection — common scenario where lift planning mistakes occur',
+    image: '/images/services/lift-planning-site-desk-review-uk.webp',
+    imageAlt: 'Lifting team reviewing and marking up a lift plan on site — catching planning mistakes before the lift goes ahead',
     content: `
       <p class="lead">After reviewing over 1,000 lift plans across 35 years in construction, certain mistakes appear repeatedly. This guide examines the most common lift planning errors and how to avoid them.</p>
 
