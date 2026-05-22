@@ -33,6 +33,11 @@ const blogPosts = {
 
       <p>Most tier 1 contractors and major clients now require BS 7121 compliance as a contractual condition. Tender returns are routinely rejected if they do not reference the standard. Prequalification questionnaires ask whether your lifting management system aligns with it. In effect, while it is not legally mandatory, BS 7121 has become commercially non-negotiable across UK construction.</p>
 
+      <figure>
+        <img src="/images/blog/bs7121-code-of-practice-crane-supervisor.webp" alt="A crane supervisor in hi-vis and hard hat standing safely beside a mobile crane with outriggers deployed and exclusion-zone barriers in place on a UK construction site" width="1600" height="1067" loading="lazy" />
+        <figcaption>BS 7121 is the recognised UK code of practice for the safe use of cranes \u2014 the benchmark against which LOLER compliance is judged.</figcaption>
+      </figure>
+
       <h2>The Structure of BS 7121: A Family of Standards</h2>
       <p>BS 7121 is best understood as a series of separately numbered parts that share a common framework but address different equipment types or different aspects of crane operation. The numbering is not always intuitive — there are gaps in the series, some parts have been withdrawn, and some standards have been moved between sub-parts and amendments over the years.</p>
 
@@ -226,6 +231,11 @@ const blogPosts = {
       <p>A lift plan is not a generic risk assessment or a method statement, although it may incorporate elements of both. It is a specific document that addresses a specific lifting operation \u2014 the particular load, the particular machine, the particular site conditions, and the particular hazards present on the day. A lift plan written for one operation cannot simply be reused for another without being reviewed and updated to reflect the actual circumstances.</p>
 
       <p>The term "lift plan" is used across the UK construction industry, though you may also hear it referred to as a lifting plan, a crane lift plan, or a lifting operation plan. Regardless of the terminology, the legal requirement is the same: LOLER Regulation 8(1) states that every lifting operation shall be properly planned by a competent person, appropriately supervised, and carried out in a safe manner.</p>
+
+      <figure>
+        <img src="/images/blog/lift-plan-document-clipboard-site.webp" alt="A multi-page lift plan document on a clipboard beside a hard hat and hi-vis on a site table, with a mobile crane working in the background on a UK construction site" width="1600" height="1067" loading="lazy" />
+        <figcaption>A lift plan is a specific, documented plan for a specific lifting operation \u2014 not a generic risk assessment reused from job to job.</figcaption>
+      </figure>
 
       <h2>When Do You Need a Lift Plan?</h2>
       <p>The short answer is: whenever a lifting operation takes place. LOLER applies to all lifting operations carried out by all types of lifting equipment, not just cranes. This means a lift plan is required for operations involving:</p>
@@ -667,6 +677,11 @@ const blogPosts = {
       </ul>
 
       <p>Notice it says "every lifting operation"—not just the big ones, not just the complex ones. Every single one.</p>
+
+      <figure>
+        <img src="/images/blog/deciding-if-lift-plan-needed-site-discussion.webp" alt="Two UK construction professionals in hi-vis and hard hats reviewing a lift plan together on site, one pointing toward a mobile crane, assessing what level of planning the lifting operation requires" width="1600" height="1067" loading="lazy" />
+        <figcaption>LOLER applies to every lifting operation \u2014 the question is not whether to plan, but how much detail the operation demands.</figcaption>
+      </figure>
 
       <h2>What "Properly Planned" Means</h2>
       <p>The HSE recognises that not every lift needs a 10-page written document. The planning should be proportionate to the risk. Let's break this down:</p>
@@ -1163,6 +1178,11 @@ const blogPosts = {
     imageAlt: 'Lifting team reviewing and marking up a lift plan on site — catching planning mistakes before the lift goes ahead',
     content: `
       <p class="lead">After reviewing over 1,000 lift plans across 35 years in construction, certain mistakes appear repeatedly. This guide examines the most common lift planning errors and how to avoid them.</p>
+
+      <figure>
+        <img src="/images/blog/lift-plan-rejected-red-pen-corrections.webp" alt="A printed lift plan on a site office desk marked up with red-pen corrections and circled notes, beside reading glasses and a hard hat \u2014 the kind of errors caught during an independent lift plan review" width="1600" height="1067" loading="lazy" />
+        <figcaption>Most lift planning mistakes are avoidable \u2014 and the cheapest place to catch them is at the desk, before the plan ever reaches site.</figcaption>
+      </figure>
 
       <h2>Mistake 1: Underestimating Load Weights</h2>
       <p>The most fundamental error is not knowing what you're actually lifting. A 900mm diameter concrete pipe 3 meters long weighs approximately 2.5 tonnes—what appears manageable can quickly exceed equipment capacity.</p>

@@ -198,6 +198,24 @@
   height: auto;
 }
 
+/* In-body figures with captions */
+.prose-custom figure {
+  margin: 2rem 0;
+}
+
+.prose-custom figure img {
+  margin: 0;
+}
+
+.prose-custom figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #94a3b8;
+  text-align: center;
+  font-style: italic;
+}
+
 /* Tables */
 .prose-custom table {
   width: 100%;
