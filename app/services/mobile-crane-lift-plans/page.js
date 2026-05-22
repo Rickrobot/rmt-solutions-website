@@ -7,8 +7,11 @@ import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Mobile Crane Lift Plans UK | LOLER & BS 7121 Compliant',
+  // SEO audit (May 2026): trimmed from 231 chars to ~155 to avoid SERP
+  // truncation while keeping the core keywords (mobile crane lift plans,
+  // CPCS Appointed Person, LOLER, BS 7121).
   description:
-    'CPCS Appointed Person mobile crane lift plans for all duty types. Configuration-specific load chart verification, ground bearing pressure calculations and exclusion zones to LOLER 1998 and BS 7121. Site visit included where needed.',
+    'CPCS Appointed Person mobile crane lift plans for all duty types: load chart verification, ground bearing calculations and exclusion zones to LOLER & BS 7121.',
   keywords: [
     'mobile crane lift plan',
     'mobile crane lift plans',

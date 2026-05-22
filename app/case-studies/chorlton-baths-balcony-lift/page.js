@@ -8,8 +8,10 @@ const HERO_IMAGE = '/images/chorlton-baths-balcony-lift.jpg'
 
 export const metadata = {
   title: 'Balcony Lift Verification, Chorlton Baths Manchester | Case Study',
+  // SEO audit (May 2026): trimmed from 294 chars to ~155 so the snippet
+  // displays in full on Google instead of being truncated mid-sentence.
   description:
-    'Case study: independent site verification of a mobile crane lifting operation installing steel balcony units at the former Chorlton Baths, Manchester Road, Chorlton (M21), on Caddick Construction\u2019s £14m extra care scheme. Lift plan and exclusion zone review against BS 7121 and LOLER 1998.',
+    'Case study: independent verification of a mobile crane lift installing steel balcony units at Chorlton Baths, Manchester, against BS 7121 and LOLER 1998.',
   keywords: [
     'balcony lift case study',
     'mobile crane balcony installation',

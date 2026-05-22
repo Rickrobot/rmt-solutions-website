@@ -1,8 +1,34 @@
 import './globals.css'
+import { Plus_Jakarta_Sans, Space_Grotesk } from 'next/font/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingCallButton from '@/components/FloatingCallButton'
 import Analytics from '@/components/Analytics'
+
+// PERFORMANCE FIX (SEO audit, May 2026):
+// Fonts are now loaded with next/font/google instead of a CSS @import in
+// globals.css. next/font self-hosts the font files at build time, which:
+//   - removes the render-blocking request to fonts.googleapis.com that
+//     previously delayed First Contentful Paint and Largest Contentful Paint,
+//   - eliminates the layout shift (CLS) that happens while a webfont swaps in,
+//   - removes a third-party connection (better privacy + one less DNS lookup).
+// Each font exposes a CSS variable (--font-body / --font-display) which is
+// consumed in globals.css and tailwind.config.js, so every existing
+// `font-display` / `font-body` utility and `.font-display` class keeps working
+// exactly as before — no markup changes needed anywhere else.
+const bodyFont = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+  variable: '--font-body',
+})
+
+const displayFont = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  display: 'swap',
+  variable: '--font-display',
+})
 
 export const metadata = {
   metadataBase: new URL('https://www.rmtsafetysolutions.com'),
@@ -61,7 +87,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-GB">
+    <html lang="en-GB" className={`${bodyFont.variable} ${displayFont.variable}`}>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <meta name="geo.region" content="GB-WRT" />
