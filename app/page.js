@@ -377,10 +377,10 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <p className="text-center text-gray-500 text-sm leading-relaxed max-w-4xl mx-auto">
-            Also serving <Link href="/locations/leeds" className="text-gray-400 hover:text-amber-400 transition">Leeds</Link>
-            , <Link href="/locations/birmingham" className="text-gray-400 hover:text-amber-400 transition">Birmingham</Link>
-            , <Link href="/locations/london" className="text-gray-400 hover:text-amber-400 transition">London</Link>
+          <p className="text-center text-gray-400 text-sm leading-relaxed max-w-4xl mx-auto">
+            Also serving <Link href="/locations/leeds" className="text-amber-400 underline hover:text-amber-300 transition">Leeds</Link>
+            , <Link href="/locations/birmingham" className="text-amber-400 underline hover:text-amber-300 transition">Birmingham</Link>
+            , <Link href="/locations/london" className="text-amber-400 underline hover:text-amber-300 transition">London</Link>
             , Bristol, Glasgow and Edinburgh — UK-wide coverage for tower crane
             contracts and complex lifting operations.
           </p>
