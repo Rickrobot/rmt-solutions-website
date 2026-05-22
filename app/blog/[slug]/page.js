@@ -1926,6 +1926,11 @@ const blogPosts = {
       <h3>Routine, repetitive lifts</h3>
       <p>Where the same kind of load is lifted in the same way, along the same route, in an unchanging environment — think a fabrication shop moving similar steel sections from a cutting bay to a welding bay all day — the lifting can be covered by a <em>generic lift plan</em> backed by a documented safe system of work. The competent person plans the activity once, the controls are built into how the bay operates, operators and slingers are trained and competent, and individual lifts do not each need a fresh written plan. This is entirely legitimate and is how the overwhelming majority of factory crane lifting is managed.</p>
 
+      <figure>
+        <img src="/images/blog/overhead-crane-steel-fabrication-workshop-uk.webp" alt="An overhead travelling bridge crane on its runway rails above a roller-conveyor line in a UK steel fabrication workshop \u2014 the kind of routine, repetitive overhead crane lifting covered by a generic lift plan" width="1600" height="1067" loading="lazy" />
+        <figcaption>Routine overhead-crane lifting in a fabrication shop \u2014 the same loads moving the same way along the same route \u2014 can be covered by a generic lift plan and a documented safe system of work.</figcaption>
+      </figure>
+
       <h3>Non-routine and higher-risk lifts</h3>
       <p>As soon as a lift falls outside the routine pattern, it needs its own specific written lift plan prepared by a competent person. The common triggers are:</p>
 
