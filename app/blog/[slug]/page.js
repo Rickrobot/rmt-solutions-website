@@ -215,8 +215,8 @@ const blogPosts = {
     readTime: '10 min read',
     date: 'February 11, 2026',
     dateModified: 'February 11, 2026',
-    image: '/images/warehouse-steel-erection.webp',
-    imageAlt: 'Steel roof structure being lifted into place during a warehouse build, illustrating a typical UK lift plan scenario',
+    image: '/images/services/mobile-crane-lifting-precast-concrete.webp',
+    imageAlt: 'Mobile crane lifting a precast concrete unit on a UK construction site — a typical lifting operation covered by a lift plan',
     content: `
       <p class="lead">A lift plan is one of the most important documents on any UK construction site \u2014 yet it remains one of the most misunderstood. Whether you are a principal contractor managing a major project, a subcontractor organising a steel delivery, or a site manager trying to keep operations moving safely, understanding what a lift plan is, what it should contain, and when you need one is fundamental to LOLER compliance and site safety.</p>
 
@@ -372,8 +372,8 @@ const blogPosts = {
     readTime: '9 min read',
     date: 'February 11, 2026',
     dateModified: 'February 11, 2026',
-    image: '/images/precast-concrete-lift.webp',
-    imageAlt: 'Tandem precast lift in progress — the kind of plan that benefits from independent lift plan checking',
+    image: '/images/services/lift-plan-checking-clipboard-inspection.webp',
+    imageAlt: 'Lifting engineer reviewing a lift plan against a checklist — the document scrutiny carried out during a lift plan checking service',
     content: `
       <p class="lead">If you manage lifting operations on construction projects \u2014 particularly as a principal contractor or tier 1 main contractor \u2014 you will know that subcontractors are required to submit lift plans before carrying out any lifting work on your site. But how do you know whether those plans are actually any good? A lift plan checking service provides independent, competent review of submitted lift plans to ensure they are LOLER compliant, technically accurate, and safe to proceed.</p>
 
@@ -653,8 +653,8 @@ const blogPosts = {
     readTime: '6 min read',
     date: 'January 28, 2026',
     dateModified: 'January 28, 2026',
-    image: '/images/precast-concrete-lift.webp',
-    imageAlt: 'Precast concrete delivery lift — illustrating a typical operation that requires a LOLER lift plan',
+    image: '/images/services/excavator-lifting-concrete-ring-construction.webp',
+    imageAlt: 'Excavator lifting a concrete ring into an excavation — an everyday operation that still requires a LOLER lift plan',
     content: `
       <p class="lead">One of the most common questions I get asked is: "Do I really need a lift plan for this?" The short answer is: yes, LOLER requires ALL lifting operations to be properly planned. But the level of planning detail varies depending on the complexity of the operation.</p>
 
@@ -1019,8 +1019,8 @@ const blogPosts = {
     readTime: '8 min read',
     date: 'January 31, 2026',
     dateModified: 'January 31, 2026',
-    image: '/images/precast-concrete-lift.webp',
-    imageAlt: '360 degree excavator lifting a precast section using object handling kit — typical UK excavator lift plan scenario',
+    image: '/images/services/excavator-lifting-hook-chains-uk.webp',
+    imageAlt: '360-degree excavator lifting a load on hook and chains on a UK site — a lifting operation that requires an excavator lift plan',
     content: `
       <p class="lead">Excavators are primarily designed for digging, but they're frequently used for lifting operations on UK construction sites. While this versatility makes them invaluable, it also creates legal obligations under LOLER 1998.</p>
 
@@ -1239,8 +1239,8 @@ const blogPosts = {
     readTime: '9 min read',
     date: 'February 6, 2026',
     dateModified: 'February 6, 2026',
-    image: '/images/precast-concrete-lift.webp',
-    imageAlt: 'Lifting operation on a UK construction site — example of work requiring a telehandler lift plan',
+    image: '/images/services/telehandler-lift-plan-forks-uk.webp',
+    imageAlt: 'JCB telehandler with boom raised on a UK construction site, set to lift a palletised load on its forks — work that requires a telehandler lift plan',
     content: `
       <p class="lead">Telehandlers are among the most versatile machines on UK construction sites. Originally designed as rough terrain forklifts, they are now routinely used for lifting and placing suspended loads — operations that bring them firmly within the scope of LOLER 1998. Despite this, telehandler lift plans remain one of the most commonly overlooked requirements in construction planning.</p>
 
@@ -1391,8 +1391,8 @@ const blogPosts = {
     readTime: '9 min read',
     date: 'February 6, 2026',
     dateModified: 'February 6, 2026',
-    image: '/images/precast-concrete-lift.webp',
-    imageAlt: 'HIAB-style vehicle-mounted crane lifting a precast load on a UK construction site',
+    image: '/images/services/lorry-loader-hiab-delivery-construction-site.webp',
+    imageAlt: 'Lorry loader (HIAB) offloading a delivery on a UK construction site — a vehicle-mounted crane operation requiring a lorry loader lift plan',
     content: `
       <p class="lead">Lorry loaders \u2014 commonly known by the brand name HIAB, though this is just one of several manufacturers \u2014 are truck-mounted cranes used extensively across UK construction for loading, unloading, and placing materials. Their convenience and availability make them one of the most frequently used pieces of lifting equipment on construction sites, yet lorry loader lift plans are among the most commonly deficient documents submitted for review.</p>
 
@@ -1554,8 +1554,8 @@ const blogPosts = {
     readTime: '12 min read',
     date: 'February 22, 2026',
     dateModified: 'February 22, 2026',
-    image: '/images/precast-concrete-lift.webp',
-    imageAlt: 'Precast concrete panel being lifted by mobile crane on a UK construction site',
+    image: '/images/services/loler-compliance-regulations-standards.webp',
+    imageAlt: 'LOLER 1998 and BS 7121 standards underpinning lift plan checks — what gets verified when a lift plan is reviewed',
     content: `
       <p class="lead">A lift plan that looks complete can still be fundamentally wrong. Over 35 years reviewing lift plans for tier 1 contractors across the UK, I have seen the same problems appear thousands of times \u2014 plans that tick every box on the form but would not actually keep anyone safe on site. Plans where the numbers do not add up. Plans where the person who wrote them clearly never visited the site. Plans that would pass a cursory glance but fall apart the moment you start checking the detail.</p>
 
