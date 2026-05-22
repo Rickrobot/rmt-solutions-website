@@ -1,5 +1,6 @@
 import './globals.css'
 import { Plus_Jakarta_Sans, Space_Grotesk } from 'next/font/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingCallButton from '@/components/FloatingCallButton'
@@ -101,6 +102,7 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
         <FloatingCallButton />
+        <SpeedInsights />
       </body>
     </html>
   )
