@@ -1,27 +1,20 @@
-RMT — Telehandler hero image + blog image de-duplication + hero crop fix
-========================================================================
-Upload these two files via the GitHub web UI (keep the folder paths exactly):
+RMT — Two new blog hero images (Appointed Person + Lifting Operations Audit)
+============================================================================
+Upload via GitHub web UI, keeping folder paths exactly. Files:
 
-  1. app/blog/[slug]/page.js          (EDITED)
-  2. public/images/services/telehandler-lift-plan-forks-uk.webp   (NEW image)
+  1. app/blog/[slug]/page.js                                          (EDITED)
+  2. public/images/services/appointed-person-reviewing-lift-plan-uk.webp  (NEW)
+  3. public/images/services/lifting-operations-audit-inspection-uk.webp   (NEW)
 
-Changes in page.js:
-  A) HERO CROP FIX — the blog hero container was a fixed short banner
-     (h-96) with object-cover, which cropped the top and bottom off every
-     3:2 hero image. Changed to aspect-[3/2] so the container matches the
-     images and the WHOLE photo is shown, responsively, on every post.
-  B) 7 hero image reassignments (image: + imageAlt: only):
-     - telehandler-lift-plans-complete-guide  -> NEW telehandler-lift-plan-forks-uk.webp
-     - what-is-a-lift-plan                     -> mobile-crane-lifting-precast-concrete.webp
-     - what-does-a-lift-plan-checking-service-involve -> lift-plan-checking-clipboard-inspection.webp
-     - when-do-you-need-lift-plan              -> excavator-lifting-concrete-ring-construction.webp
-     - excavator-lift-plans-complete-guide     -> excavator-lifting-hook-chains-uk.webp
-     - lorry-loader-lift-plans-guide           -> lorry-loader-hiab-delivery-construction-site.webp
-     - lift-plan-checking-what-gets-checked... -> loler-compliance-regulations-standards.webp
+Changes in page.js (image: + imageAlt: only):
+  - cpcs-appointed-person-guide            -> appointed-person-reviewing-lift-plan-uk.webp
+  - lifting-operations-audit-what-to-expect-> lifting-operations-audit-inspection-uk.webp
 
-Result: every post now has a unique, topic-relevant hero, shown in full
-(no more top/bottom cropping), with descriptive alt text. The six swap-target
-images already exist in the repo; only the new telehandler image is added.
+This builds on the previous deploy (telehandler image, 7 swaps, hero crop fix).
+Result: mobile-crane-steel-erection.webp is no longer reused; warehouse-steel-
+erection.webp now shared by only two remaining posts (common-lift-planning-
+mistakes and what-is-loler-complete-guide) — one more image clears that.
 
-After deploy: hard-refresh the page (Cmd/Ctrl+Shift+R), and in Google Search
-Console Request Indexing for the telehandler guide URL.
+After deploy: hard-refresh, and Request Indexing in Search Console for:
+  /blog/cpcs-appointed-person-guide
+  /blog/lifting-operations-audit-what-to-expect

@@ -1078,8 +1078,8 @@ const blogPosts = {
     readTime: '9 min read',
     date: 'January 31, 2026',
     dateModified: 'January 31, 2026',
-    image: '/images/mobile-crane-steel-erection.webp',
-    imageAlt: 'CPCS Appointed Person reviewing a mobile crane steel erection lifting operation on site',
+    image: '/images/services/appointed-person-reviewing-lift-plan-uk.webp',
+    imageAlt: 'CPCS Appointed Person in hi-vis and hard hat reviewing a lift plan on a tablet on a UK construction site, with a mobile crane working in the background',
     content: `
       <p class="lead">The CPCS Appointed Person (A61) qualification is the gold standard for lifting operations planning in UK construction. This comprehensive guide explains everything contractors need to know about Appointed Persons.</p>
 
@@ -1730,8 +1730,8 @@ const blogPosts = {
     readTime: '14 min read',
     date: 'February 23, 2026',
     dateModified: 'February 23, 2026',
-    image: '/images/warehouse-steel-erection.webp',
-    imageAlt: 'Mobile crane lifting steel roof truss during warehouse erection — lifting operation under audit conditions',
+    image: '/images/services/lifting-operations-audit-inspection-uk.webp',
+    imageAlt: 'Independent auditor observing a tower crane lifting operation from behind the exclusion zone on a UK construction site, carrying out a lifting operations audit',
     content: `
       <p class="lead">A lifting operations audit is one of the most effective tools available to principal contractors and site managers for verifying that lifting activities on their projects are being managed safely and in compliance with LOLER 1998. Yet despite the term appearing regularly in construction contracts and tender documents, there is remarkably little practical guidance available on what a lifting operations audit actually involves, what the auditor examines, and what you should do to prepare for one.</p>
 
