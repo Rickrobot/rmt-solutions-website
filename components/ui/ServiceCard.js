@@ -27,10 +27,9 @@ export default function ServiceCard({ title, description, features, href, icon: 
       
       <Link
         href={href}
-        aria-label={`Learn more about ${title}`}
         className="inline-flex items-center text-amber-400 hover:text-amber-300 font-semibold group-hover:translate-x-2 transition-transform"
       >
-        Learn more
+        Learn more about {title}
         <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
       </Link>
     </article>

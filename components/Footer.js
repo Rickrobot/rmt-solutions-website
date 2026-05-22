@@ -120,7 +120,7 @@ export default function Footer() {
             every page. Plain prose is preferred over a tag-cloud because
             Google reads sentence context as more authoritative than lists. */}
         <div className="border-t border-slate-800 pt-8 pb-2">
-          <p className="text-gray-500 text-sm leading-relaxed text-center max-w-4xl mx-auto">
+          <p className="text-gray-400 text-sm leading-relaxed text-center max-w-4xl mx-auto">
             Serving construction sites across Manchester, Liverpool, Warrington, Salford,
             Stockport, Trafford, Bolton, Wigan, St Helens, Knowsley, Wirral, Birkenhead,
             Sefton, Widnes, Runcorn, Chester and the wider North West — with same-day site
@@ -130,14 +130,14 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-slate-800 pt-8 mt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} RMT Solutions Ltd. LOLER Compliant Lift Planning Services UK.
           </p>
           <nav className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/locations" className="text-gray-500 hover:text-amber-400 transition text-sm">
+            <Link href="/locations" className="text-gray-400 hover:text-amber-400 transition text-sm">
               Locations
             </Link>
-            <Link href="/sitemap.xml" className="text-gray-500 hover:text-amber-400 transition text-sm">
+            <Link href="/sitemap.xml" className="text-gray-400 hover:text-amber-400 transition text-sm">
               Sitemap
             </Link>
           </nav>

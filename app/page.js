@@ -248,7 +248,7 @@ export default function HomePage() {
                   Call 07803 808093
                 </a>
               </div>
-              <p className="mt-4 text-sm text-gray-500">
+              <p className="mt-4 text-sm text-gray-400">
                 Speak directly to a CPCS Appointed Person — same-day quotes UK-wide.
               </p>
             </div>
@@ -282,7 +282,7 @@ export default function HomePage() {
       {/* Trusted By */}
       <section className="py-16 bg-slate-900 border-y border-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-gray-500 text-sm font-semibold tracking-widest uppercase mb-10">
+          <p className="text-center text-gray-400 text-sm font-semibold tracking-widest uppercase mb-10">
             Trusted by leading UK contractors for lift planning
           </p>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16">
@@ -565,7 +565,7 @@ export default function HomePage() {
               ricky@rmtsolutions.co.uk
             </a>
           </p>
-          <p className="text-gray-500 mt-6 text-sm">
+          <p className="text-gray-400 mt-6 text-sm">
             Based in Warrington, Cheshire • Serving contractors across the UK
           </p>
         </div>
