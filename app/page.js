@@ -5,7 +5,6 @@ import ServiceCard from '@/components/ui/ServiceCard'
 import StatCard from '@/components/ui/StatCard'
 import CaseStudyCard from '@/components/ui/CaseStudyCard'
 import SectionHeader from '@/components/ui/SectionHeader'
-import Testimonial from '@/components/Testimonial'
 
 // JSON-LD Schema for SEO
 const jsonLd = {
@@ -536,9 +535,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Client testimonial — placeholder copy, swap in a real client quote */}
-      <Testimonial />
 
       {/* CTA */}
       <section className="py-24 bg-slate-900">
