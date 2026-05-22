@@ -263,6 +263,21 @@ export default function OverheadGantryCraneLiftPlansPage() {
               sees with factory crane incidents include:
             </p>
           </div>
+          <figure className="mt-8">
+            <div className="relative w-full aspect-[3/2] rounded-xl overflow-hidden">
+              <Image
+                src="/images/services/overhead-gantry-cranes-steel-processing-workshop-uk.webp"
+                alt="Yellow Street overhead travelling bridge cranes on runway rails above a roller-conveyor line in a UK steel-processing and fabrication workshop — fixed overhead lifting equipment that must be planned under LOLER 1998 and BS 7121-7"
+                fill
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                className="object-cover"
+              />
+            </div>
+            <figcaption className="mt-3 text-sm text-slate-500">
+              Overhead travelling bridge cranes serving a roller-conveyor line in a UK steel-processing
+              workshop — the kind of fixed factory lifting equipment covered by BS 7121-7 and LOLER 1998.
+            </figcaption>
+          </figure>
           <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
