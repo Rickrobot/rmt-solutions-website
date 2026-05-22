@@ -2114,7 +2114,7 @@ export default function BlogPost({ params }) {
               a content page), explicit width/height reserves layout
               space (CLS protection), and the alt falls back to a
               constructed sentence if the post lacks an imageAlt field. */}
-          <div className="rounded-3xl overflow-hidden mb-12 relative w-full h-96">
+          <div className="rounded-3xl overflow-hidden mb-12 relative w-full aspect-[3/2]">
             <Image
               src={post.image}
               alt={post.imageAlt || `Featured image for ${post.title}`}

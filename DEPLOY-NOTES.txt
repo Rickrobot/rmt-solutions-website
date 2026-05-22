@@ -1,24 +1,27 @@
-RMT — Telehandler hero image + blog image de-duplication
-=========================================================
-Upload these two files via the GitHub web UI (drag into the repo, keeping
-the folder paths exactly as shown). They overwrite/add in place:
+RMT — Telehandler hero image + blog image de-duplication + hero crop fix
+========================================================================
+Upload these two files via the GitHub web UI (keep the folder paths exactly):
 
-  1. app/blog/[slug]/page.js          (EDITED — 7 hero image reassignments)
+  1. app/blog/[slug]/page.js          (EDITED)
   2. public/images/services/telehandler-lift-plan-forks-uk.webp   (NEW image)
 
-What changed in page.js (image: + imageAlt: only, no content/structure changes):
-  - telehandler-lift-plans-complete-guide  -> NEW telehandler-lift-plan-forks-uk.webp
-  - what-is-a-lift-plan                     -> mobile-crane-lifting-precast-concrete.webp
-  - what-does-a-lift-plan-checking-service-involve -> lift-plan-checking-clipboard-inspection.webp
-  - when-do-you-need-lift-plan              -> excavator-lifting-concrete-ring-construction.webp
-  - excavator-lift-plans-complete-guide     -> excavator-lifting-hook-chains-uk.webp
-  - lorry-loader-lift-plans-guide           -> lorry-loader-hiab-delivery-construction-site.webp
-  - lift-plan-checking-what-gets-checked... -> loler-compliance-regulations-standards.webp
+Changes in page.js:
+  A) HERO CROP FIX — the blog hero container was a fixed short banner
+     (h-96) with object-cover, which cropped the top and bottom off every
+     3:2 hero image. Changed to aspect-[3/2] so the container matches the
+     images and the WHOLE photo is shown, responsively, on every post.
+  B) 7 hero image reassignments (image: + imageAlt: only):
+     - telehandler-lift-plans-complete-guide  -> NEW telehandler-lift-plan-forks-uk.webp
+     - what-is-a-lift-plan                     -> mobile-crane-lifting-precast-concrete.webp
+     - what-does-a-lift-plan-checking-service-involve -> lift-plan-checking-clipboard-inspection.webp
+     - when-do-you-need-lift-plan              -> excavator-lifting-concrete-ring-construction.webp
+     - excavator-lift-plans-complete-guide     -> excavator-lifting-hook-chains-uk.webp
+     - lorry-loader-lift-plans-guide           -> lorry-loader-hiab-delivery-construction-site.webp
+     - lift-plan-checking-what-gets-checked... -> loler-compliance-regulations-standards.webp
 
-Result: precast-concrete-lift.webp (previously reused on 6 posts) no longer
-reused; every post now has a unique, topic-relevant hero with descriptive alt
-text. The six swap-target images already exist in the repo from earlier deploys,
-so only the new telehandler image needs adding.
+Result: every post now has a unique, topic-relevant hero, shown in full
+(no more top/bottom cropping), with descriptive alt text. The six swap-target
+images already exist in the repo; only the new telehandler image is added.
 
-After deploy: in Google Search Console, Request Indexing for the telehandler
-guide URL so the new image/alt is picked up.
+After deploy: hard-refresh the page (Cmd/Ctrl+Shift+R), and in Google Search
+Console Request Indexing for the telehandler guide URL.
