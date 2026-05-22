@@ -193,7 +193,16 @@ export default function SteelErectionPage() {
                 <Link href="/case-studies/chorlton-baths-balcony-lift" className="text-amber-400 hover:text-amber-300 underline">
                   balcony lift verification at Chorlton Baths, Manchester
                 </Link>{' '}
-                for an example of a recent steel installation we attended on site.
+                for an example of a recent steel installation we attended on site. For the planning
+                fundamentals, see the{' '}
+                <Link href="/blog/common-lift-planning-mistakes" className="text-amber-400 hover:text-amber-300 underline">
+                  most common lift planning mistakes
+                </Link>{' '}
+                and our comparison of{' '}
+                <Link href="/blog/mobile-crane-vs-tower-crane" className="text-amber-400 hover:text-amber-300 underline">
+                  mobile crane vs tower crane
+                </Link>{' '}
+                for steelwork.
               </p>
               <ul className="space-y-3">
                 {projectTypes.map((type) => (

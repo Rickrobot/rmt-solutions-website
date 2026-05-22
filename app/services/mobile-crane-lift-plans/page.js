@@ -200,7 +200,14 @@ export default function MobileCraneLiftPlansPage() {
                 A mobile crane lift plan is not a generic template with the site name changed. Every
                 plan we produce is specific to the load, the machine and the ground it stands on, and
                 includes everything an HSE inspector or principal contractor expects to see in a
-                LOLER-compliant lifting documentation pack.
+                LOLER-compliant lifting documentation pack. Not sure which machine suits your lift? See{' '}
+                <Link href="/blog/mobile-crane-vs-tower-crane" className="text-amber-400 hover:text-amber-300 underline">
+                  mobile crane vs tower crane
+                </Link>, or read{' '}
+                <Link href="/blog/what-is-a-lift-plan" className="text-amber-400 hover:text-amber-300 underline">
+                  what a lift plan is
+                </Link>{' '}
+                for the fundamentals.
               </p>
               <ul className="space-y-4">
                 {included.map((item) => (

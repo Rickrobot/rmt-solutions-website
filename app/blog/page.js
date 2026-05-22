@@ -61,7 +61,7 @@ const blogPosts = [
   },
   {
     slug: 'lift-plan-checking-what-gets-checked-and-why-plans-get-rejected',
-    title: 'Lift Plan Checking: What Gets Checked, Why Plans Get Rejected, and How to Get Yours Right First Time',
+    title: 'Lift Plan Checking: What Gets Checked & Why Plans Get Rejected',
     excerpt: 'What actually gets checked during a lift plan review? Learn what causes lift plans to fail, common rejection reasons, and how to get your plans approved first time from an Appointed Person with 35 years of experience.',
     category: 'Services',
     readTime: '12 min read',

@@ -117,8 +117,16 @@ export default function LiftingOperationsAuditPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-8">Why Audit Your Lifting Operations?</h2>
           <p className="text-lg text-slate-600 mb-8">
-            Lifting operations remain one of the highest-risk activities in construction. The consequences of 
+            Lifting operations remain one of the highest-risk activities in construction. The consequences of
             failure are severe - serious injuries, fatalities, significant equipment damage, and prosecution.
+            For a walk-through of the process, see{' '}
+            <Link href="/blog/lifting-operations-audit-what-to-expect" className="text-blue-600 hover:text-blue-700 underline">
+              what to expect from a lifting operations audit
+            </Link>, and our{' '}
+            <Link href="/blog/what-is-loler-complete-guide" className="text-blue-600 hover:text-blue-700 underline">
+              complete guide to LOLER
+            </Link>{' '}
+            covers the regulations we audit against.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -118,9 +118,17 @@ export default function LorryLoaderLiftPlansPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-8">Lorry Loader Lifting Operations</h2>
           <p className="text-lg text-slate-600 mb-8">
-            Lorry loaders (also known as lorry mounted cranes, loader cranes, or often generically called "HIABs") 
-            are essential for construction deliveries and on-site material handling. While many operations are routine, 
-            they still fall under LOLER 1998 and require proper planning.
+            Lorry loaders (also known as lorry mounted cranes, loader cranes, or often generically called "HIABs")
+            are essential for construction deliveries and on-site material handling. While many operations are routine,
+            they still fall under LOLER 1998 and require proper planning. Our{' '}
+            <Link href="/blog/lorry-loader-lift-plans-guide" className="text-blue-600 hover:text-blue-700 underline">
+              complete guide to lorry loader lift plans
+            </Link>{' '}
+            explains the requirements in detail, and{' '}
+            <Link href="/blog/what-is-bs-7121-complete-guide" className="text-blue-600 hover:text-blue-700 underline">
+              BS 7121-4
+            </Link>{' '}
+            sets the standard for safe lorry loader operation.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">

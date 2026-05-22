@@ -154,7 +154,15 @@ export default function LiftPlanReviewPage() {
             Under LOLER Regulation 8, every lifting operation must be properly planned by a competent
             person. For principal contractors, an independent review demonstrates due diligence. For
             subcontractors, having your plans reviewed before submission reduces the risk of rejection,
-            delays, and the cost of standing time while issues are resolved.
+            delays, and the cost of standing time while issues are resolved. Our guides on{' '}
+            <Link href="/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected" className="text-blue-600 hover:text-blue-700 underline">
+              what gets checked and why plans get rejected
+            </Link>{' '}
+            and{' '}
+            <Link href="/blog/what-does-a-lift-plan-checking-service-involve" className="text-blue-600 hover:text-blue-700 underline">
+              what a lift plan checking service involves
+            </Link>{' '}
+            explain the process in more detail.
           </p>
           <p className="text-lg text-slate-600">
             Review is not always a desk exercise either — sometimes the right answer is to confirm the

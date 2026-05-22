@@ -255,8 +255,15 @@ export default function LiftPlansPage() {
                 Comprehensive Lift Plan Documentation
               </h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                Every lift plan we produce is fully LOLER compliant and includes all the documentation 
-                you need for safe lifting operations.
+                Every lift plan we produce is fully LOLER compliant and includes all the documentation
+                you need for safe lifting operations. New to lift planning? Start with our guides on{' '}
+                <Link href="/blog/what-is-a-lift-plan" className="text-amber-400 hover:text-amber-300 underline">
+                  what a lift plan is
+                </Link>{' '}
+                and{' '}
+                <Link href="/blog/when-do-you-need-lift-plan" className="text-amber-400 hover:text-amber-300 underline">
+                  when you need one
+                </Link>.
               </p>
               <ul className="space-y-4">
                 {[

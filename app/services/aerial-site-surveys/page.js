@@ -199,9 +199,17 @@ export default function AerialSiteSurveysPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-8">How Aerial Surveys Support Lift Planning</h2>
           <p className="text-lg text-slate-600 mb-8">
-            When we conduct an aerial survey for lift planning, we are not simply capturing images. We are 
-            assessing the site from the perspective of someone who will plan or review lifting operations on it. 
-            We know what to look for because we know what a lift plan needs.
+            When we conduct an aerial survey for lift planning, we are not simply capturing images. We are
+            assessing the site from the perspective of someone who will plan or review lifting operations on it.
+            We know what to look for because we know what a lift plan needs — see our guide to{' '}
+            <Link href="/blog/what-is-a-lift-plan" className="text-blue-600 hover:text-blue-700 underline">
+              what a lift plan is
+            </Link>{' '}
+            and the{' '}
+            <Link href="/blog/common-lift-planning-mistakes" className="text-blue-600 hover:text-blue-700 underline">
+              common lift planning mistakes
+            </Link>{' '}
+            a good site survey helps you avoid.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">

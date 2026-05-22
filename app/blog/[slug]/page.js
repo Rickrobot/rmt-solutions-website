@@ -11,7 +11,7 @@ const blogPosts = {
     category: 'Compliance',
     readTime: '16 min read',
     date: 'May 19, 2026',
-    dateModified: 'May 19, 2026',
+    dateModified: 'May 22, 2026',
     image: '/images/mobile-crane-steel-erection.webp',
     imageAlt: 'Mobile crane lifting a structural steel section during erection — operation governed by BS 7121 code of practice for safe use of cranes',
     content: `
@@ -224,7 +224,7 @@ const blogPosts = {
     category: 'Compliance',
     readTime: '10 min read',
     date: 'February 11, 2026',
-    dateModified: 'February 11, 2026',
+    dateModified: 'May 22, 2026',
     image: '/images/services/mobile-crane-lifting-precast-concrete.webp',
     imageAlt: 'Mobile crane lifting a precast concrete unit on a UK construction site — a typical lifting operation covered by a lift plan',
     content: `
@@ -386,7 +386,7 @@ const blogPosts = {
   },
   'what-does-a-lift-plan-checking-service-involve': {
     title: 'What Does a Lift Plan Checking Service Involve?',
-    description: 'What does a lift plan checking service involve and why do tier 1 contractors need one? Learn what gets checked, common rejection reasons, and how professional lift plan review improves site safety.',
+    description: 'What does a lift plan checking service involve? Learn what gets checked, common rejection reasons, and how independent lift plan review improves site safety.',
     keywords: 'lift plan checking service, lift plan review, crane lift plan review, lift plan checker, lift plan audit, LOLER lift plan check, appointed person lift plan review, tier 1 contractor lift plan, subcontractor lift plan review, lift plan compliance check',
     category: 'Services',
     readTime: '9 min read',
@@ -524,7 +524,7 @@ const blogPosts = {
     `,
   },  'what-is-loler-complete-guide': {
     title: 'LOLER 1998 Explained: A Plain-English Guide for UK Sites',
-    description: 'LOLER 1998 in plain English — who it applies to, what counts as lifting equipment, thorough examination intervals, and the most common compliance gaps on UK sites.',
+    description: 'LOLER 1998 in plain English: who it applies to, what counts as lifting equipment, thorough examination intervals, and the common compliance gaps on UK sites.',
     category: 'Compliance',
     readTime: '8 min read',
     date: 'January 28, 2026',
@@ -672,7 +672,7 @@ const blogPosts = {
     category: 'Planning',
     readTime: '6 min read',
     date: 'January 28, 2026',
-    dateModified: 'January 28, 2026',
+    dateModified: 'May 22, 2026',
     image: '/images/services/excavator-lifting-concrete-ring-construction.webp',
     imageAlt: 'Excavator lifting a concrete ring into an excavation — an everyday operation that still requires a LOLER lift plan',
     content: `
@@ -899,7 +899,7 @@ const blogPosts = {
   },
   'mobile-crane-vs-tower-crane': {
     title: 'Mobile Crane vs Tower Crane: When to Use Each (UK Guide)',
-    description: 'Choosing between a mobile crane and a tower crane on a UK site? Compare reach, capacity, set-up time, cost and ground-bearing pressure to pick the right machine.',
+    description: 'Mobile crane vs tower crane on a UK site? Compare reach, capacity, set-up time, cost and ground-bearing pressure to pick the right machine.',
     category: 'Equipment',
     readTime: '7 min read',
     date: 'January 28, 2026',
@@ -1184,11 +1184,11 @@ const blogPosts = {
   },
   'common-lift-planning-mistakes': {
     title: 'Common Lift Planning Mistakes (And How to Avoid Them)',
-    description: 'Learn the most common lift planning mistakes UK contractors make and how to avoid them. Expert advice on LOLER compliance, safety, and professional lift planning.',
+    description: 'The most common lift planning mistakes UK contractors make, and how to avoid them. Expert advice on LOLER compliance, safety and lift planning.',
     category: 'Planning',
     readTime: '10 min read',
     date: 'January 31, 2026',
-    dateModified: 'January 31, 2026',
+    dateModified: 'May 22, 2026',
     image: '/images/services/lift-planning-site-desk-review-uk.webp',
     imageAlt: 'Lifting team reviewing and marking up a lift plan on site — catching planning mistakes before the lift goes ahead',
     content: `
@@ -1274,7 +1274,7 @@ const blogPosts = {
   },
   'telehandler-lift-plans-complete-guide': {
     title: 'Telehandler Lift Plans: A Complete Guide for UK Contractors',
-    description: 'Complete guide to telehandler lift plans under LOLER 1998. Covers fixed-frame and 360 slew machines, load charts, stabiliser requirements, and LOLER compliance for telehandler lifting operations.',
+    description: 'Complete guide to telehandler lift plans under LOLER 1998: fixed-frame and 360 slew machines, load charts, stabiliser requirements and compliance.',
     category: 'Planning',
     readTime: '9 min read',
     date: 'February 6, 2026',
@@ -1426,7 +1426,7 @@ const blogPosts = {
   },
   'lorry-loader-lift-plans-guide': {
     title: 'Lorry Loader Lift Plans: LOLER Compliance Guide for UK Contractors',
-    description: 'Complete guide to lorry loader (HIAB) lift plans under LOLER 1998. Covers vehicle positioning, stabiliser requirements, load charts, and compliance for truck-mounted crane operations.',
+    description: 'Complete guide to lorry loader (HIAB) lift plans under LOLER 1998: vehicle positioning, stabiliser requirements, load charts and compliance.',
     category: 'Planning',
     readTime: '9 min read',
     date: 'February 6, 2026',
@@ -1587,8 +1587,8 @@ const blogPosts = {
   },
 
   'lift-plan-checking-what-gets-checked-and-why-plans-get-rejected': {
-    title: 'Lift Plan Checking: What Gets Checked, Why Plans Get Rejected, and How to Get Yours Right First Time',
-    description: 'What actually gets checked during a lift plan review? Learn what causes lift plans to fail, common rejection reasons, and how to get your plans approved first time from an Appointed Person with 35 years of experience.',
+    title: 'Lift Plan Checking: What Gets Checked & Why Plans Get Rejected',
+    description: 'What actually gets checked in a lift plan review? Learn why plans fail, the common rejection reasons, and how to get yours approved first time.',
     keywords: 'lift plan checking, lift plan review, lift plan checker, independent lift plan review, lift plan rejected, lift plan checking service, common lift plan mistakes, LOLER lift plan check, lift plan compliance, who checks lift plans, lift plan approval',
     category: 'Services',
     readTime: '12 min read',
@@ -1919,12 +1919,12 @@ const blogPosts = {
   },
   'overhead-crane-lift-plan-guide': {
     title: 'Do You Need a Lift Plan for an Overhead Crane? UK Guide (BS 7121-7)',
-    description: 'Do overhead, gantry and bridge cranes need a lift plan? A UK guide to LOLER and BS 7121-7 for factory and warehouse crane lifting — when a generic plan is enough and when you need a specific written plan.',
+    description: 'Do overhead, gantry and bridge cranes need a lift plan? A UK guide to LOLER and BS 7121-7 — when a generic plan is enough and when you need a written one.',
     keywords: 'overhead crane lift plan, do you need a lift plan for an overhead crane, gantry crane lift plan, EOT crane lift plan, bridge crane lift plan, factory crane lift plan, BS 7121-7, LOLER overhead crane, tandem lift overhead crane, warehouse crane lifting, jib crane lift plan',
     category: 'Lift Planning',
     readTime: '13 min read',
     date: 'May 21, 2026',
-    dateModified: 'May 21, 2026',
+    dateModified: 'May 22, 2026',
     image: '/images/services/overhead-gantry-crane-factory-uk.webp',
     imageAlt: 'Overhead travelling bridge crane lifting a steel load inside a UK factory — overhead crane lifting operation under LOLER and BS 7121-7',
     content: `
@@ -2025,12 +2025,112 @@ export async function generateStaticParams() {
   }));
 }
 
+// FAQPage structured data — only applied to posts that are genuinely
+// structured as questions and answers. Each answer is drawn faithfully
+// from the body content of the post itself, so the schema accurately
+// reflects what is on the page (a requirement of Google's FAQ rich-result
+// guidelines). This unlocks FAQ rich results in the SERP and makes the
+// Q&A content far easier for AI answer engines to quote directly.
+const faqData = {
+  'what-is-bs-7121-complete-guide': [
+    {
+      q: 'What is BS 7121?',
+      a: 'BS 7121 is the British Standard for the safe use of cranes, published by BSI. It is the recognised UK code of practice covering every aspect of crane operations including planning, equipment selection, personnel competence, communication, supervision and management. It is a family of related standards rather than a single document.',
+    },
+    {
+      q: 'Is BS 7121 a legal requirement?',
+      a: 'No. BS 7121 is a voluntary standard, not law, so failing to follow it is not in itself an offence. However, it is the recognised means of demonstrating compliance with the legal duties under LOLER 1998 and the Health and Safety at Work etc. Act 1974, which require every lifting operation to be properly planned and carried out safely.',
+    },
+  ],
+  'what-is-a-lift-plan': [
+    {
+      q: 'What is a lift plan?',
+      a: 'A lift plan is a documented plan for a lifting operation. It sets out how a load will be lifted safely from one position to another, identifying the equipment to be used, the risks involved and the control measures required. Under LOLER 1998, every lifting operation must be properly planned by a competent person before it takes place.',
+    },
+    {
+      q: 'Is the CITB GC14 form mandatory for a lift plan?',
+      a: 'No. The GC14 is a widely used lift plan template, but it is a tool, not a legal requirement. Other formats are equally acceptable provided they address all the necessary elements. What matters is the content and the competence of the person completing it, not the template.',
+    },
+    {
+      q: 'Who can write a lift plan?',
+      a: 'A lift plan must be prepared by a competent person. For crane and construction lifting operations this typically means a CPCS Appointed Person (A61), who has the training and experience to plan the operation, select the right equipment and assess the site-specific hazards.',
+    },
+  ],
+  'when-do-you-need-lift-plan': [
+    {
+      q: 'When do you need a lift plan?',
+      a: 'LOLER Regulation 8 requires every lifting operation involving lifting equipment to be properly planned by a competent person, appropriately supervised and carried out in a safe manner. So every lift needs planning, but the level of detail scales with risk: simple, routine, low-risk lifts may be covered by a safe system of work, while complex or non-routine lifts need a detailed written lift plan.',
+    },
+    {
+      q: 'What makes a lift complex?',
+      a: 'A lift is generally treated as complex where factors such as the load characteristics, site conditions, equipment configuration, environmental hazards or personnel safety raise the risk. Examples include tandem lifts, lifts over occupied areas, lifts near power lines, or lifts with restricted access. Complex lifts require a detailed written plan from a CPCS Appointed Person.',
+    },
+    {
+      q: 'Do you need a lift plan for an excavator?',
+      a: 'Yes, if the excavator is being used for lifting rather than just digging. Once lifting accessories such as chains or slings are attached, it becomes lifting equipment under LOLER and requires proper planning.',
+    },
+  ],
+  'what-does-a-lift-plan-checking-service-involve': [
+    {
+      q: 'Does every lift on site need a reviewed plan?',
+      a: 'Under LOLER, every lifting operation must be planned. Whether every plan needs independent review depends on the risk profile of the project and your organisation\u2019s procedures. Many tier 1 contractors require all lift plans to be reviewed by an Appointed Person before any lifting work proceeds. The safest approach is to review everything.',
+    },
+    {
+      q: 'Can the lift plan checker also write lift plans?',
+      a: 'Yes. An Appointed Person providing a checking service can also write lift plans where required, for example for complex operations where the subcontractor does not have the competence to plan the lift themselves. However, it is good practice to maintain a separation between writing and checking where possible, so that plans receive genuinely independent review.',
+    },
+    {
+      q: 'What qualifications should the lift plan checker have?',
+      a: 'The checker must be a competent person under LOLER. For crane and construction lifting operations this means a CPCS Appointed Person (A61) as a minimum. Additional qualifications such as NEBOSH or IOSH membership demonstrate broader health and safety competence, and practical experience across different equipment types is equally important.',
+    },
+    {
+      q: 'How quickly can lift plans be reviewed?',
+      a: 'Standard turnaround is typically 24 hours for routine submissions. For urgent requirements such as unplanned lifts or programme-critical operations, same-day review can usually be arranged. The key is establishing clear communication channels and expectations at the outset.',
+    },
+  ],
+  'what-is-loler-complete-guide': [
+    {
+      q: 'Do I need a lift plan for an excavator?',
+      a: 'Yes, if the excavator is being used for lifting rather than just digging. Once you attach lifting accessories such as chains or slings, it becomes lifting equipment under LOLER and requires proper planning.',
+    },
+    {
+      q: 'Who is responsible for LOLER compliance on site?',
+      a: 'Ultimately, the duty holder, usually the main contractor or whoever controls the site. However, everyone involved has responsibilities, including equipment hirers, subcontractors and operatives.',
+    },
+    {
+      q: 'How long should I keep LOLER documentation?',
+      a: 'Thorough examination reports must be kept until the next examination is completed. Lift plans should be kept for the duration of the project plus a reasonable period afterwards, typically three to six months minimum.',
+    },
+    {
+      q: 'Can I do my own lift planning?',
+      a: 'Only if you are competent to do so. For complex lifts you need someone with appropriate training and qualifications, typically a CPCS Appointed Person (A61).',
+    },
+  ],
+};
+
 export default function BlogPost({ params }) {
   const post = blogPosts[params.slug];
 
   if (!post) {
     notFound();
   }
+
+  // FAQPage JSON-LD — rendered only for posts present in faqData above.
+  const postFaqs = faqData[params.slug];
+  const faqJsonLd = postFaqs
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: postFaqs.map((item) => ({
+          '@type': 'Question',
+          name: item.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.a,
+          },
+        })),
+      }
+    : null;
 
   // BlogPosting / Article structured data — Google uses this for article rich
   // results (author, date, reading time inline with the search snippet).
@@ -2099,6 +2199,12 @@ export default function BlogPost({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
 
       {/* Hero Section */}
       <article className="relative pt-32 pb-20">
