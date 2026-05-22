@@ -490,6 +490,56 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* How We Work — process section (adapted from the Tailwind "Studio" template
+          into RMT's dark slate/amber theme). Inline markup, no separate component. */}
+      <section className="py-24 bg-slate-900 construction-pattern border-y border-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            eyebrow="How We Work"
+            title="From Enquiry to Sign-Off"
+            description="Every lift plan follows a structured process built around LOLER 1998 and BS 7121 — so the operation is signed off right, first time."
+          />
+
+          <ol className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                step: '01',
+                title: 'Enquiry & Scope',
+                body: 'You tell us the load, the equipment, the site and the timescale. We confirm what level of planning the operation needs — from a generic schedule to a fully detailed written plan.',
+              },
+              {
+                step: '02',
+                title: 'Site & Load Assessment',
+                body: "We work through load weights, centres of gravity, ground bearing conditions, and radius and capacity against the manufacturer's load charts, plus overhead and site-specific hazards.",
+              },
+              {
+                step: '03',
+                title: 'Lift Plan Produced',
+                body: 'You receive a complete, LOLER-compliant written lift plan: method statement, risk assessment, rigging arrangement, exclusion zones and a clear sequence of operations.',
+              },
+              {
+                step: '04',
+                title: 'Independent Check & Sign-Off',
+                body: "Every plan is checked against BS 7121 and LOLER by a CPCS Appointed Person and issued ready for sign-off — so it's accepted on site without delay.",
+              },
+            ].map((item) => (
+              <li
+                key={item.step}
+                className="rounded-xl border border-slate-700/50 bg-slate-800/40 p-8"
+              >
+                <div className="font-display text-4xl font-bold text-amber-400 mb-4">
+                  {item.step}
+                </div>
+                <h3 className="font-display text-xl font-semibold text-white mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-gray-400 leading-relaxed">{item.body}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
       {/* Why Lift Planning Matters */}
       <section className="py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
