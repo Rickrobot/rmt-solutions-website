@@ -39,6 +39,7 @@ const STATIC_ROUTES = [
   // points here, and Google needs to crawl it to validate that schema.
   { path: '/services',     changefreq: 'monthly', priority: '0.9', images: [OG_IMAGE] },
   { path: '/case-studies', changefreq: 'weekly',  priority: '0.8', images: [HERO_IMAGE] },
+  { path: '/testimonials', changefreq: 'monthly', priority: '0.85', images: [OG_IMAGE] },
   { path: '/contact',      changefreq: 'monthly', priority: '0.7', images: [OG_IMAGE] },
 ];
 
