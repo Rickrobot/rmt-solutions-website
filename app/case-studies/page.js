@@ -24,6 +24,7 @@ export const metadata = {
 const SITE = 'https://www.rmtsafetysolutions.com'
 
 const CASE_STUDIES = [
+  { name: 'Caddick Tawd Valley Junction 4, Skelmersdale', category: 'Steel Erection' },
   { name: 'Chorlton Baths Balcony Lift, Manchester', category: 'Mobile Crane' },
   { name: 'Manchester Residential Development', category: 'Tower Crane' },
   { name: 'Industrial Warehouse - Midlands', category: 'Steel Erection' },
@@ -113,12 +114,52 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* Featured case study — the one detailed write-up we link out to */}
+      {/* Featured case studies — detailed write-ups we link out to */}
       <section className="py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-6 block">
-            Featured Project
+            Featured Projects
           </span>
+
+          {/* Featured: Caddick Tawd Valley Junction 4 (active site) */}
+          <Link
+            href="/case-studies/caddick-tawd-valley-junction-4"
+            className="group block rounded-3xl overflow-hidden border border-slate-700/50 bg-gradient-to-b from-slate-800/50 to-slate-900/50 card-hover mb-8"
+          >
+            <div className="grid md:grid-cols-2">
+              <div className="relative h-64 md:h-auto md:min-h-[320px] bg-gradient-to-br from-slate-700 to-slate-800">
+                <Image
+                  src="/images/caddick-tawd-valley-junction-4-hero.jpg"
+                  alt="Aerial drone view of Caddick Construction's Tawd Valley Junction 4 industrial scheme at White Moss Business Park, Skelmersdale"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-8 lg:p-12 flex flex-col justify-center">
+                <div className="flex flex-wrap items-center gap-3 mb-4">
+                  <span className="bg-amber-500/20 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full">
+                    Steel Erection &amp; Cladding
+                  </span>
+                  <span className="text-gray-500 text-sm">White Moss, Skelmersdale</span>
+                </div>
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-4 group-hover:text-amber-400 transition">
+                  Caddick Tawd Valley Junction 4 — Lift Plan Reviews
+                </h2>
+                <p className="text-gray-400 mb-6 leading-relaxed">
+                  Independent lift plan reviews for every lifting activity on Caddick
+                  Construction&apos;s £14m, 45-unit, 100,000 sq ft industrial scheme for Tawd Valley
+                  Developments — off Junction 4 of the M58. Illustrated with our own drone aerial
+                  imagery from site.
+                </p>
+                <span className="inline-flex items-center text-amber-400 font-semibold">
+                  Read the case study
+                  <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                </span>
+              </div>
+            </div>
+          </Link>
+
+          {/* Featured: Chorlton Baths */}
           <Link
             href="/case-studies/chorlton-baths-balcony-lift"
             className="group block rounded-3xl overflow-hidden border border-slate-700/50 bg-gradient-to-b from-slate-800/50 to-slate-900/50 card-hover"

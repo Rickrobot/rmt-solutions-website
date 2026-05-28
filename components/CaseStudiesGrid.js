@@ -5,6 +5,15 @@ import Link from 'next/link'
 
 const caseStudies = [
   {
+    title: 'Caddick Tawd Valley Junction 4, Skelmersdale',
+    category: 'Steel Erection',
+    duration: 'Ongoing',
+    description: 'Lift plan reviews for all lifting activities on Caddick Construction\'s £14m, 45-unit Tawd Valley Junction 4 industrial scheme at White Moss Business Park, off the M58 in Skelmersdale. Illustrated with RMT drone aerial imagery from site.',
+    highlights: ['45 portal-frame units', '100,000 sq ft', 'Cladding works under way', 'Drone aerial survey'],
+    image: '/images/caddick-tawd-valley-junction-4-hero.jpg',
+    href: '/case-studies/caddick-tawd-valley-junction-4',
+  },
+  {
     title: 'Chorlton Baths Balcony Lift, Manchester',
     category: 'Mobile Crane',
     duration: 'Site visit',

@@ -346,6 +346,17 @@ export default function ChorltonBathsBalconyLiftPage() {
             before work starts on site.
           </p>
 
+          <p className="mt-4 text-gray-300 leading-relaxed">
+            See our other Caddick Construction reference work in the{' '}
+            <Link
+              href="/case-studies/caddick-tawd-valley-junction-4"
+              className="text-amber-400 hover:text-amber-300 underline"
+            >
+              Caddick Tawd Valley Junction 4 lift plan review case study
+            </Link>
+            , a £14m, 45-unit industrial scheme off the M58 at Skelmersdale.
+          </p>
+
           <div className="mt-10 flex flex-wrap gap-2">
             {['Mobile crane', 'Steel balconies', 'Constrained urban site', 'Public segregation', 'Lift plan verification', 'BS 7121', 'LOLER 1998'].map((tag) => (
               <span
