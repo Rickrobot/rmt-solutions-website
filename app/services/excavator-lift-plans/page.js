@@ -7,7 +7,7 @@ import RelatedServices from '@/components/RelatedServices'
 export const metadata = {
   title: 'Excavator Lift Plans UK | ISO 10567 & LOLER',
   description: 'CPCS Appointed Person excavator lift plans for 180° and 360° machines. LOLER 1998 and ISO 10567 compliant. Plan delivered in 24–48 hours.',
-  keywords: 'excavator lift plan UK, excavator lifting operations, 360 excavator lift plan, excavator lifting capacity, LOLER excavator lifting, ISO 10567, CPCS appointed person',
+  keywords: 'excavator lift plan, excavator lifting plan, excavator lift plans, lifting with excavator, excavator lift plan UK, excavator lifting operations, 360 excavator lift plan, excavator lifting capacity, LOLER excavator lifting, ISO 10567, CPCS appointed person',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/excavator-lift-plans',
   },
@@ -110,6 +110,14 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
+      name: 'Is an excavator lifting plan the same as an excavator lift plan?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. "Excavator lifting plan" and "excavator lift plan" are the same document — different wording for the written plan that covers lifting with an excavator. Whenever an excavator handles a suspended load on slings, chains or a lifting eye instead of digging, LOLER 1998 requires that plan, and we prepare it to ISO 10567 and BS 7121.',
+      },
+    },
+    {
+      '@type': 'Question',
       name: 'Do you cover the whole of the UK?',
       acceptedAnswer: {
         '@type': 'Answer',
@@ -170,8 +178,10 @@ export default function ExcavatorLiftPlansPage() {
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mb-8">
             Quote-on-application excavator lift plans prepared by a CPCS Appointed Person with
-            35+ years of construction experience. LOLER 1998 and ISO 10567 compliant plans for
-            180° and 360° machines, trusted by Tier 1 UK contractors.
+            35+ years of construction experience. Whenever you are lifting with an excavator —
+            on slings, chains or a lifting eye rather than digging — LOLER 1998 requires a written
+            plan. We produce ISO 10567 compliant excavator lifting plans for 180° and 360°
+            machines, trusted by Tier 1 UK contractors.
           </p>
 
           {/* Response-time promise badges */}
@@ -739,6 +749,10 @@ export default function ExcavatorLiftPlansPage() {
               {
                 q: 'What is ISO 10567 and why does it matter?',
                 a: 'ISO 10567:2013 (Earth-moving machinery — Lift capacity — Hydraulic excavators) defines how rated lift capacity is calculated and presented on manufacturer load charts. Reading those charts correctly — and applying the right deductions for hitches, slings and out-of-level conditions — is fundamental to a safe excavator lift.',
+              },
+              {
+                q: 'Is an excavator lifting plan the same as an excavator lift plan?',
+                a: 'Yes. "Excavator lifting plan" and "excavator lift plan" are the same document — different wording for the written plan that covers lifting with an excavator. Whenever an excavator handles a suspended load on slings, chains or a lifting eye instead of digging, LOLER 1998 requires that plan, and we prepare it to ISO 10567 and BS 7121.',
               },
               {
                 q: 'Do you cover the whole of the UK?',

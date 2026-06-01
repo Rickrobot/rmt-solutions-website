@@ -8,7 +8,7 @@ import RelatedServices from '@/components/RelatedServices'
 export const metadata = {
   title: 'Lift Plans & Lift Planning UK | LOLER Compliant',
   description: 'Professional lift plans and lift planning from a CPCS Appointed Person. LOLER compliant lift plans for excavators, telehandlers, lorry loaders, mobile and tower cranes. Fast turnaround, UK-wide.',
-  keywords: ['lift plan', 'lift plans', 'lift planning', 'lift planner', 'lift plan writing', 'lifting plan', 'excavator lift plan', 'telehandler lift plan', 'mobile crane lift plan', 'lorry loader lift plan', 'LOLER compliant'],
+  keywords: ['lift plan', 'lift plans', 'lift planning', 'lift planner', 'lift plan writing', 'lifting plan', 'lifting plans', 'excavator lift plan', 'telehandler lift plan', 'mobile crane lift plan', 'lorry loader lift plan', 'LOLER compliant'],
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lift-plans',
   },
@@ -219,7 +219,8 @@ export default function LiftPlansPage() {
               </Link>.
             </p>
             <p>
-              We write <strong className="text-white">lift plans</strong> for every type of lifting
+              We write <strong className="text-white">lift plans</strong> (also called{' '}
+              <strong className="text-white">lifting plans</strong>) for every type of lifting
               operation in UK construction — from a single excavator pick to a multi-crane tandem lift.
               Each plan is produced by a qualified{' '}
               <strong className="text-white">lift planner</strong> &mdash; a CPCS Appointed Person (A61) with
