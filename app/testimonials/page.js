@@ -18,7 +18,7 @@ export const metadata = {
 }
 
 // Testimonials data — verbatim quotes from client correspondence
-// collected between July 2025 and May 2026 across Caddick Construction,
+// collected between July 2025 and June 2026 across Caddick Construction,
 // Wates Construction (NW Region) and Sunel Group renewables projects.
 // Quotes are reproduced as supplied, with only minor typographical and
 // casing corrections applied in line with house style for published
@@ -30,8 +30,9 @@ export const metadata = {
 //     "turn arounds"→"turnarounds", "ever changing"→"ever-changing"
 //   • Rooney — removed a stray space before a full stop and aligned
 //     "Lift Plans" capitalisation to "lift plans" mid-sentence
-// Pryce supplied a long structured Q&A; the website surfaces the short
-// pull-quote with a link to the full response available on request.
+// Pryce and Curtis both supplied long, structured responses; the website
+// surfaces a short pull-quote from each, with the full response noted as
+// available on request.
 const testimonials = [
   {
     id: 'musetti',
@@ -153,6 +154,17 @@ const testimonials = [
     quote:
       "RMT Solutions provided lift plan reviews and excavator lift plans for our solar farm construction projects, and the service has been consistently solid. The documentation is thorough, clearly structured, and has held up well under LOLER scrutiny from both our client and insurers. Turnaround times have been prompt, and whenever we've needed revisions, Ricky has been responsive and straightforward to work with. I'd have no hesitation recommending RMT Solutions to colleagues on other Sunel projects.",
     datePublished: '2026-05-12',
+  },
+  {
+    id: 'curtis',
+    name: 'Wanda Curtis',
+    role: 'Health & Safety Manager',
+    company: 'Caddick Construction',
+    location: 'Group H&S — Wakefield',
+    project: 'Caddick Group lift plan governance — third-party assurance',
+    quote:
+      "RMT Solutions' service provision for Caddick consists of both Lift Plan development and a third-party review/appraisal service, which has become an indispensable asset for our operations. Ricky delivers a masterclass in technical compliance and operational responsiveness.",
+    datePublished: '2026-06-01',
   },
 ]
 
@@ -314,8 +326,8 @@ export default function TestimonialsPage() {
           <div className="space-y-6 text-gray-300 leading-relaxed text-lg">
             <p>
               The reviews above were supplied directly by project managers, senior project managers,
-              site managers, a senior HSE manager and QHSE managers working on live UK construction
-              projects between 2024 and 2026. Contributors include teams at{' '}
+              site managers, senior HSE and QHSE managers and a group-level Health &amp; Safety
+              Manager working on live UK construction projects between 2024 and 2026. Contributors include teams at{' '}
               <Link href="/locations" className="text-amber-400 hover:text-amber-300 underline">
                 Caddick Construction
               </Link>
@@ -342,7 +354,9 @@ export default function TestimonialsPage() {
             <p>
               If you would like to speak with any of the contributors, references are available on
               request. Andrew Pryce&apos;s full structured Q&amp;A response covering LOLER scrutiny,
-              insurer assurance and turnaround time is available on request — contact us via the{' '}
+              insurer assurance and turnaround time, and Wanda Curtis&apos;s detailed
+              governance-and-compliance response covering BS&nbsp;7121, ground bearing pressure
+              calculations and outrigger loadings, are both available on request — contact us via the{' '}
               <Link href="/contact" className="text-amber-400 hover:text-amber-300 underline">
                 contact page
               </Link>
