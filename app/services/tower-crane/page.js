@@ -28,6 +28,7 @@ export const metadata = {
     'LOLER tower crane',
     'tower crane audit',
     'tower crane lift plan',
+    'tower crane lifting plan',
     'CPCS A61 tower crane',
   ],
   alternates: { canonical: 'https://www.rmtsafetysolutions.com/services/tower-crane' },
@@ -138,6 +139,14 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Yes. Multi-crane sites need a coordinated lifting strategy covering anti-collision, slewing priorities, shared exclusion zones, pour windows and concurrent activity rules. We write the multi-crane management plan, audit it on the 8-weekly cycle and review specific lift plans where two or more cranes share airspace.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you write a one-off tower crane lift plan without a full contract?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. As well as ongoing Appointed Person contracts, we write individual tower crane lift plans and tower crane lifting plans for specific operations — erection and dismantle sequences, heavy or tandem picks, and lifts over occupied areas or shared airspace. Each tower crane lift plan is prepared by a CPCS A61 Appointed Person to LOLER 1998 and BS 7121-5.',
       },
     },
   ],
@@ -592,6 +601,10 @@ export default function TowerCranePage() {
               {
                 q: 'What happens at dismantle?',
                 a: 'AP attends dismantle, signs off the handover paperwork and issues a project close-out documentation pack — audit reports, lift plans, accessory register, AP records — for your H&S file and for handover to the client.',
+              },
+              {
+                q: 'Can you write a one-off tower crane lift plan without a full contract?',
+                a: 'Yes. As well as ongoing Appointed Person contracts, we write individual tower crane lift plans and tower crane lifting plans for specific operations — erection and dismantle sequences, heavy or tandem picks, and lifts over occupied areas or shared airspace. Each tower crane lift plan is prepared by a CPCS A61 Appointed Person to LOLER 1998 and BS 7121-5.',
               },
             ].map((f) => (
               <details

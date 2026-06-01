@@ -220,7 +220,7 @@ const blogPosts = {
   'what-is-a-lift-plan': {
     title: 'What is a Lift Plan? UK Construction Rules Under LOLER 1998',
     description: 'A lift plan documents how a lifting operation will be done safely. See what UK contractors must include under LOLER 1998 and when one is legally required.',
-    keywords: 'what is a lift plan, lift plan, lift plan UK, LOLER lift plan, lift plan construction, lift plan contents, who writes a lift plan, lift plan document, crane lift plan, lifting operation plan',
+    keywords: 'what is a lift plan, what is a lifting plan, what is the lifting plan, lifting plan, lift plan, lift plan UK, LOLER lift plan, lift plan construction, lift plan contents, who writes a lift plan, lift plan document, crane lift plan, lifting operation plan',
     category: 'Compliance',
     readTime: '10 min read',
     date: 'February 11, 2026',
@@ -2054,6 +2054,10 @@ const faqData = {
     {
       q: 'Who can write a lift plan?',
       a: 'A lift plan must be prepared by a competent person. For crane and construction lifting operations this typically means a CPCS Appointed Person (A61), who has the training and experience to plan the operation, select the right equipment and assess the site-specific hazards.',
+    },
+    {
+      q: 'Is a lifting plan the same as a lift plan?',
+      a: 'Yes. "Lifting plan" and "lift plan" are used interchangeably across the UK construction industry, and you may also see "crane lift plan" or "lifting operation plan". They all refer to the same thing: the documented plan for a lifting operation required under LOLER 1998. The terminology varies, but the legal requirement and the content do not.',
     },
   ],
   'when-do-you-need-lift-plan': [

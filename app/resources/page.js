@@ -4,7 +4,7 @@ import SectionHeader from '@/components/ui/SectionHeader'
 
 export const metadata = {
   title: 'Free Lift Plan Templates & UK LOLER Guidance',
-  description: 'Free downloadable lift plan templates, risk assessments and UK LOLER guidance for telehandlers, excavators and lorry-loaders. All aligned with BS 7121.',
+  description: 'Free downloadable lift plan and lifting plan templates, risk assessments and UK LOLER guidance for telehandlers, excavators and lorry loaders. All aligned with BS 7121.',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/resources',
   },
@@ -164,9 +164,10 @@ export default function ResourcesPage() {
               Free Lift Plan Templates
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed">
-              Downloadable LOLER and BS 7121 compliant lift plan templates for
-              the equipment we plan most often. Each template ships with an
-              example completion, a risk-assessment skeleton and a guidance
+              Downloadable LOLER and BS 7121 compliant lift plan templates
+              (also called lifting plan templates) for the equipment we plan
+              most often. Each lift plan template ships with an example
+              completion, a risk-assessment skeleton and a guidance
               walkthrough from a CPCS Appointed Person.
             </p>
           </div>
