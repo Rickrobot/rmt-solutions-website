@@ -19,7 +19,8 @@ export const metadata = {
 
 // Testimonials data — verbatim quotes from client correspondence
 // collected between July 2025 and June 2026 across Caddick Construction,
-// Wates Construction (NW Region) and Sunel Group renewables projects.
+// Wates Construction (NW Region), Sunel Group renewables projects and
+// DGS site teams.
 // Quotes are reproduced as supplied, with only minor typographical and
 // casing corrections applied in line with house style for published
 // testimonials. Specifically:
@@ -30,6 +31,9 @@ export const metadata = {
 //     "turn arounds"→"turnarounds", "ever changing"→"ever-changing"
 //   • Rooney — removed a stray space before a full stop and aligned
 //     "Lift Plans" capitalisation to "lift plans" mid-sentence
+//   • Geary — inserted "and was" to fix subject-verb agreement in
+//     "needs for the job were delivered" → "needs for the job and was
+//     delivered"
 // Pryce and Curtis both supplied long, structured responses; the website
 // surfaces a short pull-quote from each, with the full response noted as
 // available on request.
@@ -165,6 +169,17 @@ const testimonials = [
     quote:
       "RMT Solutions' service provision for Caddick consists of both Lift Plan development and a third-party review/appraisal service, which has become an indispensable asset for our operations. Ricky delivers a masterclass in technical compliance and operational responsiveness.",
     datePublished: '2026-06-01',
+  },
+  {
+    id: 'geary',
+    name: 'Matthew Geary',
+    role: 'Site Supervisor',
+    company: 'DGS',
+    location: 'Leeds',
+    project: 'Lift plans for various lift types — Leeds project',
+    quote:
+      'I have most recently worked with Ricky on my project in Leeds. We required an informative and specific lifting plan for various different lifts around the project. I used him twice on that particular contract. Both times the lifting plan met the needs for the job and was delivered in very good time. I have already recommended Ricky to other site managers within my organisation and will definitely be using him again.',
+    datePublished: '2026-05-31',
   },
 ]
 
@@ -331,9 +346,9 @@ export default function TestimonialsPage() {
               <Link href="/locations" className="text-amber-400 hover:text-amber-300 underline">
                 Caddick Construction
               </Link>
-              , Wates Construction (NW Region) and the Sunel Group renewables division. Each quote
-              is reproduced as it was sent, with only minor typographical corrections in line with
-              normal published-testimonial conventions.
+              , Wates Construction (NW Region), the Sunel Group renewables division and DGS site
+              teams in Yorkshire. Each quote is reproduced as it was sent, with only minor
+              typographical corrections in line with normal published-testimonial conventions.
             </p>
             <p>
               The work referenced covers the full range of RMT Solutions{' '}
