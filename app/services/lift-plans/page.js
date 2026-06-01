@@ -1,20 +1,20 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, CheckCircle, FileText, Truck, Shovel, Building2 } from 'lucide-react'
+import { ArrowRight, CheckCircle, FileText, Truck, Shovel, Building2, HelpCircle } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Lift Plan Writing UK | LOLER Compliant',
-  description: 'LOLER compliant lift plans for excavators, telehandlers, lorry loaders, and mobile cranes. Professional lift plan writing service from a CPCS Appointed Person. Fast turnaround, UK-wide.',
-  keywords: ['lift plans', 'excavator lift plan', 'telehandler lift plan', 'mobile crane lift plan', 'lorry loader lift plan', 'LOLER compliant'],
+  title: 'Lift Plans & Lift Planning UK | LOLER Compliant',
+  description: 'Professional lift plans and lift planning from a CPCS Appointed Person. LOLER compliant lift plans for excavators, telehandlers, lorry loaders, mobile and tower cranes. Fast turnaround, UK-wide.',
+  keywords: ['lift plan', 'lift plans', 'lift planning', 'lift planner', 'lift plan writing', 'lifting plan', 'excavator lift plan', 'telehandler lift plan', 'mobile crane lift plan', 'lorry loader lift plan', 'LOLER compliant'],
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lift-plans',
   },
   openGraph: {
-    title: 'Lift Plan Writing UK | LOLER Compliant',
-    description: 'LOLER compliant lift plans for excavators, telehandlers, lorry loaders, and mobile cranes. Professional lift plan writing service from a CPCS Appointed Person.',
+    title: 'Lift Plans & Lift Planning UK | LOLER Compliant',
+    description: 'Professional lift plans and lift planning from a CPCS Appointed Person. LOLER compliant lift plans for excavators, telehandlers, lorry loaders, mobile and tower cranes. Fast turnaround, UK-wide.',
     url: 'https://www.rmtsafetysolutions.com/services/lift-plans',
     images: ['/images/mobile-crane-steel-erection.webp'],
   },
@@ -45,31 +45,45 @@ const serviceJsonLd = {
   },
 }
 
+// FAQ content — single source of truth. The visible FAQ section below and
+// the FAQPage JSON-LD are both generated from this array, so the structured
+// data always matches the on-page content (a requirement of Google's
+// FAQ rich-result guidelines).
+const faqs = [
+  {
+    q: 'What is a lift plan and when do I need one?',
+    a: 'A lift plan is a documented plan for a lifting operation, setting out how a load will be lifted safely, the equipment used, the risks and the control measures. Under LOLER 1998, every lifting operation must be properly planned by a competent person. The level of detail scales with risk — routine lifts need a simple plan, while complex or non-routine lifts need a detailed written lift plan from a CPCS Appointed Person.',
+  },
+  {
+    q: 'How much does a lift plan cost?',
+    a: 'Lift plan costs depend on complexity. A simple excavator or telehandler lift plan with a generic site assessment typically costs £150 to £300. Mobile crane and lorry loader lift plans usually fall in the £250 to £500 range. Complex multi-pick operations, tandem lifts, contract lifts, or plans needing a site visit can cost £500 to £1,500. We provide a fixed price on every enquiry — no hourly billing.',
+  },
+  {
+    q: 'How long does it take to write a lift plan?',
+    a: 'Standard excavator and telehandler lift plans are delivered within 24 to 48 hours of receiving the project information. Mobile crane and lorry loader plans usually take 2 to 5 working days depending on complexity. Plans requiring a site visit are agreed case by case. Urgent same-day plans can be arranged where the load and site information is already available.',
+  },
+  {
+    q: 'Who writes your lift plans?',
+    a: 'Every lift plan is written by a CPCS Appointed Person (A61) with 35 years of construction industry experience. The Appointed Person is the competent person required under LOLER and BS 7121 to plan lifting operations — selecting the equipment, verifying capacity against the load chart, and assessing the site-specific hazards.',
+  },
+  {
+    q: 'What information do you need to write a lift plan?',
+    a: 'To prepare a compliant lift plan we need: the load (weight, dimensions, lift points), the lifting equipment proposed (make, model, configuration), the site (address, ground conditions, overhead and underground services, adjacent activities), the operation (start position, end position, working radius, any obstructions), and the project (principal contractor, dates, communication route to the site team).',
+  },
+  {
+    q: 'Do you need a site visit to write a lift plan?',
+    a: 'For straightforward lifts with good site information and clear photographs or drawings, a site visit is not always required. For complex operations — tandem lifts, lifts near live infrastructure, lifts on poor ground, or anything outside routine practice — a site visit is recommended and is included in the quoted price. We discuss this on every enquiry before agreeing the scope.',
+  },
+]
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      "name": "How much does a lift plan cost?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Lift plan costs depend on complexity. A simple excavator or telehandler lift plan with a generic site assessment typically costs £150 to £300. Mobile crane and lorry loader lift plans usually fall in the £250 to £500 range. Complex multi-pick operations, tandem lifts, contract lifts, or plans needing a site visit can cost £500 to £1,500. We provide a fixed price on every enquiry — no hourly billing." }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does it take to write a lift plan?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Standard excavator and telehandler lift plans are delivered within 24 to 48 hours of receiving the project information. Mobile crane and lorry loader plans usually take 2 to 5 working days depending on complexity. Plans requiring a site visit are agreed case by case. Urgent same-day plans can be arranged where the load and site information is already available." }
-    },
-    {
-      "@type": "Question",
-      "name": "What information do you need to write a lift plan?",
-      "acceptedAnswer": { "@type": "Answer", "text": "To prepare a compliant lift plan we need: the load (weight, dimensions, lift points), the lifting equipment proposed (make, model, configuration), the site (address, ground conditions, overhead and underground services, adjacent activities), the operation (start position, end position, working radius, any obstructions), and the project (principal contractor, dates, communication route to the site team)." }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you need a site visit to write a lift plan?",
-      "acceptedAnswer": { "@type": "Answer", "text": "For straightforward lifts with good site information and clear photographs or drawings, a site visit is not always required. For complex operations — tandem lifts, lifts near live infrastructure, lifts on poor ground, or anything outside routine practice — a site visit is recommended and is included in the quoted price. We discuss this on every enquiry before agreeing the scope." }
-    }
-  ],
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  })),
 }
 
 
@@ -172,6 +186,60 @@ export default function LiftPlansPage() {
               Get a Quote
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Pillar intro — keyword-rich body copy targeting the high-volume
+          head terms: "lift plan", "lift plans", "lift planning",
+          "lift planner". Written as genuine, useful prose, not stuffed. */}
+      <section className="py-20 bg-slate-900 border-b border-slate-800">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+            Lift Planning Explained
+          </span>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
+            Professional Lift Plans &amp; Lift Planning, UK-Wide
+          </h2>
+          <div className="space-y-5 text-gray-300 leading-relaxed text-lg">
+            <p>
+              A <strong className="text-white">lift plan</strong> is the documented plan for a lifting
+              operation — it sets out how a load will be lifted safely, the equipment used, the risks
+              involved and the control measures required. Under the Lifting Operations and Lifting
+              Equipment Regulations 1998 (LOLER), every lifting operation must be properly planned by a
+              competent person before it takes place. Our <strong className="text-white">lift planning</strong>{' '}
+              service gives you that plan, written, checked and ready to sign off on site. If you are new
+              to the topic, our guides explain{' '}
+              <Link href="/blog/what-is-a-lift-plan" className="text-amber-400 hover:text-amber-300 underline">
+                what a lift plan is
+              </Link>{' '}
+              and{' '}
+              <Link href="/blog/when-do-you-need-lift-plan" className="text-amber-400 hover:text-amber-300 underline">
+                when you need one
+              </Link>.
+            </p>
+            <p>
+              We write <strong className="text-white">lift plans</strong> for every type of lifting
+              operation in UK construction — from a single excavator pick to a multi-crane tandem lift.
+              Each plan is produced by a qualified{' '}
+              <strong className="text-white">lift planner</strong> &mdash; a CPCS Appointed Person (A61) with
+              35 years of site experience &mdash; so the radius and capacity calculations, rigging
+              arrangement, ground bearing assessment and site-specific hazards are all addressed to
+              LOLER 1998 and{' '}
+              <Link href="/blog/what-is-bs-7121-complete-guide" className="text-amber-400 hover:text-amber-300 underline">
+                BS 7121
+              </Link>{' '}
+              best practice.
+            </p>
+            <p>
+              Whether you need a one-off lift plan, a batch of plans for a programme of works, or an{' '}
+              <Link href="/services/lift-plan-checking" className="text-amber-400 hover:text-amber-300 underline">
+                independent check of plans
+              </Link>{' '}
+              submitted by your subcontractors, you are dealing directly with the lift planner who
+              writes them. No call centres, no hourly billing — a fixed price and a fast turnaround on
+              every enquiry.
+            </p>
           </div>
         </div>
       </section>
@@ -302,6 +370,36 @@ export default function LiftPlansPage() {
       </section>
 
       {/* Inline quick-quote form */}
+      {/* FAQ — visible Q&A that mirrors the FAQPage JSON-LD above, so the
+          structured data is backed by on-page content (Google requirement)
+          and the answers can be quoted directly by AI answer engines. */}
+      <section className="py-24 bg-slate-900 border-t border-slate-800">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            eyebrow="Lift Plan FAQs"
+            title="Lift Plan &amp; Lift Planning Questions"
+            description="Common questions about our lift plans, lift planning service, costs and turnaround."
+          />
+          <div className="space-y-5">
+            {faqs.map((faq) => (
+              <details
+                key={faq.q}
+                className="group bg-slate-800/40 border border-slate-700/50 rounded-2xl p-6 open:border-amber-500/40 transition"
+              >
+                <summary className="flex items-start justify-between cursor-pointer list-none">
+                  <span className="flex items-start text-white font-semibold text-lg">
+                    <HelpCircle className="w-5 h-5 text-amber-400 mr-3 mt-1 flex-shrink-0" />
+                    {faq.q}
+                  </span>
+                  <ArrowRight className="w-5 h-5 text-amber-400 ml-4 mt-1 flex-shrink-0 transition-transform group-open:rotate-90" />
+                </summary>
+                <p className="text-gray-300 leading-relaxed mt-4 pl-8">{faq.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-slate-950">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <InlineQuoteForm serviceName="Lift Plan Writing" heading="Get a quote for lift plan writing" />
