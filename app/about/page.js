@@ -4,7 +4,7 @@ import { Award, Clock, Users, Shield, ArrowRight } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 
 export const metadata = {
-  title: 'About | CPCS Appointed Person with 35 Years Experience',
+  title: 'About | CPCS Appointed Person, 35 Years',
   description: 'Meet Ricky Marsh, CPCS Appointed Person (A61, Reg 40389279) with 35 years in UK construction. NEBOSH Diploma, CertIOSH, MIIRSM, TIFSM.',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/about',

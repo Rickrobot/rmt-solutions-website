@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Free Telehandler Lift Plan Templates UK | LOLER Compliant',
-  description: 'Download free telehandler lift plan templates for underslung/suspended load operations and fork-carried load operations. LOLER compliant, prepared by a CPCS Appointed Person.',
+  title: 'Free Telehandler Lift Plan Templates UK',
+  description: 'Download free telehandler lift plan templates for fork-carried and underslung/suspended loads. LOLER compliant, from a CPCS Appointed Person.',
   keywords: 'telehandler lift plan template, telehandler lift plan template UK, telescopic handler lift plan template, telehandler lifting template free download, LOLER telehandler template',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/resources/telehandler-lift-plan-templates',

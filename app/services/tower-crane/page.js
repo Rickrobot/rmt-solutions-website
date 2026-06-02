@@ -19,7 +19,7 @@ import RelatedServices from '@/components/RelatedServices'
 export const metadata = {
   title: 'Tower Crane Contracts UK | AP & Audits',
   description:
-    'Ongoing tower crane Appointed Person contracts under BS 7121-1 and LOLER 1998. 8-weekly audits, lift plan review, on-call AP support and full documentation pack. Tier 1 contractor approved.',
+    'Ongoing tower crane Appointed Person contracts under BS 7121-1 and LOLER 1998: 8-weekly audits, lift plan review and on-call AP support. Tier 1 approved.',
   keywords: [
     'tower crane contract',
     'tower crane appointed person',

@@ -6,7 +6,7 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Mobile Crane Lift Plans UK | LOLER & BS 7121 Compliant',
+  title: 'Mobile Crane Lift Plans UK | BS 7121',
   // SEO audit (May 2026): trimmed from 231 chars to ~155 to avoid SERP
   // truncation while keeping the core keywords (mobile crane lift plans,
   // CPCS Appointed Person, LOLER, BS 7121).

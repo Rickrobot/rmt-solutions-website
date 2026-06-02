@@ -2,9 +2,9 @@ import Link from 'next/link'
 import { Quote, Star, ArrowRight } from 'lucide-react'
 
 export const metadata = {
-  title: 'Client Testimonials | What UK Contractors Say About RMT Solutions',
+  title: 'Client Testimonials | UK Contractors',
   description:
-    'Independent testimonials from Caddick Construction, Wates Construction and Sunel Group project managers, site managers and HSE managers on RMT Solutions Ltd lift plan reviews, written lift plans and LOLER-compliant lifting documentation.',
+    'Independent testimonials from Caddick, Wates and Sunel Group project, site and HSE managers on RMT Solutions lift plan reviews and LOLER lifting documentation.',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/testimonials',
   },

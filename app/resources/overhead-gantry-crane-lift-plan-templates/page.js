@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Free Overhead & Gantry Crane Lift Plan Template | BS 7121-7',
+  title: 'Free Overhead Crane Lift Plan Template',
   // SEO audit (May 2026): trimmed from 220 chars to ~155 to avoid SERP truncation.
   description: 'Free overhead, gantry & bridge crane lift plan template to BS 7121-7 and LOLER 1998. 11 fillable sections, from a CPCS Appointed Person. Download now.',
   keywords: 'overhead crane lift plan template, gantry crane lift plan template, free overhead crane lift plan, EOT crane lift plan template, bridge crane lift plan, BS 7121-7 template, LOLER lift plan template, factory crane lift plan template, tandem lift plan template',

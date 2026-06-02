@@ -5,8 +5,8 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Overhead & Gantry Crane Lift Plans UK | BS 7121-7 & LOLER',
-  description: 'CPCS Appointed Person lift plans for overhead travelling, gantry and bridge cranes in factories and warehouses. BS 7121-7 and LOLER 1998 compliant. Plan delivered in 24–48 hours.',
+  title: 'Overhead & Gantry Crane Lift Plans UK',
+  description: 'CPCS Appointed Person lift plans for overhead travelling, gantry and bridge cranes. BS 7121-7 and LOLER 1998 compliant. Plan delivered in 24–48 hours.',
   keywords: 'overhead crane lift plan, gantry crane lift plan, overhead travelling crane lift plan, EOT crane lift plan, bridge crane lift plan, factory crane lift plan, BS 7121-7, LOLER overhead crane, jib crane lift plan, warehouse crane lifting',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/overhead-gantry-crane-lift-plans',

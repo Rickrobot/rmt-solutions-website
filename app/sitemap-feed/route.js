@@ -44,6 +44,7 @@ const STATIC_ROUTES = [
 ];
 
 const SERVICE_SLUGS = [
+  'appointed-person',
   'excavator-lift-plans',
   'telehandler-lift-plans',
   'lorry-loader-lift-plans',

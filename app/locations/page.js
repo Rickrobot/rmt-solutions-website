@@ -110,7 +110,7 @@ const CITIES = [
 export const metadata = {
   title: 'Crane Lift Plan Services Across the UK',
   description:
-    'CPCS Appointed Person services and LOLER compliant crane lift plans across Warrington, Manchester, Liverpool, Leeds, Birmingham, London, Bristol, Glasgow and Edinburgh. Same-day quotes — call 07803 808093.',
+    'CPCS Appointed Person services and LOLER-compliant crane lift plans across Warrington, Manchester, Liverpool, Leeds, Birmingham, London and Glasgow.',
   keywords: [
     'crane lift plan uk',
     'crane lift plan manchester',

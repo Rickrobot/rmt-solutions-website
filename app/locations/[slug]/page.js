@@ -34,7 +34,7 @@ const LOCATIONS = {
     region: 'Greater Manchester',
     metaTitle: 'Lift Plan Manchester | Appointed Person',
     metaDescription:
-      'LOLER compliant lift plans across Manchester and Greater Manchester. CPCS Appointed Person services for tower crane, mobile crane, excavator and steel erection projects. Same-day quotes — call 07803 808093.',
+      'LOLER compliant lift plans across Manchester and Greater Manchester. CPCS Appointed Person for tower crane and steel erection. Call 07803 808093.',
     travelMinutes: 35,
     intro:
       "Manchester is one of the most active construction markets in the UK, with NOMA, Mayfield, Victoria North, ID Manchester, and the ongoing Town Hall refurbishment generating a constant flow of high-value lifting operations. We work with main contractors, tower crane operators, steel erectors and specialist plant hire firms across Greater Manchester delivering LOLER compliant lift plans, lift plan checking, and Appointed Person contracts.",
@@ -58,7 +58,7 @@ const LOCATIONS = {
     region: 'Greater Manchester',
     metaTitle: 'Lift Plan Salford | Appointed Person',
     metaDescription:
-      'LOLER compliant lift plans across Salford, MediaCityUK and Salford Quays. CPCS Appointed Person services for residential, commercial and broadcast-sector projects. Same-day quotes — call 07803 808093.',
+      'LOLER compliant lift plans across Salford, MediaCityUK and Salford Quays. CPCS Appointed Person for residential and commercial work. Call 07803 808093.',
     travelMinutes: 30,
     intro:
       "Salford has been one of the highest-density construction markets in Greater Manchester for over a decade — driven by MediaCityUK, Salford Quays, the New Bailey commercial estate, the Salford Crescent regeneration framework, and an ongoing residential pipeline that consistently has more tower cranes in the air than most UK cities. We deliver LOLER compliant lift planning, lift plan checking, and Appointed Person contracts to main contractors, specialist lifting firms and steel erectors working across Salford and the wider M60 corridor.",
@@ -76,7 +76,7 @@ const LOCATIONS = {
     region: 'Greater Manchester',
     metaTitle: 'Lift Plan Stockport | Appointed Person',
     metaDescription:
-      'LOLER compliant lift plans across Stockport and the Mayoral Development Corporation pipeline. CPCS Appointed Person services for town-centre, industrial and data-centre projects. Same-day quotes — call 07803 808093.',
+      'LOLER compliant lift plans across Stockport and the MDC pipeline. CPCS Appointed Person for town-centre, industrial and data-centre work. Call 07803 808093.',
     travelMinutes: 45,
     intro:
       "Stockport's town-centre regeneration, the Stockport Mayoral Development Corporation pipeline, the ongoing Stockport 8 transport interchange and a heavy run of industrial estate and data centre work across Bredbury, Reddish and Heaton make the borough one of the most consistent lift planning markets in Greater Manchester. We provide lift planning, lift plan checking, and Appointed Person services across Stockport, Cheadle, Bredbury and the wider M60 South corridor.",
@@ -94,7 +94,7 @@ const LOCATIONS = {
     region: 'Greater Manchester',
     metaTitle: 'Lift Plan Trafford | Appointed Person',
     metaDescription:
-      'LOLER compliant lift plans across Trafford Park, the Trafford Centre and the Trafford logistics belt. CPCS Appointed Person services for industrial and warehouse-sector projects. Same-day quotes — call 07803 808093.',
+      'LOLER compliant lift plans across Trafford Park and the Trafford logistics belt. CPCS Appointed Person for industrial and warehouse work. Call 07803 808093.',
     travelMinutes: 30,
     intro:
       "Trafford has long been one of the highest-volume industrial and logistics markets in the North West — Trafford Park is the largest industrial estate in Europe by floor area, and the borough's ongoing Trafford Centre regeneration, Carrington pipeline, and Manchester Ship Canal-side warehouse activity sustain a constant demand for lift planning. We work with main contractors, steel erectors and specialist plant hire firms across Trafford on LOLER compliant lift plans, plan checking, and Appointed Person contracts.",
@@ -112,7 +112,7 @@ const LOCATIONS = {
     region: 'Merseyside',
     metaTitle: 'Lift Plan Liverpool | Appointed Person',
     metaDescription:
-      'LOLER compliant lift plans across Liverpool and Merseyside. CPCS Appointed Person services for residential, commercial and infrastructure projects. Same-day quotes — call 07803 808093.',
+      'LOLER compliant lift plans across Liverpool and Merseyside. CPCS Appointed Person for residential, commercial and infrastructure work. Call 07803 808093.',
     travelMinutes: 40,
     intro:
       "Liverpool has been one of the UK's most consistent construction markets since Liverpool Waters, the Knowledge Quarter, and the Anfield expansion drove a fresh wave of activity along the waterfront and into Wavertree. We provide lift planning, lift plan checking, and Appointed Person services across Liverpool, Wirral, Sefton, and the wider Merseyside region.",
@@ -130,7 +130,7 @@ const LOCATIONS = {
     region: 'Merseyside',
     metaTitle: 'Lift Plan Wirral | Appointed Person',
     metaDescription:
-      'LOLER compliant lift plans across Wirral, Birkenhead and Wirral Waters. CPCS Appointed Person services for residential, commercial and dockside regeneration projects. Same-day quotes — call 07803 808093.',
+      'LOLER compliant lift plans across Wirral, Birkenhead and Wirral Waters. CPCS Appointed Person for residential and dockside regeneration. Call 07803 808093.',
     travelMinutes: 50,
     intro:
       "Wirral is in the early stages of one of the largest sustained regeneration programmes in the UK — Peel L&P's Wirral Waters masterplan along the Birkenhead docks, alongside Liscard town-centre renewal, the Hind Street regeneration zone and a strong residential pipeline through West Wirral. We deliver lift planning, plan checking, and Appointed Person services to main contractors, specialist lifting firms and steel erectors working across the peninsula.",
@@ -148,7 +148,7 @@ const LOCATIONS = {
     region: 'West Yorkshire',
     metaTitle: 'Lift Plan Leeds | Appointed Person',
     metaDescription:
-      'LOLER compliant lift plans across Leeds and West Yorkshire. CPCS Appointed Person services for SOYO, South Bank, Aire Park and major Yorkshire infrastructure. Same-day quotes — call 07803 808093.',
+      'LOLER compliant lift plans across Leeds and West Yorkshire. CPCS Appointed Person for SOYO, South Bank and Aire Park schemes. Call 07803 808093.',
     travelMinutes: 75,
     intro:
       "Leeds South Bank, SOYO, Aire Park, the Hunslet regeneration and the wider Channel 4 / HMRC-led commercial pipeline have made Leeds one of the strongest construction markets outside London. We provide lift planning and Appointed Person services across Leeds, Bradford, Wakefield, and the wider West Yorkshire region.",
@@ -166,7 +166,7 @@ const LOCATIONS = {
     region: 'West Midlands',
     metaTitle: 'Lift Plan Birmingham | Appointed Person',
     metaDescription:
-      'LOLER compliant lift plans across Birmingham and the West Midlands. CPCS Appointed Person services for HS2, Paradise, Smithfield and Big City Plan projects. Same-day quotes — call 07803 808093.',
+      'LOLER compliant lift plans across Birmingham and the West Midlands. CPCS Appointed Person for HS2, Paradise and Smithfield projects. Call 07803 808093.',
     travelMinutes: 100,
     intro:
       "Birmingham's Big City Plan, HS2 Curzon Street, Paradise, Smithfield, and the surrounding regeneration pipeline make the West Midlands one of the most lift-intensive construction markets in Europe right now. We provide lift planning, lift plan checking, and Appointed Person contracts across Birmingham, Coventry, Wolverhampton, and the wider West Midlands.",
@@ -184,7 +184,7 @@ const LOCATIONS = {
     region: 'Greater London',
     metaTitle: 'Lift Plan London | Appointed Person',
     metaDescription:
-      'LOLER compliant lift plans across London. CPCS Appointed Person services for residential, commercial, infrastructure, and city-centre projects. Same-day quotes — call 07803 808093.',
+      'LOLER compliant lift plans across London. CPCS Appointed Person for residential, commercial and infrastructure projects. Call 07803 808093.',
     travelMinutes: 180,
     intro:
       "London is the UK's most demanding lifting environment — dense city-centre footprints, complex temporary works, tower crane oversail agreements, listed building constraints, and a regulatory environment shaped by the HSE, Network Rail, TfL, and the boroughs. We provide lift planning, lift plan checking, and Appointed Person services for London-based main contractors, specialist lifting firms, and steel erectors.",
@@ -202,7 +202,7 @@ const LOCATIONS = {
     region: 'South West',
     metaTitle: 'Lift Plan Bristol | Appointed Person',
     metaDescription:
-      'LOLER compliant lift plans across Bristol and the South West. CPCS Appointed Person services for Temple Quarter, Bristol Arena and major regional schemes. Same-day quotes — call 07803 808093.',
+      'LOLER compliant lift plans across Bristol and the South West. CPCS Appointed Person for Temple Quarter and Bristol Arena schemes. Call 07803 808093.',
     travelMinutes: 180,
     intro:
       "Bristol's Temple Quarter regeneration, the YTL Arena scheme, the University of Bristol enterprise campus, and the surrounding South West construction pipeline have made the region one of the most active mid-sized markets in the UK. We provide lift planning and Appointed Person services across Bristol, Bath, and the wider South West.",
@@ -220,7 +220,7 @@ const LOCATIONS = {
     region: 'Scotland',
     metaTitle: 'Lift Plan Glasgow | Appointed Person',
     metaDescription:
-      'LOLER compliant lift plans across Glasgow and the central belt. CPCS Appointed Person services for Buchanan Quarter, Sighthill, Glasgow Harbour and major Scottish infrastructure. Same-day quotes — call 07803 808093.',
+      'LOLER compliant lift plans across Glasgow and the central belt. CPCS Appointed Person for Buchanan Quarter and Glasgow Harbour. Call 07803 808093.',
     travelMinutes: 210,
     intro:
       "Glasgow's Buchanan Quarter, Sighthill regeneration, Glasgow Harbour, and the surrounding central-belt construction pipeline have made Scotland a strong mid-cycle market for lift planning services. We provide lift planning, lift plan checking, and Appointed Person services across Glasgow, Edinburgh, and the central belt.",
@@ -238,7 +238,7 @@ const LOCATIONS = {
     region: 'Scotland',
     metaTitle: 'Lift Plan Edinburgh | Appointed Person',
     metaDescription:
-      'LOLER compliant lift plans across Edinburgh and Lothian. CPCS Appointed Person services for St James Quarter, Granton Waterfront, Haymarket and listed-building work. Same-day quotes — call 07803 808093.',
+      'LOLER compliant lift plans across Edinburgh and Lothian. CPCS Appointed Person for St James Quarter and listed-building work. Call 07803 808093.',
     travelMinutes: 240,
     intro:
       "Edinburgh's St James Quarter, Granton Waterfront, Haymarket, and the surrounding listed-building refurbishment pipeline create a particularly demanding lift planning environment — tight city-centre tower crane envelopes, listed building constraints, and the city's UNESCO World Heritage status all driving careful planning detail. We provide lift planning and Appointed Person services across Edinburgh and Lothian.",
@@ -253,6 +253,7 @@ const LOCATIONS = {
 }
 
 const SERVICE_LINKS = [
+  { slug: 'appointed-person',      title: 'Appointed Person' },
   { slug: 'lift-plans',                title: 'Lift Plan Writing' },
   { slug: 'lift-plan-checking',        title: 'Lift Plan Checking' },
   { slug: 'lift-plan-review',          title: 'Lift Plan Review' },

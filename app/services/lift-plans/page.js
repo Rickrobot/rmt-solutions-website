@@ -6,8 +6,8 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Lift Plans & Lift Planning UK | LOLER Compliant',
-  description: 'Professional lift plans and lift planning from a CPCS Appointed Person. LOLER compliant lift plans for excavators, telehandlers, lorry loaders, mobile and tower cranes. Fast turnaround, UK-wide.',
+  title: 'Lift Plans & Lift Planning UK',
+  description: 'LOLER-compliant lift plans for excavators, telehandlers, lorry loaders, mobile and tower cranes, from a CPCS Appointed Person. Fast UK-wide turnaround.',
   keywords: ['lift plan', 'lift plans', 'lift planning', 'lift planner', 'lift plan writing', 'lifting plan', 'lifting plans', 'excavator lift plan', 'telehandler lift plan', 'mobile crane lift plan', 'lorry loader lift plan', 'LOLER compliant'],
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lift-plans',

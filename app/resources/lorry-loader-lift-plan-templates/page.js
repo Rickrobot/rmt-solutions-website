@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Free Lorry Loader Lift Plan Template (HIAB)',
-  description: 'Download a free lorry loader / HIAB lift plan template. 17-section, BS 7121-4 compliant, ALLMI-aligned, with 12 pre-populated hazards and a 5×5 risk matrix. From a CPCS Appointed Person.',
+  description: 'Free lorry loader / HIAB lift plan template. 17-section, BS 7121-4 compliant, ALLMI-aligned, with pre-populated hazards and a 5×5 risk matrix.',
   keywords: 'lorry loader lift plan template, HIAB lift plan template, free lorry loader lift plan, ALLMI lift plan template, BS 7121-4 lorry loader, lorry mounted crane lift plan, loader crane lift plan, HIAB risk assessment template, LOLER lorry loader lift plan, lift plan template download UK',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/resources/lorry-loader-lift-plan-templates',

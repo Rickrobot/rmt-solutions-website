@@ -23,6 +23,14 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 
 const SERVICES = [
   {
+    slug: 'appointed-person',
+    name: 'CPCS A61 Appointed Person',
+    icon: ShieldCheck,
+    category: 'Core',
+    blurb:
+      'A named CPCS A61 Appointed Person for your lifting operations — planning, lift plan production and sign-off to LOLER 1998 and BS 7121. UK-wide.',
+  },
+  {
     slug: 'lift-plans',
     name: 'Lift Plan Writing',
     icon: ClipboardCheck,
@@ -126,9 +134,9 @@ const SERVICES = [
 const CATEGORY_ORDER = ['Core', 'Independent review', 'By plant type', 'Ongoing contracts', 'Specialist']
 
 export const metadata = {
-  title: 'Lift Planning Services — CPCS Appointed Person | RMT Solutions',
+  title: 'UK Lift Planning & Appointed Person Services',
   description:
-    'CPCS Appointed Person lift planning services across the UK. Lift plan writing, independent lift plan checking, tower crane contracts, steel erection planning and aerial site surveys. Same-day quotes — call 07803 808093.',
+    'CPCS Appointed Person lift planning across the UK: lift plan writing, independent checking, tower crane contracts and steel erection. Same-day quotes.',
   keywords: [
     'crane lift planning services',
     'lift plan writing service',

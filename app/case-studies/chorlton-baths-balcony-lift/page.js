@@ -7,7 +7,7 @@ const URL = `${SITE}/case-studies/chorlton-baths-balcony-lift`
 const HERO_IMAGE = '/images/chorlton-baths-balcony-lift.jpg'
 
 export const metadata = {
-  title: 'Balcony Lift Verification, Chorlton Baths Manchester | Case Study',
+  title: 'Chorlton Baths Balcony Lift | Case Study',
   // SEO audit (May 2026): trimmed from 294 chars to ~155 so the snippet
   // displays in full on Google instead of being truncated mid-sentence.
   description:

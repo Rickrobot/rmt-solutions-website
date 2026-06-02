@@ -7,7 +7,7 @@ import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Steel Erection Planning UK | Lift Plans',
-  description: 'Complete lift planning for structural steel erection. Fabrication drawing reviews, erection sequences, crane selection, tandem lifts. CPCS Appointed Person services.',
+  description: 'Lift planning for structural steel erection: fabrication drawing reviews, erection sequences, crane selection and tandem lifts. CPCS Appointed Person.',
   keywords: ['steel erection', 'structural steel', 'steel frame', 'tandem lifts', 'crane selection', 'erection sequence'],
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/steel-erection',

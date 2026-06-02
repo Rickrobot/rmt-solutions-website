@@ -11,6 +11,7 @@ export default function Header() {
   const timeoutRef = useRef(null)
 
   const services = [
+    { name: 'CPCS A61 Appointed Person', href: '/services/appointed-person' },
     { name: 'Lift Plan Writing', href: '/services/lift-plans' },
     { name: 'Lift Plan Checking', href: '/services/lift-plan-checking' },
     { name: 'Lift Plan Review', href: '/services/lift-plan-review' },
@@ -99,7 +100,7 @@ export default function Header() {
                   <div className="bg-slate-900 border border-slate-800 rounded-xl shadow-2xl shadow-black/40 p-2 min-w-[280px]">
                     {/* Primary Services */}
                     <div className="pb-2 mb-2 border-b border-slate-800">
-                      {services.slice(0, 3).map((service) => (
+                      {services.slice(0, 4).map((service) => (
                         <Link
                           key={service.href}
                           href={service.href}
@@ -115,7 +116,7 @@ export default function Header() {
                       <span className="px-4 py-1.5 text-xs text-slate-500 uppercase tracking-wider font-semibold block">
                         By Equipment
                       </span>
-                      {services.slice(3, 7).map((service) => (
+                      {services.slice(4, 8).map((service) => (
                         <Link
                           key={service.href}
                           href={service.href}
@@ -131,7 +132,7 @@ export default function Header() {
                       <span className="px-4 py-1.5 text-xs text-slate-500 uppercase tracking-wider font-semibold block">
                         Specialist
                       </span>
-                      {services.slice(7).map((service) => (
+                      {services.slice(8).map((service) => (
                         <Link
                           key={service.href}
                           href={service.href}

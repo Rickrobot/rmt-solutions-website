@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 // Blog posts content
 const blogPosts = {
   'what-is-bs-7121-complete-guide': {
-    title: 'What is BS 7121? The Complete UK Guide to Safe Use of Cranes',
+    title: 'What is BS 7121? UK Guide to Safe Use of Cranes',
     description: 'BS 7121 is the British Standard for the safe use of cranes. Learn what each part covers, how it links to LOLER 1998, and what UK contractors need to comply.',
     keywords: 'bs 7121, what is bs 7121, bs 7121 part 1, bs 7121-1, bs 7121-3 mobile cranes, bs 7121-5 tower cranes, bs 7121-4 lorry loaders, safe use of cranes british standard, appointed person bs 7121, basic standard complex lift, lift categorisation, code of practice safe use of cranes',
     category: 'Compliance',
@@ -668,7 +668,7 @@ const blogPosts = {
   },
   'when-do-you-need-lift-plan': {
     title: 'When Do You Need a Lift Plan? LOLER Requirements Explained',
-    description: 'Learn when a lift plan is legally required, what triggers LOLER compliance, and how to ensure your lifting operations are properly planned.',
+    description: 'Not every lift needs a written plan. See exactly when LOLER 1998 makes one a legal requirement on UK sites — and when a generic plan will do.',
     category: 'Planning',
     readTime: '6 min read',
     date: 'January 28, 2026',
@@ -1177,7 +1177,7 @@ const blogPosts = {
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need an Appointed Person?</h3>
-        <p class="text-gray-300 mb-6">RMT Solutions is run by Ricky Marsh, a CPCS Appointed Person (A61) with 35 years of construction industry experience and over 1,000 lift plans delivered. We provide <a href="/services/lift-plans">lift plan writing</a>, <a href="/services/tower-crane">tower crane contracts</a>, and <a href="/services/lift-plan-checking">lift plan checking</a> services.</p>
+        <p class="text-gray-300 mb-6">RMT Solutions is run by Ricky Marsh, a CPCS Appointed Person (A61) with 35 years of construction industry experience and over 1,000 lift plans delivered. We provide <a href="/services/appointed-person">CPCS A61 Appointed Person</a>, <a href="/services/lift-plans">lift plan writing</a>, <a href="/services/tower-crane">tower crane contracts</a>, and <a href="/services/lift-plan-checking">lift plan checking</a> services.</p>
         <a href="/contact" class="btn-primary inline-block">Contact Us Today</a>
       </div>
     `,
@@ -1425,7 +1425,7 @@ const blogPosts = {
     `,
   },
   'lorry-loader-lift-plans-guide': {
-    title: 'Lorry Loader Lift Plans: LOLER Compliance Guide for UK Contractors',
+    title: 'Lorry Loader (HIAB) Lift Plans: UK LOLER Guide',
     description: 'Complete guide to lorry loader (HIAB) lift plans under LOLER 1998: vehicle positioning, stabiliser requirements, load charts and compliance.',
     category: 'Planning',
     readTime: '9 min read',
@@ -1587,7 +1587,7 @@ const blogPosts = {
   },
 
   'lift-plan-checking-what-gets-checked-and-why-plans-get-rejected': {
-    title: 'Lift Plan Checking: What Gets Checked & Why Plans Get Rejected',
+    title: 'Lift Plan Checking: What We Check & Why Plans Fail',
     description: 'What actually gets checked in a lift plan review? Learn why plans fail, the common rejection reasons, and how to get yours approved first time.',
     keywords: 'lift plan checking, lift plan review, lift plan checker, independent lift plan review, lift plan rejected, lift plan checking service, common lift plan mistakes, LOLER lift plan check, lift plan compliance, who checks lift plans, lift plan approval',
     category: 'Services',
@@ -1918,7 +1918,7 @@ const blogPosts = {
     `,
   },
   'overhead-crane-lift-plan-guide': {
-    title: 'Do You Need a Lift Plan for an Overhead Crane? UK Guide (BS 7121-7)',
+    title: 'Overhead Crane Lift Plans: UK Guide (BS 7121-7)',
     description: 'Do overhead, gantry and bridge cranes need a lift plan? A UK guide to LOLER and BS 7121-7 — when a generic plan is enough and when you need a written one.',
     keywords: 'overhead crane lift plan, do you need a lift plan for an overhead crane, gantry crane lift plan, EOT crane lift plan, bridge crane lift plan, factory crane lift plan, BS 7121-7, LOLER overhead crane, tandem lift overhead crane, warehouse crane lifting, jib crane lift plan',
     category: 'Lift Planning',
@@ -2003,7 +2003,12 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: post.title,
+    // SEO fix (Jun 2026): `absolute` stops the root layout's '%s | RMT Solutions'
+    // template appending the 16-char brand suffix to blog titles. Post titles
+    // were already near the 60-char SERP limit, so the suffix was pushing every
+    // one into truncation. Brand adds no value in a blog SERP snippet; the
+    // keywords do. This reclaims the full ~60 chars for the title text.
+    title: { absolute: post.title },
     description: post.description,
     alternates: {
       canonical: `https://www.rmtsafetysolutions.com/blog/${params.slug}`,

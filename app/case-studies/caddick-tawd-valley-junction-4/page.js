@@ -17,7 +17,7 @@ const HERO_IMAGE = '/images/caddick-tawd-valley-junction-4-hero.jpg'
 const AERIAL_IMAGE = '/images/caddick-tawd-valley-junction-4-aerial.jpg'
 
 export const metadata = {
-  title: 'Caddick Tawd Valley Junction 4 | Lift Plan Reviews',
+  title: 'Caddick Tawd Valley Junction 4 | Case Study',
   // ~155 chars — keeps the SERP snippet from being truncated by Google.
   description:
     'Independent lift plan reviews for all lifting activities on Caddick Construction\'s Tawd Valley Junction 4 industrial scheme at White Moss, Skelmersdale.',

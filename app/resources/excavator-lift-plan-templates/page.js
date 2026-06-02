@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Free Excavator Lift Plan Template & Risk Assessment | CPA Compliant',
+  title: 'Free Excavator Lift Plan & Risk Assessment',
   // SEO audit (May 2026): trimmed from 218 chars to ~155 to avoid SERP truncation.
   description: 'Free CPA/SFPSG-compliant excavator lift plan template and risk assessment with 23 pre-populated hazards. From a CPCS Appointed Person, LOLER compliant.',
   keywords: 'excavator lift plan template, free lift plan template, excavator risk assessment template, CPA compliant lift plan, LOLER lift plan template, excavator lifting operations risk assessment, SFPSG excavator guidance, lift plan template download UK',

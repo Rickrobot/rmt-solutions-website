@@ -13,6 +13,10 @@ import { ArrowRight } from 'lucide-react'
  *                        out self-references)
  */
 const ALL_SERVICES = {
+  'appointed-person': {
+    title: 'CPCS A61 Appointed Person',
+    description: 'A named CPCS A61 Appointed Person for your lifting operations — planning, lift plans and sign-off to LOLER 1998 and BS 7121.',
+  },
   'lift-plans': {
     title: 'Lift Plan Writing',
     description: 'LOLER compliant lift plans for excavators, telehandlers, mobile cranes and lorry loaders. 24-48 hour turnaround.',
@@ -66,11 +70,12 @@ const ALL_SERVICES = {
 // Curated related-service map. Each service points to 3 logical neighbours
 // — by equipment type, by buyer journey, or by complementary deliverable.
 const RELATED_MAP = {
-  'lift-plans':                ['lift-plan-checking', 'excavator-lift-plans', 'mobile-crane-lift-plans'],
-  'lift-plan-checking':        ['lift-plan-review', 'lift-plans', 'lifting-operations-audit'],
+  'appointed-person':          ['lift-plans', 'lift-plan-checking', 'tower-crane'],
+  'lift-plans':                ['appointed-person', 'lift-plan-checking', 'excavator-lift-plans', 'mobile-crane-lift-plans'],
+  'lift-plan-checking':        ['appointed-person', 'lift-plan-review', 'lift-plans', 'lifting-operations-audit'],
   'lift-plan-review':          ['lift-plan-checking', 'lifting-operations-audit', 'lift-plans'],
   'lifting-operations-audit':  ['tower-crane', 'lift-plan-review', 'lift-plan-checking'],
-  'tower-crane':               ['lifting-operations-audit', 'mobile-crane-lift-plans', 'steel-erection'],
+  'tower-crane':               ['appointed-person', 'lifting-operations-audit', 'mobile-crane-lift-plans', 'steel-erection'],
   'steel-erection':            ['tower-crane', 'mobile-crane-lift-plans', 'lift-plans'],
   'excavator-lift-plans':      ['lift-plans', 'telehandler-lift-plans', 'lift-plan-checking'],
   'telehandler-lift-plans':    ['excavator-lift-plans', 'lorry-loader-lift-plans', 'lift-plans'],
