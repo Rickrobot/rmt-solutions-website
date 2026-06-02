@@ -1094,9 +1094,11 @@ const blogPosts = {
       <h2>When to Engage an Appointed Person</h2>
       <p>While simple excavator lifting operations might be planned by experienced site staff, engaging a <a href="/blog/cpcs-appointed-person-guide">CPCS Appointed Person</a> provides legal compliance assurance, technical expertise, risk management, and professional documentation suitable for HSE inspection.</p>
 
+      <p>For straightforward lifts you can plan yourself, download our free <a href="/resources/excavator-lift-plan-templates">excavator lift plan template</a> and risk assessment — built around the CPA/SFPSG CIG 0801 guidance and ready to adapt for your site.</p>
+
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need an Excavator Lift Plan?</h3>
-        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant <a href="/services/lift-plans">excavator lift plans</a> from a CPCS Appointed Person with 35 years of construction industry experience.</p>
+        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant <a href="/services/excavator-lift-plans">excavator lift plans</a> from a CPCS Appointed Person with 35 years of construction industry experience.</p>
         <a href="/contact" class="btn-primary inline-block">Contact Us Today</a>
       </div>
     `,

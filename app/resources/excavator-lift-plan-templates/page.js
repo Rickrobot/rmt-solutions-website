@@ -16,6 +16,33 @@ export const metadata = {
   },
 }
 
+const faqs = [
+  {
+    q: 'Do I need a lift plan to lift with an excavator?',
+    a: 'Yes. Under LOLER 1998 Regulation 8, every lifting operation must be planned by a competent person, properly supervised and carried out safely. Using an excavator as a crane ("object handling") is a lifting operation, so it requires a written excavator lift plan and a supporting risk assessment — which is exactly what these templates provide.',
+  },
+  {
+    q: 'Can an excavator legally be used as a crane in the UK?',
+    a: 'Yes, provided the machine is rated and equipped for object handling — typically a marked safe working load, check valves on the boom and dipper rams, a Rated Capacity Indicator (RCI) where required, and an available duties (lifting) chart. The CPA/SFPSG CIG 0801 guidance sets out the conditions in full, and the lift plan template includes a justification section so you can record why the excavator was a suitable choice.',
+  },
+  {
+    q: 'What is the CPA/SFPSG CIG 0801 guidance?',
+    a: 'CIG 0801 — "Guidance on the Use of Excavators as Cranes" (Fourth Revision, October 2018) — is the UK industry reference for planning excavator lifting operations. Generic crane lift plan templates do not cover its excavator-specific requirements, so every section of these templates maps directly to it.',
+  },
+  {
+    q: 'Who can write or sign off an excavator lift plan?',
+    a: 'A competent Appointed Person — in practice a CPCS A61 Appointed Person — should prepare or review the lift plan before the operation begins. These templates give you a compliant structure, but a competent person must complete and approve them for your specific site and lift. If you would rather have it done professionally, we offer an excavator lift plan service with a 24–48 hour turnaround.',
+  },
+  {
+    q: 'How is an excavator lift plan different from a crane lift plan?',
+    a: 'An excavator lift plan must address things a standard crane plan does not: justification for using an excavator at all, pick-and-carry provisions, lift-mode and RCI/overload-alarm management, quick-hitch safety, and the duties chart for the specific machine configuration. That is why an adapted crane template is not enough — these documents are built around CIG 0801 from the ground up.',
+  },
+  {
+    q: 'Is this excavator lift plan template really free?',
+    a: 'Yes — both the lift plan template and the risk assessment are free to download in editable Word (.docx) format. Download them, adapt them for your project and site conditions, and have a competent Appointed Person review the completed documents before lifting.',
+  },
+]
+
 export default function ExcavatorTemplatesPage() {
   return (
     <>
@@ -30,6 +57,9 @@ export default function ExcavatorTemplatesPage() {
             Professional, CPA/SFPSG compliant templates developed by a CPCS Appointed Person with
             over 35 years of construction industry experience. Download, customise, and use on your
             projects — completely free.
+          </p>
+          <p className="text-sm text-slate-400 mb-8">
+            Updated June 2026 · Aligned to the CPA/SFPSG CIG 0801 guidance (Fourth Revision)
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -262,6 +292,21 @@ export default function ExcavatorTemplatesPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-16 bg-slate-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-white mb-8">Excavator Lift Plan FAQs</h2>
+          <div className="space-y-6">
+            {faqs.map((item) => (
+              <div key={item.q} className="bg-slate-950 border border-slate-800 p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-amber-400 mb-2">{item.q}</h3>
+                <p className="text-slate-300">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Important Notice */}
       <section className="py-12 bg-slate-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -347,6 +392,7 @@ export default function ExcavatorTemplatesPage() {
             description:
               'Download free CPA/SFPSG compliant excavator lift plan template and lifting operations risk assessment with 23 pre-populated hazards.',
             url: 'https://www.rmtsafetysolutions.com/resources/excavator-lift-plan-templates',
+            dateModified: '2026-06-02',
             provider: {
               '@type': 'Organization',
               name: 'RMT Safety Solutions',
@@ -370,6 +416,25 @@ export default function ExcavatorTemplatesPage() {
                 url: 'https://www.rmtsafetysolutions.com/downloads/excavator-risk-assessment-template.docx',
               },
             ],
+          }),
+        }}
+      />
+
+      {/* FAQPage Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((item) => ({
+              '@type': 'Question',
+              name: item.q,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: item.a,
+              },
+            })),
           }),
         }}
       />

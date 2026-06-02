@@ -768,6 +768,29 @@ export default function ExcavatorLiftPlansPage() {
         </div>
       </section>
 
+      {/* DIY templates callout */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-slate-50 border border-slate-200 rounded-xl p-8 text-center">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Prefer to plan a straightforward lift yourself?</h2>
+            <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
+              For simple, low-risk lifts you can start from our free, CPA/SFPSG-compliant{' '}
+              <Link href="/resources/excavator-lift-plan-templates" className="text-amber-600 font-semibold underline">
+                excavator lift plan template
+              </Link>{' '}
+              and risk assessment — built around CIG 0801, ready to adapt for your site. For complex,
+              tandem, blind or near-capacity lifts, let us write it for you.
+            </p>
+            <Link
+              href="/resources/excavator-lift-plan-templates"
+              className="inline-block bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-xl font-semibold transition"
+            >
+              Get the free excavator lift plan template →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Inline quick-quote form */}
       <section className="py-20 bg-slate-950">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
