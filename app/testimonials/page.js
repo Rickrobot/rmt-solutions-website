@@ -181,6 +181,28 @@ const testimonials = [
       'I have most recently worked with Ricky on my project in Leeds. We required an informative and specific lifting plan for various different lifts around the project. I used him twice on that particular contract. Both times the lifting plan met the needs for the job and was delivered in very good time. I have already recommended Ricky to other site managers within my organisation and will definitely be using him again.',
     datePublished: '2026-05-31',
   },
+  {
+    id: 'bibby',
+    name: 'Mark Bibby',
+    role: 'Health & Safety Manager',
+    company: 'Caddick Construction',
+    location: 'Warrington',
+    project: 'Lift plan reviews across all Caddick projects; lifting minimum standards development',
+    quote:
+      "We've used RMT Solutions to review lift plans across all Caddick Construction projects over the last 18 months and have found the service to be professional, responsive and technically robust. The reviews provide assurance that lifting documentation meets the requirements of LOLER, BS 7121 and our own internal standards, while also identifying practical improvements where needed. Feedback is clear and constructive, turnaround times are good, and support is always available when revisions are required. More recently, I've worked closely with Ricky while developing a lifting minimum standards document for our business — his knowledge, practical experience and willingness to provide guidance have been invaluable in helping me establish a consistent and robust approach to lifting operations across our projects. The service has added real value to our lifting governance process, and I would recommend RMT Solutions to others within the construction industry.",
+    datePublished: '2026-06-02',
+  },
+  {
+    id: 'banting',
+    name: 'Jacques Banting',
+    role: 'Health & Safety Manager',
+    company: 'Caddick Construction',
+    location: 'Wakefield / Durham',
+    project: 'Third-party crane and non-crane lift plan appraisals',
+    quote:
+      "At Caddick Construction we have made use of RMT Solutions Ltd services for the last 15 months or so. Ricky Marsh has been superb on all levels with his support and advice, assisting Caddick with lifting solutions and third-party lift plan appraisals. His service is always very professional, friendly, swift and helpful, with a positive approach and 'can do' attitude. RMT Solutions is currently contracted as a third-party consultant by Caddick to appraise all crane and non-crane lift plans throughout the business. Ricky's lift plan appraisal process is robust and fully compliant with the LOLER 1998 and BS 7121 standards, and incorporates Caddick's CAT A and CAT B appraisal standard. I would fully recommend RMT Solutions' service to anyone within the Caddick Group, our supply chain partners, and anyone who wishes to use his services.",
+    datePublished: '2026-06-01',
+  },
 ]
 
 // Review JSON-LD — each testimonial is exposed to Google as an
