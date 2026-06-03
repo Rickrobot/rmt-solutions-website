@@ -197,6 +197,18 @@ function buildSitemapXml() {
       ],
     })
   );
+  entries.push(
+    buildUrlEntry({
+      loc: `${BASE_URL}/case-studies/rivington-chase-horwich-loco-works`,
+      lastmod: SITE_LAST_UPDATED,
+      changefreq: 'monthly',
+      priority: '0.8',
+      images: [
+        `${BASE_URL}/images/rivington-chase-horwich-hero.jpg`,
+        `${BASE_URL}/images/rivington-chase-horwich-aerial.jpg`,
+      ],
+    })
+  );
 
   // Locations hub + city pages
   entries.push(

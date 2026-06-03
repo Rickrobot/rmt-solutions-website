@@ -121,6 +121,44 @@ export default function CaseStudiesPage() {
             Featured Projects
           </span>
 
+          {/* Featured: Rivington Chase, Horwich (active site) */}
+          <Link
+            href="/case-studies/rivington-chase-horwich-loco-works"
+            className="group block rounded-3xl overflow-hidden border border-slate-700/50 bg-gradient-to-b from-slate-800/50 to-slate-900/50 card-hover mb-8"
+          >
+            <div className="grid md:grid-cols-2">
+              <div className="relative h-64 md:h-auto md:min-h-[320px] bg-gradient-to-br from-slate-700 to-slate-800">
+                <Image
+                  src="/images/rivington-chase-horwich-hero.jpg"
+                  alt="Aerial drone view of Caddick Construction's Rivington Chase affordable housing development on the former Horwich Loco Works, Horwich"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-8 lg:p-12 flex flex-col justify-center">
+                <div className="flex flex-wrap items-center gap-3 mb-4">
+                  <span className="bg-amber-500/20 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full">
+                    Appointed Person &amp; Lift Plan Reviews
+                  </span>
+                  <span className="text-gray-500 text-sm">Horwich, Bolton</span>
+                </div>
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-4 group-hover:text-amber-400 transition">
+                  Rivington Chase, Horwich — Lifting Operations Support
+                </h2>
+                <p className="text-gray-400 mb-6 leading-relaxed">
+                  Appointed Person duties, independent crane and excavator lift plan reviews, and
+                  site-specific lift plans for Caddick Construction&apos;s 116 affordable homes on the
+                  former Horwich Loco Works — part of a £262m regeneration. Illustrated with our own
+                  aerial footage.
+                </p>
+                <span className="inline-flex items-center text-amber-400 font-semibold">
+                  Read the case study
+                  <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                </span>
+              </div>
+            </div>
+          </Link>
+
           {/* Featured: Caddick Tawd Valley Junction 4 (active site) */}
           <Link
             href="/case-studies/caddick-tawd-valley-junction-4"
