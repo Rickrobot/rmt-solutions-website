@@ -1085,6 +1085,8 @@ const blogPosts = {
       <h2>Understanding Excavator Lifting Capacity</h2>
       <p>Unlike mobile cranes with published lifting capacities, excavators have limited manufacturer guidance for lifting operations. Safe lifting capacity is typically 50-75% of the maximum theoretical capacity to account for dynamic effects, ground conditions, and wear.</p>
 
+      <p>Reading capacity correctly relies on the machine's safety devices. See our reference on <a href="/resources/excavator-rci-guide">excavator RCI requirements (RCI vs RCL)</a> and our plain-English guide to <a href="/resources/excavator-safety-devices">excavator safety devices</a> for what the law requires and what to check before a lift.</p>
+
       <h2>Ground Conditions for Excavator Lifting</h2>
       <p>Ground bearing capacity is critical for safe operations. An excavator under load applies significantly more pressure to the ground than during normal digging. The Appointed Person must assess soil type, proximity to excavations, and requirements for ground mats.</p>
 

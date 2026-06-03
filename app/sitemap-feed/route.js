@@ -62,6 +62,8 @@ const SERVICE_SLUGS = [
 const RESOURCE_ROUTES = [
   { path: '/resources',                                    priority: '0.7' },
   { path: '/resources/excavator-lift-plan-templates',      priority: '0.7' },
+  { path: '/resources/excavator-rci-guide',                priority: '0.7' },
+  { path: '/resources/excavator-safety-devices',           priority: '0.7' },
   { path: '/resources/telehandler-lift-plan-templates',    priority: '0.7' },
   { path: '/resources/lorry-loader-lift-plan-templates',   priority: '0.7' },
   { path: '/resources/overhead-gantry-crane-lift-plan-templates', priority: '0.7' },

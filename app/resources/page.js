@@ -195,6 +195,48 @@ export default function ResourcesPage() {
             </Link>
 
             <Link
+              href="/resources/excavator-rci-guide"
+              className="group bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 hover:border-amber-400 rounded-2xl p-8 transition"
+            >
+              <div className="w-14 h-14 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-5">
+                <Download className="w-7 h-7 text-amber-400" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-white group-hover:text-amber-400 transition mb-3">
+                Excavator RCI Requirements
+              </h3>
+              <p className="text-gray-400 leading-relaxed mb-5">
+                What UK law requires for excavator lifting, the three tiers of
+                device (overload warning, RCI, RCL) and what to specify for
+                lifts over 1 tonne. Free reference note.
+              </p>
+              <span className="inline-flex items-center text-amber-400 font-semibold">
+                Read the reference
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+              </span>
+            </Link>
+
+            <Link
+              href="/resources/excavator-safety-devices"
+              className="group bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 hover:border-amber-400 rounded-2xl p-8 transition"
+            >
+              <div className="w-14 h-14 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-5">
+                <Download className="w-7 h-7 text-amber-400" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-white group-hover:text-amber-400 transition mb-3">
+                Excavator Safety Devices Explained
+              </h3>
+              <p className="text-gray-400 leading-relaxed mb-5">
+                A plain-English guide to every excavator safety device, from
+                RCI and check valves to ROPS, FOPS and proximity systems. Free
+                to download and share.
+              </p>
+              <span className="inline-flex items-center text-amber-400 font-semibold">
+                Read the guide
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+              </span>
+            </Link>
+
+            <Link
               href="/resources/telehandler-lift-plan-templates"
               className="group bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 hover:border-amber-400 rounded-2xl p-8 transition"
             >

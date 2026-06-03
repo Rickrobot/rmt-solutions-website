@@ -358,6 +358,28 @@ export default function ExcavatorTemplatesPage() {
         </div>
       </section>
 
+      {/* Further reading */}
+      <section className="py-16 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-white mb-8">Further reading on excavator lifting</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              { href: '/resources/excavator-rci-guide', title: 'Excavator RCI Requirements (RCI vs RCL)', desc: 'What UK law requires, the three tiers of device, and what to specify for lifts over 1 tonne.' },
+              { href: '/resources/excavator-safety-devices', title: 'Excavator Safety Devices Explained', desc: 'A plain-English guide to every excavator safety device, lifting-specific and standard.' },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="bg-slate-950 border border-slate-800 hover:border-amber-400 p-6 rounded-xl transition"
+              >
+                <p className="text-white font-semibold mb-1">{item.title} →</p>
+                <p className="text-slate-400 text-sm">{item.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Related Services */}
       <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
