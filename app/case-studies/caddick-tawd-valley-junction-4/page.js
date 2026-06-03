@@ -15,6 +15,7 @@ const SITE = 'https://www.rmtsafetysolutions.com'
 const URL = `${SITE}/case-studies/caddick-tawd-valley-junction-4`
 const HERO_IMAGE = '/images/caddick-tawd-valley-junction-4-hero.jpg'
 const AERIAL_IMAGE = '/images/caddick-tawd-valley-junction-4-aerial.jpg'
+const VIDEO_ID = 'mhVvcC2gYsI'
 
 export const metadata = {
   title: 'Caddick Tawd Valley Junction 4 | Case Study',
@@ -233,6 +234,33 @@ export default function CaddickTawdValleyJunction4Page() {
                 <div className="text-white font-medium">{item.value}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Video */}
+      <section className="py-24 bg-slate-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-10">
+            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+              On Site
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
+              An aerial view over Junction 4
+            </h2>
+            <p className="text-gray-300 leading-relaxed">
+              Drone footage captured by RMT Solutions showing the scale of the 45-unit industrial
+              scheme off the M58 as the steel and cladding works progress.
+            </p>
+          </div>
+          <div className="relative aspect-video rounded-3xl overflow-hidden border border-slate-700/50">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src={`https://www.youtube.com/embed/${VIDEO_ID}`}
+              title="Tawd Valley Junction 4, Skelmersdale — aerial site tour"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
           </div>
         </div>
       </section>
