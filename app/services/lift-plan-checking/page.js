@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Clock, ShieldCheck, FileCheck, PhoneCall, CheckCircle2, X, ArrowRight } from 'lucide-react'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
+import LiftCheckFlow from '@/components/LiftCheckFlow'
 
 export const metadata = {
   title: 'Lift Plan Checking UK | LOLER AP Review',
@@ -266,6 +267,18 @@ export default function LiftPlanCheckingPage() {
             </Link>
             .
           </p>
+        </div>
+      </section>
+
+      {/* Review flow */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-2">How the review works</h2>
+          <p className="text-lg text-slate-600 mb-10 max-w-3xl">
+            From a complete submission to a clear Category A or Category B determination, with
+            findings you can act on.
+          </p>
+          <LiftCheckFlow />
         </div>
       </section>
 
