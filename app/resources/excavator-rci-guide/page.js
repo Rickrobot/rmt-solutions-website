@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import RciTiers from '@/components/RciTiers'
 
 export const metadata = {
   title: 'Excavator RCI Requirements (RCI vs RCL)',
@@ -166,7 +167,8 @@ export default function ExcavatorRciGuidePage() {
       {/* Three tiers table */}
       <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-8">The three tiers of device</h2>
+          <h2 className="text-3xl font-bold text-white mb-6">The three tiers of device</h2>
+          <RciTiers />
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
