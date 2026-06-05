@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import InlineQuoteForm from '@/components/InlineQuoteForm';
 
 // Blog posts content
 const blogPosts = {
@@ -2311,6 +2312,16 @@ export default function BlogPost({ params }) {
                 </p>
               </div>
             </div>
+          </div>
+
+          {/* Inline quote form — conversion fix (Jun 2026): blog posts carry
+              most of the site's search traffic but previously had no enquiry
+              form. One form here covers every post via the shared template. */}
+          <div className="mt-12">
+            <InlineQuoteForm
+              serviceName={`Blog — ${post.title}`}
+              heading="Need a lift plan written? Plans from £150, 24-48h turnaround"
+            />
           </div>
 
           {/* Share Buttons */}

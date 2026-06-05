@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import InlineQuoteForm from '@/components/InlineQuoteForm'
 
 export const metadata = {
   title: 'Free Excavator Lift Plan & Risk Assessment',
@@ -328,6 +329,18 @@ export default function ExcavatorTemplatesPage() {
               liability is accepted for incidents resulting from the use of these templates.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Inline quote form — conversion fix (Jun 2026): high-traffic template
+          page previously had no enquiry form; visitors had to click through
+          to /contact and most dropped off. */}
+      <section className="py-16 bg-slate-950">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <InlineQuoteForm
+            serviceName="Excavator Lift Plan (from templates page)"
+            heading="Want this written for your site instead? Plans from £150, 24-48h turnaround"
+          />
         </div>
       </section>
 

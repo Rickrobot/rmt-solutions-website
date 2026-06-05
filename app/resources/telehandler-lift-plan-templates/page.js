@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import InlineQuoteForm from '@/components/InlineQuoteForm'
 
 export const metadata = {
   title: 'Free Telehandler Lift Plan Templates UK',
@@ -447,6 +448,18 @@ export default function TelehandlerLiftPlanTemplates() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Inline quote form — conversion fix (Jun 2026): this page takes more
+          search traffic than any service page but previously had no enquiry
+          form, so visitors had to click through to /contact. */}
+      <section className="py-16 bg-slate-900">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <InlineQuoteForm
+            serviceName="Telehandler Lift Plan (from templates page)"
+            heading="Want this written for your site instead? Plans from £150, 24-48h turnaround"
+          />
         </div>
       </section>
 
