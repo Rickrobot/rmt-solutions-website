@@ -56,7 +56,11 @@ export default function ExcavatorTemplatesPage() {
           <p className="text-xl text-slate-300 max-w-3xl mb-8">
             Professional, CPA/SFPSG compliant templates developed by a CPCS Appointed Person with
             over 35 years of construction industry experience. Download, customise, and use on your
-            projects — completely free.
+            projects — completely free. Need a site-specific plan written for you? Our{' '}
+            <Link href="/services/lift-plans" className="text-amber-400 hover:text-amber-300 underline">
+              lift planning services
+            </Link>{' '}
+            start from £150 with 24-48 hour turnaround.
           </p>
           <p className="text-sm text-slate-400 mb-8">
             Updated June 2026 · Aligned to the CPA/SFPSG CIG 0801 guidance (Fourth Revision)
@@ -335,8 +339,11 @@ export default function ExcavatorTemplatesPage() {
           </h2>
           <p className="text-slate-800 mb-4 max-w-2xl mx-auto">
             These templates are great for straightforward lifts. For complex operations, tandem lifts,
-            blind lifts, or anything near capacity — get a professional lift plan from a CPCS Appointed
-            Person with 35 years of experience.
+            blind lifts, or anything near capacity — use our{' '}
+            <Link href="/services/lift-plans" className="underline font-semibold text-slate-900 hover:text-slate-700">
+              professional lift planning services
+            </Link>{' '}
+            from a CPCS Appointed Person with 35 years of experience.
           </p>
           <p className="text-slate-700 mb-8">
             Fast turnaround. Tier 1 contractor approved. LOLER compliant.

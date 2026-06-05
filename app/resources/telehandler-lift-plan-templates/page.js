@@ -93,9 +93,14 @@ export default function TelehandlerLiftPlanTemplates() {
               Telehandler Lift Plan Templates
             </h1>
             <p className="text-xl text-slate-300 mb-8">
-              Two professionally prepared telehandler lift plan templates covering both suspended load 
-              and fork-carried load operations. Designed by a CPCS Appointed Person with 35+ years of 
-              construction industry experience. Ready to download and use on site.
+              Two professionally prepared telehandler lift plan templates covering both suspended load
+              and fork-carried load operations. Designed by a CPCS Appointed Person with 35+ years of
+              construction industry experience. Ready to download and use on site. Need one written for
+              you instead? Our{' '}
+              <Link href="/services/lift-plans" className="text-amber-400 hover:text-amber-300 underline">
+                lift planning services
+              </Link>{' '}
+              start from £150 with 24-48 hour turnaround.
             </p>
             <div className="flex flex-wrap gap-3">
               <a href="#templates" className="bg-amber-500 hover:bg-amber-400 text-slate-900 px-6 py-3 rounded-xl font-semibold transition">
@@ -408,9 +413,12 @@ export default function TelehandlerLiftPlanTemplates() {
               <p className="text-slate-300 text-sm">
                 These templates provide a professional framework for documenting telehandler lift plans. 
                 However, every lifting operation is unique. The person completing the template must be 
-                competent to assess the specific conditions, verify the calculations, and determine whether 
-                additional planning is required. For complex lifts, tandem operations, or high-risk 
-                environments, consider using a professional lift planning service.
+                competent to assess the specific conditions, verify the calculations, and determine whether
+                additional planning is required. For complex lifts, tandem operations, or high-risk
+                environments, consider using our{' '}
+                <Link href="/services/lift-plans" className="text-amber-400 hover:text-amber-300 underline">
+                  professional lift planning services
+                </Link>.
               </p>
             </div>
             <div className="bg-amber-500/5 border border-amber-500/20 rounded-xl p-6">

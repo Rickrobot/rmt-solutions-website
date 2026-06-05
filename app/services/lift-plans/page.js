@@ -6,15 +6,22 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Lift Plans & Lift Planning UK',
-  description: 'LOLER-compliant lift plans for excavators, telehandlers, lorry loaders, mobile and tower cranes, from a CPCS Appointed Person. Fast UK-wide turnaround.',
-  keywords: ['lift plan', 'lift plans', 'lift planning', 'lift planner', 'lift plan writing', 'lifting plan', 'lifting plans', 'excavator lift plan', 'telehandler lift plan', 'mobile crane lift plan', 'lorry loader lift plan', 'LOLER compliant'],
+  // SEO fix (Jun 2026): differentiated from the homepage, which targets the
+  // same "lift plans UK / lift planning" head terms and was cannibalising this
+  // page (GSC: homepage ranked for "lift planning services UK"; this page sat
+  // at pos ~33 with 2,112 impressions). This page now owns the commercial
+  // query "lift planning services" (227 impressions, 0 clicks, pos ~20).
+  // `absolute` skips the layout's brand suffix so the £150 price hook stays
+  // visible within the ~60-char SERP limit.
+  title: { absolute: 'Lift Planning Services UK | Lift Plans from £150' },
+  description: 'Expert lift planning services for UK construction. LOLER-compliant lift plans from a CPCS Appointed Person — fixed prices from £150, 24-48 hour turnaround.',
+  keywords: ['lift planning services', 'lift planning experts', 'lift plan', 'lift plans', 'lift planning', 'lift planner', 'lift plan writing', 'lifting plan', 'lifting plans', 'excavator lift plan', 'telehandler lift plan', 'mobile crane lift plan', 'lorry loader lift plan', 'LOLER compliant'],
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lift-plans',
   },
   openGraph: {
-    title: 'Lift Plans & Lift Planning UK | LOLER Compliant',
-    description: 'Professional lift plans and lift planning from a CPCS Appointed Person. LOLER compliant lift plans for excavators, telehandlers, lorry loaders, mobile and tower cranes. Fast turnaround, UK-wide.',
+    title: 'Lift Planning Services UK | Lift Plans from £150',
+    description: 'Expert lift planning services from a CPCS Appointed Person. LOLER compliant lift plans for excavators, telehandlers, lorry loaders, mobile and tower cranes. Fixed prices, UK-wide.',
     url: 'https://www.rmtsafetysolutions.com/services/lift-plans',
     images: ['/images/mobile-crane-steel-erection.webp'],
   },
@@ -23,7 +30,7 @@ export const metadata = {
 const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'LOLER Compliant Lift Plans',
+  name: 'Lift Planning Services',
   description: 'Professional lift plan writing for excavators, telehandlers, lorry loaders, and mobile cranes. LOLER compliant lift plans from a CPCS Appointed Person with fast turnaround, UK-wide.',
   provider: {
     '@type': 'ProfessionalService',
@@ -173,14 +180,14 @@ export default function LiftPlansPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
-              Lift Planning Services
+              LOLER Compliant Lift Plans
             </span>
             <h1 className="font-display text-5xl sm:text-6xl font-bold text-white mb-6">
-              LOLER Compliant <span className="gradient-text">Lift Plans</span>
+              Lift Planning <span className="gradient-text">Services</span>
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
-              Professional lift plan writing for excavators, telehandlers, lorry loaders, and mobile cranes. 
-              Fast turnaround from a CPCS Appointed Person with 35 years experience.
+              Expert lift planning services for excavators, telehandlers, lorry loaders, and mobile cranes.
+              Fixed prices from £150 and fast turnaround from a CPCS Appointed Person with 35 years experience.
             </p>
             <Link href="/contact" className="btn-primary inline-flex items-center">
               Get a Quote
@@ -199,7 +206,7 @@ export default function LiftPlansPage() {
             Lift Planning Explained
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
-            Professional Lift Plans &amp; Lift Planning, UK-Wide
+            Professional Lift Planning Services, UK-Wide
           </h2>
           <div className="space-y-5 text-gray-300 leading-relaxed text-lg">
             <p>
@@ -207,8 +214,8 @@ export default function LiftPlansPage() {
               operation — it sets out how a load will be lifted safely, the equipment used, the risks
               involved and the control measures required. Under the Lifting Operations and Lifting
               Equipment Regulations 1998 (LOLER), every lifting operation must be properly planned by a
-              competent person before it takes place. Our <strong className="text-white">lift planning</strong>{' '}
-              service gives you that plan, written, checked and ready to sign off on site. If you are new
+              competent person before it takes place. Our <strong className="text-white">lift planning
+              services</strong> give you that plan, written, checked and ready to sign off on site. If you are new
               to the topic, our guides explain{' '}
               <Link href="/blog/what-is-a-lift-plan" className="text-amber-400 hover:text-amber-300 underline">
                 what a lift plan is
@@ -237,9 +244,9 @@ export default function LiftPlansPage() {
               <Link href="/services/lift-plan-checking" className="text-amber-400 hover:text-amber-300 underline">
                 independent check of plans
               </Link>{' '}
-              submitted by your subcontractors, you are dealing directly with the lift planner who
-              writes them. No call centres, no hourly billing — a fixed price and a fast turnaround on
-              every enquiry.
+              submitted by your subcontractors, you are dealing directly with the lift planning expert
+              who writes them. No call centres, no hourly billing — a fixed price and a fast turnaround
+              on every enquiry.
             </p>
           </div>
         </div>
