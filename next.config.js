@@ -369,9 +369,47 @@ const nextConfig = {
       },
 
       // ============================================
+      // BLOG POSTS — RENAMED SLUGS (GSC 404 fix Jun 2026)
+      // Old slugs Google had indexed; mapped to current
+      // equivalents so backlink authority is preserved
+      // and search-result clicks land on the live page.
+      // ============================================
+
+      {
+        source: '/blog/cpcs-appointed-person-lifting-operations',
+        destination: '/blog/cpcs-appointed-person-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/cpcs-appointed-person-lifting-operations/',
+        destination: '/blog/cpcs-appointed-person-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/telehandler-lift-plans',
+        destination: '/blog/telehandler-lift-plans-complete-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/telehandler-lift-plans/',
+        destination: '/blog/telehandler-lift-plans-complete-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/excavator-as-crane-uk-guide',
+        destination: '/blog/excavator-lift-plans-complete-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/excavator-as-crane-uk-guide/',
+        destination: '/blog/excavator-lift-plans-complete-guide',
+        permanent: true,
+      },
+
+      // ============================================
       // WORDPRESS DATE ARCHIVE REDIRECTS
       // ============================================
-      
+
       {
         source: '/2024/01',
         destination: '/resources',
