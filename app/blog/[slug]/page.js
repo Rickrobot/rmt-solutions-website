@@ -1108,36 +1108,40 @@ const blogPosts = {
   },
   'cpcs-appointed-person-guide': {
     title: 'CPCS A61 Appointed Person: Duties, Training & UK Lift Plans',
-    description: 'What does a CPCS A61 Appointed Person actually do? Their duties under LOLER 1998 and BS 7121, training routes, and when you must appoint one.',
+    description: 'CPCS A61 Appointed Person explained — duties under LOLER 1998 and BS 7121, training routes, A61 Basic vs Advanced, and when UK contractors must appoint one.',
+    keywords: 'cpcs a61 appointed person, cpcs appointed person, a61 appointed person, appointed person for lifting operations, appointed person lifting operations, appointed person, cpcs a61, a61 advanced, a61 basic, lifting appointed person, appointed person duties, appointed person responsibilities, appointed person bs 7121, loler appointed person, lift planning experts, lift planning services',
     category: 'Compliance',
-    readTime: '9 min read',
+    readTime: '11 min read',
     date: 'January 31, 2026',
-    dateModified: 'January 31, 2026',
+    dateModified: 'June 7, 2026',
     image: '/images/services/appointed-person-reviewing-lift-plan-uk.webp',
-    imageAlt: 'CPCS Appointed Person in hi-vis and hard hat reviewing a lift plan on a tablet on a UK construction site, with a mobile crane working in the background',
+    imageAlt: 'CPCS A61 Appointed Person in hi-vis and hard hat reviewing a lift plan on a tablet on a UK construction site, with a mobile crane working in the background',
     content: `
-      <p class="lead">The CPCS Appointed Person (A61) qualification is the gold standard for lifting operations planning in UK construction. This comprehensive guide explains everything contractors need to know about Appointed Persons.</p>
+      <p class="lead">The <strong>CPCS A61 Appointed Person</strong> qualification is the UK industry standard for planning and managing lifting operations. If your project involves cranes, telehandlers, excavators or any other lifting equipment, LOLER 1998 and BS 7121 require that the operation is planned by a competent person — and on UK construction sites, that competence is most often demonstrated by holding the CPCS A61 card. This guide explains what a CPCS Appointed Person actually does, the difference between A61 Basic and A61 Advanced, when you legally need to appoint one, and how to choose the right person for your project.</p>
 
-      <h2>What is a CPCS Appointed Person?</h2>
-      <p>An Appointed Person is someone designated to plan lifting operations under LOLER 1998. The CPCS A61 card is the industry-recognized qualification demonstrating competence to fulfill this critical safety role.</p>
+      <h2>What is a CPCS A61 Appointed Person?</h2>
+      <p>A <strong>CPCS Appointed Person</strong> — often shortened to "AP" or referred to simply as the <em>appointed person for lifting operations</em> — is the individual designated under LOLER 1998 Regulation 8 to plan a lifting operation, select the equipment and personnel, prepare the lift plan, and ensure the lift is properly supervised. The CPCS A61 card (issued by the Construction Plant Competence Scheme) is the industry-recognised qualification demonstrating that the holder is competent to fulfil this role.</p>
+      <p>BS 7121-1:2016 — the British Standard for the safe use of cranes — names the Appointed Person as the individual with overall responsibility for the lifting operation. The role is referenced across every part of the BS 7121 family (mobile cranes, tower cranes, lorry loaders, overhead cranes) and is the cornerstone of LOLER compliance on UK sites. In short: if your operation needs a lift plan, it needs an Appointed Person to write it.</p>
 
-      <h2>CPCS A61 Qualification</h2>
-      <p>The qualification is structured in two levels:</p>
+      <h2>CPCS A61 Qualification: Basic vs Advanced</h2>
+      <p>The CPCS A61 Appointed Person qualification is structured in two levels:</p>
       <ul>
-        <li><strong>A61 Basic</strong> - Qualifies holders to plan routine lifts with mobile cranes, excavators, and telehandlers</li>
-        <li><strong>A61 Advanced</strong> - Extends competence to <a href="/blog/mobile-crane-vs-tower-crane">tower cranes</a>, tandem lifts, and complex operations requiring detailed engineering</li>
+        <li><strong>A61 Basic</strong> — Qualifies holders to plan routine lifts with mobile cranes, excavators, telehandlers and lorry loaders. Suitable for standard and most basic lifts as defined in BS 7121-1.</li>
+        <li><strong>A61 Advanced</strong> — Extends competence to <a href="/blog/mobile-crane-vs-tower-crane">tower cranes</a>, tandem lifts, complex lifts and operations requiring detailed engineering calculation. Required for any operation BS 7121 classifies as a complex lift.</li>
+      </ul>
+      <p>To gain the card, candidates complete the CPCS theory and practical tests, plus an NVQ Level 4 in Controlling Lifting Operations — Planning Lifts. Cards are renewed every five years, with refresher testing required to maintain currency.</p>
+
+      <h2>When Do You Need a CPCS Appointed Person?</h2>
+      <p>BS 7121-1 provides clear guidance. A CPCS A61 Appointed Person must plan lifts when any of the following apply:</p>
+      <ul>
+        <li>Risk to persons exists from the load or the equipment</li>
+        <li>Specialist knowledge is required for load calculations, rigging design or ground assessment</li>
+        <li>Mobile cranes, tower cranes or non-standard equipment configurations are involved</li>
+        <li>Multiple lifts are planned as part of a project programme</li>
+        <li>The lift falls into the "complex" category under BS 7121-1 (tandem lifts, blind lifts, lifts over occupied areas, lifts near power lines)</li>
       </ul>
 
-      <h2>When Do You Need an Appointed Person?</h2>
-      <p>BS 7121-1 provides clear guidance. An Appointed Person must plan lifts when:</p>
-      <ul>
-        <li>Risk to persons exists from the load or equipment</li>
-        <li>Specialist knowledge is required for load calculations or ground assessment</li>
-        <li>Mobile cranes are used</li>
-        <li>Multiple lifts are planned as part of a project</li>
-      </ul>
-
-      <p>On active construction sites, these criteria apply to almost all lifting operations.</p>
+      <p>On active construction sites, these criteria apply to almost every lifting operation — which is why a competent <a href="/services/appointed-person">CPCS Appointed Person</a> is now treated as a baseline requirement on tier 1 contractor sites, not an optional extra.</p>
 
       <h2>What Does an Appointed Person Actually Do?</h2>
       <p>The role extends beyond writing lift plans. Responsibilities include:</p>
@@ -2118,6 +2122,28 @@ const faqData = {
     {
       q: 'Can I do my own lift planning?',
       a: 'Only if you are competent to do so. For complex lifts you need someone with appropriate training and qualifications, typically a CPCS Appointed Person (A61).',
+    },
+  ],
+  'cpcs-appointed-person-guide': [
+    {
+      q: 'What is a CPCS A61 Appointed Person?',
+      a: 'A CPCS A61 Appointed Person is the individual designated under LOLER 1998 Regulation 8 to plan a lifting operation, select the equipment and personnel, prepare the lift plan and ensure the lift is properly supervised. The CPCS A61 card is the UK industry-recognised qualification demonstrating that the holder is competent to fulfil the role under BS 7121.',
+    },
+    {
+      q: 'What is the difference between A61 Basic and A61 Advanced?',
+      a: 'A61 Basic qualifies the holder to plan routine lifts with mobile cranes, excavators, telehandlers and lorry loaders — covering standard and most basic lifts as defined in BS 7121-1. A61 Advanced extends competence to tower cranes, tandem lifts, complex lifts and operations requiring detailed engineering calculation. Any lift classified as complex under BS 7121 should be planned by an A61 Advanced holder.',
+    },
+    {
+      q: 'When do you legally need a CPCS Appointed Person?',
+      a: 'LOLER 1998 Regulation 8 requires every lifting operation to be properly planned by a competent person. On UK construction sites, BS 7121-1 sets out that an Appointed Person should plan the lift whenever there is risk to persons, specialist knowledge is required, mobile or tower cranes are involved, or multiple lifts are planned as part of a project. In practice this applies to almost every commercial lifting operation.',
+    },
+    {
+      q: 'Do I need an in-house Appointed Person or can I contract one in?',
+      a: 'Both are valid. Many contractors use a hybrid approach — an in-house Appointed Person for routine work and a contracted CPCS A61 for complex operations, peak demand or independent lift plan review. Contracting brings specialist expertise without the overhead of a permanent in-house role and is often used by tier 1 contractors for high-risk or non-standard lifts.',
+    },
+    {
+      q: 'How do you choose the right CPCS Appointed Person?',
+      a: 'Look for a valid CPCS A61 card (blue or red), the right level for your operation (Basic vs Advanced), relevant sector experience for your project type, clear communication, and a proactive approach to safety. Ask for examples of lift plans they have written and check that they understand the specific equipment and environment your project involves.',
     },
   ],
 };
