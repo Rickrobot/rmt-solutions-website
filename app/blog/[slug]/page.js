@@ -5,6 +5,77 @@ import InlineQuoteForm from '@/components/InlineQuoteForm';
 
 // Blog posts content
 const blogPosts = {
+  'lift-plan-cost-uk': {
+    title: 'How Much Does a Lift Plan Cost? UK Prices 2026',
+    description: 'UK lift plan costs explained: from £200 for excavator and telehandler plans, £250–£500 for mobile cranes, £500+ for complex lifts. What you pay and why.',
+    keywords: 'lift plan cost, lift plan cost uk, how much does a lift plan cost, lifting plan cost, lift plan price, lift plan prices uk, appointed person day rate, contract lift cost, lift plan quote, how much is a lift plan',
+    category: 'Services',
+    readTime: '8 min read',
+    date: 'June 11, 2026',
+    dateModified: 'June 11, 2026',
+    image: '/images/services/lift-planning-site-desk-review-uk.webp',
+    imageAlt: 'Lift planner reviewing drawings and load calculations at a site desk — pricing up a UK lift plan',
+    content: `
+      <p class="lead">A professional lift plan in the UK typically costs <strong>£200 to £500</strong>. Simple excavator and telehandler lift plans start from £200, mobile crane and lorry loader plans usually fall between £250 and £500, and complex operations — tandem lifts, contract lifts, or plans needing a site visit — run from £500 to £1,500. This guide breaks down exactly what you pay, what drives the price, and how to avoid paying twice for a plan that gets rejected.</p>
+
+      <p>Very few providers publish lift plan prices, which makes budgeting harder than it should be. We publish ours. The figures below are the fixed prices we quote at RMT Solutions, and they are representative of what a competent, independent <a href="/blog/cpcs-appointed-person-guide">CPCS A61 Appointed Person</a> charges in the UK market in 2026.</p>
+
+      <h2>Lift Plan Costs by Equipment Type</h2>
+
+      <table>
+        <thead>
+          <tr><th>Lift plan type</th><th>Typical UK cost</th><th>Turnaround</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Excavator lift plan</td><td>£200 – £300</td><td>24–48 hours</td></tr>
+          <tr><td>Telehandler lift plan</td><td>£200 – £300</td><td>24–48 hours</td></tr>
+          <tr><td>Lorry loader (HIAB) lift plan</td><td>£250 – £500</td><td>2–5 working days</td></tr>
+          <tr><td>Mobile crane lift plan</td><td>£250 – £500 (site visit included)</td><td>3–5 working days</td></tr>
+          <tr><td>Complex / tandem / multi-pick operations</td><td>£500 – £1,500</td><td>Agreed per project</td></tr>
+          <tr><td>Tower crane Appointed Person contract</td><td>Priced per project</td><td>Ongoing</td></tr>
+        </tbody>
+      </table>
+
+      <p>All figures are fixed fees, not hourly rates. A fixed price matters more than it sounds: lift planning has a habit of growing extra correspondence — principal contractor comments, revised loads, a different machine turning up — and an hourly arrangement quietly turns each of those into billable time.</p>
+
+      <h2>What Actually Drives the Price</h2>
+
+      <h3>1. Complexity of the operation</h3>
+      <p>The single biggest factor. A routine excavator pick with good ground and clear access is quick to verify. A near-capacity lift over a live carriageway with restricted slew needs significantly more calculation, drawing work, and hazard control — and the price reflects the planning hours and the responsibility being taken on.</p>
+
+      <h3>2. Whether a site visit is needed</h3>
+      <p>For straightforward lifts with good photographs, drawings and load information, a competent planner can work remotely — that keeps you at the bottom of the price range. Mobile crane work usually justifies a visit to assess ground conditions and access; where we quote one, it is included in the fixed price rather than billed on top.</p>
+
+      <h3>3. The quality of your information</h3>
+      <p>The fastest way to keep your cost down is to send complete information first time: load weight and dimensions, the machine make, model and configuration, site address and access details, and the principal contractor's requirements. Chasing missing load data is the most common cause of delay — and on hourly arrangements, of cost creep.</p>
+
+      <h3>4. Urgency</h3>
+      <p>Same-day and next-day plans are routinely achievable for standard equipment where the information is ready. Expect a premium for genuine emergencies, though at RMT we treat 24–48 hours as standard rather than a rush service.</p>
+
+      <h2>The Three Ways to Get a Lift Plan — Costs Compared</h2>
+
+      <h3>Independent lift planning consultancy — from £200 fixed</h3>
+      <p>You deal directly with the Appointed Person who writes the plan, the fee is fixed, and the plan is independent of any equipment supplier. This is usually the most economical route when you already have your machine and operator arranged and need the planning competence LOLER requires.</p>
+
+      <h3>Crane hire company Appointed Person — typically bundled into a contract lift</h3>
+      <p>If you are buying a <strong>contract lift (CPA terms)</strong>, the crane company supplies the crane, operator and Appointed Person as a package, and the planning cost is wrapped into the overall contract price. Industry cost guides typically put standalone Appointed Person day rates around £300–£400 per day. A contract lift is the right answer when you want the crane company to carry the lifting risk — but if you already have the plant, paying for a bundled AP you did not need is an expensive way to get a document.</p>
+
+      <h3>Do it yourself with a template — free, with a serious caveat</h3>
+      <p>For routine, low-risk lifts, a competent person on your own team can complete a <a href="/resources/lift-plan-templates">free lift plan template</a> at no cost. The caveat is the word competent: under LOLER 1998 Regulation 8 the plan must be prepared by someone with adequate training, knowledge and experience — a blank form filled in by someone unqualified is not a lift plan, and principal contractors reject them daily. Our guide to <a href="/blog/when-do-you-need-lift-plan">when you need a lift plan</a> explains where the DIY route is legitimate and where it is not.</p>
+
+      <h2>The Hidden Cost Nobody Budgets For: Rejection</h2>
+      <p>On major projects, every subcontractor lift plan is <a href="/services/lift-plan-checking">checked by the principal contractor's Appointed Person</a> before lifting is approved. A cheap or templated plan that fails that check costs far more than the saving: resubmission delays, standing time for the machine and gang you booked, and a dent in your standing with the PC. Having reviewed hundreds of submissions, the most common rejection causes are wrong load charts, missing thorough-examination certificates, and capacity calculations that ignore accessory weight — all avoidable with competent planning the first time.</p>
+
+      <h2>How to Get an Exact Price</h2>
+      <p>Send the load details (weight, dimensions, lift points), the equipment (make, model, configuration), the site (address, access, ground), and the dates. Any competent provider should turn that into a fixed written quote within 24 hours — we do, with the plan itself typically delivered 24–48 hours after you confirm. You will find our full service details on the <a href="/services/lift-plans">lift plan writing service</a> page.</p>
+
+      <h2>How RMT Solutions Prices Lift Plans</h2>
+      <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 my-8">
+        <p class="text-gray-300 mb-6">Every plan is written by Ricky Marsh, a CPCS A61 Appointed Person with 35 years of construction experience and over 1,000 lift plans delivered. Fixed prices from £200, quoted within 24 hours, no hourly billing, and revisions arising from PC review included. We write <a href="/services/excavator-lift-plans">excavator</a>, <a href="/services/telehandler-lift-plans">telehandler</a>, <a href="/services/lorry-loader-lift-plans">lorry loader</a> and <a href="/services/mobile-crane-lift-plans">mobile crane lift plans</a> UK-wide.</p>
+        <a href="/contact" class="inline-block bg-amber-500 hover:bg-amber-400 text-slate-900 px-6 py-3 rounded-xl font-semibold transition">Get a fixed quote today</a>
+      </div>
+    `,
+  },
   'what-is-bs-7121-complete-guide': {
     title: 'What is BS 7121? UK Guide to Safe Use of Cranes',
     description: 'BS 7121 is the British Standard for the safe use of cranes. Learn what each part covers, how it links to LOLER 1998, and what UK contractors need to comply.',
@@ -796,7 +867,7 @@ const blogPosts = {
         <li>Access and positioning differ</li>
       </ul>
 
-      <p>I always recommend a site visit for mobile crane work to assess ground conditions, access routes, and overhead hazards.</p>
+      <p>I always recommend a site visit for mobile crane work to assess ground conditions, access routes, and overhead hazards. For routine, repeat crane operations under crane hire, our <a href="/resources/mobile-crane-lift-plan-templates">free mobile crane lift plan template</a> provides the documented framework.</p>
 
       <h3>Excavators for Lifting</h3>
       <p><strong>Require a lift plan when used for lifting.</strong> Many people don't realize that the moment you attach lifting gear to an excavator, it becomes lifting equipment under LOLER. You need:</p>
@@ -1036,6 +1107,7 @@ const blogPosts = {
         <li><strong><a href="/services/mobile-crane-lift-plans">Mobile Crane Lift Plans:</a></strong> Detailed plans for mobile crane operations</li>
         <li><strong><a href="/services/tower-crane">Tower Crane Contracts:</a></strong> Full Appointed Person support for tower crane projects</li>
         <li><strong>Hybrid Solutions:</strong> Planning for projects using both types</li>
+        <li><strong><a href="/resources/mobile-crane-lift-plan-templates">Free Mobile Crane Lift Plan Template:</a></strong> A BS 7121-aligned starting point for routine operations</li>
       </ul>
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
@@ -2062,6 +2134,28 @@ export async function generateStaticParams() {
 // guidelines). This unlocks FAQ rich results in the SERP and makes the
 // Q&A content far easier for AI answer engines to quote directly.
 const faqData = {
+  'lift-plan-cost-uk': [
+    {
+      q: 'How much does a lift plan cost in the UK?',
+      a: 'A professional lift plan typically costs £200 to £500 in the UK. Simple excavator and telehandler lift plans start from £200, mobile crane and lorry loader plans usually fall between £250 and £500, and complex operations such as tandem lifts or plans requiring a site visit run from £500 to £1,500.',
+    },
+    {
+      q: 'Why are lift plans priced as fixed fees rather than hourly?',
+      a: 'A fixed fee protects the buyer. Lift planning often generates follow-up work — principal contractor comments, revised load information, equipment changes — and under an hourly arrangement each of those becomes additional billable time. A fixed price agreed up front includes the normal back-and-forth of getting a plan approved.',
+    },
+    {
+      q: 'Does the price include a site visit?',
+      a: 'For straightforward lifts with good photographs, drawings and load information, a site visit is often unnecessary and the plan is produced remotely at the lower end of the price range. Where a visit is needed — typically mobile crane work — a reputable provider includes it in the quoted fixed price rather than billing it separately.',
+    },
+    {
+      q: 'Is a free lift plan template a substitute for a paid lift plan?',
+      a: 'Only for routine, low-risk lifts completed by a competent person. LOLER 1998 Regulation 8 requires every lifting operation to be planned by a person with adequate training, knowledge and experience. For standard and complex lifts, or where a principal contractor must approve the plan, a template completed by an unqualified person will usually be rejected.',
+    },
+    {
+      q: 'How quickly can a lift plan be delivered?',
+      a: 'Standard excavator and telehandler lift plans are typically delivered within 24 to 48 hours of receiving complete project information. Mobile crane and lorry loader plans usually take 2 to 5 working days. Urgent same-day plans are achievable where the load and site information is already available.',
+    },
+  ],
   'what-is-bs-7121-complete-guide': [
     {
       q: 'What is BS 7121?',

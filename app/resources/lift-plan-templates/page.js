@@ -100,6 +100,11 @@ const documentSchema = {
 
 const equipmentTemplates = [
   {
+    href: '/resources/mobile-crane-lift-plan-templates',
+    title: 'Mobile Crane Lift Plan Template',
+    desc: 'Outrigger loading, ground bearing, duty chart verification and slew clearances per BS 7121-3.',
+  },
+  {
     href: '/resources/telehandler-lift-plan-templates',
     title: 'Telehandler Lift Plan Templates',
     desc: 'Suspended load and fork-carried operations, with load chart configuration fields.',

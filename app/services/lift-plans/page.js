@@ -246,7 +246,11 @@ export default function LiftPlansPage() {
               </Link>{' '}
               submitted by your subcontractors, you are dealing directly with the lift planning expert
               who writes them. No call centres, no hourly billing — a fixed price and a fast turnaround
-              on every enquiry.
+              on every enquiry. For a full breakdown of pricing, see our guide to{' '}
+              <Link href="/blog/lift-plan-cost-uk" className="text-amber-400 hover:text-amber-300 underline">
+                how much a lift plan costs
+              </Link>
+              .
             </p>
           </div>
         </div>

@@ -27,6 +27,17 @@ export const metadata = {
 // the original publication date.
 const blogPosts = [
   {
+    slug: 'lift-plan-cost-uk',
+    title: 'How Much Does a Lift Plan Cost? UK Prices 2026',
+    excerpt: 'UK lift plan costs explained with real numbers: from £200 for excavator and telehandler plans, £250–£500 for mobile cranes and lorry loaders, and what drives the price — including the three ways to buy and the rejection cost nobody budgets for.',
+    category: 'Services',
+    readTime: '8 min read',
+    date: 'June 11, 2026',
+    dateModified: 'June 11, 2026',
+    image: '/images/services/lift-planning-site-desk-review-uk.webp',
+    imageAlt: 'Lift planner reviewing drawings and load calculations at a site desk — pricing up a UK lift plan',
+  },
+  {
     slug: 'overhead-crane-lift-plan-guide',
     title: 'Do You Need a Lift Plan for an Overhead Crane? UK Guide (BS 7121-7)',
     excerpt: 'Do overhead, gantry and bridge cranes need a lift plan? A UK guide to LOLER and BS 7121-7 for factory and warehouse crane lifting — when a generic plan is enough and when you need a specific written plan.',

@@ -70,6 +70,11 @@ const RESOURCE_ROUTES = [
   // Generic template page (Jun 2026) — targets the head "lift plan
   // template" query cluster; priority above the equipment-specific pages.
   { path: '/resources/lift-plan-templates',                priority: '0.8' },
+  // Competitor battle plan pages (Jun 2026): GC14 captures the CITB-form
+  // demand currently held by paywalled form-mills; the mobile crane page
+  // fills the one equipment gap in the template hub.
+  { path: '/resources/gc14-lift-plan-template',            priority: '0.7' },
+  { path: '/resources/mobile-crane-lift-plan-templates',   priority: '0.7' },
 ];
 
 // Order: home patch (Warrington) first, then regional flagships, then
@@ -91,6 +96,7 @@ const LOCATION_SLUGS = [
 ];
 
 const BLOG_POSTS = [
+  { slug: 'lift-plan-cost-uk',                                                date: '2026-06-11' },
   { slug: 'what-is-bs-7121-complete-guide',                                   date: '2026-05-22' },
   { slug: 'what-is-a-lift-plan',                                              date: '2026-06-11' },
   { slug: 'what-does-a-lift-plan-checking-service-involve',                   date: '2026-02-11' },
