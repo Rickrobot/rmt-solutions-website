@@ -290,6 +290,11 @@ export default function HomePage() {
             <span className="text-gray-400 font-display font-bold text-xl">CADDICK</span>
             <span className="text-gray-400 font-display font-bold text-xl">GMI</span>
           </div>
+          <div className="text-center mt-8">
+            <a href="/testimonials" className="text-amber-400 hover:text-amber-300 text-sm font-semibold transition">
+              See what they say →
+            </a>
+          </div>
         </div>
       </section>
 

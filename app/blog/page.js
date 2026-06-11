@@ -11,6 +11,14 @@ export const metadata = {
     title: 'Lift Planning Blog | Expert Advice & Guides',
     description: 'Expert lift planning advice and LOLER compliance guides from RMT Solutions.',
     url: 'https://www.rmtsafetysolutions.com/blog',
+    images: [
+      {
+        url: 'https://www.rmtsafetysolutions.com/images/services/lift-planning-site-desk-review-uk.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Lift planning blog — expert advice from a CPCS Appointed Person',
+      },
+    ],
   },
 };
 

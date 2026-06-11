@@ -145,6 +145,14 @@ export default function Footer() {
             <Link href="/sitemap.xml" className="text-gray-400 hover:text-amber-400 transition text-sm">
               Sitemap
             </Link>
+            <a
+              href="https://www.linkedin.com/in/ricky-marsh-certiosh-tier-2-cfrar-mifsm-88b72680/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-amber-400 transition text-sm"
+            >
+              LinkedIn
+            </a>
           </nav>
         </div>
       </div>
