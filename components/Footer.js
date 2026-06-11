@@ -112,6 +112,11 @@ export default function Footer() {
                   07803 808093
                 </a>
               </p>
+              <p>
+                Registered in England &amp; Wales<br />
+                Co. No. 08338653
+              </p>
+              <p>Professional indemnity: details on request</p>
             </address>
           </div>
         </div>
