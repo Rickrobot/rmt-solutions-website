@@ -10,7 +10,9 @@
 // audit flagged.
 
 export const metadata = {
-  title: 'Contact | Lift Plan Quote Within 4 Working Hours',
+  // Trimmed (Jun 2026): with the '| RMT Solutions' suffix the previous
+  // 48-char title hit 64 chars and truncated in desktop SERPs.
+  title: 'Contact — Lift Plan Quote in 4 Working Hours',
   description:
     'Contact RMT Solutions for LOLER compliant lift plans and Appointed Person services. Quote within 4 working hours. Call 07803 808093.',
   alternates: {

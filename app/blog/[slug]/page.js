@@ -225,7 +225,7 @@ const blogPosts = {
     category: 'Compliance',
     readTime: '10 min read',
     date: 'February 11, 2026',
-    dateModified: 'May 22, 2026',
+    dateModified: 'June 11, 2026',
     image: '/images/services/mobile-crane-lifting-precast-concrete.webp',
     imageAlt: 'Mobile crane lifting a precast concrete unit on a UK construction site — a typical lifting operation covered by a lift plan',
     content: `
@@ -261,7 +261,7 @@ const blogPosts = {
       <p>The Health and Safety Executive's Approved Code of Practice (ACOP) for LOLER, known as L113, provides further guidance. It makes clear that the complexity of the plan should be proportionate to the risks involved, but the requirement for planning exists regardless.</p>
 
       <h2>What Does a Lift Plan Contain?</h2>
-      <p>There is no single prescribed format for a lift plan. The HSE does not mandate a specific template, and different companies, crane hire firms, and Appointed Persons use different formats. What matters is that the plan addresses all the risks of the lifting operation and provides sufficient information for the lift to be carried out safely.</p>
+      <p>There is no single prescribed format for a lift plan. The HSE does not mandate a specific template, and different companies, crane hire firms, and Appointed Persons use different formats. What matters is that the plan addresses all the risks of the lifting operation and provides sufficient information for the lift to be carried out safely. If you want a structured starting point, you can <a href="/resources/lift-plan-templates">download our free lift plan template</a> — an editable Word document aligned with BS 7121.</p>
 
       <p>That said, a comprehensive lift plan will typically address the following areas.</p>
 
@@ -598,7 +598,7 @@ const blogPosts = {
       <h2>What is a "Competent Person"?</h2>
       <p>LOLER frequently refers to "competent persons." This means someone with sufficient training, experience, knowledge, and other qualities to enable them to properly assist in undertaking the measures needed to comply with the requirements.</p>
 
-      <p>For lift planning, this typically means a CPCS Appointed Person who holds the A61 qualification. They have been trained to plan lifting operations, select appropriate equipment, calculate loads and capacities, and ensure operations comply with LOLER and BS 7121.</p>
+      <p>For lift planning, this typically means a <a href="/blog/cpcs-appointed-person-guide">CPCS Appointed Person who holds the A61 qualification</a>. They have been trained to plan lifting operations, select appropriate equipment, calculate loads and capacities, and ensure operations comply with LOLER and BS 7121.</p>
 
       <h2>When Do You Need a Lift Plan?</h2>
       <p>LOLER Regulation 8 requires ALL lifting operations to be properly planned. However, the complexity of the plan should match the complexity of the lift:</p>
@@ -669,15 +669,17 @@ const blogPosts = {
   },
   'when-do-you-need-lift-plan': {
     title: 'When Do You Need a Lift Plan? LOLER Requirements Explained',
-    description: 'Not every lift needs a written plan. See exactly when LOLER 1998 makes one a legal requirement on UK sites — and when a generic plan will do.',
+    // CTR fix (Jun 2026): answer-first description with the decision-flowchart
+    // hook — this URL had 8,425 impressions at position 8 but 1.25% CTR.
+    description: 'Every lift must be planned under LOLER 1998 — but only complex lifts need a full written plan. Decision flowchart, real examples, and when a generic plan will do.',
     category: 'Planning',
     readTime: '6 min read',
     date: 'January 28, 2026',
-    dateModified: 'May 22, 2026',
+    dateModified: 'June 11, 2026',
     image: '/images/services/excavator-lifting-concrete-ring-construction.webp',
     imageAlt: 'Excavator lifting a concrete ring into an excavation — an everyday operation that still requires a LOLER lift plan',
     content: `
-      <p class="lead">One of the most common questions I get asked is: "Do I really need a lift plan for this?" The short answer is: yes, LOLER requires ALL lifting operations to be properly planned. But the level of planning detail varies depending on the complexity of the operation.</p>
+      <p class="lead">One of the most common questions I get asked is: "Do I really need a lift plan for this?" The short answer is: yes, LOLER requires ALL lifting operations to be properly planned. But the level of planning detail varies depending on the complexity of the operation. If you are not sure what the document itself contains, start with our guide to <a href="/blog/what-is-a-lift-plan">what a lift plan is</a>.</p>
 
       <h2>The Legal Requirement</h2>
       <p>LOLER Regulation 8 is crystal clear. It states that every lifting operation involving lifting equipment must be:</p>
@@ -711,7 +713,7 @@ const blogPosts = {
         <li>Basic risk assessment</li>
       </ul>
 
-      <p><strong>Examples:</strong> Regular pallet movements with a forklift, standard material handling with a telehandler, routine sling operations by trained staff.</p>
+      <p><strong>Examples:</strong> Regular pallet movements with a forklift, standard material handling with a telehandler, routine sling operations by trained staff. For documenting routine lifts like these, our <a href="/resources/lift-plan-templates">free lift plan template</a> gives you a structured starting point.</p>
 
       <h3>Complex or Non-Routine Lifts</h3>
       <p>These require a detailed written lift plan prepared by a competent person (typically a CPCS Appointed Person). The plan should include:</p>
@@ -823,7 +825,7 @@ const blogPosts = {
         <li>Understanding of load calculations and capacities</li>
       </ul>
 
-      <p>For complex lifts, this typically means a <strong>CPCS Appointed Person (A61 qualification)</strong>. This is the industry-recognized standard for competence in lift planning.</p>
+      <p>For complex lifts, this typically means a <strong><a href="/blog/cpcs-appointed-person-guide">CPCS Appointed Person (A61 qualification)</a></strong>. This is the industry-recognized standard for competence in lift planning.</p>
 
       <h2>Common Scenarios Explained</h2>
 
@@ -885,8 +887,8 @@ const blogPosts = {
 
       <ul>
         <li><strong><a href="/services/tower-crane">Tower Crane Contracts:</a></strong> Ongoing Appointed Person support throughout your project</li>
-        <li><strong><a href="/services/lift-plans">Mobile Crane Lift Plans:</a></strong> Including site visits and ground assessments</li>
-        <li><strong><a href="/services/lift-plans">Excavator Lift Plans:</a></strong> Fast turnaround for pipeline and utilities work</li>
+        <li><strong><a href="/services/mobile-crane-lift-plans">Mobile Crane Lift Plans:</a></strong> Including site visits and ground assessments</li>
+        <li><strong><a href="/services/excavator-lift-plans">Excavator Lift Plans:</a></strong> Fast turnaround for pipeline and utilities work</li>
         <li><strong><a href="/services/steel-erection">Steel Erection Planning:</a></strong> Comprehensive planning for structural steel projects</li>
         <li><strong><a href="/services/lift-plan-checking">Lift Plan Review:</a></strong> Checking subcontractor submissions for compliance</li>
       </ul>
@@ -1031,7 +1033,7 @@ const blogPosts = {
       <ul>
         <li><strong>Crane Selection Advice:</strong> Independent recommendations based on your project</li>
         <li><strong>Cost-Benefit Analysis:</strong> Compare options to find the most economical solution</li>
-        <li><strong><a href="/services/lift-plans">Lift Planning:</a></strong> Detailed plans for mobile crane operations</li>
+        <li><strong><a href="/services/mobile-crane-lift-plans">Mobile Crane Lift Plans:</a></strong> Detailed plans for mobile crane operations</li>
         <li><strong><a href="/services/tower-crane">Tower Crane Contracts:</a></strong> Full Appointed Person support for tower crane projects</li>
         <li><strong>Hybrid Solutions:</strong> Planning for projects using both types</li>
       </ul>
@@ -1287,7 +1289,7 @@ const blogPosts = {
     category: 'Planning',
     readTime: '9 min read',
     date: 'February 6, 2026',
-    dateModified: 'February 6, 2026',
+    dateModified: 'June 11, 2026',
     image: '/images/services/telehandler-lift-plan-forks-uk.webp',
     imageAlt: 'JCB telehandler with boom raised on a UK construction site, set to lift a palletised load on its forks — work that requires a telehandler lift plan',
     content: `
@@ -1331,7 +1333,7 @@ const blogPosts = {
       </ul>
 
       <h2>What Should a Telehandler Lift Plan Include?</h2>
-      <p>A LOLER-compliant telehandler lift plan must address the specific risks of the operation. While the exact content varies with each lift, a thorough telehandler lift plan typically covers the following areas.</p>
+      <p>A LOLER-compliant telehandler lift plan must address the specific risks of the operation. While the exact content varies with each lift, a thorough telehandler lift plan typically covers the following areas. (For the general anatomy of a plan regardless of equipment type, see <a href="/blog/what-is-a-lift-plan">what a lift plan must contain</a>.)</p>
 
       <h3>Machine Specification</h3>
       <p>The lift plan must identify the specific telehandler to be used, not just the generic type. This includes the make, model, maximum rated capacity, and boom configuration. It must also confirm that the machine is fitted with a suitable lifting attachment — typically a crane hook or dedicated lifting jib — and that this attachment is included in the machine's current thorough examination certificate under LOLER.</p>
@@ -1367,7 +1369,7 @@ const blogPosts = {
       <h3>Personnel and Communication</h3>
       <p>The plan must identify the key personnel involved in the lift:</p>
       <ul>
-        <li>The Appointed Person responsible for planning the lift</li>
+        <li>The <a href="/blog/cpcs-appointed-person-guide">Appointed Person</a> responsible for planning the lift</li>
         <li>The lift supervisor overseeing the operation on site</li>
         <li>The telehandler operator, who must hold appropriate CPCS or equivalent certification</li>
         <li>The slinger/signaller(s) responsible for attaching loads and directing the operator</li>
@@ -1428,25 +1430,27 @@ const blogPosts = {
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need a Telehandler Lift Plan?</h3>
-        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant <a href="/services/lift-plans">telehandler lift plans</a> for fixed-frame and 360 degree slew machines. Fast turnaround from a CPCS Appointed Person with 35 years of experience.</p>
+        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant <a href="/services/telehandler-lift-plans">telehandler lift plans</a> for fixed-frame and 360 degree slew machines. Fast turnaround from a CPCS Appointed Person with 35 years of experience.</p>
         <a href="/contact" class="btn-primary inline-block">Get a Quote</a>
       </div>
     `,
   },
   'lorry-loader-lift-plans-guide': {
     title: 'Lorry Loader (HIAB) Lift Plans: UK LOLER Guide',
-    description: 'Complete guide to lorry loader (HIAB) lift plans under LOLER 1998: vehicle positioning, stabiliser requirements, load charts and compliance.',
+    // CTR fix (Jun 2026): lead with the question searchers ask (do HIAB
+    // deliveries need a plan?) rather than a table-of-contents summary.
+    description: 'Yes — even routine HIAB deliveries need a lift plan under LOLER 1998. What it must cover: positioning, stabilisers, load charts, and who can write one.',
     category: 'Planning',
     readTime: '9 min read',
     date: 'February 6, 2026',
-    dateModified: 'February 6, 2026',
+    dateModified: 'June 11, 2026',
     image: '/images/services/lorry-loader-hiab-delivery-construction-site.webp',
     imageAlt: 'Lorry loader (HIAB) offloading a delivery on a UK construction site — a vehicle-mounted crane operation requiring a lorry loader lift plan',
     content: `
       <p class="lead">Lorry loaders \u2014 commonly known by the brand name HIAB, though this is just one of several manufacturers \u2014 are truck-mounted cranes used extensively across UK construction for loading, unloading, and placing materials. Their convenience and availability make them one of the most frequently used pieces of lifting equipment on construction sites, yet lorry loader lift plans are among the most commonly deficient documents submitted for review.</p>
 
       <h2>When Does a Lorry Loader Need a Lift Plan?</h2>
-      <p>Under <a href="/blog/what-is-loler-complete-guide">LOLER 1998</a>, every lifting operation must be properly planned by a competent person. For lorry loaders, this means a lift plan is required whenever the crane is used to lift and move loads. This includes the most routine delivery operations that many contractors assume are too simple to plan.</p>
+      <p>Under <a href="/blog/what-is-loler-complete-guide">LOLER 1998</a>, every lifting operation must be properly planned by a competent person. For lorry loaders, this means a <a href="/blog/what-is-a-lift-plan">lift plan</a> is required whenever the crane is used to lift and move loads. This includes the most routine delivery operations that many contractors assume are too simple to plan.</p>
 
       <p>Operations that require a lorry loader lift plan include:</p>
       <ul>
@@ -1589,7 +1593,7 @@ const blogPosts = {
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need a Lorry Loader Lift Plan?</h3>
-        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant <a href="/services/lift-plans">lorry loader lift plans</a> for all types of truck-mounted crane operations. Fast turnaround from a CPCS Appointed Person with 35 years of experience. Prefer to draft your own? Start from our <a href="/resources/lorry-loader-lift-plan-templates">free lorry loader lift plan template</a>.</p>
+        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant <a href="/services/lorry-loader-lift-plans">lorry loader lift plans</a> for all types of truck-mounted crane operations. Fast turnaround from a CPCS Appointed Person with 35 years of experience. Prefer to draft your own? Start from our <a href="/resources/lorry-loader-lift-plan-templates">free lorry loader lift plan template</a>.</p>
         <a href="/contact" class="btn-primary inline-block">Get a Quote</a>
       </div>
     `,
@@ -2019,6 +2023,10 @@ export async function generateMetadata({ params }) {
     // keywords do. This reclaims the full ~60 chars for the title text.
     title: { absolute: post.title },
     description: post.description,
+    // Per-post keywords were defined in the data but never emitted —
+    // every post previously inherited the homepage keyword list. Google
+    // ignores the keywords meta either way; wired through for hygiene.
+    keywords: post.keywords,
     alternates: {
       canonical: `https://www.rmtsafetysolutions.com/blog/${params.slug}`,
     },
@@ -2028,6 +2036,14 @@ export async function generateMetadata({ params }) {
       url: `https://www.rmtsafetysolutions.com/blog/${params.slug}`,
       images: [post.image],
       type: 'article',
+    },
+    // Explicit per-post X/Twitter card — previously the root layout's
+    // homepage card values leaked onto every post share.
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+      images: [post.image],
     },
   };
 }
@@ -2148,12 +2164,34 @@ const faqData = {
   ],
 };
 
+// Related articles — same-category posts first (excluding the current
+// post), then the most recently updated of the rest. Surfacing three real
+// posts here (rather than a bare "view all" link) cross-links the blog
+// internally: every post passes link equity to — and pulls readers into —
+// its closest siblings. The list derives from the existing post data, so
+// it maintains itself as posts are added. (SEO round 3, Jun 2026.)
+function getRelatedPosts(currentSlug) {
+  const current = blogPosts[currentSlug];
+  const others = Object.entries(blogPosts).filter(([slug]) => slug !== currentSlug);
+  const byFreshness = (a, b) =>
+    new Date(b[1].dateModified || b[1].date) - new Date(a[1].dateModified || a[1].date);
+  const sameCategory = others
+    .filter(([, p]) => p.category === current.category)
+    .sort(byFreshness);
+  const rest = others
+    .filter(([, p]) => p.category !== current.category)
+    .sort(byFreshness);
+  return [...sameCategory, ...rest].slice(0, 3);
+}
+
 export default function BlogPost({ params }) {
   const post = blogPosts[params.slug];
 
   if (!post) {
     notFound();
   }
+
+  const relatedPosts = getRelatedPosts(params.slug);
 
   // FAQPage JSON-LD — rendered only for posts present in faqData above.
   const postFaqs = faqData[params.slug];
@@ -2284,7 +2322,16 @@ export default function BlogPost({ params }) {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              <span>{post.date}</span>
+              {/* Freshness display (SEO round 3): when a post has been
+                  revised, surface the revision date — it matches the
+                  dateModified already emitted in the BlogPosting schema,
+                  and a current date in the SERP snippet measurably helps
+                  click-through vs a months-old publish date. */}
+              <span>
+                {post.dateModified && post.dateModified !== post.date
+                  ? `Updated ${post.dateModified}`
+                  : post.date}
+              </span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2346,7 +2393,7 @@ export default function BlogPost({ params }) {
           <div className="mt-12">
             <InlineQuoteForm
               serviceName={`Blog — ${post.title}`}
-              heading="Need a lift plan written? Plans from £150, 24-48h turnaround"
+              heading="Need a lift plan written? Plans from £200, 24-48h turnaround"
             />
           </div>
 
@@ -2362,14 +2409,43 @@ export default function BlogPost({ params }) {
         </div>
       </article>
 
-      {/* Related Articles */}
+      {/* Related Articles — three real posts (same category first) instead
+          of a bare "view all" link. Adds ~40 contextual internal links
+          across the blog from the existing post data. (SEO round 3) */}
       <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display text-3xl font-bold text-white mb-8">More Articles</h2>
-          <div className="text-gray-400">
-            <Link href="/blog" className="text-amber-400 hover:text-amber-300 transition">
+          <div className="flex items-end justify-between mb-8">
+            <h2 className="font-display text-3xl font-bold text-white">More Articles</h2>
+            <Link href="/blog" className="text-amber-400 hover:text-amber-300 transition text-sm whitespace-nowrap">
               View all articles →
             </Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {relatedPosts.map(([slug, related]) => (
+              <Link
+                key={slug}
+                href={`/blog/${slug}`}
+                className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-amber-500/50 transition flex flex-col"
+              >
+                <div className="relative w-full aspect-[3/2]">
+                  <Image
+                    src={related.image}
+                    alt={related.imageAlt || `Featured image for ${related.title}`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 384px"
+                    className="object-cover group-hover:scale-105 transition duration-300"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <span className="text-amber-400 text-xs font-semibold">{related.category}</span>
+                  <h3 className="text-white font-display text-lg font-bold mt-2 mb-3 leading-snug group-hover:text-amber-400 transition">
+                    {related.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm flex-1">{related.description}</p>
+                  <span className="text-gray-500 text-xs mt-4">{related.readTime}</span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

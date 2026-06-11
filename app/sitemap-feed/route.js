@@ -67,6 +67,9 @@ const RESOURCE_ROUTES = [
   { path: '/resources/telehandler-lift-plan-templates',    priority: '0.7' },
   { path: '/resources/lorry-loader-lift-plan-templates',   priority: '0.7' },
   { path: '/resources/overhead-gantry-crane-lift-plan-templates', priority: '0.7' },
+  // Generic template page (Jun 2026) — targets the head "lift plan
+  // template" query cluster; priority above the equipment-specific pages.
+  { path: '/resources/lift-plan-templates',                priority: '0.8' },
 ];
 
 // Order: home patch (Warrington) first, then regional flagships, then
@@ -89,16 +92,16 @@ const LOCATION_SLUGS = [
 
 const BLOG_POSTS = [
   { slug: 'what-is-bs-7121-complete-guide',                                   date: '2026-05-22' },
-  { slug: 'what-is-a-lift-plan',                                              date: '2026-05-22' },
+  { slug: 'what-is-a-lift-plan',                                              date: '2026-06-11' },
   { slug: 'what-does-a-lift-plan-checking-service-involve',                   date: '2026-02-11' },
   { slug: 'what-is-loler-complete-guide',                                     date: '2026-01-28' },
-  { slug: 'when-do-you-need-lift-plan',                                       date: '2026-05-22' },
+  { slug: 'when-do-you-need-lift-plan',                                       date: '2026-06-11' },
   { slug: 'mobile-crane-vs-tower-crane',                                      date: '2026-01-28' },
   { slug: 'excavator-lift-plans-complete-guide',                              date: '2026-01-31' },
   { slug: 'cpcs-appointed-person-guide',                                      date: '2026-01-31' },
   { slug: 'common-lift-planning-mistakes',                                    date: '2026-05-22' },
-  { slug: 'telehandler-lift-plans-complete-guide',                            date: '2026-02-06' },
-  { slug: 'lorry-loader-lift-plans-guide',                                    date: '2026-02-06' },
+  { slug: 'telehandler-lift-plans-complete-guide',                            date: '2026-06-11' },
+  { slug: 'lorry-loader-lift-plans-guide',                                    date: '2026-06-11' },
   { slug: 'lift-plan-checking-what-gets-checked-and-why-plans-get-rejected',  date: '2026-02-22' },
   { slug: 'lifting-operations-audit-what-to-expect',                          date: '2026-02-23' },
   { slug: 'overhead-crane-lift-plan-guide',                                   date: '2026-05-22' },

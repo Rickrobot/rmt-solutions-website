@@ -11,16 +11,16 @@ export const metadata = {
   // page (GSC: homepage ranked for "lift planning services UK"; this page sat
   // at pos ~33 with 2,112 impressions). This page now owns the commercial
   // query "lift planning services" (227 impressions, 0 clicks, pos ~20).
-  // `absolute` skips the layout's brand suffix so the £150 price hook stays
+  // `absolute` skips the layout's brand suffix so the £200 price hook stays
   // visible within the ~60-char SERP limit.
-  title: { absolute: 'Lift Planning Services UK | Lift Plans from £150' },
-  description: 'Expert lift planning services for UK construction. LOLER-compliant lift plans from a CPCS Appointed Person — fixed prices from £150, 24-48 hour turnaround.',
+  title: { absolute: 'Lift Planning Services UK | Lift Plans from £200' },
+  description: 'Expert lift planning services for UK construction. LOLER-compliant lift plans from a CPCS Appointed Person — fixed prices from £200, 24-48 hour turnaround.',
   keywords: ['lift planning services', 'lift planning experts', 'lift plan', 'lift plans', 'lift planning', 'lift planner', 'lift plan writing', 'lifting plan', 'lifting plans', 'excavator lift plan', 'telehandler lift plan', 'mobile crane lift plan', 'lorry loader lift plan', 'LOLER compliant'],
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lift-plans',
   },
   openGraph: {
-    title: 'Lift Planning Services UK | Lift Plans from £150',
+    title: 'Lift Planning Services UK | Lift Plans from £200',
     description: 'Expert lift planning services from a CPCS Appointed Person. LOLER compliant lift plans for excavators, telehandlers, lorry loaders, mobile and tower cranes. Fixed prices, UK-wide.',
     url: 'https://www.rmtsafetysolutions.com/services/lift-plans',
     images: ['/images/mobile-crane-steel-erection.webp'],
@@ -63,7 +63,7 @@ const faqs = [
   },
   {
     q: 'How much does a lift plan cost?',
-    a: 'Lift plan costs depend on complexity. A simple excavator or telehandler lift plan with a generic site assessment typically costs £150 to £300. Mobile crane and lorry loader lift plans usually fall in the £250 to £500 range. Complex multi-pick operations, tandem lifts, contract lifts, or plans needing a site visit can cost £500 to £1,500. We provide a fixed price on every enquiry — no hourly billing.',
+    a: 'Lift plan costs depend on complexity. A simple excavator or telehandler lift plan with a generic site assessment typically costs £200 to £300. Mobile crane and lorry loader lift plans usually fall in the £250 to £500 range. Complex multi-pick operations, tandem lifts, contract lifts, or plans needing a site visit can cost £500 to £1,500. We provide a fixed price on every enquiry — no hourly billing.',
   },
   {
     q: 'How long does it take to write a lift plan?',
@@ -187,7 +187,7 @@ export default function LiftPlansPage() {
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
               Expert lift planning services for excavators, telehandlers, lorry loaders, and mobile cranes.
-              Fixed prices from £150 and fast turnaround from a CPCS Appointed Person with 35 years experience.
+              Fixed prices from £200 and fast turnaround from a CPCS Appointed Person with 35 years experience.
             </p>
             <Link href="/contact" className="btn-primary inline-flex items-center">
               Get a Quote

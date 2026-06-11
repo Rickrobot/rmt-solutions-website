@@ -61,7 +61,7 @@ export default function ExcavatorTemplatesPage() {
             <Link href="/services/lift-plans" className="text-amber-400 hover:text-amber-300 underline">
               lift planning services
             </Link>{' '}
-            start from £150 with 24-48 hour turnaround.
+            start from £200 with 24-48 hour turnaround.
           </p>
           <p className="text-sm text-slate-400 mb-8">
             Updated June 2026 · Aligned to the CPA/SFPSG CIG 0801 guidance (Fourth Revision)
@@ -339,7 +339,7 @@ export default function ExcavatorTemplatesPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <InlineQuoteForm
             serviceName="Excavator Lift Plan (from templates page)"
-            heading="Want this written for your site instead? Plans from £150, 24-48h turnaround"
+            heading="Want this written for your site instead? Plans from £200, 24-48h turnaround"
           />
         </div>
       </section>

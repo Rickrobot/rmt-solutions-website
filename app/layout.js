@@ -72,10 +72,12 @@ export const metadata = {
     ],
   },
   twitter: {
+    // Card type only (Jun 2026 fix). The previous title/description/images
+    // here were inherited by every inner page, so blog posts and service
+    // pages shared on X showed the homepage card instead of their own.
+    // With only `card` set, X/Twitter falls back to each page's og:title,
+    // og:description and og:image — which are correct everywhere.
     card: 'summary_large_image',
-    title: 'Lift Plans UK | LOLER Compliant Lift Planning',
-    description: 'Professional lift planning from a CPCS Appointed Person with 35 years experience.',
-    images: ['/images/og-lift-planning.jpg'],
   },
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com',

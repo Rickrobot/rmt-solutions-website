@@ -101,7 +101,7 @@ export default function TelehandlerLiftPlanTemplates() {
               <Link href="/services/lift-plans" className="text-amber-400 hover:text-amber-300 underline">
                 lift planning services
               </Link>{' '}
-              start from £150 with 24-48 hour turnaround.
+              start from £200 with 24-48 hour turnaround.
             </p>
             <div className="flex flex-wrap gap-3">
               <a href="#templates" className="bg-amber-500 hover:bg-amber-400 text-slate-900 px-6 py-3 rounded-xl font-semibold transition">
@@ -458,7 +458,7 @@ export default function TelehandlerLiftPlanTemplates() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <InlineQuoteForm
             serviceName="Telehandler Lift Plan (from templates page)"
-            heading="Want this written for your site instead? Plans from £150, 24-48h turnaround"
+            heading="Want this written for your site instead? Plans from £200, 24-48h turnaround"
           />
         </div>
       </section>
@@ -490,9 +490,9 @@ export default function TelehandlerLiftPlanTemplates() {
           <h2 className="text-2xl font-bold text-white mb-8">Related Resources & Services</h2>
           <div className="grid md:grid-cols-4 gap-4">
             {[
+              { href: '/resources/lift-plan-templates', title: 'Generic Lift Plan Template' },
               { href: '/resources/excavator-lift-plan-templates', title: 'Excavator Lift Plan Templates' },
               { href: '/services/telehandler-lift-plans', title: 'Telehandler Lift Plans Service' },
-              { href: '/services/lift-plan-checking', title: 'Lift Plan Checking' },
               { href: '/blog/what-is-a-lift-plan', title: 'What is a Lift Plan?' },
             ].map((link) => (
               <Link
