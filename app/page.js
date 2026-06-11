@@ -289,6 +289,11 @@ export default function HomePage() {
             <span className="text-gray-400 font-display font-bold text-xl">WATES</span>
             <span className="text-gray-400 font-display font-bold text-xl">CADDICK</span>
             <span className="text-gray-400 font-display font-bold text-xl">GMI</span>
+            <img
+              src="/images/constructionline-gold.png"
+              alt="Constructionline Gold Member"
+              className="h-10 opacity-60 hover:opacity-90 transition"
+            />
           </div>
           <div className="text-center mt-8">
             <a href="/testimonials" className="text-amber-400 hover:text-amber-300 text-sm font-semibold transition">

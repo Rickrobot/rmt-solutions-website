@@ -99,6 +99,17 @@ export default function Footer() {
               ))}
             </ul>
 
+            <div className="mt-6 pt-6 border-t border-slate-800">
+              <p className="text-gray-500 text-xs uppercase tracking-widest mb-3">Accreditations</p>
+              <img
+                src="/images/constructionline-gold.png"
+                alt="Constructionline Gold Member"
+                width={120}
+                height={61}
+                className="opacity-70 hover:opacity-100 transition"
+              />
+            </div>
+
             <h2 className="text-white font-display font-semibold mt-8 mb-6">Contact</h2>
             <address className="not-italic space-y-3 text-gray-400 text-sm">
               <p>RMT Solutions Ltd<br />Warrington, Cheshire, UK</p>
