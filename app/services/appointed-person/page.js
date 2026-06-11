@@ -92,6 +92,22 @@ const faqSchema = {
         text: 'The Appointed Person plans the lifting operation and produces the lift plan. The lift supervisor (CPCS A62) carries that plan out on the day, supervising the crew and stopping the lift if conditions change. The Appointed Person appoints and briefs the supervisor, but the two roles are distinct and should not be combined on anything other than the simplest operations.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Can I hire an Appointed Person without hiring a crane?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — and it is often the most economical route. Crane hire companies typically supply an Appointed Person only as part of a contract lift package. If you already have your machine and operator arranged — under CPA crane hire, or using your own excavator, telehandler or lorry loader — an independent Appointed Person provides exactly the planning competence LOLER requires, with no equipment bundled in and no incentive to sell you a bigger crane.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does an Appointed Person cost?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'RMT Solutions works on fixed fees rather than open-ended day rates: lift plans from £200 with the planning competence included, and site attendance, surveys and audits quoted as fixed prices per visit. For ongoing tower crane contracts we agree a project rate covering plan reviews, audits and named AP cover — so the cost is known before any work starts.',
+      },
+    },
   ],
 }
 
@@ -254,6 +270,57 @@ export default function AppointedPersonPage() {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Independent positioning — battle plan phase 2 (Jun 2026).
+          The "contract appointed person" SERP is owned by crane hire
+          companies who supply an AP only as part of a contract lift.
+          Their structural weakness is the conflict of interest and the
+          buyer they cannot serve: someone who already has the plant and
+          needs only the planning competence. This section owns that
+          framing and the "hire an appointed person" intent. */}
+      <section className="py-24 bg-slate-950 border-t border-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+              Independent — Not a Crane Hire Upsell
+            </span>
+            <h2 className="font-display text-4xl font-bold text-white mb-6">
+              Hire an Independent Appointed Person
+            </h2>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Most Appointed Person services in the UK are sold by crane hire companies as part of
+              a contract lift — the crane, operator and AP come as a package, priced accordingly.
+              That is the right product when you want the crane company to carry the lifting risk.
+              But if you already have your machine and operator arranged — under CPA crane hire, or
+              using your own excavator, telehandler or lorry loader — you do not need the package.
+              You need the planning competence.
+            </p>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              As an independent Appointed Person, RMT Solutions has no crane to sell you and no
+              hire fleet to keep busy. The advice on equipment selection is impartial, the lift
+              plan works with the plant you already have, and the fee is fixed —{' '}
+              <Link href="/blog/lift-plan-cost-uk" className="text-amber-400 hover:text-amber-300 underline">
+                plans from £200
+              </Link>
+              , agreed before any work starts. Based in Warrington with same-day site attendance
+              across Manchester, Liverpool and the North West, and remote lift planning UK-wide.
+            </p>
+            <ul className="space-y-3 text-gray-300">
+              {[
+                'No conflict of interest — independent of all crane hire and plant companies',
+                'Works alongside your existing CPA crane hire arrangements',
+                'Fixed fees agreed up front, not open-ended day rates',
+                'One named, accountable A61 Appointed Person from enquiry to sign-off',
+              ].map((point) => (
+                <li key={point} className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-amber-400 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

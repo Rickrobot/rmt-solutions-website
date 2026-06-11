@@ -58,7 +58,7 @@ const blogPosts = {
       <p>You deal directly with the Appointed Person who writes the plan, the fee is fixed, and the plan is independent of any equipment supplier. This is usually the most economical route when you already have your machine and operator arranged and need the planning competence LOLER requires.</p>
 
       <h3>Crane hire company Appointed Person — typically bundled into a contract lift</h3>
-      <p>If you are buying a <strong>contract lift (CPA terms)</strong>, the crane company supplies the crane, operator and Appointed Person as a package, and the planning cost is wrapped into the overall contract price. Industry cost guides typically put standalone Appointed Person day rates around £300–£400 per day. A contract lift is the right answer when you want the crane company to carry the lifting risk — but if you already have the plant, paying for a bundled AP you did not need is an expensive way to get a document.</p>
+      <p>If you are buying a <strong>contract lift (CPA terms)</strong>, the crane company supplies the crane, operator and Appointed Person as a package, and the planning cost is wrapped into the overall contract price rather than itemised. A contract lift is the right answer when you want the crane company to carry the lifting risk — but if you already have the plant, paying for a bundled AP you did not need is an expensive way to get a document.</p>
 
       <h3>Do it yourself with a template — free, with a serious caveat</h3>
       <p>For routine, low-risk lifts, a competent person on your own team can complete a <a href="/resources/lift-plan-templates">free lift plan template</a> at no cost. The caveat is the word competent: under LOLER 1998 Regulation 8 the plan must be prepared by someone with adequate training, knowledge and experience — a blank form filled in by someone unqualified is not a lift plan, and principal contractors reject them daily. Our guide to <a href="/blog/when-do-you-need-lift-plan">when you need a lift plan</a> explains where the DIY route is legitimate and where it is not.</p>
@@ -922,7 +922,7 @@ const blogPosts = {
 
       <h3>Scenario 3: Plant Delivery and Positioning</h3>
       <p><strong>Need a lift plan?</strong> USUALLY</p>
-      <p>Depends on the equipment being delivered. A mini digger might be straightforward, but a 30-tonne excavator or generator definitely needs proper planning.</p>
+      <p>Depends on the equipment being delivered. A mini digger might be straightforward, but a 30-tonne excavator or generator definitely needs proper planning. For HIAB deliveries, our <a href="/resources/lorry-loader-lift-plan-templates">free lorry loader lift plan template</a> covers the standard delivery operation, including a worked example.</p>
 
       <h3>Scenario 4: Materials Handling on Site</h3>
       <p><strong>Need a lift plan?</strong> DEPENDS</p>

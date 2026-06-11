@@ -135,6 +135,14 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
+      name: 'Who writes the lift plan for a tower crane?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A CPCS A61 Appointed Person. On most projects the principal contractor requires a named Appointed Person to own tower crane lift planning for the duration of the crane on site — producing the generic site lift plan, writing specific tower crane lift plans for non-routine operations, and reviewing every lift plan submitted by subcontractors before lifting is approved. The crane supplier erects and maintains the crane, but the lift planning responsibility sits with the Appointed Person.',
+      },
+    },
+    {
+      '@type': 'Question',
       name: 'Can you cover sites with multiple tower cranes or shared airspace?',
       acceptedAnswer: {
         '@type': 'Answer',
@@ -629,6 +637,52 @@ export default function TowerCranePage() {
             serviceName="Tower Crane Contracts"
             heading="Get a quote for tower crane contracts"
           />
+        </div>
+      </section>
+
+      {/* Tower crane lift plans — battle plan phase 2 (Jun 2026). The
+          legacy WordPress URL that ranked for "tower crane lift plan"
+          now 301s here, but the page was contracts-led and barely used
+          the phrase. This section gives the consolidating query a
+          proper landing target. */}
+      <section className="py-24 bg-slate-950 border-t border-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+              Lift Planning
+            </span>
+            <h2 className="font-display text-4xl font-bold text-white mb-6">
+              Tower Crane Lift Plans
+            </h2>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Tower crane lift planning works in three layers. A <strong>generic site lift
+              plan</strong> covers the routine, repetitive lifts — materials in, formwork around,
+              kit movements — defining the loads, accessories and zones the crane handles daily. A{' '}
+              <strong>specific tower crane lift plan</strong> is written for anything outside that
+              envelope: heavy or awkward picks, lifts near the site boundary, plant placement, or
+              loads over occupied areas. And <strong>tandem or specialist plans</strong> cover
+              complex operations where cranes share airspace or loads.
+            </p>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              As your named Appointed Person we produce all three — the generic plan at contract
+              start, specific plans within 24 hours for contracted clients, and the{' '}
+              <Link href="/services/lift-plan-checking" className="text-amber-400 hover:text-amber-300 underline">
+                independent review of every subcontractor lift plan
+              </Link>{' '}
+              before it reaches your crane. Erection and dismantle lifts are planned with the
+              crane supplier under BS 7121-5, and every plan is built to survive a principal
+              contractor&apos;s scrutiny because writing and checking these plans is our daily
+              work. New to the topic? Start with{' '}
+              <Link href="/blog/what-is-a-lift-plan" className="text-amber-400 hover:text-amber-300 underline">
+                what a lift plan is
+              </Link>{' '}
+              and{' '}
+              <Link href="/blog/lift-plan-cost-uk" className="text-amber-400 hover:text-amber-300 underline">
+                what lift plans cost
+              </Link>
+              .
+            </p>
+          </div>
         </div>
       </section>
 

@@ -359,6 +359,46 @@ export default function LorryLoaderTemplatesPage() {
         </div>
       </section>
 
+      {/* Worked example — battle plan phase 2 (Jun 2026). The HIAB SERP
+          is held by incidental PDFs and document dumps; a concrete worked
+          example is the depth signal none of them have. */}
+      <section className="py-16 bg-slate-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Worked Example: A Typical HIAB Delivery Lift
+          </h2>
+          <p className="text-slate-300 max-w-3xl mb-10">
+            How the template plays out on the most common lorry loader operation in UK
+            construction — delivering palletised materials over a site hoarding.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: 'The operation',
+                desc: 'A 26-tonne lorry loader delivering two packs of blockwork (1.4 tonnes each) over a 2.4m hoarding to a laydown area 7.5m from the vehicle centreline. Brick grab attachment, kerbside setup on a live residential street.',
+              },
+              {
+                title: 'Capacity check',
+                desc: 'Crane rated 2.05 tonnes at 8m on the manufacturer chart with stabilisers fully deployed. Gross load: 1.4t pack + 0.31t brick grab = 1.71 tonnes at a worst-case 7.8m radius — 83% utilisation. Acceptable for a planned, supervised delivery, but tight enough that part-deployed stabilisers or a longer reach would kill it. That maths is exactly what the template forces you to write down.',
+              },
+              {
+                title: 'The controls that matter',
+                desc: 'Stabilisers fully deployed on mats (footpath build-up unverified), pedestrian exclusion with barriers and a banksman on the footway, no slewing over the occupied carriageway, pack lifted 300mm and paused to confirm stability before the main slew, wind checked against the 0.8m² pack face.',
+              },
+              {
+                title: 'What gets it rejected',
+                desc: 'The versions of this lift that fail review: chart figure quoted for full stabiliser deployment while the kerbside leg is part-deployed, brick grab weight missing from the gross load, no thorough-examination date for the grab, and "banksman as required" instead of a named slinger/signaller. All four are fields in the template.',
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-slate-800 border border-slate-700 p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-white mb-3">{item.title}</h3>
+                <p className="text-slate-400 text-sm">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ — captures long-tail and "People also ask" style queries
           (do you need a lift plan for a HIAB, which standard applies, who can
           write one). FAQPage JSON-LD is emitted at the foot of the page. */}
