@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   const services = [
+    { name: 'Appointed Person', href: '/services/appointed-person' },
     { name: 'Lift Plan Writing', href: '/services/lift-plans' },
     { name: 'Excavator Lift Plans', href: '/services/excavator-lift-plans' },
     { name: 'Telehandler Lift Plans', href: '/services/telehandler-lift-plans' },

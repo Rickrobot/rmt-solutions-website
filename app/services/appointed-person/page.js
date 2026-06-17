@@ -415,6 +415,33 @@ export default function AppointedPersonPage() {
         </div>
       </section>
 
+      {/* FAQ — visible content mirroring the FAQ schema above, so the answers
+          appear on the page (Google rewards visible FAQ content and can surface
+          it in "People also ask" / featured snippets). Rendered from the same
+          faqSchema source so the markup and the visible copy never drift apart. */}
+      <section className="py-24 bg-slate-900 border-t border-slate-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            eyebrow="Common Questions"
+            title="Appointed Person — your questions answered"
+            description="The questions UK contractors ask most before appointing a CPCS A61 Appointed Person."
+          />
+          <div className="space-y-6">
+            {faqSchema.mainEntity.map((item) => (
+              <article
+                key={item.name}
+                className="bg-gradient-to-b from-slate-800/40 to-slate-900/40 rounded-2xl p-6 sm:p-8 border border-slate-700/50"
+              >
+                <h3 className="font-display text-xl sm:text-2xl font-bold text-white mb-3">
+                  {item.name}
+                </h3>
+                <p className="text-gray-300 leading-relaxed">{item.acceptedAnswer.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Inline quote form */}
       <section className="py-20 bg-slate-950">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
