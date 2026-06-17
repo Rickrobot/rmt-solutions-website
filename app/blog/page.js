@@ -35,6 +35,17 @@ export const metadata = {
 // the original publication date.
 const blogPosts = [
   {
+    slug: 'lifting-method-statements-rams-guide',
+    title: 'Lifting Method Statements & RAMS: UK Guide',
+    excerpt: 'Lift plan, method statement, risk assessment or RAMS — what each one is, what the law requires under LOLER 1998 and BS 7121, what a good lifting method statement contains, and who is competent to write it.',
+    category: 'Compliance',
+    readTime: '7 min read',
+    date: 'June 17, 2026',
+    dateModified: 'June 17, 2026',
+    image: '/images/blog/lift-plan-document-clipboard-site.webp',
+    imageAlt: 'A lifting method statement and RAMS document on a clipboard on a UK construction site',
+  },
+  {
     slug: 'lift-plan-cost-uk',
     title: 'How Much Does a Lift Plan Cost? UK Prices 2026',
     excerpt: 'UK lift plan costs explained with real numbers: from £200 for excavator and telehandler plans, £250–£500 for mobile cranes and lorry loaders, and what drives the price — including the three ways to buy and the rejection cost nobody budgets for.',

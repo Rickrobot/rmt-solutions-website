@@ -124,6 +124,22 @@ const faqSchema = {
         text: 'Yes. We work with contractors right across the UK from our base in Warrington, Cheshire. Remote desk-based plans can be issued anywhere in the country, and site visits are arranged when needed.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Does an excavator need a LOLER thorough examination for lifting?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. As soon as an excavator is used to lift a suspended load it is lifting equipment under LOLER 1998, so it needs a thorough examination by a competent person at least every 12 months, and the lifting accessories — chains, slings and the lifting eye — every 6 months. The lift plan should confirm the current examination certificate covers lifting duties, not just the machine.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is CPA lifting with excavators?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'It refers to the Construction Plant-hire Association (CPA) good-practice guidance for using 360° excavators for object handling — "Lifting Operations with Excavators". It covers the lifting points, Rated Capacity Indicator and quick-hitch requirements, the load-chart deductions and the planning expectations, and a competent excavator lift plan is written in line with it alongside LOLER 1998, BS 7121 and ISO 10567.',
+      },
+    },
   ],
 }
 
@@ -787,6 +803,28 @@ export default function ExcavatorLiftPlansPage() {
             >
               Get the free excavator lift plan template →
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ — visible Q&A mirroring the FAQ schema above, so the answers
+          appear on the page (PAA / featured-snippet capture) and the rendered
+          copy stays in sync with the structured data it is generated from. */}
+      <section className="py-20 bg-slate-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">
+            Excavator lift plans — frequently asked questions
+          </h2>
+          <div className="space-y-4">
+            {faqSchema.mainEntity.map((item) => (
+              <div
+                key={item.name}
+                className="bg-slate-800/40 border border-slate-700/50 rounded-2xl p-6 sm:p-7"
+              >
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2">{item.name}</h3>
+                <p className="text-slate-300 leading-relaxed">{item.acceptedAnswer.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

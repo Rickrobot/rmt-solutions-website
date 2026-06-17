@@ -5,6 +5,75 @@ import InlineQuoteForm from '@/components/InlineQuoteForm';
 
 // Blog posts content
 const blogPosts = {
+  'lifting-method-statements-rams-guide': {
+    title: 'Lifting Method Statements & RAMS: UK Guide',
+    description: 'What a lifting method statement and RAMS must contain under LOLER 1998 and BS 7121, how they differ from a lift plan, and who is competent to write them.',
+    keywords: 'lifting method statement, lift plan method statement, lifting plan method statement, rams lifting, method statement for lifting operations, lifting risk assessment, telehandler risk assessment example, safe system of work lifting, who writes lifting rams',
+    category: 'Compliance',
+    readTime: '7 min read',
+    date: 'June 17, 2026',
+    dateModified: 'June 17, 2026',
+    image: '/images/blog/lift-plan-document-clipboard-site.webp',
+    imageAlt: 'A lifting method statement and RAMS document on a clipboard on a UK construction site',
+    content: `
+      <p>Ask three people on a construction site what paperwork a lift needs and you will often get three different answers: a lift plan, a method statement, a risk assessment, or "the RAMS". They are related but not interchangeable — and principal contractors reject lifting documentation every week because the wrong document was supplied, or because a generic template was used where a written, site-specific plan was required.</p>
+
+      <p>This guide explains what a lifting method statement and RAMS are, what the law requires, what a good one contains, and who is competent to write it.</p>
+
+      <h2>Lifting method statement, RAMS and lift plan — what is the difference?</h2>
+      <p>The terms describe different but overlapping documents:</p>
+      <ul>
+        <li><strong>Risk assessment</strong> — identifies the hazards of the lifting operation and the control measures needed. Required under the Management of Health and Safety at Work Regulations 1999.</li>
+        <li><strong>Method statement</strong> — a step-by-step description of how the work will be carried out safely, putting the controls from the risk assessment into a practical sequence.</li>
+        <li><strong>RAMS</strong> — simply the Risk Assessment and Method Statement combined into one document, which is how they are usually issued on site.</li>
+        <li><strong>Lift plan</strong> — the specific planning document for a lifting operation required under LOLER 1998 Regulation 8. It carries the technical detail of the lift (loads, capacities, equipment configuration, rigging) and is normally produced or signed off by an <a href="/services/appointed-person">Appointed Person</a>.</li>
+      </ul>
+      <p>In practice the lift plan and the RAMS work together: the RAMS sets out the safe system of work for the activity, and the <a href="/blog/what-is-a-lift-plan">lift plan</a> provides the technical lifting detail inside it. For a routine, repetitive lift the two are often combined; for a complex lift they are separate, linked documents.</p>
+
+      <h2>The legal basis: why you need one</h2>
+      <p>Several pieces of UK law sit behind lifting documentation:</p>
+      <ul>
+        <li><strong>LOLER 1998, Regulation 8</strong> requires every lifting operation involving lifting equipment to be properly planned by a competent person, appropriately supervised and carried out safely.</li>
+        <li><strong>The Management of Health and Safety at Work Regulations 1999</strong> require a suitable and sufficient risk assessment of the work.</li>
+        <li><strong>The Health and Safety at Work etc. Act 1974</strong> places the overarching duty to protect, so far as is reasonably practicable, workers and others affected by the work.</li>
+        <li><strong>CDM 2015</strong> requires the work to be planned, managed and monitored — which is why the principal contractor asks for your RAMS before you start.</li>
+      </ul>
+      <p><a href="/blog/what-is-bs-7121-complete-guide">BS 7121</a>, the code of practice for the safe use of cranes, is the recognised means of showing you have met these duties for crane and construction lifting.</p>
+
+      <h2>What a lifting method statement should contain</h2>
+      <p>A method statement for a lifting operation should be specific to the task, the equipment and the site — not a generic form with the company name changed. A competent one covers:</p>
+      <ul>
+        <li>A description of the lifting operation and the loads involved</li>
+        <li>The lifting equipment and accessories selected, with capacities verified against the manufacturer's load chart for the exact configuration</li>
+        <li>The sequence of operations, step by step, from delivery and rigging through to landing and de-rigging</li>
+        <li>Ground conditions, outrigger or track loadings and any matting or crane pads required</li>
+        <li>The exclusion zone around the swept area of the load, and how people are kept clear</li>
+        <li>Roles and competence — Appointed Person, lift supervisor, crane or plant operator, slinger/signaller</li>
+        <li>Site-specific hazards: overhead lines, underground services, adjacent activities, public interfaces, and wind or weather limits</li>
+        <li>Communication arrangements and the emergency and rescue plan</li>
+        <li>The supporting risk assessment and the lift plan it references</li>
+      </ul>
+
+      <h2>Who should write the RAMS for a lifting operation?</h2>
+      <p>LOLER requires the lift to be planned by a <strong>competent person</strong> — someone with the training, knowledge and experience to plan the operation, select the right equipment and assess the site-specific hazards. For crane and construction lifting that is normally a <a href="/services/appointed-person">CPCS A61 Appointed Person</a>. A blank template completed by someone without that competence is one of the most common reasons RAMS are rejected: the document can look complete while the technical decisions behind it are wrong.</p>
+
+      <h2>Why lifting RAMS get rejected</h2>
+      <p>The usual reasons a principal contractor sends a RAMS back are avoidable:</p>
+      <ul>
+        <li>Generic content that clearly was not written for the actual lift or site</li>
+        <li>No load weights, or capacities not checked against the load chart for the real configuration</li>
+        <li>Missing exclusion zones, or no plan for keeping people clear of the load</li>
+        <li>No named, competent Appointed Person, or competence not evidenced</li>
+        <li>The risk assessment and method statement contradict each other, or the lift plan is missing</li>
+      </ul>
+
+      <h2>Free template or a written RAMS?</h2>
+      <p>For routine, low-risk lifts completed by a competent person, a good template is a legitimate starting point — you can work from our free <a href="/resources/lift-plan-templates">lift plan templates</a>. For standard and complex lifts, or anywhere a principal contractor must approve the documentation, a written, site-specific RAMS and lift plan produced by a competent person is what the law requires — and what gets accepted first time.</p>
+
+      <h2>How RMT Solutions can help</h2>
+      <p>RMT Solutions is run by a CPCS A61 Appointed Person with 35 years in UK construction. We write site-specific lifting method statements, risk assessments and <a href="/services/lift-plans">lift plans</a> for excavators, telehandlers, lorry loaders and mobile cranes, and we provide independent <a href="/services/appointed-person">Appointed Person</a> cover — fixed prices from £200, with a quote inside four working hours. If a principal contractor has rejected your RAMS, or you want it right the first time, send us the details and we will turn it around in 24 to 48 hours.</p>
+    `,
+  },
   'lift-plan-cost-uk': {
     title: 'How Much Does a Lift Plan Cost? UK Prices 2026',
     description: 'UK lift plan costs explained: from £200 for excavator and telehandler plans, £250–£500 for mobile cranes, £500+ for complex lifts. What you pay and why.',
@@ -2134,6 +2203,24 @@ export async function generateStaticParams() {
 // guidelines). This unlocks FAQ rich results in the SERP and makes the
 // Q&A content far easier for AI answer engines to quote directly.
 const faqData = {
+  'lifting-method-statements-rams-guide': [
+    {
+      q: 'What does RAMS stand for in lifting?',
+      a: 'RAMS stands for Risk Assessment and Method Statement. For a lifting operation it combines the assessment of the hazards and controls with a step-by-step description of how the lift will be carried out safely, usually issued as a single document and read alongside the lift plan required under LOLER 1998.',
+    },
+    {
+      q: 'Is a lift plan the same as a method statement?',
+      a: 'No. A method statement describes how the work will be done safely in sequence; a lift plan is the specific planning document required under LOLER 1998 Regulation 8 covering the technical detail of the lift — loads, capacities, equipment configuration and rigging. On simple lifts they are often combined; on complex lifts they are separate, linked documents.',
+    },
+    {
+      q: 'Who can write a lifting method statement?',
+      a: 'It must be prepared by a competent person with the training, knowledge and experience to plan the operation, select the equipment and assess the site-specific hazards. For crane and construction lifting that is normally a CPCS A61 Appointed Person.',
+    },
+    {
+      q: 'Do I need both a method statement and a lift plan?',
+      a: 'For most commercial lifting operations, yes. The risk assessment and method statement (RAMS) set out the safe system of work, and the lift plan provides the technical lifting detail required under LOLER 1998. A principal contractor will usually expect both before lifting work begins.',
+    },
+  ],
   'lift-plan-cost-uk': [
     {
       q: 'How much does a lift plan cost in the UK?',
