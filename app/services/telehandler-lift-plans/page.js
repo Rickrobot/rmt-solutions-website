@@ -5,14 +5,14 @@ import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Telehandler Lift Plans UK | LOLER Compliant',
-  description: 'CPCS Appointed Person telehandler lift plans for suspended loads, work platforms and specialist attachments. LOLER 1998 compliant.',
+  description: 'CPCS Appointed Person telehandler lift plans from £200 + VAT. Suspended loads, work platforms and attachments, LOLER 1998 compliant.',
   keywords: 'telehandler lift plan, telehandler lifting operations, telescopic handler lift plan, telehandler suspended load, A77C, LOLER telehandler, CPCS appointed person',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/telehandler-lift-plans',
   },
   openGraph: {
     title: 'Telehandler Lift Plans UK | LOLER Compliant',
-    description: 'CPCS Appointed Person telehandler lift plans for suspended loads, work platforms and specialist attachments. Quote within 4 working hours, plan in 24–48 hours.',
+    description: 'CPCS Appointed Person telehandler lift plans from £200 + VAT. Suspended loads, work platforms and attachments. Quote within 4 working hours.',
     url: 'https://www.rmtsafetysolutions.com/services/telehandler-lift-plans',
     type: 'website',
   },
@@ -42,7 +42,8 @@ const serviceSchema = {
     '@type': 'Offer',
     availability: 'https://schema.org/InStock',
     priceCurrency: 'GBP',
-    description: 'Fixed-fee telehandler lift plan, quoted on application after a brief scoping call.',
+    price: '200',
+    description: 'Fixed-fee telehandler lift plan from £200 plus VAT.',
   },
 }
 
@@ -153,6 +154,9 @@ export default function TelehandlerLiftPlansPage() {
           </p>
 
           <div className="flex flex-wrap gap-3 mb-8">
+            <div className="flex items-center gap-2 bg-amber-500 px-4 py-2 rounded-full">
+              <span className="text-sm font-bold text-slate-900">Lift plans from £200 + VAT</span>
+            </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur px-4 py-2 rounded-full border border-white/20">
               <Clock className="w-4 h-4 text-amber-400" />
               <span className="text-sm">Quote in 4 working hours</span>
@@ -326,7 +330,7 @@ export default function TelehandlerLiftPlansPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">How it works — and how fast</h2>
           <p className="text-lg text-slate-600 mb-12 max-w-3xl">
-            Quote-on-application, fixed fee, no hourly drift. Send the brief and we&apos;ll come
+            From £200 + VAT, fixed fee, no hourly drift. Send the brief and we&apos;ll come
             back to you the same working day.
           </p>
 
@@ -615,7 +619,7 @@ export default function TelehandlerLiftPlansPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Send the brief, get the plan</h2>
           <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-            Quote-on-application — fixed fee, no hourly drift. We&apos;ll come back to you the same
+            From £200 + VAT — fixed fee, no hourly drift. We&apos;ll come back to you the same
             working day.
           </p>
 

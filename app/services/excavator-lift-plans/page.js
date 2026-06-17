@@ -6,14 +6,14 @@ import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Excavator Lift Plans UK | ISO 10567 & LOLER',
-  description: 'CPCS Appointed Person excavator lift plans for 180° and 360° machines. LOLER 1998 and ISO 10567 compliant. Plan delivered in 24–48 hours.',
+  description: 'CPCS Appointed Person excavator lift plans from £200 + VAT. LOLER 1998 and ISO 10567 compliant, delivered in 24–48 hours.',
   keywords: 'excavator lift plan, excavator lifting plan, excavator lift plans, lifting with excavator, excavator lift plan UK, excavator lifting operations, 360 excavator lift plan, excavator lifting capacity, LOLER excavator lifting, ISO 10567, CPCS appointed person',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/excavator-lift-plans',
   },
   openGraph: {
     title: 'Excavator Lift Plans UK | ISO 10567 & LOLER',
-    description: 'CPCS Appointed Person excavator lift plans for 180° and 360° machines. Quote within 4 working hours, plan delivered in 24–48 hours.',
+    description: 'CPCS Appointed Person excavator lift plans from £200 + VAT. Quote within 4 working hours, plan delivered in 24–48 hours.',
     url: 'https://www.rmtsafetysolutions.com/services/excavator-lift-plans',
     type: 'website',
   },
@@ -44,7 +44,8 @@ const serviceSchema = {
     '@type': 'Offer',
     availability: 'https://schema.org/InStock',
     priceCurrency: 'GBP',
-    description: 'Fixed-fee excavator lift plan, quoted on application after a brief scoping call.',
+    price: '200',
+    description: 'Fixed-fee excavator lift plan from £200 plus VAT.',
   },
 }
 
@@ -202,6 +203,9 @@ export default function ExcavatorLiftPlansPage() {
 
           {/* Response-time promise badges */}
           <div className="flex flex-wrap gap-3 mb-8">
+            <div className="flex items-center gap-2 bg-amber-500 px-4 py-2 rounded-full">
+              <span className="text-sm font-bold text-slate-900">Lift plans from £200 + VAT</span>
+            </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur px-4 py-2 rounded-full border border-white/20">
               <Clock className="w-4 h-4 text-amber-400" />
               <span className="text-sm">Quote in 4 working hours</span>
@@ -846,7 +850,7 @@ export default function ExcavatorLiftPlansPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Send the brief, get the plan</h2>
           <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-            Quote-on-application — fixed fee, no hourly drift. We&apos;ll come back to you the same
+            From £200 + VAT — fixed fee, no hourly drift. We&apos;ll come back to you the same
             working day.
           </p>
 
