@@ -5,6 +5,59 @@ import InlineQuoteForm from '@/components/InlineQuoteForm';
 
 // Blog posts content
 const blogPosts = {
+  'how-to-choose-a-lift-plan-provider': {
+    title: 'How to Choose a Lift Plan Provider (UK)',
+    description: 'Crane-hire firm, contract-lift package or independent consultant? How the three ways to get a lift plan compare, what each costs, and how to choose.',
+    keywords: 'how to choose a lift plan provider, lift plan provider, independent appointed person vs crane hire, contract lift vs appointed person, lift plan consultant uk, lift plan without hiring a crane, who can write a lift plan, independent lift planning',
+    category: 'Services',
+    readTime: '7 min read',
+    date: 'June 17, 2026',
+    dateModified: 'June 17, 2026',
+    image: '/images/blog/deciding-if-lift-plan-needed-site-discussion.webp',
+    imageAlt: 'Site managers discussing which lift plan provider to use on a UK construction site',
+    content: `
+      <p>There are three ways to get a lift plan for a UK construction site, and the cheapest, fastest and most appropriate one depends on a single question: do you need the crane as well, or just the plan? Choose the wrong route and you either pay for equipment you do not need, or end up with a generic plan a principal contractor rejects. This guide explains the three options, what each typically costs, and how to choose between them.</p>
+
+      <h2>The three ways to get a lift plan</h2>
+      <p>Whoever writes the plan, the law is the same: under LOLER 1998 every lifting operation must be planned by a competent person — normally a <a href="/services/appointed-person">CPCS A61 Appointed Person</a>. What differs is how you buy that competence:</p>
+      <ul>
+        <li><strong>From a crane hire company</strong>, bundled in with the crane you are hiring.</li>
+        <li><strong>As a contract lift</strong>, where a provider takes on the whole operation and the risk.</li>
+        <li><strong>From an independent consultant</strong>, who writes the plan without supplying any equipment.</li>
+      </ul>
+
+      <h2>Option 1 — A crane hire company (Appointed Person bundled in)</h2>
+      <p>Most crane hire firms will supply an Appointed Person and a lift plan as part of hiring their crane. If you are hiring their crane anyway, that is convenient and the plan comes as part of the deal. The catch: the Appointed Person works for the company selling you the equipment, so the advice on what crane you need is not independent; the plan is tied to their fleet; and you usually cannot buy the plan on its own if you are not hiring the machine.</p>
+
+      <h2>Option 2 — A contract lift (the full package)</h2>
+      <p>Under a contract lift the provider takes responsibility for the entire operation — crane, operator, slinger/signaller, the plan, and crucially the lifting risk. It is the right choice when you want someone else to carry that risk and manage the lift end to end, for example a one-off heavy or complex lift. It is also the most expensive route, because you are paying for the equipment, the crew and the risk transfer, not just the planning.</p>
+
+      <h2>Option 3 — An independent lift planning consultant</h2>
+      <p>An independent consultant writes the lift plan and acts as your Appointed Person without supplying any equipment. This is the right route when you already have your plant and operator arranged — under CPA crane hire, or using your own excavator, telehandler or lorry loader — and you need the planning competence, not a crane. Because the consultant has no fleet to keep busy, the equipment advice is impartial, the plan works with the kit you already have, and the fee is fixed rather than buried in a day rate. It is also the route for an <a href="/services/lift-plan-checking">independent review</a> of a plan a subcontractor or crane hire firm has produced, because the reviewer has no stake in the equipment.</p>
+
+      <h2>Quick comparison</h2>
+      <ul>
+        <li><strong>Crane hire AP:</strong> best when you are hiring their crane anyway. Convenient, but not independent and rarely sold separately.</li>
+        <li><strong>Contract lift:</strong> best when you want the provider to own the risk and run the lift. The fullest service and the highest cost.</li>
+        <li><strong>Independent consultant:</strong> best when you have the plant, or need an objective plan or review. Impartial, fixed-fee, works with your existing equipment.</li>
+      </ul>
+
+      <h2>Questions to ask before you appoint</h2>
+      <ul>
+        <li>Is the Appointed Person CPCS A61 qualified — and will that named person actually write your plan?</li>
+        <li>Are they independent of the equipment supplier, or tied to a crane fleet?</li>
+        <li>Is the fee fixed, or an open-ended day rate?</li>
+        <li>What is the turnaround, and is a site visit included if one is needed?</li>
+        <li>Will the plan be specific to your site and machine, or a template with the name changed? (Generic plans are the most common reason principal contractors reject lifting documentation.)</li>
+      </ul>
+
+      <h2>So which should you choose?</h2>
+      <p>If you want the crane company to carry the lifting risk, take a contract lift. If you are already hiring their crane, their bundled Appointed Person is the convenient option. But if you have your own plant or a CPA crane hire arrangement and simply need a competent, compliant, site-specific plan — or you need an independent set of eyes on someone else's plan — an independent consultant is usually both the most economical and the most objective choice. For a sense of the numbers, see our guide to <a href="/blog/lift-plan-cost-uk">how much a lift plan costs</a>.</p>
+
+      <h2>How RMT Solutions fits</h2>
+      <p>RMT Solutions is the independent option: a CPCS A61 Appointed Person with 35 years in UK construction, no crane to sell you and no fleet to keep busy. We write site-specific <a href="/services/lift-plans">lift plans</a> for excavators, telehandlers, lorry loaders and mobile cranes, provide independent <a href="/services/appointed-person">Appointed Person</a> cover, and review plans others have produced — fixed prices from £200, with a quote inside four working hours. New to lift plans? Start with <a href="/blog/what-is-a-lift-plan">what a lift plan is</a> and when you need one.</p>
+    `,
+  },
   'lifting-method-statements-rams-guide': {
     title: 'Lifting Method Statements & RAMS: UK Guide',
     description: 'What a lifting method statement and RAMS must contain under LOLER 1998 and BS 7121, how they differ from a lift plan, and who is competent to write them.',
@@ -2203,6 +2256,24 @@ export async function generateStaticParams() {
 // guidelines). This unlocks FAQ rich results in the SERP and makes the
 // Q&A content far easier for AI answer engines to quote directly.
 const faqData = {
+  'how-to-choose-a-lift-plan-provider': [
+    {
+      q: 'Can I get a lift plan without hiring a crane?',
+      a: 'Yes. An independent lift planning consultant writes the plan and acts as your Appointed Person without supplying any equipment, so you can get a compliant lift plan when you already have your own plant or a CPA crane hire arrangement. Crane hire companies, by contrast, usually only supply a plan as part of hiring their machine.',
+    },
+    {
+      q: 'Is an independent appointed person cheaper than a contract lift?',
+      a: 'For the planning element, usually yes. A contract lift bundles the crane, operator, crew and risk transfer into the price, so it costs more than buying just the planning competence. If you already have the equipment and only need a competent, compliant plan, an independent appointed person on a fixed fee is normally the most economical route.',
+    },
+    {
+      q: 'What is the difference between a crane-hire appointed person and an independent one?',
+      a: 'A crane-hire Appointed Person works for the company supplying the crane, so their equipment advice is tied to that fleet and the plan usually comes only with the hire. An independent Appointed Person has no equipment to sell, gives impartial advice, works with whatever plant you already have, and can objectively review plans produced by others.',
+    },
+    {
+      q: 'How do I know a lift plan provider is competent?',
+      a: 'Check that the Appointed Person holds a current CPCS A61 card, that the named person actually writes your plan, that the fee is fixed rather than open-ended, and that the plan will be specific to your site and machine rather than a generic template. Generic, non-site-specific plans are the most common reason principal contractors reject lifting documentation.',
+    },
+  ],
   'lifting-method-statements-rams-guide': [
     {
       q: 'What does RAMS stand for in lifting?',

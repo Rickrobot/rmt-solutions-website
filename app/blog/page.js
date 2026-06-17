@@ -35,6 +35,17 @@ export const metadata = {
 // the original publication date.
 const blogPosts = [
   {
+    slug: 'how-to-choose-a-lift-plan-provider',
+    title: 'How to Choose a Lift Plan Provider (UK)',
+    excerpt: 'Crane-hire firm, contract-lift package or independent consultant? The three ways to get a lift plan compared — what each costs, when each fits, and the questions to ask before you appoint.',
+    category: 'Services',
+    readTime: '7 min read',
+    date: 'June 17, 2026',
+    dateModified: 'June 17, 2026',
+    image: '/images/blog/deciding-if-lift-plan-needed-site-discussion.webp',
+    imageAlt: 'Site managers discussing which lift plan provider to use on a UK construction site',
+  },
+  {
     slug: 'lifting-method-statements-rams-guide',
     title: 'Lifting Method Statements & RAMS: UK Guide',
     excerpt: 'Lift plan, method statement, risk assessment or RAMS — what each one is, what the law requires under LOLER 1998 and BS 7121, what a good lifting method statement contains, and who is competent to write it.',

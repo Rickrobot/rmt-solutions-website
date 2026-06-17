@@ -96,6 +96,7 @@ const LOCATION_SLUGS = [
 ];
 
 const BLOG_POSTS = [
+  { slug: 'how-to-choose-a-lift-plan-provider',                               date: '2026-06-17' },
   { slug: 'lifting-method-statements-rams-guide',                             date: '2026-06-17' },
   { slug: 'lift-plan-cost-uk',                                                date: '2026-06-11' },
   { slug: 'what-is-bs-7121-complete-guide',                                   date: '2026-05-22' },
