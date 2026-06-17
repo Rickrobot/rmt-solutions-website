@@ -2289,6 +2289,13 @@ export default function BlogPost({ params }) {
 
   // FAQPage JSON-LD — rendered only for posts present in faqData above.
   const postFaqs = faqData[params.slug];
+  // Some posts hand-write a "Common Questions" block in their body HTML; for
+  // those we keep schema only and skip the rendered block below to avoid a
+  // duplicate Q&A section. Every other FAQ post gets a visible FAQ section so
+  // the answers appear on-page (PAA / featured-snippet capture) and the schema
+  // matches visible content.
+  const POSTS_WITH_INLINE_FAQ = new Set(['what-does-a-lift-plan-checking-service-involve'])
+  const showVisibleFaqs = postFaqs && !POSTS_WITH_INLINE_FAQ.has(params.slug)
   const faqJsonLd = postFaqs
     ? {
         '@context': 'https://schema.org',
@@ -2458,10 +2465,35 @@ export default function BlogPost({ params }) {
           </div>
 
           {/* Article Content */}
-          <div 
+          <div
             className="prose-custom"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+
+          {/* FAQ — visible Q&A rendered from the same faqData that powers the
+              FAQPage schema, so the answers appear on the page (Google rewards
+              visible FAQ content and can surface it in "People also ask").
+              Skipped for posts that already include a Common Questions block. */}
+          {showVisibleFaqs && (
+            <section className="mt-16" aria-label="Frequently asked questions">
+              <h2 className="font-display text-3xl font-bold text-white mb-6">
+                Frequently asked questions
+              </h2>
+              <div className="space-y-4">
+                {postFaqs.map((item) => (
+                  <div
+                    key={item.q}
+                    className="bg-slate-800/40 border border-slate-700/50 rounded-2xl p-6 sm:p-7"
+                  >
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-white mb-2">
+                      {item.q}
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">{item.a}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Author Bio */}
           <div className="mt-16 bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
