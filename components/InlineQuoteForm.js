@@ -22,7 +22,7 @@ export default function InlineQuoteForm({
   heading = 'Get a quick quote',
   compact = false,
 }) {
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', brief: '' })
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', brief: '', company_website: '' })
   const [status, setStatus] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
@@ -43,6 +43,11 @@ export default function InlineQuoteForm({
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    // Honeypot: real users never see or fill this field. If it is populated,
+    // the submission is a bot — silently drop it. Humans are never blocked.
+    if (formData.company_website) {
+      return
+    }
     setIsSubmitting(true)
     setStatus('')
 
@@ -66,7 +71,7 @@ export default function InlineQuoteForm({
       if (data.success) {
         setSubmitted(true)
         setStatus('Thanks — we will be in touch within 24 hours.')
-        setFormData({ name: '', email: '', phone: '', brief: '' })
+        setFormData({ name: '', email: '', phone: '', brief: '', company_website: '' })
         trackEvent('form_submit_success')
       } else {
         setStatus('Something went wrong. Please call 07803 808093 or email ricky@rmtsolutions.co.uk')
@@ -115,6 +120,19 @@ export default function InlineQuoteForm({
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Honeypot — hidden from real users; traps bots that auto-fill every field. Do not remove. */}
+        <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden' }}>
+          <label htmlFor={`inline-company-website-${serviceName}`}>Company website (leave blank)</label>
+          <input
+            type="text"
+            id={`inline-company-website-${serviceName}`}
+            name="company_website"
+            tabIndex={-1}
+            autoComplete="off"
+            value={formData.company_website}
+            onChange={handleChange}
+          />
+        </div>
         <div className={compact ? 'grid md:grid-cols-2 gap-4' : 'space-y-4'}>
           <div>
             <label htmlFor={`inline-name-${serviceName}`} className="sr-only">Your name</label>

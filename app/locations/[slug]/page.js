@@ -353,7 +353,7 @@ export default function LocationPage({ params }) {
           </div>
 
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Crane Lift Plan in <span className="gradient-text">{loc.city}</span>
+            Lift Plans in <span className="gradient-text">{loc.city}</span>
           </h1>
 
           <p className="text-xl text-gray-300 leading-relaxed max-w-3xl">
