@@ -129,7 +129,7 @@ const blogPosts = {
   },
   'lift-plan-cost-uk': {
     title: 'How Much Does a Lift Plan Cost? UK Prices 2026',
-    description: 'UK lift plan costs explained: from £200 for excavator and telehandler plans, £250–£500 for mobile cranes, £500+ for complex lifts. What you pay and why.',
+    description: 'UK lift plan costs: from £200 for excavator and telehandler plans; mobile crane and complex lifts quoted on request. What you pay and why.',
     keywords: 'lift plan cost, lift plan cost uk, how much does a lift plan cost, lifting plan cost, lift plan price, lift plan prices uk, appointed person day rate, contract lift cost, lift plan quote, how much is a lift plan',
     category: 'Services',
     readTime: '8 min read',
@@ -138,7 +138,7 @@ const blogPosts = {
     image: '/images/services/lift-planning-site-desk-review-uk.webp',
     imageAlt: 'Lift planner reviewing drawings and load calculations at a site desk — pricing up a UK lift plan',
     content: `
-      <p class="lead">A professional lift plan in the UK typically costs <strong>£200 to £500</strong>. Simple excavator and telehandler lift plans start from £200, mobile crane and lorry loader plans usually fall between £250 and £500, and complex operations — tandem lifts, contract lifts, or plans needing a site visit — run from £500 to £1,500. This guide breaks down exactly what you pay, what drives the price, and how to avoid paying twice for a plan that gets rejected.</p>
+      <p class="lead">A professional lift plan in the UK typically starts from <strong>£200</strong>. Simple excavator and telehandler lift plans start from £200, lorry loader (HIAB) plans from £250, and mobile crane, complex and tandem operations are quoted individually after a brief scoping call. This guide breaks down exactly what you pay, what drives the price, and how to avoid paying twice for a plan that gets rejected.</p>
 
       <p>Very few providers publish lift plan prices, which makes budgeting harder than it should be. We publish ours. The figures below are the fixed prices we quote at RMT Solutions, and they are representative of what a competent, independent <a href="/blog/cpcs-appointed-person-guide">CPCS A61 Appointed Person</a> charges in the UK market in 2026.</p>
 
@@ -152,8 +152,8 @@ const blogPosts = {
           <tr><td>Excavator lift plan</td><td>£200 – £300</td><td>24–48 hours</td></tr>
           <tr><td>Telehandler lift plan</td><td>£200 – £300</td><td>24–48 hours</td></tr>
           <tr><td>Lorry loader (HIAB) lift plan</td><td>£250 – £500</td><td>2–5 working days</td></tr>
-          <tr><td>Mobile crane lift plan</td><td>£250 – £500 (site visit included)</td><td>3–5 working days</td></tr>
-          <tr><td>Complex / tandem / multi-pick operations</td><td>£500 – £1,500</td><td>Agreed per project</td></tr>
+          <tr><td>Mobile crane lift plan</td><td><a href="/contact">Request a quotation</a></td><td>3–5 working days</td></tr>
+          <tr><td>Complex / tandem / multi-pick operations</td><td><a href="/contact">Request a quotation</a></td><td>Agreed per project</td></tr>
           <tr><td>Tower crane Appointed Person contract</td><td>Priced per project</td><td>Ongoing</td></tr>
         </tbody>
       </table>
@@ -2295,7 +2295,7 @@ const faqData = {
   'lift-plan-cost-uk': [
     {
       q: 'How much does a lift plan cost in the UK?',
-      a: 'A professional lift plan typically costs £200 to £500 in the UK. Simple excavator and telehandler lift plans start from £200, mobile crane and lorry loader plans usually fall between £250 and £500, and complex operations such as tandem lifts or plans requiring a site visit run from £500 to £1,500.',
+      a: 'A professional lift plan in the UK starts from £200. Simple excavator and telehandler lift plans start from £200, lorry loader (HIAB) plans from £250, and mobile crane, complex and tandem operations are quoted individually after a brief scoping call.',
     },
     {
       q: 'Why are lift plans priced as fixed fees rather than hourly?',
