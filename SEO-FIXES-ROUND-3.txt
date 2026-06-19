@@ -1,0 +1,102 @@
+SEO FIX ROUND 3 — applied 19 June 2026
+=======================================
+
+Follow-up after a full audit of the codebase, the live site, and 3 months
+of Google Search Console data (702 clicks / 41,358 impressions; impressions
++257% over the period). On-page SEO was already in strong shape (titles,
+meta descriptions, FAQ/Article/Breadcrumb schema, canonicals, image sitemap
+all correct and live), so this round is narrow and targeted: security
+headers, brand disambiguation, and internal-link equity to the commercial
+pages.
+
+3 files modified, 1 added. All changes verified (see VERIFICATION).
+
+FILES CHANGED
+-------------
+
+MODIFIED — next.config.js  (security + delivery)
+  Added three things to the nextConfig object, alongside the existing
+  rewrites() and redirects() (both unchanged):
+
+    poweredByHeader: false
+      Stops leaking the "X-Powered-By: Next.js" header.
+
+    images.formats = ['image/avif', 'image/webp']
+      Serves AVIF/WebP to browsers that support them — smaller transfers.
+
+    async headers()  — applied to every route ('/:path*'):
+      Strict-Transport-Security: max-age=31536000; includeSubDomains
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: SAMEORIGIN
+      Referrer-Policy: strict-origin-when-cross-origin
+      Permissions-Policy: camera=(), microphone=(), geolocation=(), browsing-topics=()
+      X-DNS-Prefetch-Control: on
+
+    NOT included: a Content-Security-Policy. A CSP must allow-list the GA4
+    (googletagmanager.com / google-analytics.com), Microsoft Clarity
+    (*.clarity.ms) and Web3Forms (api.web3forms.com) origins, and should be
+    rolled out in Content-Security-Policy-Report-Only first. Left for a
+    separate, carefully-scoped change so it can't silently break the forms
+    or analytics.
+
+MODIFIED — app/page.js  (brand disambiguation)
+  ProfessionalService JSON-LD (the homepage #business entity):
+    - alternateName now leads with 'RMT Safety Solutions' (matches the
+      rmtsafetysolutions.com domain and disambiguates from the RMT rail
+      union, which currently outranks the brand for "rmt" / "rmt solutions").
+        BEFORE: ['RMT Solutions', 'RMT Lift Planning']
+        AFTER:  ['RMT Safety Solutions', 'RMT Solutions', 'RMT Lift Planning']
+    - Added priceRange: 'From £200' (local-business signal Google can use).
+
+MODIFIED — app/blog/[slug]/page.js  (internal-link equity / de-cannibalisation)
+  The two strongest blog posts by impressions were not passing any link
+  equity to /services/lift-plans (the commercial "lift plan writing" page,
+  which sits at ~position 34). Added one contextual link from each, with
+  commercial anchor text:
+
+    when-do-you-need-lift-plan   (10,933 impressions, pos ~7.9)
+      Added a "Lift Plan Writing" item linking to /services/lift-plans at the
+      top of the "How RMT Solutions Can Help" services list.
+
+    what-is-a-lift-plan          (7,176 impressions, pos ~17)
+      Added a closing paragraph linking to /services/lift-plans ("lift plan
+      writing service") after the equipment/checking paragraph.
+
+  Linking rule going forward: informational posts link DOWN to the
+  commercial page with commercial anchor text, never the reverse.
+  /services/lift-plans owns "lift planning services"; /blog/what-is-a-lift-plan
+  owns "what is a lift plan"; /resources/lift-plan-templates owns "lift plan
+  template".
+
+ADDED — SEO-FIXES-ROUND-3.txt
+  This file.
+
+VERIFICATION
+------------
+  next.config.js          — `node --check` passes.
+  app/page.js             — esbuild JSX parse passes.
+  app/blog/[slug]/page.js — esbuild JSX parse passes.
+  (Sanity-checked app/services/lift-plans/page.js too — still parses.)
+
+POST-DEPLOY CHECKLIST
+---------------------
+1. After Vercel redeploys, confirm the security headers are live, e.g.:
+     curl -sI https://www.rmtsafetysolutions.com | grep -i -E 'strict-transport|x-content-type|x-frame|referrer-policy|permissions-policy'
+2. In Google Search Console, Request Indexing for:
+     /services/appointed-person   (live but brand-new; the "cpcs a61
+     appointed person" impressions currently land on the older blog guide)
+     /blog/when-do-you-need-lift-plan   and   /blog/what-is-a-lift-plan
+     (so the new internal links are re-crawled)
+3. Confirm GA4 + Clarity are actually switched on in Vercel — the
+   NEXT_PUBLIC_GA_MEASUREMENT_ID / NEXT_PUBLIC_CLARITY_PROJECT_ID env vars
+   must be set in the Vercel project, or form-conversion tracking does
+   nothing (there is no .env in the repo).
+4. Re-baseline /services/lift-plans position in ~2-4 weeks — the internal
+   links should pull it up from page 3-4.
+
+NOT CHANGED (already done in earlier rounds — verified live)
+------------------------------------------------------------
+  Titles/meta descriptions, FAQ/Article/Breadcrumb schema, canonicals,
+  the image sitemap (all 65 URLs resolve), the 89 WordPress redirects,
+  self-hosted fonts, env-gated analytics, and the Web3Forms quote form
+  (honeypot + GA events). None of these were touched.

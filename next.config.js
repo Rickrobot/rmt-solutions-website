@@ -1,5 +1,33 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Remove the "X-Powered-By: Next.js" header (SEO/security audit, Jun 2026).
+  poweredByHeader: false,
+
+  // Prefer modern image formats — smaller transfers on supported browsers.
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
+
+  // Security response headers (SEO/security audit, Jun 2026). Applied to every
+  // route. Deliberately NOT a Content-Security-Policy: a CSP must allow-list the
+  // GA4, Clarity and Web3Forms origins and be tested in report-only mode first,
+  // so it is intentionally left for a separate, carefully-scoped change.
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()' },
+          { key: 'X-DNS-Prefetch-Control', value: 'on' },
+        ],
+      },
+    ]
+  },
+
   // Surface the custom sitemap route at the canonical /sitemap.xml URL.
   // The handler itself lives at app/sitemap-feed/route.js because Next.js
   // reserves `sitemap.{xml,js,ts}` as a metadata filename — having

@@ -569,6 +569,8 @@ const blogPosts = {
 
       <p>We prepare lift plans for all types of lifting equipment \u2014 <a href="/blog/excavator-lift-plans-complete-guide">excavators</a>, <a href="/blog/telehandler-lift-plans-complete-guide">telehandlers</a>, <a href="/blog/lorry-loader-lift-plans-guide">lorry loaders</a>, tower cranes, and mobile cranes \u2014 and provide <a href="/services/lift-plan-checking">lift plan checking services</a> for tier 1 contractors who need submitted plans reviewed by a qualified Appointed Person.</p>
 
+      <p>Working on a live project? See our <a href="/services/lift-plans">lift plan writing service</a> for site-specific, LOLER-compliant lift plans written by a CPCS Appointed Person.</p>
+
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need a Lift Plan?</h3>
         <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant lift plans and lift plan checking services for UK construction. Fast turnaround from a CPCS Appointed Person with 35 years of experience.</p>
@@ -1079,6 +1081,7 @@ const blogPosts = {
       <p>We provide lift planning services for all types of lifting operations:</p>
 
       <ul>
+        <li><strong><a href="/services/lift-plans">Lift Plan Writing:</a></strong> LOLER-compliant lift plans for excavators, telehandlers, lorry loaders and mobile cranes</li>
         <li><strong><a href="/services/tower-crane">Tower Crane Contracts:</a></strong> Ongoing Appointed Person support throughout your project</li>
         <li><strong><a href="/services/mobile-crane-lift-plans">Mobile Crane Lift Plans:</a></strong> Including site visits and ground assessments</li>
         <li><strong><a href="/services/excavator-lift-plans">Excavator Lift Plans:</a></strong> Fast turnaround for pipeline and utilities work</li>
