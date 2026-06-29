@@ -5,6 +5,66 @@ import InlineQuoteForm from '@/components/InlineQuoteForm';
 
 // Blog posts content
 const blogPosts = {
+  'crane-lift-plan-requirements': {
+    title: 'What is a Crane Lift Plan? Requirements & Contents',
+    description: 'What a crane lift plan is, what it must contain under LOLER 1998 and BS 7121, when one is legally required, and who is competent to write it.',
+    keywords: 'crane lift plan, what is a crane lift plan, crane lift plan requirements, crane lifting plan, lift plan for crane, mobile crane lift plan, crane lift plan contents, lifting plan for crane, when is a crane lift plan required, who writes a crane lift plan',
+    category: 'Lift Planning',
+    readTime: '9 min read',
+    date: 'June 29, 2026',
+    dateModified: 'June 29, 2026',
+    image: '/images/precast-concrete-lift.webp',
+    imageAlt: 'Mobile crane lifting a precast concrete unit on a UK construction site — a crane lifting operation carried out to an approved lift plan',
+    content: `
+      <p class="lead">A crane lift plan is the written document that sets out how a specific crane lifting operation will be carried out safely — the crane and its rated capacity, the load, the rigging, the site conditions and the people involved. Under LOLER 1998 every crane lift must be planned by a competent person, and for anything beyond the most routine, repetitive lift that planning has to be recorded in writing. This guide explains exactly what a crane lift plan is, what it must contain, when one is legally required, and who is qualified to produce it.</p>
+
+      <h2>What is a crane lift plan?</h2>
+      <p>A crane lift plan is a site-specific document that describes how a load will be lifted and moved safely using a crane. It is the crane-specific form of the general <a href="/blog/what-is-a-lift-plan">lift plan</a> required for every lifting operation under UK law. Rather than a generic form with the project name changed, a proper crane lift plan is built around the actual crane, the actual load and the actual site: it confirms the crane has enough capacity at the radius required, sets out how the load will be rigged, identifies the hazards around the lift, and defines who does what during the operation.</p>
+      <p>The plan exists to answer one question before the lift starts: can this load be lifted safely with this crane, in this position, on this ground — and if so, exactly how? Everything in the document supports that judgement.</p>
+
+      <h2>Is a crane lift plan a legal requirement?</h2>
+      <p>Yes. Regulation 8 of the Lifting Operations and Lifting Equipment Regulations 1998 (LOLER) requires that every lifting operation is "properly planned by a competent person, appropriately supervised and carried out in a safe manner." For crane operations, the recognised code of practice for meeting that duty is <a href="/blog/what-is-bs-7121-complete-guide">BS 7121</a> — the British Standard for the safe use of cranes — which sets out planning, equipment selection, competence and supervision in detail.</p>
+      <p>LOLER does not say every lift needs a thick written plan, but it does require every lift to be planned by a competent person. In practice, for the great majority of crane lifts on commercial sites — and certainly anything a principal contractor must approve — that planning has to be documented as a written crane lift plan.</p>
+
+      <h2>What must a crane lift plan include?</h2>
+      <p>The exact content scales with the complexity of the operation, but a thorough crane lift plan generally covers the following:</p>
+      <ul>
+        <li><strong>The load</strong> — weight, dimensions, centre of gravity and lifting points.</li>
+        <li><strong>The crane</strong> — make, model and configuration, with the rated capacity confirmed against the load chart at the working radius required (the de-rated safe working load, not the headline figure).</li>
+        <li><strong>Lifting accessories</strong> — slings, shackles, chains, beams and below-the-hook devices, each with a working load limit suitable for the load and the lifting angles.</li>
+        <li><strong>The site</strong> — ground bearing conditions and outrigger loadings, access, overhead and underground services, and adjacent activities or structures.</li>
+        <li><strong>The operation</strong> — pick and set-down positions, working radius, slewing arc, exclusion zones and the travel route of the load.</li>
+        <li><strong>People and roles</strong> — the appointed person, lift supervisor, crane operator and slinger/signaller, and how they will communicate.</li>
+        <li><strong>The supporting documents</strong> — a risk assessment and method statement (RAMS) covering the safe system of work, briefed to everyone involved.</li>
+      </ul>
+      <p>For a fuller breakdown of the anatomy of a plan regardless of equipment, see our guide to <a href="/blog/what-is-a-lift-plan">what a lift plan must contain</a>.</p>
+
+      <h2>Basic, standard and complex crane lifts</h2>
+      <p>BS 7121 recognises that not every lift carries the same risk, and the level of planning detail follows the category of lift:</p>
+      <ul>
+        <li><strong>Basic lifts</strong> — routine, repetitive, low-risk lifts that can be covered by a straightforward plan and a competent operator working to it.</li>
+        <li><strong>Standard lifts</strong> — the everyday crane work on most sites, requiring a written, site-specific plan produced by a competent person.</li>
+        <li><strong>Complex lifts</strong> — heavy loads, lifts near live infrastructure, poor ground, blind lifts, or operations using more than one crane (tandem lifts). These need the fullest planning, often a site visit, and close supervision.</li>
+      </ul>
+      <p>The same operation can move up a category because of the site, not just the load — a modest lift over a live road or alongside an occupied building is no longer "basic".</p>
+
+      <h2>Who can write a crane lift plan?</h2>
+      <p>The competent person who plans a crane lift is normally a <a href="/services/appointed-person">CPCS A61 Appointed Person</a>. The Appointed Person is responsible for assessing the operation, selecting the crane and accessories, verifying the capacity against the load chart, and producing and signing off the plan. They do not need to be on site for every lift, but they remain accountable for the planning and management of the operation.</p>
+      <p>This is why a crane lift plan should never be a template completed by whoever is free — getting the competence right is the whole point of the document, and generic plans are the single most common reason lifting paperwork is rejected.</p>
+
+      <h2>When is a crane lift plan required?</h2>
+      <p>A written crane lift plan is required whenever a crane is used to lift and move a load on a commercial operation — which, in practice, is almost always. Even routine deliveries and standard picks need a plan; the document simply gets shorter and simpler as the risk drops. If you are unsure where your operation sits, our guide on <a href="/blog/when-do-you-need-lift-plan">when you need a lift plan</a> walks through the decision.</p>
+
+      <h2>Crane lift plans by crane type</h2>
+      <p>The principles are the same across crane types, but the detail differs. We produce crane lift plans for <a href="/services/mobile-crane-lift-plans">mobile cranes</a>, tower cranes, and <a href="/services/overhead-gantry-crane-lift-plans">overhead and gantry cranes</a>, as well as <a href="/services/lorry-loader-lift-plans">lorry loader (HIAB)</a> operations. If you are weighing up which crane suits the job, our comparison of a <a href="/blog/mobile-crane-vs-tower-crane">mobile crane versus a tower crane</a> is a useful starting point, and you can download a <a href="/resources/mobile-crane-lift-plan-templates">mobile crane lift plan template</a> to see the structure.</p>
+
+      <h2>Why crane lift plans get rejected</h2>
+      <p>Most rejections come down to the same handful of issues: a generic plan that is not specific to the site or machine, capacity taken from the headline figure rather than the de-rated load chart at the actual radius, missing ground bearing or outrigger loading information, or accessories that are not specified or rated for the load. An <a href="/services/lift-plan-checking">independent check of the plan</a> before it goes to the principal contractor catches these before they cost you a day on site.</p>
+
+      <h2>How RMT Solutions can help</h2>
+      <p>RMT Solutions writes site-specific crane <a href="/services/lift-plans">lift plans</a> as an independent CPCS A61 Appointed Person with 35 years in UK construction — no crane to sell you and no fleet to keep busy, so the equipment advice is impartial and the plan works with the kit you already have. Fixed prices from £200, with a quote inside four working hours. For a sense of the numbers, see our guide to <a href="/blog/lift-plan-cost-uk">how much a lift plan costs</a>, or get in touch for a quote on your operation.</p>
+    `,
+  },
   'how-to-choose-a-lift-plan-provider': {
     title: 'How to Choose a Lift Plan Provider (UK)',
     description: 'Crane-hire firm, contract-lift package or independent consultant? How the three ways to get a lift plan compare, what each costs, and how to choose.',
@@ -429,7 +489,7 @@ const blogPosts = {
 
       <p>A lift plan is not a generic risk assessment or a method statement, although it may incorporate elements of both. It is a specific document that addresses a specific lifting operation \u2014 the particular load, the particular machine, the particular site conditions, and the particular hazards present on the day. A lift plan written for one operation cannot simply be reused for another without being reviewed and updated to reflect the actual circumstances.</p>
 
-      <p>The term "lift plan" is used across the UK construction industry, though you may also hear it referred to as a lifting plan, a crane lift plan, or a lifting operation plan. Regardless of the terminology, the legal requirement is the same: LOLER Regulation 8(1) states that every lifting operation shall be properly planned by a competent person, appropriately supervised, and carried out in a safe manner.</p>
+      <p>The term "lift plan" is used across the UK construction industry, though you may also hear it referred to as a lifting plan, a <a href="/blog/crane-lift-plan-requirements">crane lift plan</a>, or a lifting operation plan. Regardless of the terminology, the legal requirement is the same: LOLER Regulation 8(1) states that every lifting operation shall be properly planned by a competent person, appropriately supervised, and carried out in a safe manner.</p>
 
       <figure>
         <img src="/images/blog/lift-plan-document-clipboard-site.webp" alt="A multi-page lift plan document on a clipboard beside a hard hat and hi-vis on a site table, with a mobile crane working in the background on a UK construction site" width="1600" height="1067" loading="lazy" />
@@ -2259,6 +2319,28 @@ export async function generateStaticParams() {
 // guidelines). This unlocks FAQ rich results in the SERP and makes the
 // Q&A content far easier for AI answer engines to quote directly.
 const faqData = {
+  'crane-lift-plan-requirements': [
+    {
+      q: 'What is a crane lift plan?',
+      a: 'A crane lift plan is a site-specific written document that sets out how a load will be lifted and moved safely using a crane. It confirms the crane has enough rated capacity at the working radius required, describes the load and rigging, identifies the site hazards, and defines the roles of the appointed person, supervisor, operator and slinger/signaller during the operation.',
+    },
+    {
+      q: 'Is a crane lift plan a legal requirement?',
+      a: 'Yes. Regulation 8 of LOLER 1998 requires every lifting operation to be properly planned by a competent person, appropriately supervised and carried out safely. For cranes, BS 7121 is the recognised code of practice for meeting that duty. For the great majority of commercial crane lifts that planning has to be recorded as a written crane lift plan.',
+    },
+    {
+      q: 'What must a crane lift plan include?',
+      a: 'A thorough crane lift plan covers the load (weight, dimensions, centre of gravity and lifting points), the crane (make, model and configuration with capacity confirmed against the de-rated load chart at the working radius), the lifting accessories and their working load limits, the site (ground bearing, outrigger loadings, services and adjacent activities), the operation (pick and set-down positions, radius, exclusion zones and travel route), the roles and communication, and a supporting risk assessment and method statement.',
+    },
+    {
+      q: 'Who can write a crane lift plan?',
+      a: 'A crane lift plan is normally produced by a CPCS A61 Appointed Person — the competent person required under LOLER 1998 to plan lifting operations. They select the crane and accessories, verify the capacity against the load chart, assess the site-specific hazards, and produce and sign off the plan.',
+    },
+    {
+      q: 'When is a crane lift plan required?',
+      a: 'A written crane lift plan is required whenever a crane is used to lift and move a load on a commercial operation — which in practice is almost always. Even routine deliveries and standard picks need a plan; the document simply becomes shorter and simpler as the risk drops, and fuller for complex or multi-crane lifts.',
+    },
+  ],
   'how-to-choose-a-lift-plan-provider': [
     {
       q: 'Can I get a lift plan without hiring a crane?',

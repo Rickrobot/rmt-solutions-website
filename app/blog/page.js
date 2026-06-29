@@ -35,6 +35,17 @@ export const metadata = {
 // the original publication date.
 const blogPosts = [
   {
+    slug: 'crane-lift-plan-requirements',
+    title: 'What is a Crane Lift Plan? Requirements & Contents',
+    excerpt: 'What a crane lift plan is, what it must contain under LOLER 1998 and BS 7121, the basic/standard/complex lift categories, when one is legally required, and who is competent to write it.',
+    category: 'Lift Planning',
+    readTime: '9 min read',
+    date: 'June 29, 2026',
+    dateModified: 'June 29, 2026',
+    image: '/images/precast-concrete-lift.webp',
+    imageAlt: 'Mobile crane lifting a precast concrete unit on a UK construction site — a crane lifting operation carried out to an approved lift plan',
+  },
+  {
     slug: 'how-to-choose-a-lift-plan-provider',
     title: 'How to Choose a Lift Plan Provider (UK)',
     excerpt: 'Crane-hire firm, contract-lift package or independent consultant? The three ways to get a lift plan compared — what each costs, when each fits, and the questions to ask before you appoint.',
