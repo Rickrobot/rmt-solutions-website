@@ -58,10 +58,10 @@ export default function ExcavatorTemplatesPage() {
             Professional, CPA/SFPSG compliant templates developed by a CPCS Appointed Person with
             over 35 years of construction industry experience. Download, customise, and use on your
             projects — completely free. Need a site-specific plan written for you? Our{' '}
-            <Link href="/services/lift-plans" className="text-amber-400 hover:text-amber-300 underline">
-              lift planning services
+            <Link href="/services/excavator-lift-plans" className="text-amber-400 hover:text-amber-300 underline">
+              excavator lift plan service
             </Link>{' '}
-            start from £200 with 24-48 hour turnaround.
+            starts from £200 + VAT with 24-48 hour turnaround.
           </p>
           <p className="text-sm text-slate-400 mb-8">
             Updated June 2026 · Aligned to the CPA/SFPSG CIG 0801 guidance (Fourth Revision)
@@ -79,6 +79,20 @@ export default function ExcavatorTemplatesPage() {
             >
               Download Risk Assessment
             </a>
+          </div>
+          {/* Service CTA — funnels template traffic to the paid excavator
+              lift plan service. White button to stand out on the dark hero
+              without displacing the free-download intent the page ranks for. */}
+          <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 border-t border-white/10 pt-8">
+            <p className="text-slate-300 text-lg">
+              Rather have it written for you, signed off by a CPCS Appointed Person?
+            </p>
+            <Link
+              href="/services/excavator-lift-plans"
+              className="inline-flex items-center justify-center bg-white hover:bg-slate-100 text-slate-900 px-8 py-3 rounded-xl font-bold transition whitespace-nowrap"
+            >
+              Get an Excavator Lift Plan — from £200 + VAT →
+            </Link>
           </div>
         </div>
       </section>

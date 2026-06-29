@@ -1403,6 +1403,11 @@ const blogPosts = {
     content: `
       <p class="lead">Excavators are primarily designed for digging, but they're frequently used for lifting operations on UK construction sites. While this versatility makes them invaluable, it also creates legal obligations under LOLER 1998.</p>
 
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
+        <p class="text-gray-300 mb-6">Need a site-specific excavator lift plan written for you and signed off by a CPCS A61 Appointed Person? Fixed fee from £200 + VAT, a quote within 4 working hours, and the plan delivered in 24–48 hours.</p>
+        <a href="/services/excavator-lift-plans" class="inline-block bg-amber-500 hover:bg-amber-400 text-slate-900 px-6 py-3 rounded-xl font-semibold transition">Get an excavator lift plan — from £200 + VAT</a>
+      </div>
+
       <h2>When Do You Need a Lift Plan for Excavator Operations?</h2>
       <p>Under LOLER 1998, any lifting operation must be properly planned by a competent person. For excavators, this means you need a formal lift plan whenever the machine is used to lift and move loads rather than just digging. For the regulatory side — whether <a href="/blog/lifting-with-excavators-loler">an excavator needs a LOLER thorough examination and what it must have fitted to lift</a> — see our guide to lifting with excavators.</p>
 
