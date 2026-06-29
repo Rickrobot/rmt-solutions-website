@@ -35,6 +35,28 @@ export const metadata = {
 // the original publication date.
 const blogPosts = [
   {
+    slug: 'basic-standard-complex-lifts',
+    title: 'Basic, Standard & Complex Lifts: Categories Explained',
+    excerpt: 'What makes a lift basic, standard or complex under BS 7121, what a critical lift is, who decides the category, and how it changes the planning and supervision a lifting operation needs.',
+    category: 'Lift Planning',
+    readTime: '7 min read',
+    date: 'June 29, 2026',
+    dateModified: 'June 29, 2026',
+    image: '/images/blog/bs7121-code-of-practice-crane-supervisor.webp',
+    imageAlt: 'A crane supervisor reviewing a lift against BS 7121 on a UK construction site — categorising the lift as basic, standard or complex',
+  },
+  {
+    slug: 'lifting-with-excavators-loler',
+    title: 'Does an Excavator Need LOLER? Lifting With Excavators',
+    excerpt: 'When an excavator is used to lift, it becomes lifting equipment and LOLER 1998 applies in full — thorough examination, object-handling kit (lifting point, check valves, RCI), the CPA guidance, and a lift plan from a competent person.',
+    category: 'Compliance',
+    readTime: '8 min read',
+    date: 'June 29, 2026',
+    dateModified: 'June 29, 2026',
+    image: '/images/excavator-pipeline.webp',
+    imageAlt: 'A 360-degree excavator lifting a pipe section on a UK construction site using a dedicated lifting point — object handling under LOLER 1998',
+  },
+  {
     slug: 'crane-lift-plan-requirements',
     title: 'What is a Crane Lift Plan? Requirements & Contents',
     excerpt: 'What a crane lift plan is, what it must contain under LOLER 1998 and BS 7121, the basic/standard/complex lift categories, when one is legally required, and who is competent to write it.',

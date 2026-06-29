@@ -97,6 +97,8 @@ const LOCATION_SLUGS = [
 
 const BLOG_POSTS = [
   { slug: 'crane-lift-plan-requirements',                                     date: '2026-06-29' },
+  { slug: 'lifting-with-excavators-loler',                                    date: '2026-06-29' },
+  { slug: 'basic-standard-complex-lifts',                                     date: '2026-06-29' },
   { slug: 'how-to-choose-a-lift-plan-provider',                               date: '2026-06-17' },
   { slug: 'lifting-method-statements-rams-guide',                             date: '2026-06-17' },
   { slug: 'lift-plan-cost-uk',                                                date: '2026-06-11' },

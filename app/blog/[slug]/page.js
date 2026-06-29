@@ -5,6 +5,95 @@ import InlineQuoteForm from '@/components/InlineQuoteForm';
 
 // Blog posts content
 const blogPosts = {
+  'basic-standard-complex-lifts': {
+    title: 'Basic, Standard & Complex Lifts: Categories Explained',
+    description: 'What makes a lift basic, standard or complex under BS 7121, what a critical lift is, and how the category changes the planning a lifting operation needs.',
+    keywords: 'complex lift, complex lift definition, what is a complex lift, complex lifting operations, basic lift, standard lift, critical lift, what is a critical lift, lift categories, bs 7121 lift categories, when is a critical lift plan required',
+    category: 'Lift Planning',
+    readTime: '7 min read',
+    date: 'June 29, 2026',
+    dateModified: 'June 29, 2026',
+    image: '/images/blog/bs7121-code-of-practice-crane-supervisor.webp',
+    imageAlt: 'A crane supervisor reviewing a lift against BS 7121 on a UK construction site — categorising the lift as basic, standard or complex',
+    content: `
+      <p class="lead">Not every lift carries the same risk, and UK lifting practice reflects that by sorting lifting operations into categories — basic, standard and complex. The category drives how much planning a lift needs, who has to plan it, and how closely it must be supervised. This guide explains what each category means under BS 7121, what makes a lift "complex", what people mean by a "critical lift", and why getting the category right matters before any load leaves the ground.</p>
+
+      <h2>What are lift categories?</h2>
+      <p>The British Standard for the safe use of cranes, <a href="/blog/what-is-bs-7121-complete-guide">BS 7121</a>, groups lifting operations by complexity so the planning effort matches the risk. The same idea applies to lifting with any equipment, not just cranes: a routine, repetitive pick on firm ground needs far less than a heavy lift over a live road. Importantly, the category is set by the whole operation — the load, the equipment, the site and the surroundings — not by the size of the load alone.</p>
+
+      <h2>Basic lifts</h2>
+      <p>A basic lift is routine, repetitive and low-risk: a well-matched machine, a known load, firm and level ground, and clear space around the lift. Basic lifts still have to be planned under LOLER — but the plan can be straightforward, and a competent operator working to it may be enough without a separate person supervising every pick.</p>
+
+      <h2>Standard lifts</h2>
+      <p>A standard lift is the everyday lifting on most sites — more than routine, but within normal practice. It needs a written, site-specific <a href="/blog/what-is-a-lift-plan">lift plan</a> produced by a competent person, and usually a lift supervisor overseeing the operation on the ground. The great majority of commercial crane and excavator lifts fall here.</p>
+
+      <h2>Complex lifts — what makes a lift complex?</h2>
+      <p>A lift becomes complex when something about it takes it outside normal, routine practice. Common factors include:</p>
+      <ul>
+        <li>Two or more cranes sharing one load (a tandem or multiple-crane lift).</li>
+        <li>Heavy, large, long or awkward loads, or loads with an uncertain centre of gravity.</li>
+        <li>Lifting near or over people, live traffic, railways, or occupied buildings.</li>
+        <li>Blind lifts, where the operator cannot see the load or the landing area.</li>
+        <li>Lifting people, or lifting close to live electrical or other services.</li>
+        <li>Poor or uncertain ground conditions, or restricted access and working space.</li>
+      </ul>
+      <p>A complex lift needs the fullest planning — often a site visit, detailed calculations, and close supervision — and should be planned by an experienced <a href="/services/appointed-person">Appointed Person</a>. A modest load can still be a complex lift because of where and how it is being lifted: the site can move a lift up a category on its own.</p>
+
+      <h2>What is a critical lift?</h2>
+      <p>"Critical lift" is a related term — used widely in industry and on some sites — for a lift where a failure would have serious consequences: high-value or irreplaceable loads, lifts over occupied areas or live plant, or operations where an incident would cause major harm or disruption. In UK practice a critical lift is generally treated as a complex lift and planned to the same high standard. The label matters less than the substance: identify what could go wrong, and plan to control it.</p>
+
+      <h2>How the category changes the planning required</h2>
+      <p>The category is not bureaucracy — it sets the level of competence and detail the law expects. As a lift moves from basic to standard to complex, the plan becomes more detailed, the competence required to produce it rises, and the supervision on site increases. Getting the category wrong in either direction is a problem: under-plan a complex lift and you create real danger; over-plan a basic one and you waste time. A guide on <a href="/blog/crane-lift-plan-requirements">what a crane lift plan must contain</a> shows how the detail scales, and our guide on <a href="/blog/when-do-you-need-lift-plan">when you need a lift plan</a> covers the threshold question.</p>
+
+      <h2>Who decides the lift category?</h2>
+      <p>The competent person planning the operation — normally a CPCS A61 Appointed Person — assesses the load, equipment, site and surroundings and assigns the category, then plans accordingly. That judgement is exactly the competence you are paying for: an experienced Appointed Person spots the factors that quietly turn a "simple" lift into a complex one.</p>
+
+      <h2>How RMT Solutions can help</h2>
+      <p>RMT Solutions categorises and plans lifting operations of every type as an independent CPCS A61 Appointed Person with 35 years in UK construction. Whether it is a routine pick or a complex multi-crane lift, we produce a plan matched to the actual risk — fixed prices from £200, with a quote inside four working hours. See our <a href="/services/lift-plans">lift planning service</a> for details.</p>
+    `,
+  },
+  'lifting-with-excavators-loler': {
+    title: 'Does an Excavator Need LOLER? Lifting With Excavators',
+    description: 'When an excavator is used to lift, LOLER 1998 applies. What that means for thorough examination, object-handling kit, the CPA guidance and your lift plan.',
+    keywords: 'lifting with excavators, does an excavator need a loler, cpa lifting with excavators, using an excavator as a crane, excavator object handling, excavator lifting regulations, excavator lifting points, 360 excavator lifting operations, excavator thorough examination, excavator rci',
+    category: 'Compliance',
+    readTime: '8 min read',
+    date: 'June 29, 2026',
+    dateModified: 'June 29, 2026',
+    image: '/images/excavator-pipeline.webp',
+    imageAlt: 'A 360-degree excavator lifting a pipe section on a UK construction site using a dedicated lifting point — object handling under LOLER 1998',
+    content: `
+      <p class="lead">The moment an excavator is used to lift and place a load — a pipe, a manhole ring, a trench box — rather than just dig, it becomes lifting equipment in the eyes of the law, and the Lifting Operations and Lifting Equipment Regulations 1998 (LOLER) apply in full. That has real consequences for the machine, the paperwork and the planning. This guide explains when LOLER applies to an excavator, what the machine must have fitted to lift legally, what the CPA guidance says, and why you still need a lift plan and an Appointed Person.</p>
+
+      <h2>Can you legally use an excavator to lift?</h2>
+      <p>Yes — provided the machine is suitable and equipped for it, and the operation is properly planned. Using a 360° excavator to handle objects is an established and accepted practice in UK construction, from pipe laying and drainage to handling precast units. But "object handling" is a different duty from excavating, and the law treats it differently. As soon as the excavator lifts a load using a chain, sling or lifting attachment, it is being used as lifting equipment and must meet the same legal standard as a crane doing the same job.</p>
+
+      <h2>Does an excavator need a LOLER thorough examination?</h2>
+      <p>Yes. Any excavator used for lifting operations is lifting equipment under <a href="/blog/what-is-loler-complete-guide">LOLER 1998</a> and must have a thorough examination by a competent person — generally at least every 12 months for lifting loads (more frequently if there is reason to, and the report kept available). The lifting accessories used with it — chains, slings, shackles, lifting eyes — must also be examined and certified. A machine that only ever digs does not need a LOLER thorough examination; the moment it is used to lift, it does.</p>
+
+      <h2>What must an excavator have fitted to lift objects?</h2>
+      <p>To lift objects safely and legally, an excavator generally needs to be set up for "object handling" rather than bare digging. In practice that means:</p>
+      <ul>
+        <li><strong>A dedicated lifting point</strong> — a certified lifting eye or shackle point, not the bucket teeth or a chain slung over the linkage.</li>
+        <li><strong>Check valves (hose-burst protection)</strong> on the boom and dipper rams, so the load is held safely if a hydraulic hose fails.</li>
+        <li><strong>An overload warning device / Rated Capacity Indicator (RCI)</strong> that alerts the operator before the safe object-handling capacity is exceeded. Our <a href="/resources/excavator-rci-guide">excavator RCI guide</a> and <a href="/resources/excavator-safety-devices">excavator safety devices</a> pages explain these in detail.</li>
+        <li><strong>An object-handling rating chart</strong> for the machine, so capacity can be checked at the actual radius — the lifting figures are well below the digging forces the machine can exert.</li>
+      </ul>
+      <p>These requirements flow from LOLER, PUWER and the earth-moving machinery standard BS EN 474. A machine without them should not be used for lifting.</p>
+
+      <h2>The CPA guidance on lifting with excavators</h2>
+      <p>The Construction Plant-hire Association (CPA) publishes recognised industry guidance on the use of 360° excavators as cranes (often searched for as "CPA lifting with excavators"). It sets out the machine requirements, the competence of the people involved, and the planning expected for object-handling operations. It is the document most principal contractors will expect your lifting arrangements to be consistent with, alongside LOLER and the general lifting standard BS 7121 where relevant.</p>
+
+      <h2>Do you still need a lift plan and an Appointed Person?</h2>
+      <p>Yes. LOLER Regulation 8 requires every lifting operation to be planned by a competent person, regardless of whether the machine is a crane or an excavator. So an excavator lift needs a <a href="/blog/what-is-a-lift-plan">lift plan</a> just as a crane lift does, and for anything beyond the most routine handling that planning is normally done by a <a href="/services/appointed-person">CPCS A61 Appointed Person</a>. The plan addresses the load, the machine's object-handling capacity at the working radius, the lifting accessories, the ground, the exclusion zones and the roles on site. Our <a href="/blog/excavator-lift-plans-complete-guide">complete guide to excavator lift plans</a> walks through exactly what one should contain, and you can download an <a href="/resources/excavator-lift-plan-templates">excavator lift plan template</a> to see the structure.</p>
+
+      <h2>Why a 360 excavator is not a crane</h2>
+      <p>An excavator can lift, but it is not a crane, and its object-handling capacity is far lower than its digging capability suggests. Capacity must be read from the machine's object-handling chart at the actual radius and slew position — never assumed from the size of the machine. Stability, ground bearing and the position of the load relative to the tracks all matter, which is why the lift has to be planned rather than judged by eye. Treating a big excavator as if it were a big crane is one of the most common and most dangerous mistakes in site lifting.</p>
+
+      <h2>How RMT Solutions can help</h2>
+      <p>RMT Solutions writes site-specific excavator <a href="/services/lift-plans">lift plans</a> and provides independent Appointed Person cover as a CPCS A61 Appointed Person with 35 years in UK construction. We confirm the machine is correctly equipped for object handling, check the capacity against the object-handling chart, and produce a plan your principal contractor will accept — fixed prices from £200, with a quote inside four working hours. See our <a href="/services/excavator-lift-plans">excavator lift plan service</a> for details.</p>
+    `,
+  },
   'crane-lift-plan-requirements': {
     title: 'What is a Crane Lift Plan? Requirements & Contents',
     description: 'What a crane lift plan is, what it must contain under LOLER 1998 and BS 7121, when one is legally required, and who is competent to write it.',
@@ -40,7 +129,7 @@ const blogPosts = {
       <p>For a fuller breakdown of the anatomy of a plan regardless of equipment, see our guide to <a href="/blog/what-is-a-lift-plan">what a lift plan must contain</a>.</p>
 
       <h2>Basic, standard and complex crane lifts</h2>
-      <p>BS 7121 recognises that not every lift carries the same risk, and the level of planning detail follows the category of lift:</p>
+      <p>BS 7121 recognises that not every lift carries the same risk, and the level of planning detail follows the <a href="/blog/basic-standard-complex-lifts">category of lift</a>:</p>
       <ul>
         <li><strong>Basic lifts</strong> — routine, repetitive, low-risk lifts that can be covered by a straightforward plan and a competent operator working to it.</li>
         <li><strong>Standard lifts</strong> — the everyday crane work on most sites, requiring a written, site-specific plan produced by a competent person.</li>
@@ -1315,7 +1404,7 @@ const blogPosts = {
       <p class="lead">Excavators are primarily designed for digging, but they're frequently used for lifting operations on UK construction sites. While this versatility makes them invaluable, it also creates legal obligations under LOLER 1998.</p>
 
       <h2>When Do You Need a Lift Plan for Excavator Operations?</h2>
-      <p>Under LOLER 1998, any lifting operation must be properly planned by a competent person. For excavators, this means you need a formal lift plan whenever the machine is used to lift and move loads rather than just digging.</p>
+      <p>Under LOLER 1998, any lifting operation must be properly planned by a competent person. For excavators, this means you need a formal lift plan whenever the machine is used to lift and move loads rather than just digging. For the regulatory side — whether <a href="/blog/lifting-with-excavators-loler">an excavator needs a LOLER thorough examination and what it must have fitted to lift</a> — see our guide to lifting with excavators.</p>
 
       <p>The key distinction is simple: if the excavator bucket is replaced with lifting equipment (chains, slings, shackles) or if you're using the bucket itself to lift rather than dig, you're conducting a lifting operation that requires planning under LOLER.</p>
 
@@ -2319,6 +2408,42 @@ export async function generateStaticParams() {
 // guidelines). This unlocks FAQ rich results in the SERP and makes the
 // Q&A content far easier for AI answer engines to quote directly.
 const faqData = {
+  'basic-standard-complex-lifts': [
+    {
+      q: 'What is a complex lift?',
+      a: 'A complex lift is a lifting operation that falls outside normal, routine practice — for example a tandem or multiple-crane lift, a heavy or awkward load, a blind lift, lifting over people or live traffic, lifting people, or lifting on poor ground or in restricted space. It needs the fullest planning, often a site visit, and close supervision, and should be planned by an experienced Appointed Person.',
+    },
+    {
+      q: 'What is the difference between a basic, standard and complex lift?',
+      a: 'A basic lift is routine, repetitive and low-risk and can be covered by a straightforward plan. A standard lift is everyday site lifting within normal practice and needs a written, site-specific lift plan and usually a lift supervisor. A complex lift falls outside routine practice and needs the fullest planning and supervision. The category is set by the whole operation, not the size of the load alone.',
+    },
+    {
+      q: 'What is a critical lift?',
+      a: 'A critical lift is one where a failure would have serious consequences — high-value or irreplaceable loads, lifts over occupied areas or live plant, or operations where an incident would cause major harm or disruption. In UK practice a critical lift is generally treated as a complex lift and planned to the same high standard.',
+    },
+    {
+      q: 'Who decides the lift category?',
+      a: 'The competent person planning the operation — normally a CPCS A61 Appointed Person — assesses the load, equipment, site and surroundings, assigns the category, and plans accordingly. Identifying the factors that turn a seemingly simple lift into a complex one is a core part of that competence.',
+    },
+  ],
+  'lifting-with-excavators-loler': [
+    {
+      q: 'Does an excavator need a LOLER thorough examination?',
+      a: 'Yes, if it is used for lifting. An excavator used to lift and place loads is lifting equipment under LOLER 1998 and must have a thorough examination by a competent person, generally at least every 12 months, with the lifting accessories examined and certified too. An excavator that only digs does not need a LOLER thorough examination.',
+    },
+    {
+      q: 'Can you legally use an excavator to lift objects?',
+      a: 'Yes, provided the machine is set up for object handling and the lift is properly planned. It needs a dedicated lifting point, hose-burst check valves on the boom and dipper rams, an overload warning device or RCI, and an object-handling rating chart. Lifting from the bucket or an unrated point is not acceptable.',
+    },
+    {
+      q: 'What is the CPA guidance on lifting with excavators?',
+      a: 'The Construction Plant-hire Association publishes recognised industry guidance on using 360-degree excavators as cranes, covering the machine requirements, the competence of the people involved, and the planning expected for object-handling operations. Most principal contractors expect excavator lifting arrangements to be consistent with it, alongside LOLER 1998.',
+    },
+    {
+      q: 'Do you need a lift plan to lift with an excavator?',
+      a: 'Yes. LOLER Regulation 8 requires every lifting operation to be planned by a competent person, whether the machine is a crane or an excavator. For anything beyond the most routine handling the plan is normally produced by a CPCS A61 Appointed Person, covering the load, the object-handling capacity at the working radius, the accessories, the ground and the roles on site.',
+    },
+  ],
   'crane-lift-plan-requirements': [
     {
       q: 'What is a crane lift plan?',
