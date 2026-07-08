@@ -1,0 +1,67 @@
+SEO & CONVERSION FIX ROUND 5 — applied 8 July 2026
+===================================================
+
+Same-day follow-up to round 4. Two workstreams: (1) WhatsApp as a
+contact channel, (2) the Appointed Person content push — the AP query
+cluster is the site's biggest untapped theme (GSC: 4,464 impressions /
+2 clicks across 40 queries).
+
+Build verified: `next build` completes, all three new blog routes
+prerender, FAQPage schema present, WhatsApp links present in built
+pages, sitemap includes the new URLs.
+
+FILES CHANGED
+-------------
+
+MODIFIED — components/FloatingCallButton.js  (conversion)
+  - Mobile sticky CTA is now a stacked pair: WhatsApp (brand-green,
+    wa.me/447803808093 deep link with pre-filled message) above the
+    existing amber Call Now button.
+  - New GA4 event: click_whatsapp_floating (existing phone event kept).
+  - Inline WhatsApp SVG glyph (lucide-react has no brand icons).
+
+MODIFIED — app/contact/page.js  (conversion)
+  - New WhatsApp row in Contact Details (between Phone and Location):
+    wa.me deep link + "send load details, photos or drawings straight
+    from site" microcopy.
+
+MODIFIED — app/blog/[slug]/page.js  (content)
+  THREE NEW POSTS, each with 4 FAQPage entries:
+  1. 'appointed-person-duties-responsibilities'
+     Title: Appointed Person Duties & Responsibilities (BS 7121)
+     Targets: appointed person duties/responsibilities (~240 imps),
+     appointed person lifting operations (280), appointed person for
+     lifting operations (173), loler appointed person.
+     Hero: excavator-lift-supervisor-overseeing-uk.webp
+  2. 'cpcs-a61-basic-vs-advanced'
+     Title: CPCS A61 Basic vs Advanced: Which Appointed Person Card?
+     Targets: cpcs a61 (319), cpcs a61 appointed person (533),
+     a61 appointed person (305), a61 practical scenarios (74).
+     Hero: appointed-person-reviewing-lift-plan-uk.webp (shared with
+     the main CPCS guide — flag for a unique image later).
+  3. 'do-you-need-an-appointed-person'
+     Title: Do You Need an Appointed Person on Site? UK Rules
+     Targets: appointed person construction (312), what is an appointed
+     person in construction (114), appointed person crane (327),
+     appointed person services (243).
+     Hero: warehouse-steel-erection.webp (was unused — back in service).
+  ALSO:
+  - 'cpcs-appointed-person-guide': contextual links added to all three
+    new posts (Basic vs Advanced section + When Do You Need section);
+    dateModified → July 8 2026.
+
+MODIFIED — app/blog/page.js
+  - Listing cards for the three new posts (top of the grid).
+
+MODIFIED — app/sitemap-feed/route.js
+  - Three new posts added (2026-07-08); cpcs-appointed-person-guide
+    lastmod bumped to 2026-07-08.
+
+AFTER DEPLOY
+------------
+Request Indexing in Search Console for:
+  /blog/appointed-person-duties-responsibilities
+  /blog/cpcs-a61-basic-vs-advanced
+  /blog/do-you-need-an-appointed-person
+  /blog/cpcs-appointed-person-guide
+  /contact

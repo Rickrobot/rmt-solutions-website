@@ -96,6 +96,9 @@ const LOCATION_SLUGS = [
 ];
 
 const BLOG_POSTS = [
+  { slug: 'appointed-person-duties-responsibilities',                        date: '2026-07-08' },
+  { slug: 'cpcs-a61-basic-vs-advanced',                                      date: '2026-07-08' },
+  { slug: 'do-you-need-an-appointed-person',                                 date: '2026-07-08' },
   { slug: 'generic-lift-plans',                                              date: '2026-07-08' },
   { slug: 'lift-plan-software-vs-appointed-person',                          date: '2026-07-08' },
   { slug: 'crane-lift-plan-requirements',                                     date: '2026-06-29' },
@@ -111,7 +114,7 @@ const BLOG_POSTS = [
   { slug: 'when-do-you-need-lift-plan',                                       date: '2026-07-08' },
   { slug: 'mobile-crane-vs-tower-crane',                                      date: '2026-01-28' },
   { slug: 'excavator-lift-plans-complete-guide',                              date: '2026-01-31' },
-  { slug: 'cpcs-appointed-person-guide',                                      date: '2026-01-31' },
+  { slug: 'cpcs-appointed-person-guide',                                      date: '2026-07-08' },
   { slug: 'common-lift-planning-mistakes',                                    date: '2026-05-22' },
   { slug: 'telehandler-lift-plans-complete-guide',                            date: '2026-06-11' },
   { slug: 'lorry-loader-lift-plans-guide',                                    date: '2026-06-11' },
