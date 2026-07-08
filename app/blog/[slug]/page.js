@@ -275,6 +275,108 @@ const blogPosts = {
       </div>
     `,
   },
+  // NEW (Jul 2026) — "translate the regulator" pair. HSE.gov.uk owns the
+  // authority queries; these pages own the practical intent next to them.
+  // Targets: "loler planning and risk assessment" (447 imps, pos 13, 0
+  // clicks) and "hse lifting plan" (451 imps, pos 11, 0 clicks) +
+  // "lifting plan template hse" (129).
+  'loler-acop-l113-explained': {
+    title: 'LOLER ACOP L113 Explained: Planning & Risk Assessment',
+    description: 'L113 is the HSE’s Approved Code of Practice for LOLER 1998. What "ACOP status" means legally, what L113 says about planning and risk assessment, and how to comply in practice.',
+    keywords: 'loler planning and risk assessment, l113, loler acop, loler approved code of practice, l113 loler, hse l113, loler regulation 8 planning, lifting operations risk assessment, loler code of practice, safe use of lifting equipment acop',
+    category: 'Compliance',
+    readTime: '9 min read',
+    date: 'July 8, 2026',
+    dateModified: 'July 8, 2026',
+    image: '/images/services/loler-compliance-regulations-standards.webp',
+    imageAlt: 'LOLER regulations and standards documents on a desk — the L113 Approved Code of Practice sits at the centre of UK lifting compliance',
+    content: `
+      <p class="lead">If you have ever tried to work out what LOLER actually requires you to <em>do</em>, you will have discovered that the regulations themselves are eleven short paragraphs of legal text. The practical detail lives somewhere else: <strong>L113, the HSE's Approved Code of Practice and guidance for LOLER 1998</strong> — full title "Safe use of lifting equipment". This guide explains what L113 is, the unusual legal weight an ACOP carries, and what it says about the two things sites get wrong most often: planning lifting operations and risk assessment.</p>
+
+      <h2>What is L113?</h2>
+      <p>L113 is the HSE's official companion document to the Lifting Operations and Lifting Equipment Regulations 1998. It reprints each regulation and follows it with two kinds of material: <strong>ACOP text</strong> (the Approved Code of Practice itself) and <strong>guidance</strong>. The distinction matters. The document is free to download from the HSE website, and if lifting equipment is used in your business, someone in your organisation should have read it.</p>
+
+      <h2>What "ACOP Status" Actually Means</h2>
+      <p>An Approved Code of Practice has a special legal status that ordinary guidance does not. If you are prosecuted for a breach of health and safety law and it is proved you did not follow the relevant ACOP, <strong>the court will find you at fault unless you can show you complied with the law in some other, equally effective way</strong>. Lawyers call this "semi-legal" status: the ACOP is not itself law, but ignoring it reverses the burden — you must prove your alternative approach was as good.</p>
+      <p>In practice, that means L113 is the default standard a court, an HSE inspector, or a principal contractor's auditor will judge your lifting arrangements against. Departing from it is legally possible but commercially and evidentially brave.</p>
+
+      <h2>What L113 Says About Planning</h2>
+      <p>Regulation 8 requires every lifting operation to be properly planned by a competent person, appropriately supervised, and carried out in a safe manner. The ACOP text expands each phrase:</p>
+      <ul>
+        <li><strong>"Properly planned"</strong> — the plan must address the risks identified by risk assessment and identify the resources, procedures and responsibilities required. For routine, repetitive lifts the planning may only need to be done once, but it must be <em>reviewed</em> to check nothing has changed — the exact territory covered in our guide to <a href="/blog/generic-lift-plans">generic lift plans</a>.</li>
+        <li><strong>"Competent person"</strong> — someone with adequate practical and theoretical knowledge and experience of the lifting operations to be planned. L113 does not name a qualification; UK construction fills the gap with the <a href="/blog/cpcs-appointed-person-guide">CPCS A61 Appointed Person</a>.</li>
+        <li><strong>"Appropriately supervised"</strong> — supervision proportionate to the risk, by people with the authority to stop the work.</li>
+      </ul>
+      <p>L113 also lists the factors the plan should address — the weight and centre of gravity of the load, the working radius, the environment, the personnel — which map directly onto the <a href="/blog/what-is-a-lift-plan">nine parts of a lift plan</a>.</p>
+
+      <h2>LOLER Planning and Risk Assessment: How They Fit Together</h2>
+      <p>This is the point most sites muddle. LOLER does not contain a standalone duty to risk assess — that duty comes from the Management of Health and Safety at Work Regulations 1999. L113 makes the relationship explicit: the <strong>risk assessment identifies the hazards</strong> of the lifting operation, and the <strong>lift plan is the output of planning done to control them</strong>. They are not the same document and one cannot substitute for the other:</p>
+      <ul>
+        <li>The risk assessment asks: what could cause harm here — the load, the equipment, the ground, the people, the environment?</li>
+        <li>The lift plan answers: here is precisely how this lift will be done so those risks are controlled — this machine, this configuration, this radius, this rigging, these people, this sequence.</li>
+      </ul>
+      <p>A generic risk assessment with no lift-specific planning fails Regulation 8; a lift plan with no underlying assessment of site-specific hazards fails the Management Regulations. Principal contractors reject submissions for both, usually bundled with the RAMS — see our guide to <a href="/blog/lifting-method-statements-rams-guide">lifting method statements and RAMS</a>.</p>
+
+      <h2>The Other L113 Duties Worth Knowing</h2>
+      <ul>
+        <li><strong>Thorough examination (Regulations 9–10)</strong> — lifting equipment examined by a competent person at statutory intervals; accessories every 6 months where used to lift people or as accessories, equipment generally every 12. Covered in our <a href="/blog/what-is-loler-complete-guide">plain-English LOLER guide</a>.</li>
+        <li><strong>Marking (Regulation 7)</strong> — safe working loads marked and legible.</li>
+        <li><strong>Strength and stability (Regulation 4)</strong> — including the ground the machine stands on, which is why outrigger loadings and mats appear in every competent lift plan.</li>
+      </ul>
+
+      <h2>Complying in Practice</h2>
+      <p>The gap between L113 and a compliant site is not knowledge — the document is free — it is application: someone competent turning "properly planned" into an actual plan for an actual lift. That is the work we do every day: site-specific <a href="/services/lift-plans">lift plans from £200</a>, <a href="/services/lift-plan-checking">independent plan checking</a>, and <a href="/services/lifting-operations-audit">lifting operation audits</a> that measure your arrangements against L113 and BS 7121 before an inspector or a principal contractor does.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
+        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Want Your Lifting Arrangements L113-Proof?</h3>
+        <p class="text-gray-300 mb-6">A CPCS A61 Appointed Person with 35 years on UK sites will review your plans, RAMS and records against the ACOP — or write them properly from scratch. Fixed prices, 24–48 hour turnaround.</p>
+        <a href="/contact" class="btn-primary inline-block">Get in Touch Today</a>
+      </div>
+    `,
+  },
+  'hse-lifting-plan-requirements': {
+    title: 'HSE Lifting Plan Requirements: What Inspectors Look For',
+    description: 'The HSE publishes no lifting plan template — it enforces LOLER Regulation 8. What HSE inspectors actually examine after an incident or site visit, and how to make your lifting plans stand up.',
+    keywords: 'hse lifting plan, hse lifting plan template, lifting plan template hse, hse lift plan, hse lifting plan requirements, hse lifting operations, lifting plan requirements uk, hse inspector lifting operations, loler enforcement, hse crane lift plan',
+    category: 'Compliance',
+    readTime: '8 min read',
+    date: 'July 8, 2026',
+    dateModified: 'July 8, 2026',
+    image: '/images/services/lift-plan-checking-clipboard-inspection.webp',
+    imageAlt: 'Inspector reviewing lifting documentation on a clipboard at a UK construction site — the scrutiny a lifting plan must stand up to',
+    content: `
+      <p class="lead">Search "HSE lifting plan" and you might expect to find an official template on hse.gov.uk. There isn't one — and that surprises a lot of site managers. The HSE is the <em>enforcer</em>, not the form-provider: it sets the standard through LOLER 1998 and the L113 Approved Code of Practice, then judges whatever documents you produce against that standard. Having spent 35 years on the other side of that scrutiny, this guide covers what the HSE actually requires, what inspectors look for when they examine a lifting plan, and the failures that turn a site visit into an enforcement notice.</p>
+
+      <h2>What the HSE Actually Requires</h2>
+      <p>The legal requirement is LOLER 1998 Regulation 8: every lifting operation must be <strong>properly planned by a competent person, appropriately supervised, and carried out in a safe manner</strong>. The supporting detail sits in <a href="/blog/loler-acop-l113-explained">the L113 ACOP</a>, which has semi-legal status — depart from it and the burden falls on you to prove your approach was equally effective. Neither document prescribes a form, a layout or a logo. The HSE's question is never "did you use the right template?" — it is "can you demonstrate this lift was competently planned?"</p>
+
+      <h2>Why There Is No HSE Lifting Plan Template</h2>
+      <p>Deliberately. Lifting operations range from a telehandler moving pallets to a 750-tonne crawler crane over a live railway; one form cannot fit both, and a government-issued template would invite exactly the box-ticking L113 warns against. The recognised industry structure comes instead from BS 7121, and practical working documents from firms like ours — our free <a href="/resources/lift-plan-templates">lift plan templates</a> follow that structure for <a href="/resources/telehandler-lift-plan-templates">telehandlers</a>, <a href="/resources/excavator-lift-plan-templates">excavators</a>, <a href="/resources/lorry-loader-lift-plan-templates">lorry loaders</a> and <a href="/resources/mobile-crane-lift-plan-templates">mobile cranes</a>. A template is a starting structure; the competent person supplies the numbers and the judgement.</p>
+
+      <h2>What an HSE Inspector Examines</h2>
+      <p>Inspectors see lifting plans in two situations: proactive site inspections and post-incident investigations. In both, they test the same chain of evidence:</p>
+      <ol>
+        <li><strong>Who planned it?</strong> Name, competence and experience of the planner. An <a href="/blog/cpcs-appointed-person-guide">Appointed Person</a> with a card level matching the lift category answers this cleanly; "the operator sorted it" does not.</li>
+        <li><strong>Was the load actually known?</strong> A confirmed weight with a source — drawing, delivery note, weighbridge — not an estimate. Underestimated loads sit behind a large share of lifting incidents.</li>
+        <li><strong>Do the numbers stack up?</strong> Capacity at the working radius in the machine's real configuration, utilisation percentage, accessory ratings at the sling angles used — the <a href="/blog/lift-plan-software-vs-appointed-person">core lifting plan calculations</a>.</li>
+        <li><strong>Was the ground assessed?</strong> Outrigger loads against allowable bearing pressure, mats specified, services and voids checked.</li>
+        <li><strong>Does the paper match the site?</strong> The killer question. A plan describing firm level ground while the crane sits on backfill, or a "10m radius" lift executed at 14m, demonstrates the planning was theatre. Inspectors walk the lift and compare.</li>
+        <li><strong>Were the people briefed and supervised?</strong> Signed briefing records, a named lift supervisor, and evidence the team could stop the lift if conditions changed.</li>
+      </ol>
+
+      <h2>Where Sites Fail</h2>
+      <p>The recurring failures we see — and that appear throughout HSE enforcement action — are a <a href="/blog/generic-lift-plans">generic plan</a> doing site-specific work, plans written after the lift to satisfy paperwork, wrong load charts for the machine configuration, nobody on site able to say who the Appointed Person is, and lifts that changed on the day without the plan being reviewed. Every one is discoverable in ten minutes by an inspector, and every one is avoidable for less than the cost of the delay it causes — full breakdown in <a href="/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected">why lift plans get rejected</a>.</p>
+
+      <h2>The Cost of Getting It Wrong</h2>
+      <p>LOLER breaches are criminal offences. Enforcement ranges from improvement and prohibition notices (with fee-for-intervention charged at the inspector's hourly rate) to prosecution, where sentencing guidelines link fines to turnover — recent lifting-operation prosecutions have run to six and seven figures. Against that, a professionally written site-specific plan <a href="/blog/lift-plan-cost-uk">costs from £200</a>. The arithmetic is not close.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
+        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Make Your Lifting Plans Inspection-Ready</h3>
+        <p class="text-gray-300 mb-6">Site-specific, LOLER-compliant lift plans from £200 in 24–48 hours, written by a CPCS A61 Appointed Person — or an independent audit of your existing arrangements before the HSE or your principal contractor looks first.</p>
+        <a href="/contact" class="btn-primary inline-block">Get a Quote Today</a>
+      </div>
+    `,
+  },
   'basic-standard-complex-lifts': {
     title: 'Basic, Standard & Complex Lifts: Categories Explained',
     description: 'What makes a lift basic, standard or complex under BS 7121, what a critical lift is, and how the category changes the planning a lifting operation needs.',
@@ -642,7 +744,7 @@ const blogPosts = {
 
       <p>That said, BS 7121 is the recognised means of demonstrating compliance with those legal duties. LOLER Regulation 8 requires that every lifting operation is properly planned by a competent person, appropriately supervised, and carried out in a safe manner — but it does not prescribe how. BS 7121 fills that gap by setting out, in detail, what proper planning, supervision, and safe operation look like in practice.</p>
 
-      <p>The HSE's Approved Code of Practice for LOLER (L113) cross-refers to BS 7121, and the courts have consistently treated the standard as the benchmark of reasonable practice. In practical terms this means that if you can show your lifting operations were planned and managed in accordance with BS 7121, you have a strong defence in the event of an incident or enforcement action. If you cannot, you have a problem — because the prosecution or the HSE inspector will use the standard as the yardstick against which your operation is measured.</p>
+      <p>The HSE's Approved Code of Practice for LOLER (<a href="/blog/loler-acop-l113-explained">L113</a>) cross-refers to BS 7121, and the courts have consistently treated the standard as the benchmark of reasonable practice. In practical terms this means that if you can show your lifting operations were planned and managed in accordance with BS 7121, you have a strong defence in the event of an incident or enforcement action. If you cannot, you have a problem — because the prosecution or the HSE inspector will use the standard as the yardstick against which your operation is measured.</p>
 
       <p>Most tier 1 contractors and major clients now require BS 7121 compliance as a contractual condition. Tender returns are routinely rejected if they do not reference the standard. Prequalification questionnaires ask whether your lifting management system aligns with it. In effect, while it is not legally mandatory, BS 7121 has become commercially non-negotiable across UK construction.</p>
 
@@ -874,7 +976,7 @@ const blogPosts = {
 
       <p>A common misconception is that routine or simple lifts do not need a lift plan. This is incorrect. LOLER does not distinguish between complex and routine operations \u2014 all lifting operations must be planned. What varies is the level of detail required. A straightforward lift with a well-matched machine on firm, level ground needs less documentation than a complex tandem crane lift adjacent to a live railway, but both must be planned.</p>
 
-      <p>The Health and Safety Executive's Approved Code of Practice (ACOP) for LOLER, known as L113, provides further guidance. It makes clear that the complexity of the plan should be proportionate to the risks involved, but the requirement for planning exists regardless.</p>
+      <p>The Health and Safety Executive's Approved Code of Practice (ACOP) for LOLER, known as L113, provides further guidance — our <a href="/blog/loler-acop-l113-explained">plain-English guide to L113</a> covers its legal status in full. It makes clear that the complexity of the plan should be proportionate to the risks involved, but the requirement for planning exists regardless.</p>
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-6 my-10">
         <p class="text-gray-300 m-0"><strong class="text-amber-400">Need a lift plan written?</strong> Site-specific, LOLER-compliant plans from £200 with 24–48 hour turnaround, by a CPCS A61 Appointed Person. <a href="/contact" class="text-amber-400 underline">Get a quote</a> or call <a href="tel:+447803808093" class="text-amber-400 underline">07803 808093</a>.</p>
@@ -1496,7 +1598,7 @@ const blogPosts = {
       <p>If a plan lands on your desk that clearly hasn't started with the load — a "10-tonne-ish" weight, no centre of gravity, no lifting-point detail — treat that as a red flag for everything that follows.</p>
 
       <h2>What Does the HSE Expect a Lifting Plan to Cover?</h2>
-      <p>The HSE does not publish an official lifting plan template — its expectation, set out in LOLER 1998 and the supporting Approved Code of Practice (L113), is that the <em>planning</em> is adequate for the risk. When HSE inspectors examine a lifting plan after an incident or during a site visit, they look for evidence that a competent person has genuinely considered:</p>
+      <p>The HSE does not publish an official lifting plan template — its expectation, set out in LOLER 1998 and the supporting Approved Code of Practice (L113), is that the <em>planning</em> is adequate for the risk. We cover the full inspection angle in <a href="/blog/hse-lifting-plan-requirements">HSE lifting plan requirements: what inspectors look for</a>. When HSE inspectors examine a lifting plan after an incident or during a site visit, they look for evidence that a competent person has genuinely considered:</p>
       <ul>
         <li>The load — weight, integrity, centre of gravity and attachment method</li>
         <li>The equipment — suitability, rated capacity at the working configuration, and current thorough examination</li>
@@ -2719,6 +2821,42 @@ export async function generateStaticParams() {
 // guidelines). This unlocks FAQ rich results in the SERP and makes the
 // Q&A content far easier for AI answer engines to quote directly.
 const faqData = {
+  'loler-acop-l113-explained': [
+    {
+      q: 'What is L113?',
+      a: 'L113 — "Safe use of lifting equipment" — is the HSE’s Approved Code of Practice and guidance for LOLER 1998. It reprints each regulation with ACOP text and practical guidance, and is the default standard courts, HSE inspectors and auditors judge lifting arrangements against. It is free to download from the HSE website.',
+    },
+    {
+      q: 'Is an ACOP legally binding?',
+      a: 'Not directly, but it has special legal status. If you are prosecuted for a health and safety breach and did not follow the relevant ACOP, the court will find you at fault unless you can prove you complied with the law in another, equally effective way. Ignoring an ACOP effectively reverses the burden of proof onto you.',
+    },
+    {
+      q: 'Does LOLER require a risk assessment?',
+      a: 'The risk assessment duty comes from the Management of Health and Safety at Work Regulations 1999 rather than LOLER itself. L113 explains how they fit together: the risk assessment identifies the hazards of the lifting operation, and the LOLER Regulation 8 planning — the lift plan — sets out how those risks will be controlled. One cannot substitute for the other.',
+    },
+    {
+      q: 'Who counts as a competent person under L113?',
+      a: 'Someone with adequate practical and theoretical knowledge and experience of the lifting operations being planned. L113 deliberately names no qualification; on UK construction sites the competence is normally evidenced by the CPCS A61 Appointed Person card combined with relevant experience.',
+    },
+  ],
+  'hse-lifting-plan-requirements': [
+    {
+      q: 'Does the HSE have a lifting plan template?',
+      a: 'No. The HSE publishes no official lifting plan template — deliberately, because one form cannot fit operations ranging from telehandler pallet moves to complex multi-crane lifts. It enforces the standard instead: LOLER Regulation 8 planning by a competent person, judged against the L113 ACOP. The recognised document structure comes from BS 7121.',
+    },
+    {
+      q: 'What does the HSE require for a lifting plan?',
+      a: 'Evidence that the lift was properly planned by a competent person, appropriately supervised, and carried out safely. In practice that means a named competent planner, a confirmed load weight, capacity verified at the working radius in the machine’s real configuration, ground assessment, site-specific hazards addressed, and a briefed, supervised lifting team.',
+    },
+    {
+      q: 'What happens if the HSE finds an inadequate lifting plan?',
+      a: 'Options range from improvement and prohibition notices — with fee-for-intervention charged for the inspector’s time — up to criminal prosecution. Sentencing guidelines link fines to company turnover, and lifting-operation prosecutions regularly reach six and seven figures. A prohibition notice also stops the lifting work immediately.',
+    },
+    {
+      q: 'Do HSE inspectors check lifting plans on routine visits?',
+      a: 'Yes. Lifting operations are a standing priority on construction inspections. An inspector will typically ask who the Appointed Person is, examine plans for lifts underway, and compare the paperwork with what is actually happening on site — a plan that does not match the real lift is treated as evidence the planning duty was not met.',
+    },
+  ],
   'appointed-person-duties-responsibilities': [
     {
       q: 'What are the duties of an Appointed Person?',

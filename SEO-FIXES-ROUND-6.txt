@@ -1,0 +1,61 @@
+SEO FIX ROUND 6 — applied 8 July 2026
+======================================
+
+The "translate the regulator" round. hse.gov.uk is the main SERP
+competitor for the site's keywords; you don't outrank the regulator on
+authority queries, you win the practical intent next to them. These two
+pages convert HSE's authority into RMT traffic by explaining what the
+regulator requires, in plain English, from a practitioner.
+
+Build verified: `next build` completes, both new routes prerender,
+FAQPage schema present, sitemap includes both URLs.
+
+FILES CHANGED
+-------------
+
+MODIFIED — app/blog/[slug]/page.js
+  TWO NEW POSTS, each with 4 FAQPage entries:
+  1. 'loler-acop-l113-explained'
+     Title: LOLER ACOP L113 Explained: Planning & Risk Assessment
+     Targets: "loler planning and risk assessment" (447 imps, pos 13,
+     0 clicks), l113 / loler acop queries.
+     Covers: what L113 is, ACOP semi-legal status (burden reversal),
+     Reg 8 planning phrases unpacked, how risk assessment and lift
+     planning fit together, other L113 duties.
+     Hero: loler-compliance-regulations-standards.webp (shared).
+  2. 'hse-lifting-plan-requirements'
+     Title: HSE Lifting Plan Requirements: What Inspectors Look For
+     Targets: "hse lifting plan" (451 imps, pos 11, 0 clicks),
+     "lifting plan template hse" (129), "hse lifting plan template".
+     Covers: why there is no HSE template, the 6-step evidence chain
+     inspectors test, common failures, enforcement costs (FFI,
+     prosecution). Links to all four equipment template pages.
+     Hero: lift-plan-checking-clipboard-inspection.webp (shared).
+  INTERNAL LINKS ADDED (older posts → new pages):
+  - what-is-a-lift-plan: L113 mention now links to the L113 guide.
+  - when-do-you-need-lift-plan: HSE-expectations section now links to
+    the HSE requirements post.
+  - what-is-bs-7121-complete-guide: L113 cross-reference now links to
+    the L113 guide.
+
+MODIFIED — app/blog/page.js
+  - Listing cards for both new posts (top of the grid).
+
+MODIFIED — app/sitemap-feed/route.js
+  - Both new posts added (2026-07-08).
+
+IMAGE NOTE
+----------
+Both heroes are shared with existing pages (flagged in rounds 4-5 too).
+Running list of posts that would benefit from unique hero images:
+  lift-plan-software-vs-appointed-person, cpcs-a61-basic-vs-advanced,
+  loler-acop-l113-explained, hse-lifting-plan-requirements.
+
+AFTER DEPLOY
+------------
+Request Indexing in Search Console for:
+  /blog/loler-acop-l113-explained
+  /blog/hse-lifting-plan-requirements
+  /blog/what-is-a-lift-plan
+  /blog/when-do-you-need-lift-plan
+  /blog/what-is-bs-7121-complete-guide

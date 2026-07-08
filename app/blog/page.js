@@ -35,6 +35,28 @@ export const metadata = {
 // the original publication date.
 const blogPosts = [
   {
+    slug: 'loler-acop-l113-explained',
+    title: 'LOLER ACOP L113 Explained: Planning & Risk Assessment',
+    excerpt: 'L113 is the HSE’s Approved Code of Practice for LOLER 1998 — and ignoring it reverses the burden of proof in court. What ACOP status means, what L113 says about planning and risk assessment, and how the two documents fit together.',
+    category: 'Compliance',
+    readTime: '9 min read',
+    date: 'July 8, 2026',
+    dateModified: 'July 8, 2026',
+    image: '/images/services/loler-compliance-regulations-standards.webp',
+    imageAlt: 'LOLER regulations and standards documents on a desk — the L113 Approved Code of Practice sits at the centre of UK lifting compliance',
+  },
+  {
+    slug: 'hse-lifting-plan-requirements',
+    title: 'HSE Lifting Plan Requirements: What Inspectors Look For',
+    excerpt: 'The HSE publishes no lifting plan template — it enforces the standard instead. The six-step chain of evidence inspectors test on site visits and after incidents, the failures that trigger enforcement, and how to make your plans stand up.',
+    category: 'Compliance',
+    readTime: '8 min read',
+    date: 'July 8, 2026',
+    dateModified: 'July 8, 2026',
+    image: '/images/services/lift-plan-checking-clipboard-inspection.webp',
+    imageAlt: 'Inspector reviewing lifting documentation on a clipboard at a UK construction site — the scrutiny a lifting plan must stand up to',
+  },
+  {
     slug: 'appointed-person-duties-responsibilities',
     title: 'Appointed Person Duties & Responsibilities (BS 7121)',
     excerpt: 'The Appointed Person has overall control of every lifting operation. Their 10 duties under BS 7121 and LOLER 1998, what they stay accountable for even off site, and what they can delegate to the lift supervisor.',

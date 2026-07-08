@@ -96,6 +96,8 @@ const LOCATION_SLUGS = [
 ];
 
 const BLOG_POSTS = [
+  { slug: 'loler-acop-l113-explained',                                       date: '2026-07-08' },
+  { slug: 'hse-lifting-plan-requirements',                                   date: '2026-07-08' },
   { slug: 'appointed-person-duties-responsibilities',                        date: '2026-07-08' },
   { slug: 'cpcs-a61-basic-vs-advanced',                                      date: '2026-07-08' },
   { slug: 'do-you-need-an-appointed-person',                                 date: '2026-07-08' },
