@@ -85,6 +85,22 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
+      name: 'Does a telehandler suspended-load lift need a separate CPCS A62 lift supervisor?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Not always. Every suspended-load telehandler lift must be supervised, but whether the supervisor must be a separate, dedicated CPCS A62 (or NPORS equivalent) holder depends on the lift category set by the Appointed Person. A basic lift can combine supervision with the A40 slinger/signaller where that person is competent and the Appointed Person authorises it; an intermediate lift usually needs a separate A62; a complex lift always needs a dedicated A62 and the roles must not be combined.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can the slinger/signaller also supervise the telehandler lift?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Only on a genuinely basic lift, and only where the Appointed Person has reviewed and authorised it and the person is assessed as competent to supervise — not just to sling. The CPCS A40 card evidences slinging and signalling, not supervision. For all intermediate and complex telehandler lifts, provide a dedicated CPCS A62 lift supervisor. Many principal contractors require an A62 supervisor on every suspended-load lift regardless, so check the client rules and lift plan.',
+      },
+    },
+    {
+      '@type': 'Question',
       name: 'How fast can you produce a telehandler lift plan?',
       acceptedAnswer: {
         '@type': 'Answer',
@@ -483,6 +499,183 @@ export default function TelehandlerLiftPlansPage() {
         </div>
       </section>
 
+      {/* Lift Supervisor — when a CPCS A62 is required */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-14">
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                When is a lift supervisor required for a telehandler lift?
+              </h2>
+              <div className="prose prose-lg max-w-none text-slate-600 space-y-4">
+                <p>
+                  Every <strong>suspended-load</strong> telehandler lift — anything on a hook, jib,
+                  slings or chains — must be supervised. The real question is whether that lift
+                  supervisor has to be a <strong>separate, dedicated person holding CPCS A62</strong>{' '}
+                  (or the NPORS equivalent), or whether the role can be combined with another.
+                </p>
+                <p>
+                  It&apos;s the <strong>lift category</strong> — basic, intermediate or complex —
+                  that decides. Your{' '}
+                  <Link href="/services/appointed-person" className="text-amber-600 hover:text-amber-700 underline">
+                    CPCS Appointed Person (A61)
+                  </Link>{' '}
+                  sets the category from the risk assessment, and the higher it is, the more
+                  independent the supervision has to be.
+                </p>
+              </div>
+            </div>
+            <div>
+              <img
+                src="/images/services/telehandler-suspended-load-lift-supervisor-uk.webp"
+                alt="A red telehandler working alongside a mobile crane and banksman on a UK steel-frame construction site — the kind of suspended-load lifting operation that must be planned and supervised under LOLER and BS 7121"
+                width="1600"
+                height="1065"
+                loading="lazy"
+                className="rounded-xl shadow-sm w-full h-auto"
+              />
+            </div>
+          </div>
+
+          {/* Category cards */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                level: 'Basic',
+                tag: 'Combined role allowed',
+                headerClass: 'bg-emerald-600',
+                headText: 'text-white',
+                situation:
+                  'Known-weight load with designated lifting points and a stable centre of gravity. A short, straightforward lift on firm, level ground with stabilisers deployed, a clear line of sight, no travelling and no proximity hazards.',
+                requirement:
+                  'A separate supervisor is not mandatory. The role may be combined with the slinger/signaller (CPCS A40) where that person is competent to supervise and the Appointed Person authorises it. A CPCS A62 supervisor is good practice, not required.',
+              },
+              {
+                level: 'Intermediate',
+                tag: 'Separate A62 usually',
+                headerClass: 'bg-amber-500',
+                headText: 'text-slate-900',
+                situation:
+                  'Estimated weight or centre of gravity, or no designated lifting points; lifting free on wheels; restricted line of sight; or some travelling with the suspended load.',
+                requirement:
+                  'Usually a separate lift supervisor holding CPCS A62 (or NPORS equivalent). The Appointed Person decides from the risk assessment.',
+              },
+              {
+                level: 'Complex',
+                tag: 'Dedicated A62 required',
+                headerClass: 'bg-rose-600',
+                headText: 'text-white',
+                situation:
+                  'Fragile, unstable or fluid loads; bulky wind-affected loads such as roof trusses; lifting near proximity hazards — structures, overhead power lines, traffic or the public; or travelling a suspended load over difficult ground.',
+                requirement:
+                  'A dedicated lift supervisor holding CPCS A62 (or NPORS equivalent) is required. The roles must not be combined.',
+              },
+            ].map((cat) => (
+              <div
+                key={cat.level}
+                className="flex flex-col rounded-xl border border-slate-200 bg-slate-50 overflow-hidden"
+              >
+                <div className={`${cat.headerClass} px-6 py-4 flex items-center justify-between`}>
+                  <span className={`${cat.headText} text-lg font-bold`}>{cat.level}</span>
+                  <span className={`${cat.headText} text-xs font-semibold uppercase tracking-wider opacity-90`}>
+                    {cat.tag}
+                  </span>
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2">
+                    Typical situation
+                  </p>
+                  <p className="text-slate-600 mb-5">{cat.situation}</p>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2">
+                    Lift supervisor requirement
+                  </p>
+                  <p className="font-medium text-slate-800">{cat.requirement}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Combining roles callout */}
+          <div className="mt-10 rounded-xl border border-amber-200 bg-amber-50 p-8">
+            <div className="flex items-start gap-4">
+              <ShieldCheck className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                  Can an A40 slinger/signaller supervise a basic lift?
+                </h3>
+                <p className="text-slate-600 mb-4">
+                  On a genuinely basic suspended-load lift the supervisor role may be combined with
+                  the slinger/signaller, so a separate CPCS A62 supervisor is not always required.
+                  The A40 card evidences slinging and signalling, not supervision — so combining is
+                  only acceptable where:
+                </p>
+                <ul className="space-y-2 text-slate-600 mb-4">
+                  {[
+                    'the lift is genuinely basic — known weight and lifting points, firm level ground, stabilisers deployed, clear line of sight, no travelling and no proximity hazards;',
+                    'the Appointed Person has reviewed and authorised the combined role;',
+                    'the person is assessed as competent to supervise, not only to sling;',
+                    'they work within the Appointed Person’s limits and lift plan, and have the authority to stop the lift.',
+                  ].map((point) => (
+                    <li key={point} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-slate-600">
+                  For all intermediate and complex lifts, provide a dedicated CPCS A62 (or NPORS)
+                  supervisor. LOLER requires competence, not a specific card — but many principal
+                  contractors require an A62 supervisor on every suspended-load lift, so check the
+                  client rules and the lift plan.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* The lifting team */}
+          <div className="mt-14">
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">The telehandler lifting team</h3>
+            <p className="text-slate-600 mb-8 max-w-3xl">
+              For suspended-load lifting the same BS 7121 lifting team applies as for a crane, with a
+              telehandler-specific operator endorsement. A card is evidence of training, not a
+              substitute for demonstrated competence and written site authorisation.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  role: 'Appointed Person',
+                  card: 'CPCS A61',
+                  desc: 'Plans and categorises the lift, selects equipment and accessories, produces the lift plan and holds overall responsibility.',
+                },
+                {
+                  role: 'Lift supervisor',
+                  card: 'CPCS A62',
+                  desc: 'Directs the lift to the plan and has the authority to stop it. A separate person on intermediate and complex lifts; on a basic lift the role may be combined with the slinger/signaller.',
+                },
+                {
+                  role: 'Telehandler operator',
+                  card: 'CPCS A17E',
+                  desc: 'A17 for fork work plus the A17E suspended-loads endorsement (A77 for 360° roto machines). Basic telehandler training does not cover suspended loads.',
+                },
+                {
+                  role: 'Slinger / signaller',
+                  card: 'CPCS A40',
+                  desc: 'Slings the load and directs machine movement — essential where visibility is reduced; a marshaller when travelling with a suspended load.',
+                },
+              ].map((r) => (
+                <div key={r.role} className="rounded-xl border border-slate-200 p-6">
+                  <div className="inline-flex items-center rounded-full bg-slate-900 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-400 mb-3">
+                    {r.card}
+                  </div>
+                  <h4 className="font-semibold text-slate-900 mb-2">{r.role}</h4>
+                  <p className="text-sm text-slate-600">{r.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lift Plan Checking CTA */}
       <section className="py-16 bg-amber-500 text-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -567,6 +760,14 @@ export default function TelehandlerLiftPlansPage() {
               {
                 q: 'Which CPCS card does a telehandler operator need for lifting?',
                 a: "The base card is CPCS A77C (telescopic handler 360°) or A17 (telescopic handler all-types). For suspended-load lifting (hook duties) the operator also needs the supplementary 'lifting suspended loads' endorsement, plus a current thorough examination on the lifting attachment.",
+              },
+              {
+                q: 'Does a telehandler suspended-load lift need a separate CPCS A62 lift supervisor?',
+                a: 'Not always. Every suspended-load telehandler lift must be supervised, but whether the supervisor must be a separate, dedicated CPCS A62 (or NPORS equivalent) holder depends on the lift category set by the Appointed Person. A basic lift can combine supervision with the A40 slinger/signaller where that person is competent and the Appointed Person authorises it; an intermediate lift usually needs a separate A62; a complex lift always needs a dedicated A62 and the roles must not be combined.',
+              },
+              {
+                q: 'Can the slinger/signaller also supervise the telehandler lift?',
+                a: 'Only on a genuinely basic lift, and only where the Appointed Person has reviewed and authorised it and the person is assessed as competent to supervise — not just to sling. The CPCS A40 card evidences slinging and signalling, not supervision. For all intermediate and complex telehandler lifts, provide a dedicated CPCS A62 lift supervisor. Many principal contractors require an A62 supervisor on every suspended-load lift regardless, so check the client rules and lift plan.',
               },
               {
                 q: 'How fast can you produce a telehandler lift plan?',
