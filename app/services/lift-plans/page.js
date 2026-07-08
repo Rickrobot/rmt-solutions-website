@@ -414,6 +414,19 @@ export default function LiftPlansPage() {
 
       <section className="py-20 bg-slate-950">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Social proof (Jul 2026): verbatim client quote from /testimonials,
+              placed beside the enquiry form — one strong quote next to the form
+              measurably lifts submissions. */}
+          <figure className="mb-8 bg-slate-800/40 border-l-4 border-amber-400 rounded-r-2xl p-6">
+            <blockquote className="text-gray-300 italic leading-relaxed">
+              &ldquo;I have been consistently impressed with the high quality and prompt turnaround of Ricky&rsquo;s lift plans and appraisals. On certain occasions, we have relied on him at the last minute, and he has always responded with professionalism, helpfulness, and urgency.&rdquo;
+            </blockquote>
+            <figcaption className="mt-4 text-sm">
+              <span className="text-white font-semibold">Louis Musetti</span>
+              <span className="text-gray-400"> — Site Manager, Caddick Construction</span>
+              <a href="/testimonials" className="text-amber-400 hover:text-amber-300 ml-2">More testimonials →</a>
+            </figcaption>
+          </figure>
           <InlineQuoteForm serviceName="Lift Plan Writing" heading="Get a quote for lift plan writing" />
         </div>
       </section>

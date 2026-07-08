@@ -35,6 +35,28 @@ export const metadata = {
 // the original publication date.
 const blogPosts = [
   {
+    slug: 'lifting-people-man-baskets',
+    title: 'Lifting People With Cranes: Man Basket Rules (UK)',
+    excerpt: 'Lifting people with a crane or telehandler is legal only when safer access is impracticable — and the moment people are on the hook, the rules change: 6-monthly examinations, rated carriers, de-rated capacity and a rescue plan that actually works.',
+    category: 'Compliance',
+    readTime: '8 min read',
+    date: 'July 8, 2026',
+    dateModified: 'July 8, 2026',
+    image: '/images/office-development.webp',
+    imageAlt: 'High-level construction work on a UK development — the kind of access task where lifting people by crane is sometimes the only practicable option',
+  },
+  {
+    slug: 'cdm-2015-lifting-operations',
+    title: 'CDM 2015 & Lifting: Principal Contractor Duties',
+    excerpt: 'LOLER makes the subcontractor plan the lift; CDM 2015 makes the principal contractor plan, manage and monitor everything on site — including that lift. The five duties, and the evidence trail that stands up when the HSE opens the PC’s file.',
+    category: 'Compliance',
+    readTime: '8 min read',
+    date: 'July 8, 2026',
+    dateModified: 'July 8, 2026',
+    image: '/images/caddick-tawd-valley-junction-4-hero.jpg',
+    imageAlt: 'Principal contractor site with multiple work fronts — under CDM 2015 the PC plans, manages and monitors every lifting operation on it',
+  },
+  {
     slug: 'loler-thorough-examination-guide',
     title: 'LOLER Thorough Examination: 6 or 12 Months? (UK Guide)',
     excerpt: 'Accessories and people-lifting equipment: every 6 months. Everything else: every 12 — unless a written scheme says otherwise. The full intervals table, the accessory-vs-equipment trap, what the examiner does, and the report you must produce on demand.',

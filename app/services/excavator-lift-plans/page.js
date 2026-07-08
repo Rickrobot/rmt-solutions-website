@@ -1032,6 +1032,19 @@ export default function ExcavatorLiftPlansPage() {
       {/* Inline quick-quote form */}
       <section className="py-20 bg-slate-950">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Social proof (Jul 2026): verbatim client quote from /testimonials,
+              placed beside the enquiry form — one strong quote next to the form
+              measurably lifts submissions. */}
+          <figure className="mb-8 bg-slate-800/40 border-l-4 border-amber-400 rounded-r-2xl p-6">
+            <blockquote className="text-gray-300 italic leading-relaxed">
+              &ldquo;Their thorough scrutiny of lifting documentation, rapid turnaround times and clear understanding of LOLER and wider UK regulatory requirements have significantly strengthened our safe-system-of-work processes and provided the project with a high level of confidence and operational assurance.&rdquo;
+            </blockquote>
+            <figcaption className="mt-4 text-sm">
+              <span className="text-white font-semibold">Andrew Pryce</span>
+              <span className="text-gray-400"> — QHSE Manager, Sunel Group</span>
+              <a href="/testimonials" className="text-amber-400 hover:text-amber-300 ml-2">More testimonials →</a>
+            </figcaption>
+          </figure>
           <InlineQuoteForm
             serviceName="Excavator Lift Plans"
             heading="Get a quote for your excavator lift plan"

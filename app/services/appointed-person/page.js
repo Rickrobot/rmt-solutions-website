@@ -445,6 +445,19 @@ export default function AppointedPersonPage() {
       {/* Inline quote form */}
       <section className="py-20 bg-slate-950">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Social proof (Jul 2026): verbatim client quote from /testimonials,
+              placed beside the enquiry form — one strong quote next to the form
+              measurably lifts submissions. */}
+          <figure className="mb-8 bg-slate-800/40 border-l-4 border-amber-400 rounded-r-2xl p-6">
+            <blockquote className="text-gray-300 italic leading-relaxed">
+              &ldquo;When contractors are unable to provide suitable lift plans themselves, RMT Solutions are willing to produce lift plans for the works, again on a quick turnaround, so that progress of works is not affected. I would highly recommend RMT Solutions to anyone wanting a capable, professional company to work with&hellip;&rdquo;
+            </blockquote>
+            <figcaption className="mt-4 text-sm">
+              <span className="text-white font-semibold">Tom Herd</span>
+              <span className="text-gray-400"> — Project Manager, Caddick Construction</span>
+              <a href="/testimonials" className="text-amber-400 hover:text-amber-300 ml-2">More testimonials →</a>
+            </figcaption>
+          </figure>
           <InlineQuoteForm serviceName="Appointed Person" heading="Get a quote for Appointed Person services" />
         </div>
       </section>

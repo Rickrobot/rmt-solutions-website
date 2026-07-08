@@ -1,0 +1,75 @@
+SEO & CONVERSION FIX ROUND 8 — applied 8 July 2026
+===================================================
+
+The "remainder" round: social proof on the pages that sell, local
+social proof + real case-study links on key location pages, and the
+final two HSE-territory articles. (The "free 10-minute check" offer
+was considered and deliberately NOT implemented at Ricky's request.)
+
+Build verified: `next build` completes, both new routes prerender,
+FAQPage schema present, testimonial blocks render on service and
+location pages, Liverpool case-study link resolves, sitemap includes
+both new URLs.
+
+FILES CHANGED
+-------------
+
+TESTIMONIALS ONTO SERVICE PAGES (conversion)
+  Verbatim client quotes from /testimonials placed directly above the
+  enquiry form (one strong quote beside the form measurably lifts
+  submissions). Quotes are excerpted with ellipses where shortened —
+  no wording invented:
+  - app/services/lift-plans/page.js ......... Louis Musetti (Caddick)
+  - app/services/lift-plan-checking/page.js . Kevin Duffy (Caddick)
+  - app/services/excavator-lift-plans/page.js Andrew Pryce (Sunel Group)
+  - app/services/appointed-person/page.js ... Tom Herd (Caddick)
+
+LOCATION PAGE UPGRADES (local relevance)
+  app/locations/[slug]/page.js:
+  - Template now renders an optional per-city `testimonial` block
+    (shown only where the client's work is local to the page's patch).
+  - warrington: Kevin Duffy quote (his schemes are Warrington).
+  - leeds: Louis Musetti quote (Wakefield/Durham — West Yorkshire
+    patch; Caddick is a Yorkshire-headquartered contractor).
+  - liverpool: real case-study card added — Caddick Tawd Valley
+    Junction 4, Skelmersdale (M58, ~25 min from Liverpool), matching
+    the case study page's own framing (45 units, 100,000 sq ft,
+    independent lift plan reviews).
+
+MODIFIED — app/blog/[slug]/page.js  (content)
+  TWO NEW POSTS, each with 4 FAQPage entries:
+  1. 'lifting-people-man-baskets'
+     Title: Lifting People With Cranes: Man Basket Rules (UK)
+     Regulator-adjacent complex-lift territory: LOLER Reg 5,
+     exceptional-circumstances test, 6-month examination clock,
+     what the lift plan must add, telehandler/excavator caveats.
+     Hero: office-development.webp (shared).
+  2. 'cdm-2015-lifting-operations'
+     Title: CDM 2015 & Lifting: Principal Contractor Duties
+     Direct pitch to the PC client profile: Reg 13 duties, the five
+     things a PC must do, the evidence trail, buying in competence.
+     Hero: caddick-tawd-valley-junction-4-hero.jpg (shared with the
+     case study).
+
+MODIFIED — app/blog/page.js
+  - Listing cards for both new posts (top of the grid).
+
+MODIFIED — app/sitemap-feed/route.js
+  - Both new posts added (2026-07-08).
+
+ALSO (outside the repo)
+  - Scheduled task created: "RMT website — 4-week SEO results check",
+    fires 5 Aug 2026 08:00 UK with the full 8-Jul GSC baseline embedded,
+    prompting a fresh Search Console export and before/after comparison.
+
+AFTER DEPLOY
+------------
+Request Indexing in Search Console for:
+  /blog/lifting-people-man-baskets
+  /blog/cdm-2015-lifting-operations
+  /services/lift-plans
+  /services/lift-plan-checking
+  /services/appointed-person
+  /locations/warrington
+  /locations/leeds
+  /locations/liverpool

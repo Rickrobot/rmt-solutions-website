@@ -96,6 +96,8 @@ const LOCATION_SLUGS = [
 ];
 
 const BLOG_POSTS = [
+  { slug: 'lifting-people-man-baskets',                                      date: '2026-07-08' },
+  { slug: 'cdm-2015-lifting-operations',                                     date: '2026-07-08' },
   { slug: 'loler-thorough-examination-guide',                                date: '2026-07-08' },
   { slug: 'bs-7121-hand-signals',                                            date: '2026-07-08' },
   { slug: 'crane-wind-speed-limits',                                         date: '2026-07-08' },

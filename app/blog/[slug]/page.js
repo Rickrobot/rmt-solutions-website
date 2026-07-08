@@ -532,6 +532,88 @@ const blogPosts = {
       </div>
     `,
   },
+  // NEW (Jul 2026, round 8) — final HSE-territory pair: lifting people
+  // (man baskets — regulator-adjacent, complex-lift work RMT sells) and
+  // CDM 2015 lifting duties (direct pitch to principal contractors, the
+  // client profile that buys plan checking and audits).
+  'lifting-people-man-baskets': {
+    title: 'Lifting People With Cranes: Man Basket Rules (UK)',
+    description: 'Lifting people with a crane or telehandler is legal only when less risky access is impracticable — and the rules change: 6-monthly examinations, rated baskets, rescue plans. The full UK requirements.',
+    keywords: 'lifting people with cranes, man basket regulations uk, crane man basket, man riding basket, lifting people loler, telehandler man basket, personnel lifting, work platform crane, man cage regulations, lifting persons regulation 5',
+    category: 'Compliance',
+    readTime: '8 min read',
+    date: 'July 8, 2026',
+    dateModified: 'July 8, 2026',
+    image: '/images/office-development.webp',
+    imageAlt: 'High-level construction work on a UK development — the kind of access task where lifting people by crane is sometimes the only practicable option',
+    content: `
+      <p class="lead">Lifting people is the one corner of UK lifting law where the default answer is <strong>no</strong>. LOLER 1998 permits carrying people on equipment designed for lifting loads only where using safer, purpose-designed access — a MEWP, a scaffold, a hoist — is <em>not practicable</em>. Get that judgement wrong and everything downstream is non-compliant, however good the basket. This guide covers when man baskets are legitimate, the equipment and examination rules that change the moment people are on the hook, and what the lift plan must add.</p>
+
+      <h2>The Legal Starting Point</h2>
+      <p>LOLER Regulation 5 deals specifically with lifting persons. Equipment used to lift people must prevent them being crushed, trapped, struck or falling; a carrier must be used that is designed for the purpose; and — via the <a href="/blog/loler-acop-l113-explained">L113 ACOP</a> — carrying people on equipment primarily designed for lifting loads is acceptable only in <strong>exceptional circumstances</strong>, where purpose-built access equipment is impracticable and the risk assessment supports it. "The MEWP costs more" is not impracticable; "no MEWP can reach over the live railway from the only available standing" may be.</p>
+
+      <h2>When a Man Basket is Legitimate</h2>
+      <ul>
+        <li><strong>No practicable alternative</strong> — documented consideration of MEWPs, scaffolds, hoists and rope access first. This reasoning belongs in the lift plan, because it is the first thing an inspector asks for.</li>
+        <li><strong>A purpose-designed, rated carrier</strong> — a manufactured man-riding basket with its own SWL, marking and documentation. A materials skip with a scaffold board across it has put people in prison.</li>
+        <li><strong>A machine authorised for man-riding</strong> — the crane or telehandler manufacturer's documentation must permit personnel lifting, with the duty typically de-rated (commonly to 50% of chart capacity for cranes on man-riding duties) and specific configuration requirements applied.</li>
+        <li><strong>Enhanced controls in place</strong> — harnesses secured to designated anchor points inside the basket, continuous communication, hoist restraint/free-fall protection, and a rescue plan that works if the machine fails with people in the air.</li>
+      </ul>
+
+      <h2>The Examination Clock Changes</h2>
+      <p>The moment equipment lifts people, its statutory thorough examination interval halves: <strong>every 6 months</strong> rather than every 12, for the machine and the carrier alike — the same interval as lifting accessories, covered in full in our <a href="/blog/loler-thorough-examination-guide">thorough examination guide</a>. A crane with a current 12-month report is not compliant for man-riding if that report is more than 6 months old.</p>
+
+      <h2>What the Lift Plan Must Add</h2>
+      <p>Personnel lifting is always treated as a <a href="/blog/basic-standard-complex-lifts">complex lift</a>, planned by an experienced <a href="/services/appointed-person">Appointed Person</a>. On top of the standard contents of a <a href="/blog/what-is-a-lift-plan">lift plan</a>, expect: the impracticability justification; the basket's documentation and attachment method; the de-rated capacity check; trial lift and function checks before anyone boards; communication and emergency-lowering arrangements; the rescue plan; <a href="/blog/crane-wind-speed-limits">tightened wind limits</a>; and named, briefed personnel only.</p>
+
+      <h2>Telehandlers and Excavators</h2>
+      <p>The same logic applies with extra caution. Telehandler man-riding requires an integrated or manufacturer-approved platform with the correct load chart — a pallet of people on the forks is never lawful. Excavators are not personnel-lifting machines in normal circumstances at all: object-handling duties under <a href="/blog/lifting-with-excavators-loler">LOLER excavator rules</a> do not extend to people.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
+        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Planning a Personnel Lift?</h3>
+        <p class="text-gray-300 mb-6">Man-riding operations are complex lifts with no margin for guesswork. A CPCS A61 Appointed Person with 35 years on UK sites will plan it properly — justification, de-rating, rescue plan and all.</p>
+        <a href="/contact" class="btn-primary inline-block">Get in Touch Today</a>
+      </div>
+    `,
+  },
+  'cdm-2015-lifting-operations': {
+    title: 'CDM 2015 & Lifting: Principal Contractor Duties',
+    description: 'Under CDM 2015 the principal contractor must plan, manage and monitor lifting on site — including subcontractors’ lifts. What that means in practice: reviewing lift plans, coordinating cranes, and the evidence trail.',
+    keywords: 'cdm 2015 lifting operations, principal contractor lifting operations, principal contractor duties lifting, cdm lifting, construction phase plan lifting, subcontractor lift plans, who is responsible for lifting operations on site, cdm 2015 cranes, managing lifting operations construction',
+    category: 'Compliance',
+    readTime: '8 min read',
+    date: 'July 8, 2026',
+    dateModified: 'July 8, 2026',
+    image: '/images/caddick-tawd-valley-junction-4-hero.jpg',
+    imageAlt: 'Principal contractor site with multiple work fronts — under CDM 2015 the PC plans, manages and monitors every lifting operation on it',
+    content: `
+      <p class="lead">Most lifting law conversations start and end with LOLER. But for a principal contractor there is a second duty running in parallel: <strong>CDM 2015 Regulation 13</strong> requires the PC to plan, manage and monitor the construction phase — and lifting operations are among the highest-risk activities in it. When a subcontractor's telehandler drops a load, "their lift, their plan" is not a defence the PC gets to use. This guide sets out what CDM actually asks of the PC on lifting, and the evidence trail that satisfies it.</p>
+
+      <h2>Two Regimes, One Site</h2>
+      <p><strong>LOLER</strong> puts the planning duty on whoever carries out the lifting operation — normally discharged through an <a href="/blog/appointed-person-duties-responsibilities">Appointed Person</a> and a <a href="/blog/what-is-a-lift-plan">lift plan</a>. <strong>CDM 2015</strong> puts a coordination and monitoring duty on the principal contractor for everything happening on their site, including work they have subcontracted. The subcontractor owns their lift; the PC owns the site on which it happens, the interfaces around it, and the checking that it was competently planned.</p>
+
+      <h2>What the PC Must Actually Do</h2>
+      <ol>
+        <li><strong>Address lifting in the construction phase plan</strong> — how lifting operations will be managed, who reviews lift plans, crane coordination arrangements, and exclusion zone principles. A CPP that never mentions cranes on a crane-heavy site is a gap an inspector will find.</li>
+        <li><strong>Set the site rules</strong> — submission timescales for lift plans (48 hours before the lift, not at the gate), utilisation limits, permit-to-lift arrangements, and the standard subcontractor documents must meet.</li>
+        <li><strong>Review subcontractor lift plans competently</strong> — someone with lifting competence must check what is submitted. This is exactly the role of an <a href="/services/lift-plan-checking">independent lift plan checking service</a>, and the recurring failures are catalogued in <a href="/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected">why lift plans get rejected</a>.</li>
+        <li><strong>Coordinate concurrent operations</strong> — overlapping crane slew zones, deliveries under tower cranes, MEWPs inside exclusion zones. Individual lift plans do not see each other; the PC's coordination does.</li>
+        <li><strong>Monitor what actually happens</strong> — spot checks that lifts follow the approved plan, and periodic <a href="/services/lifting-operations-audit">lifting operation audits</a> to test the whole arrangement. Paper compliance with chaotic execution fails Regulation 13.</li>
+      </ol>
+
+      <h2>The Evidence Trail</h2>
+      <p>When the HSE investigates a lifting incident on a multi-contractor site, the PC's file is opened alongside the subcontractor's. What stands up: a CPP section on lifting management; a register of lift plans received, reviewed and approved with named reviewers; recorded comments and re-submissions; permit-to-lift records; audit reports and closed-out actions. What does not: a folder of unread RAMS and an assumption the crane company handled it — the enforcement angle covered in <a href="/blog/hse-lifting-plan-requirements">what HSE inspectors look for</a>.</p>
+
+      <h2>Buying In the Competence</h2>
+      <p>Few PCs carry a full-time lifting specialist per project. The practical model most tier 1 contractors run is an independent reviewer: subcontractor plans go to a <a href="/services/appointed-person">CPCS A61 Appointed Person</a> for review and comment, complex lifts get planned directly, and the site gets a periodic audit. That is precisely the service we provide to principal contractors including Caddick Construction — from £200 per plan review, with same-day turnaround where the programme demands it.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
+        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Running a Multi-Contractor Site?</h3>
+        <p class="text-gray-300 mb-6">We review subcontractor lift plans, write the ones they can't, and audit your lifting arrangements against LOLER, BS 7121 and your CPP — the CDM evidence trail, done properly.</p>
+        <a href="/contact" class="btn-primary inline-block">Get in Touch Today</a>
+      </div>
+    `,
+  },
   'basic-standard-complex-lifts': {
     title: 'Basic, Standard & Complex Lifts: Categories Explained',
     description: 'What makes a lift basic, standard or complex under BS 7121, what a critical lift is, and how the category changes the planning a lifting operation needs.',
@@ -2977,6 +3059,42 @@ export async function generateStaticParams() {
 // guidelines). This unlocks FAQ rich results in the SERP and makes the
 // Q&A content far easier for AI answer engines to quote directly.
 const faqData = {
+  'lifting-people-man-baskets': [
+    {
+      q: 'Is it legal to lift people with a crane in the UK?',
+      a: 'Only in exceptional circumstances. LOLER 1998 and the L113 ACOP permit carrying people on equipment designed for lifting loads only where purpose-designed access — a MEWP, scaffold, hoist or rope access — is not practicable, the risk assessment supports it, a purpose-designed man-riding carrier is used, and the machine is authorised and configured for personnel lifting.',
+    },
+    {
+      q: 'How often does a man basket need a thorough examination?',
+      a: 'Every 6 months — the interval for any lifting equipment used to lift people, which also applies to the crane or telehandler doing the man-riding. A machine carrying a 12-month report older than 6 months is not compliant for personnel lifting even though it remains compliant for ordinary load lifting.',
+    },
+    {
+      q: 'Can you lift people with a telehandler?',
+      a: 'Only using an integrated or manufacturer-approved personnel platform, with the manufacturer’s authorisation, the correct load chart for the platform, and the full LOLER Regulation 5 controls — and only where safer access is impracticable. Carrying anyone on the forks, on a pallet or in a materials cage is never lawful.',
+    },
+    {
+      q: 'Does a man-riding lift need a special lift plan?',
+      a: 'Yes. Personnel lifting is always treated as a complex lift planned by an experienced Appointed Person. Beyond the standard contents, the plan must record why safer access was impracticable, the carrier’s documentation, the de-rated capacity check, trial lift arrangements, communication and emergency-lowering procedures, a workable rescue plan and tightened weather limits.',
+    },
+  ],
+  'cdm-2015-lifting-operations': [
+    {
+      q: 'Who is responsible for lifting operations on a construction site?',
+      a: 'Both duties run at once. Under LOLER, the contractor carrying out the lift must have it planned by a competent person — normally an Appointed Person producing a lift plan. Under CDM 2015 Regulation 13, the principal contractor must plan, manage and monitor the construction phase, which includes coordinating and checking lifting operations carried out by subcontractors.',
+    },
+    {
+      q: 'Does the principal contractor have to check subcontractor lift plans?',
+      a: 'In practice, yes. CDM 2015 requires the PC to manage and monitor high-risk work on their site, and accepting lifting documentation unreviewed does not discharge that duty. The review must be done by someone with lifting competence — many principal contractors use an independent Appointed Person as their lift plan reviewer.',
+    },
+    {
+      q: 'Should the construction phase plan cover lifting operations?',
+      a: 'Yes, on any site with meaningful lifting. The construction phase plan should set out how lifting will be managed: who reviews and approves lift plans, submission timescales, crane coordination arrangements, permit-to-lift systems and exclusion zone principles. A CPP that ignores lifting on a crane-heavy site is a standard enforcement finding.',
+    },
+    {
+      q: 'What lifting records should a principal contractor keep?',
+      a: 'A register of lift plans received, reviewed and approved with named reviewers and dates; recorded comments and re-submissions; permit-to-lift records; thorough examination certificates checked for machines and accessories; briefing records; and periodic lifting operation audit reports with closed-out actions. This is the evidence trail examined after any incident.',
+    },
+  ],
   'loler-thorough-examination-guide': [
     {
       q: 'Is LOLER 6 or 12 months?',

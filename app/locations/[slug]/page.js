@@ -27,6 +27,13 @@ const LOCATIONS = {
       'Mobile crane lift plans for a logistics warehouse at Omega',
       'Lift plan checking for a Tier 1 contractor on a Birchwood industrial development',
     ],
+    testimonial: {
+      name: 'Kevin Duffy',
+      role: 'Senior Project Manager',
+      company: 'Caddick Construction — Warrington schemes',
+      quote:
+        'I have been using RMT Solutions on my last two schemes and have always found the service they provide to be first class in regards of appraising lifting plans to ensure that lifts on site are designed, planned, and fit for purpose. The service they provide is always concise and helpful for the issuer and the turnaround is always prompt and advice is always on the end of the phone.',
+    },
   },
 
   manchester: {
@@ -123,6 +130,12 @@ const LOCATIONS = {
       'Tower crane compliance audits on a commercial scheme near Liverpool ONE',
       'Steel erection method statements for a logistics hub in Speke',
     ],
+    caseStudy: {
+      href: '/case-studies/caddick-tawd-valley-junction-4',
+      title: 'Caddick Construction — Tawd Valley Junction 4, Skelmersdale',
+      blurb:
+        'Independent lift plan reviews for all lifting activities on Caddick’s 45-unit, 100,000 sq ft industrial scheme off the M58 — 25 minutes from Liverpool city centre.',
+    },
   },
 
   wirral: {
@@ -159,6 +172,13 @@ const LOCATIONS = {
       'Tandem crane lift plan for a precast concrete delivery on the A1 corridor',
       'Lifting operations audit for a logistics distribution centre in Wakefield',
     ],
+    testimonial: {
+      name: 'Louis Musetti',
+      role: 'Site Manager',
+      company: 'Caddick Construction — Wakefield / Durham projects',
+      quote:
+        "I have been consistently impressed with the high quality and prompt turnaround of Ricky's lift plans and appraisals. On certain occasions, we have relied on him at the last minute, and he has always responded with professionalism, helpfulness, and urgency.",
+    },
   },
 
   birmingham: {
@@ -428,6 +448,24 @@ export default function LocationPage({ params }) {
                 </span>
                 <span className="text-gray-400 text-base mt-2 block">{loc.caseStudy.blurb}</span>
               </Link>
+            )}
+
+            {/* Local social proof (Jul 2026): verbatim client quote from
+                /testimonials, shown only where the client's work is local
+                to the page's patch. */}
+            {loc.testimonial && (
+              <figure className="not-prose bg-slate-800/40 border-l-4 border-amber-400 rounded-r-2xl p-6 mb-10">
+                <blockquote className="text-gray-300 italic leading-relaxed">
+                  &ldquo;{loc.testimonial.quote}&rdquo;
+                </blockquote>
+                <figcaption className="mt-4 text-sm">
+                  <span className="text-white font-semibold">{loc.testimonial.name}</span>
+                  <span className="text-gray-400"> — {loc.testimonial.role}, {loc.testimonial.company}</span>
+                  <Link href="/testimonials" className="text-amber-400 hover:text-amber-300 ml-2">
+                    More testimonials →
+                  </Link>
+                </figcaption>
+              </figure>
             )}
           </div>
         </div>
