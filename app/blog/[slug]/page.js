@@ -377,6 +377,161 @@ const blogPosts = {
       </div>
     `,
   },
+  // NEW (Jul 2026, round 7) — HSE-territory capture wave 2: thorough
+  // examination (highest-volume LOLER sub-topic; the site's LOLER guide
+  // sat at pos 22 with TE buried inside it), BS 7121 hand signals
+  // ("bs7121 hand signals" 85 imps pos 11.7, 0 clicks, no page), and
+  // wind speed limits (real demand, no dominant practitioner page).
+  'loler-thorough-examination-guide': {
+    title: 'LOLER Thorough Examination: 6 or 12 Months? (UK Guide)',
+    description: 'Lifting accessories and equipment that lifts people: every 6 months. Other lifting equipment: every 12 months — unless an examination scheme says otherwise. The full intervals table, what the examiner checks, and the paperwork.',
+    keywords: 'loler thorough examination, is loler 6 or 12 months, loler inspection, loler inspection frequency, thorough examination lifting equipment, loler certificate, report of thorough examination, loler examination intervals, competent person loler, loler testing',
+    category: 'Compliance',
+    readTime: '9 min read',
+    date: 'July 8, 2026',
+    dateModified: 'July 8, 2026',
+    image: '/images/services/loler-thorough-examination-lifting-equipment-uk.webp',
+    imageAlt: 'Competent person carrying out a LOLER thorough examination of lifting equipment on a UK site',
+    content: `
+      <p class="lead">"Is LOLER 6 or 12 months?" is one of the most-asked questions in UK lifting — and the answer is: both, depending on what the equipment is and what it does. The intervals come from LOLER 1998 Regulation 9, they are statutory, and getting them wrong is one of the fastest ways to fail a site audit or hand an HSE inspector an easy enforcement win. Here is the full picture: the intervals table, what a thorough examination actually involves, who can do one, and the paperwork you must be able to produce.</p>
+
+      <h2>The Intervals: 6 Months, 12 Months, or a Scheme</h2>
+      <ul>
+        <li><strong>Every 6 months</strong> — lifting <em>accessories</em> (chains, slings, shackles, eyebolts, spreader beams), and any lifting equipment used to <em>lift people</em> (MEWPs, man baskets, passenger hoists).</li>
+        <li><strong>Every 12 months</strong> — all other lifting equipment: cranes, excavators used for object handling, telehandlers, lorry loaders, overhead cranes, gin wheels, winches.</li>
+        <li><strong>Per a written scheme of examination</strong> — as an alternative to the fixed intervals, a competent person can draw up a scheme with intervals based on risk and usage. Common for large fleets and harsh-duty equipment.</li>
+        <li><strong>After exceptional circumstances</strong> — regardless of interval: after damage, failure, substantial modification, long out-of-service periods, or anything else liable to affect safety.</li>
+        <li><strong>Before first use</strong> — where safety depends on installation conditions (a tower crane after erection, an overhead crane after installation), examination is required before first use and after each assembly at a new location.</li>
+      </ul>
+
+      <h2>The Question Behind the Question: Accessory or Equipment?</h2>
+      <p>Most interval mistakes come from misclassifying kit. The chain sling on the excavator is an <strong>accessory — 6 months</strong>; the excavator doing the lifting is <strong>equipment — 12 months</strong>. Run both on a 12-month cycle and every lift in months 7–12 is being made with uncertified rigging. The same trap catches telehandler lifting attachments, lorry loader hooks and brick forks. If it connects the load to the machine, treat it as an accessory.</p>
+
+      <h2>What a Thorough Examination Is (and Is Not)</h2>
+      <p>A thorough examination is a systematic, detailed examination by a <strong>competent person</strong> — someone with the knowledge and experience to detect defects and assess their significance, and crucially, <em>independent enough</em> to make impartial judgements. It is not a service, not an operator's daily check, and not an MOT-style pass at face value: the examiner tests, dismantles where necessary, and decides what supplementary tests (NDT, load testing) the equipment needs. In practice most contractors use their insurer's engineering surveyors or a specialist inspection body.</p>
+      <p>Daily and weekly operator checks still sit alongside it — LOLER Regulation 9 also requires <strong>inspection between thorough examinations</strong> where risk assessment identifies the need, and PUWER requires equipment to be maintained. The thorough examination is the statutory backstop, not the whole regime.</p>
+
+      <h2>The Paperwork: Report of Thorough Examination</h2>
+      <p>Every thorough examination produces a <strong>report of thorough examination</strong> (often called a LOLER certificate, though "certificate" appears nowhere in the regulations). Schedule 1 of LOLER prescribes its contents: equipment identification, date, safe working load, defects found, and the date by which the next examination is due. Keep reports available for inspection — site auditors and HSE inspectors ask for them within minutes of arriving, and <a href="/blog/lifting-operations-audit-what-to-expect">missing or expired reports are among the most common audit failures</a>. Defects involving "existing or imminent risk of serious personal injury" are also reported by the examiner directly to the enforcing authority — so the HSE may know about your defect before you have read the report.</p>
+
+      <h2>How This Meets the Lift Plan</h2>
+      <p>Every competent <a href="/blog/what-is-a-lift-plan">lift plan</a> confirms current thorough examination for the machine <em>and every accessory in the rigging arrangement</em> — it is one of the items we verify line-by-line when <a href="/services/lift-plan-checking">checking subcontractor lift plans</a>, and expired TE dates are a recurring rejection reason. If the excavator's examination lapsed last month, the lift is not compliant no matter how good the rest of the planning is. The wider duties sit in our <a href="/blog/what-is-loler-complete-guide">plain-English LOLER guide</a> and the <a href="/blog/loler-acop-l113-explained">L113 ACOP explainer</a>.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
+        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Are Your Examination Dates Working Against You?</h3>
+        <p class="text-gray-300 mb-6">Our lifting operations audit checks every machine and accessory on site against its report of thorough examination — before an inspector or your principal contractor does. Lift plans from £200, audits quoted per site.</p>
+        <a href="/contact" class="btn-primary inline-block">Get in Touch Today</a>
+      </div>
+    `,
+  },
+  'bs-7121-hand-signals': {
+    title: 'BS 7121 Hand Signals: UK Crane Signals + Free Poster',
+    description: 'The standard UK hand signals for crane and lifting operations — start, stop, emergency stop, hoist, lower, slew and travel — explained signal by signal, with a free printable poster for the site cabin.',
+    keywords: 'bs7121 hand signals, bs 7121 hand signals, crane hand signals uk, crane signals, slinger signaller hand signals, lifting hand signals, banksman signals, crane hand signals chart, hand signals for lifting operations, crane signal poster',
+    category: 'Lift Planning',
+    readTime: '7 min read',
+    date: 'July 8, 2026',
+    dateModified: 'July 8, 2026',
+    image: '/images/services/telehandler-suspended-load-lift-supervisor-uk.webp',
+    imageAlt: 'Lift supervisor directing a suspended-load lift on a UK site — clear signalling is the communication backbone of every lifting operation',
+    content: `
+      <p class="lead">Every lift plan names a slinger/signaller — but the signals themselves are where communication lives or dies. The UK's standard hand signals for lifting come from the Health and Safety (Safety Signs and Signals) Regulations 1996 and are carried into crane practice by BS 7121, which requires an agreed, understood signalling system for every lifting operation. This guide covers the standard signals, the rules that make signalling work under pressure, and a <a href="/downloads/bs7121-crane-hand-signals-poster.pdf">free printable poster</a> for the site cabin wall.</p>
+
+      <h2>The Ground Rules Before Any Signal</h2>
+      <ul>
+        <li><strong>One signaller.</strong> The operator takes signals from one identified person only — except an emergency stop, which anyone can give and the operator must obey.</li>
+        <li><strong>Agreed before the lift.</strong> The signalling method — hand signals, radio, or both — is set in the <a href="/blog/what-is-a-lift-plan">lift plan</a> and confirmed at the briefing.</li>
+        <li><strong>Visible or audible at all times.</strong> Lose contact and the lift stops. For blind lifts, radio procedure with continuous transmission or acknowledged commands replaces line-of-sight signals.</li>
+        <li><strong>Distinct dress.</strong> The signaller must be identifiable — the reason slinger/signallers traditionally wear something that stands out from the rest of the gang.</li>
+      </ul>
+
+      <h2>The Standard Signals</h2>
+      <h3>Control signals</h3>
+      <ul>
+        <li><strong>Start / attention (follow my instructions)</strong> — both arms extended horizontally, palms facing forwards.</li>
+        <li><strong>Stop</strong> — right arm raised, palm facing forwards.</li>
+        <li><strong>Emergency stop</strong> — both arms raised, palms facing forwards. Given by anyone, obeyed instantly.</li>
+        <li><strong>End of operation</strong> — both hands clasped at chest height.</li>
+      </ul>
+      <h3>Vertical movement</h3>
+      <ul>
+        <li><strong>Raise / hoist</strong> — right arm raised, palm forward, hand making slow circles.</li>
+        <li><strong>Lower</strong> — right arm extended downwards, palm inwards, hand making slow circles.</li>
+        <li><strong>Vertical distance</strong> — hands held apart indicating the remaining distance.</li>
+      </ul>
+      <h3>Horizontal movement</h3>
+      <ul>
+        <li><strong>Move forwards</strong> — both arms bent, palms up, forearms beckoning slowly towards the body.</li>
+        <li><strong>Move backwards</strong> — both arms bent, palms down, forearms pushing slowly away.</li>
+        <li><strong>Right (from the signaller's view)</strong> — right arm extended horizontally, palm down, making small slow movements to the right.</li>
+        <li><strong>Left (from the signaller's view)</strong> — left arm extended horizontally, palm down, making small slow movements to the left.</li>
+        <li><strong>Horizontal distance</strong> — hands held apart indicating the gap remaining.</li>
+      </ul>
+      <p><strong>Danger zone rule:</strong> left and right are always given from the <em>signaller's</em> point of view — one of the standing causes of confusion when the signaller repositions mid-lift, and exactly why the briefing confirms positions before the hook moves.</p>
+
+      <h2>Radio vs Hand Signals</h2>
+      <p>On congested sites and blind lifts, radio has largely replaced hands — but it does not replace discipline. BS 7121 practice expects a dedicated channel, a communication check before the lift, standard phrases ("hoist… hoist… hoist" repeated while movement is required, silence meaning stop), and a fallback agreed in the plan for radio failure. Hand signals remain the universal backup every crane operator and slinger/signaller is trained to read — which is why the chart still belongs on the cabin wall.</p>
+
+      <h2>Free Printable Poster</h2>
+      <p>We have put the standard signals onto an A4 poster you can print and pin up in the site cabin, welfare unit or crane cab: <a href="/downloads/bs7121-crane-hand-signals-poster.pdf"><strong>download the BS 7121 crane hand signals poster (PDF)</strong></a> — free, no sign-up, same as our <a href="/resources/lift-plan-templates">lift plan templates</a>.</p>
+      <p>Signalling is one line of a competent lift plan — the machine, the rigging, the ground and the exclusion zones are the rest. If you need the whole document done properly, we write <a href="/services/lift-plans">site-specific lift plans from £200</a> with 24–48 hour turnaround.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
+        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need the Rest of the Lift Planned?</h3>
+        <p class="text-gray-300 mb-6">LOLER-compliant lift plans from a CPCS A61 Appointed Person — communication plan included. From £200, 24–48 hours.</p>
+        <a href="/contact" class="btn-primary inline-block">Get a Quote Today</a>
+      </div>
+    `,
+  },
+  'crane-wind-speed-limits': {
+    title: 'Crane Wind Speed Limits UK: When to Stop Lifting',
+    description: 'There is no single legal wind limit — the manufacturer’s chart governs. Typical in-service limits for mobile cranes, tower cranes, telehandlers and MEWPs, why gusts and load sail area change everything, and the AP’s stop/go framework.',
+    keywords: 'crane wind speed limit, crane wind speed limit uk, maximum wind speed for crane operation, wind speed lifting operations, tower crane wind limit, mobile crane wind limit, telehandler wind speed limit, mewp wind speed limit, when to stop lifting wind, wind speed crane chart',
+    category: 'Lift Planning',
+    readTime: '9 min read',
+    date: 'July 8, 2026',
+    dateModified: 'July 8, 2026',
+    image: '/images/residential-tower-crane.webp',
+    imageAlt: 'Tower crane working over a UK development — wind is the environmental factor that stops more lifts than any other',
+    content: `
+      <p class="lead">Ask three people the wind limit for a crane and you will get three numbers — because there is no single legal limit. LOLER requires the lift to be planned and carried out safely; the actual number comes from the <strong>manufacturer's load chart for that machine in that configuration</strong>, adjusted for the load on the hook that day. What follows are the typical figures UK planning works to, why the "sail area" of the load can halve them, and the decision framework an Appointed Person actually uses on a windy morning.</p>
+
+      <h2>Typical In-Service Wind Limits</h2>
+      <ul>
+        <li><strong>Mobile cranes</strong> — most load charts permit operation up to around <strong>9–14 m/s (20–31 mph)</strong> depending on machine, boom length and configuration; long-boom and luffing configurations sit at the bottom of that range or below it. The chart for the specific duty governs.</li>
+        <li><strong>Tower cranes</strong> — typically in-service up to around <strong>20 m/s (45 mph)</strong> per manufacturer, with the crane put out of service (slew brake released to weathervane) beyond it. Site rules often stop lifting well before the machine limit.</li>
+        <li><strong>Telehandlers and excavators lifting suspended loads</strong> — manufacturers commonly restrict suspended-load duties to around <strong>10 m/s</strong>; check the object-handling section of the manual, not the forks/bucket pages.</li>
+        <li><strong>MEWPs</strong> — most boom and scissor lifts are rated to <strong>12.5 m/s</strong>; relevant whenever the lifting operation uses a MEWP for rigging or landing.</li>
+      </ul>
+      <p>Treat every figure above as a ceiling for a <em>standard load</em> — then read on, because the load usually matters more than the machine.</p>
+
+      <h2>Why the Load Changes the Limit</h2>
+      <p>Load chart wind limits assume a load of limited surface area. Lift something with a big face — cladding panels, shutters, formwork tables, roof sheets, timber-frame panels — and the wind force on the load rises with its area while the crane's tolerance does not. Manufacturers publish de-rating tables or maximum load sail areas for this reason: a mobile crane rated to 11 m/s with a compact load may need the lift stopped at 7 m/s with a panel on the hook, or a bigger crane to keep margin. A load that starts to sail also swings, adds dynamic loading, drags the slinger on the tag lines, and lands where it wants rather than where you want.</p>
+
+      <h2>Gusts, Means and Where You Measure</h2>
+      <ul>
+        <li><strong>Gusts govern, not averages.</strong> A 9 m/s mean with 15 m/s gusts is a 15 m/s lift. Plan to the gust value.</li>
+        <li><strong>Measure at the boom tip, not the ground.</strong> Wind speed increases with height — at 50m it is typically 1.3–1.5× the ground reading. Tower cranes carry anemometers at height; for mobile crane work, use the machine's anemometer or apply a height correction to forecasts.</li>
+        <li><strong>Local effects are real.</strong> Wind funnels between buildings and accelerates over slab edges — the forecast is a starting point, the site reading is the fact.</li>
+        <li><strong>Forecast the window, not the day.</strong> A compliant plan for a wind-sensitive lift names the forecast source, the limit for the operation, and who checks it — before the crane is mobilised, not after.</li>
+      </ul>
+
+      <h2>The Appointed Person's Stop/Go Framework</h2>
+      <ol>
+        <li><strong>Set the operational limit in the plan</strong> — the lowest of: the load chart limit for the configuration, any de-rated limit for the load's sail area, and the site rules. Write the number down; "monitor the wind" is not a control.</li>
+        <li><strong>Assign the measurement</strong> — who reads what, where, how often, and the gust value that pauses the lift.</li>
+        <li><strong>Pre-agree the stop</strong> — at the limit, the lift stops without a debate; loads made safe, boom to a safe configuration. The <a href="/blog/appointed-person-duties-responsibilities">lift supervisor holds that authority</a> on the ground.</li>
+        <li><strong>Re-plan, don't push on</strong> — if the window has gone, the operation is re-programmed. Every crane blown into the fence pushed through "one last lift".</li>
+      </ol>
+      <p>Wind is one of the environmental factors a competent lift plan addresses alongside ground, proximity hazards and the load itself — the full contents are in our guide to <a href="/blog/what-is-a-lift-plan">what a lift plan contains</a>, and wind-sensitive operations are a factor that can push a lift into the <a href="/blog/basic-standard-complex-lifts">complex category</a> requiring fuller planning.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
+        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Planning a Wind-Sensitive Lift?</h3>
+        <p class="text-gray-300 mb-6">Panels, sheets, frames or long-boom duties — we write site-specific lift plans with the wind limits, de-ratings and stop/go controls done properly. From £200, 24–48 hour turnaround, by a CPCS A61 Appointed Person.</p>
+        <a href="/contact" class="btn-primary inline-block">Get a Quote Today</a>
+      </div>
+    `,
+  },
   'basic-standard-complex-lifts': {
     title: 'Basic, Standard & Complex Lifts: Categories Explained',
     description: 'What makes a lift basic, standard or complex under BS 7121, what a critical lift is, and how the category changes the planning a lifting operation needs.',
@@ -824,7 +979,7 @@ const blogPosts = {
       <h3>The Crane Operator and the Slinger/Signaller</h3>
       <p>The Crane Operator is the person who physically controls the crane. They are responsible for operating the machine within its rated capacity, for carrying out daily pre-use checks, and for refusing to lift if they consider the operation unsafe.</p>
 
-      <p>The Slinger/Signaller is responsible for attaching the load to the crane, selecting and inspecting the lifting accessories, directing the operator using agreed hand signals or radio, and ensuring that landing areas are clear and prepared. On many operations the same person performs both the slinging and signalling functions; on larger or more complex lifts they may be separated, or there may be multiple slingers under the direction of a banksman.</p>
+      <p>The Slinger/Signaller is responsible for attaching the load to the crane, selecting and inspecting the lifting accessories, directing the operator using agreed <a href="/blog/bs-7121-hand-signals">hand signals</a> or radio, and ensuring that landing areas are clear and prepared. On many operations the same person performs both the slinging and signalling functions; on larger or more complex lifts they may be separated, or there may be multiple slingers under the direction of a banksman.</p>
 
       <h3>Lift Categorisation: Basic, Standard, and Complex</h3>
       <p>One of the most practically important concepts in BS 7121-1 is the categorisation of lifts into three classes — Basic, Standard, and Complex. The category determines the level of planning, supervision, and documentation required, and it gives the Appointed Person a structured way of matching the planning effort to the risk of the operation.</p>
@@ -1017,7 +1172,7 @@ const blogPosts = {
       <p>The ground on which the lifting equipment operates must be capable of supporting the imposed loads. The plan should assess ground bearing capacity at the machine's operating position and under outrigger or stabiliser pads. Where ground conditions are uncertain \u2014 such as on made-up ground, near excavations, or over underground services \u2014 specific measures such as timber mats, steel plates, or engineered foundations may be required.</p>
 
       <h3>Site-Specific Hazards</h3>
-      <p>Every lift plan must identify and address the hazards present at the specific location. Common hazards include overhead power lines, underground services, adjacent structures, other plant and vehicle movements, pedestrian routes, and weather conditions. The plan should specify control measures for each identified hazard \u2014 for example, minimum approach distances to power lines, exclusion zones around the lift, and maximum wind speed limits.</p>
+      <p>Every lift plan must identify and address the hazards present at the specific location. Common hazards include overhead power lines, underground services, adjacent structures, other plant and vehicle movements, pedestrian routes, and weather conditions. The plan should specify control measures for each identified hazard \u2014 for example, minimum approach distances to power lines, exclusion zones around the lift, and <a href="/blog/crane-wind-speed-limits">maximum wind speed limits</a>.</p>
 
       <h3>Personnel</h3>
       <p>The plan must identify the key personnel involved in the lifting operation and their roles. This typically includes the Appointed Person who planned the lift, the crane supervisor or lift supervisor overseeing the operation on site, the crane or machine operator, and the slinger/signaller responsible for attaching loads and directing the operator. The communication method must also be specified \u2014 hand signals, radio, or direct verbal communication.</p>
@@ -1253,7 +1408,7 @@ const blogPosts = {
     category: 'Compliance',
     readTime: '8 min read',
     date: 'January 28, 2026',
-    dateModified: 'January 28, 2026',
+    dateModified: 'July 8, 2026',
     image: '/images/services/loler-thorough-examination-lifting-equipment-uk.webp',
     imageAlt: 'Competent person carrying out a LOLER thorough examination of lifting equipment on a UK site, inspecting a hook and chain sling for defects',
     content: `
@@ -1318,6 +1473,7 @@ const blogPosts = {
         <li>Periodic thorough examination (at least every 6 or 12 months)</li>
         <li>Thorough examination after exceptional circumstances</li>
       </ul>
+      <p>Which interval applies to which equipment — and the paperwork you must be able to produce — is covered in full in our dedicated guide: <a href="/blog/loler-thorough-examination-guide">LOLER thorough examination: 6 or 12 months?</a></p>
 
       <h2>What is a "Competent Person"?</h2>
       <p>LOLER frequently refers to "competent persons." This means someone with sufficient training, experience, knowledge, and other qualities to enable them to properly assist in undertaking the measures needed to comply with the requirements.</p>
@@ -2446,7 +2602,7 @@ const blogPosts = {
 
       <p><strong>Adjacent activities.</strong> Construction sites are busy places. Other trades working in the area, vehicle movements, pedestrian routes, and scaffold structures all need to be considered. The plan should specify exclusion zones and coordination arrangements.</p>
 
-      <p><strong>Weather limitations.</strong> Wind is the most significant weather factor for lifting operations, but rain, ice, fog, and lightning all impose limitations. The plan should specify maximum wind speed limits for the operation and any other weather restrictions.</p>
+      <p><strong>Weather limitations.</strong> Wind is the most significant weather factor for lifting operations, but rain, ice, fog, and lightning all impose limitations. The plan should specify <a href="/blog/crane-wind-speed-limits">maximum wind speed limits</a> for the operation and any other weather restrictions.</p>
 
       <h2>Risk Assessment</h2>
       <p>The risk assessment should identify all foreseeable hazards associated with the lifting operation and specify control measures for each. A check will examine whether the risk assessment is genuinely site-specific or whether it is a generic document that has been copied from a previous plan without adaptation.</p>
@@ -2821,6 +2977,60 @@ export async function generateStaticParams() {
 // guidelines). This unlocks FAQ rich results in the SERP and makes the
 // Q&A content far easier for AI answer engines to quote directly.
 const faqData = {
+  'loler-thorough-examination-guide': [
+    {
+      q: 'Is LOLER 6 or 12 months?',
+      a: 'Both, depending on the equipment. Lifting accessories (chains, slings, shackles, spreader beams) and any equipment used to lift people must be thoroughly examined at least every 6 months. Other lifting equipment — cranes, excavators used for lifting, telehandlers, lorry loaders — needs examination at least every 12 months. A written scheme of examination drawn up by a competent person can set different intervals based on risk.',
+    },
+    {
+      q: 'What is a LOLER certificate?',
+      a: 'Strictly it is a "report of thorough examination" — the word certificate appears nowhere in LOLER. Schedule 1 of the regulations prescribes its contents: identification of the equipment, the examination date, the safe working load, any defects found, and the date by which the next thorough examination is due. Reports must be kept available for inspection.',
+    },
+    {
+      q: 'Who can carry out a LOLER thorough examination?',
+      a: 'A competent person — someone with the practical and theoretical knowledge and experience to detect defects and assess how significant they are, with enough independence to make impartial decisions. In practice most UK contractors use their insurer’s engineering surveyors or a specialist inspection company rather than their own fitters.',
+    },
+    {
+      q: 'Does an excavator need a LOLER thorough examination?',
+      a: 'Yes, if it is used for lifting. An excavator doing object handling is lifting equipment and needs a thorough examination at least every 12 months — while the chains and slings it lifts with are accessories needing examination every 6 months. An excavator that only digs is outside LOLER, though PUWER maintenance duties still apply.',
+    },
+  ],
+  'bs-7121-hand-signals': [
+    {
+      q: 'What are the standard crane hand signals in the UK?',
+      a: 'The UK standard signals come from the Health and Safety (Safety Signs and Signals) Regulations 1996: start/attention (both arms out, palms forward), stop (right arm up, palm forward), emergency stop (both arms up, palms forward), raise (right arm up, hand circling), lower (arm down, hand circling), move forwards/backwards (forearms beckoning or pushing), and left/right (arm extended horizontally, given from the signaller’s point of view).',
+    },
+    {
+      q: 'Who can give signals to a crane operator?',
+      a: 'One identified, trained slinger/signaller per lift — the operator takes instructions from that person only. The single exception is the emergency stop, which anyone on site can give and the operator must obey immediately. The signalling arrangement is set in the lift plan and confirmed at the pre-lift briefing.',
+    },
+    {
+      q: 'Are hand signals or radios better for lifting operations?',
+      a: 'Radios are standard for blind lifts and congested sites, using a dedicated channel and agreed phrases — continuous commands while movement is required, silence meaning stop. Hand signals remain the universal backup every operator is trained to read, and the agreed fallback if radios fail. The lift plan should state which method applies and what happens if communication is lost: the lift stops.',
+    },
+    {
+      q: 'Is there a free crane hand signals poster?',
+      a: 'Yes — we publish a free printable A4 poster of the standard UK crane hand signals, with no sign-up required, alongside our free lift plan templates. Print it and pin it in the site cabin, welfare unit or crane cab.',
+    },
+  ],
+  'crane-wind-speed-limits': [
+    {
+      q: 'What is the maximum wind speed for crane operations in the UK?',
+      a: 'There is no single legal limit — the manufacturer’s load chart for the machine and configuration governs. Typical in-service limits are around 9–14 m/s (20–31 mph) for mobile cranes and around 20 m/s (45 mph) for tower cranes, with lower figures for long booms, luffing configurations and loads with large sail area. The lift plan should state the operational limit for the specific lift.',
+    },
+    {
+      q: 'What wind speed stops a telehandler lifting suspended loads?',
+      a: 'Check the object-handling section of the manufacturer’s manual — suspended-load duties are commonly restricted to around 10 m/s, lower than the machine’s general operating limits. Suspended loads swing and sail in wind in a way palletised loads on forks do not.',
+    },
+    {
+      q: 'Do you use average wind speed or gusts for lifting?',
+      a: 'Gusts. A 9 m/s mean wind with 15 m/s gusts must be treated as a 15 m/s condition, because the gust is what arrives mid-lift. Measure at height rather than at ground level — wind speed at a 50m boom tip is typically 1.3–1.5 times the ground reading — and treat forecasts as planning input, site anemometer readings as fact.',
+    },
+    {
+      q: 'Why do large flat loads have lower wind limits?',
+      a: 'Because the wind force on the load grows with its surface area. Cladding panels, formwork tables and roof sheets act as sails: they load the crane sideways, swing, and become uncontrollable on tag lines well below the machine’s chart limit. Manufacturers publish de-rating tables or maximum sail areas, and a competent lift plan sets a reduced operational wind limit for such loads.',
+    },
+  ],
   'loler-acop-l113-explained': [
     {
       q: 'What is L113?',

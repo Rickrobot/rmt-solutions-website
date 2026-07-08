@@ -96,6 +96,9 @@ const LOCATION_SLUGS = [
 ];
 
 const BLOG_POSTS = [
+  { slug: 'loler-thorough-examination-guide',                                date: '2026-07-08' },
+  { slug: 'bs-7121-hand-signals',                                            date: '2026-07-08' },
+  { slug: 'crane-wind-speed-limits',                                         date: '2026-07-08' },
   { slug: 'loler-acop-l113-explained',                                       date: '2026-07-08' },
   { slug: 'hse-lifting-plan-requirements',                                   date: '2026-07-08' },
   { slug: 'appointed-person-duties-responsibilities',                        date: '2026-07-08' },
@@ -112,7 +115,7 @@ const BLOG_POSTS = [
   { slug: 'what-is-bs-7121-complete-guide',                                   date: '2026-05-22' },
   { slug: 'what-is-a-lift-plan',                                              date: '2026-07-08' },
   { slug: 'what-does-a-lift-plan-checking-service-involve',                   date: '2026-02-11' },
-  { slug: 'what-is-loler-complete-guide',                                     date: '2026-01-28' },
+  { slug: 'what-is-loler-complete-guide',                                     date: '2026-07-08' },
   { slug: 'when-do-you-need-lift-plan',                                       date: '2026-07-08' },
   { slug: 'mobile-crane-vs-tower-crane',                                      date: '2026-01-28' },
   { slug: 'excavator-lift-plans-complete-guide',                              date: '2026-01-31' },

@@ -1,0 +1,65 @@
+SEO FIX ROUND 7 — applied 8 July 2026
+======================================
+
+HSE-territory capture, wave 2. Research showed the "regulator-adjacent"
+SERPs (thorough examination, hand signals, wind limits) are actually won
+by training companies, crane hire firms and loose PDFs — not by HSE
+itself. Soft competition for a practitioner domain.
+
+Build verified: `next build` completes, all three new routes prerender,
+FAQPage schema present, poster link resolves, sitemap includes all
+three URLs.
+
+FILES CHANGED
+-------------
+
+NEW — public/downloads/bs7121-crane-hand-signals-poster.pdf
+  Free printable A4 poster: the 12 standard UK lifting hand signals
+  (Safety Signs & Signals Regulations 1996 / BS 7121 practice) as
+  clean figure illustrations, RMT-branded header/footer with phone,
+  email and site URL. Link magnet + cabin-wall brand presence.
+
+MODIFIED — app/blog/[slug]/page.js
+  THREE NEW POSTS, each with 4 FAQPage entries:
+  1. 'loler-thorough-examination-guide'
+     Title: LOLER Thorough Examination: 6 or 12 Months? (UK Guide)
+     The highest-volume LOLER sub-topic; previously buried in the
+     LOLER guide (pos 22). Intervals table, accessory-vs-equipment
+     trap, examiner competence, report of thorough examination.
+     Hero: loler-thorough-examination-lifting-equipment-uk.webp (shared
+     with the LOLER guide).
+  2. 'bs-7121-hand-signals'
+     Title: BS 7121 Hand Signals: UK Crane Signals + Free Poster
+     GSC: "bs7121 hand signals" 85 imps pos 11.7, 0 clicks, no page.
+     Signal-by-signal guide + ground rules + radio procedure + the
+     free poster download.
+     Hero: telehandler-suspended-load-lift-supervisor-uk.webp (shared).
+  3. 'crane-wind-speed-limits'
+     Title: Crane Wind Speed Limits UK: When to Stop Lifting
+     No dominant practitioner page in the SERP. Typical in-service
+     limits by machine type, sail-area de-rating, gusts vs means,
+     measurement at height, AP stop/go framework.
+     Hero: residential-tower-crane.webp (shared).
+  INTERNAL LINKS ADDED:
+  - what-is-loler-complete-guide → thorough examination guide
+    (dateModified bumped to July 8 2026)
+  - what-is-bs-7121-complete-guide (slinger/signaller section) →
+    hand signals post
+  - what-is-a-lift-plan (hazards para) → wind limits post
+  - crane-lift-plan-requirements area: weather-limitations para →
+    wind limits post
+
+MODIFIED — app/blog/page.js
+  - Listing cards for the three new posts (top of the grid).
+
+MODIFIED — app/sitemap-feed/route.js
+  - Three new posts added (2026-07-08); what-is-loler-complete-guide
+    lastmod bumped.
+
+AFTER DEPLOY
+------------
+Request Indexing in Search Console for:
+  /blog/loler-thorough-examination-guide
+  /blog/bs-7121-hand-signals
+  /blog/crane-wind-speed-limits
+  /blog/what-is-loler-complete-guide
