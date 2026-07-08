@@ -23,7 +23,7 @@
 //   - Every route listed here MUST exist in the app.
 
 const BASE_URL = 'https://www.rmtsafetysolutions.com';
-const SITE_LAST_UPDATED = '2026-06-11';
+const SITE_LAST_UPDATED = '2026-07-08';
 
 // Canonical images surfaced via the image sitemap extension. These give
 // the listed pages a hard image association in Google Search and make
