@@ -135,6 +135,22 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
+      name: 'Does an excavator lift need a separate CPCS A62 lift supervisor?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Not always. Every excavator lifting operation must be supervised, but whether the supervisor must be a separate, dedicated CPCS A62 (or NPORS equivalent) holder depends on the lift category set by the Appointed Person. A basic lift can combine supervision with the A40 slinger/signaller (or the operator self-supervising) where that person is competent and authorised; an intermediate lift often needs a separate A62; a complex lift always needs a dedicated A62 and the roles must not be combined.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can the slinger/signaller also supervise an excavator lift?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Only on a genuinely basic lift, and only where the Appointed Person has reviewed and authorised it and the person is assessed as competent to supervise — not just to sling. The CPCS A40 card evidences slinging and signalling, not supervision. For intermediate and complex excavator lifts, provide a dedicated CPCS A62 lift supervisor. Some principal contractors require an A62 supervisor even on basic lifts, so check the client rules and lift plan.',
+      },
+    },
+    {
+      '@type': 'Question',
       name: 'What is CPA lifting with excavators?',
       acceptedAnswer: {
         '@type': 'Answer',
@@ -655,6 +671,186 @@ export default function ExcavatorLiftPlansPage() {
             </Link>
             .
           </p>
+        </div>
+      </section>
+
+      {/* Lift Supervisor — when a CPCS A62 is required (excavator) */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-14">
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                When is a lift supervisor required for an excavator lift?
+              </h2>
+              <div className="prose prose-lg max-w-none text-slate-600 space-y-4">
+                <p>
+                  Every excavator lifting operation must be supervised. The moment an excavator
+                  lifts and places a load on slings, chains or a lifting eye it is lifting equipment
+                  under LOLER, and the lift has to be controlled on site. The real question is
+                  whether that supervisor must be a{' '}
+                  <strong>separate, dedicated person holding CPCS A62</strong> (or the NPORS
+                  equivalent), or whether the role can be combined with another.
+                </p>
+                <p>
+                  It&apos;s the <strong>lift category</strong> — basic, intermediate or complex —
+                  that decides. Your{' '}
+                  <Link href="/services/appointed-person" className="text-amber-600 hover:text-amber-700 underline">
+                    CPCS Appointed Person (A61)
+                  </Link>{' '}
+                  sets the category from the risk assessment using the Complexity Index
+                  (environment × load), and the higher it is, the more independent the supervision
+                  has to be.
+                </p>
+              </div>
+            </div>
+            <div>
+              <img
+                src="/images/services/excavator-lift-supervisor-overseeing-uk.webp"
+                alt="A construction supervisor in hi-vis and hard hat overseeing a 360° excavator on a UK construction site — an excavator lifting operation that must be planned and supervised under LOLER and BS 7121"
+                width="1600"
+                height="899"
+                loading="lazy"
+                className="rounded-xl shadow-sm w-full h-auto"
+              />
+            </div>
+          </div>
+
+          {/* Category cards */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                level: 'Basic',
+                tag: 'Combined role allowed',
+                headerClass: 'bg-emerald-600',
+                headText: 'text-white',
+                situation:
+                  'Known-weight load with designated top lifting points and a central centre of gravity; the operator has clear sight of the load path; the load is lifted to and from the ground; no proximity hazards.',
+                requirement:
+                  'A separate supervisor is not necessarily required. The role may be combined with the slinger/signaller — or the operator self-supervising — within limits set by the Appointed Person, provided that person is competent to do so.',
+              },
+              {
+                level: 'Intermediate',
+                tag: 'Separate A62 often',
+                headerClass: 'bg-amber-500',
+                headText: 'text-slate-900',
+                situation:
+                  'Load of estimated weight or centre of gravity, or without designated lifting points; or the load is placed over an obstruction where the operator may not have a clear sight of the landing area.',
+                requirement:
+                  'Often yes — a separate lift supervisor may be required. The Appointed Person decides from the risk assessment.',
+              },
+              {
+                level: 'Complex',
+                tag: 'Dedicated A62 required',
+                headerClass: 'bg-rose-600',
+                headText: 'text-white',
+                situation:
+                  'Estimated weight and centre of gravity, no designated lifting points, or a load that contains fluids, is fragile or is unstable when landed; or placed without line of sight and near proximity hazards such as scaffolding or overhead power lines.',
+                requirement:
+                  'A dedicated, separately-appointed lift supervisor is mandatory. The roles must not be combined.',
+              },
+            ].map((cat) => (
+              <div
+                key={cat.level}
+                className="flex flex-col rounded-xl border border-slate-200 bg-white overflow-hidden"
+              >
+                <div className={`${cat.headerClass} px-6 py-4 flex items-center justify-between`}>
+                  <span className={`${cat.headText} text-lg font-bold`}>{cat.level}</span>
+                  <span className={`${cat.headText} text-xs font-semibold uppercase tracking-wider opacity-90`}>
+                    {cat.tag}
+                  </span>
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2">
+                    Typical excavator lift
+                  </p>
+                  <p className="text-slate-600 mb-5">{cat.situation}</p>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2">
+                    Lift supervisor requirement
+                  </p>
+                  <p className="font-medium text-slate-800">{cat.requirement}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Combining roles callout */}
+          <div className="mt-10 rounded-xl border border-amber-200 bg-amber-50 p-8">
+            <div className="flex items-start gap-4">
+              <ShieldCheck className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                  Can an A40 slinger/signaller supervise a basic excavator lift?
+                </h3>
+                <p className="text-slate-600 mb-4">
+                  On a genuinely basic lift the supervisor role may be combined with the
+                  slinger/signaller, so a separate CPCS A62 supervisor is not always required. The
+                  A40 card evidences slinging and signalling, not supervision — so combining is only
+                  acceptable where all of the following apply:
+                </p>
+                <ul className="space-y-2 text-slate-600 mb-4">
+                  {[
+                    'the lift is genuinely basic — known weight, designated top lifting points, a central centre of gravity, clear line of sight, lifted to and from the ground, and no proximity hazards;',
+                    'the Appointed Person has reviewed and authorised the combined role;',
+                    'the person is assessed as competent to supervise, not only to sling;',
+                    'they work within the Appointed Person’s limits and lift plan, and have the authority to stop the lift.',
+                  ].map((point) => (
+                    <li key={point} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-slate-600">
+                  The card alone does not make it sufficient — it is the Appointed Person’s
+                  competence assessment and sign-off that does. LOLER requires competence, not a
+                  specific card, and some principal contractors require an A62 supervisor even on
+                  basic lifts, so check the client rules and the lift plan.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* The lifting team */}
+          <div className="mt-14">
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">The excavator lifting team</h3>
+            <p className="text-slate-600 mb-8 max-w-3xl">
+              The recognised qualification for the supervisor is the CPCS A62 (or NPORS equivalent).
+              A card is evidence of training, not a substitute for demonstrated competence, relevant
+              excavator-lifting experience and written site authorisation.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  role: 'Appointed Person',
+                  card: 'CPCS A61',
+                  desc: 'Plans and categorises the lift, selects equipment and accessories, produces the lift plan and holds overall responsibility. May act as supervisor on lower-category lifts, or appoint a separate one.',
+                },
+                {
+                  role: 'Lift supervisor',
+                  card: 'CPCS A62',
+                  desc: 'Directs the whole lift to the plan and has the authority to stop it. Needs genuine excavator-lifting experience — a crane-only background is not automatically sufficient.',
+                },
+                {
+                  role: 'Excavator operator',
+                  card: 'CPCS / NPORS',
+                  desc: 'Trained and competent on the machine type, working in object-handling / lift mode with the rated capacity indicator (RCI) active and the correct lifting point fitted.',
+                },
+                {
+                  role: 'Slinger / signaller',
+                  card: 'CPCS A40',
+                  desc: 'Slings the load and directs machine movement. On a basic lift this person may also be the lift supervisor — if competent and authorised by the Appointed Person.',
+                },
+              ].map((r) => (
+                <div key={r.role} className="rounded-xl border border-slate-200 bg-white p-6">
+                  <div className="inline-flex items-center rounded-full bg-slate-900 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-400 mb-3">
+                    {r.card}
+                  </div>
+                  <h4 className="font-semibold text-slate-900 mb-2">{r.role}</h4>
+                  <p className="text-sm text-slate-600">{r.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
