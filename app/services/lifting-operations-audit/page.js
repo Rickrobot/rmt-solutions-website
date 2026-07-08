@@ -5,15 +5,19 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Lifting Operations Audit | LOLER Compliance',
-  description: 'Independent lifting operations audit by a CPCS Appointed Person. Assess LOLER compliance and lifting equipment management. Detailed reports.',
-  keywords: 'lifting operations audit, LOLER compliance audit, crane audit, lifting equipment audit, construction site lifting audit',
+  // CTR fix (Jul 2026): GSC shows "lifting operations site audit" at 453
+  // impressions / position 5.7 with ZERO clicks. Title now matches the
+  // query phrasing ("site audit") and the description leads with what the
+  // auditor checks + a concrete deliverable.
+  title: 'Lifting Operations Site Audit | LOLER Compliance',
+  description: 'Independent site audit of your lifting operations by a CPCS A61 Appointed Person — lift plans, LOLER records, supervision and equipment checked, with a prioritised findings report.',
+  keywords: 'lifting operations audit, lifting operations site audit, LOLER compliance audit, crane audit, lifting equipment audit, construction site lifting audit, lifting operations management assurance, review of lifting plans',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lifting-operations-audit',
   },
   openGraph: {
-    title: 'Lifting Operations Audit | LOLER Compliance',
-    description: 'Independent lifting operations audit by a CPCS Appointed Person. Assess LOLER compliance and lifting equipment management.',
+    title: 'Lifting Operations Site Audit | LOLER Compliance',
+    description: 'Independent site audit of your lifting operations by a CPCS A61 Appointed Person — lift plans, LOLER records, supervision and equipment checked.',
     url: 'https://www.rmtsafetysolutions.com/services/lifting-operations-audit',
     type: 'website',
   },

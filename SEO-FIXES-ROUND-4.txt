@@ -1,0 +1,88 @@
+SEO & CONVERSION FIX ROUND 4 — applied 8 July 2026
+===================================================
+
+Based on the 8 July GSC export (last 3 months: 911 clicks / 69,387
+impressions across devices; 728 queries). Focus: query clusters the site
+gets impressions for but zero clicks, plus mid-article conversion prompts
+on the two highest-traffic posts.
+
+Build verified: `next build` completes, both new blog routes prerender,
+FAQPage schema present, sitemap includes the new URLs.
+
+FILES CHANGED
+-------------
+
+MODIFIED — app/blog/[slug]/page.js
+  1. NEW POST 'generic-lift-plans'
+     Targets: "generic lift plan" (512 imps, pos 9.1, 0 clicks),
+     "generic lift plan template" (136), "schedule of common lifts".
+     Includes 4 FAQPage entries, links to templates + AP service.
+  2. NEW POST 'lift-plan-software-vs-appointed-person'
+     Targets the software cluster (~17 queries, ~400 imps, 0 clicks:
+     "lifting plan software", "lift planning software", "crane planning
+     software", "lifting plan calculation"...). 4 FAQPage entries.
+  3. 'when-do-you-need-lift-plan' (17,337 imps — biggest URL on the site)
+     - New H2 answering the exact PAA query "When planning a lift, what
+       is the first thing you should do?" (731 imps combined, pos ~9.6).
+     - New H2 "What does the HSE expect a lifting plan to cover?"
+       ("hse lifting plan" 451 imps, pos 11).
+     - 2 new FAQ entries matching those sections.
+     - Added keywords field (was missing), readTime 6→8 min,
+       dateModified → July 8 2026.
+     - Mid-article CTA box (contact + tel:) — post previously had no
+       enquiry prompt until the very bottom.
+     - Scenario 4 now links to the new generic-lift-plans post.
+  4. 'what-is-a-lift-plan' (13,227 imps, 0.23% CTR, pos 13.3)
+     - Title → 'What is a Lift Plan? The 9 Parts, Example & LOLER Rules'
+       (leads with contents+example angle; "lifting plan example/sample"
+       cluster ~350 imps had no dedicated result).
+     - Answer-first meta description.
+     - Keywords extended with the example/sample/details variants.
+     - Mid-article CTA box before "What Does a Lift Plan Contain?".
+     - dateModified → July 8 2026.
+
+MODIFIED — app/blog/page.js
+  - Listing cards for the two new posts (top of the grid).
+  - Synced updated title/excerpt/dateModified for the two edited posts
+    (the listing still carried the pre-round-2 title for
+    what-is-a-lift-plan).
+
+MODIFIED — app/sitemap-feed/route.js
+  - Added both new posts (2026-07-08).
+  - Bumped lastmod for the two edited posts to 2026-07-08.
+
+MODIFIED — app/services/lifting-operations-audit/page.js
+  - Title 'Lifting Operations Audit…' → 'Lifting Operations SITE Audit…'
+    ("lifting operations site audit": 453 imps at position 5.7 with ZERO
+    clicks — title now matches the query phrasing).
+  - Description leads with what gets checked + the deliverable.
+  - Keywords extended (site audit, management assurance, review of
+    lifting plans).
+
+MODIFIED — app/page.js (homepage)
+  - Quick-links grid: added 'CPCS A61 Appointed Person' and 'Lifting
+    Operations Audits'. The AP cluster is the site's biggest untapped
+    theme (4,464 imps / 2 clicks) and the service page had no body link
+    from the homepage. Grid md:grid-cols-4 → md:grid-cols-3 (6 items,
+    two even rows).
+
+MODIFIED — app/resources/lift-plan-templates/page.js
+  - Contextual link to the new generic-lift-plans guide.
+
+IMAGE NOTE
+----------
+The two new posts reuse existing service images as heroes
+(telehandler-suspended-load-lift-supervisor-uk.webp and
+lift-planning-site-desk-review-uk.webp — the latter is shared with
+common-lift-planning-mistakes). When convenient, add two unique hero
+images to restore the one-unique-hero-per-post rule.
+
+AFTER DEPLOY
+------------
+Request Indexing in Search Console for:
+  /blog/generic-lift-plans
+  /blog/lift-plan-software-vs-appointed-person
+  /blog/when-do-you-need-lift-plan
+  /blog/what-is-a-lift-plan
+  /services/lifting-operations-audit
+  /  (homepage)

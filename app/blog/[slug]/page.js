@@ -5,6 +5,141 @@ import InlineQuoteForm from '@/components/InlineQuoteForm';
 
 // Blog posts content
 const blogPosts = {
+  // NEW (Jul 2026) — targets the "generic lift plan" query cluster (GSC:
+  // "generic lift plan" 512 imps pos 9.1, "generic lift plan template" 136
+  // imps, "schedule of common lifts" — all with no dedicated page).
+  'generic-lift-plans': {
+    title: 'Generic Lift Plans: When You Can Use One (UK Guide)',
+    description: 'A generic lift plan is only acceptable for routine, repetitive, basic lifts — and even then it must be reviewed for each site. When one will do, and when it gets rejected.',
+    keywords: 'generic lift plan, generic lift plan template, generic lifting plan, schedule of common lifts, basic lift plan, standard lift plan, repetitive lifts, generic RAMS lifting, site specific lift plan, when is a generic lift plan acceptable',
+    category: 'Planning',
+    readTime: '8 min read',
+    date: 'July 8, 2026',
+    dateModified: 'July 8, 2026',
+    image: '/images/services/telehandler-suspended-load-lift-supervisor-uk.webp',
+    imageAlt: 'Telehandler carrying out a routine suspended-load lift under supervision on a UK site — the kind of repetitive basic lift a generic lift plan can cover',
+    content: `
+      <p class="lead">"Can we just use a generic lift plan?" It is one of the most common questions subcontractors ask — usually about ten minutes after a principal contractor has rejected the generic plan they submitted. The honest answer is: sometimes, for a narrow band of routine lifting, a generic plan is perfectly acceptable and BS 7121 says as much. But most of the generic plans in circulation on UK sites are being used well outside that band, and they are the single most common reason lifting documents get bounced. This guide sets out exactly where the line is.</p>
+
+      <h2>What is a Generic Lift Plan?</h2>
+      <p>A generic lift plan is a pre-written planning document that covers a <em>type</em> of lifting operation rather than one specific lift on one specific site. It describes the equipment, method, roles and controls for a routine operation — say, offloading palletised materials with a telehandler — in a way intended to be reused across multiple lifts and, often, multiple sites.</p>
+      <p>That is fundamentally different from a <a href="/blog/what-is-a-lift-plan">site-specific lift plan</a>, which addresses a particular load, a particular machine in a particular configuration, and the actual conditions and hazards of the place where the lift happens.</p>
+
+      <h2>Are Generic Lift Plans Legal?</h2>
+      <p>LOLER 1998 Regulation 8 requires every lifting operation to be properly planned by a competent person. It does not say the plan must be written from scratch every time. BS 7121-1:2016 — the code of practice for the safe use of cranes — explicitly recognises that <strong>basic lifts</strong> which are routine and repetitive can be covered by a generic plan, provided that:</p>
+      <ul>
+        <li>The plan was produced by a competent person — normally a <a href="/services/appointed-person">CPCS A61 Appointed Person</a></li>
+        <li>It is <strong>reviewed before use at each new site or location</strong> to confirm the conditions match the plan's assumptions</li>
+        <li>The lift genuinely stays within the plan's stated limits — load weight, equipment, radius, ground and environment</li>
+        <li>Someone on site has the authority and competence to stop and escalate the moment the lift no longer fits the plan</li>
+      </ul>
+      <p>So a generic plan is not a shortcut around competent planning — it is the <em>output</em> of competent planning for a defined, repeatable operation. The legal duty to plan the lift never goes away; the generic document just discharges it for lifts that truly are identical in character.</p>
+
+      <h2>When a Generic Lift Plan is Acceptable</h2>
+      <p>In practice, a generic plan is defensible where all of the following hold:</p>
+      <ul>
+        <li><strong>The lift is basic</strong> under the BS 7121 categories — see our guide to <a href="/blog/basic-standard-complex-lifts">basic, standard and complex lifts</a></li>
+        <li><strong>It is genuinely repetitive</strong> — same load type, same machine, same method, day after day</li>
+        <li><strong>The environment is controlled and consistent</strong> — a fixed yard, a workshop, an established laydown area</li>
+        <li><strong>Loads are well below capacity</strong> at the working radius, with healthy margin</li>
+        <li><strong>No site-specific hazards</strong> — no overhead lines, no exclusion-zone conflicts, no public interface, no poor ground</li>
+      </ul>
+      <p>Classic examples: routine pallet and stillage handling in a builder's yard, repetitive telehandler offloading of standard deliveries, or an overhead gantry crane doing the same workshop lift on a fixed path all week.</p>
+
+      <h2>When You Cannot Use One</h2>
+      <p>A generic plan stops being acceptable the moment anything about the lift becomes site-specific or non-routine. Red lines include:</p>
+      <ul>
+        <li>Mobile crane operations — ground assessment and configuration are always site-specific</li>
+        <li>Lifting near overhead power lines, railways, water, highways or the public</li>
+        <li>Loads approaching the machine's capacity at radius, awkward loads, or unknown weights</li>
+        <li>Tandem lifts, person lifts, blind lifts or anything <a href="/blog/basic-standard-complex-lifts">categorised as complex</a></li>
+        <li>Ground that has not been assessed — temporary works, backfill, cellars, services</li>
+        <li>A principal contractor whose procedures require site-specific plans (most tier 1 contractors do — <a href="/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected">generic paperwork is a leading rejection reason</a>)</li>
+      </ul>
+
+      <h2>What is a Schedule of Common Lifts?</h2>
+      <p>A <strong>schedule of common lifts</strong> is the recognised, structured way to run generic planning properly. Instead of one vague catch-all document, the Appointed Person produces a schedule listing each routine lift type the site expects — load, weight range, equipment, accessories, method and limits — supported by a lift plan for each entry. Anything on the schedule can proceed under the standing plan; anything not on it triggers a specific plan before it happens.</p>
+      <p>This is how tower crane sites manage the daily flow of repetitive lifts, and it is a far more defensible arrangement than a generic plan pulled off the shelf, because the boundary between "planned" and "needs planning" is explicit and written down.</p>
+
+      <h2>Generic Lift Plan Templates</h2>
+      <p>If what you actually need is a properly structured document to work from, we publish free, professionally structured <a href="/resources/lift-plan-templates">lift plan templates</a> for <a href="/resources/telehandler-lift-plan-templates">telehandlers</a>, <a href="/resources/excavator-lift-plan-templates">excavators</a>, <a href="/resources/lorry-loader-lift-plan-templates">lorry loaders</a> and <a href="/resources/mobile-crane-lift-plan-templates">mobile cranes</a>. A template is a starting structure, not a finished plan — it still needs completing by a competent person with the real numbers for your lift. That distinction is exactly the difference between a template and a generic plan misused.</p>
+
+      <h2>The Bottom Line</h2>
+      <p>Generic lift plans have a legitimate, narrow role: routine, repetitive, basic lifts in consistent conditions, produced by a competent person and reviewed at every new location. Outside that band, they are a false economy — a rejected plan costs you programme time, and an inadequate one costs far more. If you are not sure which side of the line your operation sits on, that uncertainty is itself the answer: get it planned properly.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
+        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need a Site-Specific Plan — or a Schedule of Common Lifts?</h3>
+        <p class="text-gray-300 mb-6">RMT Solutions writes LOLER-compliant lift plans from £200 with 24–48 hour turnaround, and can set up a schedule of common lifts for your site or yard. CPCS A61 Appointed Person, 35 years in UK construction.</p>
+        <a href="/contact" class="btn-primary inline-block">Get a Quote Today</a>
+      </div>
+    `,
+  },
+  // NEW (Jul 2026) — targets the lift plan software cluster (GSC: ~17
+  // software/calculation queries, ~400 impressions, zero clicks, no page).
+  'lift-plan-software-vs-appointed-person': {
+    title: 'Lift Plan Software UK: What It Does & What It Can’t',
+    description: 'Lift plan software helps with crane selection, load charts and rigging drawings — but it cannot discharge your LOLER duty to plan the lift. What the tools do, costs, and when to use a consultant instead.',
+    keywords: 'lift plan software, lifting plan software, lift planning software, lift planner software, crane planning software, crane lift plan software, lifting plan calculation, 3d lift plan, free lift plan software, lift plan app, lift plan software uk',
+    category: 'Planning',
+    readTime: '9 min read',
+    date: 'July 8, 2026',
+    dateModified: 'July 8, 2026',
+    image: '/images/services/lift-planning-site-desk-review-uk.webp',
+    imageAlt: 'Lift planner working at a desk with drawings and a laptop — where lift plan software fits into the planning workflow',
+    content: `
+      <p class="lead">Search for "lift plan software" and you would think there is an app that takes a photo of your load and prints a LOLER-compliant lift plan. There isn't. What does exist is a range of genuinely useful planning tools — crane selection databases, 3D rigging studies, load chart calculators — that make a competent planner faster and their drawings better. This guide covers what the software actually does, roughly what it costs, the calculations behind any lift plan, and the question that matters legally: can software replace an Appointed Person? (Spoiler: no — and the reason is written into LOLER itself.)</p>
+
+      <h2>What Lift Plan Software Actually Does</h2>
+      <p>The established tools in the crane world are planning aids. Depending on the product, they will:</p>
+      <ul>
+        <li>Hold manufacturer load chart libraries so you can shortlist cranes with adequate capacity at your radius and configuration</li>
+        <li>Model the lift in 2D/3D — crane position, boom clearances, slew paths, obstructions — and produce professional drawings for the plan pack</li>
+        <li>Calculate outrigger point loads and mat sizes for ground assessment</li>
+        <li>Generate rigging arrangements and check accessory working load limits</li>
+      </ul>
+      <p>Well-known examples include 3D Lift Plan, Liebherr's Crane Planner and similar manufacturer tools. For mobile crane work on congested sites, this modelling genuinely earns its keep — a clearance problem found on screen is vastly cheaper than one found on the day.</p>
+
+      <h2>What the Software Cannot Do</h2>
+      <p>LOLER 1998 Regulation 8 requires every lifting operation to be <strong>planned by a competent person</strong>. The duty attaches to a person, not a product. Software has no idea that:</p>
+      <ul>
+        <li>The "firm level ground" in the model is actually last month's backfill over a live sewer</li>
+        <li>The load's stated weight came from a drawing revision that has since changed</li>
+        <li>The laydown area doubles as the pedestrian route at 8am and 4pm</li>
+        <li>The wind funnels between those two buildings at twice the forecast speed</li>
+      </ul>
+      <p>Every one of those is the kind of factor that causes real incidents, and every one comes from site knowledge and experience — the competence LOLER demands. Software output is only ever as good as its inputs, and judging the inputs is the job. That is why principal contractors reviewing a submission look past the glossy 3D drawing to <a href="/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected">who planned the lift and what they checked</a>.</p>
+
+      <h2>Lifting Plan Calculations: The Numbers Behind Every Plan</h2>
+      <p>Whether done in software or by hand, the core calculations in any lift plan are:</p>
+      <ul>
+        <li><strong>Gross load</strong> — load weight plus all rigging, hook block and attachments. Never the bare load alone.</li>
+        <li><strong>Capacity at radius</strong> — the crane or machine's rated capacity from the load chart <em>in the actual configuration</em> (boom length, counterweight, outrigger spread), at the worst-case working radius.</li>
+        <li><strong>Utilisation</strong> — gross load divided by capacity at radius, expressed as a percentage. Most UK contractors work to a maximum of around 80% for routine lifts; many tier 1 sites set lower thresholds for complex operations.</li>
+        <li><strong>Ground bearing pressure</strong> — outrigger or track loads against the allowable bearing capacity of the ground, sizing mats accordingly.</li>
+        <li><strong>Accessory ratings</strong> — sling angles and working load limits for every item in the rigging arrangement.</li>
+      </ul>
+      <p>If a plan you have been handed shows none of these numbers, it is not a lift plan — whatever software it came out of.</p>
+
+      <h2>Software vs Appointed Person: Costs</h2>
+      <p>Serious lift planning packages are sold on annual licences that typically run to four figures, before training time. That makes sense for crane hire companies and in-house Appointed Persons producing plans every week. If you need a handful of plans a year, the maths never works: a professionally written, site-specific plan from an independent <a href="/services/appointed-person">CPCS A61 Appointed Person</a> <a href="/blog/lift-plan-cost-uk">starts from £200</a>, with the competence, the site assessment and the accountability included.</p>
+
+      <h2>Who Should Buy the Software?</h2>
+      <ul>
+        <li><strong>Crane hire and contract lift providers</strong> — producing plans daily, already employing Appointed Persons</li>
+        <li><strong>Large contractors with in-house AP teams</strong> — the tools multiply an existing competence</li>
+        <li><strong>Everyone else</strong> — you are almost certainly better served buying the finished plan than the tool that helps someone competent produce it</li>
+      </ul>
+
+      <h2>The Bottom Line</h2>
+      <p>Lift plan software is a professional's aid, not a substitute for one. The law requires a competent person to plan your lift; the software just helps that person present and check their work. If you have the competence in-house, the tools are worth a look. If you don't, buy the plan, not the software — it is faster, cheaper at low volumes, and it actually discharges your LOLER duty.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
+        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Skip the Licence — Get the Plan</h3>
+        <p class="text-gray-300 mb-6">Site-specific, LOLER-compliant lift plans written by a CPCS A61 Appointed Person from £200, typically turned around in 24–48 hours. Excavators, telehandlers, lorry loaders, mobile and tower cranes.</p>
+        <a href="/contact" class="btn-primary inline-block">Get a Quote Today</a>
+      </div>
+    `,
+  },
   'basic-standard-complex-lifts': {
     title: 'Basic, Standard & Complex Lifts: Categories Explained',
     description: 'What makes a lift basic, standard or complex under BS 7121, what a critical lift is, and how the category changes the planning a lifting operation needs.',
@@ -561,13 +696,17 @@ const blogPosts = {
     `,
   },
   'what-is-a-lift-plan': {
-    title: 'What is a Lift Plan? UK Construction Rules Under LOLER 1998',
-    description: 'A lift plan documents how a lifting operation will be done safely. See what UK contractors must include under LOLER 1998 and when one is legally required.',
-    keywords: 'what is a lift plan, what is a lifting plan, what is the lifting plan, lifting plan, lift plan, lift plan UK, LOLER lift plan, lift plan construction, lift plan contents, who writes a lift plan, lift plan document, crane lift plan, lifting operation plan',
+    // CTR fix (Jul 2026): this URL had 13,227 impressions at pos ~13 but a
+    // 0.23% CTR. Title now leads with the 9-part contents + example angle
+    // (the "lifting plan example/sample" query cluster, ~350 imps, has no
+    // dedicated result) and the description opens with the answer.
+    title: 'What is a Lift Plan? The 9 Parts, Example & LOLER Rules',
+    description: 'A lift plan sets out how a load will be lifted safely — the load, machine, capacity at radius, rigging and site hazards. See all 9 parts with an example diagram.',
+    keywords: 'what is a lift plan, what is a lifting plan, what is the lifting plan, lifting plan, lift plan, lift plan UK, LOLER lift plan, lift plan construction, lift plan contents, who writes a lift plan, lift plan document, crane lift plan, lifting operation plan, lifting plan example, example of a lift plan, sample lifting plan, lifting plan sample, lift plan details, what is lifting plan in safety',
     category: 'Compliance',
     readTime: '10 min read',
     date: 'February 11, 2026',
-    dateModified: 'June 11, 2026',
+    dateModified: 'July 8, 2026',
     image: '/images/services/mobile-crane-lifting-precast-concrete.webp',
     imageAlt: 'Mobile crane lifting a precast concrete unit on a UK construction site — a typical lifting operation covered by a lift plan',
     content: `
@@ -601,6 +740,10 @@ const blogPosts = {
       <p>A common misconception is that routine or simple lifts do not need a lift plan. This is incorrect. LOLER does not distinguish between complex and routine operations \u2014 all lifting operations must be planned. What varies is the level of detail required. A straightforward lift with a well-matched machine on firm, level ground needs less documentation than a complex tandem crane lift adjacent to a live railway, but both must be planned.</p>
 
       <p>The Health and Safety Executive's Approved Code of Practice (ACOP) for LOLER, known as L113, provides further guidance. It makes clear that the complexity of the plan should be proportionate to the risks involved, but the requirement for planning exists regardless.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-6 my-10">
+        <p class="text-gray-300 m-0"><strong class="text-amber-400">Need a lift plan written?</strong> Site-specific, LOLER-compliant plans from £200 with 24–48 hour turnaround, by a CPCS A61 Appointed Person. <a href="/contact" class="text-amber-400 underline">Get a quote</a> or call <a href="tel:+447803808093" class="text-amber-400 underline">07803 808093</a>.</p>
+      </div>
 
       <h2>What Does a Lift Plan Contain?</h2>
       <p>There is no single prescribed format for a lift plan. The HSE does not mandate a specific template, and different companies, crane hire firms, and Appointed Persons use different formats. What matters is that the plan addresses all the risks of the lifting operation and provides sufficient information for the lift to be carried out safely. If you want a structured starting point, you can <a href="/resources/lift-plan-templates">download our free lift plan template</a> — an editable Word document aligned with BS 7121.</p>
@@ -1016,10 +1159,11 @@ const blogPosts = {
     // CTR fix (Jun 2026): answer-first description with the decision-flowchart
     // hook — this URL had 8,425 impressions at position 8 but 1.25% CTR.
     description: 'Every lift must be planned under LOLER 1998 — but only complex lifts need a full written plan. Decision flowchart, real examples, and when a generic plan will do.',
+    keywords: 'when do you need a lift plan, do you need a lift plan for every lift, when is a lift plan required, lift plan requirements, hse lifting plan, when planning a lift what is the first thing you should do, do you need a lift plan for a telehandler, lift plans are mandatory for, crane lift plan requirements, loler regulation 8',
     category: 'Planning',
-    readTime: '6 min read',
+    readTime: '8 min read',
     date: 'January 28, 2026',
-    dateModified: 'June 11, 2026',
+    dateModified: 'July 8, 2026',
     image: '/images/services/excavator-lifting-concrete-ring-construction.webp',
     imageAlt: 'Excavator lifting a concrete ring into an excavation — an everyday operation that still requires a LOLER lift plan',
     content: `
@@ -1199,7 +1343,33 @@ const blogPosts = {
 
       <h3>Scenario 4: Materials Handling on Site</h3>
       <p><strong>Need a lift plan?</strong> DEPENDS</p>
-      <p>Routine materials handling with a telehandler or forklift by trained operators may only need a risk assessment and safe system of work. But anything unusual requires a proper plan.</p>
+      <p>Routine materials handling with a telehandler or forklift by trained operators may only need a risk assessment and safe system of work — or a <a href="/blog/generic-lift-plans">generic lift plan</a>, which BS 7121 accepts for genuinely repetitive basic lifts. But anything unusual requires a proper site-specific plan.</p>
+
+      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-6 my-10">
+        <p class="text-gray-300 m-0"><strong class="text-amber-400">Need an answer for your specific lift?</strong> Send the details over and a CPCS A61 Appointed Person will tell you what level of planning it needs — free, usually within four working hours. <a href="/contact" class="text-amber-400 underline">Get in touch</a> or call <a href="tel:+447803808093" class="text-amber-400 underline">07803 808093</a>.</p>
+      </div>
+
+      <h2>When Planning a Lift, What Is the First Thing You Should Do?</h2>
+      <p>This is a favourite exam question on CPCS courses — and a genuinely useful one on site. The first thing you should do when planning a lift is <strong>assess the load</strong>: establish its weight, dimensions, centre of gravity and lifting points. Everything else in the plan flows from the load. You cannot select the machine, check capacity at radius, choose accessories or set exclusion zones until you know exactly what you are lifting.</p>
+      <p>In practice the opening steps of any lift plan run in this order:</p>
+      <ol>
+        <li><strong>Assess the load</strong> — confirmed weight (not a guess), dimensions, centre of gravity, and certified lifting points.</li>
+        <li><strong>Assess the site</strong> — ground conditions, access, overhead hazards, underground services, and adjacent activities.</li>
+        <li><strong>Select the equipment</strong> — a machine with adequate rated capacity at the working radius, plus suitable accessories.</li>
+        <li><strong>Appoint the people</strong> — a competent <a href="/services/appointed-person">Appointed Person</a> to plan, and a supervisor, operator and slinger/signaller to execute.</li>
+      </ol>
+      <p>If a plan lands on your desk that clearly hasn't started with the load — a "10-tonne-ish" weight, no centre of gravity, no lifting-point detail — treat that as a red flag for everything that follows.</p>
+
+      <h2>What Does the HSE Expect a Lifting Plan to Cover?</h2>
+      <p>The HSE does not publish an official lifting plan template — its expectation, set out in LOLER 1998 and the supporting Approved Code of Practice (L113), is that the <em>planning</em> is adequate for the risk. When HSE inspectors examine a lifting plan after an incident or during a site visit, they look for evidence that a competent person has genuinely considered:</p>
+      <ul>
+        <li>The load — weight, integrity, centre of gravity and attachment method</li>
+        <li>The equipment — suitability, rated capacity at the working configuration, and current thorough examination</li>
+        <li>The site — ground bearing capacity, proximity hazards, overhead lines and exclusion zones</li>
+        <li>The people — named, competent personnel with defined roles</li>
+        <li>The method — the sequence of the operation, communication arrangements, and what happens if something changes on the day</li>
+      </ul>
+      <p>A generic document with a company logo on it does not demonstrate any of that. This is exactly why plans get rejected by principal contractors — see our guide to <a href="/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected">why lift plans get rejected</a> for the common failures.</p>
 
       <h2>Consequences of Poor Planning</h2>
       <p>Inadequate lift planning can result in:</p>
@@ -2413,6 +2583,42 @@ export async function generateStaticParams() {
 // guidelines). This unlocks FAQ rich results in the SERP and makes the
 // Q&A content far easier for AI answer engines to quote directly.
 const faqData = {
+  'generic-lift-plans': [
+    {
+      q: 'Are generic lift plans acceptable?',
+      a: 'Only for basic, routine, repetitive lifts in consistent conditions — and even then the plan must be produced by a competent person and reviewed before use at each new site or location. BS 7121-1:2016 recognises generic plans for basic lifts; for standard and complex lifts a site-specific plan is required, and most principal contractors will reject generic paperwork outright.',
+    },
+    {
+      q: 'What is the difference between a generic and a site-specific lift plan?',
+      a: 'A generic lift plan covers a type of routine lifting operation intended to be repeated, while a site-specific lift plan addresses one particular lift: the actual load and its confirmed weight, the actual machine and configuration, the capacity at the working radius, and the real ground conditions and hazards of the site on the day.',
+    },
+    {
+      q: 'What is a schedule of common lifts?',
+      a: 'A schedule of common lifts is a structured list, produced by an Appointed Person, of the routine lift types a site expects — each with its load range, equipment, method and limits, backed by a lift plan. Lifts on the schedule can proceed under the standing plan; anything outside it needs a specific plan before it takes place.',
+    },
+    {
+      q: 'Do generic lift plans comply with LOLER?',
+      a: 'They can, but only within narrow limits. LOLER Regulation 8 requires every lifting operation to be planned by a competent person. A generic plan discharges that duty only where the lift genuinely matches the plan — same operation, equipment and conditions — and the plan has been reviewed for the specific location. Used outside those limits, a generic plan does not demonstrate compliance.',
+    },
+  ],
+  'lift-plan-software-vs-appointed-person': [
+    {
+      q: 'Is there software that writes lift plans?',
+      a: 'Not in the sense most people hope. Established tools such as 3D Lift Plan and manufacturer crane planners help with crane selection, load charts, 3D clearance studies, rigging drawings and outrigger loadings — but they are planning aids for a competent person, not a substitute for one. No software can discharge the LOLER 1998 duty for a lifting operation to be planned by a competent person.',
+    },
+    {
+      q: 'Can software replace an Appointed Person?',
+      a: 'No. LOLER Regulation 8 places the planning duty on a competent person, and BS 7121 names the Appointed Person as responsible for the lifting operation. Software cannot assess ground conditions, verify load information, judge site-specific hazards or take accountability for the plan — those are exactly the elements of competence the law requires.',
+    },
+    {
+      q: 'How do you calculate a lift plan?',
+      a: 'The core calculations are: gross load (load plus all rigging and hook block); capacity at radius from the machine’s load chart in its actual configuration; utilisation (gross load as a percentage of capacity at radius, typically kept under about 80% for routine lifts); ground bearing pressure under outriggers or tracks against the allowable bearing capacity; and the working load limits of every lifting accessory at the sling angles used.',
+    },
+    {
+      q: 'How much does lift plan software cost?',
+      a: 'Professional lift planning packages are typically sold on annual licences running into the low thousands of pounds, plus training time. Unless you produce plans regularly with in-house competence, a professionally written site-specific lift plan — from £200 from an independent CPCS A61 Appointed Person — is usually the more economical and legally robust route.',
+    },
+  ],
   'basic-standard-complex-lifts': [
     {
       q: 'What is a complex lift?',
@@ -2569,6 +2775,14 @@ const faqData = {
     {
       q: 'Do you need a lift plan for an excavator?',
       a: 'Yes, if the excavator is being used for lifting rather than just digging. Once lifting accessories such as chains or slings are attached, it becomes lifting equipment under LOLER and requires proper planning.',
+    },
+    {
+      q: 'When planning a lift, what is the first thing you should do?',
+      a: 'Assess the load. The first step in planning any lifting operation is establishing the load’s weight, dimensions, centre of gravity and lifting points, because every other planning decision — machine selection, capacity at radius, accessories, exclusion zones — depends on it. After the load, assess the site, select the equipment, and appoint competent people.',
+    },
+    {
+      q: 'Does the HSE provide a lifting plan template?',
+      a: 'No. The HSE does not publish an official lifting plan template. Its requirement, under LOLER 1998 and the L113 Approved Code of Practice, is that every lifting operation is properly planned by a competent person, with the detail proportionate to the risk. Inspectors look for evidence of genuine site-specific planning — not a particular form.',
     },
   ],
   'what-does-a-lift-plan-checking-service-involve': [

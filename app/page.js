@@ -149,11 +149,20 @@ export default function HomePage() {
     },
   ]
 
+  // Internal-link fix (Jul 2026): added Appointed Person + Lifting
+  // Operations Audit to the homepage quick-links grid. GSC shows the
+  // "appointed person" query cluster at 4,464 impressions with only 2
+  // clicks — the service page previously had no body link from the
+  // homepage (header/footer only), so it was starved of link equity.
+  // Grid below changed from md:grid-cols-4 to md:grid-cols-3 so the six
+  // items sit in two even rows.
   const liftPlanTypes = [
     { name: 'Excavator Lift Plans', href: '/services/excavator-lift-plans' },
     { name: 'Telehandler Lift Plans', href: '/services/telehandler-lift-plans' },
     { name: 'Mobile Crane Lift Plans', href: '/services/mobile-crane-lift-plans' },
     { name: 'Lorry Loader Lift Plans', href: '/services/lorry-loader-lift-plans' },
+    { name: 'CPCS A61 Appointed Person', href: '/services/appointed-person' },
+    { name: 'Lifting Operations Audits', href: '/services/lifting-operations-audit' },
   ]
 
   const caseStudies = [
@@ -414,7 +423,7 @@ export default function HomePage() {
           </div>
 
           {/* Lift Plan Types Grid */}
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4">
             {liftPlanTypes.map((type) => (
               <Link
                 key={type.name}

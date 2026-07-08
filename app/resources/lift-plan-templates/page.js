@@ -195,7 +195,12 @@ export default function LiftPlanTemplates() {
               and{' '}
               <Link href="/blog/when-do-you-need-lift-plan" className="text-amber-400 hover:text-amber-300 underline">
                 when you need one
-              </Link>.
+              </Link>. Not sure whether a reusable document is even acceptable for your operation?
+              Our guide to{' '}
+              <Link href="/blog/generic-lift-plans" className="text-amber-400 hover:text-amber-300 underline">
+                generic lift plans and when you can use one
+              </Link>{' '}
+              sets out exactly where BS 7121 draws the line.
             </p>
           </div>
         </div>
