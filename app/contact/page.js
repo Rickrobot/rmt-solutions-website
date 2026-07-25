@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react'
+import Link from 'next/link'
+import { Mail, Phone, MapPin, Clock, Send, ShieldCheck, FileCheck, PhoneCall } from 'lucide-react'
 import { trackEvent as trackConversion } from '@/components/ConversionTracking'
 
 export default function ContactPage() {
@@ -159,10 +160,70 @@ export default function ContactPage() {
             <h1 className="font-display text-5xl sm:text-6xl font-bold text-white mb-6">
               Request a <span className="gradient-text">Lift Plan</span> Quote
             </h1>
-            <p className="text-xl text-gray-300 leading-relaxed">
-              Tell us about your project and we'll provide a competitive quote for your lift planning 
-              requirements. Fast response guaranteed.
+            <p className="text-xl text-gray-300 leading-relaxed mb-8">
+              Send the load, the machine and the site — we'll come back with a fixed price within
+              4 working hours. Plans are typically delivered 24–48 hours after you confirm.
             </p>
+
+            {/* Conversion fix (Jul 2026): the fastest enquiry a site manager can
+                make is sending a photo of the drawing or the machine plate. On a
+                UK site that means WhatsApp, so it leads here rather than sitting
+                in the footer. Web3Forms file attachments are a paid feature, so
+                WhatsApp is also how drawings actually reach us. */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://wa.me/447803808093?text=Hi%20Ricky%2C%20I%20need%20a%20lift%20plan.%20Here%20are%20the%20details%3A"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-track-location="contact_hero"
+                className="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1ebe5b] text-white px-7 py-4 rounded-xl font-semibold shadow-lg shadow-emerald-500/25 transition"
+              >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Send the drawing on WhatsApp
+              </a>
+              <a
+                href="tel:+447803808093"
+                data-track-location="contact_hero"
+                className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-900 px-7 py-4 rounded-xl font-semibold shadow-lg shadow-amber-500/25 transition"
+              >
+                <Phone className="w-5 h-5" />
+                Call 07803 808093
+              </a>
+            </div>
+            <p className="text-gray-400 text-sm mt-4">
+              Photograph the drawing, the machine plate or the RAMS and send it straight over —
+              no need to type it all out.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What happens next — removes the fear of an open-ended consultancy
+          engagement, which is the main reason a PM hesitates to enquire. */}
+      <section className="py-16 bg-slate-900/50 border-y border-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-2xl font-bold text-white mb-10 text-center">
+            What happens after you get in touch
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: Send, step: '01', title: 'You send the details', body: 'Load weight and dimensions, the machine, the site and the dates. A photo of the drawing or a rough description is enough to start.' },
+              { icon: PhoneCall, step: '02', title: 'Ricky replies within 4 working hours', body: 'A fixed written price — not an hourly rate, and not an open-ended engagement. If anything is unclear he will call you rather than email back and forth.' },
+              { icon: FileCheck, step: '03', title: 'Plan delivered in 24–48 hours', body: 'Written and signed off by a CPCS A61 Appointed Person. Revisions arising from principal contractor review are included.' },
+            ].map(({ icon: Icon, step, title, body }) => (
+              <div key={step} className="bg-slate-800/30 rounded-2xl p-6 border border-slate-700/50">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-amber-400" />
+                  </div>
+                  <span className="text-amber-400 font-display font-bold">{step}</span>
+                </div>
+                <h3 className="font-display text-lg font-bold text-white mb-2">{title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -174,13 +235,47 @@ export default function ContactPage() {
             {/* Form */}
             <div className="lg:col-span-2">
               <div className="bg-gradient-to-b from-slate-800/50 to-slate-900/50 rounded-3xl p-8 md:p-10 border border-slate-700/50">
+                {/* Proof above the form (Jul 2026). The testimonials page was the
+                    strongest sales asset on the site and was sitting in a silo on
+                    128 impressions. This pull-quote speaks to programme risk — the
+                    thing a PM requesting a quote actually worries about. */}
+                <figure className="mb-8 bg-slate-900/60 border-l-4 border-amber-500 rounded-r-xl p-6">
+                  <blockquote className="text-gray-200 leading-relaxed italic">
+                    &ldquo;RMT Solutions always provide comments and approvals quickly so that any
+                    issues can be sorted out and the programme of works maintained on site.&rdquo;
+                  </blockquote>
+                  <figcaption className="mt-4 text-sm">
+                    <span className="text-white font-semibold">Tom Herd</span>
+                    <span className="text-gray-400"> — Project Manager, Caddick Construction</span>
+                    <Link href="/testimonials" className="block mt-2 text-amber-400 hover:text-amber-300 underline">
+                      Read more from Caddick, Wates and Sunel Group →
+                    </Link>
+                  </figcaption>
+                </figure>
+
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mb-8 text-sm text-gray-400">
+                  <span className="inline-flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-amber-400" />Constructionline Gold</span>
+                  <span className="inline-flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-amber-400" />CPCS A61 Appointed Person</span>
+                  <span className="inline-flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-amber-400" />1,000+ lift plans delivered</span>
+                </div>
+
                 <h2 className="font-display text-2xl font-bold text-white mb-2">
                   Tell us about your project
                 </h2>
                 <p className="text-gray-400 text-sm mb-8">
                   Just three fields are required — the rest help us prepare a faster, more accurate quote.
-                  Prefer to talk?{' '}
-                  <a href="tel:+447803808093" className="text-amber-400 hover:text-amber-300 underline font-semibold">
+                  Got a drawing, RAMS or an existing lift plan?{' '}
+                  <a
+                    href="https://wa.me/447803808093?text=Hi%20Ricky%2C%20I%20have%20a%20drawing%20to%20send%20over%20for%20a%20lift%20plan%20quote."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-track-location="contact_form_intro"
+                    className="text-amber-400 hover:text-amber-300 underline font-semibold"
+                  >
+                    Send it on WhatsApp
+                  </a>{' '}
+                  — it is quicker than typing it out. Prefer to talk?{' '}
+                  <a href="tel:+447803808093" data-track-location="contact_form_intro" className="text-amber-400 hover:text-amber-300 underline font-semibold">
                     Call 07803 808093
                   </a>.
                 </p>
@@ -321,6 +416,19 @@ export default function ContactPage() {
                   <p className="text-center text-gray-500 text-xs mt-4">
                     Your details stay private. We never share enquiries with third parties.
                   </p>
+
+                  {/* Internal links (Jul 2026): this page previously had none at all,
+                      which both wasted its link equity and left anyone still deciding
+                      with nowhere to go. */}
+                  <div className="mt-8 pt-6 border-t border-slate-700/50">
+                    <p className="text-gray-400 text-sm mb-3">Not ready to enquire yet?</p>
+                    <ul className="grid sm:grid-cols-2 gap-2 text-sm">
+                      <li><Link href="/case-studies/caddick-tawd-valley-junction-4" className="text-amber-400 hover:text-amber-300 underline">See a Caddick project case study</Link></li>
+                      <li><Link href="/blog/lift-plan-cost-uk" className="text-amber-400 hover:text-amber-300 underline">What a lift plan costs in the UK</Link></li>
+                      <li><Link href="/services/lift-plans" className="text-amber-400 hover:text-amber-300 underline">Lift planning services</Link></li>
+                      <li><Link href="/services/lift-plan-checking" className="text-amber-400 hover:text-amber-300 underline">Independent lift plan checking</Link></li>
+                    </ul>
+                  </div>
                 </form>
               </div>
             </div>
