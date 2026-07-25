@@ -12,7 +12,10 @@ import { Phone } from 'lucide-react'
  * drawing without stopping work for a phone call. The wa.me deep link
  * opens the chat pre-filled so the first message takes one tap.
  *
- * Tracks GA4 events when clicked (if window.gtag is available).
+ * Click tracking is handled site-wide by <ConversionTracking /> (mounted in
+ * the root layout), which listens for tel: and wa.me clicks anywhere on the
+ * page. These two buttons carry data-track-location="mobile_sticky_cta" so
+ * their events are attributable to the sticky CTA rather than an inline link.
  */
 
 // WhatsApp glyph (lucide-react ships no brand icons).
@@ -30,22 +33,13 @@ function WhatsAppIcon({ className }) {
 }
 
 export default function FloatingCallButton() {
-  const track = (eventName) => {
-    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-      window.gtag('event', eventName, {
-        event_category: 'engagement',
-        event_label: 'mobile_sticky_cta',
-      })
-    }
-  }
-
   return (
     <div className="lg:hidden fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
       <a
         href="https://wa.me/447803808093?text=Hi%20Ricky%2C%20I%20need%20help%20with%20a%20lift%20plan."
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => track('click_whatsapp_floating')}
+        data-track-location="mobile_sticky_cta"
         aria-label="Message RMT Solutions on WhatsApp"
         className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5b] text-white px-5 py-3 rounded-full font-semibold shadow-2xl shadow-emerald-500/40 active:scale-95 transition"
       >
@@ -54,7 +48,7 @@ export default function FloatingCallButton() {
       </a>
       <a
         href="tel:+447803808093"
-        onClick={() => track('click_phone_floating')}
+        data-track-location="mobile_sticky_cta"
         aria-label="Call RMT Solutions on 07803 808093"
         className="flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-900 px-5 py-3 rounded-full font-semibold shadow-2xl shadow-amber-500/40 active:scale-95 transition"
       >

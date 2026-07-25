@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Send, Phone } from 'lucide-react'
+import { trackEvent as trackConversion } from '@/components/ConversionTracking'
 
 const WEB3FORMS_ACCESS_KEY = 'ab804a58-66f9-44c4-8ad3-a2b6a2895839'
 
@@ -15,7 +16,10 @@ const WEB3FORMS_ACCESS_KEY = 'ab804a58-66f9-44c4-8ad3-a2b6a2895839'
  *
  * Required fields: name, email, brief.
  * Submits to Web3Forms — same backend as /contact.
- * Tracks GA4 events: form_view (on mount via parent), form_submit_success, form_submit_error.
+ * Tracks GA4 events: generate_lead on success, form_submit_error on failure.
+ * `generate_lead` is GA4's recommended lead event — mark it as a Key Event in
+ * GA4 so it reports as a conversion. `serviceName` is passed through so leads
+ * can be attributed to the service page that produced them.
  */
 export default function InlineQuoteForm({
   serviceName = 'General Enquiry',
@@ -31,15 +35,8 @@ export default function InlineQuoteForm({
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const trackEvent = (eventName, params = {}) => {
-    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-      window.gtag('event', eventName, {
-        event_category: 'lead',
-        event_label: serviceName,
-        ...params,
-      })
-    }
-  }
+  const trackEvent = (eventName, params = {}) =>
+    trackConversion(eventName, { event_label: serviceName, form_name: 'inline_quote', ...params })
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -72,7 +69,7 @@ export default function InlineQuoteForm({
         setSubmitted(true)
         setStatus('Thanks — we will be in touch within 4 working hours.')
         setFormData({ name: '', email: '', phone: '', brief: '', company_website: '' })
-        trackEvent('form_submit_success')
+        trackEvent('generate_lead', { lead_source: 'inline_quote_form' })
       } else {
         setStatus('Something went wrong. Please call 07803 808093 or email ricky@rmtsolutions.co.uk')
         trackEvent('form_submit_error', { reason: 'web3forms_failure' })

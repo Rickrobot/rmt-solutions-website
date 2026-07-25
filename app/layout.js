@@ -4,6 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingCallButton from '@/components/FloatingCallButton'
 import Analytics from '@/components/Analytics'
+import ConversionTracking from '@/components/ConversionTracking'
 
 // PERFORMANCE FIX (SEO audit, May 2026):
 // Fonts are now loaded with next/font/google instead of a CSS @import in
@@ -99,6 +100,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-slate-950 text-gray-100">
         <Analytics />
+        <ConversionTracking />
         <Header />
         <main>{children}</main>
         <Footer />

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react'
+import { trackEvent as trackConversion } from '@/components/ConversionTracking'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -44,6 +45,12 @@ export default function ContactPage() {
       const data = await response.json()
 
       if (data.success) {
+        trackConversion('generate_lead', {
+          lead_source: 'contact_page_form',
+          form_name: 'contact_full',
+          event_label: formData.service || 'Not specified',
+          equipment: formData.equipment || 'Not specified',
+        })
         setStatus('Thank you for your enquiry. We will be in touch within 4 working hours.')
         setFormData({
           name: '',
@@ -55,6 +62,7 @@ export default function ContactPage() {
           message: '',
         })
       } else {
+        trackConversion('form_submit_error', { form_name: 'contact_full', reason: 'web3forms_failure' })
         setStatus('Something went wrong. Please email us directly at ricky@rmtsolutions.co.uk')
       }
     } catch (error) {
