@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
+import GatedDownload from '@/components/GatedDownload'
 
 export const metadata = {
   title: 'Free Excavator Lift Plan & Risk Assessment',
@@ -357,6 +358,16 @@ export default function ExcavatorTemplatesPage() {
             serviceName="Excavator Lift Plan (from templates page)"
             heading="Want this written for your site instead? Plans from £200, 24-48h turnaround"
           />
+        </div>
+      </section>
+
+      {/* Gated asset (Jul 2026) — the free templates above stay ungated because
+          they earn the rankings and links that make this page work. This gates a
+          different, higher-value asset instead, so the section finally captures
+          something. See components/GatedDownload.js for the reasoning. */}
+      <section className="py-16 bg-slate-900 border-t border-slate-800">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <GatedDownload />
         </div>
       </section>
 
