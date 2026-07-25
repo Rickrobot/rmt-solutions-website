@@ -44,7 +44,7 @@ export default function ContactPage() {
       const data = await response.json()
 
       if (data.success) {
-        setStatus('Thank you for your enquiry. We will be in touch within 24 hours.')
+        setStatus('Thank you for your enquiry. We will be in touch within 4 working hours.')
         setFormData({
           name: '',
           email: '',
@@ -308,7 +308,7 @@ export default function ContactPage() {
                     className="btn-primary w-full flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Send className="w-5 h-5 mr-2" />
-                    {isSubmitting ? 'Sending...' : 'Send Enquiry — We Reply Within 24 Hours'}
+                    {isSubmitting ? 'Sending...' : 'Send Enquiry — We Reply Within 4 Working Hours'}
                   </button>
                   <p className="text-center text-gray-500 text-xs mt-4">
                     Your details stay private. We never share enquiries with third parties.
@@ -327,11 +327,11 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="text-amber-400 font-semibold">Fast Response</div>
-                    <div className="text-white text-2xl font-display font-bold">Within 24 Hours</div>
+                    <div className="text-white text-2xl font-display font-bold">4 Working Hours</div>
                   </div>
                 </div>
                 <p className="text-gray-300 text-sm">
-                  We aim to respond to all enquiries within 24 hours. Urgent requests? Call us directly.
+                  We aim to respond to all enquiries within 4 working hours. Urgent requests? Call us directly.
                 </p>
               </div>
 

@@ -26,3 +26,6 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Retired pages awaiting manual deletion (mounted FS cannot rm)
+_to_delete/

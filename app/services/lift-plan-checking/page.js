@@ -6,16 +6,19 @@ import RelatedServices from '@/components/RelatedServices'
 import LiftCheckFlow from '@/components/LiftCheckFlow'
 
 export const metadata = {
-  title: 'Lift Plan Checking UK | LOLER AP Review',
-  description: 'Independent CPCS Appointed Person review of subcontractor lift plans. LOLER & BS 7121 check, Category A/B determination, 24–48 hour turnaround.',
-  keywords: 'lift plan checking service, lift plan review, appointed person lift plan check, LOLER lift plan review, independent lift plan verification, category A lift plan, category B lift plan',
+  title: 'Independent Lift Plan Checking & Review UK',
+  description: 'Independent CPCS Appointed Person lift plan checking and review. LOLER & BS 7121 compliance check, Category A/B determination, 24–48 hour turnaround.',
+  // Keywords absorbed from the merged /services/lift-plan-review page (Jul 2026).
+  keywords: 'lift plan checking service, lift plan review, lift plan review service, lifting plan review, crane lift plan review, independent lift plan review, appointed person lift plan review, LOLER lift plan review, lift plan assessment, independent lift plan verification, category A lift plan, category B lift plan',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lift-plan-checking',
   },
   openGraph: {
-    title: 'Lift Plan Checking UK | LOLER AP Review',
-    description: 'Independent CPCS Appointed Person review of subcontractor lift plans. LOLER & BS 7121 compliance check, 24–48 hour turnaround.',
+    title: 'Independent Lift Plan Checking & Review UK',
+    description: 'Independent CPCS Appointed Person lift plan checking and review. LOLER & BS 7121 compliance check, 24–48 hour turnaround.',
     url: 'https://www.rmtsafetysolutions.com/services/lift-plan-checking',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
 }
@@ -58,6 +61,22 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Lift plan checking is the independent review of a lift plan prepared by another party — typically a subcontractor, crane hire firm, or third-party Appointed Person — to confirm it is technically correct, LOLER and BS 7121 compliant, and fit for the specific site conditions. The output is a written review with findings, recommendations, and a Category A (acceptable) or Category B (not acceptable as submitted) determination.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is a lift plan review a legal requirement?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Independent review is not itself named in LOLER 1998, but Regulation 8 requires every lifting operation to be properly planned by a competent person and appropriately supervised. Under CDM 2015 the principal contractor must also plan, manage and monitor lifting on site — including subcontractors\u2019 lifts. Independent checking is how most principal contractors demonstrate they discharged that duty, and it is why tier 1 procurement routinely requires it.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can subcontractors use your review service?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Subcontractors often ask for a review before submitting a plan to the principal contractor, so problems are corrected in private rather than bounced back through the site team. It is usually faster and cheaper than having a plan rejected, re-worked and re-submitted \u2014 and it protects your standing with the main contractor.',
       },
     },
     {
@@ -557,6 +576,35 @@ export default function LiftPlanCheckingPage() {
         </div>
       </section>
 
+      {/* Equipment Types — merged in from /services/lift-plan-review (Jul 2026).
+          Gives the page an equipment-level entry point and reciprocates links
+          to each equipment service leaf. */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">Equipment types we review</h2>
+          <p className="text-lg text-slate-600 mb-8 max-w-3xl">
+            We check and review lift plans for every type of lifting equipment in common use on UK
+            construction sites. Each has its own technical traps, and the review is tailored accordingly.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { name: 'Excavator Lift Plans', desc: 'ISO 10567 capacity verification, duty chart checks, track configuration, and lifting mode confirmation.', href: '/services/excavator-lift-plans' },
+              { name: 'Telehandler Lift Plans', desc: 'Stabiliser deployment, load chart for the specific attachment, boom extension limits, and ground conditions.', href: '/services/telehandler-lift-plans' },
+              { name: 'Lorry Loader / HIAB Plans', desc: 'Stabiliser reaction forces, vehicle positioning, multiple delivery point assessments, and operator visibility.', href: '/services/lorry-loader-lift-plans' },
+              { name: 'Mobile Crane Lift Plans', desc: 'Configuration-specific load charts, counterweight, boom length, outrigger extension, and ground bearing pressures.', href: '/services/mobile-crane-lift-plans' },
+              { name: 'Tower Crane Lift Plans', desc: 'Free-standing and tied configurations, overlapping jib zones, foundation loads, and climb sequence planning.', href: '/services/tower-crane' },
+              { name: 'Steel Erection Plans', desc: 'Fabrication drawing review, erection sequence, temporary stability, and connection methodology.', href: '/services/steel-erection' },
+            ].map((item) => (
+              <Link key={item.href} href={item.href} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">{item.name}</h3>
+                <p className="text-slate-600 text-sm">{item.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Service Options */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -676,6 +724,14 @@ export default function LiftPlanCheckingPage() {
               {
                 q: 'What does Category A and Category B mean?',
                 a: 'Category A means the plan is acceptable as submitted and the lift can proceed. Category B means the plan is not acceptable as submitted — every finding is set out with the standard reference and what must change for acceptance.',
+              },
+              {
+                q: 'Is a lift plan review a legal requirement?',
+                a: 'Independent review is not itself named in LOLER 1998, but Regulation 8 requires every lifting operation to be properly planned by a competent person and appropriately supervised. Under CDM 2015 the principal contractor must also plan, manage and monitor lifting on site — including subcontractors\u2019 lifts. Independent checking is how most principal contractors demonstrate they discharged that duty, and it is why tier 1 procurement routinely requires it.',
+              },
+              {
+                q: 'Can subcontractors use your review service?',
+                a: 'Yes. Subcontractors often ask for a review before submitting a plan to the principal contractor, so problems are corrected in private rather than bounced back through the site team. It is usually faster and cheaper than having a plan rejected, re-worked and re-submitted — and it protects your standing with the main contractor.',
               },
               {
                 q: 'Why do lift plans get rejected?',

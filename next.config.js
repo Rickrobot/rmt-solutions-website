@@ -550,6 +550,37 @@ const nextConfig = {
       },
 
       // ============================================
+      // PAGE MERGES (Jul 2026 SEO review)
+      // /services/lift-plan-review and /services/lift-plan-checking described
+      // the same service and were splitting each other's authority — both were
+      // outranked by blog posts on the same topic. Merged into the checking
+      // page, which was the stronger of the two.
+      // Likewise the two lift-plan-checking blog posts were the same article
+      // twice; the shorter now points at the longer.
+      // ============================================
+
+      {
+        source: '/services/lift-plan-review',
+        destination: '/services/lift-plan-checking',
+        permanent: true,
+      },
+      {
+        source: '/services/lift-plan-review/',
+        destination: '/services/lift-plan-checking',
+        permanent: true,
+      },
+      {
+        source: '/blog/what-does-a-lift-plan-checking-service-involve',
+        destination: '/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected',
+        permanent: true,
+      },
+      {
+        source: '/blog/what-does-a-lift-plan-checking-service-involve/',
+        destination: '/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected',
+        permanent: true,
+      },
+
+      // ============================================
       // WILDCARD CATCH-ALLS (must be last)
       // ============================================
       

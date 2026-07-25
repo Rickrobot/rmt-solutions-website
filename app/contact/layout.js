@@ -23,6 +23,8 @@ export const metadata = {
     description:
       'Get in touch for LOLER compliant lift plans from a CPCS Appointed Person. Quote within 4 working hours, plan delivered in 24\u201348 hours.',
     url: 'https://www.rmtsafetysolutions.com/contact',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
 }

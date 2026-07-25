@@ -15,6 +15,8 @@ export const metadata = {
     title: 'Lorry Loader Lift Plans UK | HIAB Plans',
     description: 'Lorry loader (HIAB) lift plans from £250 + VAT, by a CPCS Appointed Person. LOLER compliant plans for deliveries and site lifting.',
     url: 'https://www.rmtsafetysolutions.com/services/lorry-loader-lift-plans',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
 }

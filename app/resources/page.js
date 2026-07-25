@@ -12,6 +12,8 @@ export const metadata = {
     title: 'Free Lift Plan Templates & UK LOLER Guidance',
     description: 'Free downloadable lift plan templates, risk assessments and UK LOLER guidance.',
     url: 'https://www.rmtsafetysolutions.com/resources',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
   },
 }
 

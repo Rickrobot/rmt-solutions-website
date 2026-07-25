@@ -29,6 +29,7 @@ export const metadata = {
     description:
       'Independent site verification of a mobile crane lifting operation installing steel balcony units at Chorlton Baths, Manchester, on a Caddick development.',
     url: URL,
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'article',
     images: [
       {
@@ -340,7 +341,7 @@ export default function ChorltonBathsBalconyLiftPage() {
               mobile crane
             </Link>{' '}
             operations across the North West — alongside{' '}
-            <Link href="/services/lift-plan-review" className="text-amber-400 hover:text-amber-300 underline">
+            <Link href="/services/lift-plan-checking" className="text-amber-400 hover:text-amber-300 underline">
               lift plan review and checking
             </Link>{' '}
             before work starts on site.

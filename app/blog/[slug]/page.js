@@ -947,18 +947,18 @@ const blogPosts = {
       <p>On major projects, every subcontractor lift plan is <a href="/services/lift-plan-checking">checked by the principal contractor's Appointed Person</a> before lifting is approved. A cheap or templated plan that fails that check costs far more than the saving: resubmission delays, standing time for the machine and gang you booked, and a dent in your standing with the PC. Having reviewed hundreds of submissions, the most common rejection causes are wrong load charts, missing thorough-examination certificates, and capacity calculations that ignore accessory weight — all avoidable with competent planning the first time.</p>
 
       <h2>How to Get an Exact Price</h2>
-      <p>Send the load details (weight, dimensions, lift points), the equipment (make, model, configuration), the site (address, access, ground), and the dates. Any competent provider should turn that into a fixed written quote within 24 hours — we do, with the plan itself typically delivered 24–48 hours after you confirm. You will find our full service details on the <a href="/services/lift-plans">lift plan writing service</a> page.</p>
+      <p>Send the load details (weight, dimensions, lift points), the equipment (make, model, configuration), the site (address, access, ground), and the dates. Any competent provider should turn that into a fixed written quote within 24 hours — we do it in four working hours, with the plan itself typically delivered 24–48 hours after you confirm. You will find our full service details on the <a href="/services/lift-plans">lift plan writing service</a> page.</p>
 
       <h2>How RMT Solutions Prices Lift Plans</h2>
       <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 my-8">
-        <p class="text-gray-300 mb-6">Every plan is written by Ricky Marsh, a CPCS A61 Appointed Person with 35 years of construction experience and over 1,000 lift plans delivered. Fixed prices from £200, quoted within 24 hours, no hourly billing, and revisions arising from PC review included. We write <a href="/services/excavator-lift-plans">excavator</a>, <a href="/services/telehandler-lift-plans">telehandler</a>, <a href="/services/lorry-loader-lift-plans">lorry loader</a> and <a href="/services/mobile-crane-lift-plans">mobile crane lift plans</a> UK-wide.</p>
+        <p class="text-gray-300 mb-6">Every plan is written by Ricky Marsh, a CPCS A61 Appointed Person with 35 years of construction experience and over 1,000 lift plans delivered. Fixed prices from £200, quoted within 4 working hours, no hourly billing, and revisions arising from PC review included. We write <a href="/services/excavator-lift-plans">excavator</a>, <a href="/services/telehandler-lift-plans">telehandler</a>, <a href="/services/lorry-loader-lift-plans">lorry loader</a> and <a href="/services/mobile-crane-lift-plans">mobile crane lift plans</a> UK-wide.</p>
         <a href="/contact" class="inline-block bg-amber-500 hover:bg-amber-400 text-slate-900 px-6 py-3 rounded-xl font-semibold transition">Get a fixed quote today</a>
       </div>
     `,
   },
   'what-is-bs-7121-complete-guide': {
-    title: 'What is BS 7121? UK Guide to Safe Use of Cranes',
-    description: 'BS 7121 is the British Standard for the safe use of cranes. Learn what each part covers, how it links to LOLER 1998, and what UK contractors need to comply.',
+    title: 'BS 7121 Explained: Every Part, and What Sites Get Wrong',
+    description: 'What every part of BS 7121 covers, how it links to LOLER 1998, and the gaps where UK sites most often fall short of the standard in practice.',
     keywords: 'bs 7121, what is bs 7121, bs 7121 part 1, bs 7121-1, bs 7121-3 mobile cranes, bs 7121-5 tower cranes, bs 7121-4 lorry loaders, safe use of cranes british standard, appointed person bs 7121, basic standard complex lift, lift categorisation, code of practice safe use of cranes',
     category: 'Compliance',
     readTime: '16 min read',
@@ -968,6 +968,11 @@ const blogPosts = {
     imageAlt: 'Mobile crane lifting a structural steel section during erection — operation governed by BS 7121 code of practice for safe use of cranes',
     content: `
       <p class="lead">If you have spent any time around UK lifting operations you will have seen "BS 7121" stamped across method statements, lift plans, tender returns, and contract specifications. It is referenced more frequently than almost any other technical standard in the industry — yet many of the people relying on it could not say with confidence what it actually contains, how its various parts fit together, or what its legal status really is. This guide explains BS 7121 in full: what it is, what each part covers, how it links to LOLER 1998, and what it means in practice for anyone planning or supervising crane operations on a UK site.</p>
+      <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 my-8">
+        <p class="text-gray-300 mb-0">Not sure your lifting documentation would survive scrutiny against BS 7121? Our <a href="/services/lift-plan-checking">independent lift plan checking service</a> reviews plans against LOLER 1998 and BS 7121 and returns a written Category A/B determination in 24–48 hours.</p>
+        <p class="mt-4 mb-0"><a href="/contact" class="text-amber-400 font-semibold">Get a quote — reply within 4 working hours →</a></p>
+      </div>
+
 
       <h2>What is BS 7121?</h2>
       <p>BS 7121 is the British Standard for the safe use of cranes. Published by the British Standards Institution (BSI), it is the recognised UK code of practice covering every aspect of crane operations — planning, equipment selection, personnel competence, communication, supervision, and management. It is not a single document but a family of related standards, each addressing a different category of equipment or a different aspect of safe operation.</p>
@@ -1174,8 +1179,8 @@ const blogPosts = {
     // 0.23% CTR. Title now leads with the 9-part contents + example angle
     // (the "lifting plan example/sample" query cluster, ~350 imps, has no
     // dedicated result) and the description opens with the answer.
-    title: 'What is a Lift Plan? The 9 Parts, Example & LOLER Rules',
-    description: 'A lift plan sets out how a load will be lifted safely — the load, machine, capacity at radius, rigging and site hazards. See all 9 parts with an example diagram.',
+    title: 'Lift Plan Example: All 9 Sections Annotated + Free Template',
+    description: 'See a real lift plan section by section — all 9 parts annotated by a CPCS Appointed Person — then download the editable Word template to build your own.',
     keywords: 'what is a lift plan, what is a lifting plan, what is the lifting plan, lifting plan, lift plan, lift plan UK, LOLER lift plan, lift plan construction, lift plan contents, who writes a lift plan, lift plan document, crane lift plan, lifting operation plan, lifting plan example, example of a lift plan, sample lifting plan, lifting plan sample, lift plan details, what is lifting plan in safety',
     category: 'Compliance',
     readTime: '10 min read',
@@ -1185,6 +1190,11 @@ const blogPosts = {
     imageAlt: 'Mobile crane lifting a precast concrete unit on a UK construction site — a typical lifting operation covered by a lift plan',
     content: `
       <p class="lead">A lift plan is one of the most important documents on any UK construction site \u2014 yet it remains one of the most misunderstood. Whether you are a principal contractor managing a major project, a subcontractor organising a steel delivery, or a site manager trying to keep operations moving safely, understanding what a lift plan is, what it should contain, and when you need one is fundamental to LOLER compliance and site safety.</p>
+      <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 my-8">
+        <p class="text-gray-300 mb-0">Need one written rather than explained? Our <a href="/services/lift-plans">lift plan writing service</a> covers excavator, telehandler, lorry loader and mobile crane operations — fixed price from £200 + VAT, quoted within 4 working hours.</p>
+        <p class="mt-4 mb-0"><a href="/contact" class="text-amber-400 font-semibold">Get a quote — reply within 4 working hours →</a></p>
+      </div>
+
 
       <h2>What is a Lift Plan?</h2>
       <p>A lift plan is a documented plan for a lifting operation. It sets out how a load will be lifted safely from one position to another, identifying the equipment to be used, the risks involved, and the control measures required. Under the Lifting Operations and Lifting Equipment Regulations 1998 (LOLER), every lifting operation must be properly planned by a competent person before it takes place.</p>
@@ -1346,294 +1356,11 @@ const blogPosts = {
       <p><strong>About the Author:</strong> Ricky Marsh is a CPCS Appointed Person (A61) with 35 years of construction industry experience. He holds NEBOSH National Diploma, CertIOSH, MIIRSM and TIFSM qualifications, and provides lift planning and lift plan checking services to contractors across the UK through <a href="/">RMT Solutions</a>.</p>
     `,
   },
-  'what-does-a-lift-plan-checking-service-involve': {
-    title: 'What Does a Lift Plan Checking Service Involve?',
-    description: 'What does a lift plan checking service involve? Learn what gets checked, common rejection reasons, and how independent lift plan review improves site safety.',
-    keywords: 'lift plan checking service, lift plan review, crane lift plan review, lift plan checker, lift plan audit, LOLER lift plan check, appointed person lift plan review, tier 1 contractor lift plan, subcontractor lift plan review, lift plan compliance check',
-    category: 'Services',
-    readTime: '9 min read',
-    date: 'February 11, 2026',
-    dateModified: 'February 11, 2026',
-    image: '/images/services/lift-plan-checking-clipboard-inspection.webp',
-    imageAlt: 'Lifting engineer reviewing a lift plan against a checklist — the document scrutiny carried out during a lift plan checking service',
-    content: `
-      <p class="lead">If you manage lifting operations on construction projects \u2014 particularly as a principal contractor or tier 1 main contractor \u2014 you will know that subcontractors are required to submit lift plans before carrying out any lifting work on your site. But how do you know whether those plans are actually any good? A lift plan checking service provides independent, competent review of submitted lift plans to ensure they are LOLER compliant, technically accurate, and safe to proceed.</p>
-
-      <h2>Why Do Contractors Need a Lift Plan Checking Service?</h2>
-      <p>Under LOLER 1998, the duty to ensure lifting operations are properly planned does not sit solely with the subcontractor performing the lift. As a principal contractor or main contractor under CDM 2015, you have a duty to ensure that lifting operations on your site are planned and carried out safely. If a subcontractor submits a deficient lift plan and you allow the lift to proceed, the responsibility is shared.</p>
-
-      <p>The problem is that many site teams do not have the technical expertise to properly evaluate a lift plan. A site manager or project manager may be highly competent in their own discipline, but assessing whether a crane has adequate capacity at a given radius, whether the ground can support the outrigger loads, or whether the rigging arrangement is suitable for the load requires specialist knowledge.</p>
-
-      <p>This is where a lift plan checking service comes in. By having an experienced Appointed Person independently review every lift plan submitted to your project, you ensure that deficient plans are identified and corrected before the lift takes place \u2014 not after something goes wrong.</p>
-
-      <h2>What Gets Checked in a Lift Plan Review?</h2>
-      <p>A thorough lift plan review examines every element of the submitted plan against the requirements of LOLER, relevant British Standards (particularly BS 7121 for crane operations), and industry best practice. The review is not a tick-box exercise \u2014 it is a technical assessment by a competent person who understands lifting operations from the ground up.</p>
-
-      <h3>Load Weight Verification</h3>
-      <p>The first and most fundamental check is whether the stated load weight is accurate. This includes verifying that the weight has been obtained from a reliable source \u2014 manufacturer's data, structural drawings, delivery documentation, or calculation \u2014 and that the weight of all lifting accessories (slings, shackles, spreader beams, lifting frames) has been included in the total suspended load.</p>
-
-      <p>Inaccurate load weights are the single most common deficiency found during lift plan reviews. Estimated weights, weights taken from outdated information, or weights that omit the rigging are all regularly encountered. Even a small understatement of load weight can push a lift into an unsafe utilisation range.</p>
-
-      <h3>Equipment Selection and Capacity</h3>
-      <p>The review verifies that the selected lifting equipment \u2014 whether it is a mobile crane, excavator, telehandler, or lorry loader \u2014 has adequate capacity for the planned lift. This involves checking the manufacturer's load chart for the specific machine configuration against the planned working radius and confirming that the resulting utilisation is within acceptable limits.</p>
-
-      <p>Common errors identified at this stage include using the wrong load chart for the machine configuration (for example, quoting capacity with a shorter boom than is actually fitted), calculating the radius incorrectly, or failing to account for factors that reduce capacity such as working on a slope or with partially deployed outriggers.</p>
-
-      <h3>Rigging Assessment</h3>
-      <p>The review checks that the proposed rigging arrangement is appropriate for the load. This includes verifying that sling types, sizes, and configurations are suitable, that sling angles are within acceptable limits, that the working load limit of each component in the rigging chain is adequate, and that the attachment points on the load are suitable for the forces involved.</p>
-
-      <p>Rigging errors are particularly dangerous because they can cause the load to become unstable, shift, or detach during the lift. The review looks for common problems such as excessive sling angles (which dramatically increase the forces in each leg), mismatched sling lengths, inadequate attachment points, and failure to account for the load's centre of gravity.</p>
-
-      <h3>Ground Conditions</h3>
-      <p>For any lifting operation involving outriggers, stabilisers, or tracked equipment, the ground on which the machine operates must be assessed. The review checks that the lift plan has considered ground bearing capacity, proximity to excavations or soft ground, underground services, and the requirement for load-spreading measures beneath outrigger pads.</p>
-
-      <p>Ground failure beneath a crane or lifting machine can have catastrophic consequences. The review ensures that this critical element has been properly addressed, not simply assumed.</p>
-
-      <h3>Site-Specific Hazards</h3>
-      <p>Every lifting operation takes place in a specific environment with specific hazards. The review checks that the plan has identified and addressed hazards including overhead power lines, underground services, adjacent structures and scaffolding, other plant and vehicle movements, pedestrian routes, and weather conditions.</p>
-
-      <p>A common deficiency is the submission of generic lift plans that make no reference to the actual site conditions. A plan that does not mention the overhead power line running across the crane's operating area, or the open excavation adjacent to the outrigger position, is not a compliant plan regardless of how accurately the capacity calculations have been completed.</p>
-
-      <h3>Personnel and Competence</h3>
-      <p>The review checks that the plan identifies the key personnel involved in the lifting operation and confirms their competence. This includes verifying that operators hold appropriate CPCS or equivalent certification for the equipment they will be operating, and that slinger/signallers are properly trained and qualified.</p>
-
-      <h3>Thorough Examination Status</h3>
-      <p>Under LOLER Regulation 9, all lifting equipment and lifting accessories must have current thorough examination certificates. The review checks that the plan confirms this requirement has been met, or flags where certificates need to be verified before the lift can proceed.</p>
-
-      <h2>What Happens When a Plan Fails the Review?</h2>
-      <p>When a lift plan review identifies deficiencies, the plan is returned to the submitting contractor with clear feedback on what needs to be corrected. This is not about rejecting plans for the sake of it \u2014 it is about ensuring that every lift on your project is properly planned and safe to proceed.</p>
-
-      <p>Common reasons for lift plans being returned include:</p>
-
-      <ul>
-        <li><strong>Inaccurate or unverified load weights</strong> \u2014 the most frequent issue, where load weights are estimated rather than confirmed from reliable sources</li>
-        <li><strong>Incorrect capacity calculations</strong> \u2014 wrong load chart, wrong radius, or failing to deduct rigging weight from available capacity</li>
-        <li><strong>Missing ground assessment</strong> \u2014 no consideration of ground bearing capacity beneath outriggers or stabilisers</li>
-        <li><strong>No site-specific hazard identification</strong> \u2014 generic plans that do not address the actual conditions at the specific location</li>
-        <li><strong>Inadequate rigging details</strong> \u2014 vague or incorrect information about sling types, sizes, and configurations</li>
-        <li><strong>Missing or expired thorough examination certificates</strong> \u2014 equipment being proposed for use without current certification</li>
-        <li><strong>Incomplete information</strong> \u2014 plans that leave critical fields blank or contain insufficient detail for the operation to be carried out safely</li>
-      </ul>
-
-      <p>In most cases, the issues can be resolved by the submitting contractor amending and resubmitting the plan. The goal is to get the plan right, not to create obstacles. An experienced lift plan checker will provide constructive feedback that helps subcontractors understand what is required and improve the quality of their future submissions.</p>
-
-      <h2>How Does the Service Work in Practice?</h2>
-      <p>For most tier 1 contractors, a lift plan checking service operates as an ongoing arrangement throughout the duration of a project or across multiple projects. The typical workflow is straightforward:</p>
-
-      <p>Subcontractors submit their lift plans to the site team as normal. The site team forwards them to the Appointed Person providing the checking service \u2014 usually by email. The Appointed Person reviews the plan, typically within 24 hours for standard submissions, and returns it either approved or with comments identifying what needs to be corrected.</p>
-
-      <p>For projects with high volumes of lifting operations \u2014 such as large-scale structural steel erection or precast concrete programmes \u2014 the checking service may review dozens of plans per week. The turnaround time and communication process should be agreed at the start of the arrangement to avoid delays to the construction programme.</p>
-
-      <p>The service can operate entirely remotely. For the majority of lifting operations \u2014 excavators, telehandlers, lorry loaders, and standard crane lifts \u2014 the Appointed Person does not need to visit site to review the plan. The plan document, together with any supporting information such as site drawings and ground investigation reports, provides the information needed for a thorough review.</p>
-
-      <h2>The Benefits for Tier 1 Contractors</h2>
-      <p>A lift plan checking service provides several tangible benefits for main contractors and principal contractors.</p>
-
-      <h3>LOLER Compliance</h3>
-      <p>The most obvious benefit is compliance with your legal duties under LOLER. By having every submitted lift plan reviewed by a competent Appointed Person, you can demonstrate that you have taken reasonable steps to ensure lifting operations on your site are properly planned. This is critical in the event of an incident or HSE inspection.</p>
-
-      <h3>Reduced Risk</h3>
-      <p>Deficient lift plans that are identified and corrected before the lift takes place eliminate risks that would otherwise have been present during the operation. Over the course of a major project, a checking service may identify dozens of issues \u2014 any one of which could have led to an incident if the lift had proceeded as originally planned.</p>
-
-      <h3>Improved Subcontractor Standards</h3>
-      <p>Regular feedback from the checking service helps subcontractors improve the quality of their lift plans over time. Contractors who initially submit deficient plans often improve significantly once they understand what is expected. This creates a positive cycle where the standard of submissions improves as the project progresses.</p>
-
-      <h3>Consistent Standards Across the Project</h3>
-      <p>When multiple subcontractors are submitting lift plans to the same project, having a single Appointed Person reviewing all submissions ensures consistent standards are applied. Without this, the standard of lift planning can vary dramatically between different subcontractors, with some producing excellent plans and others producing plans that are barely adequate.</p>
-
-      <h3>Specialist Knowledge Without the Overhead</h3>
-      <p>Employing a full-time Appointed Person is not practical for most individual projects. A lift plan checking service gives you access to specialist lifting expertise on a flexible basis \u2014 you pay for the service when you need it, without the overhead of a permanent appointment.</p>
-
-      <h2>What Makes a Good Lift Plan Checking Service?</h2>
-      <p>Not all lift plan checking services are equal. The quality of the review depends entirely on the competence and experience of the person carrying it out. When selecting a provider, look for:</p>
-
-      <ul>
-        <li><strong>CPCS Appointed Person (A61) qualification</strong> \u2014 the recognised industry standard for lift planning competence</li>
-        <li><strong>Broad operational experience</strong> \u2014 ideally covering the full range of lifting equipment, not just mobile cranes. Many projects involve a mix of cranes, excavators, telehandlers, and lorry loaders, and the checking service must be competent across all types</li>
-        <li><strong>Construction industry background</strong> \u2014 understanding of how construction sites actually work, the pressures on subcontractors, and the practical realities of lifting operations in a site environment</li>
-        <li><strong>Clear and constructive feedback</strong> \u2014 the service should help subcontractors improve, not simply reject plans without explanation</li>
-        <li><strong>Reasonable turnaround times</strong> \u2014 lift plan reviews should not become a bottleneck in the construction programme</li>
-      </ul>
-
-      <h2>Common Questions About Lift Plan Checking</h2>
-
-      <h3>Does every lift on site need a reviewed plan?</h3>
-      <p>Under LOLER, every lifting operation must be planned. Whether every plan needs independent review depends on the risk profile of the project and your organisation's procedures. Many tier 1 contractors require all lift plans to be reviewed by an Appointed Person before any lifting work proceeds. Others may allow certain low-risk, routine operations to be managed under standing procedures with periodic audit. The safest approach is to review everything.</p>
-
-      <h3>Can the lift plan checker also write lift plans?</h3>
-      <p>Yes. An Appointed Person providing a checking service can also write lift plans where required \u2014 for example, for complex operations where the subcontractor does not have the competence to plan the lift themselves. However, it is good practice to maintain a separation between writing and checking where possible, so that plans receive genuinely independent review.</p>
-
-      <h3>What qualifications should the checker have?</h3>
-      <p>The checker must be a competent person under LOLER. For crane and construction lifting operations, this means a CPCS Appointed Person (A61) as a minimum. Additional qualifications such as NEBOSH or IOSH membership demonstrate broader health and safety competence. Practical experience across different equipment types and site conditions is equally important.</p>
-
-      <h3>How quickly can plans be reviewed?</h3>
-      <p>Standard turnaround is typically 24 hours for routine submissions. For urgent requirements \u2014 such as unplanned lifts or programme-critical operations \u2014 same-day review can usually be arranged. The key is establishing clear communication channels and expectations at the outset.</p>
-
-      <h2>How RMT Solutions Can Help</h2>
-      <p>RMT Solutions provides lift plan checking services to tier 1 contractors across the UK. With 35 years of construction industry experience and CPCS Appointed Person (A61) qualification, we review lift plans for all equipment types \u2014 mobile cranes, tower cranes, <a href="/blog/excavator-lift-plans-complete-guide">excavators</a>, <a href="/blog/telehandler-lift-plans-complete-guide">telehandlers</a>, and <a href="/blog/lorry-loader-lift-plans-guide">lorry loaders</a>.</p>
-
-      <p>Our service is trusted by leading UK contractors including Wates, Caddick, and GMI Construction. We provide fast turnaround, clear and constructive feedback, and consistent standards across your projects.</p>
-
-      <p>Whether you need a checking service for a single project or an ongoing arrangement across your portfolio, we can tailor the service to your requirements.</p>
-
-      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
-        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need a Lift Plan Checking Service?</h3>
-        <p class="text-gray-300 mb-6">RMT Solutions provides professional lift plan checking for tier 1 contractors across the UK. Trusted by Wates, Caddick, and GMI Construction. Fast turnaround from a CPCS Appointed Person with 35 years of experience.</p>
-        <a href="/contact" class="btn-primary inline-block">Get a Quote</a>
-      </div>
-
-      <p><strong>About the Author:</strong> Ricky Marsh is a CPCS Appointed Person (A61) with 35 years of construction industry experience. He holds NEBOSH National Diploma, CertIOSH, MIIRSM and TIFSM qualifications, and provides <a href="/services/lift-plan-checking">lift plan checking services</a> to tier 1 contractors across the UK through <a href="/">RMT Solutions</a>.</p>
-    `,
-  },  'what-is-loler-complete-guide': {
-    title: 'LOLER 1998 Explained: A Plain-English Guide for UK Sites',
-    description: 'LOLER 1998 in plain English: who it applies to, what counts as lifting equipment, thorough examination intervals, and the common compliance gaps on UK sites.',
-    category: 'Compliance',
-    readTime: '8 min read',
-    date: 'January 28, 2026',
-    dateModified: 'July 8, 2026',
-    image: '/images/services/loler-thorough-examination-lifting-equipment-uk.webp',
-    imageAlt: 'Competent person carrying out a LOLER thorough examination of lifting equipment on a UK site, inspecting a hook and chain sling for defects',
-    content: `
-      <p class="lead">The Lifting Operations and Lifting Equipment Regulations 1998 (LOLER) is one of the most important pieces of health and safety legislation affecting construction sites across the UK. If you're a contractor, site manager, or anyone involved in lifting operations, understanding LOLER isn't just about compliance—it's about keeping people safe.</p>
-
-      <h2>What is LOLER?</h2>
-      <p>LOLER is a set of regulations that came into force on 5 December 1998. They place duties on people and companies who own, operate, or have control over lifting equipment. The regulations cover all lifting equipment used at work, from the smallest hoist to the largest tower crane.</p>
-
-      <p>The Health and Safety Executive (HSE) enforces LOLER, and the regulations work alongside other health and safety legislation including the Health and Safety at Work Act 1974 and the Provision and Use of Work Equipment Regulations 1998 (PUWER).</p>
-
-      <h2>Who Does LOLER Apply To?</h2>
-      <p>LOLER applies to:</p>
-      <ul>
-        <li>Employers who own or control lifting equipment</li>
-        <li>Self-employed persons using lifting equipment</li>
-        <li>Those who manage or control the use of lifting equipment</li>
-      </ul>
-
-      <p>In construction, this typically means main contractors, subcontractors, plant hire companies, and anyone responsible for coordinating lifting operations on site.</p>
-
-      <h2>What Equipment is Covered?</h2>
-      <p>LOLER covers all lifting equipment used at work, including:</p>
-      <ul>
-        <li>Tower cranes and mobile cranes</li>
-        <li>Excavators used for lifting (not just digging)</li>
-        <li>Hoists and lifts</li>
-        <li>Telehandlers and forklift trucks</li>
-        <li>Lifting accessories (slings, shackles, chains)</li>
-        <li>Vehicle inspection hoists</li>
-        <li>Any equipment designed for lifting or lowering loads</li>
-      </ul>
-
-      <h2>Key LOLER Requirements</h2>
-
-      <h3>1. Strength and Stability (Regulation 4)</h3>
-      <p>Lifting equipment must be of adequate strength and stability for each load. This is where proper lift planning becomes critical—you need to ensure the equipment is suitable for the task and that stability is maintained throughout the operation.</p>
-
-      <h3>2. Lifting Equipment for Lifting Persons (Regulation 5)</h3>
-      <p>If equipment is used to lift people, it must be marked accordingly and have additional safety features to prevent falling. This is particularly relevant for MEWPs (Mobile Elevating Work Platforms) and personnel hoists.</p>
-
-      <h3>3. Positioning and Installation (Regulation 6)</h3>
-      <p>Lifting equipment must be positioned and installed to minimise risk. For tower cranes, this includes proper foundation design and checks. For mobile cranes, it means proper ground conditions and setup on suitable bearing surfaces.</p>
-
-      <h3>4. Marking of Lifting Equipment (Regulation 7)</h3>
-      <p>Equipment must be clearly marked with its safe working load (SWL). Where it's not practicable to mark the equipment itself, the information must be kept with it.</p>
-
-      <h3>5. Organisation of Lifting Operations (Regulation 8)</h3>
-      <p>This is the "lift planning" requirement. Every lifting operation must be:</p>
-      <ul>
-        <li>Properly planned by a competent person</li>
-        <li>Appropriately supervised</li>
-        <li>Carried out in a safe manner</li>
-      </ul>
-
-      <p>This means you need a written lift plan for complex lifts, prepared by someone with the necessary knowledge and experience—typically a CPCS Appointed Person (A61).</p>
-
-      <h3>6. Thorough Examination and Inspection (Regulation 9)</h3>
-      <p>LOLER requires:</p>
-      <ul>
-        <li>Initial thorough examination before first use</li>
-        <li>Thorough examination after installation and before use</li>
-        <li>Periodic thorough examination (at least every 6 or 12 months)</li>
-        <li>Thorough examination after exceptional circumstances</li>
-      </ul>
-      <p>Which interval applies to which equipment — and the paperwork you must be able to produce — is covered in full in our dedicated guide: <a href="/blog/loler-thorough-examination-guide">LOLER thorough examination: 6 or 12 months?</a></p>
-
-      <h2>What is a "Competent Person"?</h2>
-      <p>LOLER frequently refers to "competent persons." This means someone with sufficient training, experience, knowledge, and other qualities to enable them to properly assist in undertaking the measures needed to comply with the requirements.</p>
-
-      <p>For lift planning, this typically means a <a href="/blog/cpcs-appointed-person-guide">CPCS Appointed Person who holds the A61 qualification</a>. They have been trained to plan lifting operations, select appropriate equipment, calculate loads and capacities, and ensure operations comply with LOLER and BS 7121.</p>
-
-      <h2>When Do You Need a Lift Plan?</h2>
-      <p>LOLER Regulation 8 requires ALL lifting operations to be properly planned. However, the complexity of the plan should match the complexity of the lift:</p>
-
-      <ul>
-        <li><strong>Simple, routine lifts:</strong> May only require a brief assessment and toolbox talk</li>
-        <li><strong>Complex or non-routine lifts:</strong> Require a detailed written lift plan</li>
-      </ul>
-
-      <p>Factors that make a lift "complex" include:</p>
-      <ul>
-        <li>Heavy or awkwardly shaped loads</li>
-        <li>Lifts near power lines or structures</li>
-        <li>Tandem lifts (using two cranes)</li>
-        <li>Lifts over live areas (roads, occupied buildings)</li>
-        <li>Unfamiliar equipment or procedures</li>
-        <li>Restricted working space</li>
-      </ul>
-
-      <h2>LOLER Enforcement and Penalties</h2>
-      <p>The HSE takes LOLER very seriously. Breaches can result in:</p>
-      <ul>
-        <li>Improvement notices</li>
-        <li>Prohibition notices (stopping work immediately)</li>
-        <li>Prosecution</li>
-        <li>Unlimited fines</li>
-        <li>Imprisonment for serious breaches</li>
-      </ul>
-
-      <p>More importantly, failure to comply with LOLER puts lives at risk. Crane incidents often result in serious injuries or fatalities, and investigations almost always reveal inadequate planning or supervision.</p>
-
-      <h2>How RMT Solutions Can Help</h2>
-      <p>At RMT Solutions, we specialise in LOLER compliant lift planning. As a CPCS Appointed Person with 35 years of construction experience, I provide:</p>
-
-      <ul>
-        <li><a href="/services/lift-plans">Detailed written lift plans</a> complying with LOLER Regulation 8</li>
-        <li><a href="/services/tower-crane">Appointed Person contracts</a> for ongoing compliance</li>
-        <li><a href="/services/lift-plan-checking">Review and checking of subcontractor lift plans</a></li>
-        <li>Site visits and supervision where required</li>
-        <li>Expert advice on equipment selection and planning</li>
-      </ul>
-
-      <h2>Common LOLER Questions</h2>
-
-      <h3>Do I need a lift plan for an excavator?</h3>
-      <p>Yes, if the excavator is being used for lifting rather than just digging. Once you attach lifting accessories (chains, slings), it becomes lifting equipment under LOLER and requires proper planning. See our <a href="/blog/excavator-lift-plans-complete-guide">complete guide to excavator lift plans</a> for more detail.</p>
-
-      <h3>Who is responsible for LOLER compliance on site?</h3>
-      <p>Ultimately, the duty holder—usually the main contractor or whoever controls the site. However, everyone involved has responsibilities, including equipment hirers, subcontractors, and operatives.</p>
-
-      <h3>How long should I keep LOLER documentation?</h3>
-      <p>Thorough examination reports must be kept until the next examination is completed. Lift plans should be kept for the duration of the project plus a reasonable period afterwards (typically 3-6 months minimum).</p>
-
-      <h3>Can I do my own lift planning?</h3>
-      <p>Only if you are competent to do so. For complex lifts, you need someone with appropriate training and qualifications—typically a <a href="/blog/cpcs-appointed-person-guide">CPCS Appointed Person A61</a>.</p>
-
-      <h2>Conclusion</h2>
-      <p>LOLER compliance isn't optional—it's a legal requirement that protects lives. Proper lift planning by a competent person is the cornerstone of safe lifting operations.</p>
-
-      <p>If you're unsure about your LOLER obligations or need professional lift planning services, get in touch. We can help ensure your lifting operations are safe, legal, and properly documented.</p>
-
-      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
-        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need LOLER Compliant Lift Plans?</h3>
-        <p class="text-gray-300 mb-6">Get expert lift planning from a qualified CPCS Appointed Person. All plans comply with LOLER Regulation 8 and BS 7121.</p>
-        <a href="/contact" class="btn-primary inline-block">Request a Quote</a>
-      </div>
-    `,
-  },
   'when-do-you-need-lift-plan': {
-    title: 'When Do You Need a Lift Plan? LOLER Requirements Explained',
+    title: 'When Do You Need a Lift Plan? Decision Flowchart + Examples',
     // CTR fix (Jun 2026): answer-first description with the decision-flowchart
     // hook — this URL had 8,425 impressions at position 8 but 1.25% CTR.
-    description: 'Every lift must be planned under LOLER 1998 — but only complex lifts need a full written plan. Decision flowchart, real examples, and when a generic plan will do.',
+    description: 'Not every lift needs a written plan. Our decision flowchart shows what LOLER 1998 actually requires, with worked site examples and the complex-lift triggers.',
     keywords: 'when do you need a lift plan, do you need a lift plan for every lift, when is a lift plan required, lift plan requirements, hse lifting plan, when planning a lift what is the first thing you should do, do you need a lift plan for a telehandler, lift plans are mandatory for, crane lift plan requirements, loler regulation 8',
     category: 'Planning',
     readTime: '8 min read',
@@ -1643,6 +1370,11 @@ const blogPosts = {
     imageAlt: 'Excavator lifting a concrete ring into an excavation — an everyday operation that still requires a LOLER lift plan',
     content: `
       <p class="lead">One of the most common questions I get asked is: "Do I really need a lift plan for this?" The short answer is: yes, LOLER requires ALL lifting operations to be properly planned. But the level of planning detail varies depending on the complexity of the operation. If you are not sure what the document itself contains, start with our guide to <a href="/blog/what-is-a-lift-plan">what a lift plan is</a>.</p>
+      <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 my-8">
+        <p class="text-gray-300 mb-0">Short on time? If the lift is on the programme and you need the paperwork to stand up to a principal contractor, we write it for you. <a href="/services/lift-plans">Lift planning services</a> from a CPCS A61 Appointed Person — fixed price from £200 + VAT, delivered in 24–48 hours.</p>
+        <p class="mt-4 mb-0"><a href="/contact" class="text-amber-400 font-semibold">Get a quote — reply within 4 working hours →</a></p>
+      </div>
+
 
       <h2>The Legal Requirement</h2>
       <p>LOLER Regulation 8 is crystal clear. It states that every lifting operation involving lifting equipment must be:</p>
@@ -2105,8 +1837,8 @@ const blogPosts = {
     `,
   },
   'cpcs-appointed-person-guide': {
-    title: 'CPCS A61 Appointed Person: Duties, Training & UK Lift Plans',
-    description: 'CPCS A61 Appointed Person explained — duties under LOLER 1998 and BS 7121, training routes, A61 Basic vs Advanced, and when UK contractors must appoint one.',
+    title: 'CPCS A61 Appointed Person: Duties, and When to Hire One',
+    description: 'What a CPCS A61 Appointed Person is legally responsible for under BS 7121 and LOLER 1998 — plus in-house versus contracted, and how to select one.',
     keywords: 'cpcs a61 appointed person, cpcs appointed person, a61 appointed person, appointed person for lifting operations, appointed person lifting operations, appointed person, cpcs a61, a61 advanced, a61 basic, lifting appointed person, appointed person duties, appointed person responsibilities, appointed person bs 7121, loler appointed person, lift planning experts, lift planning services',
     category: 'Compliance',
     readTime: '11 min read',
@@ -2116,6 +1848,11 @@ const blogPosts = {
     imageAlt: 'CPCS A61 Appointed Person in hi-vis and hard hat reviewing a lift plan on a tablet on a UK construction site, with a mobile crane working in the background',
     content: `
       <p class="lead">The <strong>CPCS A61 Appointed Person</strong> qualification is the UK industry standard for planning and managing lifting operations. If your project involves cranes, telehandlers, excavators or any other lifting equipment, LOLER 1998 and BS 7121 require that the operation is planned by a competent person — and on UK construction sites, that competence is most often demonstrated by holding the CPCS A61 card. This guide explains what a CPCS Appointed Person actually does, the difference between A61 Basic and A61 Advanced, when you legally need to appoint one, and how to choose the right person for your project.</p>
+      <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 my-8">
+        <p class="text-gray-300 mb-0">Need an Appointed Person rather than the qualification? You can <a href="/services/appointed-person">hire a CPCS A61 Appointed Person</a> for a single lift, a project or a retained contract — no training cost, no cover gap, 35 years of experience on site.</p>
+        <p class="mt-4 mb-0"><a href="/contact" class="text-amber-400 font-semibold">Get a quote — reply within 4 working hours →</a></p>
+      </div>
+
 
       <h2>What is a CPCS A61 Appointed Person?</h2>
       <p>A <strong>CPCS Appointed Person</strong> — often shortened to "AP" or referred to simply as the <em>appointed person for lifting operations</em> — is the individual designated under LOLER 1998 Regulation 8 to plan a lifting operation, select the equipment and personnel, prepare the lift plan, and ensure the lift is properly supervised. The CPCS A61 card (issued by the Construction Plant Competence Scheme) is the industry-recognised qualification demonstrating that the holder is competent to fulfil this role.</p>
@@ -3031,7 +2768,10 @@ export async function generateMetadata({ params }) {
       title: post.title,
       description: post.description,
       url: `https://www.rmtsafetysolutions.com/blog/${params.slug}`,
-      images: [post.image],
+      // og:image falls back to the site card when a post has no hero image —
+      // without this, links shared into WhatsApp and Teams render as bare text.
+      images: [post.image || '/images/og-lift-planning.jpg'],
+      siteName: 'RMT Solutions - Lift Planning Specialists',
       type: 'article',
     },
     // Explicit per-post X/Twitter card — previously the root layout's
@@ -3040,7 +2780,7 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
-      images: [post.image],
+      images: [post.image || '/images/og-lift-planning.jpg'],
     },
   };
 }
@@ -3441,11 +3181,9 @@ const faqData = {
       a: 'No. The HSE does not publish an official lifting plan template. Its requirement, under LOLER 1998 and the L113 Approved Code of Practice, is that every lifting operation is properly planned by a competent person, with the detail proportionate to the risk. Inspectors look for evidence of genuine site-specific planning — not a particular form.',
     },
   ],
-  'what-does-a-lift-plan-checking-service-involve': [
-    {
-      q: 'Does every lift on site need a reviewed plan?',
-      a: 'Under LOLER, every lifting operation must be planned. Whether every plan needs independent review depends on the risk profile of the project and your organisation\u2019s procedures. Many tier 1 contractors require all lift plans to be reviewed by an Appointed Person before any lifting work proceeds. The safest approach is to review everything.',
-    },
+  // Merged in from the retired duplicate post (Jul 2026) — these two
+  // questions were the only genuinely unique content on that page.
+  'lift-plan-checking-what-gets-checked-and-why-plans-get-rejected': [
     {
       q: 'Can the lift plan checker also write lift plans?',
       a: 'Yes. An Appointed Person providing a checking service can also write lift plans where required, for example for complex operations where the subcontractor does not have the competence to plan the lift themselves. However, it is good practice to maintain a separation between writing and checking where possible, so that plans receive genuinely independent review.',
@@ -3455,8 +3193,8 @@ const faqData = {
       a: 'The checker must be a competent person under LOLER. For crane and construction lifting operations this means a CPCS Appointed Person (A61) as a minimum. Additional qualifications such as NEBOSH or IOSH membership demonstrate broader health and safety competence, and practical experience across different equipment types is equally important.',
     },
     {
-      q: 'How quickly can lift plans be reviewed?',
-      a: 'Standard turnaround is typically 24 hours for routine submissions. For urgent requirements such as unplanned lifts or programme-critical operations, same-day review can usually be arranged. The key is establishing clear communication channels and expectations at the outset.',
+      q: 'Does every lift on site need a reviewed plan?',
+      a: 'Under LOLER, every lifting operation must be planned. Whether every plan needs independent review depends on the risk profile of the project and your organisation\u2019s procedures. Many tier 1 contractors require all lift plans to be reviewed by an Appointed Person before any lifting work proceeds. The safest approach is to review everything.',
     },
   ],
   'what-is-loler-complete-guide': [
@@ -3537,7 +3275,7 @@ export default function BlogPost({ params }) {
   // duplicate Q&A section. Every other FAQ post gets a visible FAQ section so
   // the answers appear on-page (PAA / featured-snippet capture) and the schema
   // matches visible content.
-  const POSTS_WITH_INLINE_FAQ = new Set(['what-does-a-lift-plan-checking-service-involve'])
+  const POSTS_WITH_INLINE_FAQ = new Set([])
   const showVisibleFaqs = postFaqs && !POSTS_WITH_INLINE_FAQ.has(params.slug)
   const faqJsonLd = postFaqs
     ? {

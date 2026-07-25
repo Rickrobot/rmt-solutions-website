@@ -25,6 +25,8 @@ export const metadata = {
     description:
       'Free generic lift plan template as an editable Word document. 15-section format covering categorisation, capacity verification, ground conditions and sign-off. Prepared by a CPCS Appointed Person.',
     url: 'https://www.rmtsafetysolutions.com/resources/lift-plan-templates',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
 }

@@ -37,6 +37,7 @@ export const metadata = {
     description:
       'Ongoing tower crane Appointed Person contracts. 8-weekly audits, lift plan review, on-call AP support and full documentation pack.',
     url: 'https://www.rmtsafetysolutions.com/services/tower-crane',
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     images: ['/images/residential-tower-crane.webp'],
   },
 }

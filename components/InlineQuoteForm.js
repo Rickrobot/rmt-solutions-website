@@ -70,7 +70,7 @@ export default function InlineQuoteForm({
 
       if (data.success) {
         setSubmitted(true)
-        setStatus('Thanks — we will be in touch within 24 hours.')
+        setStatus('Thanks — we will be in touch within 4 working hours.')
         setFormData({ name: '', email: '', phone: '', brief: '', company_website: '' })
         trackEvent('form_submit_success')
       } else {
@@ -90,7 +90,7 @@ export default function InlineQuoteForm({
       <div className="bg-gradient-to-b from-slate-800/60 to-slate-900/60 rounded-2xl p-8 border border-amber-500/40 text-center">
         <div className="text-amber-400 font-display text-2xl font-bold mb-3">Thanks — message received</div>
         <p className="text-gray-300 mb-4">
-          We aim to respond within 24 hours. Need it sooner?
+          We aim to respond within 4 working hours. Need it sooner?
         </p>
         <a
           href="tel:+447803808093"
@@ -116,7 +116,7 @@ export default function InlineQuoteForm({
         </a>
       </div>
       <p className="text-gray-400 text-sm mb-5">
-        3 fields, 30 seconds. We reply within 24 hours.
+        3 fields, 30 seconds. We reply within 4 working hours.
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-4">

@@ -1,0 +1,179 @@
+SEO FIXES — ROUND 9 (25 July 2026)
+Source: full website review against GSC data, 24 Apr – 23 Jul 2026
+(1,134 clicks / 91,708 impressions / 1.24% CTR / avg pos ~10)
+
+Headline problem this round addresses: the site ranks for readers, not buyers.
+  /resources/  12,133 imp -> 328 clicks (2.70% CTR)
+  /blog/       81,529 imp -> 641 clicks (0.79% CTR)
+  /services/    5,826 imp ->  14 clicks (0.24% CTR)   <-- the money pages
+And 46 commercial-intent queries (service/hire/cost/quote/provider/near me)
+produced 1,653 impressions and ZERO clicks.
+
+VERIFIED: `next build` passes clean, 81 static pages, redirects and sitemap
+tested against a running production server.
+
+======================================================================
+1. FOUR BLOG TITLES + METAS REWRITTEN
+======================================================================
+These four URLs are 51% of all site impressions and convert at 0.54% CTR
+(55,594 impressions -> 302 clicks). They rank well but nobody clicks,
+because AI Overviews now answer definitional questions above the results.
+
+Fix: stop promising an ANSWER, start promising an ARTEFACT that a summary
+box cannot deliver. Every promise below is backed by an asset that already
+exists on the page — no clickbait.
+
+  /blog/when-do-you-need-lift-plan          21,363 imp, pos 7.6, 0.81% CTR
+    OLD: When Do You Need a Lift Plan? LOLER Requirements Explained
+    NEW: When Do You Need a Lift Plan? Decision Flowchart + Examples   (59)
+    Backed by: when-do-you-need-a-lift-plan-decision-flow.svg (already on page)
+
+  /blog/what-is-a-lift-plan                 16,129 imp, pos 12.3, 0.29% CTR
+    OLD: What is a Lift Plan? The 9 Parts, Example & LOLER Rules
+    NEW: Lift Plan Example: All 9 Sections Annotated + Free Template   (59)
+    Backed by: anatomy-of-a-lift-plan-diagram.svg + /downloads/lift-plan-template.docx
+
+  /blog/what-is-bs-7121-complete-guide       8,685 imp, pos 7.3, 0.62% CTR
+    OLD: What is BS 7121? UK Guide to Safe Use of Cranes
+    NEW: BS 7121 Explained: Every Part, and What Sites Get Wrong       (55)
+    NOTE: originally proposed "+ Free Compliance Checklist" — dropped,
+    because no such checklist exists yet. Do not re-add the promise until
+    the asset is built. (See TODO below.)
+
+  /blog/cpcs-appointed-person-guide          9,417 imp, pos 13.0, 0.30% CTR
+    OLD: CPCS A61 Appointed Person: Duties, Training & UK Lift Plans
+    NEW: CPCS A61 Appointed Person: Duties, and When to Hire One       (55)
+    Strategic: the whole "appointed person / CPCS A61" cluster is 6,255
+    impressions and 2 clicks, because those searchers want the TRAINING
+    COURSE. Title pivoted from "Training" to "When to Hire One" to peel
+    off the small commercial slice instead of competing with NOCN/CITB.
+
+All four are under the 60-char SERP limit. `absolute` title handling on blog
+posts is unchanged, so no brand suffix is appended.
+
+======================================================================
+2. RESPONSE TIME — 4 WORKING HOURS EVERYWHERE  (13 edits, 7 files)
+======================================================================
+The contact page made THREE different promises: title tag said "4 Working
+Hours", body copy said "24 hours", submit button said "24 Hours".
+
+Standardised on 4 working hours for ENQUIRY/QUOTE response across:
+  app/contact/page.js          (success message, submit button, response
+                                card, body copy)
+  components/InlineQuoteForm.js (success message, 2 copy lines)
+  app/services/page.js          (form heading)
+  app/locations/page.js         (form heading)
+  app/services/lift-plans/page.js          (process step 02 "Quote")
+  app/services/mobile-crane-lift-plans/page.js (process step 02 "Quote")
+  app/blog/[slug]/page.js       (2 references in lift-plan-cost-uk)
+
+DELIBERATELY NOT CHANGED — these are different commitments, not reply times:
+  - 24-48hr lift plan DELIVERY turnaround
+  - 24hr lift plan CHECKING/review turnaround
+  - aerial survey data delivery
+  - tower crane specific-plan issue times
+
+======================================================================
+3. MERGED /services/lift-plan-review INTO /services/lift-plan-checking
+======================================================================
+Two pages (1,979 and 2,049 words) describing the SAME service, splitting
+each other's authority. Both were outranked by blog posts on the same topic.
+Checking was the stronger page (more FAQs, Category A/B framing), so it survives.
+
+Carried across from the retired page:
+  - "Equipment types we review" section (6 equipment types, each linking to
+    its service leaf — also reciprocates links to the equipment pages)
+  - FAQ: "Is a lift plan review a legal requirement?"
+  - FAQ: "Can subcontractors use your review service?"
+    (added to BOTH the FAQPage JSON-LD and the rendered FAQ list, so schema
+     still matches visible content — a Google rich-result requirement)
+  - All "lift plan review" keywords absorbed into the checking page metadata
+
+  Title: Independent Lift Plan Checking & Review UK   (42 + 16 suffix = 58)
+  FAQ count on merged page: 10 questions
+
+Internal links repointed (6): Header nav, /testimonials,
+  /case-studies/chorlton-baths-balcony-lift,
+  /case-studies/caddick-tawd-valley-junction-4 (x2),
+  /services/aerial-site-surveys
+Header nav label: "Lift Plan Review" -> "Lift Plan Checking & Review"
+Removed from SERVICE_SLUGS in the sitemap.
+301 added (verified: resolves 200 in 2 hops incl. trailing-slash variant).
+
+======================================================================
+4. MERGED THE DUPLICATE LIFT PLAN CHECKING BLOG POSTS
+======================================================================
+/blog/what-does-a-lift-plan-checking-service-involve was the same article
+twice over — its checking half duplicated
+/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected,
+and its second half ("What is LOLER?", "Who Does LOLER Apply To?",
+"Key LOLER Requirements"...) duplicated /blog/what-is-loler-complete-guide.
+Duplicated on BOTH halves. Retired.
+
+Carried across to the surviving post (which had NO faqData at all — this
+gives it FAQ rich-result eligibility it never had):
+  - "Can the lift plan checker also write lift plans?"
+  - "What qualifications should the lift plan checker have?"
+  - "Does every lift on site need a reviewed plan?"
+
+Removed from: blogPosts, blog index listing, sitemap, POSTS_WITH_INLINE_FAQ.
+Case study link repointed. 301 added and verified.
+Net: app/blog/[slug]/page.js down ~28KB.
+
+======================================================================
+5. TOP-OF-PAGE COMMERCIAL CTAs ON THE FOUR BIG POSTS
+======================================================================
+Previously the value proposition appeared BELOW 2,000+ words of guide.
+Now a CTA block sits immediately after the lead paragraph, matching the
+existing in-body CTA styling (bg-slate-800/50 border rounded-xl).
+
+Each uses commercial anchor text — which also serves the anchor-text fix,
+since the blog previously linked to services with informational labels only:
+  when-do-you-need-lift-plan     -> "Lift planning services"
+  what-is-a-lift-plan            -> "lift plan writing service"
+  what-is-bs-7121-complete-guide -> "independent lift plan checking service"
+  cpcs-appointed-person-guide    -> "hire a CPCS A61 Appointed Person"
+All close with: "Get a quote — reply within 4 working hours →"
+
+======================================================================
+6. OPENGRAPH — og:image + og:site_name ACROSS 33 PAGES
+======================================================================
+Most pages had openGraph blocks with no image and no site name. Links shared
+into WhatsApp and Teams rendered as bare text — which matters more than usual
+for a business where site managers share links in WhatsApp groups.
+
+  - 32 static pages: added images: ['/images/og-lift-planning.jpg'] and/or
+    siteName where missing
+  - Blog posts: og:image and twitter:image now fall back to the site card
+    when a post has no hero image; siteName added
+  - Verified: every openGraph block on the site now has both fields
+
+======================================================================
+TODO — NOT DONE THIS ROUND
+======================================================================
+[ ] BS 7121 compliance checklist asset. Deliberately not auto-generated:
+    it is safety-critical content that would publish under Ricky's CPCS
+    registration and NEBOSH credentials, so it needs writing/approving by
+    him. Once it exists, the title can become
+    "BS 7121 Explained: Every Part + Free Compliance Checklist".
+[ ] Decision flowchart + annotated lift plan example as DOWNLOADABLE PDFs
+    (currently on-page SVGs only).
+[ ] Conversion tracking — still not measured. Highest priority overall:
+    none of this can be judged without it.
+[ ] Google Business Profile (LocalBusiness schema is built and has nothing
+    to attach to).
+[ ] Contact page: file upload, WhatsApp as primary CTA, proof above the form.
+[ ] Mobile crane cluster: 1,523 impressions, 0 clicks.
+    /services/mobile-crane-lift-plans is only 733 words vs 4,007 for excavator.
+[ ] Location pages: 12 pages produced 7 clicks in 90 days.
+
+======================================================================
+HOUSEKEEPING NOTE
+======================================================================
+The retired page was MOVED to _to_delete/services-lift-plan-review/ rather
+than deleted, because the remote session's mount cannot unlink files.
+_to_delete/ is gitignored, so the commit shows a clean deletion of
+app/services/lift-plan-review/page.js. Delete the _to_delete/ folder in
+Finder when convenient. Same for _to_delete/git-artifacts/.
+
+40 files changed, 203 insertions(+), 968 deletions(-)

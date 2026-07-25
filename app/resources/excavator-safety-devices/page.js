@@ -14,6 +14,8 @@ export const metadata = {
     description:
       'A plain-English explainer of every excavator safety device — lifting-specific and standard — from a CPCS A61 Appointed Person.',
     url: 'https://www.rmtsafetysolutions.com/resources/excavator-safety-devices',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'article',
   },
 }

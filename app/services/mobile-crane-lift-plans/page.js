@@ -29,6 +29,7 @@ export const metadata = {
     description:
       'CPCS Appointed Person mobile crane lift plans for all duty types. Configuration-specific load charts, ground bearing calculations and exclusion zones to LOLER 1998 and BS 7121.',
     url: 'https://www.rmtsafetysolutions.com/services/mobile-crane-lift-plans',
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     images: ['/images/mobile-crane-steel-erection.webp'],
   },
 }
@@ -135,7 +136,7 @@ export default function MobileCraneLiftPlansPage() {
 
   const process = [
     { step: '01', title: 'Enquiry', description: 'Tell us the load, the site and the crane if it is already chosen.' },
-    { step: '02', title: 'Quote', description: 'Fixed-price quote within 24 hours, with the site-visit scope agreed up front.' },
+    { step: '02', title: 'Quote', description: 'Fixed-price quote within 4 working hours, with the site-visit scope agreed up front.' },
     { step: '03', title: 'Survey & plan', description: 'Site visit where needed, then full plan worked up with verified calculations.' },
     { step: '04', title: 'Delivery', description: 'LOLER and BS 7121 compliant lift plan, ready for your file and site team.' },
   ]

@@ -11,6 +11,7 @@ export const metadata = {
     title: 'Free Lorry Loader Lift Plan Template (HIAB)',
     description: 'Download a free 17-section lorry loader / HIAB lift plan template, BS 7121-4 and ALLMI aligned, with 12 pre-populated hazards and a 5×5 risk matrix.',
     url: 'https://www.rmtsafetysolutions.com/resources/lorry-loader-lift-plan-templates',
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
     images: [
       {

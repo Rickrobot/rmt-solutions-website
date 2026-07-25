@@ -23,6 +23,7 @@ export const metadata = {
     title: 'Lift Planning Services UK | Lift Plans from £200',
     description: 'Expert lift planning services from a CPCS Appointed Person. LOLER compliant lift plans for excavators, telehandlers, lorry loaders, mobile and tower cranes. Fixed prices, UK-wide.',
     url: 'https://www.rmtsafetysolutions.com/services/lift-plans',
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     images: ['/images/mobile-crane-steel-erection.webp'],
   },
 }
@@ -145,7 +146,7 @@ export default function LiftPlansPage() {
 
   const process = [
     { step: '01', title: 'Enquiry', description: 'Tell us about your lifting operation and requirements' },
-    { step: '02', title: 'Quote', description: 'We provide a competitive quote within 24 hours' },
+    { step: '02', title: 'Quote', description: 'We provide a competitive quote within 4 working hours' },
     { step: '03', title: 'Information', description: 'You provide equipment specs, load details, and site information' },
     { step: '04', title: 'Delivery', description: 'We deliver your LOLER compliant lift plan' },
   ]

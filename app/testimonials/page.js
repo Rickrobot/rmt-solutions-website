@@ -13,6 +13,8 @@ export const metadata = {
     description:
       'Independent testimonials from Caddick Construction, Wates Construction and Sunel Group project managers, site managers and HSE managers on RMT Solutions Ltd lift plan reviews, written lift plans and LOLER-compliant lifting documentation.',
     url: 'https://www.rmtsafetysolutions.com/testimonials',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
 }
@@ -374,7 +376,7 @@ export default function TestimonialsPage() {
             </p>
             <p>
               The work referenced covers the full range of RMT Solutions{' '}
-              <Link href="/services/lift-plan-review" className="text-amber-400 hover:text-amber-300 underline">
+              <Link href="/services/lift-plan-checking" className="text-amber-400 hover:text-amber-300 underline">
                 lift plan review
               </Link>
               ,{' '}

@@ -12,6 +12,8 @@ export const metadata = {
     title: 'Free Telehandler Lift Plan Templates UK | LOLER Compliant',
     description: 'Download free LOLER-compliant telehandler lift plan templates for suspended load and fork-carried operations. Prepared by a CPCS Appointed Person with 35+ years experience.',
     url: 'https://www.rmtsafetysolutions.com/resources/telehandler-lift-plan-templates',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
 }

@@ -12,6 +12,8 @@ export const metadata = {
     title: 'Free Overhead & Gantry Crane Lift Plan Template | BS 7121-7',
     description: 'Download a free overhead, gantry and bridge crane lift plan template to BS 7121-7 and LOLER 1998. From a CPCS Appointed Person.',
     url: 'https://www.rmtsafetysolutions.com/resources/overhead-gantry-crane-lift-plan-templates',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
 }

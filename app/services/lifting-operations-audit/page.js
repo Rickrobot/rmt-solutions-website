@@ -19,6 +19,8 @@ export const metadata = {
     title: 'Lifting Operations Site Audit | LOLER Compliance',
     description: 'Independent site audit of your lifting operations by a CPCS A61 Appointed Person — lift plans, LOLER records, supervision and equipment checked.',
     url: 'https://www.rmtsafetysolutions.com/services/lifting-operations-audit',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
 }

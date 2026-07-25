@@ -13,6 +13,8 @@ export const metadata = {
     title: 'About | CPCS Appointed Person with 35 Years Experience',
     description: 'Meet Ricky Marsh, CPCS Appointed Person (A61, Reg 40389279) with 35 years in UK construction. NEBOSH Diploma, CertIOSH, MIIRSM, TIFSM.',
     url: 'https://www.rmtsafetysolutions.com/about',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'profile',
   },
 }

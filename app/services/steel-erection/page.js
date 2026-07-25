@@ -16,6 +16,7 @@ export const metadata = {
     title: 'Steel Erection Planning UK | Lift Plans',
     description: 'Complete lift planning for structural steel erection. Fabrication drawing reviews, erection sequences, crane selection, tandem lifts. CPCS Appointed Person services.',
     url: 'https://www.rmtsafetysolutions.com/services/steel-erection',
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     images: ['/images/mobile-crane-steel-erection.webp'],
   },
 }

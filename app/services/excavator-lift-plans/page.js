@@ -15,6 +15,8 @@ export const metadata = {
     title: 'Excavator Lift Plans UK | ISO 10567 & LOLER',
     description: 'CPCS Appointed Person excavator lift plans from £200 + VAT. Quote within 4 working hours, plan delivered in 24–48 hours.',
     url: 'https://www.rmtsafetysolutions.com/services/excavator-lift-plans',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
 }

@@ -15,6 +15,8 @@ export const metadata = {
     description:
       'UK legislation and the three tiers of excavator lifting device (overload warning, RCI, RCL), with a worked example. From a CPCS A61 Appointed Person.',
     url: 'https://www.rmtsafetysolutions.com/resources/excavator-rci-guide',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'article',
   },
 }

@@ -42,6 +42,7 @@ export const metadata = {
     description:
       'RMT Solutions has supported Caddick Construction with Appointed Person duties and independent lift plan reviews at Rivington Chase, Horwich — 116 affordable homes on the former Horwich Locomotive Works.',
     url: URL,
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'article',
     images: [
       {

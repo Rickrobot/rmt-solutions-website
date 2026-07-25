@@ -14,7 +14,7 @@ export default function Header() {
     { name: 'CPCS A61 Appointed Person', href: '/services/appointed-person' },
     { name: 'Lift Plan Writing', href: '/services/lift-plans' },
     { name: 'Lift Plan Checking', href: '/services/lift-plan-checking' },
-    { name: 'Lift Plan Review', href: '/services/lift-plan-review' },
+    { name: 'Lift Plan Checking & Review', href: '/services/lift-plan-checking' },
     { name: 'Excavator Lift Plans', href: '/services/excavator-lift-plans' },
     { name: 'Telehandler Lift Plans', href: '/services/telehandler-lift-plans' },
     { name: 'Lorry Loader Lift Plans', href: '/services/lorry-loader-lift-plans' },

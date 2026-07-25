@@ -153,6 +153,7 @@ export const metadata = {
     description:
       'CPCS Appointed Person lift planning services across the UK. Lift plan writing, independent checking, tower crane contracts, steel erection planning and aerial site surveys.',
     url: 'https://www.rmtsafetysolutions.com/services',
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     images: ['/images/og-lift-planning.jpg'],
   },
   alternates: {
@@ -338,7 +339,7 @@ export default function ServicesHub() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <InlineQuoteForm
             serviceName="Lift planning services — UK-wide"
-            heading="Tell us what you are lifting — we will reply within 24 hours"
+            heading="Tell us what you are lifting — we will reply within 4 working hours"
           />
         </div>
       </section>

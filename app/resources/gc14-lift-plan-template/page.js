@@ -26,6 +26,8 @@ export const metadata = {
     description:
       'The CITB GC14 lift plan form explained section by section by a CPCS A61 Appointed Person — plus a free editable Word alternative with no signup.',
     url: 'https://www.rmtsafetysolutions.com/resources/gc14-lift-plan-template',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
 }

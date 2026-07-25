@@ -13,6 +13,8 @@ export const metadata = {
     title: 'Free Excavator Lift Plan Template & Risk Assessment | CPA Compliant',
     description: 'Download free CPA/SFPSG compliant excavator lift plan template and risk assessment with 23 pre-populated hazards. Professional templates from a CPCS Appointed Person.',
     url: 'https://www.rmtsafetysolutions.com/resources/excavator-lift-plan-templates',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
 }

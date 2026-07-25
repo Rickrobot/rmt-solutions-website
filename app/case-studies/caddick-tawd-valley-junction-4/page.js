@@ -42,6 +42,7 @@ export const metadata = {
     description:
       'RMT Solutions has provided lift plan reviews for all lifting activities on Caddick Construction\'s Tawd Valley Junction 4 industrial scheme — 45 units, 100,000 sq ft, off the M58 at Skelmersdale.',
     url: URL,
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'article',
     images: [
       {
@@ -298,7 +299,7 @@ export default function CaddickTawdValleyJunction4Page() {
               <p className="text-gray-300 leading-relaxed">
                 RMT Solutions has been engaged to{' '}
                 <Link
-                  href="/services/lift-plan-review"
+                  href="/services/lift-plan-checking"
                   className="text-amber-400 hover:text-amber-300 underline"
                 >
                   review the lift plans
@@ -525,7 +526,7 @@ export default function CaddickTawdValleyJunction4Page() {
             contractors building portal-frame industrial schemes. Our other
             related services include{' '}
             <Link
-              href="/services/lift-plan-review"
+              href="/services/lift-plan-checking"
               className="text-amber-400 hover:text-amber-300 underline"
             >
               lift plan review and checking
@@ -578,7 +579,7 @@ export default function CaddickTawdValleyJunction4Page() {
             </Link>{' '}
             and{' '}
             <Link
-              href="/blog/what-does-a-lift-plan-checking-service-involve"
+              href="/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected"
               className="text-amber-400 hover:text-amber-300 underline"
             >
               what a lift plan checking service involves

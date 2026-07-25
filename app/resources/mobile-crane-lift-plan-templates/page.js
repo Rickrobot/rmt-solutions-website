@@ -27,6 +27,8 @@ export const metadata = {
     description:
       'Free editable mobile crane lift plan template covering outrigger loads, ground bearing, duty chart verification, slew clearances and CPCS personnel — from a CPCS A61 Appointed Person.',
     url: 'https://www.rmtsafetysolutions.com/resources/mobile-crane-lift-plan-templates',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
 }

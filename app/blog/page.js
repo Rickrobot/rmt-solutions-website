@@ -11,6 +11,7 @@ export const metadata = {
     title: 'Lift Planning Blog | Expert Advice & Guides',
     description: 'Expert lift planning advice and LOLER compliance guides from RMT Solutions.',
     url: 'https://www.rmtsafetysolutions.com/blog',
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     images: [
       {
         url: 'https://www.rmtsafetysolutions.com/images/services/lift-planning-site-desk-review-uk.webp',
@@ -286,17 +287,6 @@ const blogPosts = [
     dateModified: 'July 8, 2026',
     image: '/images/services/mobile-crane-lifting-precast-concrete.webp',
     imageAlt: 'Mobile crane lifting a precast concrete unit on a UK construction site — a typical lifting operation covered by a lift plan',
-  },
-  {
-    slug: 'what-does-a-lift-plan-checking-service-involve',
-    title: 'What Does a Lift Plan Checking Service Involve?',
-    excerpt: 'What does a lift plan checking service involve and why do tier 1 contractors need one? Learn what gets checked, common rejection reasons, and how professional review improves site safety.',
-    category: 'Services',
-    readTime: '9 min read',
-    date: 'February 11, 2026',
-    dateModified: 'February 11, 2026',
-    image: '/images/services/lift-plan-checking-clipboard-inspection.webp',
-    imageAlt: 'Lifting engineer reviewing a lift plan against a checklist — the document scrutiny carried out during a lift plan checking service',
   },
   {
     slug: 'telehandler-lift-plans-complete-guide',

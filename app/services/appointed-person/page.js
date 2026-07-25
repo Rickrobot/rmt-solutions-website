@@ -28,6 +28,7 @@ export const metadata = {
     description:
       'Hire a CPCS A61 Appointed Person (Reg 40389279) for your lifting operations. 35 years of construction experience, LOLER 1998 and BS 7121 compliant, UK-wide.',
     url: 'https://www.rmtsafetysolutions.com/services/appointed-person',
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     images: ['/images/services/appointed-person-reviewing-lift-plan-uk.webp'],
   },
 }

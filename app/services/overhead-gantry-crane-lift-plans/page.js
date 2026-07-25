@@ -15,6 +15,8 @@ export const metadata = {
     title: 'Overhead & Gantry Crane Lift Plans UK | BS 7121-7 & LOLER',
     description: 'CPCS Appointed Person lift plans for overhead travelling, gantry and bridge cranes. Quote within 4 working hours, plan delivered in 24–48 hours.',
     url: 'https://www.rmtsafetysolutions.com/services/overhead-gantry-crane-lift-plans',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
 }

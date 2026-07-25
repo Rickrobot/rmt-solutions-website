@@ -14,6 +14,8 @@ export const metadata = {
     title: 'Telehandler Lift Plans UK | LOLER Compliant',
     description: 'CPCS Appointed Person telehandler lift plans from £200 + VAT. Suspended loads, work platforms and attachments. Quote within 4 working hours.',
     url: 'https://www.rmtsafetysolutions.com/services/telehandler-lift-plans',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
 }

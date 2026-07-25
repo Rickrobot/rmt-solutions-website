@@ -129,6 +129,7 @@ export const metadata = {
     description:
       'CPCS Appointed Person services and LOLER compliant crane lift plans across the UK. Manchester, Liverpool, Leeds, Birmingham, London, Bristol, Glasgow and Edinburgh.',
     url: 'https://www.rmtsafetysolutions.com/locations',
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     images: ['/images/mobile-crane-steel-erection.webp'],
   },
   alternates: {
@@ -310,7 +311,7 @@ export default function LocationsHub() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <InlineQuoteForm
             serviceName="Lift Plans — UK-wide"
-            heading="Tell us where your site is — we will reply within 24 hours"
+            heading="Tell us where your site is — we will reply within 4 working hours"
           />
         </div>
       </section>

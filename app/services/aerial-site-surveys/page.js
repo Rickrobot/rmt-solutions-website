@@ -13,6 +13,8 @@ export const metadata = {
     title: 'Aerial Site Surveys UK | Drone Photography',
     description: 'Aerial site surveys and construction site photography for lift planning and progress monitoring. CPCS Appointed Person with GVC and CAA Operational Authorisation.',
     url: 'https://www.rmtsafetysolutions.com/services/aerial-site-surveys',
+    images: ['/images/og-lift-planning.jpg'],
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
 }
@@ -232,7 +234,7 @@ export default function AerialSiteSurveysPage() {
                 plan reflects actual site conditions. If a plan shows clear access but the survey shows 
                 a congested site, that discrepancy needs addressing before the lift proceeds.
               </p>
-              <Link href="/services/lift-plan-review" className="text-blue-600 hover:text-blue-700 font-medium text-sm">
+              <Link href="/services/lift-plan-checking" className="text-blue-600 hover:text-blue-700 font-medium text-sm">
                 Lift plan review service →
               </Link>
             </div>

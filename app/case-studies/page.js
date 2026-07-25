@@ -12,6 +12,7 @@ export const metadata = {
     title: 'Case Studies | Lift Planning Projects',
     description: 'Lift planning case studies from RMT Solutions across the UK.',
     url: 'https://www.rmtsafetysolutions.com/case-studies',
+    siteName: 'RMT Solutions - Lift Planning Specialists',
     images: ['/images/og-lift-planning.jpg'],
   },
 }
