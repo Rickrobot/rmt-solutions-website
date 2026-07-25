@@ -86,6 +86,54 @@ const faqSchema = {
         text: 'We need the load (verified weight, dimensions and lift points), the proposed crane (make, model, counterweight and boom configuration if known), the site (address, ground conditions, access, overhead and underground services, adjacent activities) and the operation (pick and set-down positions, working radius and any obstructions). If the crane is not yet chosen we will recommend a suitable machine and duty.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Does a 50 tonne crane lift 50 tonnes?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. The tonnage in a crane name is its maximum capacity at minimum radius, on fully extended outriggers, with full counterweight, usually over the rear. At working radius with a longer boom the figure is far lower \u2014 and the hook block, rigging and any fly jib all deduct from it. The plan must show the net capacity for the actual configuration.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is ground bearing pressure and why does it matter?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'It is the load each outrigger imposes on the ground, measured in kPa. On outriggers the whole weight of the crane, counterweight and load is concentrated into four small pads, and during a slew one outrigger can carry a large share of it. If that pressure exceeds what the ground can carry, the outrigger sinks and the crane can overturn. It is the calculation most often missing or wrong in the plans we review.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What size crane mats do I need?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'It depends on the peak outrigger reaction from the manufacturer data and the allowable bearing pressure of the ground. Divide the reaction by the allowable pressure to get the minimum area. A 589 kN reaction against 200 kPa allowable needs about 2.95 square metres \u2014 roughly a 1.75 metre square mat. The mat also has to be stiff enough to actually spread the load rather than punch through.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'When is a mobile crane lift a complex lift?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Under BS 7121, tandem and multi-crane lifts, blind lifts, lifting over occupied buildings or the public, working near overhead power lines or railways, loads of unknown weight, overlapping crane radii and any lifting of people all point to the complex category. Complex lifts need an experienced Appointed Person and a fully site-specific written plan.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I still need a lift plan if the crane hire company is providing a contract lift?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Under a contract lift the crane hire company takes on the planning and supervision, and supplies the Appointed Person. That does not remove your duties as principal contractor under CDM 2015 to plan, manage and monitor lifting on your site. Most tier 1 contractors have the contract lift plan independently reviewed before accepting it.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does a mobile crane lift plan cost?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Mobile crane plans typically fall in the \u00a3250 to \u00a3500 range, with complex operations such as tandem lifts quoted individually and usually \u00a3500 to \u00a31,500. You get a fixed written price within 4 working hours of sending the details, with no hourly billing, and revisions arising from principal contractor review are included.',
+      },
+    },
   ],
 }
 
@@ -293,6 +341,280 @@ export default function MobileCraneLiftPlansPage() {
                 <div className="text-6xl font-display font-bold text-amber-500/20 mb-4">{item.step}</div>
                 <h3 className="font-display text-xl font-bold text-white mb-2">{item.title}</h3>
                 <p className="text-gray-400">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* Ground bearing pressure — the single most common failure in mobile
+          crane lift plans, and the one that puts cranes on their side. Added
+          Jul 2026: this page was 733 words and ranking for nothing across a
+          1,523-impression / 0-click query cluster. */}
+      <section className="py-24 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-12">
+            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+              Ground Bearing
+            </span>
+            <h2 className="font-display text-4xl font-bold text-white mb-6">
+              The calculation most crane lift plans get wrong
+            </h2>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              A mobile crane does not spread its weight the way a tracked machine does. Set up on
+              outriggers, the weight of the crane, the counterweight and the load is concentrated into
+              four small pads — and as the crane slews, a single outrigger can end up carrying a large
+              share of the total. That is why ground failure under one outrigger is one of the most
+              common causes of mobile crane overturning on UK sites.
+            </p>
+            <p className="text-gray-300 leading-relaxed">
+              The figure that matters is not the crane&apos;s weight. It is the peak outrigger reaction
+              from the manufacturer&apos;s documentation, divided by the area it is spread over, checked
+              against what the ground can actually carry.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 border border-slate-700/50 rounded-3xl p-8 sm:p-10">
+            <h3 className="font-display text-2xl font-bold text-white mb-6">
+              A worked example
+            </h3>
+            <div className="space-y-4 text-gray-300 leading-relaxed">
+              <p>
+                Take a 100-tonne all-terrain crane where the manufacturer&apos;s outrigger load chart
+                gives a peak reaction of <strong className="text-white">60 tonnes</strong> — roughly
+                589 kN — through one corner at the worst slew position.
+              </p>
+              <ul className="space-y-3 pl-5 list-disc marker:text-amber-400">
+                <li>
+                  On the crane&apos;s own outrigger float, perhaps{' '}
+                  <strong className="text-white">0.5 m²</strong>, that is about{' '}
+                  <strong className="text-amber-400">1,180 kPa</strong> imposed on the ground.
+                </li>
+                <li>
+                  Well-compacted granular fill might safely carry{' '}
+                  <strong className="text-white">150–200 kPa</strong> — and that figure has to come
+                  from ground investigation or the principal contractor&apos;s temporary works designer,
+                  never from assumption.
+                </li>
+                <li>
+                  So the float alone is roughly <strong className="text-amber-400">six times
+                  over</strong> what the ground will take.
+                </li>
+                <li>
+                  To bring it inside 200 kPa you need about{' '}
+                  <strong className="text-white">2.95 m²</strong> of bearing area — a mat of roughly{' '}
+                  <strong className="text-white">1.75 m × 1.75 m</strong> under each outrigger.
+                </li>
+              </ul>
+              <p className="pt-2">
+                And a mat only spreads load if it is stiff enough to do so. An undersized or flexible
+                mat simply punches through and delivers very nearly the original pressure to the ground
+                beneath it. Mat selection is part of the calculation, not an afterthought.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mt-8">
+            <div className="bg-slate-800/30 rounded-2xl p-6 border border-slate-700/50">
+              <h3 className="font-display text-lg font-bold text-white mb-3">
+                What else sits under the outriggers
+              </h3>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li>• Basements, cellars, culverts and drainage runs</li>
+                <li>• Backfilled trenches and made ground</li>
+                <li>• Buried services — the utility drawings rarely match reality</li>
+                <li>• Excavations nearby: the crane must sit outside the zone of influence</li>
+                <li>• Suspended slabs and podium decks, which need their own temporary works check</li>
+              </ul>
+            </div>
+            <div className="bg-slate-800/30 rounded-2xl p-6 border border-slate-700/50">
+              <h3 className="font-display text-lg font-bold text-white mb-3">
+                What we need to do the calculation
+              </h3>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li>• The crane make, model and proposed configuration</li>
+                <li>• The manufacturer&apos;s outrigger load data for that machine</li>
+                <li>• Allowable bearing pressure from the site investigation</li>
+                <li>• The set-up position relative to any excavation or structure</li>
+                <li>• What mats or spreader pads are actually available on site</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Duty chart interpretation — targets the "what is a crane lift plan" /
+          "crane lift plan requirements" query cluster with the specific
+          misunderstanding those searchers usually have. */}
+      <section className="py-24 bg-slate-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-12">
+            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+              Duty Charts
+            </span>
+            <h2 className="font-display text-4xl font-bold text-white mb-6">
+              A 50-tonne crane does not lift 50 tonnes
+            </h2>
+            <p className="text-gray-300 leading-relaxed">
+              The tonnage in a crane&apos;s name is its maximum capacity at minimum radius, on fully
+              extended outriggers, with full counterweight, usually slewing over the rear. Move any one
+              of those variables and the number changes — often dramatically. A plan that quotes the
+              headline tonnage rather than the figure for the actual configuration is the single most
+              common reason a crane lift plan fails an independent review.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
+              <h3 className="font-display text-xl font-bold text-white mb-4">
+                Every one of these changes the capacity
+              </h3>
+              <ul className="space-y-3 text-gray-300 text-sm">
+                <li className="flex gap-3"><span className="text-amber-400">→</span><span><strong className="text-white">Radius</strong> — capacity falls away sharply as the load moves out</span></li>
+                <li className="flex gap-3"><span className="text-amber-400">→</span><span><strong className="text-white">Boom length</strong> — a longer boom at the same radius lifts less</span></li>
+                <li className="flex gap-3"><span className="text-amber-400">→</span><span><strong className="text-white">Counterweight fitted</strong> — the chart is per counterweight configuration</span></li>
+                <li className="flex gap-3"><span className="text-amber-400">→</span><span><strong className="text-white">Outrigger extension</strong> — full, intermediate and retracted are separate charts</span></li>
+                <li className="flex gap-3"><span className="text-amber-400">→</span><span><strong className="text-white">Slew sector</strong> — over-rear, over-side and 360° capacities differ</span></li>
+                <li className="flex gap-3"><span className="text-amber-400">→</span><span><strong className="text-white">On outriggers or on wheels</strong> — free-on-wheels duties are far lower</span></li>
+              </ul>
+            </div>
+            <div className="bg-slate-800/30 rounded-2xl p-8 border border-slate-700/50">
+              <h3 className="font-display text-xl font-bold text-white mb-4">
+                And these come off the top
+              </h3>
+              <p className="text-gray-400 text-sm mb-4">
+                The chart figure is gross. Everything hanging below the boom head is a deduction:
+              </p>
+              <ul className="space-y-3 text-gray-300 text-sm">
+                <li className="flex gap-3"><span className="text-amber-400">−</span><span>Hook block and any auxiliary hook</span></li>
+                <li className="flex gap-3"><span className="text-amber-400">−</span><span>Slings, shackles, chains and spreader or lifting beams</span></li>
+                <li className="flex gap-3"><span className="text-amber-400">−</span><span>Fly jib or extension — including when it is stowed alongside the boom</span></li>
+                <li className="flex gap-3"><span className="text-amber-400">−</span><span>Any lifting attachment or handling frame</span></li>
+              </ul>
+              <p className="text-gray-400 text-sm mt-4">
+                What is left is the net capacity. The load divided by that figure is your utilisation —
+                and many principal contractors set a threshold (commonly around 75–80%) above which the
+                lift gets additional scrutiny or is treated as complex.
+              </p>
+            </div>
+          </div>
+
+          <p className="text-gray-400 mt-8 max-w-3xl">
+            Every plan we produce shows this calculation on the face of the document — the configuration
+            assumed, the gross chart figure, the deductions, the net capacity and the resulting
+            utilisation. If a plan you have been sent does not show its working, that is exactly what our{' '}
+            <Link href="/services/lift-plan-checking" className="text-amber-400 hover:text-amber-300 underline">
+              independent lift plan checking service
+            </Link>{' '}
+            is for.
+          </p>
+        </div>
+      </section>
+
+      {/* Complex lift triggers + exclusion zones */}
+      <section className="py-24 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div>
+              <h2 className="font-display text-3xl font-bold text-white mb-6">
+                When a mobile crane lift becomes a complex lift
+              </h2>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Under BS 7121 the category of the lift drives how much planning it needs and who is
+                competent to plan it. These push a mobile crane lift into the complex category:
+              </p>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex gap-3"><span className="text-amber-400 flex-shrink-0">•</span><span>Tandem or multi-crane lifts sharing a single load</span></li>
+                <li className="flex gap-3"><span className="text-amber-400 flex-shrink-0">•</span><span>Blind lifts, where the operator cannot see the load or the landing area</span></li>
+                <li className="flex gap-3"><span className="text-amber-400 flex-shrink-0">•</span><span>Lifting over occupied buildings, live highways or the public</span></li>
+                <li className="flex gap-3"><span className="text-amber-400 flex-shrink-0">•</span><span>Working near overhead power lines or railway infrastructure</span></li>
+                <li className="flex gap-3"><span className="text-amber-400 flex-shrink-0">•</span><span>Loads of unknown or uncertain weight, or awkward centre of gravity</span></li>
+                <li className="flex gap-3"><span className="text-amber-400 flex-shrink-0">•</span><span>Multiple cranes with overlapping operating radii</span></li>
+                <li className="flex gap-3"><span className="text-amber-400 flex-shrink-0">•</span><span>Lifting people — see our guide to{' '}
+                  <Link href="/blog/lifting-people-man-baskets" className="text-amber-400 hover:text-amber-300 underline">man basket rules</Link></span></li>
+              </ul>
+              <p className="text-gray-400 text-sm mt-6">
+                Read more on{' '}
+                <Link href="/blog/basic-standard-complex-lifts" className="text-amber-400 hover:text-amber-300 underline">
+                  basic, standard and complex lift categories
+                </Link>.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="font-display text-3xl font-bold text-white mb-6">
+                Exclusion zones are drawn around the load, not the crane
+              </h2>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                A common shortcut is to draw the exclusion zone at the crane&apos;s operating radius. That
+                is not enough. The zone has to account for the swept volume of the suspended load, the
+                area the load could reach if it swung, and the ground it could reach if it fell.
+              </p>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex gap-3"><span className="text-amber-400 flex-shrink-0">•</span><span>Load dimensions and orientation through every part of the slew</span></li>
+                <li className="flex gap-3"><span className="text-amber-400 flex-shrink-0">•</span><span>Overhead power lines — HSE guidance note GS6 sets the clearance approach</span></li>
+                <li className="flex gap-3"><span className="text-amber-400 flex-shrink-0">•</span><span>Adjacent occupied buildings, scaffolds and other trades working below</span></li>
+                <li className="flex gap-3"><span className="text-amber-400 flex-shrink-0">•</span><span>Site boundaries, footpaths and the public interface</span></li>
+                <li className="flex gap-3"><span className="text-amber-400 flex-shrink-0">•</span><span>Physical segregation and who enforces it during the lift</span></li>
+              </ul>
+              <p className="text-gray-400 text-sm mt-6">
+                Wind is planned the same way — there is no single legal limit, the manufacturer&apos;s
+                chart governs, and load sail area changes everything. See{' '}
+                <Link href="/blog/crane-wind-speed-limits" className="text-amber-400 hover:text-amber-300 underline">
+                  crane wind speed limits
+                </Link>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Visible FAQ — mirrors the FAQPage schema so the two match, which is a
+          Google rich-result requirement. */}
+      <section className="py-24 bg-slate-950">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl font-bold text-white mb-12">
+            Mobile crane lift plan FAQs
+          </h2>
+          <div className="space-y-6">
+            {[
+              {
+                q: 'Does a 50 tonne crane lift 50 tonnes?',
+                a: 'No. The tonnage in a crane name is its maximum capacity at minimum radius, on fully extended outriggers, with full counterweight, usually over the rear. At working radius with a longer boom the figure is far lower — and the hook block, rigging and any fly jib all deduct from it. The plan must show the net capacity for the actual configuration.',
+              },
+              {
+                q: 'What is ground bearing pressure and why does it matter?',
+                a: 'It is the load each outrigger imposes on the ground, measured in kPa. On outriggers the whole weight of the crane, counterweight and load is concentrated into four small pads, and during a slew one outrigger can carry a large share of it. If that pressure exceeds what the ground can carry, the outrigger sinks and the crane can overturn. It is the calculation most often missing or wrong in the plans we review.',
+              },
+              {
+                q: 'What size crane mats do I need?',
+                a: 'It depends on the peak outrigger reaction from the manufacturer data and the allowable bearing pressure of the ground. Divide the reaction by the allowable pressure to get the minimum area. A 589 kN reaction against 200 kPa allowable needs about 2.95 m² — roughly a 1.75 m square mat. The mat also has to be stiff enough to actually spread the load rather than punch through.',
+              },
+              {
+                q: 'When is a mobile crane lift a complex lift?',
+                a: 'Under BS 7121, tandem and multi-crane lifts, blind lifts, lifting over occupied buildings or the public, working near overhead power lines or railways, loads of unknown weight, overlapping crane radii and any lifting of people all point to the complex category. Complex lifts need an experienced Appointed Person and a fully site-specific written plan.',
+              },
+              {
+                q: 'Do I still need a lift plan if the crane hire company is providing a contract lift?',
+                a: 'Under a contract lift the crane hire company takes on the planning and supervision, and supplies the Appointed Person. That does not remove your duties as principal contractor under CDM 2015 to plan, manage and monitor lifting on your site. Most tier 1 contractors have the contract lift plan independently reviewed before accepting it — that is our lift plan checking service.',
+              },
+              {
+                q: 'How much does a mobile crane lift plan cost?',
+                a: 'Mobile crane plans typically fall in the £250–£500 range, with complex operations such as tandem lifts quoted individually and usually £500–£1,500. You get a fixed written price within 4 working hours of sending the details — no hourly billing, and revisions arising from principal contractor review are included.',
+              },
+              {
+                q: 'How long does a mobile crane lift plan take?',
+                a: 'Straightforward single-crane lifts are typically 3–5 working days from receiving complete information. Complex and tandem lifts take longer because they need engineering checks against the manufacturer load chart and independent review. If the lift is programme-critical, say so when you enquire and we will tell you honestly whether the date is achievable.',
+              },
+              {
+                q: 'What information do you need to plan a mobile crane lift?',
+                a: 'Load weight, dimensions and lifting points; the crane make, model and proposed configuration if already chosen; a site plan showing the set-up position and any constraints; ground investigation data or the allowable bearing pressure; details of overhead and underground services; and the intended dates. If some of that is missing we will tell you what matters most and what can wait.',
+              },
+            ].map((item) => (
+              <div key={item.q} className="bg-slate-800/30 rounded-2xl p-6 border border-slate-700/50">
+                <h3 className="font-display text-lg font-bold text-white mb-3">{item.q}</h3>
+                <p className="text-gray-400 leading-relaxed">{item.a}</p>
               </div>
             ))}
           </div>
