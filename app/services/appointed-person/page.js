@@ -299,9 +299,12 @@ export default function AppointedPersonPage() {
               Most Appointed Person services in the UK are sold by crane hire companies as part of
               a contract lift — the crane, operator and AP come as a package, priced accordingly.
               That is the right product when you want the crane company to carry the lifting risk.
-              But if you already have your machine and operator arranged — under CPA crane hire, or
-              using your own excavator, telehandler or lorry loader — you do not need the package.
-              You need the planning competence.
+              But if you already have your machine and operator arranged — under{' '}
+              <Link href="/blog/cpa-hire-vs-contract-lift-appointed-person" className="text-amber-400 hover:text-amber-300 underline">
+                CPA crane hire
+              </Link>
+              , or using your own excavator, telehandler or lorry loader — you do not need the
+              package. You need the planning competence.
             </p>
             <p className="text-gray-300 mb-6 leading-relaxed">
               As an independent Appointed Person, RMT Solutions has no crane to sell you and no

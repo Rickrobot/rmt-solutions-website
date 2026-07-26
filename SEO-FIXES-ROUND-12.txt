@@ -1,0 +1,146 @@
+SEO FIXES — ROUND 12 (26 July 2026)
+===================================
+
+NEW POST: /blog/cpa-hire-vs-contract-lift-appointed-person
+          "CPA Hire vs Contract Lift: Who Provides the AP?"
+
+Build item #2 from the keyword-map review — the biggest gap found in the whole
+exercise. Verified against a real `next build`: 82 pages, compiled clean,
+0 dead internal links, 0 invisible FAQ questions.
+
+2,793 words, 11 H2 sections, 8 FAQs with FAQPage schema.
+Title 47 chars, meta 145. 20 inbound internal links.
+
+5 files changed (blog data, blog index, sitemap, 2 service pages).
+
+
+WHY THIS ONE MATTERS MOST
+--------------------------------------------------------------------------
+The "CPA hire vs contract lift" SERP was the densest commercial SERP found in
+the entire review — nine dedicated pages from Ainscough, Sparrow, Synergy,
+Citylifting, AE Engineering, AR Banks, Cadman, Lift Minicranes and CraneQuote.
+
+Every single one of them is a crane hire company.
+
+That matters because the question underneath it — "do I need to supply my own
+Appointed Person?" — has an answer that determines whether the reader buys a
+cheaper hire package or a more expensive contract lift. Not one independent
+voice is present in those results, and the reader at that exact moment is
+precisely your customer: someone who has just realised the planning duty might
+be theirs and does not know what to do about it.
+
+Sub-questions this targets, all effectively unclaimed:
+
+  do I need an appointed person for CPA hire
+  who provides the appointed person on a contract lift
+  crane hire without appointed person
+  CPA hire lift plan responsibility
+  CPA conditions of hire lifting responsibility
+
+Realistic expectation: the head term "contract lift vs crane hire" is a
+high-volume term owned by nine well-resourced crane firms and this post will
+not take it. The sub-questions above are where it should land, and those are
+the ones with buying intent anyway.
+
+
+HOW IT IS WRITTEN — PER YOUR STEER
+--------------------------------------------------------------------------
+NEUTRAL EXPLAINER. The post nowhere says or implies that crane hire companies
+are conflicted, biased, or not to be trusted. It states the position factually
+and lets the reader draw their own conclusion.
+
+That was your call and it is the right one commercially — if a crane hire firm
+who refers you work reads this page, there is nothing in it to object to. It
+also happens to be the more quotable version, which helps it get linked to.
+
+DUTIES ONLY, NO COSTS. No price comparison, no day rates, no figures for
+contract lift vs hire. The one place money is mentioned is a neutral
+observation that the contract lift rate is higher because it includes planning
+and risk transfer — framed as an explanation, not a sales point. Nothing in the
+post can date, and nothing can be wrong about somebody else's pricing.
+
+The post does make one commercial argument, in a section called "the third
+option most people miss": that CPA hire plus an independent Appointed Person is
+a legitimate middle path between the two standard options. That is stated
+plainly and then immediately qualified — it says outright that complex, blind
+or high-consequence lifts are often better placed with a contract lift
+provider, and that "an honest AP will tell you when that is the case". Being
+seen to turn work away is what makes the rest of the page credible.
+
+
+FACTUAL BASIS — CHECKED, NOT ASSUMED
+--------------------------------------------------------------------------
+The legal claims were verified against primary sources rather than written from
+memory, because getting a clause reference wrong on a page like this would be
+worse than not publishing it.
+
+  - CPA Model Conditions clause 8(a): an operator supplied by the owner is
+    "regarded as the servants or agents of the Hirer" for all purposes
+    connected with working the plant, and the Hirer is "solely responsible for
+    all site costs and claims arising in connection with the operation of the
+    Plant". Verified against the CPA Crane Hire Terms PDF hosted by Ainscough.
+  - CPA Model Conditions clause 13(b): the Hirer is liable for loss of or
+    damage to the Plant during the hire period. Same source.
+  - CPA Supplementary Conditions for Mobile Cranes: "BS 7121 makes it clear
+    that the Hirer is in overall control of the lifting operation and has
+    responsibility for providing a suitably trained and experienced 'appointed
+    person'." Same source.
+  - LOLER 1998 Regulation 8 — planning by a competent person.
+
+Ricky, please read the clause references before this goes live. They are
+correct as far as the published 2021 CPA crane hire terms go, but you use these
+conditions in practice and I do not — if any of it reads wrong to you, say so
+and I will change it.
+
+
+STRUCTURE
+--------------------------------------------------------------------------
+  The two arrangements
+  Who provides the Appointed Person
+  The operator is working for you          <- clause 8(a), the surprising bit
+  What CPA hire actually obliges you to do <- 7-item duty list
+  What a contract lift covers instead
+  The third option most people miss        <- your service, positioned honestly
+  How to tell which one you are on         <- 4 practical checks on the quote
+  What happens if nobody plans the lift
+  The short version                        <- 3-bullet summary, snippet bait
+
+The "how to tell which one you are on" section is the one most likely to get
+bookmarked and shared internally at contractors, because it is genuinely
+useful and nobody else has written it.
+
+
+FILES CHANGED
+--------------------------------------------------------------------------
+  app/blog/[slug]/page.js        post content + 8-question faqData entry
+  app/blog/page.js               index card, placed at the top of the list
+  app/sitemap-feed/route.js      sitemap entry, dated 2026-07-26
+  app/services/appointed-person/page.js    "CPA crane hire" in the independent-
+                                           AP section now links to the post
+  app/services/urgent-lift-plans/page.js   "CPA crane hire" in the emergency-AP
+                                           section now links to the post
+
+Those two contextual links matter more than they look. Both sit in paragraphs
+where the reader is already thinking about exactly this problem, which is the
+kind of internal link Google weighs most and readers actually click.
+
+
+AFTER DEPLOY
+--------------------------------------------------------------------------
+  1. Request indexing for the post URL in Search Console
+  2. Resubmit the sitemap
+  3. This is the best candidate on the whole list for a LinkedIn post — it is
+     genuinely useful, it is not a sales pitch, and it is the kind of thing
+     site managers forward to each other. One post linking to it will do more
+     than a month of waiting for the crawl
+
+
+NEXT ON THE BUILD LIST
+--------------------------------------------------------------------------
+  3. Blog meta descriptions — ~15 posts over 155 chars. Mechanical, no
+     judgement needed
+  4. Sector pages — HVAC/roof plant, modular, solar, precast, scaffolding. The
+     site still has none, and every one of those SERPs is crane hire companies
+     rather than lift planners
+  5. /services/tandem-lift-plans — page 1 is two US firms, a rail code of
+     practice and a European PDF. No UK commercial page exists

@@ -359,7 +359,7 @@ export default function UrgentLiftPlansPage() {
           <div className="space-y-5 text-gray-300 leading-relaxed text-lg">
             <p>
               This comes up most often on{' '}
-              <Link href="/services/appointed-person" className="text-amber-400 hover:text-amber-300 underline">
+              <Link href="/blog/cpa-hire-vs-contract-lift-appointed-person" className="text-amber-400 hover:text-amber-300 underline">
                 CPA crane hire
               </Link>
               . Under a CPA agreement the crane company supplies the crane and the operator — and

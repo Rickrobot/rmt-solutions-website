@@ -8,6 +8,121 @@ const blogPosts = {
   // NEW (Jul 2026) — targets the "generic lift plan" query cluster (GSC:
   // "generic lift plan" 512 imps pos 9.1, "generic lift plan template" 136
   // imps, "schedule of common lifts" — all with no dedicated page).
+  'cpa-hire-vs-contract-lift-appointed-person': {
+    title: 'CPA Hire vs Contract Lift: Who Provides the AP?',
+    description: 'Under CPA crane hire the hirer provides the Appointed Person; under a contract lift the crane company does. What each actually obliges you to do.',
+    keywords: 'CPA hire vs contract lift, contract lift vs crane hire, do I need an appointed person for CPA hire, who provides the appointed person on a contract lift, CPA crane hire appointed person, crane hire without appointed person, CPA conditions of hire lifting responsibility, contract lifting UK, CPA model conditions crane, hired in crane responsibility',
+    category: 'Compliance',
+    readTime: '11 min read',
+    date: 'July 26, 2026',
+    dateModified: 'July 26, 2026',
+    image: '/images/services/appointed-person-reviewing-lift-plan-uk.webp',
+    imageAlt: 'Appointed Person reviewing a lift plan on a UK construction site — under CPA crane hire this planning duty sits with the hirer, not the crane company',
+    content: `
+      <p class="lead">Two ways to get a crane onto a UK site, and the difference between them is not the crane. It is who is legally responsible for planning the lift. Under a contract lift the crane company carries that duty. Under CPA hire you do — and a surprising number of contractors find that out about forty-eight hours before the crane is due to arrive, when the principal contractor asks who their Appointed Person is.</p>
+
+      <p>This guide sets out what each arrangement actually obliges you to do. It is written from the hirer's side of the table, because that is the side where the surprises happen.</p>
+
+      <h2>The two arrangements</h2>
+
+      <p>Almost all UK crane hire is done on one of two bases, both governed by standard terms published by the Construction Plant-hire Association (CPA).</p>
+
+      <p><strong>CPA crane hire</strong> — sometimes called plant hire with operator, or just "crane hire" — is the supply of a crane and an operator, and essentially nothing else. It runs under the CPA Model Conditions for the Hiring of Plant. You are hiring a machine and the person who drives it. What that machine does, and whether doing it is safe, is your problem.</p>
+
+      <p><strong>Contract lifting</strong> runs under the CPA Conditions for Contract Lifting Services. Here the crane company is not hiring you a machine; it is contracting to carry out a lifting operation. It plans the lift, provides the Appointed Person, supervises the work, and carries the corresponding liability.</p>
+
+      <p>The day rate for a contract lift is higher. That difference is not a margin grab — it is the cost of the planning, the competent personnel and the risk transfer that comes with it.</p>
+
+      <h2>Who provides the Appointed Person?</h2>
+
+      <p>This is the question that matters, and the answer is unambiguous.</p>
+
+      <p>Under <strong>CPA hire, you do</strong>. The CPA Supplementary Conditions for Mobile Cranes put it plainly: BS 7121 makes it clear that the Hirer is in overall control of the lifting operation and has responsibility for providing a suitably trained and experienced Appointed Person. The crane company has no duty to plan your lift and, in most cases, will not have been given the information to do so even if it wanted to.</p>
+
+      <p>Under a <strong>contract lift, the crane company does</strong>. It appoints the AP, produces the <a href="/blog/what-is-a-lift-plan">lift plan</a>, and supervises the operation.</p>
+
+      <p>Underneath both sits the same legal duty. <a href="/blog/loler-acop-l113-explained">LOLER 1998</a> Regulation 8 requires every lifting operation to be properly planned by a competent person, appropriately supervised, and carried out in a safe manner. LOLER does not care which commercial arrangement you chose. It simply requires that somebody competent has planned the lift — and the contract determines who that somebody is meant to be.</p>
+
+      <h2>The operator is working for you</h2>
+
+      <p>This is the clause that catches people out, and it is worth reading twice.</p>
+
+      <p>Clause 8(a) of the CPA Model Conditions provides that where the Owner supplies a driver or operator, that person shall for all purposes in connection with their employment in the working of the Plant be regarded as the servants or agents of the Hirer, and that the Hirer shall be solely responsible for all claims arising in connection with the operation of the Plant.</p>
+
+      <p>In plain terms: the crane operator is paid by the crane company, but for the duration of the hire they are working under your direction and you carry the consequences of what the crane does. That is a very different position from the one most people assume they are in when they "hire a crane with a driver".</p>
+
+      <p>It also explains why the operator will often decline to make planning decisions for you. A competent crane operator who says "that is not my call, where is your lift plan?" is not being obstructive. They are correctly identifying that under the contract you are the one in control of the lifting operation.</p>
+
+      <h2>What CPA hire actually obliges you to do</h2>
+
+      <p>If you are hiring on CPA terms, the following are yours:</p>
+
+      <ul>
+        <li><strong>Appoint a competent Appointed Person.</strong> On UK construction sites competence for crane operations is normally evidenced by the <a href="/blog/cpcs-appointed-person-guide">CPCS A61 card</a>, at a level matching the complexity of the lift.</li>
+        <li><strong>Plan the lifting operation.</strong> Load weights and centres of gravity, crane selection and siting, radius and capacity against the load chart, rigging arrangement, ground bearing pressure and mat specification, exclusion zones, and the controls for whatever is going on around the lift.</li>
+        <li><strong>Produce the lift plan and the supporting risk assessment and method statement.</strong> The principal contractor will almost certainly want to see them before the crane is allowed to set up.</li>
+        <li><strong>Categorise the lift.</strong> Basic, standard or complex under <a href="/blog/basic-standard-complex-lifts">BS 7121</a>, because that determines how much planning and supervision it needs.</li>
+        <li><strong>Supervise the operation.</strong> Providing a lift supervisor and, where required, slinger-signallers.</li>
+        <li><strong>Verify the ground.</strong> Outrigger loads from a mobile crane are concentrated and high. Made ground, backfilled service trenches, basement slabs and buried drainage are the usual culprits, and "it looked fine" is not a verification.</li>
+        <li><strong>Insure the plant.</strong> Clause 13(b) of the Model Conditions makes the Hirer liable for loss of or damage to the Plant during the hire period. That is a crane-sized liability sitting on your policy, and it is worth checking your cover actually extends to it.</li>
+      </ul>
+
+      <p>None of this is unreasonable. It is simply what you agreed to when you took the cheaper of the two rates.</p>
+
+      <h2>What a contract lift covers instead</h2>
+
+      <ul>
+        <li>The crane company appoints the Appointed Person and plans the lift.</li>
+        <li>It selects the crane, which shifts the "was this the right machine?" question onto them.</li>
+        <li>It supervises the lifting operation.</li>
+        <li>It insures the crane, and takes liability for injury and third-party damage arising from the lift. Many contract lift providers will also insure the goods being lifted, though this varies — ask, and get the answer in writing.</li>
+      </ul>
+
+      <p>A contract lift is the right answer when you have no competent AP available, when the lift is complex or high-consequence, or when the value of what is being lifted makes risk transfer worth paying for.</p>
+
+      <h2>The third option most people miss</h2>
+
+      <p>The choice is usually presented as binary: pay more for a contract lift, or take CPA hire and hope. It is not binary.</p>
+
+      <p>The third option is <strong>CPA hire plus an independent Appointed Person</strong>. You take the cheaper hire rate and engage an external CPCS A61 Appointed Person to discharge the planning duty — write the lift plan, categorise the lift, specify the rigging and exclusion zones, and sign it off to the standard the principal contractor is going to review it against.</p>
+
+      <p>This suits a specific and fairly common situation: the lift itself is straightforward, the hire rate difference is real money, but you have no A61 holder on the books. It is also what a lot of steelwork contractors, groundworkers and M&amp;E firms do routinely, because they lift often enough for contract lifting every time to be expensive, but not often enough to justify employing an AP.</p>
+
+      <p>It is not the right answer for everything. A genuinely complex lift — <a href="/services/steel-erection">tandem picks</a>, blind lifts, lifting over a live highway or railway, work near overhead power lines — is often better placed with a contract lift provider who carries the whole operation and the liability with it. An honest AP will tell you when that is the case.</p>
+
+      <h2>How to tell which one you are on</h2>
+
+      <p>Read the paperwork rather than relying on what was said on the phone. Specifically:</p>
+
+      <ul>
+        <li><strong>Which conditions are named?</strong> "CPA Model Conditions for the Hiring of Plant" means hire. "CPA Conditions for Contract Lifting Services" means contract lift. If the quote does not say, ask before you accept it.</li>
+        <li><strong>Does the quote mention an Appointed Person?</strong> Contract lift quotes normally do, because it is part of what you are buying. Hire quotes normally do not, because it is not.</li>
+        <li><strong>What does the price include?</strong> A rate that is only crane, operator and transport is a hire rate.</li>
+        <li><strong>Who is producing the lift plan?</strong> The single most useful question you can ask, and the answer should be immediate and unambiguous. Hesitation is itself the answer.</li>
+      </ul>
+
+      <p>Do not assume that because the crane company is large and well known, planning is included. Most of the biggest UK crane firms offer both, and which one you got depends entirely on which quote you accepted.</p>
+
+      <h2>What happens if nobody plans the lift</h2>
+
+      <p>In practice it is caught, and the cost is delay. The principal contractor asks for the lift plan during the pre-start checks, there isn't one, and the crane stands. You are then paying standing time on a crane while you find an Appointed Person at short notice — which is precisely the position this article is trying to help you avoid.</p>
+
+      <p>Where it is not caught, the exposure is real. LOLER Regulation 8 places the duty on the person in control of the lifting operation, and under CPA hire the contract has already established that this is you. That is the position an HSE inspector will start from after an incident, and "we assumed the crane company was handling it" is not a defence — the contract you signed says otherwise.</p>
+
+      <h2>The short version</h2>
+
+      <ul>
+        <li><strong>Contract lift:</strong> crane company plans, appoints the AP, supervises and insures. Higher rate, less exposure.</li>
+        <li><strong>CPA hire:</strong> you plan, you appoint the AP, you supervise, and the operator is treated as working under your direction. Lower rate, and the duty is yours.</li>
+        <li><strong>CPA hire plus an independent AP:</strong> the middle path — the lower hire rate with the planning duty properly discharged by a competent person.</li>
+      </ul>
+
+      <p>Whichever you choose, choose it deliberately and before the crane is booked. The expensive version of this decision is the one made in a hurry on the morning of the lift.</p>
+
+      <p>RMT Solutions provides <a href="/services/appointed-person">external CPCS A61 Appointed Person cover</a> and <a href="/services/lift-plans">lift plans</a> for contractors hiring cranes on CPA terms across the UK, including <a href="/services/urgent-lift-plans">at short notice</a>. If you are unsure which arrangement you are on, send the quote over and you will get a straight answer.</p>
+`,
+  },
+
   'generic-lift-plans': {
     title: 'Generic Lift Plans: When You Can Use One (UK Guide)',
     description: 'A generic lift plan is only acceptable for routine, repetitive, basic lifts — and even then it must be reviewed for each site. When one will do, and when it gets rejected.',
@@ -3049,6 +3164,40 @@ const faqData = {
     {
       q: 'Does every lift on site need a reviewed plan?',
       a: 'Under LOLER, every lifting operation must be planned. Whether every plan needs independent review depends on the risk profile of the project and your organisation\u2019s procedures. Many tier 1 contractors require all lift plans to be reviewed by an Appointed Person before any lifting work proceeds. The safest approach is to review everything.',
+    },
+  ],
+  'cpa-hire-vs-contract-lift-appointed-person': [
+    {
+      q: 'Do I need my own Appointed Person for CPA crane hire?',
+      a: 'Yes. Under the CPA Model Conditions the crane company supplies the crane and the operator only. The CPA Supplementary Conditions for Mobile Cranes state that BS 7121 makes the Hirer responsible for being in overall control of the lifting operation and for providing a suitably trained and experienced Appointed Person. If you have no CPCS A61 holder available, you either engage an external Appointed Person or move to a contract lift.',
+    },
+    {
+      q: 'Who provides the Appointed Person on a contract lift?',
+      a: 'The crane company. Under the CPA Conditions for Contract Lifting Services the crane company appoints the AP, produces the lift plan, selects the crane, supervises the operation and carries the associated liability. That is the substance of what the higher contract lift rate pays for.',
+    },
+    {
+      q: 'Can I hire a crane without an Appointed Person at all?',
+      a: 'No lifting operation can lawfully go ahead without being planned by a competent person — LOLER 1998 Regulation 8 applies regardless of the commercial arrangement. You can hire the crane without the crane company providing an AP, which is exactly what CPA hire is, but somebody competent still has to plan the lift. In practice the principal contractor will ask for the lift plan at pre-start and the crane will stand until one exists.',
+    },
+    {
+      q: 'Is a contract lift always the safer option?',
+      a: 'It transfers responsibility, which is not the same as making the lift safer. A contract lift is usually the right call where the lift is complex or high-consequence, or where you have no competent AP. For a straightforward pick where an independent Appointed Person plans it properly, CPA hire is not less safe — the same standards apply and the same competence is required. What changes is who is liable if it goes wrong.',
+    },
+    {
+      q: 'How do I tell whether my quote is CPA hire or a contract lift?',
+      a: 'Look at which conditions the quote names: \'CPA Model Conditions for the Hiring of Plant\' is hire, \'CPA Conditions for Contract Lifting Services\' is a contract lift. If the quote does not mention an Appointed Person and only prices crane, operator and transport, it is a hire rate. The most direct test is to ask the supplier who is producing the lift plan.',
+    },
+    {
+      q: 'Who is liable if the crane is damaged during CPA hire?',
+      a: 'The hirer, in most circumstances. Clause 13(b) of the CPA Model Conditions makes the Hirer liable for loss of or damage to the Plant throughout the hire period. It is worth confirming that your insurance actually covers hired-in plant to crane values before the crane arrives, rather than after.',
+    },
+    {
+      q: 'Is the crane operator my responsibility under CPA hire?',
+      a: 'For the purposes of operating the crane, effectively yes. Clause 8(a) of the CPA Model Conditions provides that an operator supplied by the owner is regarded as the servant or agent of the Hirer for all purposes connected with working the plant, and that the Hirer is solely responsible for claims arising from its operation. The operator remains employed and paid by the crane company, but during the hire they work under your direction.',
+    },
+    {
+      q: 'Can I use an independent Appointed Person instead of paying for a contract lift?',
+      a: 'Yes, and for straightforward lifts it is a common arrangement. You take the CPA hire rate and engage an external CPCS A61 Appointed Person to plan the lift, categorise it, specify the rigging and exclusion zones and sign it off. It suits contractors who lift regularly but not often enough to employ an AP. For complex, blind or high-consequence lifts a contract lift is usually the better answer.',
     },
   ],
   'cpcs-appointed-person-guide': [

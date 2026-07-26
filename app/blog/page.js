@@ -36,6 +36,17 @@ export const metadata = {
 // the original publication date.
 const blogPosts = [
   {
+    slug: 'cpa-hire-vs-contract-lift-appointed-person',
+    title: 'CPA Hire vs Contract Lift: Who Provides the AP?',
+    excerpt: 'Hire a crane on CPA terms and the crane company supplies the crane and the operator — planning the lift, appointing the AP and supervising it stay with you. Under a contract lift the crane company takes all three on. The difference decides who is legally on the hook, and it is usually discovered too late.',
+    category: 'Compliance',
+    readTime: '11 min read',
+    date: 'July 26, 2026',
+    dateModified: 'July 26, 2026',
+    image: '/images/services/appointed-person-reviewing-lift-plan-uk.webp',
+    imageAlt: 'Appointed Person reviewing a lift plan on a UK construction site — under CPA crane hire this planning duty sits with the hirer, not the crane company',
+  },
+  {
     slug: 'lifting-people-man-baskets',
     title: 'Lifting People With Cranes: Man Basket Rules (UK)',
     excerpt: 'Lifting people with a crane or telehandler is legal only when safer access is impracticable — and the moment people are on the hook, the rules change: 6-monthly examinations, rated carriers, de-rated capacity and a rescue plan that actually works.',
