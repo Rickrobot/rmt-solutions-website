@@ -83,7 +83,7 @@ const LOCATIONS = {
     region: 'Greater Manchester',
     metaTitle: 'Lift Plan Stockport | Appointed Person',
     metaDescription:
-      'LOLER compliant lift plans across Stockport and the MDC pipeline. CPCS Appointed Person for town-centre, industrial and data-centre work. Call 07803 808093.',
+      'LOLER compliant lift plans across Stockport and MDC schemes. CPCS Appointed Person for town-centre, industrial and data-centre jobs. Call 07803 808093.',
     travelMinutes: 45,
     intro:
       "Stockport's town-centre regeneration, the Stockport Mayoral Development Corporation pipeline, the ongoing Stockport 8 transport interchange and a heavy run of industrial estate and data centre work across Bredbury, Reddish and Heaton make the borough one of the most consistent lift planning markets in Greater Manchester. We provide lift planning, lift plan checking, and Appointed Person services across Stockport, Cheadle, Bredbury and the wider M60 South corridor.",
@@ -101,7 +101,7 @@ const LOCATIONS = {
     region: 'Greater Manchester',
     metaTitle: 'Lift Plan Trafford | Appointed Person',
     metaDescription:
-      'LOLER compliant lift plans across Trafford Park and the Trafford logistics belt. CPCS Appointed Person for industrial and warehouse work. Call 07803 808093.',
+      'LOLER compliant lift plans across Trafford Park and the logistics belt. CPCS Appointed Person for industrial and warehouse schemes. Call 07803 808093.',
     travelMinutes: 30,
     intro:
       "Trafford has long been one of the highest-volume industrial and logistics markets in the North West — Trafford Park is the largest industrial estate in Europe by floor area, and the borough's ongoing Trafford Centre regeneration, Carrington pipeline, and Manchester Ship Canal-side warehouse activity sustain a constant demand for lift planning. We work with main contractors, steel erectors and specialist plant hire firms across Trafford on LOLER compliant lift plans, plan checking, and Appointed Person contracts.",

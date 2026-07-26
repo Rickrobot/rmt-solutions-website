@@ -15,7 +15,7 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 export const metadata = {
   title: 'GC14 Lift Plan Template + Free Alternative',
   description:
-    'What the CITB GC14 lift plan form is, how to complete it section by section, and a free editable GC14-style lift plan template (Word) from a CPCS Appointed Person.',
+    'What the CITB GC14 lift plan form is, how to complete it section by section, and a free editable GC14-style template (Word) from a CPCS Appointed Person.',
   keywords:
     'gc14 lift plan, gc14 lift plan template, gc14 form, gc14 lift plan citb, citb lift plan template, gc14 template word, gc14 lift plan template free download, ge700 lift plan form',
   alternates: {

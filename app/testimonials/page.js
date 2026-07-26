@@ -4,7 +4,7 @@ import { Quote, Star, ArrowRight } from 'lucide-react'
 export const metadata = {
   title: 'Client Testimonials | UK Contractors',
   description:
-    'Independent testimonials from Caddick, Wates and Sunel Group project, site and HSE managers on RMT Solutions lift plan reviews and LOLER lifting documentation.',
+    'Independent testimonials from Caddick, Wates and Sunel Group project and HSE managers on RMT Solutions lift plan reviews and LOLER documentation.',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/testimonials',
   },

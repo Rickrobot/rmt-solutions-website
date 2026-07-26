@@ -125,7 +125,7 @@ const blogPosts = {
 
   'generic-lift-plans': {
     title: 'Generic Lift Plans: When You Can Use One (UK Guide)',
-    description: 'A generic lift plan is only acceptable for routine, repetitive, basic lifts — and even then it must be reviewed for each site. When one will do, and when it gets rejected.',
+    description: 'A generic lift plan only works for routine, repetitive, basic lifts, and even then needs reviewing per site. When one will do, and when it gets rejected.',
     keywords: 'generic lift plan, generic lift plan template, generic lifting plan, schedule of common lifts, basic lift plan, standard lift plan, repetitive lifts, generic RAMS lifting, site specific lift plan, when is a generic lift plan acceptable',
     category: 'Planning',
     readTime: '8 min read',
@@ -193,7 +193,7 @@ const blogPosts = {
   // software/calculation queries, ~400 impressions, zero clicks, no page).
   'lift-plan-software-vs-appointed-person': {
     title: 'Lift Plan Software UK: What It Does & What It Can’t',
-    description: 'Lift plan software helps with crane selection, load charts and rigging drawings — but it cannot discharge your LOLER duty to plan the lift. What the tools do, costs, and when to use a consultant instead.',
+    description: 'Lift plan software helps with crane selection, load charts and rigging drawings — but it cannot discharge your LOLER duty. What it can and cannot do.',
     keywords: 'lift plan software, lifting plan software, lift planning software, lift planner software, crane planning software, crane lift plan software, lifting plan calculation, 3d lift plan, free lift plan software, lift plan app, lift plan software uk',
     category: 'Planning',
     readTime: '9 min read',
@@ -261,7 +261,7 @@ const blogPosts = {
   // duties/responsibilities, A61 Basic vs Advanced, and do-you-need-one.
   'appointed-person-duties-responsibilities': {
     title: 'Appointed Person Duties & Responsibilities (BS 7121)',
-    description: 'The Appointed Person has overall control of a lifting operation. Their 10 duties under BS 7121 and LOLER 1998, what they are accountable for, and what they can delegate.',
+    description: 'The Appointed Person has overall control of a lifting operation. Their duties under BS 7121 and LOLER 1998, what they answer for, and what they delegate.',
     keywords: 'appointed person duties, appointed person responsibilities, appointed person lifting operations responsibilities, appointed person lifting operations, appointed person for lifting operations, loler appointed person, appointed person bs 7121, duties of an appointed person, lifting appointed person, appointed person accountability',
     category: 'Compliance',
     readTime: '8 min read',
@@ -305,7 +305,7 @@ const blogPosts = {
   },
   'cpcs-a61-basic-vs-advanced': {
     title: 'CPCS A61 Basic vs Advanced: Which Appointed Person Card?',
-    description: 'The A61 Appointed Person card comes in two levels. What each course covers, the practical scenarios, which lifts each card holder can plan, and which your project needs.',
+    description: 'The A61 Appointed Person card comes in two levels. What each covers, which lifts each card holder can plan, and which one your project actually needs.',
     keywords: 'cpcs a61, cpcs a61 appointed person, a61 appointed person, a61 basic, a61 advanced, a61 basic vs advanced, a61 appointed person practical scenarios, cpcs appointed persons lifting operations a61, a61 course, appointed person training, appointed person qualification',
     category: 'Compliance',
     readTime: '7 min read',
@@ -347,7 +347,7 @@ const blogPosts = {
   },
   'do-you-need-an-appointed-person': {
     title: 'Do You Need an Appointed Person on Site? UK Rules',
-    description: 'If lifting equipment operates on your site, someone competent must plan every lift — and on UK construction sites that means an Appointed Person. When the role is required and your options for filling it.',
+    description: 'If lifting equipment operates on your site, someone competent must plan every lift. When an Appointed Person is required, and how to fill the role.',
     keywords: 'appointed person construction, what is an appointed person in construction, do you need an appointed person, appointed person crane, crane appointed person, appointed person services, when is an appointed person required, appointed person requirements, appointed person hire, in-house lifting plans',
     category: 'Compliance',
     readTime: '7 min read',
@@ -397,7 +397,7 @@ const blogPosts = {
   // "lifting plan template hse" (129).
   'loler-acop-l113-explained': {
     title: 'LOLER ACOP L113 Explained: Planning & Risk Assessment',
-    description: 'L113 is the HSE’s Approved Code of Practice for LOLER 1998. What "ACOP status" means legally, what L113 says about planning and risk assessment, and how to comply in practice.',
+    description: 'L113 is the HSE’s Approved Code of Practice for LOLER 1998. What ACOP status means legally, and what it says about planning and risk assessment.',
     keywords: 'loler planning and risk assessment, l113, loler acop, loler approved code of practice, l113 loler, hse l113, loler regulation 8 planning, lifting operations risk assessment, loler code of practice, safe use of lifting equipment acop',
     category: 'Compliance',
     readTime: '9 min read',
@@ -451,7 +451,7 @@ const blogPosts = {
   },
   'hse-lifting-plan-requirements': {
     title: 'HSE Lifting Plan Requirements: What Inspectors Look For',
-    description: 'The HSE publishes no lifting plan template — it enforces LOLER Regulation 8. What HSE inspectors actually examine after an incident or site visit, and how to make your lifting plans stand up.',
+    description: 'The HSE publishes no lifting plan template — it enforces LOLER Regulation 8. What inspectors actually examine, and how to make your plans stand up to it.',
     keywords: 'hse lifting plan, hse lifting plan template, lifting plan template hse, hse lift plan, hse lifting plan requirements, hse lifting operations, lifting plan requirements uk, hse inspector lifting operations, loler enforcement, hse crane lift plan',
     category: 'Compliance',
     readTime: '8 min read',
@@ -499,7 +499,7 @@ const blogPosts = {
   // wind speed limits (real demand, no dominant practitioner page).
   'loler-thorough-examination-guide': {
     title: 'LOLER Thorough Examination: 6 or 12 Months? (UK Guide)',
-    description: 'Lifting accessories and equipment that lifts people: every 6 months. Other lifting equipment: every 12 months — unless an examination scheme says otherwise. The full intervals table, what the examiner checks, and the paperwork.',
+    description: 'Lifting accessories and equipment that lifts people: 6 months. Everything else: 12. The full intervals table, what the examiner checks, and the paperwork.',
     keywords: 'loler thorough examination, is loler 6 or 12 months, loler inspection, loler inspection frequency, thorough examination lifting equipment, loler certificate, report of thorough examination, loler examination intervals, competent person loler, loler testing',
     category: 'Compliance',
     readTime: '9 min read',
@@ -541,7 +541,7 @@ const blogPosts = {
   },
   'bs-7121-hand-signals': {
     title: 'BS 7121 Hand Signals: UK Crane Signals + Free Poster',
-    description: 'The standard UK hand signals for crane and lifting operations — start, stop, emergency stop, hoist, lower, slew and travel — explained signal by signal, with a free printable poster for the site cabin.',
+    description: 'The standard UK crane hand signals — start, stop, emergency stop, hoist, lower, slew and travel — explained one by one, with a free printable site poster.',
     keywords: 'bs7121 hand signals, bs 7121 hand signals, crane hand signals uk, crane signals, slinger signaller hand signals, lifting hand signals, banksman signals, crane hand signals chart, hand signals for lifting operations, crane signal poster',
     category: 'Lift Planning',
     readTime: '7 min read',
@@ -600,7 +600,7 @@ const blogPosts = {
   },
   'crane-wind-speed-limits': {
     title: 'Crane Wind Speed Limits UK: When to Stop Lifting',
-    description: 'There is no single legal wind limit — the manufacturer’s chart governs. Typical in-service limits for mobile cranes, tower cranes, telehandlers and MEWPs, why gusts and load sail area change everything, and the AP’s stop/go framework.',
+    description: 'There is no legal wind limit — the manufacturer’s chart governs. In-service limits for mobile and tower cranes, telehandlers and MEWPs, and when to stop.',
     keywords: 'crane wind speed limit, crane wind speed limit uk, maximum wind speed for crane operation, wind speed lifting operations, tower crane wind limit, mobile crane wind limit, telehandler wind speed limit, mewp wind speed limit, when to stop lifting wind, wind speed crane chart',
     category: 'Lift Planning',
     readTime: '9 min read',
@@ -653,7 +653,7 @@ const blogPosts = {
   // client profile that buys plan checking and audits).
   'lifting-people-man-baskets': {
     title: 'Lifting People With Cranes: Man Basket Rules (UK)',
-    description: 'Lifting people with a crane or telehandler is legal only when less risky access is impracticable — and the rules change: 6-monthly examinations, rated baskets, rescue plans. The full UK requirements.',
+    description: 'Lifting people by crane or telehandler is legal only where safer access is impracticable. 6-monthly examinations, rated carriers and rescue plans.',
     keywords: 'lifting people with cranes, man basket regulations uk, crane man basket, man riding basket, lifting people loler, telehandler man basket, personnel lifting, work platform crane, man cage regulations, lifting persons regulation 5',
     category: 'Compliance',
     readTime: '8 min read',
@@ -693,7 +693,7 @@ const blogPosts = {
   },
   'cdm-2015-lifting-operations': {
     title: 'CDM 2015 & Lifting: Principal Contractor Duties',
-    description: 'Under CDM 2015 the principal contractor must plan, manage and monitor lifting on site — including subcontractors’ lifts. What that means in practice: reviewing lift plans, coordinating cranes, and the evidence trail.',
+    description: 'Under CDM 2015 the principal contractor must plan, manage and monitor lifting — including subcontractors’ lifts. The five duties and the evidence trail.',
     keywords: 'cdm 2015 lifting operations, principal contractor lifting operations, principal contractor duties lifting, cdm lifting, construction phase plan lifting, subcontractor lift plans, who is responsible for lifting operations on site, cdm 2015 cranes, managing lifting operations construction',
     category: 'Compliance',
     readTime: '8 min read',
@@ -820,7 +820,7 @@ const blogPosts = {
   },
   'crane-lift-plan-requirements': {
     title: 'Crane Lift Plan Requirements: The 7 Must-Haves (UK)',
-    description: 'The seven things a crane lift plan must contain to pass a principal contractor review under LOLER 1998 and BS 7121 — plus the reasons plans most often get rejected.',
+    description: 'The seven things a crane lift plan must contain to pass principal contractor review under LOLER 1998 and BS 7121 — and why plans most often get rejected.',
     keywords: 'crane lift plan, what is a crane lift plan, crane lift plan requirements, crane lifting plan, lift plan for crane, mobile crane lift plan, crane lift plan contents, lifting plan for crane, when is a crane lift plan required, who writes a crane lift plan',
     category: 'Lift Planning',
     readTime: '9 min read',
@@ -1480,7 +1480,7 @@ const blogPosts = {
     title: 'When Do You Need a Lift Plan? Decision Flowchart + Examples',
     // CTR fix (Jun 2026): answer-first description with the decision-flowchart
     // hook — this URL had 8,425 impressions at position 8 but 1.25% CTR.
-    description: 'Not every lift needs a written plan. Our decision flowchart shows what LOLER 1998 actually requires, with worked site examples and the complex-lift triggers.',
+    description: 'Not every lift needs a written plan. A decision flowchart showing what LOLER 1998 requires, with worked site examples and the complex-lift triggers.',
     keywords: 'when do you need a lift plan, do you need a lift plan for every lift, when is a lift plan required, lift plan requirements, hse lifting plan, when planning a lift what is the first thing you should do, do you need a lift plan for a telehandler, lift plans are mandatory for, crane lift plan requirements, loler regulation 8',
     category: 'Planning',
     readTime: '8 min read',

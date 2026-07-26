@@ -15,7 +15,7 @@ import GatedDownload from '@/components/GatedDownload'
 export const metadata = {
   title: 'Free Lift Plan Template UK | Word Download',
   description:
-    'Download a free generic lift plan template (Word) for UK lifting operations — aligned with LOLER 1998 and BS 7121, from a CPCS Appointed Person. All equipment.',
+    'Download a free generic lift plan template (Word) for UK lifting operations — aligned with LOLER 1998 and BS 7121, from a CPCS Appointed Person.',
   keywords:
     'lift plan template, lifting plan template, lift plan template uk, lifting plan template word, generic lift plan template, basic lift plan template, crane lift plan template, free lift plan template download, lift plan template hse',
   alternates: {

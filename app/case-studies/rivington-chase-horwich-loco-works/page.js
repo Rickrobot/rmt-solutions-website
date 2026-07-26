@@ -23,7 +23,7 @@ const VIDEO_ID = 'SWiyDu49WyM'
 export const metadata = {
   title: { absolute: 'Rivington Chase, Horwich — Lift Planning | RMT Solutions' },
   description:
-    'Appointed Person and independent lift plan reviews for Caddick Construction at Rivington Chase, Horwich — 116 affordable homes on the former Horwich Loco Works.',
+    'Appointed Person and independent lift plan reviews for Caddick Construction at Rivington Chase, Horwich — 116 homes on the former Horwich Loco Works site.',
   keywords: [
     'Rivington Chase Horwich',
     'Horwich Loco Works regeneration',

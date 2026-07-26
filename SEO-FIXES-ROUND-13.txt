@@ -1,0 +1,99 @@
+SEO FIXES — ROUND 13 (26 July 2026)
+===================================
+
+META DESCRIPTION SWEEP
+
+Mechanical round, no judgement calls. 20 pages had meta descriptions over 155
+characters, so Google was truncating them mid-sentence in the results — and on
+several the part being cut was the most persuasive bit of the sentence.
+
+All 20 rewritten to 120-155 characters, keeping the hook and the keywords.
+
+6 files changed. Verified against a real `next build`: 82 pages, compiled
+clean.
+
+
+WHAT WAS WRONG
+--------------------------------------------------------------------------
+Worst offenders, and what Google was cutting:
+
+  /blog/crane-wind-speed-limits              234 -> 153
+      lost: "and the AP's stop/go framework" — the whole payoff
+  /blog/loler-thorough-examination-guide     227 -> 154
+      lost: "and the paperwork"
+  /blog/cdm-2015-lifting-operations          216 -> 152
+      lost: "and the evidence trail"
+  /blog/do-you-need-an-appointed-person      204 -> 147
+  /blog/lift-plan-software-vs-appointed-person 203 -> 149
+  /blog/bs-7121-hand-signals                 201 -> 154
+      lost: "free printable poster" — the actual reason to click
+  /blog/lifting-people-man-baskets           199 -> 146
+  /blog/hse-lifting-plan-requirements        191 -> 153
+  /blog/loler-acop-l113-explained            175 -> 144
+  /blog/generic-lift-plans                   171 -> 153
+  /blog/appointed-person-duties-responsibilities 169 -> 153
+  /blog/cpcs-a61-basic-vs-advanced           169 -> 150
+  /blog/crane-lift-plan-requirements         164 -> 153
+  /blog/when-do-you-need-lift-plan           157 -> 148
+  /resources/gc14-lift-plan-template         163 -> 153
+  /resources/lift-plan-templates             159 -> 144
+  /testimonials                              159 -> 145
+  /case-studies/rivington-chase-horwich...   160 -> 154
+  /locations/stockport                       156 -> 151
+  /locations/trafford                        156 -> 150
+
+The hand signals one is the clearest example of why this was worth doing. The
+free printable poster is the single best reason anyone has to click that
+result, and it was being cut off before the reader ever saw it.
+
+
+FILES CHANGED
+--------------------------------------------------------------------------
+  app/blog/[slug]/page.js                14 post descriptions
+  app/locations/[slug]/page.js           Stockport, Trafford
+  app/resources/gc14-lift-plan-template/page.js
+  app/resources/lift-plan-templates/page.js
+  app/testimonials/page.js
+  app/case-studies/rivington-chase-horwich-loco-works/page.js
+
+
+SITE-WIDE STATE AFTER THIS ROUND
+--------------------------------------------------------------------------
+Checked across all 78 rendered pages:
+
+  meta descriptions over 155      0
+  meta descriptions under 120     0
+  duplicate meta descriptions     0
+  title tags over 60              0
+  dead internal links             0
+  invisible FAQ schema questions  0 of 273
+
+Every page on the site now has a unique, correctly-sized title and
+description. That was not true of any previous round.
+
+(The only duplicate flagged is /_not-found sharing the homepage description,
+which is a Next.js 404 rendering artefact and is not indexed.)
+
+
+NO CONTENT CHANGED
+--------------------------------------------------------------------------
+Only meta descriptions were touched. No body copy, no headings, no schema, no
+internal links. Nothing on any page looks different to a visitor — this
+affects only what appears under the blue link in Google.
+
+Because of that, expect no ranking movement from this round. What it should
+move is click-through rate on the pages that already rank, which is the
+cheapest traffic available: no new content, no new links, just not throwing
+away the last third of the sentence.
+
+
+NEXT ON THE BUILD LIST
+--------------------------------------------------------------------------
+  /services/tandem-lift-plans — page 1 is two US crane firms, an RSSB rail
+  code of practice and a European PDF. There is no UK commercial page for
+  tandem lifts at all. Single page, connects to the steel erection work
+  already on the site, emptiest SERP on the whole list.
+
+  Then the five sector pages: HVAC/roof plant, modular, solar, precast,
+  scaffolding. The site still has none, and every one of those SERPs is crane
+  hire companies rather than lift planners.
