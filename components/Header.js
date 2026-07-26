@@ -21,6 +21,7 @@ export default function Header() {
     { name: 'Mobile Crane Lift Plans', href: '/services/mobile-crane-lift-plans' },
     { name: 'Overhead & Gantry Crane Lift Plans', href: '/services/overhead-gantry-crane-lift-plans' },
     { name: 'Tower Crane Contracts', href: '/services/tower-crane' },
+    { name: 'Tandem & Multi-Crane Lift Plans', href: '/services/tandem-lift-plans' },
     { name: 'Steel Erection Planning', href: '/services/steel-erection' },
     { name: 'Lifting Operations Audit', href: '/services/lifting-operations-audit' },
     { name: 'Aerial Site Surveys', href: '/services/aerial-site-surveys' },

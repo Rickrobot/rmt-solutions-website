@@ -40,6 +40,10 @@ const ALL_SERVICES = {
     title: 'Tower Crane Contracts',
     description: 'Ongoing CPCS A61 Appointed Person contracts with 8-weekly audits, documentation management, and on-call AP support.',
   },
+  'tandem-lift-plans': {
+    title: 'Tandem & Multi-Crane Lift Plans',
+    description: 'Load share calculation, crane derating, synchronised control and side loading — tandem and multi-crane lifts planned to BS 7121.',
+  },
   'steel-erection': {
     title: 'Steel Erection Planning',
     description: 'Combined lift plan, method statement and risk assessment for structural steel erection. BS 5531 compliant.',
@@ -79,11 +83,12 @@ const RELATED_MAP = {
   'lift-plan-checking':        ['appointed-person', 'lift-plans', 'lifting-operations-audit', 'tower-crane'],
   'lifting-operations-audit':  ['tower-crane', 'lift-plan-checking', 'appointed-person'],
   'tower-crane':               ['appointed-person', 'lifting-operations-audit', 'mobile-crane-lift-plans', 'steel-erection'],
-  'steel-erection':            ['tower-crane', 'mobile-crane-lift-plans', 'lift-plans'],
+  'steel-erection':            ['tandem-lift-plans', 'tower-crane', 'mobile-crane-lift-plans'],
+  'tandem-lift-plans':         ['steel-erection', 'mobile-crane-lift-plans', 'lift-plans', 'appointed-person'],
   'excavator-lift-plans':      ['lift-plans', 'telehandler-lift-plans', 'lift-plan-checking'],
   'telehandler-lift-plans':    ['excavator-lift-plans', 'lorry-loader-lift-plans', 'lift-plans'],
   'lorry-loader-lift-plans':   ['telehandler-lift-plans', 'mobile-crane-lift-plans', 'lift-plans'],
-  'mobile-crane-lift-plans':   ['tower-crane', 'lift-plans', 'steel-erection'],
+  'mobile-crane-lift-plans':   ['tower-crane', 'tandem-lift-plans', 'lift-plans', 'steel-erection'],
   'overhead-gantry-crane-lift-plans': ['lift-plans', 'lift-plan-checking', 'steel-erection'],
   'aerial-site-surveys':       ['lift-plans', 'mobile-crane-lift-plans', 'tower-crane'],
 }

@@ -306,6 +306,7 @@ const SERVICE_LINKS = [
   // that landed on the same page — one of them via a redirect.
   { slug: 'lifting-operations-audit',  title: 'Lifting Operations Audit' },
   { slug: 'tower-crane',               title: 'Tower Crane Contracts' },
+  { slug: 'tandem-lift-plans',         title: 'Tandem & Multi-Crane Lift Plans' },
   { slug: 'steel-erection',            title: 'Steel Erection Planning' },
   { slug: 'mobile-crane-lift-plans',   title: 'Mobile Crane Lift Plans' },
   { slug: 'excavator-lift-plans',      title: 'Excavator Lift Plans' },

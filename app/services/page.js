@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Wrench, Phone, ArrowRight, CheckCircle, ClipboardCheck, Search, ShieldCheck, Building2, Plane } from 'lucide-react'
+import { Wrench, Phone, ArrowRight, CheckCircle, ClipboardCheck, Search, ShieldCheck, Building2, Plane, Layers } from 'lucide-react'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 
 // Services hub page — parent node for every /services/* leaf route.
@@ -106,6 +106,14 @@ const SERVICES = [
     category: 'Ongoing contracts',
     blurb:
       'Tower crane appointed person contracts, oversail agreements, 8-weekly compliance audits and method statement maintenance through the lift of the project.',
+  },
+  {
+    slug: 'tandem-lift-plans',
+    name: 'Tandem & Multi-Crane Lift Plans',
+    icon: Layers,
+    category: 'Specialist',
+    blurb:
+      'Two cranes on one load is one operation, not two lifts. Load share, derating and synchronised control to BS 7121, by a CPCS A61 Appointed Person.',
   },
   {
     slug: 'steel-erection',

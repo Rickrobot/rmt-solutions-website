@@ -369,7 +369,10 @@ export default function SteelErectionPage() {
               Tandem and multi-crane lifts
             </h3>
             <p>
-              Tandem lifts come up on steel more than on almost any other type of work — long trusses,
+              <Link href="/services/tandem-lift-plans" className="text-amber-400 hover:text-amber-300 underline">
+                Tandem lifts
+              </Link>{' '}
+              come up on steel more than on almost any other type of work — long trusses,
               pre-assembled frames, and pieces that have to be turned from horizontal to vertical
               mid-lift. A tandem lift is a complex lift under BS 7121 by definition. Both cranes are
               derated to allow for load sharing and out-of-plumb effects, one person holds overall

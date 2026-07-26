@@ -1,0 +1,133 @@
+SEO FIXES — ROUND 14 (26 July 2026)
+===================================
+
+NEW PAGE: /services/tandem-lift-plans
+          "Tandem Lift Plans UK | Two Crane Lifts"
+
+Build item #3 from the keyword-map review. Verified against a real
+`next build`: 83 pages, compiled clean, 0 dead internal links, 0 invisible FAQ
+questions, 0 titles or metas outside their limits.
+
+2,304 words, 8 sections, 10 FAQs. Title 54 chars, meta 140.
+79 inbound internal links.
+
+8 files changed (1 new, 7 modified).
+
+
+WHY THIS PAGE
+--------------------------------------------------------------------------
+The emptiest SERP found in the entire review. Page 1 for "tandem lift plan" is:
+
+  - two US crane companies (Spanco, Maxim)
+  - RSSB COP0008, a rail code of practice
+  - a European FEM/ICSA PDF
+  - two UK crane hire NEWS POSTS (Emerson, King Lifting) — blog articles, not
+    service pages
+
+There is no UK commercial page for tandem lift planning. None. The adjacent
+terms are in the same state:
+
+  two crane lift plan              dual crane lift procedure
+  multi crane lift plan UK         two crane lift load sharing calculation
+
+Volumes here are modest — this is not a traffic play. It is a high-value,
+low-competition service page for work that is quoted individually rather than
+at a fixed rate, and it connects directly to the steel erection package you
+already sell.
+
+
+HOW IT IS WRITTEN
+--------------------------------------------------------------------------
+Technical-first, deliberately. Someone searching "tandem lift plan" is not
+price shopping — they are trying to establish whether the person they are about
+to engage actually understands load transfer. Depth is the conversion mechanism
+on this page, not calls to action.
+
+The spine of it is the point that most people get wrong: on a two-crane lift
+the load share is not fixed. It moves. Mismatched hoist speeds tilt the load
+and transfer weight to the lower hook; turning or upending does the same; so
+does asymmetric slinging. And an RCI cannot help, because it monitors its own
+crane and has no idea the other machine exists.
+
+Sections that no competitor page covers at all:
+
+  - SIDE LOADING. Why ropes going out of plumb puts lateral force into a boom
+    designed for in-line load, and why keeping them vertical is a planning
+    requirement rather than operator skill.
+  - COMPOUNDING GROUND PRESSURES. Two cranes standing close do not load the
+    ground independently — the pressure bulbs overlap. Mat sizing has to be
+    worked from the combined case.
+  - THE ABORT POSITION. What happens if the lift stops with the load
+    part-rotated. That is a different loading case from either end of the
+    lift, and it is the detail most missing from tandem plans written by
+    people who do not do them often.
+
+It also asks the question a crane hire company would not: CAN ONE BIGGER CRANE
+DO IT? A tandem lift is always the more complex option, and where a single
+larger machine fits and reaches, that is usually safer and cheaper. Saying so
+costs nothing and is the kind of thing that makes the rest of the page
+credible.
+
+And it says plainly that a contract lift is often the better answer for a
+genuinely complex tandem operation — with independent planning positioned for
+the cases where it genuinely fits: cranes already arranged, a second opinion
+wanted on a crane company's plan, or the tandem lift being one part of a wider
+steel package.
+
+
+FACTUAL BASIS — CHECKED
+--------------------------------------------------------------------------
+  - BS 7121-1: where all the factors cannot be accurately evaluated, an
+    appropriate down-rating should be applied to all cranes involved —
+    commonly 20% or more in practice.
+  - LOLER 1998 ACOP (L113): a written plan should exist where two or more
+    items of lifting equipment are used simultaneously. This is the strongest
+    single line on the page and it is cited as such.
+  - BS 7121 treats multiple-crane lifting as a complex lift.
+
+Load-share allowances beyond the two-crane case are described as common
+planning practice rather than as a UK standard requirement, because the
+numeric factors in circulation (2 cranes +20%, 3 +33%, 4+ +50%) come from
+Australian and New Zealand guidance, not BS 7121. The page is worded to reflect
+that distinction.
+
+Ricky — same ask as the CPA piece. The derating framing is the part worth your
+eye. If you apply a different figure in practice, tell me and I will change it.
+
+
+FILES CHANGED
+--------------------------------------------------------------------------
+  NEW  app/services/tandem-lift-plans/page.js
+
+  app/services/page.js            service card added under "Specialist"
+  components/Header.js            services nav
+  components/Footer.js            footer services list
+  components/RelatedServices.js   entry added; wired into steel-erection and
+                                  mobile-crane maps, and its own
+  app/locations/[slug]/page.js    service list on all 13 city pages
+  app/sitemap-feed/route.js       SERVICE_SLUGS
+  app/services/steel-erection/page.js   the "Tandem lifts come up on steel more
+                                        than on almost any other type of work"
+                                        line now links here — the single most
+                                        contextually relevant internal link on
+                                        the site
+
+
+AFTER DEPLOY
+--------------------------------------------------------------------------
+  1. Request indexing for /services/tandem-lift-plans
+  2. Resubmit the sitemap
+  3. Expect this one to rank quickly but quietly — near-zero competition, but
+     also modest volume. Judge it on enquiry quality, not traffic
+
+
+REMAINING ON THE BUILD LIST
+--------------------------------------------------------------------------
+  Sector pages — HVAC/roof plant, modular, solar, precast, scaffolding. The
+  site still has none, and every one of those SERPs is crane hire companies
+  rather than lift planners. Five pages, so a bigger piece of work than
+  anything shipped so far today.
+
+  Then the second tier: /services/white-label-lift-planning,
+  /services/lifting-rams, /resources/permit-to-lift-template (CITB GC16),
+  /blog/puwer-vs-loler, /blog/crane-exclusion-zones.
