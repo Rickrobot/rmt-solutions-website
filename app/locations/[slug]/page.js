@@ -299,6 +299,7 @@ function formatTravelTime(minutes) {
 const SERVICE_LINKS = [
   { slug: 'appointed-person',      title: 'Appointed Person' },
   { slug: 'lift-plans',                title: 'Lift Plan Writing' },
+  { slug: 'urgent-lift-plans',         title: 'Same Day & Urgent Lift Plans' },
   { slug: 'lift-plan-checking',        title: 'Lift Plan Checking' },
   // 'lift-plan-review' removed (Jul 2026 SEO review, fix #5). It 301'd to
   // lift-plan-checking, so every location page was showing two menu entries

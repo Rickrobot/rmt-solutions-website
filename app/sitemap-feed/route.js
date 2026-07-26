@@ -53,6 +53,7 @@ const SERVICE_SLUGS = [
   'lift-plan-checking',
   'lifting-operations-audit',
   'lift-plans',
+  'urgent-lift-plans',
   'tower-crane',
   'steel-erection',
   'aerial-site-surveys',

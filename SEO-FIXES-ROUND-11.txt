@@ -1,0 +1,116 @@
+SEO FIXES — ROUND 11 (26 July 2026)
+===================================
+
+NEW PAGE: /services/urgent-lift-plans
+
+Build item #1 from the keyword-map review. Verified against a real `next build`
+— 81 pages, compiled clean, 0 dead internal links, 0 invisible FAQ questions.
+
+8 files changed (1 new, 7 modified).
+
+
+WHY THIS PAGE
+--------------------------------------------------------------------------
+The SERP research found NO exact-match competition anywhere in the UK for:
+
+  same day lift plan            urgent lift plan
+  next day lift plan UK         emergency appointed person
+  appointed person at short notice
+  out of hours lift plan        weekend lift plan UK
+
+Not "weak competition" — none. Nobody has built a page for these. They are
+also the highest purchase-intent queries in the entire keyword set, because
+nobody searches "same day lift plan" out of curiosity. We were already picking
+up 6 of 10 results on some of them incidentally, via the cost guide and the
+services pages. This is the dedicated landing page that should lock them.
+
+Every competitor claims "fast turnaround" and not one of them gives a number.
+We give a number, and the page is built around that.
+
+
+HOW IT IS WRITTEN — AND WHY IT SAYS NO
+--------------------------------------------------------------------------
+The page has a section listing the lifts that CANNOT be turned around same day
+— tandem and multi-crane, blind lifts, lifts over live highways or railways,
+lifts near overhead power lines, and mobile crane work needing verified ground
+bearing pressure.
+
+That is deliberate, not a hedge. The whole proposition here is credibility
+under time pressure. A visitor to this page is deciding within about ten
+seconds whether you are someone who knows what they are doing or someone who
+will say yes to anything. Publishing the limits is what makes the yes
+believable — and it pre-qualifies the enquiries, so the phone calls you get are
+the ones you can actually help with.
+
+It also protects you commercially. A plan produced fast and then rejected by
+the reviewer on Friday morning has cost the customer the day they were trying
+to save, and that is the enquiry that turns into a complaint.
+
+Other deliberate choices:
+
+  - phone number above the fold, twice more further down. Someone with a lift
+    tomorrow should be calling, not filling in a form
+  - "order before 2pm" in the hero badge — a concrete cut-off is more
+    persuasive than "fast", and it manages expectation before the call
+  - a "what to have in front of you when you call" section, with confirmed load
+    weight called out as the one that matters. Urgent jobs stall on missing
+    information far more often than on availability, so this section saves you
+    time on every call it works on
+  - an emergency-AP section covering the CPA hire trap — the most common reason
+    someone suddenly needs an Appointed Person at 48 hours' notice
+  - honest about site attendance vs plan delivery: a same-day PLAN is same-day
+    anywhere, same-day ATTENDANCE is 90 minutes from Warrington. Those are
+    different promises and the page does not blur them
+  - standard pricing stated. No urgency surcharge, out-of-hours agreed on the
+    call before work starts
+
+1,914 words, 8 FAQs (visible, with FAQPage schema generated from the same
+list), Service and BreadcrumbList JSON-LD.
+
+
+FILES CHANGED
+--------------------------------------------------------------------------
+  NEW  app/services/urgent-lift-plans/page.js
+
+  app/services/page.js            service card added under "Core"
+  app/page.js                     added to the homepage quick-links grid
+  components/Header.js            added to the services nav
+  components/Footer.js            added to the footer services list
+  components/RelatedServices.js   entry added; wired into the related maps for
+                                  lift-plans, appointed-person and itself
+  app/locations/[slug]/page.js    added to the service list on all 13 city
+                                  pages
+  app/sitemap-feed/route.js       added to SERVICE_SLUGS
+
+Result: 77 inbound internal links to the new page from day one, which is what
+gets it crawled and indexed quickly rather than sitting orphaned.
+
+
+ALSO FIXED WHILE IN THERE
+--------------------------------------------------------------------------
+components/Header.js had TWO nav entries pointing at the same URL — "Lift Plan
+Checking" and "Lift Plan Checking & Review", both going to
+/services/lift-plan-checking. Left over from the page merge. Duplicate removed.
+
+
+AFTER DEPLOY
+--------------------------------------------------------------------------
+  1. Request indexing for /services/urgent-lift-plans in Search Console —
+     do not wait for the natural crawl on a page like this
+  2. Resubmit the sitemap (it has gained a URL)
+  3. Give it 2-4 weeks. On terms with no incumbent, a well-built page normally
+     lands fast — this is the one on the whole list most likely to show
+     movement quickly
+
+Consider a Google Business Profile post pointing at it, and adding the phone
+number and "same-day lift plans" to any vehicle signage or email footer. The
+term only works if people know it is an option.
+
+
+NEXT ON THE BUILD LIST
+--------------------------------------------------------------------------
+  2. /blog/cpa-hire-vs-contract-lift-appointed-person — the biggest gap found.
+     Nine crane hire firms own the head term and every one has a commercial
+     interest in the answer. You are the only neutral voice, and the reader is
+     your exact customer at the exact moment they decide
+  3. blog meta descriptions — ~15 posts over 155 chars, mechanical sweep

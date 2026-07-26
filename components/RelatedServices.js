@@ -21,6 +21,10 @@ const ALL_SERVICES = {
     title: 'Lift Plan Writing',
     description: 'LOLER compliant lift plans for excavators, telehandlers, mobile cranes and lorry loaders. 24-48 hour turnaround.',
   },
+  'urgent-lift-plans': {
+    title: 'Same Day & Urgent Lift Plans',
+    description: 'Lift tomorrow and no plan? Same-day and next-day LOLER compliant plans, plus emergency Appointed Person cover at short notice.',
+  },
   'lift-plan-checking': {
     title: 'Lift Plan Checking',
     description: 'Independent technical review of lift plans submitted by subcontractors. Cat A or Cat B determination with paste-ready findings.',
@@ -69,8 +73,9 @@ const ALL_SERVICES = {
 // Curated related-service map. Each service points to 3 logical neighbours
 // — by equipment type, by buyer journey, or by complementary deliverable.
 const RELATED_MAP = {
-  'appointed-person':          ['lift-plans', 'lift-plan-checking', 'tower-crane'],
-  'lift-plans':                ['appointed-person', 'lift-plan-checking', 'excavator-lift-plans', 'mobile-crane-lift-plans'],
+  'appointed-person':          ['lift-plans', 'lift-plan-checking', 'urgent-lift-plans', 'tower-crane'],
+  'lift-plans':                ['appointed-person', 'lift-plan-checking', 'urgent-lift-plans', 'excavator-lift-plans'],
+  'urgent-lift-plans':         ['lift-plans', 'appointed-person', 'lift-plan-checking', 'excavator-lift-plans'],
   'lift-plan-checking':        ['appointed-person', 'lift-plans', 'lifting-operations-audit', 'tower-crane'],
   'lifting-operations-audit':  ['tower-crane', 'lift-plan-checking', 'appointed-person'],
   'tower-crane':               ['appointed-person', 'lifting-operations-audit', 'mobile-crane-lift-plans', 'steel-erection'],

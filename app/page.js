@@ -212,6 +212,7 @@ export default function HomePage() {
     { name: 'Telehandler Lift Plans', href: '/services/telehandler-lift-plans' },
     { name: 'Mobile Crane Lift Plans', href: '/services/mobile-crane-lift-plans' },
     { name: 'Lorry Loader Lift Plans', href: '/services/lorry-loader-lift-plans' },
+    { name: 'Same Day & Urgent Lift Plans', href: '/services/urgent-lift-plans' },
     { name: 'CPCS A61 Appointed Person', href: '/services/appointed-person' },
     { name: 'Lifting Operations Audits', href: '/services/lifting-operations-audit' },
   ]

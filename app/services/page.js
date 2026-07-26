@@ -39,6 +39,14 @@ const SERVICES = [
       'LOLER 1998 and BS 7121 compliant lift plans for excavators, telehandlers, lorry loaders and mobile cranes. CPCS Appointed Person sign-off, 24–48 hour turnaround.',
   },
   {
+    slug: 'urgent-lift-plans',
+    name: 'Same Day & Urgent Lift Plans',
+    icon: ClipboardCheck,
+    category: 'Core',
+    blurb:
+      'Lift tomorrow and no plan? Same-day and next-day LOLER compliant lift plans, plus emergency Appointed Person cover. Call 07803 808093.',
+  },
+  {
     slug: 'lift-plan-checking',
     name: 'Lift Plan Checking',
     icon: Search,
