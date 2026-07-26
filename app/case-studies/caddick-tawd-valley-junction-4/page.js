@@ -572,7 +572,7 @@ export default function CaddickTawdValleyJunction4Page() {
             </Link>
             , or read our explainers on{' '}
             <Link
-              href="/blog/lifting-operations-audit-what-to-expect"
+              href="/services/lifting-operations-audit"
               className="text-amber-400 hover:text-amber-300 underline"
             >
               what to expect from a lifting operations audit

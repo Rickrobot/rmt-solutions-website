@@ -65,7 +65,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h2 className="text-white font-display font-semibold mb-6">Lift Planning Services</h2>
+            <p className="text-white font-display font-semibold mb-6">Lift Planning Services</p>
             <ul className="space-y-3 text-gray-400 text-sm">
               {services.map((service) => (
                 <li key={service.name}>
@@ -79,7 +79,7 @@ export default function Footer() {
 
           {/* Locations */}
           <div>
-            <h2 className="text-white font-display font-semibold mb-6">Locations Served</h2>
+            <p className="text-white font-display font-semibold mb-6">Locations Served</p>
             <ul className="space-y-3 text-gray-400 text-sm">
               {locations.map((location) => (
                 <li key={location.name}>
@@ -93,7 +93,7 @@ export default function Footer() {
 
           {/* Qualifications + Contact */}
           <div>
-            <h2 className="text-white font-display font-semibold mb-6">Qualifications</h2>
+            <p className="text-white font-display font-semibold mb-6">Qualifications</p>
             <ul className="space-y-3 text-gray-400 text-sm">
               {qualifications.map((qual) => (
                 <li key={qual}>{qual}</li>
@@ -111,7 +111,7 @@ export default function Footer() {
               />
             </div>
 
-            <h2 className="text-white font-display font-semibold mt-8 mb-6">Contact</h2>
+            <p className="text-white font-display font-semibold mt-8 mb-6">Contact</p>
             <address className="not-italic space-y-3 text-gray-400 text-sm">
               <p>RMT Solutions Ltd<br />Warrington, Cheshire, UK</p>
               <p>

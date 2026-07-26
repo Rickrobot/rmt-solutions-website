@@ -43,31 +43,58 @@ const serviceSchema = {
   },
 }
 
+// Single source of truth for this page's FAQs — rendered on the page AND
+// used to build the FAQPage JSON-LD below. Add questions here only.
+const PAGE_FAQS = [
+  {
+    q: 'Do all HIAB deliveries need a lift plan?',
+    a: 'Not all, but many do. Routine deliveries to prepared areas with competent operators may be covered by generic assessments. Complex lifts, heavy loads, restricted sites, or principal contractor requirements warrant specific lift plans.',
+  },
+  {
+    q: 'Who is responsible for the lift plan - the haulier or the site?',
+    a: 'Under LOLER, the employer of the person doing the lifting has primary responsibility. In practice, this is often the haulage company or crane hire provider. However, principal contractors have duties to ensure safe systems of work on their sites and may require lift plans as a condition of delivery.',
+  },
+  {
+    q: 'What qualifications should a lorry loader operator have?',
+    a: 'Operators should hold ALLMI or CPCS certification for lorry loader operation. Slinger/signaller duties require appropriate slinger/signaller certification.',
+  },
+  {
+    q: 'Can lorry loaders be used for tandem lifting?',
+    a: 'Yes, but tandem lifts with lorry loaders require careful planning. Both machines must be rated for the partial load, and coordination is critical. Specific tandem lift plans are essential.',
+  },
+  {
+    q: 'Do lorry loaders need lift plans?',
+    a: 'Yes. Every lifting operation involving a lorry loader (HIAB) must be planned under LOLER 1998. This includes routine deliveries to construction sites where the lorry loader is used to offload bricks, blocks, scaffolding, or steel. The plan can be a generic plan covering routine deliveries, but specific lifts — over a building, into an excavation, near power lines — need a specific plan.',
+  },
+  {
+    q: 'What CPCS card does a lorry loader operator need?',
+    a: 'A CPCS A36 (Lorry Loader) card is the standard competence card for lorry loader operations in the UK construction industry. ALLMI also issue a recognised lorry loader operator certificate. The operator must hold the appropriate card for the size and type of crane fitted to the vehicle.',
+  },
+  {
+    q: 'What\'s the difference between a HIAB and a lorry loader?',
+    a: 'HIAB is a brand name (Hiab AB, Sweden) that has become a generic term for any vehicle-mounted articulated crane. The correct technical term is \'lorry loader\' or \'vehicle-mounted articulated crane\'. Other major manufacturers include Palfinger, Fassi, Effer, and Atlas. Regardless of brand, all are governed by the same LOLER and BS 7121 requirements.',
+  },
+  {
+    q: 'Are HGV-mounted cranes covered by LOLER?',
+    a: 'Yes. LOLER 1998 applies to all lifting equipment used at work, including vehicle-mounted cranes operating on construction sites. The lorry loader requires a thorough examination certificate every 12 months for general lifting duties, or every 6 months if used to lift people. The lifting operation itself must be planned by a competent person.',
+  },
+]
+
+// FAQ structured data, generated from PAGE_FAQS above.
+//
+// Fix #2, Jul 2026 SEO review: this object used to be a hand-maintained literal
+// separate from the visible FAQ list, and the two had drifted — questions were
+// being emitted as JSON-LD that appeared nowhere on the rendered page, which
+// breaches Google's structured data policy. Deriving it from the visible list
+// makes that impossible by construction. Edit PAGE_FAQS, not this.
 const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      "name": "Do lorry loaders need lift plans?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every lifting operation involving a lorry loader (HIAB) must be planned under LOLER 1998. This includes routine deliveries to construction sites where the lorry loader is used to offload bricks, blocks, scaffolding, or steel. The plan can be a generic plan covering routine deliveries, but specific lifts — over a building, into an excavation, near power lines — need a specific plan." }
-    },
-    {
-      "@type": "Question",
-      "name": "What CPCS card does a lorry loader operator need?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A CPCS A36 (Lorry Loader) card is the standard competence card for lorry loader operations in the UK construction industry. ALLMI also issue a recognised lorry loader operator certificate. The operator must hold the appropriate card for the size and type of crane fitted to the vehicle." }
-    },
-    {
-      "@type": "Question",
-      "name": "What's the difference between a HIAB and a lorry loader?",
-      "acceptedAnswer": { "@type": "Answer", "text": "HIAB is a brand name (Hiab AB, Sweden) that has become a generic term for any vehicle-mounted articulated crane. The correct technical term is 'lorry loader' or 'vehicle-mounted articulated crane'. Other major manufacturers include Palfinger, Fassi, Effer, and Atlas. Regardless of brand, all are governed by the same LOLER and BS 7121 requirements." }
-    },
-    {
-      "@type": "Question",
-      "name": "Are HGV-mounted cranes covered by LOLER?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. LOLER 1998 applies to all lifting equipment used at work, including vehicle-mounted cranes operating on construction sites. The lorry loader requires a thorough examination certificate every 12 months for general lifting duties, or every 6 months if used to lift people. The lifting operation itself must be planned by a competent person." }
-    }
-  ],
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: PAGE_FAQS.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
 }
 
 
@@ -308,24 +335,7 @@ export default function LorryLoaderLiftPlansPage() {
           <h2 className="text-3xl font-bold text-slate-900 mb-12">Frequently Asked Questions</h2>
           
           <div className="space-y-6">
-            {[
-              {
-                q: 'Do all HIAB deliveries need a lift plan?',
-                a: 'Not all, but many do. Routine deliveries to prepared areas with competent operators may be covered by generic assessments. Complex lifts, heavy loads, restricted sites, or principal contractor requirements warrant specific lift plans.',
-              },
-              {
-                q: 'Who is responsible for the lift plan - the haulier or the site?',
-                a: 'Under LOLER, the employer of the person doing the lifting has primary responsibility. In practice, this is often the haulage company or crane hire provider. However, principal contractors have duties to ensure safe systems of work on their sites and may require lift plans as a condition of delivery.',
-              },
-              {
-                q: 'What qualifications should a lorry loader operator have?',
-                a: 'Operators should hold ALLMI or CPCS certification for lorry loader operation. Slinger/signaller duties require appropriate slinger/signaller certification.',
-              },
-              {
-                q: 'Can lorry loaders be used for tandem lifting?',
-                a: 'Yes, but tandem lifts with lorry loaders require careful planning. Both machines must be rated for the partial load, and coordination is critical. Specific tandem lift plans are essential.',
-              },
-            ].map((faq) => (
+            {PAGE_FAQS.map((faq) => (
               <div key={faq.q} className="bg-white p-6 rounded-xl">
                 <h3 className="text-lg font-semibold text-slate-900 mb-3">{faq.q}</h3>
                 <p className="text-slate-600">{faq.a}</p>

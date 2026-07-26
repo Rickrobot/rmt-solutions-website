@@ -115,7 +115,6 @@ const BLOG_POSTS = [
   { slug: 'lift-plan-cost-uk',                                                date: '2026-06-11' },
   { slug: 'what-is-bs-7121-complete-guide',                                   date: '2026-05-22' },
   { slug: 'what-is-a-lift-plan',                                              date: '2026-07-08' },
-  { slug: 'what-is-loler-complete-guide',                                     date: '2026-07-08' },
   { slug: 'when-do-you-need-lift-plan',                                       date: '2026-07-08' },
   { slug: 'mobile-crane-vs-tower-crane',                                      date: '2026-01-28' },
   { slug: 'excavator-lift-plans-complete-guide',                              date: '2026-01-31' },
@@ -124,7 +123,6 @@ const BLOG_POSTS = [
   { slug: 'telehandler-lift-plans-complete-guide',                            date: '2026-06-11' },
   { slug: 'lorry-loader-lift-plans-guide',                                    date: '2026-06-11' },
   { slug: 'lift-plan-checking-what-gets-checked-and-why-plans-get-rejected',  date: '2026-02-22' },
-  { slug: 'lifting-operations-audit-what-to-expect',                          date: '2026-02-23' },
   { slug: 'overhead-crane-lift-plan-guide',                                   date: '2026-05-22' },
 ];
 

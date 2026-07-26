@@ -6,7 +6,11 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'CPCS A61 Appointed Person Services UK',
+  // Fix #6, Jul 2026 SEO review: retargeted to buy intent. "Appointed person
+  // hire" on its own returns a SERP that is roughly 80% job boards, because
+  // Google reads "hire" as "employ a person" — binding it to the lifting
+  // qualifier is what keeps this page out of the recruitment results.
+  title: 'Hire a CPCS A61 Appointed Person UK',
   description:
     'Hire a CPCS A61 Appointed Person for your lifting operations: 35 years of experience, LOLER 1998 and BS 7121 compliant. UK-wide, fast turnaround.',
   keywords: [

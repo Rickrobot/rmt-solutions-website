@@ -9,14 +9,19 @@ export const metadata = {
   // impressions / position 5.7 with ZERO clicks. Title now matches the
   // query phrasing ("site audit") and the description leads with what the
   // auditor checks + a concrete deliverable.
-  title: 'Lifting Operations Site Audit | LOLER Compliance',
-  description: 'Independent site audit of your lifting operations by a CPCS A61 Appointed Person — lift plans, LOLER records, supervision and equipment checked, with a prioritised findings report.',
+  // Fix #6, Jul 2026 SEO review: the title rendered at 64 chars once the
+  // "| RMT Solutions" template was appended, so Google truncated it; the
+  // description was 180 chars, losing "with a prioritised findings report"
+  // — the single most persuasive phrase in it. Both now sit inside the
+  // limits with the deliverable still visible.
+  title: 'Lifting Operations Audit UK | LOLER Audits',
+  description: 'Independent lifting operations site audit by a CPCS A61 Appointed Person. Lift plans, LOLER records, supervision and equipment checked, prioritised report.',
   keywords: 'lifting operations audit, lifting operations site audit, LOLER compliance audit, crane audit, lifting equipment audit, construction site lifting audit, lifting operations management assurance, review of lifting plans',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lifting-operations-audit',
   },
   openGraph: {
-    title: 'Lifting Operations Site Audit | LOLER Compliance',
+    title: 'Lifting Operations Audit UK | LOLER Audits',
     description: 'Independent site audit of your lifting operations by a CPCS A61 Appointed Person — lift plans, LOLER records, supervision and equipment checked.',
     url: 'https://www.rmtsafetysolutions.com/services/lifting-operations-audit',
     images: ['/images/og-lift-planning.jpg'],
@@ -38,31 +43,58 @@ const serviceSchema = {
   areaServed: { '@type': 'Country', name: 'United Kingdom' },
 }
 
+// Single source of truth for this page's FAQs — rendered on the page AND
+// used to build the FAQPage JSON-LD below. Add questions here only.
+const PAGE_FAQS = [
+  {
+    q: 'How long does an audit take?',
+    a: "It depends on scope. A single site desktop audit might take a day. A comprehensive multi-site audit with site visits could take a week. We'll agree timescales during scoping.",
+  },
+  {
+    q: 'How disruptive is a site audit?',
+    a: 'We observe normal operations without interfering. We may ask questions of supervisors and operators, but aim to minimise impact on productivity.',
+  },
+  {
+    q: 'What if you find serious issues?',
+    a: "We'll discuss significant concerns with you immediately rather than waiting for the final report. Safety issues that pose imminent risk should be addressed straight away.",
+  },
+  {
+    q: 'How often should we be audited?',
+    a: 'Annual audits are common for organisations with significant lifting operations. More frequent auditing may be appropriate for high-risk projects or following incidents.',
+  },
+  {
+    q: 'What is a lifting operations audit?',
+    a: 'A lifting operations audit is a systematic compliance review of how lifting is being managed on a construction site. It examines the lift plans in use, the competence of personnel, the condition and certification of equipment and accessories, the effectiveness of supervision, and the alignment between paperwork and what is actually happening on the ground. It produces a written report with findings, recommendations, and a remedial action plan.',
+  },
+  {
+    q: 'How often should lifting operations be audited?',
+    a: 'BS 7121 recommends regular planned audits of lifting operations throughout the project lifetime. Industry best practice on major construction sites is an 8-weekly audit cycle, with additional audits triggered by significant changes — new operators, new lift types, new adjacent activities, or following any incident or near miss.',
+  },
+  {
+    q: 'Who can carry out a lifting operations audit?',
+    a: 'Lifting operations audits should be carried out by a competent person — typically a CPCS Appointed Person (A61) with current site experience and an understanding of BS 7121, LOLER 1998, and the project\'s specific lifting risks. Independent third-party auditors are often preferred because they are not subject to the project\'s commercial pressures.',
+  },
+  {
+    q: 'What gets checked during a lifting operations audit?',
+    a: 'A typical audit covers: lift plans in use against actual operations, thorough examination certificates for all equipment and accessories, operator and slinger competencies, briefings and toolbox talk records, supervision arrangements, near-miss and incident records, ground conditions, exclusion zones, communications, weather monitoring, and the Lifting Coordinator\'s records of routine lifts.',
+  },
+]
+
+// FAQ structured data, generated from PAGE_FAQS above.
+//
+// Fix #2, Jul 2026 SEO review: this object used to be a hand-maintained literal
+// separate from the visible FAQ list, and the two had drifted — questions were
+// being emitted as JSON-LD that appeared nowhere on the rendered page, which
+// breaches Google's structured data policy. Deriving it from the visible list
+// makes that impossible by construction. Edit PAGE_FAQS, not this.
 const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      "name": "What is a lifting operations audit?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A lifting operations audit is a systematic compliance review of how lifting is being managed on a construction site. It examines the lift plans in use, the competence of personnel, the condition and certification of equipment and accessories, the effectiveness of supervision, and the alignment between paperwork and what is actually happening on the ground. It produces a written report with findings, recommendations, and a remedial action plan." }
-    },
-    {
-      "@type": "Question",
-      "name": "How often should lifting operations be audited?",
-      "acceptedAnswer": { "@type": "Answer", "text": "BS 7121 recommends regular planned audits of lifting operations throughout the project lifetime. Industry best practice on major construction sites is an 8-weekly audit cycle, with additional audits triggered by significant changes — new operators, new lift types, new adjacent activities, or following any incident or near miss." }
-    },
-    {
-      "@type": "Question",
-      "name": "Who can carry out a lifting operations audit?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Lifting operations audits should be carried out by a competent person — typically a CPCS Appointed Person (A61) with current site experience and an understanding of BS 7121, LOLER 1998, and the project's specific lifting risks. Independent third-party auditors are often preferred because they are not subject to the project's commercial pressures." }
-    },
-    {
-      "@type": "Question",
-      "name": "What gets checked during a lifting operations audit?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A typical audit covers: lift plans in use against actual operations, thorough examination certificates for all equipment and accessories, operator and slinger competencies, briefings and toolbox talk records, supervision arrangements, near-miss and incident records, ground conditions, exclusion zones, communications, weather monitoring, and the Lifting Coordinator's records of routine lifts." }
-    }
-  ],
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: PAGE_FAQS.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
 }
 
 
@@ -126,7 +158,7 @@ export default function LiftingOperationsAuditPage() {
             Lifting operations remain one of the highest-risk activities in construction. The consequences of
             failure are severe - serious injuries, fatalities, significant equipment damage, and prosecution.
             For a walk-through of the process, see{' '}
-            <Link href="/blog/lifting-operations-audit-what-to-expect" className="text-blue-600 hover:text-blue-700 underline">
+            <Link href="/services/lifting-operations-audit" className="text-blue-600 hover:text-blue-700 underline">
               what to expect from a lifting operations audit
             </Link>, and our{' '}
             <Link href="/blog/what-is-loler-complete-guide" className="text-blue-600 hover:text-blue-700 underline">
@@ -364,30 +396,152 @@ export default function LiftingOperationsAuditPage() {
         </div>
       </section>
 
+      {/* Long-form body copy, merged in from /services/lifting-operations-audit.
+          Fix #3, Jul 2026 SEO review. That post ran to 3,017 words against this
+          page's 996 and targeted the identical term, so the informational page
+          was outranking the page that actually sells the service. The substance
+          now lives here and the blog URL 301s to this page (see next.config.js).
+          The audit-vs-thorough-examination section below is deliberate: Google
+          currently resolves "lifting operations audit" to LOLER thorough
+          examination, and no competitor has noticed the intent confusion. */}
+      <section className="py-20 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">
+            What a lifting operations audit actually involves
+          </h2>
+
+          <div className="space-y-5 text-slate-700 leading-relaxed text-lg">
+            <p>
+              A lifting operations audit is an independent, systematic assessment of how lifting
+              activities are being planned, managed and carried out on a site. It looks at the whole
+              lifting management system — the documentation, the competence of the people involved,
+              the condition and management of the equipment, and what is actually happening on the
+              ground as opposed to what the paperwork says should be happening.
+            </p>
+            <p>
+              The purpose is to give the principal contractor or client an objective picture of the
+              standard of lifting on their project. A good audit is not a pass-or-fail exercise. It is
+              a diagnostic that says what is being done well, where the gaps are, and what needs
+              correcting — with the findings prioritised so the serious items are unmistakable.
+            </p>
+
+            <h3 className="text-2xl font-bold text-slate-900 pt-6">
+              Audit versus LOLER thorough examination — they are not the same thing
+            </h3>
+            <p>
+              This is the single most common confusion in this area, and it is worth being precise
+              about because contractors regularly commission one when their client wanted the other.
+            </p>
+            <p>
+              A <strong>LOLER thorough examination</strong> is a statutory engineering inspection of a
+              specific piece of <em>lifting equipment</em>, carried out by a competent examiner under
+              LOLER Regulation 9, at intervals of 6 or 12 months depending on what the equipment does.
+              It produces a report on the condition of that machine or accessory. It says nothing
+              whatsoever about whether your lifts are being planned properly.
+            </p>
+            <p>
+              A <strong>lifting operations audit</strong> examines the <em>management system</em> — lift
+              plans, supervision, competence, briefings, exclusion zones, records, and observed
+              practice. It has no statutory interval; the frequency is driven by risk and by contract.
+              Neither one substitutes for the other. A site can have a perfect set of thorough
+              examination reports and still be planning its lifts badly, and that combination is
+              exactly what an audit is designed to surface. See our guide to{' '}
+              <Link href="/blog/loler-thorough-examination-guide" className="text-blue-600 hover:text-blue-700 underline">
+                LOLER thorough examinations
+              </Link>{' '}
+              for the equipment side.
+            </p>
+
+            <h3 className="text-2xl font-bold text-slate-900 pt-6">
+              What gets checked
+            </h3>
+            <p>
+              Documentation is the starting point. The auditor reviews the lift plans in place for the
+              operations actually happening on site — not just crane lifts, but{' '}
+              <Link href="/services/excavator-lift-plans" className="text-blue-600 hover:text-blue-700 underline">
+                excavator lifting
+              </Link>
+              ,{' '}
+              <Link href="/services/telehandler-lift-plans" className="text-blue-600 hover:text-blue-700 underline">
+                telehandler crane duties
+              </Link>{' '}
+              and{' '}
+              <Link href="/services/lorry-loader-lift-plans" className="text-blue-600 hover:text-blue-700 underline">
+                lorry loader deliveries
+              </Link>
+              , which are the operations most often found running with no plan at all. Each plan is
+              checked for whether it is genuinely site-specific rather than a generic document
+              recycled from a previous job, and whether it matches the conditions, loads and equipment
+              actually present.
+            </p>
+            <p>
+              Beyond the plans: thorough examination reports for every item of lifting equipment and
+              accessory on site, and whether any have expired. Competence evidence for the Appointed
+              Person, lift supervisors, slinger-signallers and operators, and whether the card levels
+              held actually match the lifts being carried out. The lifting accessory register, colour
+              coding and quarantine arrangements. Briefing records. Then the walkround — exclusion
+              zones as they exist rather than as drawn, crane and plant set-up, outrigger and mat
+              arrangements, ground conditions, communication in practice, and edge protection where
+              lifting and work at height overlap.
+            </p>
+
+            <h3 className="text-2xl font-bold text-slate-900 pt-6">
+              What comes up again and again
+            </h3>
+            <p>
+              After enough of these, the failure patterns repeat. Generic lift plans presented as
+              site-specific. Plans that were technically correct when written but no longer describe
+              what is happening, because the machine changed, the load changed, or the crane moved.
+              Thorough examination certificates that have quietly expired on accessories rather than
+              on the crane itself, because the accessories are the things nobody owns. Exclusion zones
+              marked out at the start of the week and eroded by Thursday. Subcontractors lifting under
+              the principal contractor's plan without ever having been briefed on it. And the most
+              common of all: lifting operations that everybody on site regards as too routine to need
+              a plan, which is not a judgement LOLER allows anyone to make.
+            </p>
+
+            <h3 className="text-2xl font-bold text-slate-900 pt-6">
+              How to prepare
+            </h3>
+            <p>
+              Have the paperwork in one place before the auditor arrives — lift plans, thorough
+              examination reports, the accessory register, competence cards and briefing records. Not
+              because a tidy file scores points, but because time spent hunting for documents is time
+              not spent on site, and the walkround is where the value is. Tell your subcontractors the
+              audit is happening. Do not stage-manage the site: an audit of a site pretending to be
+              something it is not tells you nothing you can use, and experienced auditors can tell.
+            </p>
+            <p>
+              Findings are reported with a priority rating so you can act on the serious items
+              immediately. Anything posing imminent risk gets raised with you on the day rather than
+              held back for the written report — that is not a courtesy, it is the point.
+            </p>
+
+            <h3 className="text-2xl font-bold text-slate-900 pt-6">
+              Audit or lift plan check — which do you need?
+            </h3>
+            <p>
+              If the question is <em>"is this specific lift plan any good?"</em>, that is{' '}
+              <Link href="/services/lift-plan-checking" className="text-blue-600 hover:text-blue-700 underline">
+                lift plan checking
+              </Link>{' '}
+              — a document-level review of one submission, usually turned round in 24 to 48 hours.
+              If the question is <em>"is lifting being managed properly on this project?"</em>, that is
+              an audit — a site-level assessment of the whole system. Principal contractors reviewing
+              subcontractor submissions want the first. Clients and CDM duty holders seeking assurance
+              want the second. Plenty of projects need both, on different cycles.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-12">Frequently Asked Questions</h2>
           
           <div className="space-y-6">
-            {[
-              {
-                q: 'How long does an audit take?',
-                a: "It depends on scope. A single site desktop audit might take a day. A comprehensive multi-site audit with site visits could take a week. We'll agree timescales during scoping.",
-              },
-              {
-                q: 'How disruptive is a site audit?',
-                a: 'We observe normal operations without interfering. We may ask questions of supervisors and operators, but aim to minimise impact on productivity.',
-              },
-              {
-                q: 'What if you find serious issues?',
-                a: "We'll discuss significant concerns with you immediately rather than waiting for the final report. Safety issues that pose imminent risk should be addressed straight away.",
-              },
-              {
-                q: 'How often should we be audited?',
-                a: 'Annual audits are common for organisations with significant lifting operations. More frequent auditing may be appropriate for high-risk projects or following incidents.',
-              },
-            ].map((faq) => (
+            {PAGE_FAQS.map((faq) => (
               <div key={faq.q} className="bg-slate-50 p-6 rounded-xl">
                 <h3 className="text-lg font-semibold text-slate-900 mb-3">{faq.q}</h3>
                 <p className="text-slate-600">{faq.a}</p>

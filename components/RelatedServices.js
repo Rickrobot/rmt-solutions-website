@@ -25,10 +25,9 @@ const ALL_SERVICES = {
     title: 'Lift Plan Checking',
     description: 'Independent technical review of lift plans submitted by subcontractors. Cat A or Cat B determination with paste-ready findings.',
   },
-  'lift-plan-review': {
-    title: 'Lift Plan Review',
-    description: '17-point review against BS 7121, LOLER 1998 and ISO 10567. Formal review document for handover packs and HSE evidence.',
-  },
+  // 'lift-plan-review' removed (Jul 2026 SEO review, fix #5) — the URL 301s to
+  // lift-plan-checking, so linking to it from the related-services block sent
+  // equity through a redirect on every service page that used it.
   'lifting-operations-audit': {
     title: 'Lifting Operations Audit',
     description: 'Site-based compliance audit covering plans, equipment certificates, supervision, and operator competence. 8-weekly cycle available.',
@@ -72,9 +71,8 @@ const ALL_SERVICES = {
 const RELATED_MAP = {
   'appointed-person':          ['lift-plans', 'lift-plan-checking', 'tower-crane'],
   'lift-plans':                ['appointed-person', 'lift-plan-checking', 'excavator-lift-plans', 'mobile-crane-lift-plans'],
-  'lift-plan-checking':        ['appointed-person', 'lift-plan-review', 'lift-plans', 'lifting-operations-audit'],
-  'lift-plan-review':          ['lift-plan-checking', 'lifting-operations-audit', 'lift-plans'],
-  'lifting-operations-audit':  ['tower-crane', 'lift-plan-review', 'lift-plan-checking'],
+  'lift-plan-checking':        ['appointed-person', 'lift-plans', 'lifting-operations-audit', 'tower-crane'],
+  'lifting-operations-audit':  ['tower-crane', 'lift-plan-checking', 'appointed-person'],
   'tower-crane':               ['appointed-person', 'lifting-operations-audit', 'mobile-crane-lift-plans', 'steel-erection'],
   'steel-erection':            ['tower-crane', 'mobile-crane-lift-plans', 'lift-plans'],
   'excavator-lift-plans':      ['lift-plans', 'telehandler-lift-plans', 'lift-plan-checking'],

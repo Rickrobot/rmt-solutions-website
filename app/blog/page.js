@@ -256,17 +256,6 @@ const blogPosts = [
     imageAlt: 'Mobile crane lifting a structural steel section during erection — operation governed by BS 7121 code of practice for safe use of cranes',
   },
   {
-    slug: 'lifting-operations-audit-what-to-expect',
-    title: 'Lifting Operations Audit: What Gets Checked and How to Prepare',
-    excerpt: 'What does a lifting operations audit actually cover on a UK construction site? A practical guide from an Appointed Person covering what auditors examine, the most common findings, and how to prepare your site.',
-    category: 'Services',
-    readTime: '14 min read',
-    date: 'February 23, 2026',
-    dateModified: 'February 23, 2026',
-    image: '/images/services/lifting-operations-audit-inspection-uk.webp',
-    imageAlt: 'Independent auditor observing a tower crane lifting operation from behind the exclusion zone on a UK construction site, carrying out a lifting operations audit',
-  },
-  {
     slug: 'lift-plan-checking-what-gets-checked-and-why-plans-get-rejected',
     title: 'Lift Plan Checking: What Gets Checked & Why Plans Get Rejected',
     excerpt: 'What actually gets checked during a lift plan review? Learn what causes lift plans to fail, common rejection reasons, and how to get your plans approved first time from an Appointed Person with 35 years of experience.',

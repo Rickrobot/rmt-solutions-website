@@ -93,6 +93,17 @@ const jsonLd = {
   ],
 }
 
+// Homepage FAQ.
+//
+// Fix #2, Jul 2026 SEO review. This object previously emitted FAQPage
+// structured data for three questions that appeared NOWHERE on the rendered
+// page. Google's structured data policy requires FAQ markup to reflect content
+// visible to the user, and markup-only FAQs are eligible for a manual action.
+// The questions are now rendered in a visible section further down the page
+// (search for "Homepage FAQ — visible"), generated from this same object so the
+// two cannot drift apart. Expanded from 3 to 8 questions at the same time —
+// fix #7 — because nobody else in this niche carries on-page FAQ blocks, and
+// the pages of ours that do have them are our best performers.
 const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -119,6 +130,46 @@ const faqJsonLd = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Standard lift plans for excavators and telehandlers can be delivered within 24-48 hours. Mobile crane lift plans requiring site visits may take 3-5 working days.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does a lift plan cost?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Excavator and telehandler lift plans start at £200 + VAT. Lorry loader and HIAB plans start at £250 + VAT. Mobile crane, tandem and complex lifts are quoted individually on a fixed-price basis, so there are no hourly surprises. We publish our prices, which most providers in this market do not.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need my own Appointed Person if I hire a crane on CPA terms?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Under a CPA crane hire agreement the crane company supplies the crane and operator only — planning the lifting operation, including appointing a competent Appointed Person, remains your responsibility as the hirer. Under a contract lift the crane company takes that duty on instead. If you are hiring on CPA terms and have no A61 holder available, an external Appointed Person covers the gap.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you produce a lift plan at short notice?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Often, yes. Standard plans are turned around in 24-48 hours as a matter of course, and same-day work is accommodated where the information is available and the lift is not exceptionally complex. Call 07803 808093 rather than emailing if the lift is imminent.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you check lift plans written by someone else?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Independent lift plan checking is a service in its own right — a CPCS A61 Appointed Person reviews the plan against LOLER 1998 and BS 7121, confirms the lift category, and returns written findings you can paste straight into your response to the reviewer. This is commonly used by principal contractors reviewing subcontractor submissions.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you work outside the North West?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — plans are produced remotely and delivered UK-wide, from Cornwall to the Scottish central belt. Site visits are same-day within about 90 minutes of Warrington, which covers Manchester, Liverpool, Leeds and the wider North West. Further afield, visits are scheduled around your critical lifts rather than offered same-day.',
       },
     },
   ],
@@ -230,12 +281,23 @@ export default function HomePage() {
                 </span>
               </div>
 
+              {/* H1 retargeted (Jul 2026 SEO review, fix #1).
+                  Was "Professional Lift Planning Services UK", which was a
+                  near-verbatim duplicate of the H1 on /services/lift-plans and
+                  the H1 on /services. Three pages competing for one head term
+                  meant Google had to pick between them, and both hub pages were
+                  thinner than the child they were competing with. The head term
+                  "lift planning services UK" now belongs to /services/lift-plans;
+                  the homepage leads on LOLER + Appointed Person instead, which is
+                  also what the <title> and meta description already targeted. */}
               <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8">
-                <span className="text-white">Professional</span>
+                <span className="text-white">LOLER-Compliant</span>
                 <br />
-                <span className="gradient-text">Lift Planning</span>
+                <span className="gradient-text">Lift Plans</span>
                 <br />
-                <span className="text-white">Services UK</span>
+                <span className="text-white text-3xl sm:text-4xl lg:text-5xl">
+                  from a CPCS Appointed Person
+                </span>
               </h1>
 
               <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
@@ -601,6 +663,37 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study) => (
               <CaseStudyCard key={study.title} {...study} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Homepage FAQ — visible.
+          Fix #2 / #7, Jul 2026 SEO review. Rendered from faqJsonLd so the
+          structured data emitted in the <head> and the copy on the page can
+          never drift apart. Before this existed the page emitted FAQPage
+          markup for content that was not on the page at all. */}
+      <section className="py-24 bg-slate-950 border-t border-slate-800/50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+              Common Questions
+            </span>
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-white">
+              Lift planning FAQs
+            </h2>
+          </div>
+          <div className="space-y-4">
+            {faqJsonLd.mainEntity.map((item) => (
+              <div
+                key={item.name}
+                className="bg-slate-800/40 border border-slate-700/50 rounded-2xl p-6 sm:p-7"
+              >
+                <h3 className="font-display text-lg sm:text-xl font-bold text-white mb-3">
+                  {item.name}
+                </h3>
+                <p className="text-gray-400 leading-relaxed">{item.acceptedAnswer.text}</p>
+              </div>
             ))}
           </div>
         </div>

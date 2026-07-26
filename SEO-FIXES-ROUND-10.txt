@@ -1,0 +1,241 @@
+SEO FIXES — ROUND 10 (26 July 2026)
+===================================
+
+Source: the nine prioritised fixes from the keyword-map review of
+rmtsafetysolutions.com (~60 UK SERP searches, full crawl of all 80 indexed
+URLs, teardown of 13 competitors).
+
+Everything below is verified against a real `next build` — 80 pages generated,
+0 dead internal links, 0 FAQ schema questions missing from rendered HTML.
+
+21 files changed.
+
+
+FIX 1 — THE THREE-WAY H1 COLLISION ON "LIFT PLANNING SERVICES UK"   [DONE]
+--------------------------------------------------------------------------
+The homepage H1 ("Professional Lift Planning Services UK"), the /services H1
+("Lift planning services") and the /services/lift-plans H1 ("Lift Planning
+Services") were three near-identical H1s on one head term. Google had to pick
+one, and both hub pages were THINNER than the child they were competing with
+(638 and 673 words vs 1,295).
+
+  app/page.js                      H1 -> "LOLER-Compliant Lift Plans from a
+                                         CPCS Appointed Person" (matches what
+                                         the title tag already targeted)
+  app/services/page.js             H1 -> "Our lifting services"
+                                   title -> "UK Lifting Services | Lift Plans
+                                            & AP Cover"
+  app/services/lift-plans/page.js  H1 -> "Lift Planning Services UK" (now owns
+                                         the head term outright)
+                                   H2 "Professional Lift Planning Services,
+                                   UK-Wide" removed — it restated the old
+                                   homepage H1, so the page carried the
+                                   collision internally too.
+
+
+FIX 2 — INVISIBLE FAQ SCHEMA (GOOGLE POLICY BREACH)                 [DONE]
+--------------------------------------------------------------------------
+Worse than the audit reported. EIGHT pages were emitting FAQPage JSON-LD for
+questions that appeared nowhere in the rendered HTML — 20 questions in total.
+Google's structured data policy requires FAQ markup to reflect visible content;
+markup-only FAQs are manual-action eligible.
+
+Root cause: every affected page kept TWO independent copies of its FAQs — a
+hand-maintained `faqSchema` object for the markup, and a separate hardcoded
+array for the visible list. They had drifted.
+
+Fixed properly rather than patched: on each page the visible list is hoisted to
+a module-level `PAGE_FAQS` const and `faqSchema` is now GENERATED from it. They
+cannot drift again, because there is only one list. Questions that existed only
+in the schema were folded into PAGE_FAQS, so nothing was lost.
+
+  app/page.js                       3 schema questions, none visible -> now 8,
+                                    all visible (new FAQ section added)
+  app/services/steel-erection       4 schema questions, none visible -> now 10,
+                                    all visible
+  app/services/lifting-operations-audit   4 invisible -> recovered, 8 total
+  app/services/lorry-loader-lift-plans    4 invisible -> recovered, 8 total
+  app/services/tower-crane                5 invisible -> recovered, 16 total
+  app/services/lift-plan-checking         4 invisible -> recovered, 16 total
+  app/services/mobile-crane-lift-plans    2 invisible -> recovered, 10 total
+  app/services/aerial-site-surveys        1 invisible -> recovered, 8 total
+  app/services/excavator-lift-plans       had TWO visible FAQ blocks with
+                                          near-duplicate answers plus a
+                                          schema-only question — merged into
+                                          one 15-question block
+
+Verified: 265 FAQ questions across the site, 0 not present in rendered HTML.
+
+
+FIX 3 — BLOG POSTS CANNIBALISING THEIR OWN SERVICE PAGES        [1 of 2 DONE]
+--------------------------------------------------------------------------
+(a) LIFTING OPERATIONS AUDIT — DONE.
+    /blog/lifting-operations-audit-what-to-expect was 3,017 words against the
+    service page's 996 on the identical term. The informational page was
+    outranking the page that sells the service.
+
+    - substance merged into app/services/lifting-operations-audit/page.js
+      (996 -> 2,329 words), including a new "audit vs LOLER thorough
+      examination" section. That disambiguation is deliberate: Google currently
+      resolves "lifting operations audit" to thorough examination and no
+      competitor has noticed the intent confusion.
+    - post removed from blogPosts, the blog index and the sitemap feed
+    - 5 internal links repointed to the service page
+    - 301 added in next.config.js
+
+(b) CPCS APPOINTED PERSON — DELIBERATELY NOT DONE. NEEDS YOUR CALL.
+    /blog/cpcs-appointed-person-guide (1,712 words) vs
+    /services/appointed-person (1,809) were near-identical in intent AND
+    length, and the original recommendation was to 301 the blog into the
+    service page.
+
+    I have not done it, because that post currently RANKS — it came up
+    repeatedly in the SERP research as "CPCS A61 Appointed Person: Duties,
+    Training & UK Lift Plans" — and redirecting a ranking page is not
+    reversible in practice once Google has consolidated the signals.
+
+    Instead the intent collision has been reduced from the other end: the
+    service page title is retargeted from "CPCS A61 Appointed Person Services
+    UK" (informational) to "Hire a CPCS A61 Appointed Person UK" (buy intent).
+    That may be enough on its own.
+
+    Watch both URLs in Search Console for 4-6 weeks. If they are still trading
+    places on the same queries, do the 301 then.
+
+
+FIX 4 — THE LONDON DRIVE-TIME BUG                                   [DONE]
+--------------------------------------------------------------------------
+app/locations/[slug]/page.js printed each city's travelMinutes and then an
+UNCONDITIONAL sentence claiming "practical for same-day site visits". On London
+(180 min), Bristol (180), Glasgow (210) and Edinburgh (240) that sold a three-
+to four-hour drive as same-day attendance — and on London it flatly
+contradicted the honest body copy immediately above it.
+
+  - new SAME_DAY_THRESHOLD_MINUTES = 90 constant
+  - under 90 min: same-day wording retained (Warrington, Manchester, Salford,
+    Stockport, Trafford, Liverpool, Wirral, Leeds)
+  - over 90 min: "scheduled around your critical lifts", with the honest point
+    that the PLAN is still 24-48 hours wherever the site is
+    (Birmingham, London, Bristol, Glasgow, Edinburgh)
+  - new formatTravelTime() — "3 hours from London", not "180 minutes from
+    London"
+
+This was a credibility risk, not just an SEO one.
+
+
+FIX 5 — DEAD /services/lift-plan-review LINKS                       [DONE]
+--------------------------------------------------------------------------
+That URL 301s to /services/lift-plan-checking, but was still hard-linked from
+the services hub, all 13 location pages and the related-services block. The
+location pages listed "Lift Plan Checking" AND "Lift Plan Review" as two menu
+entries landing on the same page.
+
+  app/services/page.js           card removed
+  app/locations/[slug]/page.js   duplicate menu entry removed
+  components/RelatedServices.js  entry and all map references removed
+
+
+FIX 6 — TITLES AND METAS OVER (AND UNDER) THE LIMITS                [DONE]
+--------------------------------------------------------------------------
+NOTE: app/layout.js appends "| RMT Solutions" (16 chars) to every child page
+title, so a raw title must be <= 44 chars to render inside 60. That is what
+made the audit page breach without it being obvious in the source.
+
+  lifting-operations-audit  title 64 -> 58 rendered; meta 180 -> 155
+                            (was losing "with a prioritised findings report")
+  mobile-crane-lift-plans   meta 158 -> 143
+  excavator-lift-plans      meta 121 -> 153 (strongest page on the site had the
+                            shortest description — ~30 wasted SERP characters)
+  services                  retitled, see fix 1
+  resources                 title and H1 were targeting different terms
+                            ("free lift plan templates" vs "LOLER guidance") —
+                            aligned
+  tower-crane               URL said tower-crane, title said Contracts, H1 said
+                            Compliance Contracts, meta led on audits, an H2 said
+                            Lift Plans. Four framings. Now commits to the AP
+                            contract, which is what the page sells.
+  aerial-site-surveys       retargeted from "aerial site survey UK" (owned by 10
+                            dedicated survey firms with real authority and no
+                            lifting crossover — unwinnable) to "drone site
+                            surveys for lift planning", which nobody holds
+  steel-erection            leads on "steel erection lift plans" + tandem lifts
+  appointed-person          -> "Hire a CPCS A61 Appointed Person UK". The
+                            lifting qualifier matters: "appointed person hire"
+                            alone returns a SERP that is ~80% job boards,
+                            because Google reads "hire" as "employ a person".
+
+Verified across all 76 built pages: every title 45-60 chars, every meta
+120-155, no duplicates.
+
+
+FIX 7 — FAQ BLOCKS WHERE THERE WERE NONE                            [DONE]
+--------------------------------------------------------------------------
+Almost nobody in this niche carries on-page FAQs — and the pages of ours that
+already had them are the best performers. That is not a coincidence.
+
+  app/page.js                     new 8-question FAQ section
+  app/services/steel-erection     new 10-question FAQ section
+  app/locations/[slug]/page.js    new 6-question FAQ on ALL 13 city pages,
+                                  with FAQPage schema
+
+The location FAQs are generated from each city's own data rather than being
+boilerplate — the same-day question gives the honest answer for that specific
+city, and the pricing question says plainly whether travel is chargeable. Also
+lifts the location pages off the thin-content floor (London 575 -> 1,010 words,
+Warrington 664 -> 1,087).
+
+
+FIX 8 — /services/steel-erection WAS 437 WORDS                      [DONE]
+--------------------------------------------------------------------------
+Thinnest money page on the site, in the main nav, promoted on the homepage, at
+under a third of the length of its sibling service pages.
+
+437 -> 2,368 words. New long-form section covering fabrication drawing review,
+erection sequencing and how it interacts with temporary stability (BS 5975),
+crane selection and siting including outrigger loads and ground bearing,
+tandem lifts and derating, and what the client actually receives. Plus the
+10-question FAQ from fix 7.
+
+
+FIX 9 — FOUR IDENTICAL FOOTER H2s ON ALL 80 PAGES                   [DONE]
+--------------------------------------------------------------------------
+components/Footer.js — "Lift Planning Services", "Locations Served",
+"Qualifications" and "Contact" were <h2>, putting four meaningless headings on
+every URL and diluting the heading signal sitewide. Now styled <p>, identical
+visually.
+
+
+FOUND DURING VERIFICATION — NOT ONE OF THE NINE
+--------------------------------------------------------------------------
+/blog/what-is-loler-complete-guide DOES NOT EXIST. It is not in blogPosts —
+but 8 pages link to it and it was listed in the sitemap feed. So every one of
+those links returned a 404, and we were actively submitting a dead URL to
+Google.
+
+Holding fix applied: removed from the sitemap feed and the related-posts map,
+and 301'd to /blog/loler-acop-l113-explained.
+
+RICKY — this looks like the post was deleted by accident. "What is LOLER" is a
+genuinely high-volume term. Rewriting the post and removing the redirect is the
+better answer than leaving the redirect in place. Your call.
+
+
+VERIFICATION
+--------------------------------------------------------------------------
+  npx next build            80 pages, compiled clean, no errors
+  dead internal links       0
+  invisible FAQ questions   0 of 265
+  titles outside 45-60      0
+  metas outside 120-155     0 (on the pages touched; several BLOG posts are
+                            still over 155 — pre-existing, not in scope, worth
+                            a sweep next)
+
+
+STILL OUTSTANDING
+--------------------------------------------------------------------------
+  - fix 3(b), the appointed-person 301 — your decision, see above
+  - rewrite /blog/what-is-loler-complete-guide, or leave the redirect
+  - ~15 blog posts have meta descriptions over 155 chars (pre-existing)
+  - /resources/lorry-loader-lift-plan-templates renders TWO H1s (pre-existing)
+  - the 24 new pages on the build list — /services/urgent-lift-plans and the
+    CPA-vs-contract-lift piece are the two highest-value ones

@@ -3,8 +3,12 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Aerial Site Surveys UK | Drone Photography',
-  description: 'Aerial site surveys and construction photography from a CPCS Appointed Person with GVC drone pilot and CAA Operational Authorisation.',
+  // Fix #6, Jul 2026 SEO review: generic "aerial site survey UK" is owned by
+  // ten dedicated survey firms with real domain authority and no lifting
+  // crossover — unwinnable as a secondary service. "Drone survey for lift
+  // planning" combines both and no competitor holds it.
+  title: 'Drone Site Surveys for Lift Planning UK',
+  description: 'Aerial site surveys and construction photography for lift planning. CAA Operational Authorisation and GVC, flown by a CPCS Appointed Person.',
   keywords: 'aerial site survey, drone survey lift planning, drone survey construction site, construction site photography, aerial survey crane planning, UAV site survey UK, construction progress photography, site photography contractor, GVC drone pilot, CAA operational authorisation',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/aerial-site-surveys',
@@ -32,51 +36,58 @@ const serviceSchema = {
   areaServed: { '@type': 'Country', name: 'United Kingdom' },
 }
 
+// Single source of truth for this page's FAQs — rendered on the page AND
+// used to build the FAQPage JSON-LD below. Add questions here only.
+const PAGE_FAQS = [
+  {
+    q: 'How does a drone survey help with lift planning?',
+    a: 'A drone survey provides accurate overhead imagery of the site showing access routes, ground conditions, overhead obstructions, adjacent structures, and potential crane positions. This data directly informs the lift plan, producing more accurate and site-specific documentation than working from drawings or third-party photographs alone.',
+  },
+  {
+    q: 'Are you licensed to fly drones on construction sites?',
+    a: 'Yes. We hold a GVC (General VLOS Certificate) and CAA Operational Authorisation, which permits us to fly in congested areas including active construction sites. All flights are conducted in compliance with current UK drone regulations.',
+  },
+  {
+    q: 'Can you fly drones near tower cranes and other construction equipment?',
+    a: 'Yes. Our CAA Operational Authorisation covers flight in congested areas. All flights near construction equipment are planned with appropriate risk assessments, and we coordinate with site management to ensure safe operations. Tower crane jib positions and other overhead equipment are factored into every flight plan.',
+  },
+  {
+    q: 'Do you offer ground-level photography as well as aerial?',
+    a: 'Yes. We provide both aerial drone photography and ground-level construction site photography. Because we hold CPCS, NEBOSH, and CSCS qualifications, we can work safely and independently on live construction sites without requiring an escort or additional supervision.',
+  },
+  {
+    q: 'Can the aerial survey be combined with lift plan writing or review?',
+    a: 'Yes, and this is where the service delivers the most value. Because the person conducting the survey is also the Appointed Person writing or reviewing the lift plan, the survey data feeds directly into the planning process with no loss of information or misinterpretation between separate parties.',
+  },
+  {
+    q: 'What areas of the UK do you cover?',
+    a: 'We provide aerial surveys and site photography across the UK. Based in Warrington, Cheshire, we attend sites nationwide.',
+  },
+  {
+    q: 'How long does a survey take?',
+    a: 'Most site surveys can be completed in a few hours, including setup, flight, and ground-level photography. The exact duration depends on the size of the site and the scope of what needs to be captured. All data is typically delivered within 24 hours of the site visit.',
+  },
+  {
+    q: 'Do you offer ground-level site photography as well as aerial?',
+    a: 'Yes. We provide both aerial and ground-level construction site photography. Because we hold CPCS, NEBOSH, and CSCS qualifications, we can work safely and independently on live construction sites without requiring an escort or additional supervision.',
+  },
+]
+
+// FAQ structured data, generated from PAGE_FAQS above.
+//
+// Fix #2, Jul 2026 SEO review: this object used to be a hand-maintained literal
+// separate from the visible FAQ list, and the two had drifted — questions were
+// being emitted as JSON-LD that appeared nowhere on the rendered page, which
+// breaches Google's structured data policy. Deriving it from the visible list
+// makes that impossible by construction. Edit PAGE_FAQS, not this.
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How does a drone survey help with lift planning?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A drone survey provides accurate overhead imagery of the site showing access routes, ground conditions, overhead obstructions, adjacent structures, and potential crane positions. This data directly informs the lift plan, producing more accurate and site-specific documentation than working from drawings or third-party photographs alone.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Are you licensed to fly drones on construction sites?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. We hold a GVC (General VLOS Certificate) and CAA Operational Authorisation, which permits us to fly in congested areas including active construction sites. All flights are conducted in compliance with current UK drone regulations.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you fly drones near tower cranes and other construction equipment?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Our CAA Operational Authorisation covers flight in congested areas. All flights near construction equipment are planned with appropriate risk assessments, and we coordinate with site management to ensure safe operations.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you offer ground-level site photography as well as aerial?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. We provide both aerial and ground-level construction site photography. Because we hold CPCS, NEBOSH, and CSCS qualifications, we can work safely and independently on live construction sites without requiring an escort or additional supervision.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What areas of the UK do you cover?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We provide aerial surveys and site photography across the UK. Based in Warrington, Cheshire, we can attend sites nationwide.',
-      },
-    },
-  ],
+  mainEntity: PAGE_FAQS.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
 }
 
 // BreadcrumbList JSON-LD — Home > Services > {service}. Unlocks
@@ -442,36 +453,7 @@ export default function AerialSiteSurveysPage() {
           <h2 className="text-3xl font-bold text-slate-900 mb-12">Frequently Asked Questions</h2>
 
           <div className="space-y-6">
-            {[
-              {
-                q: 'How does a drone survey help with lift planning?',
-                a: 'A drone survey provides accurate overhead imagery of the site showing access routes, ground conditions, overhead obstructions, adjacent structures, and potential crane positions. This data directly informs the lift plan, producing more accurate and site-specific documentation than working from drawings or third-party photographs alone.',
-              },
-              {
-                q: 'Are you licensed to fly drones on construction sites?',
-                a: 'Yes. We hold a GVC (General VLOS Certificate) and CAA Operational Authorisation, which permits us to fly in congested areas including active construction sites. All flights are conducted in compliance with current UK drone regulations.',
-              },
-              {
-                q: 'Can you fly drones near tower cranes and other construction equipment?',
-                a: 'Yes. Our CAA Operational Authorisation covers flight in congested areas. All flights near construction equipment are planned with appropriate risk assessments, and we coordinate with site management to ensure safe operations. Tower crane jib positions and other overhead equipment are factored into every flight plan.',
-              },
-              {
-                q: 'Do you offer ground-level photography as well as aerial?',
-                a: 'Yes. We provide both aerial drone photography and ground-level construction site photography. Because we hold CPCS, NEBOSH, and CSCS qualifications, we can work safely and independently on live construction sites without requiring an escort or additional supervision.',
-              },
-              {
-                q: 'Can the aerial survey be combined with lift plan writing or review?',
-                a: 'Yes, and this is where the service delivers the most value. Because the person conducting the survey is also the Appointed Person writing or reviewing the lift plan, the survey data feeds directly into the planning process with no loss of information or misinterpretation between separate parties.',
-              },
-              {
-                q: 'What areas of the UK do you cover?',
-                a: 'We provide aerial surveys and site photography across the UK. Based in Warrington, Cheshire, we attend sites nationwide.',
-              },
-              {
-                q: 'How long does a survey take?',
-                a: 'Most site surveys can be completed in a few hours, including setup, flight, and ground-level photography. The exact duration depends on the size of the site and the scope of what needs to be captured. All data is typically delivered within 24 hours of the site visit.',
-              },
-            ].map((faq) => (
+            {PAGE_FAQS.map((faq) => (
               <div key={faq.q} className="bg-white p-6 rounded-xl">
                 <h3 className="text-lg font-semibold text-slate-900 mb-3">{faq.q}</h3>
                 <p className="text-slate-600">{faq.a}</p>

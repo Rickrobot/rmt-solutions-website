@@ -6,8 +6,11 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Steel Erection Planning UK | Lift Plans',
-  description: 'Lift planning for structural steel erection: fabrication drawing reviews, erection sequences, crane selection and tandem lifts. CPCS Appointed Person.',
+  // Fix #6/#8, Jul 2026 SEO review: title now leads on "steel erection lift
+  // plans" (the commercial term) and surfaces tandem lifts, which is the
+  // differentiator and links through to the new tandem content.
+  title: 'Steel Erection Lift Plans UK | Tandem Lifts',
+  description: 'Lift planning for structural steel erection: fabrication drawing reviews, erection sequences, crane selection and tandem lifts, by a CPCS A61 AP.',
   keywords: ['steel erection', 'structural steel', 'steel frame', 'tandem lifts', 'crane selection', 'erection sequence'],
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/steel-erection',
@@ -69,6 +72,31 @@ const faqSchema = {
       "@type": "Question",
       "name": "How long before steel arrives on site should the lift plan be ready?",
       "acceptedAnswer": { "@type": "Answer", "text": "Lift plans and erection method statements should be issued, reviewed, and approved by the principal contractor at least 7 to 10 working days before steel deliveries begin. This allows time for review comments, clash detection with other trades, and pre-start briefings with the erection team." }
+    },
+    {
+      "@type": "Question",
+      "name": "When does steel erection need a tandem lift?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A tandem lift is used when a single crane cannot take the member safely — usually because the piece is too heavy at the required radius, too long to control on one hook, or has to be rotated from horizontal to vertical during the lift. Long trusses, plate girders and pre-assembled frames are the common cases. Tandem lifts are treated as complex lifts under BS 7121, each crane is derated (typically to 75 to 80 per cent of its chart capacity to allow for load sharing and out-of-plumb effects), and one person must have overall control of the operation." }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is responsible for temporary stability during steel erection?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Temporary stability of the partially erected frame is a design responsibility, not a lifting one. It sits with the temporary works designer and is checked by the temporary works coordinator appointed under BS 5975. The Appointed Person plans how each piece gets into position safely; the erection sequence they plan to must come from, and be consistent with, that stability design. Where the two conflict, the stability design governs and the sequence is replanned around it." }
+    },
+    {
+      "@type": "Question",
+      "name": "What information do you need to plan a steel erection lift?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Fabrication and general arrangement drawings, the steel schedule with individual piece weights, the site layout showing crane access and hardstanding, any known ground conditions or underground services information, details of overhead obstructions and boundaries, and the intended erection sequence if the steelwork contractor has one. If piece weights are missing we can calculate them from the drawings, but confirmed fabricator weights are always preferable." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can one lift plan cover a whole steel erection package?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Usually a package needs a small set of plans rather than one document or one per piece. Repetitive picks made from the same crane position with similar weights and radii can be grouped under a single plan that defines the envelope of loads and radii it covers. Anything outside that envelope, plus every tandem lift, blind lift, lift over a live area and each crane relocation, needs its own plan. Grouping sensibly keeps the paperwork usable on site, which matters — a plan nobody reads controls nothing." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does steel erection lift planning cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Steel erection packages are quoted individually rather than at the fixed rates we publish for single-machine lift plans, because the work scales with the number of crane positions, the complexity of the sequence and whether tandem lifts are involved. Send the fabrication drawings and steel schedule and you will have a fixed-price quote within 4 working hours." }
     }
   ],
 }
@@ -227,6 +255,157 @@ export default function SteelErectionPage() {
         </div>
       </section>
 
+      {/* Long-form body copy.
+          Fix #8, Jul 2026 SEO review. This page was 437 words — the thinnest
+          money page on the site, despite being in the main nav and promoted on
+          the homepage, and running at under a third of the length of its
+          sibling service pages. The sections below cover the parts of steel
+          erection planning that buyers actually search for: sequencing,
+          drawing review, crane selection and siting, tandem lifts, temporary
+          stability and the documents that get issued. */}
+      <section className="py-24 bg-slate-950 border-t border-slate-800/50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+            Steel Erection Lift Planning Explained
+          </span>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-8">
+            What a steel erection lift plan has to get right
+          </h2>
+
+          <div className="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>
+              Steel erection is not one lifting operation. A single portal frame job might involve
+              two hundred individual picks; a multi-storey frame runs into the thousands. Every one
+              of those is a lifting operation under{' '}
+              <Link href="/blog/loler-acop-l113-explained" className="text-amber-400 hover:text-amber-300 underline">
+                LOLER 1998
+              </Link>{' '}
+              Regulation 8, which means every one must be properly planned by a competent person,
+              appropriately supervised, and carried out safely. The practical job of a steel erection
+              lift plan is to do that across a whole package without producing a document nobody on
+              site will ever read.
+            </p>
+            <p>
+              The other thing that makes steel different from most lifting work is that the structure
+              being built is not stable until it is finished. A column standing on four holding-down
+              bolts is not a structure — it is a cantilever waiting for a reason to fall over. So the
+              lift plan and the erection sequence are the same conversation. You cannot plan the picks
+              without knowing the order, and the order is driven by when the frame becomes
+              self-supporting.
+            </p>
+
+            <h3 className="font-display text-2xl font-bold text-white pt-6">
+              Fabrication drawing review
+            </h3>
+            <p>
+              Planning starts with the fabrication drawings and the steel schedule. We work through
+              them to establish the weight of every piece, where its centre of gravity sits, and
+              whether it has usable lifting points or needs a purpose-made arrangement. Long slender
+              members — rafters, trusses, plate girders — often need a spreader beam or a two-point
+              pick simply to stop them bending under their own weight while suspended.
+            </p>
+            <p>
+              This stage catches problems that are cheap to solve on paper and expensive to solve on
+              site. Missing or absent lifting lugs, pieces whose weight puts them outside the intended
+              crane's chart at the radius they have to be placed at, and members that cannot be
+              rotated from the delivery position into the erected position without fouling something
+              are all routinely found here. Confirmed fabricator weights are always preferable to
+              calculated ones, but we can derive them from the drawings where the schedule is
+              incomplete.
+            </p>
+
+            <h3 className="font-display text-2xl font-bold text-white pt-6">
+              Erection sequence and temporary stability
+            </h3>
+            <p>
+              The erection sequence determines the order in which the frame goes up, when temporary
+              bracing goes in, and when it can safely come out. Temporary stability is a design
+              responsibility — it belongs to the temporary works designer and is signed off by the
+              temporary works coordinator appointed under BS 5975, not by the Appointed Person. But
+              the two have to agree. The sequence we plan the lifting around must be the sequence the
+              stability design assumes, and where they conflict, the stability design governs and the
+              lifting gets replanned around it.
+            </p>
+            <p>
+              In practice the sequence also has to survive contact with the real programme. Steel
+              rarely arrives in the order the drawings imply, deliveries get split, and other trades
+              want the same ground the crane is standing on. A sequence that only works if everything
+              goes to plan is not a sequence, and we build in the flexibility to reorder where the
+              stability design allows it — and flag clearly where it does not.
+            </p>
+
+            <h3 className="font-display text-2xl font-bold text-white pt-6">
+              Crane selection and siting
+            </h3>
+            <p>
+              Crane selection follows from the heaviest pick at the greatest radius, not from the
+              heaviest piece. A five-tonne member placed at 30 metres is a much bigger crane than a
+              twelve-tonne member placed at eight. We work the load chart deductions properly —
+              hook block, slings, spreader beams, lifting accessories — and plan to the net capacity
+              rather than the headline figure. Our{' '}
+              <Link href="/services/mobile-crane-lift-plans" className="text-amber-400 hover:text-amber-300 underline">
+                mobile crane lift plans
+              </Link>{' '}
+              cover the same ground for standalone crane work.
+            </p>
+            <p>
+              Siting is where most steel jobs actually get decided. Outrigger loads from a large
+              mobile crane are concentrated and high, and the ground has to be verified as capable of
+              taking them — made ground, backfilled service trenches, basement slabs and buried
+              drainage are the usual culprits. The plan specifies mat or pad sizes derived from the
+              bearing pressure, not from what happens to be on the wagon. Where access is genuinely
+              tight, a{' '}
+              <Link href="/services/tower-crane" className="text-amber-400 hover:text-amber-300 underline">
+                tower crane
+              </Link>{' '}
+              may be the answer instead, and our comparison of{' '}
+              <Link href="/blog/mobile-crane-vs-tower-crane" className="text-amber-400 hover:text-amber-300 underline">
+                mobile crane versus tower crane
+              </Link>{' '}
+              sets out how that decision usually falls on steelwork.
+            </p>
+
+            <h3 className="font-display text-2xl font-bold text-white pt-6">
+              Tandem and multi-crane lifts
+            </h3>
+            <p>
+              Tandem lifts come up on steel more than on almost any other type of work — long trusses,
+              pre-assembled frames, and pieces that have to be turned from horizontal to vertical
+              mid-lift. A tandem lift is a complex lift under BS 7121 by definition. Both cranes are
+              derated to allow for load sharing and out-of-plumb effects, one person holds overall
+              control of the operation, and the communication arrangement has to be established and
+              briefed before anything leaves the ground.
+            </p>
+            <p>
+              The planning detail that gets missed most often is what happens if the lift has to stop
+              part-way. A tandem lift that is halted with the load part-rotated is a materially
+              different loading case from either the start or the end position, and the plan needs to
+              say what the crews do in that situation rather than leaving them to improvise.
+            </p>
+
+            <h3 className="font-display text-2xl font-bold text-white pt-6">
+              What you actually receive
+            </h3>
+            <p>
+              For a typical steel package that means a set of lift plans covering each crane position
+              and load envelope, an erection method statement setting out the sequence and the
+              controls, the supporting risk assessment, crane position and radius drawings marked up
+              on the site layout, exclusion zone arrangements, and the lifting accessory schedule.
+              Everything is signed off by a CPCS A61 Appointed Person and written to the standard Tier
+              1 principal contractors expect, because they are the people who review it.
+            </p>
+            <p>
+              Plans should be with the principal contractor seven to ten working days before steel
+              starts arriving. That is not a formality — it is the window in which review comments get
+              resolved, clashes with other trades get spotted, and the erection team gets briefed
+              properly. Packages that arrive the day before the first delivery are the ones that end
+              up being replanned on the hard shoulder of the programme. If a reviewer does come back
+              with comments on our documents, dealing with them is part of the fee, not an extra.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Process */}
       <section className="py-24 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -260,6 +439,33 @@ export default function SteelErectionPage() {
                 tandem lifts where required.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ — visible.
+          Fix #2, Jul 2026 SEO review. This page emitted FAQPage structured data
+          for four questions that appeared nowhere on the rendered page, which
+          breaches Google's structured data policy and is manual-action
+          eligible. The block below renders from faqSchema itself, so the markup
+          and the visible copy stay in sync by construction. */}
+      <section className="py-20 bg-slate-900 border-t border-slate-800/50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-8">
+            Steel erection lift planning FAQs
+          </h2>
+          <div className="space-y-4">
+            {faqSchema.mainEntity.map((item) => (
+              <div
+                key={item.name}
+                className="bg-slate-800/40 border border-slate-700/50 rounded-2xl p-6 sm:p-7"
+              >
+                <h3 className="font-display text-lg sm:text-xl font-bold text-white mb-3">
+                  {item.name}
+                </h3>
+                <p className="text-gray-400 leading-relaxed">{item.acceptedAnswer.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

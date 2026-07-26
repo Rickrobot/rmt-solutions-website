@@ -183,8 +183,11 @@ export default function LiftPlansPage() {
             <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
               LOLER Compliant Lift Plans
             </span>
+            {/* This page now owns the head term "lift planning services UK"
+                outright (Jul 2026 SEO review, fix #1) — the homepage and
+                /services H1s were retargeted away from it. */}
             <h1 className="font-display text-5xl sm:text-6xl font-bold text-white mb-6">
-              Lift Planning <span className="gradient-text">Services</span>
+              Lift Planning <span className="gradient-text">Services UK</span>
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
               Expert lift planning services for excavators, telehandlers, lorry loaders, and mobile cranes.
@@ -206,8 +209,13 @@ export default function LiftPlansPage() {
           <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
             Lift Planning Explained
           </span>
+          {/* H2 rewritten (Jul 2026 SEO review, fix #1). Was "Professional Lift
+              Planning Services, UK-Wide" — a verbatim restatement of the old
+              homepage H1, which meant this page carried the collision internally
+              as well. The H2 now frames the section as an explainer rather than
+              repeating the H1's target term. */}
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
-            Professional Lift Planning Services, UK-Wide
+            What a lift plan is, and what you get from us
           </h2>
           <div className="space-y-5 text-gray-300 leading-relaxed text-lg">
             <p>

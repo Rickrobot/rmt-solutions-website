@@ -51,91 +51,90 @@ const serviceSchema = {
   },
 }
 
+// Single source of truth for this page's FAQs — rendered on the page AND
+// used to build the FAQPage JSON-LD below. Add questions here only.
+const PAGE_FAQS = [
+  {
+    q: 'What is lift plan checking?',
+    a: 'Lift plan checking is the independent review of a lift plan prepared by another party — typically a subcontractor, crane hire firm or third-party Appointed Person — to confirm it is technically correct, LOLER and BS 7121 compliant, and fit for the specific site conditions. The output is a written review with findings, recommendations and a Category A (acceptable) or Category B (not acceptable as submitted) determination.',
+  },
+  {
+    q: 'How quickly can you turn a check around?',
+    a: 'Standard turnaround is 24–48 working hours from receipt of a complete submission. Urgent same-day reviews are arranged for critical-path operations — let us know when you submit. Complex tandem and contract lifts may take 3–5 working days.',
+  },
+  {
+    q: 'What if a lift plan fails your check (Category B)?',
+    a: 'You receive a clear report explaining what is wrong and what is needed to fix it. The subcontractor amends and resubmits. We verify the amendments — included in the original check fee for straightforward issues.',
+  },
+  {
+    q: 'What does Category A and Category B mean?',
+    a: 'Category A means the plan is acceptable as submitted and the lift can proceed. Category B means the plan is not acceptable as submitted — every finding is set out with the standard reference and what must change for acceptance.',
+  },
+  {
+    q: 'Is a lift plan review a legal requirement?',
+    a: 'Independent review is not itself named in LOLER 1998, but Regulation 8 requires every lifting operation to be properly planned by a competent person and appropriately supervised. Under CDM 2015 the principal contractor must also plan, manage and monitor lifting on site — including subcontractors\u2019 lifts. Independent checking is how most principal contractors demonstrate they discharged that duty, and it is why tier 1 procurement routinely requires it.',
+  },
+  {
+    q: 'Can subcontractors use your review service?',
+    a: 'Yes. Subcontractors often ask for a review before submitting a plan to the principal contractor, so problems are corrected in private rather than bounced back through the site team. It is usually faster and cheaper than having a plan rejected, re-worked and re-submitted — and it protects your standing with the main contractor.',
+  },
+  {
+    q: 'Why do lift plans get rejected?',
+    a: 'The most common reasons are inaccurate or unverified load weights, wrong machine configuration on the load chart, capacity utilisation above the project threshold, missing thorough examination certificates, no site-specific hazard assessment, incorrect rigging or sling angles, missing personnel competencies, and inadequate ground-bearing assessment.',
+  },
+  {
+    q: 'What documents do you need to check a lift plan?',
+    a: 'A complete submission includes the lift plan drawing, risk assessment, method statement, load chart extract for the proposed configuration, equipment thorough examination certificates, lifting accessories certification, and named personnel with their CPCS or equivalent competencies. Missing documents are themselves a finding.',
+  },
+  {
+    q: 'Do you check lift plans from all crane companies?',
+    a: 'Yes. We are independent of any crane hire company, so submissions from any supplier are reviewed on their merits. Some suppliers produce excellent documentation; others routinely fall short. The check identifies which is which without fear or favour.',
+  },
+  {
+    q: 'Do you offer a retained service?',
+    a: 'Yes. For larger projects with frequent submissions or multi-site operations we offer a retained service at an agreed monthly fee covering unlimited checks, with an SLA on turnaround. Normally more cost-effective once you are receiving more than 4–6 plans a month.',
+  },
+  {
+    q: 'What if I disagree with my subcontractor about a lift plan?',
+    a: 'We can provide independent assessment and, if needed, explain our findings directly to your subcontractor. Having an independent expert view typically resolves disputes far more efficiently than internal back-and-forth.',
+  },
+  {
+    q: 'Will the check report stand up to HSE scrutiny?',
+    a: 'Yes. Each report is signed off by a CPCS A61 Appointed Person, references the relevant standard for every finding, and is designed to drop into your CDM file as evidence of due diligence under CDM 2015 and LOLER 1998.',
+  },
+  {
+    q: 'How long does lift plan checking take?',
+    a: 'Standard lift plan checking turnaround is 24 to 48 hours from receipt of a complete plan. Complex plans involving tandem lifts, contract lifts, or significant site-specific risks may take 3 to 5 working days. Same-day reviews can be arranged for urgent operations.',
+  },
+  {
+    q: 'What\'s the difference between lift plan checking and lift plan review?',
+    a: 'The terms are often used interchangeably. Both involve an independent competent person assessing a lift plan for technical compliance and site suitability. Some clients reserve \'review\' for a higher-level acceptance check by their Appointed Person, and \'checking\' for the detailed technical line-by-line audit. Either way, the deliverable is a written record with findings and a clear pass/fail determination.',
+  },
+  {
+    q: 'Are you independent of the crane companies?',
+    a: 'Yes. We are not part of any crane hire company, plant supplier or contractor group, so submissions from any supplier are reviewed objectively on their merits. Some crane companies produce excellent documentation; others routinely fall short. The check identifies which is which without fear or favour.',
+  },
+  {
+    q: 'Do you offer a retained checking service?',
+    a: 'Yes. For larger projects with frequent submissions or multi-site operations we offer a retained service at an agreed monthly fee covering unlimited lift plan checks, with an SLA on turnaround. This is normally more cost-effective than per-plan checking once you are receiving more than four to six plans a month.',
+  },
+]
+
+// FAQ structured data, generated from PAGE_FAQS above.
+//
+// Fix #2, Jul 2026 SEO review: this object used to be a hand-maintained literal
+// separate from the visible FAQ list, and the two had drifted — questions were
+// being emitted as JSON-LD that appeared nowhere on the rendered page, which
+// breaches Google's structured data policy. Deriving it from the visible list
+// makes that impossible by construction. Edit PAGE_FAQS, not this.
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is lift plan checking?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Lift plan checking is the independent review of a lift plan prepared by another party — typically a subcontractor, crane hire firm, or third-party Appointed Person — to confirm it is technically correct, LOLER and BS 7121 compliant, and fit for the specific site conditions. The output is a written review with findings, recommendations, and a Category A (acceptable) or Category B (not acceptable as submitted) determination.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is a lift plan review a legal requirement?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Independent review is not itself named in LOLER 1998, but Regulation 8 requires every lifting operation to be properly planned by a competent person and appropriately supervised. Under CDM 2015 the principal contractor must also plan, manage and monitor lifting on site — including subcontractors\u2019 lifts. Independent checking is how most principal contractors demonstrate they discharged that duty, and it is why tier 1 procurement routinely requires it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can subcontractors use your review service?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Subcontractors often ask for a review before submitting a plan to the principal contractor, so problems are corrected in private rather than bounced back through the site team. It is usually faster and cheaper than having a plan rejected, re-worked and re-submitted \u2014 and it protects your standing with the main contractor.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Why do lift plans get rejected?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The most common reasons lift plans get rejected are inaccurate or unverified load weights, wrong machine configuration on the load chart, capacity utilisation above the project threshold, missing thorough examination certificates, no site-specific hazard assessment, incorrect rigging calculations or sling angles, missing personnel competencies, and inadequate consideration of ground bearing pressure.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does lift plan checking take?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Standard lift plan checking turnaround is 24 to 48 hours from receipt of a complete plan. Complex plans involving tandem lifts, contract lifts, or significant site-specific risks may take 3 to 5 working days. Same-day reviews can be arranged for urgent operations.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: "What's the difference between lift plan checking and lift plan review?",
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "The terms are often used interchangeably. Both involve an independent competent person assessing a lift plan for technical compliance and site suitability. Some clients reserve 'review' for a higher-level acceptance check by their Appointed Person, and 'checking' for the detailed technical line-by-line audit. Either way, the deliverable is a written record with findings and a clear pass/fail determination.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What does Category A and Category B mean?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Category A means the lift plan is acceptable as submitted and the lift can proceed. Category B means the plan is not acceptable as submitted — the report sets out specific findings and what must be amended before the lift can go ahead. The submitter then revises and resubmits for verification, which is included in the original check fee for straightforward issues.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What documents do you need to check a lift plan?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A complete submission includes the lift plan drawing, risk assessment, method statement, load chart extract for the proposed configuration, equipment thorough examination certificates, lifting accessories certification, and named personnel with their CPCS or equivalent competencies. Missing documents are themselves a finding — we will list what is needed to complete the review.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Are you independent of the crane companies?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. We are not part of any crane hire company, plant supplier or contractor group, so submissions from any supplier are reviewed objectively on their merits. Some crane companies produce excellent documentation; others routinely fall short. The check identifies which is which without fear or favour.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you offer a retained checking service?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. For larger projects with frequent submissions or multi-site operations we offer a retained service at an agreed monthly fee covering unlimited lift plan checks, with an SLA on turnaround. This is normally more cost-effective than per-plan checking once you are receiving more than four to six plans a month.',
-      },
-    },
-  ],
+  mainEntity: PAGE_FAQS.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
 }
 
 const breadcrumbSchema = {
@@ -708,56 +707,7 @@ export default function LiftPlanCheckingPage() {
           <h2 className="text-3xl font-bold text-slate-900 mb-12">Lift plan checking FAQs</h2>
 
           <div className="space-y-6 max-w-4xl">
-            {[
-              {
-                q: 'What is lift plan checking?',
-                a: 'Lift plan checking is the independent review of a lift plan prepared by another party — typically a subcontractor, crane hire firm or third-party Appointed Person — to confirm it is technically correct, LOLER and BS 7121 compliant, and fit for the specific site conditions. The output is a written review with findings, recommendations and a Category A (acceptable) or Category B (not acceptable as submitted) determination.',
-              },
-              {
-                q: 'How quickly can you turn a check around?',
-                a: 'Standard turnaround is 24–48 working hours from receipt of a complete submission. Urgent same-day reviews are arranged for critical-path operations — let us know when you submit. Complex tandem and contract lifts may take 3–5 working days.',
-              },
-              {
-                q: 'What if a lift plan fails your check (Category B)?',
-                a: 'You receive a clear report explaining what is wrong and what is needed to fix it. The subcontractor amends and resubmits. We verify the amendments — included in the original check fee for straightforward issues.',
-              },
-              {
-                q: 'What does Category A and Category B mean?',
-                a: 'Category A means the plan is acceptable as submitted and the lift can proceed. Category B means the plan is not acceptable as submitted — every finding is set out with the standard reference and what must change for acceptance.',
-              },
-              {
-                q: 'Is a lift plan review a legal requirement?',
-                a: 'Independent review is not itself named in LOLER 1998, but Regulation 8 requires every lifting operation to be properly planned by a competent person and appropriately supervised. Under CDM 2015 the principal contractor must also plan, manage and monitor lifting on site — including subcontractors\u2019 lifts. Independent checking is how most principal contractors demonstrate they discharged that duty, and it is why tier 1 procurement routinely requires it.',
-              },
-              {
-                q: 'Can subcontractors use your review service?',
-                a: 'Yes. Subcontractors often ask for a review before submitting a plan to the principal contractor, so problems are corrected in private rather than bounced back through the site team. It is usually faster and cheaper than having a plan rejected, re-worked and re-submitted — and it protects your standing with the main contractor.',
-              },
-              {
-                q: 'Why do lift plans get rejected?',
-                a: 'The most common reasons are inaccurate or unverified load weights, wrong machine configuration on the load chart, capacity utilisation above the project threshold, missing thorough examination certificates, no site-specific hazard assessment, incorrect rigging or sling angles, missing personnel competencies, and inadequate ground-bearing assessment.',
-              },
-              {
-                q: 'What documents do you need to check a lift plan?',
-                a: 'A complete submission includes the lift plan drawing, risk assessment, method statement, load chart extract for the proposed configuration, equipment thorough examination certificates, lifting accessories certification, and named personnel with their CPCS or equivalent competencies. Missing documents are themselves a finding.',
-              },
-              {
-                q: 'Do you check lift plans from all crane companies?',
-                a: 'Yes. We are independent of any crane hire company, so submissions from any supplier are reviewed on their merits. Some suppliers produce excellent documentation; others routinely fall short. The check identifies which is which without fear or favour.',
-              },
-              {
-                q: 'Do you offer a retained service?',
-                a: 'Yes. For larger projects with frequent submissions or multi-site operations we offer a retained service at an agreed monthly fee covering unlimited checks, with an SLA on turnaround. Normally more cost-effective once you are receiving more than 4–6 plans a month.',
-              },
-              {
-                q: 'What if I disagree with my subcontractor about a lift plan?',
-                a: 'We can provide independent assessment and, if needed, explain our findings directly to your subcontractor. Having an independent expert view typically resolves disputes far more efficiently than internal back-and-forth.',
-              },
-              {
-                q: 'Will the check report stand up to HSE scrutiny?',
-                a: 'Yes. Each report is signed off by a CPCS A61 Appointed Person, references the relevant standard for every finding, and is designed to drop into your CDM file as evidence of due diligence under CDM 2015 and LOLER 1998.',
-              },
-            ].map((faq) => (
+            {PAGE_FAQS.map((faq) => (
               <div key={faq.q} className="bg-slate-50 p-6 rounded-xl border border-slate-200">
                 <h3 className="text-lg font-semibold text-slate-900 mb-3">{faq.q}</h3>
                 <p className="text-slate-600">{faq.a}</p>

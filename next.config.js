@@ -569,6 +569,38 @@ const nextConfig = {
         destination: '/services/lift-plan-checking',
         permanent: true,
       },
+      // Fix #3 (Jul 2026 SEO review): the lifting-operations-audit blog post
+      // ran to 3,017 words against the service page's 996 on the identical
+      // term, so the informational page was outranking the page that actually
+      // sells the service. Its substance has been merged into the service page.
+      {
+        source: '/blog/lifting-operations-audit-what-to-expect',
+        destination: '/services/lifting-operations-audit',
+        permanent: true,
+      },
+      {
+        source: '/blog/lifting-operations-audit-what-to-expect/',
+        destination: '/services/lifting-operations-audit',
+        permanent: true,
+      },
+      // FOUND DURING THE JUL 2026 REVIEW, not one of the nine fixes:
+      // /blog/what-is-loler-complete-guide is linked from 8 pages and was
+      // listed in the sitemap, but the post does not exist in blogPosts — so
+      // every one of those links returned a 404 and Google was being fed a dead
+      // URL. Redirected to the closest live LOLER page as a holding fix and
+      // removed from the sitemap. RICKY: "what is LOLER" is a high-volume term
+      // and this post appears to have been deleted by accident — rewriting it
+      // and removing this redirect is the better long-term answer.
+      {
+        source: '/blog/what-is-loler-complete-guide',
+        destination: '/blog/loler-acop-l113-explained',
+        permanent: true,
+      },
+      {
+        source: '/blog/what-is-loler-complete-guide/',
+        destination: '/blog/loler-acop-l113-explained',
+        permanent: true,
+      },
       {
         source: '/blog/what-does-a-lift-plan-checking-service-involve',
         destination: '/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected',

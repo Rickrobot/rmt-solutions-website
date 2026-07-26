@@ -10,8 +10,9 @@ export const metadata = {
   // SEO audit (May 2026): trimmed from 231 chars to ~155 to avoid SERP
   // truncation while keeping the core keywords (mobile crane lift plans,
   // CPCS Appointed Person, LOLER, BS 7121).
+  // Fix #6, Jul 2026 SEO review: was 158 chars, three over the limit.
   description:
-    'CPCS Appointed Person mobile crane lift plans for all duty types: load chart verification, ground bearing calculations and exclusion zones to LOLER & BS 7121.',
+    'CPCS Appointed Person mobile crane lift plans: load chart verification, ground bearing pressure and exclusion zones, to LOLER 1998 and BS 7121.',
   keywords: [
     'mobile crane lift plan',
     'mobile crane lift plans',
@@ -50,91 +51,66 @@ const serviceJsonLd = {
   url: 'https://www.rmtsafetysolutions.com/services/mobile-crane-lift-plans',
 }
 
+// Single source of truth for this page's FAQs — rendered on the page AND
+// used to build the FAQPage JSON-LD below. Add questions here only.
+const PAGE_FAQS = [
+  {
+    q: 'Does a 50 tonne crane lift 50 tonnes?',
+    a: 'No. The tonnage in a crane name is its maximum capacity at minimum radius, on fully extended outriggers, with full counterweight, usually over the rear. At working radius with a longer boom the figure is far lower — and the hook block, rigging and any fly jib all deduct from it. The plan must show the net capacity for the actual configuration.',
+  },
+  {
+    q: 'What is ground bearing pressure and why does it matter?',
+    a: 'It is the load each outrigger imposes on the ground, measured in kPa. On outriggers the whole weight of the crane, counterweight and load is concentrated into four small pads, and during a slew one outrigger can carry a large share of it. If that pressure exceeds what the ground can carry, the outrigger sinks and the crane can overturn. It is the calculation most often missing or wrong in the plans we review.',
+  },
+  {
+    q: 'What size crane mats do I need?',
+    a: 'It depends on the peak outrigger reaction from the manufacturer data and the allowable bearing pressure of the ground. Divide the reaction by the allowable pressure to get the minimum area. A 589 kN reaction against 200 kPa allowable needs about 2.95 m² — roughly a 1.75 m square mat. The mat also has to be stiff enough to actually spread the load rather than punch through.',
+  },
+  {
+    q: 'When is a mobile crane lift a complex lift?',
+    a: 'Under BS 7121, tandem and multi-crane lifts, blind lifts, lifting over occupied buildings or the public, working near overhead power lines or railways, loads of unknown weight, overlapping crane radii and any lifting of people all point to the complex category. Complex lifts need an experienced Appointed Person and a fully site-specific written plan.',
+  },
+  {
+    q: 'Do I still need a lift plan if the crane hire company is providing a contract lift?',
+    a: 'Under a contract lift the crane hire company takes on the planning and supervision, and supplies the Appointed Person. That does not remove your duties as principal contractor under CDM 2015 to plan, manage and monitor lifting on your site. Most tier 1 contractors have the contract lift plan independently reviewed before accepting it — that is our lift plan checking service.',
+  },
+  {
+    q: 'How much does a mobile crane lift plan cost?',
+    a: 'Mobile crane plans typically fall in the £250–£500 range, with complex operations such as tandem lifts quoted individually and usually £500–£1,500. You get a fixed written price within 4 working hours of sending the details — no hourly billing, and revisions arising from principal contractor review are included.',
+  },
+  {
+    q: 'How long does a mobile crane lift plan take?',
+    a: 'Straightforward single-crane lifts are typically 3–5 working days from receiving complete information. Complex and tandem lifts take longer because they need engineering checks against the manufacturer load chart and independent review. If the lift is programme-critical, say so when you enquire and we will tell you honestly whether the date is achievable.',
+  },
+  {
+    q: 'What information do you need to plan a mobile crane lift?',
+    a: 'Load weight, dimensions and lifting points; the crane make, model and proposed configuration if already chosen; a site plan showing the set-up position and any constraints; ground investigation data or the allowable bearing pressure; details of overhead and underground services; and the intended dates. If some of that is missing we will tell you what matters most and what can wait.',
+  },
+  {
+    q: 'What is a mobile crane lift plan?',
+    a: 'A mobile crane lift plan is the documented safe system of work for a crane lifting operation, required under LOLER 1998 Regulation 8. It records the verified load, the crane configuration and its load chart capacity at the working radius, ground bearing pressure calculations, rigging arrangements, exclusion zones, and the method statement for the lift. It is prepared by a competent person — in practice a CPCS A61 Appointed Person.',
+  },
+  {
+    q: 'Do you need a site visit to plan a mobile crane lift?',
+    a: 'For mobile crane operations a site visit is usually included, because ground conditions, access, set-up position and proximity hazards have to be assessed on the ground rather than from drawings alone. Straightforward lifts with full site information and good photographs can sometimes be planned remotely, but we confirm the scope on every enquiry.',
+  },
+]
+
+// FAQ structured data, generated from PAGE_FAQS above.
+//
+// Fix #2, Jul 2026 SEO review: this object used to be a hand-maintained literal
+// separate from the visible FAQ list, and the two had drifted — questions were
+// being emitted as JSON-LD that appeared nowhere on the rendered page, which
+// breaches Google's structured data policy. Deriving it from the visible list
+// makes that impossible by construction. Edit PAGE_FAQS, not this.
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is a mobile crane lift plan?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A mobile crane lift plan is the documented safe system of work for a crane lifting operation, required under LOLER 1998 Regulation 8. It records the verified load, the crane configuration and its load chart capacity at the working radius, ground bearing pressure calculations, rigging arrangements, exclusion zones, and the method statement for the lift. It is prepared by a competent person — in practice a CPCS A61 Appointed Person.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you need a site visit to plan a mobile crane lift?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'For mobile crane operations a site visit is usually included, because ground conditions, access, set-up position and proximity hazards have to be assessed on the ground rather than from drawings alone. Straightforward lifts with full site information and good photographs can sometimes be planned remotely, but we confirm the scope on every enquiry.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does a mobile crane lift plan take?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Mobile crane lift plans are typically delivered within 3 to 5 working days, depending on complexity and whether a site visit is required. Urgent and critical-path lifts can be prioritised — call to discuss timescales.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What information do you need to plan a mobile crane lift?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We need the load (verified weight, dimensions and lift points), the proposed crane (make, model, counterweight and boom configuration if known), the site (address, ground conditions, access, overhead and underground services, adjacent activities) and the operation (pick and set-down positions, working radius and any obstructions). If the crane is not yet chosen we will recommend a suitable machine and duty.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Does a 50 tonne crane lift 50 tonnes?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. The tonnage in a crane name is its maximum capacity at minimum radius, on fully extended outriggers, with full counterweight, usually over the rear. At working radius with a longer boom the figure is far lower \u2014 and the hook block, rigging and any fly jib all deduct from it. The plan must show the net capacity for the actual configuration.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is ground bearing pressure and why does it matter?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'It is the load each outrigger imposes on the ground, measured in kPa. On outriggers the whole weight of the crane, counterweight and load is concentrated into four small pads, and during a slew one outrigger can carry a large share of it. If that pressure exceeds what the ground can carry, the outrigger sinks and the crane can overturn. It is the calculation most often missing or wrong in the plans we review.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What size crane mats do I need?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'It depends on the peak outrigger reaction from the manufacturer data and the allowable bearing pressure of the ground. Divide the reaction by the allowable pressure to get the minimum area. A 589 kN reaction against 200 kPa allowable needs about 2.95 square metres \u2014 roughly a 1.75 metre square mat. The mat also has to be stiff enough to actually spread the load rather than punch through.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'When is a mobile crane lift a complex lift?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Under BS 7121, tandem and multi-crane lifts, blind lifts, lifting over occupied buildings or the public, working near overhead power lines or railways, loads of unknown weight, overlapping crane radii and any lifting of people all point to the complex category. Complex lifts need an experienced Appointed Person and a fully site-specific written plan.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I still need a lift plan if the crane hire company is providing a contract lift?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Under a contract lift the crane hire company takes on the planning and supervision, and supplies the Appointed Person. That does not remove your duties as principal contractor under CDM 2015 to plan, manage and monitor lifting on your site. Most tier 1 contractors have the contract lift plan independently reviewed before accepting it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does a mobile crane lift plan cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Mobile crane plans typically fall in the \u00a3250 to \u00a3500 range, with complex operations such as tandem lifts quoted individually and usually \u00a3500 to \u00a31,500. You get a fixed written price within 4 working hours of sending the details, with no hourly billing, and revisions arising from principal contractor review are included.',
-      },
-    },
-  ],
+  mainEntity: PAGE_FAQS.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
 }
 
 const breadcrumbJsonLd = {
@@ -578,40 +554,7 @@ export default function MobileCraneLiftPlansPage() {
             Mobile crane lift plan FAQs
           </h2>
           <div className="space-y-6">
-            {[
-              {
-                q: 'Does a 50 tonne crane lift 50 tonnes?',
-                a: 'No. The tonnage in a crane name is its maximum capacity at minimum radius, on fully extended outriggers, with full counterweight, usually over the rear. At working radius with a longer boom the figure is far lower — and the hook block, rigging and any fly jib all deduct from it. The plan must show the net capacity for the actual configuration.',
-              },
-              {
-                q: 'What is ground bearing pressure and why does it matter?',
-                a: 'It is the load each outrigger imposes on the ground, measured in kPa. On outriggers the whole weight of the crane, counterweight and load is concentrated into four small pads, and during a slew one outrigger can carry a large share of it. If that pressure exceeds what the ground can carry, the outrigger sinks and the crane can overturn. It is the calculation most often missing or wrong in the plans we review.',
-              },
-              {
-                q: 'What size crane mats do I need?',
-                a: 'It depends on the peak outrigger reaction from the manufacturer data and the allowable bearing pressure of the ground. Divide the reaction by the allowable pressure to get the minimum area. A 589 kN reaction against 200 kPa allowable needs about 2.95 m² — roughly a 1.75 m square mat. The mat also has to be stiff enough to actually spread the load rather than punch through.',
-              },
-              {
-                q: 'When is a mobile crane lift a complex lift?',
-                a: 'Under BS 7121, tandem and multi-crane lifts, blind lifts, lifting over occupied buildings or the public, working near overhead power lines or railways, loads of unknown weight, overlapping crane radii and any lifting of people all point to the complex category. Complex lifts need an experienced Appointed Person and a fully site-specific written plan.',
-              },
-              {
-                q: 'Do I still need a lift plan if the crane hire company is providing a contract lift?',
-                a: 'Under a contract lift the crane hire company takes on the planning and supervision, and supplies the Appointed Person. That does not remove your duties as principal contractor under CDM 2015 to plan, manage and monitor lifting on your site. Most tier 1 contractors have the contract lift plan independently reviewed before accepting it — that is our lift plan checking service.',
-              },
-              {
-                q: 'How much does a mobile crane lift plan cost?',
-                a: 'Mobile crane plans typically fall in the £250–£500 range, with complex operations such as tandem lifts quoted individually and usually £500–£1,500. You get a fixed written price within 4 working hours of sending the details — no hourly billing, and revisions arising from principal contractor review are included.',
-              },
-              {
-                q: 'How long does a mobile crane lift plan take?',
-                a: 'Straightforward single-crane lifts are typically 3–5 working days from receiving complete information. Complex and tandem lifts take longer because they need engineering checks against the manufacturer load chart and independent review. If the lift is programme-critical, say so when you enquire and we will tell you honestly whether the date is achievable.',
-              },
-              {
-                q: 'What information do you need to plan a mobile crane lift?',
-                a: 'Load weight, dimensions and lifting points; the crane make, model and proposed configuration if already chosen; a site plan showing the set-up position and any constraints; ground investigation data or the allowable bearing pressure; details of overhead and underground services; and the intended dates. If some of that is missing we will tell you what matters most and what can wait.',
-              },
-            ].map((item) => (
+            {PAGE_FAQS.map((item) => (
               <div key={item.q} className="bg-slate-800/30 rounded-2xl p-6 border border-slate-700/50">
                 <h3 className="font-display text-lg font-bold text-white mb-3">{item.q}</h3>
                 <p className="text-gray-400 leading-relaxed">{item.a}</p>

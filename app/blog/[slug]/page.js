@@ -412,7 +412,7 @@ const blogPosts = {
       <p>Daily and weekly operator checks still sit alongside it — LOLER Regulation 9 also requires <strong>inspection between thorough examinations</strong> where risk assessment identifies the need, and PUWER requires equipment to be maintained. The thorough examination is the statutory backstop, not the whole regime.</p>
 
       <h2>The Paperwork: Report of Thorough Examination</h2>
-      <p>Every thorough examination produces a <strong>report of thorough examination</strong> (often called a LOLER certificate, though "certificate" appears nowhere in the regulations). Schedule 1 of LOLER prescribes its contents: equipment identification, date, safe working load, defects found, and the date by which the next examination is due. Keep reports available for inspection — site auditors and HSE inspectors ask for them within minutes of arriving, and <a href="/blog/lifting-operations-audit-what-to-expect">missing or expired reports are among the most common audit failures</a>. Defects involving "existing or imminent risk of serious personal injury" are also reported by the examiner directly to the enforcing authority — so the HSE may know about your defect before you have read the report.</p>
+      <p>Every thorough examination produces a <strong>report of thorough examination</strong> (often called a LOLER certificate, though "certificate" appears nowhere in the regulations). Schedule 1 of LOLER prescribes its contents: equipment identification, date, safe working load, defects found, and the date by which the next examination is due. Keep reports available for inspection — site auditors and HSE inspectors ask for them within minutes of arriving, and <a href="/services/lifting-operations-audit">missing or expired reports are among the most common audit failures</a>. Defects involving "existing or imminent risk of serious personal injury" are also reported by the examiner directly to the enforcing authority — so the HSE may know about your defect before you have read the report.</p>
 
       <h2>How This Meets the Lift Plan</h2>
       <p>Every competent <a href="/blog/what-is-a-lift-plan">lift plan</a> confirms current thorough examination for the machine <em>and every accessory in the rigging arrangement</em> — it is one of the items we verify line-by-line when <a href="/services/lift-plan-checking">checking subcontractor lift plans</a>, and expired TE dates are a recurring rejection reason. If the excavator's examination lapsed last month, the lift is not compliant no matter how good the rest of the planning is. The wider duties sit in our <a href="/blog/what-is-loler-complete-guide">plain-English LOLER guide</a> and the <a href="/blog/loler-acop-l113-explained">L113 ACOP explainer</a>.</p>
@@ -1129,7 +1129,7 @@ const blogPosts = {
       <p>Working to BS 7121 does not by itself guarantee compliance with LOLER, because LOLER also imposes general management duties such as supervision, employee involvement, and management arrangements. But it goes a long way, and in the event of an incident or HSE inspection, demonstrating that you were working to the standard is the most effective way of showing that you discharged your legal duties competently.</p>
 
       <h2>Common Gaps Where Sites Fall Short of BS 7121</h2>
-      <p>Having audited <a href="/blog/lifting-operations-audit-what-to-expect">lifting operations</a> on UK construction sites for many years, certain gaps between stated compliance with BS 7121 and actual practice on the ground appear repeatedly.</p>
+      <p>Having audited <a href="/services/lifting-operations-audit">lifting operations</a> on UK construction sites for many years, certain gaps between stated compliance with BS 7121 and actual practice on the ground appear repeatedly.</p>
 
       <p>The most common is the misuse of lift categorisation. Operations that should be classified as Standard or Complex are routinely treated as Basic and covered by a generic schedule of common lifts, with the result that no individual planning takes place. The schedule itself, when reviewed, often does not actually fit the operations being carried out under it.</p>
 
@@ -2514,161 +2514,10 @@ const blogPosts = {
       <p><strong>About the Author:</strong> Ricky Marsh is a CPCS Appointed Person (A61) with 35 years of construction industry experience. He holds NEBOSH National Diploma, CertIOSH, MIIRSM and TIFSM qualifications, and provides <a href="/services/lift-plan-checking">lift plan checking services</a> to tier 1 contractors across the UK through <a href="/">RMT Solutions</a>.</p>
    `,
   },
-  'lifting-operations-audit-what-to-expect': {
-    title: 'Lifting Operations Audit: What Auditors Check & How to Pass',
-    description: 'What an independent lifting operations auditor checks — RAMS, LOLER, supervision, equipment — and the most common reasons UK sites fail.',
-    keywords: 'lifting operations audit, lifting operations audit UK, lifting audit construction, LOLER audit, site lifting audit, lifting operations inspection, crane audit, lifting equipment audit, lifting safety audit, construction lifting compliance',
-    category: 'Services',
-    readTime: '14 min read',
-    date: 'February 23, 2026',
-    dateModified: 'February 23, 2026',
-    image: '/images/services/lifting-operations-audit-inspection-uk.webp',
-    imageAlt: 'Independent auditor observing a tower crane lifting operation from behind the exclusion zone on a UK construction site, carrying out a lifting operations audit',
-    content: `
-      <p class="lead">A lifting operations audit is one of the most effective tools available to principal contractors and site managers for verifying that lifting activities on their projects are being managed safely and in compliance with LOLER 1998. Yet despite the term appearing regularly in construction contracts and tender documents, there is remarkably little practical guidance available on what a lifting operations audit actually involves, what the auditor examines, and what you should do to prepare for one.</p>
-
-      <p>This guide explains the purpose, process, and practical reality of a lifting operations audit on a UK construction site — based on 35 years of experience conducting them.</p>
-
-      <h2>What is a Lifting Operations Audit?</h2>
-      <p>A lifting operations audit is an independent, systematic assessment of how lifting activities are being planned, managed, and carried out on a construction site. It is not a thorough examination of lifting equipment under LOLER Regulation 9 — that is a separate, specific inspection. An audit looks at the entire lifting management system: the documentation, the competence of the people involved, the condition and management of equipment, and the actual practices being followed on site.</p>
-
-      <p>The purpose is to give the principal contractor or client an objective picture of the standard of lifting operations on their project. It identifies what is being done well, where there are gaps or non-compliances, and what needs to be corrected. A good audit is not a pass-or-fail exercise — it is a diagnostic tool that highlights both strengths and areas for improvement.</p>
-
-      <p>Most tier 1 contractors now require periodic lifting operations audits on their major projects, either through their own internal procedures or as a contractual requirement. Some clients and CDM duty holders also commission audits as part of their assurance arrangements. The frequency varies — monthly audits are common on large projects with multiple cranes and complex lifting programmes, while smaller projects may have audits at key stages or on a quarterly basis.</p>
-
-      <h2>Why Are Lifting Operations Audits Carried Out?</h2>
-
-      <h3>Legal Compliance</h3>
-      <p><a href="/blog/what-is-loler-complete-guide">LOLER 1998</a> requires that every lifting operation is properly planned by a competent person, appropriately supervised, and carried out in a safe manner. The CDM Regulations 2015 place duties on principal contractors to plan, manage, and monitor construction work — which includes lifting operations. An audit provides documented evidence that these duties are being discharged.</p>
-
-      <h3>Risk Management</h3>
-      <p>Lifting operations remain one of the highest-risk activities on construction sites. The HSE's enforcement data consistently shows that failures in lift planning, equipment management, and competence contribute to serious incidents. An independent audit identifies problems before they result in incidents — it is a proactive measure rather than a reactive one.</p>
-
-      <h3>Supply Chain Assurance</h3>
-      <p>On major projects, the principal contractor may have multiple subcontractors carrying out lifting operations with their own equipment and personnel. An audit provides assurance that all parties are meeting the required standards, not just the main contractor's own operations. This is particularly important where subcontractors are bringing their own cranes, excavators, telehandlers, or lorry loaders onto the project.</p>
-
-      <h3>Client and Contractual Requirements</h3>
-      <p>Many clients — particularly in sectors such as infrastructure, rail, and nuclear — require independent audits of lifting operations as a condition of contract. This reflects the high consequence nature of lifting failures in these environments.</p>
-
-      <h2>What Does a Lifting Operations Audit Cover?</h2>
-      <p>A comprehensive lifting operations audit examines the full scope of lifting management on a site. The specific areas covered will vary depending on the type of project, the equipment in use, and the scope agreed with the client, but a thorough audit will typically address all of the following.</p>
-
-      <h3>Lift Plans and Planning Documentation</h3>
-      <p>This is usually the starting point for any audit. The auditor will review the lift plans that are in place for the lifting operations being carried out on site. The review covers both the quality of the plans themselves and whether they are being followed in practice.</p>
-
-      <p>Specific checks include whether lift plans exist for all lifting operations currently taking place — not just crane lifts but also <a href="/blog/excavator-lift-plans-complete-guide">excavator lifting operations</a>, <a href="/blog/telehandler-lift-plans-complete-guide">telehandler crane duties</a>, and <a href="/blog/lorry-loader-lift-plans-guide">lorry loader operations</a>. The auditor will verify that each plan is site-specific and addresses the actual conditions, loads, and equipment on the project rather than being a generic document recycled from a previous job.</p>
-
-      <p>Load weights, working radii, and capacity calculations are checked for accuracy. The rigging arrangements described in the plans are assessed for suitability. Ground conditions, exclusion zones, and hazard controls are reviewed against the actual site conditions. The auditor also checks whether the plans have been prepared by a competent person — typically a <a href="/blog/cpcs-appointed-person-guide">CPCS Appointed Person</a> for crane and complex operations.</p>
-
-      <p>A common finding is that lift plans exist but have not been updated to reflect changes on site. A plan written at tender stage may not account for an excavation that has been dug adjacent to the crane position, a scaffolding tower that has been erected in the load path, or a change in the weight of the load. The audit checks for this currency and relevance.</p>
-
-      <h3>Schedules of Common Lifts</h3>
-      <p>Many sites operate under a schedule of common lifts — a document that covers repetitive, routine lifting operations such as daily materials handling with a tower crane or regular offloading with a lorry loader. The audit will check that the schedule exists, that it has been approved by an Appointed Person, and that the actual operations being carried out fall within the scope of the schedule. Operations that exceed the parameters of the schedule — heavier loads, greater radii, different equipment — must have individual lift plans, and the audit verifies this.</p>
-
-      <h3>Lifting Team Competence</h3>
-      <p>The audit examines the qualifications, training, and competence of the personnel involved in lifting operations. This typically includes checking that Appointed Persons hold current CPCS A61 certification, crane supervisors and lift supervisors hold appropriate cards, crane and plant operators have the correct CPCS or NPORS categories for the equipment they are operating, and slinger/signallers hold current A17E or equivalent certification.</p>
-
-      <p>The auditor will request to see the lifting team profiles — the documented records that confirm each person's role, qualifications, and card expiry dates. On well-managed sites, these profiles are maintained as part of the lifting management system and are readily available. On less well-managed sites, the auditor may find that operators are working with expired cards, that people are filling roles for which they are not qualified, or that there are no records at all.</p>
-
-      <p>Beyond formal qualifications, the auditor will assess whether the personnel demonstrate practical competence in their roles. This includes observing whether slinger/signallers are using correct hand signals, whether operators are carrying out pre-use checks, and whether lift supervisors are actively managing the operations they are responsible for.</p>
-
-      <h3>LOLER Documentation and Thorough Examinations</h3>
-      <p>Every piece of lifting equipment and every lifting accessory on site must have a current thorough examination certificate under LOLER Regulation 9. The audit checks that these certificates exist, are current, and are available on site. This applies to all equipment — cranes, telehandlers, excavators used for lifting, lorry loaders, hoists, lifting beams, slings, shackles, chains, and any other lifting accessories.</p>
-
-      <p>The auditor will also check that LOLER reports of thorough examination have been reviewed and that any defects identified have been actioned. It is not uncommon to find that thorough examination certificates exist but that no one on site has actually read them or addressed the defects noted by the competent person.</p>
-
-      <p>Weekly and daily inspection records for lifting equipment are also reviewed. Under LOLER and PUWER, lifting equipment must be inspected at appropriate intervals by competent persons. For tower cranes, this typically means weekly inspections recorded on a standard form. For mobile cranes, excavators, and telehandlers, daily pre-use checks should be completed and recorded by the operator.</p>
-
-      <h3>Lifting Accessories Management</h3>
-      <p>The management of lifting accessories — slings, shackles, chains, eyebolts, lifting beams, spreader bars, and similar equipment — is a frequent area of concern on audits. The auditor will check that all accessories on site are identifiable, marked with their safe working load, and have current thorough examination certificates.</p>
-
-      <p>Storage conditions are assessed — slings should be stored off the ground, away from sharp edges, chemicals, and heat sources. Damaged or defective accessories should be quarantined and removed from service. Colour coding systems, where used, should be current and consistently applied across the site.</p>
-
-      <p>One of the most common audit findings relates to one-use slings and accessories that are left on site after use rather than being removed or destroyed. These items can be picked up and reused by other operatives who may not realise they are no longer certified for use.</p>
-
-      <h3>On-Site Practices and Observations</h3>
-      <p>A critical component of any lifting operations audit is direct observation of lifting activities as they are being carried out. Documentation can be perfect, but what matters is what actually happens on the ground.</p>
-
-      <p>The auditor will observe whether lifting operations are being carried out in accordance with the lift plans, whether exclusion zones are established and maintained, whether tag lines are being used where specified, whether the lifting team is communicating effectively, and whether loads are being landed safely on suitable bearers or dunnage.</p>
-
-      <p>Common practical findings include loads being landed directly on the ground rather than on bearers, exclusion zones not being maintained with physical barriers, operatives working under suspended loads, lifting operations being carried out without a lift plan in place, and poor communication between the crane operator and slinger/signaller.</p>
-
-      <h3>Working at Height and Edge Protection</h3>
-      <p>Where lifting operations involve slinger/signallers working at height — for example on delivery vehicles, at leading edges, or on partially completed structures — the audit will check that appropriate edge protection, access equipment, and fall prevention measures are in place. This is an area where lifting operations and working at height regulations intersect, and deficiencies are common.</p>
-
-      <h3>Crane and Plant Setup</h3>
-      <p>For tower cranes, the audit may check foundation records, base condition, anti-collision system settings, and anemometer calibration. For mobile cranes, outrigger setup and ground conditions are assessed. For excavators and telehandlers being used for lifting, the auditor will verify that the machines are configured correctly for the lifting duties described in the lift plans and that operators have the specific lifting endorsements required.</p>
-
-      <h3>Communication and Briefings</h3>
-      <p>Effective communication is essential for safe lifting operations. The audit will check whether daily briefings are being conducted for the lifting team, whether toolbox talks on lifting topics are being delivered, and whether there is a clear system for communicating changes to the lifting programme — such as changes to the lift sequence, equipment substitutions, or new hazards.</p>
-
-      <h2>How is a Lifting Operations Audit Conducted?</h2>
-      <p>A typical lifting operations audit follows a structured process.</p>
-
-      <h3>Pre-Audit Preparation</h3>
-      <p>Before arriving on site, the auditor will review any previous audit reports, the site lifting management plan, and any specific areas of concern raised by the client or principal contractor. This allows the audit to be targeted and efficient.</p>
-
-      <h3>Document Review</h3>
-      <p>The auditor will spend time in the site office reviewing documentation — lift plans, thorough examination certificates, inspection records, lifting team profiles, risk assessments, method statements, and training records. This is often the most time-consuming part of the audit, particularly on large projects with multiple lifting operations.</p>
-
-      <h3>Site Walkround and Observations</h3>
-      <p>The auditor will conduct a physical inspection of the site, observing lifting operations in progress, inspecting lifting equipment and accessories, checking storage arrangements, and assessing general conditions. This is where the documentary review is compared against actual practice.</p>
-
-      <h3>Discussions with Site Personnel</h3>
-      <p>The auditor will typically speak with the crane supervisor, lift supervisor, site manager, and operatives to understand how the lifting management system works in practice. These discussions are not interrogations — they are an opportunity to understand the site's approach and identify any gaps between intended and actual practice.</p>
-
-      <h3>Findings and Reporting</h3>
-      <p>Following the audit, the auditor produces a written report detailing the findings. Findings are typically categorised by severity — critical issues that require immediate action, significant findings that should be addressed within a defined timescale, and observations or recommendations for improvement.</p>
-
-      <p>The report provides an objective record that the principal contractor can use to demonstrate compliance, track improvements, and hold subcontractors accountable for addressing deficiencies.</p>
-
-      <h2>Common Audit Findings</h2>
-      <p>Having conducted lifting operations audits on projects ranging from small refurbishment works to major infrastructure schemes, certain findings recur with remarkable consistency.</p>
-
-      <p>Lift plans that are not site-specific or have not been updated to reflect current conditions are the single most common finding. Closely followed by expired or missing thorough examination certificates for lifting accessories — particularly slings and shackles that are brought on and off site by subcontractors.</p>
-
-      <p>Incomplete lifting team profiles, where the records of who holds what qualifications are not maintained or are out of date, appear on the majority of audits. Missing or inadequate daily and weekly plant inspection records are another frequent finding, as are poor storage conditions for lifting accessories.</p>
-
-      <p>On the practical side, the most common observations are inadequate exclusion zones, inconsistent use of tag lines, and loads being landed without suitable bearers. These are all issues that can be corrected quickly once identified, which is precisely the point of the audit.</p>
-
-      <h2>How to Prepare for a Lifting Operations Audit</h2>
-      <p>If you know an audit is scheduled, there are straightforward steps you can take to ensure your site is ready.</p>
-
-      <p>Start by checking that all lift plans are current and reflect the actual operations taking place. If site conditions have changed since the plans were written — new excavations, additional structures, changes in access routes — the plans should be updated before the audit.</p>
-
-      <p>Gather all thorough examination certificates for every piece of lifting equipment and every lifting accessory on site. Check the dates — certificates for accessories used to lift people must be renewed every six months, and all other lifting equipment certificates must be renewed at least every twelve months. Remove any equipment with expired certificates from service.</p>
-
-      <p>Review your lifting team profiles and confirm that every person involved in lifting operations holds the correct, current qualifications for their role. If anyone's card has expired, they should not be carrying out that role until it is renewed.</p>
-
-      <p>Check that daily and weekly inspection records are being completed consistently. Walk the site and check that lifting accessories are stored correctly, that colour coding is current, and that there are no damaged or unidentified accessories in use.</p>
-
-      <p>Finally, brief your team. Everyone involved in lifting operations should understand what the audit is, why it is being carried out, and what the auditor will be looking at. An audit is not something to be feared — it is an opportunity to demonstrate good practice and to identify any areas where you can improve.</p>
-
-      <h2>Lifting Operations Audit vs Lift Plan Checking</h2>
-      <p>It is worth clarifying the distinction between a lifting operations audit and a <a href="/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected">lift plan checking service</a>. These are complementary but different activities.</p>
-
-      <p>Lift plan checking is the review and approval of individual lift plans before lifting operations take place. It is a pre-operational activity focused on the technical adequacy of the planning documentation.</p>
-
-      <p>A lifting operations audit is a broader assessment of the entire lifting management system on a site — documentation, competence, equipment management, and on-site practices. It includes checking lift plans but goes well beyond them to assess whether the system as a whole is functioning effectively.</p>
-
-      <p>Most well-managed projects use both: <a href="/services/lift-plan-checking">lift plan checking</a> as an ongoing operational control, and periodic audits as a strategic assurance measure.</p>
-
-      <h2>How RMT Solutions Can Help</h2>
-      <p>RMT Solutions provides independent <a href="/services/lifting-operations-audit">lifting operations audits</a> for principal contractors, clients, and project managers across the UK. Our audits are conducted by a CPCS Appointed Person with 35 years of construction industry experience, providing you with an objective, practitioner-level assessment of the lifting standards on your project.</p>
-
-      <p>We audit all types of lifting operations — tower cranes, mobile cranes, excavators, telehandlers, lorry loaders, hoists, and lifting accessories — and provide clear, actionable reports that identify both compliance issues and opportunities for improvement.</p>
-
-      <p>Whether you need a one-off audit for assurance purposes or regular audits as part of your project lifting management plan, we can help.</p>
-
-      <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
-        <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need a Lifting Operations Audit?</h3>
-        <p class="text-gray-300 mb-6">RMT Solutions provides independent lifting operations audits for UK construction projects. Conducted by a CPCS Appointed Person with 35 years of experience.</p>
-        <a href="/contact" class="btn-primary inline-block">Get a Quote</a>
-      </div>
-
-      <p><strong>About the Author:</strong> Ricky Marsh is a CPCS Appointed Person (A61) with 35 years of construction industry experience. He holds NEBOSH National Diploma, CertIOSH, MIIRSM and TIFSM qualifications, and provides lift planning, <a href="/services/lift-plan-checking">lift plan checking</a>, and <a href="/services/lifting-operations-audit">lifting operations audit</a> services to contractors across the UK through <a href="/">RMT Solutions</a>.</p>
-    `,
-  },
+  // 'lifting-operations-audit-what-to-expect' merged into /services/lifting-operations-audit (Jul 2026 SEO review, fix #3)
+  // and 301'd there in next.config.js. It ran to 3,017 words against the
+  // service page's 996 on the identical term, so the informational page was
+  // outranking the page that sells the service.
   'overhead-crane-lift-plan-guide': {
     title: 'Overhead Crane Lift Plans: UK Guide (BS 7121-7)',
     description: 'Do overhead, gantry and bridge cranes need a lift plan? A UK guide to LOLER and BS 7121-7 — when a generic plan is enough and when you need a written one.',
@@ -3200,24 +3049,6 @@ const faqData = {
     {
       q: 'Does every lift on site need a reviewed plan?',
       a: 'Under LOLER, every lifting operation must be planned. Whether every plan needs independent review depends on the risk profile of the project and your organisation\u2019s procedures. Many tier 1 contractors require all lift plans to be reviewed by an Appointed Person before any lifting work proceeds. The safest approach is to review everything.',
-    },
-  ],
-  'what-is-loler-complete-guide': [
-    {
-      q: 'Do I need a lift plan for an excavator?',
-      a: 'Yes, if the excavator is being used for lifting rather than just digging. Once you attach lifting accessories such as chains or slings, it becomes lifting equipment under LOLER and requires proper planning.',
-    },
-    {
-      q: 'Who is responsible for LOLER compliance on site?',
-      a: 'Ultimately, the duty holder, usually the main contractor or whoever controls the site. However, everyone involved has responsibilities, including equipment hirers, subcontractors and operatives.',
-    },
-    {
-      q: 'How long should I keep LOLER documentation?',
-      a: 'Thorough examination reports must be kept until the next examination is completed. Lift plans should be kept for the duration of the project plus a reasonable period afterwards, typically three to six months minimum.',
-    },
-    {
-      q: 'Can I do my own lift planning?',
-      a: 'Only if you are competent to do so. For complex lifts you need someone with appropriate training and qualifications, typically a CPCS Appointed Person (A61).',
     },
   ],
   'cpcs-appointed-person-guide': [

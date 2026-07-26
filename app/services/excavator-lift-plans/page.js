@@ -6,7 +6,10 @@ import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
   title: 'Excavator Lift Plans UK | ISO 10567 & LOLER',
-  description: 'CPCS Appointed Person excavator lift plans from £200 + VAT. LOLER 1998 and ISO 10567 compliant, delivered in 24–48 hours.',
+  // Fix #6, Jul 2026 SEO review: this is the strongest page on the site
+  // (4,000+ words) and it had the shortest description of any page at 121
+  // chars, wasting roughly 30 characters of SERP real estate.
+  description: 'CPCS Appointed Person excavator lift plans from £200 + VAT. LOLER 1998 and ISO 10567 compliant, object handling duties checked, delivered in 24-48 hours.',
   keywords: 'excavator lift plan, excavator lifting plan, excavator lift plans, lifting with excavator, excavator lift plan UK, excavator lifting operations, 360 excavator lift plan, excavator lifting capacity, LOLER excavator lifting, ISO 10567, CPCS appointed person',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/excavator-lift-plans',
@@ -101,6 +104,22 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'A lift plan covers the specific lift or series of lifts it was prepared for, so long as the conditions on site stay the same. If the machine, attachments, load, location or ground conditions change materially, the plan must be reviewed and updated by a competent person.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I use the same lift plan on different sites?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Each lift plan is site-specific. Ground conditions, obstructions, exclusion zones and access will differ between sites, so the plan must be reassessed for the new location. Generic templates do not satisfy LOLER Regulation 8.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will the plan be accepted by my principal contractor?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Our plans are written to the standard expected by Tier 1 main contractors including Wates, Caddick and GMI, and routinely pass first-time review. If a reviewer does come back with comments, we handle the back-and-forth as part of the fixed fee.',
       },
     },
     {
@@ -923,68 +942,15 @@ export default function ExcavatorLiftPlansPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">
-            Excavator lift plan FAQs
-          </h2>
-
-          <div className="space-y-6 max-w-4xl">
-            {[
-              {
-                q: 'Can any excavator be used for lifting?',
-                a: "Only excavators designed and equipped for lifting should be used. The machine needs a certified lifting point (hook on the bucket pin, or quick-hitch with lifting eye), a Rated Capacity Indicator (RCI) where capacity exceeds 1 tonne, a current thorough examination certificate that explicitly covers lifting duties, and a manufacturer's lifting capacity chart for the configuration on site.",
-              },
-              {
-                q: "What's the difference between digging capacity and lifting capacity?",
-                a: 'Digging capacity is bucket breakout force in the curl direction — useful for telling you how hard the machine can dig. Lifting capacity is the maximum suspended load the machine can safely handle at a given radius and lift point height, derived from ISO 10567 (75% tipping load or 87% hydraulic, whichever is lower). They are completely different measurements; you cannot use one to derive the other.',
-              },
-              {
-                q: 'Do I need a lift plan for every excavator lift?',
-                a: 'LOLER 1998 requires every lifting operation to be properly planned by a competent person. For routine, low-risk lifts a generic RAMS may be enough. As soon as additional hazards exist — overhead services, exclusion of other operatives, complex or oddly-shaped loads, tandem lifts, exposed edges, or anything specified by your principal contractor — a specific written lift plan is needed.',
-              },
-              {
-                q: 'How fast can you produce an excavator lift plan?',
-                a: 'For a typical single-machine lift we issue a quote within 4 working hours of receiving your enquiry, and deliver the finished plan within 24–48 working hours. Urgent and same-day work is accommodated where possible — please call to confirm.',
-              },
-              {
-                q: 'Do you visit site, or can the plan be done remotely?',
-                a: "Most excavator lift plans are produced remotely from the GA, photos, machine specs and load details you provide. Site visits are arranged when the lift is high-risk, in a complex environment, or specifically requested by the principal contractor. We'll tell you up-front which one your job needs.",
-              },
-              {
-                q: 'How long is an excavator lift plan valid?',
-                a: 'A lift plan covers the specific lift or series of lifts it was prepared for, so long as the conditions on site stay the same. If the machine, attachments, load, location or ground conditions change materially — even just a swap from a 30-tonner to a 35-tonner — the plan must be reviewed and updated by a competent person before the lift goes ahead.',
-              },
-              {
-                q: 'Can I use the same lift plan on different sites?',
-                a: 'No. Each lift plan is site-specific. Ground conditions, obstructions, exclusion zones and access will differ between sites, so the plan must be reassessed for the new location. Generic templates do not satisfy LOLER Regulation 8.',
-              },
-              {
-                q: 'Will the plan be accepted by my principal contractor?',
-                a: 'Yes — our plans are written to the standard expected by Tier 1 main contractors including Wates, Caddick and GMI, and routinely pass first-time review. If a specific reviewer does come back with comments, we handle the back-and-forth as part of the fixed fee.',
-              },
-              {
-                q: 'What is ISO 10567 and why does it matter?',
-                a: 'ISO 10567:2013 (Earth-moving machinery — Lift capacity — Hydraulic excavators) defines how rated lift capacity is calculated and presented on manufacturer load charts. Reading those charts correctly — and applying the right deductions for hitches, slings and out-of-level conditions — is fundamental to a safe excavator lift.',
-              },
-              {
-                q: 'Is an excavator lifting plan the same as an excavator lift plan?',
-                a: 'Yes. "Excavator lifting plan" and "excavator lift plan" are the same document — different wording for the written plan that covers lifting with an excavator. Whenever an excavator handles a suspended load on slings, chains or a lifting eye instead of digging, LOLER 1998 requires that plan, and we prepare it to ISO 10567 and BS 7121.',
-              },
-              {
-                q: 'Do you cover the whole of the UK?',
-                a: 'Yes. We work with contractors right across the UK from our base in Warrington, Cheshire. Remote desk-based plans can be issued anywhere in the country; site visits and follow-up briefings are arranged when needed.',
-              },
-            ].map((faq) => (
-              <div key={faq.q} className="bg-white p-6 rounded-xl border border-slate-200">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">{faq.q}</h3>
-                <p className="text-slate-600">{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Duplicate FAQ block removed (Jul 2026 SEO review, fix #2).
+          This page previously rendered TWO visible FAQ sections — a hardcoded
+          11-question list here, and the schema-driven block further down — with
+          near-identical answers to the same questions. Two questions that only
+          existed in the hardcoded list ("Can I use the same lift plan on
+          different sites?" and "Will the plan be accepted by my principal
+          contractor?") were moved into faqSchema, so nothing was lost. The
+          single remaining FAQ section is generated from faqSchema, which keeps
+          the visible copy and the structured data in sync by construction. */}
 
       {/* DIY templates callout */}
       <section className="py-12 bg-white">

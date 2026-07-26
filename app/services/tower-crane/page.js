@@ -17,7 +17,11 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 
 export const metadata = {
-  title: 'Tower Crane Contracts UK | AP & Audits',
+  // Fix #6, Jul 2026 SEO review: the URL said tower-crane, the title said
+  // Contracts, the H1 said Compliance Contracts, the description led on audits
+  // and an H2 said Lift Plans — four framings, no clear target. Everything now
+  // commits to the Appointed Person contract, which is what the page sells.
+  title: 'Tower Crane Appointed Person Contracts UK',
   description:
     'Ongoing tower crane Appointed Person contracts under BS 7121-1 and LOLER 1998: 8-weekly audits, lift plan review and on-call AP support. Tier 1 approved.',
   keywords: [
@@ -74,91 +78,90 @@ const serviceJsonLd = {
   },
 }
 
+// Single source of truth for this page's FAQs — rendered on the page AND
+// used to build the FAQPage JSON-LD below. Add questions here only.
+const PAGE_FAQS = [
+  {
+    q: 'What is a tower crane Appointed Person contract?',
+    a: 'An ongoing engagement where a CPCS A61 Appointed Person plans, audits and signs off lifting operations on your tower crane project — from erection through to dismantle — including 8-weekly audits, lift plan review and on-call AP support.',
+  },
+  {
+    q: 'How often should tower cranes be audited?',
+    a: 'BS 7121-1 requires planned, recorded audits. Industry best practice is 8-weekly through the project life, with extra audits on rotation changes, new lift types, near misses or incidents.',
+  },
+  {
+    q: 'Do tower cranes need a lift plan for every single lift?',
+    a: 'Every lifting operation must be planned under LOLER 1998. Routine repetitive lifts are usually covered by a generic site lift plan; out-of-envelope lifts get a specific plan; tandem and complex picks get their own engineered plan.',
+  },
+  {
+    q: "What's the difference between a LOLER inspection and an AP audit?",
+    a: 'A LOLER thorough examination is a statutory engineering inspection of the crane itself, every 6–12 months. An AP audit reviews how lifting operations are being conducted — paperwork, plans, briefings, supervision, slingers, communications. The two sit alongside each other.',
+  },
+  {
+    q: 'How fast can a non-routine lift plan be turned around?',
+    a: 'For contracted clients we issue non-routine specific plans within 24 hours of receiving the brief, weights, drawings and accessory information. Tandem lifts and contract lifts take 3–5 working days because of engineering checks and independent review.',
+  },
+  {
+    q: 'How is a tower crane contract priced?',
+    a: 'Quote-only — every project differs in length, crane count, audit cadence, on-call support and documentation scope. Send the construction programme and basic crane info via the contact form and we will scope and quote within 4 working hours.',
+  },
+  {
+    q: 'What happens during an 8-weekly audit?',
+    a: 'AP attends site, verifies operator and slinger competence, reviews LOLER and weekly inspections, checks accessories, walks exclusion zones and communications, samples recent lift plans against actual operations and writes up a closure report with corrective actions.',
+  },
+  {
+    q: 'Can you cover sites with multiple tower cranes?',
+    a: 'Yes — multi-crane sites need a coordinated lifting strategy covering anti-collision, slewing priorities, shared exclusion zones and concurrent activity rules. We write the multi-crane management plan and audit it on the same 8-weekly cycle.',
+  },
+  {
+    q: 'Will you act as Lifting Supervisor on tandem lifts as well?',
+    a: 'On request, yes. Many clients ask the AP to also act as Lifting Supervisor on tandem and complex lifts so a single competent person owns both planning and execution. This is scoped into the contract up front.',
+  },
+  {
+    q: 'What happens at dismantle?',
+    a: 'AP attends dismantle, signs off the handover paperwork and issues a project close-out documentation pack — audit reports, lift plans, accessory register, AP records — for your H&S file and for handover to the client.',
+  },
+  {
+    q: 'Can you write a one-off tower crane lift plan without a full contract?',
+    a: 'Yes. As well as ongoing Appointed Person contracts, we write individual tower crane lift plans and tower crane lifting plans for specific operations — erection and dismantle sequences, heavy or tandem picks, and lifts over occupied areas or shared airspace. Each tower crane lift plan is prepared by a CPCS A61 Appointed Person to LOLER 1998 and BS 7121-5.',
+  },
+  {
+    q: 'Do tower cranes need a lift plan for every lift?',
+    a: 'Every lifting operation must be planned under LOLER 1998 regulation 8, but tower crane planning is usually handled in three layers: a generic site lift plan covering routine repetitive lifts (materials in, formwork around, kit movements), specific lift plans for any operation outside the generic envelope, and tandem or specialist plans for complex operations.',
+  },
+  {
+    q: 'What\'s the difference between a tower crane LOLER inspection and an AP audit?',
+    a: 'A LOLER thorough examination is a statutory engineering inspection of the crane itself, carried out by a competent examiner every 6 to 12 months depending on duty. An AP audit is a planning and compliance review of how lifting operations are being conducted — paperwork, lift plans, briefings, supervision, slinger competence, communications — and it sits alongside, not in place of, LOLER thorough examination.',
+  },
+  {
+    q: 'How fast can a non-routine lift plan be turned around mid-contract?',
+    a: 'For contracted clients, non-routine lift plans are typically issued within 24 hours of receiving the brief, weights, drawings and lifting accessory information. Tandem lifts, contract lifts and unusually complex picks may take 3–5 working days because they need engineering checks against the manufacturer load chart and an independent review.',
+  },
+  {
+    q: 'Who writes the lift plan for a tower crane?',
+    a: 'A CPCS A61 Appointed Person. On most projects the principal contractor requires a named Appointed Person to own tower crane lift planning for the duration of the crane on site — producing the generic site lift plan, writing specific tower crane lift plans for non-routine operations, and reviewing every lift plan submitted by subcontractors before lifting is approved. The crane supplier erects and maintains the crane, but the lift planning responsibility sits with the Appointed Person.',
+  },
+  {
+    q: 'Can you cover sites with multiple tower cranes or shared airspace?',
+    a: 'Yes. Multi-crane sites need a coordinated lifting strategy covering anti-collision, slewing priorities, shared exclusion zones, pour windows and concurrent activity rules. We write the multi-crane management plan, audit it on the 8-weekly cycle and review specific lift plans where two or more cranes share airspace.',
+  },
+]
+
+// FAQ structured data, generated from PAGE_FAQS above.
+//
+// Fix #2, Jul 2026 SEO review: this object used to be a hand-maintained literal
+// separate from the visible FAQ list, and the two had drifted — questions were
+// being emitted as JSON-LD that appeared nowhere on the rendered page, which
+// breaches Google's structured data policy. Deriving it from the visible list
+// makes that impossible by construction. Edit PAGE_FAQS, not this.
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is a tower crane Appointed Person contract?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A tower crane Appointed Person (AP) contract is an ongoing engagement where an external CPCS A61 Appointed Person takes responsibility for planning lifting operations, auditing crane operations and managing compliance documentation throughout the lifetime of one or more tower cranes on a project. It typically includes 8-weekly site audits, lift plan review and on-call AP support for non-routine lifts.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How often should tower cranes be audited?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'BS 7121-1 requires planned, recorded audits of tower crane operations. Industry best practice is an 8-weekly cycle through the project lifetime, with additional audits triggered by significant change — new operators, new lift types, new adjacent activities, or following any incident or near miss.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do tower cranes need a lift plan for every lift?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every lifting operation must be planned under LOLER 1998 regulation 8, but tower crane planning is usually handled in three layers: a generic site lift plan covering routine repetitive lifts (materials in, formwork around, kit movements), specific lift plans for any operation outside the generic envelope, and tandem or specialist plans for complex operations.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: "What's the difference between a tower crane LOLER inspection and an AP audit?",
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A LOLER thorough examination is a statutory engineering inspection of the crane itself, carried out by a competent examiner every 6 to 12 months depending on duty. An AP audit is a planning and compliance review of how lifting operations are being conducted — paperwork, lift plans, briefings, supervision, slinger competence, communications — and it sits alongside, not in place of, LOLER thorough examination.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How fast can a non-routine lift plan be turned around mid-contract?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'For contracted clients, non-routine lift plans are typically issued within 24 hours of receiving the brief, weights, drawings and lifting accessory information. Tandem lifts, contract lifts and unusually complex picks may take 3–5 working days because they need engineering checks against the manufacturer load chart and an independent review.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is a tower crane contract priced?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Tower crane contracts are priced on a quote-only basis because every project differs in length, crane count, audit frequency, level of on-call support and documentation scope. Typical drivers are project duration, number of cranes, complexity of the lifts, and whether the client wants the AP to also act as Lifting Supervisor on tandem operations.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens during an 8-weekly audit?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The Appointed Person attends site, verifies operator and slinger/signaller competence, reviews LOLER and weekly inspection records, checks lifting accessories, walks the exclusion zones and communications, samples recent lift plans against actual operations and reviews the schedule of common lifts. The visit closes with a written audit report covering findings, corrective actions and a deadline for closure.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who writes the lift plan for a tower crane?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A CPCS A61 Appointed Person. On most projects the principal contractor requires a named Appointed Person to own tower crane lift planning for the duration of the crane on site — producing the generic site lift plan, writing specific tower crane lift plans for non-routine operations, and reviewing every lift plan submitted by subcontractors before lifting is approved. The crane supplier erects and maintains the crane, but the lift planning responsibility sits with the Appointed Person.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you cover sites with multiple tower cranes or shared airspace?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Multi-crane sites need a coordinated lifting strategy covering anti-collision, slewing priorities, shared exclusion zones, pour windows and concurrent activity rules. We write the multi-crane management plan, audit it on the 8-weekly cycle and review specific lift plans where two or more cranes share airspace.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you write a one-off tower crane lift plan without a full contract?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. As well as ongoing Appointed Person contracts, we write individual tower crane lift plans and tower crane lifting plans for specific operations — erection and dismantle sequences, heavy or tandem picks, and lifts over occupied areas or shared airspace. Each tower crane lift plan is prepared by a CPCS A61 Appointed Person to LOLER 1998 and BS 7121-5.',
-      },
-    },
-  ],
+  mainEntity: PAGE_FAQS.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
 }
 
 const breadcrumbSchema = {
@@ -570,52 +573,7 @@ export default function TowerCranePage() {
           />
 
           <div className="space-y-4">
-            {[
-              {
-                q: 'What is a tower crane Appointed Person contract?',
-                a: 'An ongoing engagement where a CPCS A61 Appointed Person plans, audits and signs off lifting operations on your tower crane project — from erection through to dismantle — including 8-weekly audits, lift plan review and on-call AP support.',
-              },
-              {
-                q: 'How often should tower cranes be audited?',
-                a: 'BS 7121-1 requires planned, recorded audits. Industry best practice is 8-weekly through the project life, with extra audits on rotation changes, new lift types, near misses or incidents.',
-              },
-              {
-                q: 'Do tower cranes need a lift plan for every single lift?',
-                a: 'Every lifting operation must be planned under LOLER 1998. Routine repetitive lifts are usually covered by a generic site lift plan; out-of-envelope lifts get a specific plan; tandem and complex picks get their own engineered plan.',
-              },
-              {
-                q: "What's the difference between a LOLER inspection and an AP audit?",
-                a: 'A LOLER thorough examination is a statutory engineering inspection of the crane itself, every 6–12 months. An AP audit reviews how lifting operations are being conducted — paperwork, plans, briefings, supervision, slingers, communications. The two sit alongside each other.',
-              },
-              {
-                q: 'How fast can a non-routine lift plan be turned around?',
-                a: 'For contracted clients we issue non-routine specific plans within 24 hours of receiving the brief, weights, drawings and accessory information. Tandem lifts and contract lifts take 3–5 working days because of engineering checks and independent review.',
-              },
-              {
-                q: 'How is a tower crane contract priced?',
-                a: 'Quote-only — every project differs in length, crane count, audit cadence, on-call support and documentation scope. Send the construction programme and basic crane info via the contact form and we will scope and quote within 4 working hours.',
-              },
-              {
-                q: 'What happens during an 8-weekly audit?',
-                a: 'AP attends site, verifies operator and slinger competence, reviews LOLER and weekly inspections, checks accessories, walks exclusion zones and communications, samples recent lift plans against actual operations and writes up a closure report with corrective actions.',
-              },
-              {
-                q: 'Can you cover sites with multiple tower cranes?',
-                a: 'Yes — multi-crane sites need a coordinated lifting strategy covering anti-collision, slewing priorities, shared exclusion zones and concurrent activity rules. We write the multi-crane management plan and audit it on the same 8-weekly cycle.',
-              },
-              {
-                q: 'Will you act as Lifting Supervisor on tandem lifts as well?',
-                a: 'On request, yes. Many clients ask the AP to also act as Lifting Supervisor on tandem and complex lifts so a single competent person owns both planning and execution. This is scoped into the contract up front.',
-              },
-              {
-                q: 'What happens at dismantle?',
-                a: 'AP attends dismantle, signs off the handover paperwork and issues a project close-out documentation pack — audit reports, lift plans, accessory register, AP records — for your H&S file and for handover to the client.',
-              },
-              {
-                q: 'Can you write a one-off tower crane lift plan without a full contract?',
-                a: 'Yes. As well as ongoing Appointed Person contracts, we write individual tower crane lift plans and tower crane lifting plans for specific operations — erection and dismantle sequences, heavy or tandem picks, and lifts over occupied areas or shared airspace. Each tower crane lift plan is prepared by a CPCS A61 Appointed Person to LOLER 1998 and BS 7121-5.',
-              },
-            ].map((f) => (
+            {PAGE_FAQS.map((f) => (
               <details
                 key={f.q}
                 className="group bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50"

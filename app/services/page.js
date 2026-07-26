@@ -46,14 +46,11 @@ const SERVICES = [
     blurb:
       'Independent CPCS Appointed Person review of subcontractor lift plans. LOLER and BS 7121 check, Category A or B determination, clear written findings.',
   },
-  {
-    slug: 'lift-plan-review',
-    name: 'Lift Plan Review',
-    icon: ShieldCheck,
-    category: 'Independent review',
-    blurb:
-      'Independent lift plan review against LOLER 1998, BS 7121 and industry best practice. Fast turnaround, paste-ready findings for your file.',
-  },
+  // 'lift-plan-review' removed (Jul 2026 SEO review, fix #5). That URL has
+  // 301'd to /services/lift-plan-checking since the two pages were merged, so
+  // this card was sending users and crawlers through a redirect to a page
+  // already listed directly above it. The review service is described on the
+  // checking page.
   {
     slug: 'excavator-lift-plans',
     name: 'Excavator Lift Plans',
@@ -134,9 +131,13 @@ const SERVICES = [
 const CATEGORY_ORDER = ['Core', 'Independent review', 'By plant type', 'Ongoing contracts', 'Specialist']
 
 export const metadata = {
-  title: 'UK Lift Planning & Appointed Person Services',
+  // Fix #1/#6, Jul 2026 SEO review: retitled away from the "lift planning
+  // services" head term, which now belongs to /services/lift-plans. This page
+  // is the navigational hub and should rank for the broader "lifting services
+  // / lifting operations consultant" cluster instead.
+  title: 'UK Lifting Services | Lift Plans & AP Cover',
   description:
-    'CPCS Appointed Person lift planning across the UK: lift plan writing, independent checking, tower crane contracts and steel erection. Same-day quotes.',
+    'Every RMT lifting service in one place: lift plan writing, independent checking, Appointed Person cover, tower crane contracts, RAMS and site audits.',
   keywords: [
     'crane lift planning services',
     'lift plan writing service',
@@ -222,8 +223,13 @@ export default function ServicesHub() {
               <Wrench className="w-4 h-4" />
               CPCS Appointed Person • LOLER 1998 • BS 7121
             </div>
+            {/* H1 retargeted (Jul 2026 SEO review, fix #1). Was "Lift planning
+                services", competing directly with the homepage H1 and with
+                /services/lift-plans. This page is a navigational hub — it should
+                rank for "lifting operations consultant" / "lifting services UK",
+                not for the lift-plan head term, which belongs to the child. */}
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Lift planning services
+              Our lifting services
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
               Everything we do is built around one job: producing lift plans that pass first time, stand up under independent review, and keep your site moving. From single excavator picks to multi-year tower crane contracts, every plan is signed off by a CPCS Appointed Person and written to LOLER 1998, BS 7121 and ISO 10567.

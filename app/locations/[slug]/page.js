@@ -272,11 +272,37 @@ const LOCATIONS = {
   },
 }
 
+// Drive time above which we stop promising same-day site attendance.
+//
+// Fix #4, Jul 2026 SEO review. The travel-time card previously printed the
+// per-city travelMinutes value and then an unconditional sentence claiming
+// "practical for same-day site visits" underneath it. On London (180 min),
+// Bristol (180), Glasgow (210) and Edinburgh (240) that produced a three-to-
+// four-hour drive being sold as same-day attendance — and on London it
+// directly contradicted the honest body copy immediately above, which says
+// visits are "scheduled around critical lifts rather than as a default".
+// 90 minutes is the point at which a there-and-back site visit plus useful
+// time on site still fits inside a working day from Warrington.
+const SAME_DAY_THRESHOLD_MINUTES = 90
+
+// "180 minutes from London" reads like a machine wrote it. Render anything
+// from an hour upwards in hours and minutes.
+function formatTravelTime(minutes) {
+  if (minutes < 60) return `${minutes} minutes`
+  const hours = Math.floor(minutes / 60)
+  const rem = minutes % 60
+  const hourPart = `${hours} ${hours === 1 ? 'hour' : 'hours'}`
+  if (rem === 0) return hourPart
+  return `${hourPart} ${rem} minutes`
+}
+
 const SERVICE_LINKS = [
   { slug: 'appointed-person',      title: 'Appointed Person' },
   { slug: 'lift-plans',                title: 'Lift Plan Writing' },
   { slug: 'lift-plan-checking',        title: 'Lift Plan Checking' },
-  { slug: 'lift-plan-review',          title: 'Lift Plan Review' },
+  // 'lift-plan-review' removed (Jul 2026 SEO review, fix #5). It 301'd to
+  // lift-plan-checking, so every location page was showing two menu entries
+  // that landed on the same page — one of them via a redirect.
   { slug: 'lifting-operations-audit',  title: 'Lifting Operations Audit' },
   { slug: 'tower-crane',               title: 'Tower Crane Contracts' },
   { slug: 'steel-erection',            title: 'Steel Erection Planning' },
@@ -329,6 +355,56 @@ export default function LocationPage({ params }) {
     knowsAbout: ['LOLER 1998', 'BS 7121', 'Lift Planning', 'Appointed Person', loc.city],
   }
 
+  // Per-city FAQs.
+  //
+  // Fix #7, Jul 2026 SEO review. Location pages had no FAQ block and no
+  // FAQPage markup — and at 321 to 664 words they were the thinnest pages on
+  // the site. Almost nobody in this niche carries on-page FAQs, so this is
+  // cheap ground to take. The answers are generated from the city's own data
+  // rather than being boilerplate, so the same-day question gives the honest
+  // answer for that specific city rather than one blanket claim everywhere.
+  const sameDay = loc.travelMinutes <= SAME_DAY_THRESHOLD_MINUTES
+  const cityFaqs = [
+    {
+      q: `Do you actually attend sites in ${loc.city}, or is it all remote?`,
+      a: sameDay
+        ? `Both. We are ${formatTravelTime(loc.travelMinutes)} from ${loc.city} from our base in Warrington, so same-day attendance is practical for surveys, pre-lift briefings and audits. Most standard lift plans are still produced remotely from drawings and photographs, because that is faster and cheaper for you — we attend when the lift genuinely warrants eyes on the ground.`
+        : `Yes, but it is planned rather than same-day. ${loc.city} is ${formatTravelTime(loc.travelMinutes)} from our Warrington base, so visits are scheduled around your critical lifts, complex pre-lift briefings and audits. Standard lift plans are produced remotely from drawings, photographs and equipment details, and turned around in 24-48 hours wherever the site is.`,
+    },
+    {
+      q: `How quickly can you turn a lift plan around for a ${loc.city} site?`,
+      a: `Standard excavator, telehandler and lorry loader plans are issued within 24-48 hours of receiving the information. You will have a quote within 4 working hours of enquiring. Mobile crane plans that need a site visit take longer — typically 3-5 working days. If the lift is imminent, call 07803 808093 rather than emailing.`,
+    },
+    {
+      q: `Do you charge more for work in ${loc.city}?`,
+      a: sameDay
+        ? `No. Prices are the same wherever the site is — excavator and telehandler plans from £200 + VAT, lorry loader from £250 + VAT, mobile crane and complex lifts quoted individually. There is no travel surcharge inside the North West.`
+        : `The plan itself costs the same wherever the site is — excavator and telehandler plans from £200 + VAT, lorry loader from £250 + VAT. Where a site visit is genuinely required we agree the travel cost with you in advance, in writing, before anything is booked. We do not apply a regional uplift to fees.`,
+    },
+    {
+      q: `Will a plan from you be accepted by principal contractors in ${loc.city}?`,
+      a: `Every plan is signed off by a CPCS A61 Appointed Person (registration 40389279) and written to LOLER 1998 and BS 7121, which is the standard Tier 1 contractors review against anywhere in the UK. Our plans are used by contractors including Wates, Caddick and GMI. If a reviewer comes back with comments, dealing with them is part of the fixed fee rather than an extra.`,
+    },
+    {
+      q: `Can you review a lift plan someone else has written for a ${loc.city} project?`,
+      a: `Yes — independent lift plan checking is a service in its own right and does not require us to have written the original. A CPCS A61 Appointed Person reviews the plan against LOLER 1998 and BS 7121, confirms the lift category, and returns written findings you can pass straight back to the submitting subcontractor. Turnaround is typically 24-48 hours.`,
+    },
+    {
+      q: `Do I need my own Appointed Person if I am hiring a crane in ${loc.city} on CPA terms?`,
+      a: `Yes. Under a CPA crane hire agreement the crane company supplies the crane and operator only — planning the lifting operation and appointing a competent Appointed Person stays with you as the hirer. Under a contract lift the crane company takes that duty on instead. If you are on CPA terms and have no A61 holder available, that is exactly the gap an external Appointed Person fills.`,
+    },
+  ]
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: cityFaqs.map(({ q, a }) => ({
+      '@type': 'Question',
+      name: q,
+      acceptedAnswer: { '@type': 'Answer', text: a },
+    })),
+  }
+
   // BreadcrumbList JSON-LD — Home > Locations > {City}. Lets Google render
   // breadcrumb trails in mobile SERPs and reinforces the site hierarchy.
   const breadcrumbJsonLd = {
@@ -350,6 +426,10 @@ export default function LocationPage({ params }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* Hero */}
@@ -411,12 +491,23 @@ export default function LocationPage({ params }) {
                 <Clock className="w-6 h-6 text-amber-400 flex-shrink-0 mt-1" />
                 <div>
                   <div className="text-white font-display text-xl font-bold mb-2">
-                    {loc.travelMinutes} minutes from {loc.city}
+                    {formatTravelTime(loc.travelMinutes)} from {loc.city}
                   </div>
                   <p className="text-gray-400 text-base">
-                    From our Warrington base — practical for same-day site visits, surveys, and
-                    pre-lift briefings. Standard lift plans turned around within 24-48 hours of
-                    receiving project information.
+                    {loc.travelMinutes <= SAME_DAY_THRESHOLD_MINUTES ? (
+                      <>
+                        From our Warrington base — practical for same-day site visits, surveys, and
+                        pre-lift briefings. Standard lift plans turned around within 24-48 hours of
+                        receiving project information.
+                      </>
+                    ) : (
+                      <>
+                        From our Warrington base. Site visits, surveys and pre-lift briefings are
+                        scheduled around your critical lifts rather than offered same-day at this
+                        distance. Plans themselves are produced remotely and turned around within
+                        24-48 hours of receiving project information, wherever the site is.
+                      </>
+                    )}
                   </p>
                 </div>
               </div>
@@ -497,8 +588,29 @@ export default function LocationPage({ params }) {
         </div>
       </section>
 
+      {/* FAQ — visible, rendered from cityFaqs so the on-page copy and the
+          FAQPage JSON-LD above are the same list (fix #7, Jul 2026). */}
+      <section className="py-16 bg-slate-950 border-t border-slate-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl font-bold text-white mb-8">
+            Lift planning in {loc.city} — common questions
+          </h2>
+          <div className="space-y-4">
+            {cityFaqs.map((faq) => (
+              <div
+                key={faq.q}
+                className="bg-slate-800/40 border border-slate-700/50 rounded-2xl p-6"
+              >
+                <h3 className="font-display text-lg font-bold text-white mb-3">{faq.q}</h3>
+                <p className="text-gray-400 leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Inline form */}
-      <section className="py-20 bg-slate-950">
+      <section className="py-20 bg-slate-900">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <InlineQuoteForm
             serviceName={`Crane Lift Plan — ${loc.city}`}

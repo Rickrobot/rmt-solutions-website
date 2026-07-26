@@ -4,8 +4,11 @@ import { FileText, AlertTriangle, HelpCircle, BookOpen, Scale, Users, ArrowRight
 import SectionHeader from '@/components/ui/SectionHeader'
 
 export const metadata = {
-  title: 'Free Lift Plan Templates & UK LOLER Guidance',
-  description: 'Free downloadable lift plan templates, risk assessments and UK LOLER guidance for telehandlers, excavators and lorry loaders. Aligned with BS 7121.',
+  // Fix #6, Jul 2026 SEO review: title and H1 were targeting different terms
+  // ("free lift plan templates" vs "LOLER guidance"). Aligned, and the
+  // description now mentions the permit-to-lift form as well.
+  title: 'Free Lift Plan Templates UK | LOLER Guidance',
+  description: 'Free downloadable lift plan templates, permit to lift forms, risk assessments and UK LOLER guidance for telehandlers, excavators and lorry loaders.',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/resources',
   },
