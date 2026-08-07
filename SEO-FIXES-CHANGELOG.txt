@@ -85,7 +85,9 @@ CREDENTIALS (Graduate IOSH → CertIOSH + MIIRSM + TIFSM)
 
     app/page.js (homepage)
       JSON-LD ProfessionalService.hasCredential rewritten to include:
-        - CPCS Appointed Person A61 (with identifier 40389279)
+        - CPCS Appointed Person A61
+          (NOTE Aug 2026: the registration identifier was later removed
+           from the site at the owner's request.)
         - NEBOSH National Diploma
         - CertIOSH (Certified Member, IOSH)
         - MIIRSM (Member, IIRSM)
@@ -97,11 +99,13 @@ CREDENTIALS (Graduate IOSH → CertIOSH + MIIRSM + TIFSM)
       - Added canonical
       - Expanded qualifications array from 4 to 6 entries with full names
         and proper descriptions
-      - CPCS A61 entry now includes Reg: 40389279
+      - CPCS A61 entry added
+        (NOTE Aug 2026: registration number later removed at owner's request.)
 
     app/contact/page.js
       Sidebar credentials list updated to the same 6 entries; CPCS A61
-      now shows Reg: 40389279
+      now shows the CPCS A61 credential
+      (NOTE Aug 2026: registration number later removed at owner's request.)
 
     Service pages with credential stat blocks/cards updated:
       app/services/excavator-lift-plans/page.js  (2 places)

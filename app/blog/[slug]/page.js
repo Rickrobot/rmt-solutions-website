@@ -3557,7 +3557,7 @@ export default function BlogPost({ params }) {
               <div>
                 <h3 className="text-white font-display text-xl font-bold mb-2">Ricky Marsh</h3>
                 <p className="text-gray-400 text-sm mb-4">
-                  CPCS Appointed Person (A61, Reg: 40389279) | NEBOSH National Diploma | CertIOSH | MIIRSM | TIFSM
+                  CPCS A61 Appointed Person | NEBOSH National Diploma | CertIOSH | MIIRSM | TIFSM
                 </p>
                 <p className="text-gray-400 text-sm">
                   With 35 years of construction industry experience, Ricky provides expert lift planning and compliance services to contractors across the UK. Specializing in LOLER compliant lift plans, tower crane contracts, and steel erection planning.

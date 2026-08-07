@@ -437,7 +437,7 @@ export default function AerialSiteSurveysPage() {
             <div className="bg-slate-50 p-8 rounded-xl">
               <h3 className="text-xl font-semibold text-slate-900 mb-4">Construction Industry</h3>
               <ul className="space-y-3 text-slate-600">
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>CPCS Appointed Person (A61) — Reg: 40389279</li>
+                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>CPCS A61 Appointed Person</li>
                 <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>35+ years construction industry experience</li>
                 <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>NEBOSH National Diploma</li>
                 <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>CertIOSH · MIIRSM · TIFSM</li>

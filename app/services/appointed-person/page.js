@@ -30,7 +30,7 @@ export const metadata = {
   openGraph: {
     title: 'CPCS A61 Appointed Person Services UK',
     description:
-      'Hire a CPCS A61 Appointed Person (Reg 40389279) for your lifting operations. 35 years of construction experience, LOLER 1998 and BS 7121 compliant, UK-wide.',
+      'Hire a CPCS A61 Appointed Person for your lifting operations. 35 years of construction experience, LOLER 1998 and BS 7121 compliant, UK-wide.',
     url: 'https://www.rmtsafetysolutions.com/services/appointed-person',
     siteName: 'RMT Solutions - Lift Planning Specialists',
     images: ['/images/services/appointed-person-reviewing-lift-plan-uk.webp'],
@@ -256,14 +256,14 @@ export default function AppointedPersonPage() {
                 A genuinely qualified Appointed Person
               </h3>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                RMT Solutions is run by Ricky Marsh, a CPCS A61 Appointed Person (registration 40389279)
+                RMT Solutions is run by Ricky Marsh, a CPCS A61 Appointed Person
                 with 35 years of UK construction experience. The A61 ticket is backed by a NEBOSH National
                 Diploma, CertIOSH, MIIRSM and TIFSM — so the person planning your lift holds both the
                 lifting competence and the wider health and safety qualifications a principal contractor
                 expects to see.
               </p>
               <ul className="space-y-3 mb-6">
-                {['CPCS A61 Appointed Person — Reg 40389279', 'NEBOSH National Diploma', 'CertIOSH, MIIRSM, TIFSM', '35 years in UK construction'].map((c) => (
+                {['CPCS A61 Appointed Person', 'NEBOSH National Diploma', 'CertIOSH, MIIRSM, TIFSM', '35 years in UK construction'].map((c) => (
                   <li key={c} className="flex items-start text-gray-300">
                     <ShieldCheck className="w-5 h-5 text-amber-400 mr-3 mt-0.5 flex-shrink-0" />
                     <span>{c}</span>

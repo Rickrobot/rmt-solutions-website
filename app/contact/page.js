@@ -516,7 +516,7 @@ export default function ContactPage() {
                 <ul className="space-y-3 text-gray-300 text-sm">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-amber-400 rounded-full mr-3" />
-                    CPCS Appointed Person A61 (Reg: 40389279)
+                    CPCS Appointed Person A61
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-amber-400 rounded-full mr-3" />

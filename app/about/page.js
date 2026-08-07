@@ -5,13 +5,13 @@ import SectionHeader from '@/components/ui/SectionHeader'
 
 export const metadata = {
   title: 'About | CPCS Appointed Person, 35 Years',
-  description: 'Meet Ricky Marsh, CPCS Appointed Person (A61, Reg 40389279) with 35 years in UK construction. NEBOSH Diploma, CertIOSH, MIIRSM, TIFSM.',
+  description: 'Meet Ricky Marsh, CPCS A61 Appointed Person with 35 years in UK construction. NEBOSH Diploma, CertIOSH, MIIRSM, TIFSM.',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/about',
   },
   openGraph: {
     title: 'About | CPCS Appointed Person with 35 Years Experience',
-    description: 'Meet Ricky Marsh, CPCS Appointed Person (A61, Reg 40389279) with 35 years in UK construction. NEBOSH Diploma, CertIOSH, MIIRSM, TIFSM.',
+    description: 'Meet Ricky Marsh, CPCS A61 Appointed Person with 35 years in UK construction. NEBOSH Diploma, CertIOSH, MIIRSM, TIFSM.',
     url: 'https://www.rmtsafetysolutions.com/about',
     images: ['/images/og-lift-planning.jpg'],
     siteName: 'RMT Solutions - Lift Planning Specialists',
@@ -33,7 +33,7 @@ const personJsonLd = {
   familyName: 'Marsh',
   jobTitle: 'CPCS Appointed Person (A61)',
   description:
-    'CPCS Appointed Person (A61, Reg 40389279) and founder of RMT Solutions Ltd, with 35 years of UK construction industry experience. NEBOSH National Diploma qualified, CertIOSH, MIIRSM and TIFSM.',
+    'CPCS A61 Appointed Person and founder of RMT Solutions Ltd, with 35 years of UK construction industry experience. NEBOSH National Diploma qualified, CertIOSH, MIIRSM and TIFSM.',
   url: 'https://www.rmtsafetysolutions.com/about',
   email: 'ricky@rmtsolutions.co.uk',
   telephone: '+447803808093',
@@ -43,7 +43,7 @@ const personJsonLd = {
     name: 'RMT Solutions Ltd',
   },
   hasCredential: [
-    { '@type': 'EducationalOccupationalCredential', name: 'CPCS Appointed Person A61', identifier: '40389279' },
+    { '@type': 'EducationalOccupationalCredential', name: 'CPCS Appointed Person A61' },
     { '@type': 'EducationalOccupationalCredential', name: 'NEBOSH National Diploma' },
     { '@type': 'EducationalOccupationalCredential', name: 'CertIOSH (Certified Member, Institution of Occupational Safety and Health)' },
     { '@type': 'EducationalOccupationalCredential', name: 'MIIRSM (Member, International Institute of Risk and Safety Management)' },
@@ -70,7 +70,7 @@ const breadcrumbJsonLd = {
 
 export default function AboutPage() {
   const qualifications = [
-    { icon: Award, title: 'CPCS Appointed Person A61', description: 'Registration: 40389279. Qualified Appointed Person for lifting operations planning and supervision under LOLER 1998 and BS 7121.' },
+    { icon: Award, title: 'CPCS Appointed Person A61', description: 'Qualified Appointed Person for lifting operations planning and supervision under LOLER 1998 and BS 7121.' },
     { icon: Shield, title: 'NEBOSH National Diploma', description: 'Advanced qualification in occupational health and safety management.' },
     { icon: Users, title: 'CertIOSH', description: 'Certified Member of the Institution of Occupational Safety and Health — IOSH\u2019s chartered-track grade reflecting demonstrated professional competence.' },
     { icon: Shield, title: 'MIIRSM', description: 'Member of the International Institute of Risk and Safety Management.' },

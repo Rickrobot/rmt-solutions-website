@@ -385,7 +385,7 @@ export default function LocationPage({ params }) {
     },
     {
       q: `Will a plan from you be accepted by principal contractors in ${loc.city}?`,
-      a: `Every plan is signed off by a CPCS A61 Appointed Person (registration 40389279) and written to LOLER 1998 and BS 7121, which is the standard Tier 1 contractors review against anywhere in the UK. Our plans are used by contractors including Wates, Caddick and GMI. If a reviewer comes back with comments, dealing with them is part of the fixed fee rather than an extra.`,
+      a: `Every plan is signed off by a CPCS A61 Appointed Person and written to LOLER 1998 and BS 7121, which is the standard Tier 1 contractors review against anywhere in the UK. Our plans are used by contractors including Wates, Caddick and GMI. If a reviewer comes back with comments, dealing with them is part of the fixed fee rather than an extra.`,
     },
     {
       q: `Can you review a lift plan someone else has written for a ${loc.city} project?`,
