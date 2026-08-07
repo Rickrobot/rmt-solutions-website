@@ -3,6 +3,36 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import InlineQuoteForm from '@/components/InlineQuoteForm';
 
+/**
+ * Reusable download callout for post content (Aug 2026 GSC review).
+ *
+ * WHY: the site's CTR splits cleanly by what the title promises. Pages
+ * offering a file run 3-12% CTR (/resources/overhead-gantry-crane-lift-plan-
+ * templates hits 11.81%); pages offering an explanation run 0.3-0.8%, because
+ * an AI Overview now answers the question above the organic listing. The blog
+ * carries most of the site's impressions but had almost no downloadable
+ * assets, so it was competing on exactly the ground it loses.
+ *
+ * This renders an unmissable, amber-bordered asset block inside the article
+ * body. Deliberately ungated — the same reasoning set out in GatedDownload.js:
+ * gating the free assets would kill the rankings and links that make these
+ * pages work. The gate belongs on the higher-value checklist, not here.
+ *
+ * Styling matches the existing in-content callouts (Tailwind classes are
+ * safe here because these strings are scanned by the Tailwind content
+ * globber via this file).
+ */
+function downloadBox({ href, label, blurb, meta = 'Free PDF · A4 · no sign-up' }) {
+  return `
+      <div class="bg-amber-500/10 border-2 border-amber-500/50 rounded-xl p-6 my-8">
+        <p class="text-amber-400 text-xs font-semibold tracking-wide mb-2" style="margin-bottom:0.5rem">${meta.toUpperCase()}</p>
+        <p class="text-white font-bold text-lg mb-2" style="margin-top:0">${label}</p>
+        <p class="text-gray-300 mb-0">${blurb}</p>
+        <p class="mt-4 mb-0"><a href="${href}" class="text-amber-400 font-semibold" download>Download the PDF →</a></p>
+      </div>
+`;
+}
+
 // Blog posts content
 const blogPosts = {
   // NEW (Jul 2026) — targets the "generic lift plan" query cluster (GSC:
@@ -1077,8 +1107,14 @@ const blogPosts = {
     `,
   },
   'what-is-bs-7121-complete-guide': {
-    title: 'BS 7121 Explained: Every Part, and What Sites Get Wrong',
-    description: 'What every part of BS 7121 covers, how it links to LOLER 1998, and the gaps where UK sites most often fall short of the standard in practice.',
+    // CTR fix (Aug 2026 GSC review): 10,690 impressions at position 7.27 but
+    // only 0.75% CTR. Position is fine; the snippet is losing to the AI
+    // Overview. No new asset promised here (there isn't one yet — see the
+    // review doc's suggestion of a BS 7121 parts summary chart), so instead
+    // the title is made concrete and scannable: naming the parts range gives
+    // the searcher something specific the Overview summary won't contain.
+    title: 'BS 7121 Explained: Parts 1-14 and What Sites Get Wrong',
+    description: 'What each part of BS 7121 covers — Parts 1 to 14 — how it links to LOLER 1998, and the gaps where UK sites most often fall short of the standard in practice.',
     keywords: 'bs 7121, what is bs 7121, bs 7121 part 1, bs 7121-1, bs 7121-3 mobile cranes, bs 7121-5 tower cranes, bs 7121-4 lorry loaders, safe use of cranes british standard, appointed person bs 7121, basic standard complex lift, lift categorisation, code of practice safe use of cranes',
     category: 'Compliance',
     readTime: '16 min read',
@@ -1477,10 +1513,17 @@ const blogPosts = {
     `,
   },
   'when-do-you-need-lift-plan': {
-    title: 'When Do You Need a Lift Plan? Decision Flowchart + Examples',
-    // CTR fix (Jun 2026): answer-first description with the decision-flowchart
-    // hook — this URL had 8,425 impressions at position 8 but 1.25% CTR.
-    description: 'Not every lift needs a written plan. A decision flowchart showing what LOLER 1998 requires, with worked site examples and the complex-lift triggers.',
+    // CTR fix ROUND 2 (Aug 2026 GSC review). The Jun 2026 rewrite lifted
+    // impressions hard (8,425 → 24,085) but CTR FELL to 0.83% at position
+    // 7.74 — the classic AI Overview signature: Google now answers "when do
+    // you need a lift plan" above the organic listing, so an explanation in
+    // the title has nothing left to offer. The fix is to promise the one
+    // thing an AI Overview cannot deliver: a file. The flowchart is now a
+    // real downloadable A4 PDF (public/downloads/) and the title leads with
+    // it. Same logic that makes /resources/* pages hit 3-12% CTR while
+    // explainer posts sit at 0.3-0.8%.
+    title: 'When Do You Need a Lift Plan? Free Flowchart (PDF)',
+    description: 'Not every lift needs a written plan. Download the free A4 decision flowchart — LOLER 1998 requirements, worked site examples and the complex-lift triggers.',
     keywords: 'when do you need a lift plan, do you need a lift plan for every lift, when is a lift plan required, lift plan requirements, hse lifting plan, when planning a lift what is the first thing you should do, do you need a lift plan for a telehandler, lift plans are mandatory for, crane lift plan requirements, loler regulation 8',
     category: 'Planning',
     readTime: '8 min read',
@@ -1490,6 +1533,12 @@ const blogPosts = {
     imageAlt: 'Excavator lifting a concrete ring into an excavation — an everyday operation that still requires a LOLER lift plan',
     content: `
       <p class="lead">One of the most common questions I get asked is: "Do I really need a lift plan for this?" The short answer is: yes, LOLER requires ALL lifting operations to be properly planned. But the level of planning detail varies depending on the complexity of the operation. If you are not sure what the document itself contains, start with our guide to <a href="/blog/what-is-a-lift-plan">what a lift plan is</a>.</p>
+      ${downloadBox({
+        href: '/downloads/lift-plan-decision-flowchart.pdf',
+        label: 'The decision flowchart on one printable page',
+        blurb:
+          'Every question on this page as a single A4 flowchart — the LOLER Reg. 8 starting point, the ten BS 7121-1 complex-lift triggers, and the basic / standard / complex outcome. Print it and pin it up in the site cabin.',
+      })}
       <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 my-8">
         <p class="text-gray-300 mb-0">Short on time? If the lift is on the programme and you need the paperwork to stand up to a principal contractor, we write it for you. <a href="/services/lift-plans">Lift planning services</a> from a CPCS A61 Appointed Person — fixed price from £200 + VAT, delivered in 24–48 hours.</p>
         <p class="mt-4 mb-0"><a href="/contact" class="text-amber-400 font-semibold">Get a quote — reply within 4 working hours →</a></p>
@@ -1957,8 +2006,18 @@ const blogPosts = {
     `,
   },
   'cpcs-appointed-person-guide': {
-    title: 'CPCS A61 Appointed Person: Duties, and When to Hire One',
-    description: 'What a CPCS A61 Appointed Person is legally responsible for under BS 7121 and LOLER 1998 — plus in-house versus contracted, and how to select one.',
+    // PRIORITY FIX (Aug 2026 GSC review). The Appointed Person cluster is the
+    // single biggest wasted asset on the site: 7,579 impressions across 55
+    // queries returning FIVE clicks (0.07% CTR) at an average position of
+    // 15.2. This page alone carries 11,910 impressions at 0.32% CTR / pos
+    // 12.09. Two causes, both addressed here:
+    //   1. No asset in the SERP snippet — fixed by leading the title with the
+    //      free duties checklist (now a real PDF in public/downloads/).
+    //   2. 'Card Levels & Costs' captures the A61 basic/advanced and pricing
+    //      intent that currently leaks to cpcs-a61-basic-vs-advanced, which
+    //      is a 682-word page that cannot hold position.
+    title: 'CPCS A61 Appointed Person: Duties, Card Levels & Costs',
+    description: 'What a CPCS A61 Appointed Person is legally responsible for under BS 7121 and LOLER 1998, basic vs advanced cards, costs — plus a free duties checklist (PDF).',
     keywords: 'cpcs a61 appointed person, cpcs appointed person, a61 appointed person, appointed person for lifting operations, appointed person lifting operations, appointed person, cpcs a61, a61 advanced, a61 basic, lifting appointed person, appointed person duties, appointed person responsibilities, appointed person bs 7121, loler appointed person, lift planning experts, lift planning services',
     category: 'Compliance',
     readTime: '11 min read',
@@ -1968,6 +2027,12 @@ const blogPosts = {
     imageAlt: 'CPCS A61 Appointed Person in hi-vis and hard hat reviewing a lift plan on a tablet on a UK construction site, with a mobile crane working in the background',
     content: `
       <p class="lead">The <strong>CPCS A61 Appointed Person</strong> qualification is the UK industry standard for planning and managing lifting operations. If your project involves cranes, telehandlers, excavators or any other lifting equipment, LOLER 1998 and BS 7121 require that the operation is planned by a competent person — and on UK construction sites, that competence is most often demonstrated by holding the CPCS A61 card. This guide explains what a CPCS Appointed Person actually does, the difference between A61 Basic and A61 Advanced, when you legally need to appoint one, and how to choose the right person for your project.</p>
+      ${downloadBox({
+        href: '/downloads/appointed-person-duties-checklist.pdf',
+        label: 'Appointed Person duties checklist (BS 7121)',
+        blurb:
+          'Every duty BS 7121-1:2016 places on the AP, as 27 tick-boxes across six stages — establishing the operation, selecting equipment, assessing the site, appointing the team, issuing the plan, and the day itself.',
+      })}
       <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 my-8">
         <p class="text-gray-300 mb-0">Need an Appointed Person rather than the qualification? You can <a href="/services/appointed-person">hire a CPCS A61 Appointed Person</a> for a single lift, a project or a retained contract — no training cost, no cover gap, 35 years of experience on site.</p>
         <p class="mt-4 mb-0"><a href="/contact" class="text-amber-400 font-semibold">Get a quote — reply within 4 working hours →</a></p>
@@ -2149,6 +2214,19 @@ const blogPosts = {
     content: `
       <p class="lead">Telehandlers are among the most versatile machines on UK construction sites. Originally designed as rough terrain forklifts, they are now routinely used for lifting and placing suspended loads — operations that bring them firmly within the scope of LOLER 1998. Despite this, telehandler lift plans remain one of the most commonly overlooked requirements in construction planning.</p>
 
+      <!-- CONVERSION FIX (Aug 2026 GSC review). The telehandler cluster is the
+           site's best-performing search territory (2.60% CTR, 73 clicks/quarter)
+           and this post is its biggest single page — yet it carried ONE link to
+           the service that sells telehandler lift plans, and none at all to
+           /resources/telehandler-lift-plan-templates, which is the single
+           highest-click resource page on the site (162 clicks). Someone reading
+           2,000 words on telehandler lift planning is planning a telehandler
+           lift right now; this is the highest-intent traffic RMT gets. -->
+      <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 my-8">
+        <p class="text-gray-300 mb-0">Need the plan itself rather than the theory? We write <a href="/services/telehandler-lift-plans">telehandler lift plans</a> for fixed-frame and 360 slew machines — fixed price from £200 + VAT, delivered in 24–48 hours by a CPCS A61 Appointed Person. Or start from our <a href="/resources/telehandler-lift-plan-templates">free telehandler lift plan templates</a>.</p>
+        <p class="mt-4 mb-0"><a href="/contact" class="text-amber-400 font-semibold">Get a quote — reply within 4 working hours →</a></p>
+      </div>
+
       <h2>When Does a Telehandler Need a Lift Plan?</h2>
       <p>Under <a href="/blog/what-is-loler-complete-guide">LOLER 1998</a>, every lifting operation must be properly planned by a competent person, appropriately supervised, and carried out in a safe manner. A telehandler requires a formal lift plan whenever it is used for crane duties — that is, lifting and moving suspended loads using chains, slings, or other lifting accessories attached to the machine.</p>
 
@@ -2187,7 +2265,7 @@ const blogPosts = {
       </ul>
 
       <h2>What Should a Telehandler Lift Plan Include?</h2>
-      <p>A LOLER-compliant telehandler lift plan must address the specific risks of the operation. While the exact content varies with each lift, a thorough telehandler lift plan typically covers the following areas. (For the general anatomy of a plan regardless of equipment type, see <a href="/blog/what-is-a-lift-plan">what a lift plan must contain</a>.)</p>
+      <p>A LOLER-compliant telehandler lift plan must address the specific risks of the operation. While the exact content varies with each lift, a thorough telehandler lift plan typically covers the following areas. (For the general anatomy of a plan regardless of equipment type, see <a href="/blog/what-is-a-lift-plan">what a lift plan must contain</a>. To build your own, the <a href="/resources/telehandler-lift-plan-templates">free telehandler lift plan templates</a> already carry these sections — one for fork-carried loads, one for underslung.)</p>
 
       <h3>Machine Specification</h3>
       <p>The lift plan must identify the specific telehandler to be used, not just the generic type. This includes the make, model, maximum rated capacity, and boom configuration. It must also confirm that the machine is fitted with a suitable lifting attachment — typically a crane hook or dedicated lifting jib — and that this attachment is included in the machine's current thorough examination certificate under LOLER.</p>
@@ -2231,7 +2309,7 @@ const blogPosts = {
       </ul>
 
       <h2>Common Mistakes in Telehandler Lift Plans</h2>
-      <p>Having reviewed hundreds of telehandler lift plans submitted by subcontractors, certain <a href="/blog/common-lift-planning-mistakes">mistakes appear repeatedly</a>.</p>
+      <p>Having reviewed hundreds of telehandler lift plans submitted by subcontractors, certain <a href="/blog/common-lift-planning-mistakes">mistakes appear repeatedly</a>. If you have a plan already written and want it checked before it goes to the principal contractor, that is exactly what our <a href="/services/lift-plan-checking">lift plan checking service</a> does — the three errors below are the ones we reject most often.</p>
 
       <h3>Using the Wrong Load Chart</h3>
       <p>This is the single most common error. Telehandler load charts vary significantly depending on the configuration — stabilisers deployed vs retracted, attachment type, counterweight fitted vs removed. Using the wrong chart can make a lift appear safe when it is actually beyond the machine's capacity. Always verify which load chart applies to the actual planned configuration.</p>
@@ -2302,6 +2380,15 @@ const blogPosts = {
     imageAlt: 'Lorry loader (HIAB) offloading a delivery on a UK construction site — a vehicle-mounted crane operation requiring a lorry loader lift plan',
     content: `
       <p class="lead">Lorry loaders \u2014 commonly known by the brand name HIAB, though this is just one of several manufacturers \u2014 are truck-mounted cranes used extensively across UK construction for loading, unloading, and placing materials. Their convenience and availability make them one of the most frequently used pieces of lifting equipment on construction sites, yet lorry loader lift plans are among the most commonly deficient documents submitted for review.</p>
+
+      <!-- CONVERSION FIX (Aug 2026 GSC review): 126 clicks/quarter and only one
+           link to the service that sells the plan. Same reasoning as the
+           telehandler guide — high-intent traffic that was being read and then
+           left to leave. -->
+      <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 my-8">
+        <p class="text-gray-300 mb-0">Got a HIAB delivery on the programme this week? We write <a href="/services/lorry-loader-lift-plans">lorry loader lift plans</a> — stabiliser configuration, load chart verification and positioning worked through properly — from £200 + VAT in 24–48 hours. Or take our <a href="/resources/lorry-loader-lift-plan-templates">free lorry loader lift plan template</a> and fill it in yourself.</p>
+        <p class="mt-4 mb-0"><a href="/contact" class="text-amber-400 font-semibold">Get a quote — reply within 4 working hours →</a></p>
+      </div>
 
       <h2>When Does a Lorry Loader Need a Lift Plan?</h2>
       <p>Under <a href="/blog/what-is-loler-complete-guide">LOLER 1998</a>, every lifting operation must be properly planned by a competent person. For lorry loaders, this means a <a href="/blog/what-is-a-lift-plan">lift plan</a> is required whenever the crane is used to lift and move loads. This includes the most routine delivery operations that many contractors assume are too simple to plan.</p>
@@ -2398,7 +2485,7 @@ const blogPosts = {
       <p>Vehicle positioning on public roads is constrained by road width, adjacent properties, and the need to maintain traffic flow where possible. The lift plan must work within these constraints, which may mean accepting reduced stabiliser extension and therefore reduced lifting capacity.</p>
 
       <h2>Common Mistakes in Lorry Loader Lift Plans</h2>
-      <p>From years of reviewing lorry loader lift plans submitted by subcontractors, these are the mistakes that appear most frequently.</p>
+      <p>From years of reviewing lorry loader lift plans submitted by subcontractors, these are the mistakes that appear most frequently. If a plan has already been written and you want it caught before the principal contractor catches it, our <a href="/services/lift-plan-checking">lift plan checking service</a> exists for precisely this.</p>
 
       <h3>No Plan at All</h3>
       <p>The most common problem is the complete absence of a lift plan. Many contractors treat lorry loader deliveries as routine operations that do not require planning. This is a direct breach of LOLER and leaves both the contractor and the principal contractor exposed to enforcement action.</p>

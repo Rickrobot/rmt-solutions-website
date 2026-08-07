@@ -37,10 +37,19 @@ export const metadata = {
     // Homepage uses `default` as-is (no template applied). All child pages
     // get the template appended automatically. Both kept ≤60 chars so they
     // render in full on Google desktop SERPs.
-    default: 'LOLER Lift Plans UK | Appointed Person | RMT Solutions',
+    //
+    // CANNIBALISATION FIX (Aug 2026 GSC review):
+    // The previous default — 'LOLER Lift Plans UK | Appointed Person | RMT
+    // Solutions' — targeted the same head terms as /services/lift-plans
+    // ('Lift Planning Services UK | Lift Plans from £200'). Google split the
+    // signal and ranked neither: the homepage sat at pos 18.7 (2,452 imps)
+    // while the money page sat at pos 30.8 with 4,415 imps and 5 clicks.
+    // The homepage now leads on brand, credential and trust, ceding the
+    // commercial head terms outright to the service page.
+    default: 'RMT Solutions | CPCS Appointed Person, 35 Years, UK-Wide',
     template: '%s | RMT Solutions'
   },
-  description: 'LOLER compliant lift plans from a CPCS Appointed Person with 35 years experience. Tower crane, mobile crane and excavator lift plans — UK-wide.',
+  description: 'Independent CPCS A61 Appointed Person with 35 years on UK construction sites. Lift plans, lift plan checking and lifting operations audits — fixed prices, 24-48hr turnaround.',
   keywords: ['lift plans', 'lift planning', 'LOLER compliant', 'appointed person', 'CPCS A61', 'tower crane', 'steel erection', 'mobile crane lift plan', 'excavator lift plan', 'UK lift planning', 'Warrington', 'Manchester'],
   authors: [{ name: 'Ricky Marsh', url: 'https://www.rmtsafetysolutions.com' }],
   creator: 'RMT Solutions Ltd',
@@ -61,8 +70,8 @@ export const metadata = {
     locale: 'en_GB',
     url: 'https://www.rmtsafetysolutions.com',
     siteName: 'RMT Solutions - Lift Planning Specialists',
-    title: 'LOLER Lift Plans UK | Appointed Person | RMT Solutions',
-    description: 'Professional lift planning from a CPCS Appointed Person with 35 years experience. Tower crane contracts, steel erection planning, excavator lift plans.',
+    title: 'RMT Solutions | CPCS Appointed Person, 35 Years, UK-Wide',
+    description: 'Independent CPCS A61 Appointed Person with 35 years on UK construction sites. Lift plans, lift plan checking and lifting operations audits, UK-wide.',
     images: [
       {
         url: '/images/og-lift-planning.jpg',

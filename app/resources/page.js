@@ -377,6 +377,59 @@ export default function ResourcesPage() {
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
               </span>
             </Link>
+
+            {/* Printable site assets (Aug 2026 GSC review). Distinct from the
+                editable Word templates above: these are finished A4 PDFs meant
+                for the site cabin wall. They exist because the pages promising
+                a FILE run 3-12% CTR while the pages promising an explanation
+                run 0.3-0.8% — an AI Overview can answer a question but cannot
+                hand anyone a printable. Surfaced here as well as in-article so
+                the hub picks up the download intent directly. */}
+            <a
+              href="/downloads/lift-plan-decision-flowchart.pdf"
+              download
+              className="group bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 hover:border-amber-400 rounded-2xl p-8 transition"
+            >
+              <div className="w-14 h-14 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-5">
+                <Download className="w-7 h-7 text-amber-400" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-white group-hover:text-amber-400 transition mb-3">
+                Lift Plan Decision Flowchart
+              </h3>
+              <p className="text-gray-400 leading-relaxed mb-5">
+                One printable A4 page that answers &ldquo;do we need a lift plan
+                for this?&rdquo; — the LOLER Reg. 8 starting point, the ten
+                BS 7121-1 complex-lift triggers, and the basic / standard /
+                complex outcome. Free, no sign-up.
+              </p>
+              <span className="inline-flex items-center text-amber-400 font-semibold">
+                Download PDF
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+              </span>
+            </a>
+
+            <a
+              href="/downloads/appointed-person-duties-checklist.pdf"
+              download
+              className="group bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 hover:border-amber-400 rounded-2xl p-8 transition"
+            >
+              <div className="w-14 h-14 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-5">
+                <Download className="w-7 h-7 text-amber-400" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-white group-hover:text-amber-400 transition mb-3">
+                Appointed Person Duties Checklist
+              </h3>
+              <p className="text-gray-400 leading-relaxed mb-5">
+                Every duty BS 7121-1:2016 places on the Appointed Person, as 27
+                tick-boxes across six stages — establishing the operation,
+                selecting equipment, assessing the site, appointing the team,
+                issuing the plan, and the day itself.
+              </p>
+              <span className="inline-flex items-center text-amber-400 font-semibold">
+                Download PDF
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+              </span>
+            </a>
           </div>
         </div>
       </section>

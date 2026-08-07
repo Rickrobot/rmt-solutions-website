@@ -295,6 +295,11 @@ export async function GET() {
       // Modest CDN cache — sitemap changes are infrequent. Tune at the
       // edge if you switch hosts.
       'Cache-Control': 'public, max-age=0, s-maxage=3600, must-revalidate',
+      // Keep the sitemap out of the index (Aug 2026 GSC review): Google was
+      // ranking /sitemap.xml itself as a result (3 impressions at position 3).
+      // `noindex` still allows the file to be crawled and its URLs followed —
+      // it only stops the XML appearing as a search result in its own right.
+      'X-Robots-Tag': 'noindex',
     },
   });
 }
