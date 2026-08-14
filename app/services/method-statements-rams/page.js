@@ -644,22 +644,37 @@ export default function MethodStatementsRamsPage() {
       {/* Inline quick-quote form */}
       <section className="py-20 bg-slate-950">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <figure className="mb-8 bg-slate-800/40 border-l-4 border-amber-400 rounded-r-2xl p-6">
-            <blockquote className="text-gray-300 italic leading-relaxed">
-              &ldquo;I have always found the service they provide to be first class in regards of
-              appraising lifting plans to ensure that lifts on site are designed, planned, and fit
-              for purpose. The service is always concise and helpful for the issuer and the
-              turnaround is always prompt&hellip; I would have no hesitation in recommending RMT
-              Solutions.&rdquo;
-            </blockquote>
-            <figcaption className="mt-4 text-sm">
-              <span className="text-white font-semibold">Kevin Duffy</span>
-              <span className="text-gray-400"> — Senior Project Manager, Caddick Construction</span>
-              <a href="/testimonials" className="text-amber-400 hover:text-amber-300 ml-2">
-                More testimonials →
+          {/* Deliberately NOT the Kevin Duffy quote used on the lifting pages.
+              It is a genuine testimonial about lift plan appraisal, which makes
+              it the wrong proof on a page arguing that we cover every trade —
+              it would quietly undercut the whole argument. Replaced with a
+              factual credentials panel until a client gives us a testimonial
+              about non-lifting RAMS work. Do not substitute an invented quote. */}
+          <div className="mb-8 bg-slate-800/40 border-l-4 border-amber-400 rounded-r-2xl p-6">
+            <p className="text-white font-semibold mb-4">What stands behind the document</p>
+            <ul className="grid sm:grid-cols-2 gap-3 text-gray-300 text-sm">
+              {[
+                'NEBOSH National Diploma in Occupational Health & Safety',
+                'CertIOSH — IOSH chartered-track grade',
+                'MIIRSM — International Institute of Risk & Safety Management',
+                '35 years in UK construction, including as a contracts manager',
+                'CPCS A61 Appointed Person for the lifting element',
+                'Constructionline Gold member',
+              ].map((c) => (
+                <li key={c} className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+                  <span>{c}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-gray-400 text-sm mt-4">
+              Documents are reviewed on behalf of tier 1 contractors as well as written for
+              subcontractors — the standard applied is the same in both directions.{' '}
+              <a href="/testimonials" className="text-amber-400 hover:text-amber-300">
+                Client testimonials →
               </a>
-            </figcaption>
-          </figure>
+            </p>
+          </div>
           <InlineQuoteForm
             serviceName="Method Statements & RAMS"
             heading="Send us your RAMS for a same-day quote"

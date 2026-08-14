@@ -59,7 +59,7 @@ export default function LiftCheckFlow() {
         <div className={`${card()} border-amber-200`} style={{ animationDelay: '0.3s' }}>
           <ShieldCheck className={`w-6 h-6 text-amber-500 ${inView ? 'lc-pulse-on' : ''}`} aria-hidden="true" />
           <p className="text-xs mt-3 mb-1 text-amber-600">Step 2</p>
-          <p className="text-slate-900 font-medium leading-tight">17-point review</p>
+          <p className="text-slate-900 font-medium leading-tight">18-point review</p>
           <p className="text-slate-600 text-sm mt-1">LOLER 1998 · BS 7121 · ISO 10567</p>
         </div>
 

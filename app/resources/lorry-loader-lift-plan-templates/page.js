@@ -37,7 +37,7 @@ export default function LorryLoaderTemplatesPage() {
           <p className="text-xl text-slate-300 max-w-3xl mb-8">
             A universal lorry loader lift plan template that scales from Basic through Intermediate to
             Complex lifts. Written by a CPCS Appointed Person with 35+ years of construction experience
-            and graded against a 17-point lift plan review covering BS 7121-1, BS 7121-4, LOLER 1998,
+            and graded against a 18-point lift plan review covering BS 7121-1, BS 7121-4, LOLER 1998,
             ALLMI and CDM 2015. Download, customise, and use on your projects — completely free.
           </p>
           <div className="flex flex-wrap gap-4">
@@ -68,7 +68,7 @@ export default function LorryLoaderTemplatesPage() {
             against actual ground bearing data, ALLMI Lift Plan Calculator integration, lorry-loader-
             specific hazards (truck overturn, jib stowage, kerbside delivery), and BS 7121-4 — the
             standard that actually applies. This template has been written from a clean sheet against
-            those requirements and graded against a 17-point review. For the full background on
+            those requirements and graded against a 18-point review. For the full background on
             when a plan is required and how lorry loader operations are planned, see our{' '}
             <Link href="/blog/lorry-loader-lift-plans-guide" className="text-amber-400 hover:text-amber-300 underline">
               complete guide to lorry loader lift plans
@@ -299,7 +299,7 @@ export default function LorryLoaderTemplatesPage() {
               For lifts where the ALLMI calculator is not used, Section 6.3 captures the chart-lookup
               working manually — capacity figure, row / column reference, rigging weight, total
               suspended load, and utilisation percentage. Either way, the figures sit in one consistent
-              format that a 17-point reviewer can audit in a single pass.
+              format that a 18-point reviewer can audit in a single pass.
             </p>
           </div>
         </div>

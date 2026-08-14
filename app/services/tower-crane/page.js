@@ -282,8 +282,8 @@ export default function TowerCranePage() {
       body: 'Specific lift plans from your trades and lift suppliers are checked against BS 7121-1, ISO 10567 and your generic site plan envelope — no rubber-stamping.',
     },
     {
-      title: '17-point review methodology',
-      body: 'Every plan we sign off is run through our 17-point review covering load data, crane configuration, ground bearing, accessories and rescue arrangements.',
+      title: '18-point review methodology',
+      body: 'Every plan we sign off is run through our 18-point review covering load data, crane configuration, ground bearing, accessories and rescue arrangements.',
     },
     {
       title: 'On-call, not a queue',

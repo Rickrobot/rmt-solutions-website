@@ -309,7 +309,7 @@ export default function LiftPlanCheckingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">What we review</h2>
           <p className="text-lg text-slate-600 mb-12 max-w-3xl">
-            Our review runs the full 17-point methodology against BS 7121, LOLER 1998, ISO 10567
+            Our review runs the full 18-point methodology against BS 7121, LOLER 1998, ISO 10567
             and the project&apos;s own standing rules. Every check returns a written finding.
           </p>
 
@@ -447,7 +447,7 @@ export default function LiftPlanCheckingPage() {
               {
                 step: '2',
                 title: 'Review',
-                desc: 'Our CPCS A61 Appointed Person runs the full 17-point methodology against BS 7121, LOLER and project-specific rules.',
+                desc: 'Our CPCS A61 Appointed Person runs the full 18-point methodology against BS 7121, LOLER and project-specific rules.',
                 badge: 'Same day',
               },
               {
@@ -688,7 +688,7 @@ export default function LiftPlanCheckingPage() {
                 desc: 'Construction-specific NEBOSH National Diploma, CertIOSH (Certified IOSH member), MIIRSM and TIFSM behind every finding.',
               },
               {
-                title: '17-point methodology',
+                title: '18-point methodology',
                 desc: 'Structured review (P01–P17) against BS 7121, LOLER 1998 and ISO 10567. No misses, no opinion-driven feedback.',
               },
               {
