@@ -15,6 +15,7 @@ export default function Header() {
     { name: 'Lift Plan Writing', href: '/services/lift-plans' },
     { name: 'Same Day & Urgent Lift Plans', href: '/services/urgent-lift-plans' },
     { name: 'Lift Plan Checking', href: '/services/lift-plan-checking' },
+    { name: 'Method Statements & RAMS', href: '/services/method-statements-rams' },
     { name: 'Excavator Lift Plans', href: '/services/excavator-lift-plans' },
     { name: 'Telehandler Lift Plans', href: '/services/telehandler-lift-plans' },
     { name: 'Lorry Loader Lift Plans', href: '/services/lorry-loader-lift-plans' },

@@ -32,6 +32,10 @@ const ALL_SERVICES = {
   // 'lift-plan-review' removed (Jul 2026 SEO review, fix #5) — the URL 301s to
   // lift-plan-checking, so linking to it from the related-services block sent
   // equity through a redirect on every service page that used it.
+  'method-statements-rams': {
+    title: 'Method Statements & RAMS',
+    description: 'Bespoke risk assessments and method statements written to pass principal contractor review. Rejected RAMS rewritten and supported through to acceptance.',
+  },
   'lifting-operations-audit': {
     title: 'Lifting Operations Audit',
     description: 'Site-based compliance audit covering plans, equipment certificates, supervision, and operator competence. 8-weekly cycle available.',
@@ -78,12 +82,15 @@ const ALL_SERVICES = {
 // — by equipment type, by buyer journey, or by complementary deliverable.
 const RELATED_MAP = {
   'appointed-person':          ['lift-plans', 'lift-plan-checking', 'urgent-lift-plans', 'tower-crane'],
-  'lift-plans':                ['appointed-person', 'lift-plan-checking', 'urgent-lift-plans', 'excavator-lift-plans'],
+  'lift-plans':                ['appointed-person', 'lift-plan-checking', 'method-statements-rams', 'excavator-lift-plans'],
   'urgent-lift-plans':         ['lift-plans', 'appointed-person', 'lift-plan-checking', 'excavator-lift-plans'],
-  'lift-plan-checking':        ['appointed-person', 'lift-plans', 'lifting-operations-audit', 'tower-crane'],
+  'lift-plan-checking':        ['appointed-person', 'lift-plans', 'method-statements-rams', 'lifting-operations-audit'],
+  // Rejection-recovery RAMS service (Aug 2026). Sits alongside lift plan
+  // checking as the same review standard applied to the wider document set.
+  'method-statements-rams':    ['lift-plan-checking', 'lift-plans', 'steel-erection', 'appointed-person'],
   'lifting-operations-audit':  ['tower-crane', 'lift-plan-checking', 'appointed-person'],
   'tower-crane':               ['appointed-person', 'lifting-operations-audit', 'mobile-crane-lift-plans', 'steel-erection'],
-  'steel-erection':            ['tandem-lift-plans', 'tower-crane', 'mobile-crane-lift-plans'],
+  'steel-erection':            ['tandem-lift-plans', 'tower-crane', 'method-statements-rams'],
   'tandem-lift-plans':         ['steel-erection', 'mobile-crane-lift-plans', 'lift-plans', 'appointed-person'],
   'excavator-lift-plans':      ['lift-plans', 'telehandler-lift-plans', 'lift-plan-checking'],
   'telehandler-lift-plans':    ['excavator-lift-plans', 'lorry-loader-lift-plans', 'lift-plans'],

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Wrench, Phone, ArrowRight, CheckCircle, ClipboardCheck, Search, ShieldCheck, Building2, Plane, Layers } from 'lucide-react'
+import { Wrench, Phone, ArrowRight, CheckCircle, ClipboardCheck, Search, ShieldCheck, Building2, Plane, Layers, FileText } from 'lucide-react'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 
 // Services hub page — parent node for every /services/* leaf route.
@@ -53,6 +53,14 @@ const SERVICES = [
     category: 'Independent review',
     blurb:
       'Independent CPCS Appointed Person review of subcontractor lift plans. LOLER and BS 7121 check, Category A or B determination, clear written findings.',
+  },
+  {
+    slug: 'method-statements-rams',
+    name: 'Method Statements & RAMS',
+    icon: FileText,
+    category: 'Independent review',
+    blurb:
+      'Bespoke risk assessments and method statements written to pass principal contractor review. Rejected RAMS diagnosed, rewritten and supported through to acceptance.',
   },
   // 'lift-plan-review' removed (Jul 2026 SEO review, fix #5). That URL has
   // 301'd to /services/lift-plan-checking since the two pages were merged, so
@@ -343,7 +351,7 @@ export default function ServicesHub() {
             <div className="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700/50 rounded-2xl p-8">
               <h3 className="font-display text-2xl font-bold text-white mb-4">Not sure which service you need?</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                If you have a single lift coming up, you want <Link href="/services/lift-plans" className="text-amber-400 hover:text-amber-300 underline">Lift Plan Writing</Link>. If a subcontractor has sent you a plan and you need a second pair of eyes on it before signing, that is <Link href="/services/lift-plan-checking" className="text-amber-400 hover:text-amber-300 underline">Lift Plan Checking</Link>.
+                If you have a single lift coming up, you want <Link href="/services/lift-plans" className="text-amber-400 hover:text-amber-300 underline">Lift Plan Writing</Link>. If a subcontractor has sent you a plan and you need a second pair of eyes on it before signing, that is <Link href="/services/lift-plan-checking" className="text-amber-400 hover:text-amber-300 underline">Lift Plan Checking</Link>. If the principal contractor has rejected your risk assessment or method statement and the job is held up, that is <Link href="/services/method-statements-rams" className="text-amber-400 hover:text-amber-300 underline">Method Statements &amp; RAMS</Link>.
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
                 For a multi-year project with a tower crane in the ground, you need a <Link href="/services/tower-crane" className="text-amber-400 hover:text-amber-300 underline">Tower Crane Contract</Link> — that bundles the appointed person duty with rolling 8-weekly audits. For a structural steel package, <Link href="/services/steel-erection" className="text-amber-400 hover:text-amber-300 underline">Steel Erection Planning</Link> covers the sequence as well as the picks.

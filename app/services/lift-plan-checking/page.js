@@ -283,6 +283,10 @@ export default function LiftPlanCheckingPage() {
             <Link href="/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected" className="text-amber-600 hover:text-amber-700 underline">
               what gets checked and why plans get rejected
             </Link>
+            . The same review standard is applied to the wider document package through our{' '}
+            <Link href="/services/method-statements-rams" className="text-amber-600 hover:text-amber-700 underline">
+              method statement and RAMS service
+            </Link>
             .
           </p>
         </div>

@@ -51,6 +51,7 @@ const SERVICE_SLUGS = [
   'mobile-crane-lift-plans',
   'overhead-gantry-crane-lift-plans',
   'lift-plan-checking',
+  'method-statements-rams',
   'lifting-operations-audit',
   'lift-plans',
   'urgent-lift-plans',

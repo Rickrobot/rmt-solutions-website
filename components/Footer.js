@@ -14,6 +14,7 @@ export default function Footer() {
     { name: 'Tandem & Multi-Crane Lift Plans', href: '/services/tandem-lift-plans' },
     { name: 'Steel Erection Planning', href: '/services/steel-erection' },
     { name: 'Lift Plan Checking', href: '/services/lift-plan-checking' },
+    { name: 'Method Statements & RAMS', href: '/services/method-statements-rams' },
     { name: 'Lifting Operations Audit', href: '/services/lifting-operations-audit' },
   ]
 
