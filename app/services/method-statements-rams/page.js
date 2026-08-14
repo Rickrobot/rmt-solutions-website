@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Clock, ShieldCheck, FileCheck, PhoneCall, CheckCircle2, X, AlertTriangle, RefreshCw } from 'lucide-react'
+import { Clock, ShieldCheck, FileCheck, PhoneCall, CheckCircle2, X, AlertTriangle, RefreshCw, ArrowRight } from 'lucide-react'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
-import RelatedServices from '@/components/RelatedServices'
+import { TRADES, TRADE_SLUGS } from './trades'
 
 export const metadata = {
   title: 'Method Statement & RAMS Writing UK | Rejected RAMS Fixed',
@@ -50,6 +50,21 @@ const serviceSchema = {
     priceCurrency: 'GBP',
     description:
       'Rejection review with written findings, full bespoke rewrite, or new RAMS written from scratch. Resubmission support included until accepted.',
+  },
+  // Machine-readable statement of trade breadth. Without this the only signal
+  // that the service is not lifting-only is the visible copy — and the rest of
+  // the domain points hard at lifting.
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Method statement and risk assessment writing by trade',
+    itemListElement: TRADE_SLUGS.map((slug) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: `${TRADES[slug].name} Method Statement & Risk Assessment Writing`,
+        url: `https://www.rmtsafetysolutions.com/services/method-statements-rams/${slug}`,
+      },
+    })),
   },
 }
 
@@ -483,35 +498,33 @@ export default function MethodStatementsRamsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Trades and activities covered</h2>
           <p className="text-lg text-slate-600 mb-10 max-w-3xl">
-            Lifting operations are a specialism, not a limit. Method statements and risk assessments
-            are written across construction activities.
+            Lifting operations are a specialism, not a limit. Each trade below has its own page
+            setting out the activities covered, the hazards the assessment must address, the
+            regulations that apply, and the reasons documents in that trade get rejected. If your
+            trade is not listed, it is still covered — call and ask.
           </p>
-          <div className="flex flex-wrap gap-3">
-            {[
-              'Groundworks & excavation',
-              'Demolition & soft strip',
-              'Steel erection',
-              'Cladding & envelope',
-              'Roofing',
-              'Concrete works',
-              'Mechanical & electrical',
-              'Temporary works',
-              'Working at height',
-              'Confined spaces',
-              'Plant & vehicle operations',
-              'Lifting operations',
-              'Site logistics & deliveries',
-              'Scaffolding interface',
-              'Asbestos-aware works',
-              'Fit-out & finishes',
-            ].map((trade) => (
-              <span
-                key={trade}
-                className="bg-slate-100 border border-slate-200 rounded-xl px-4 py-2 text-slate-700 text-sm font-medium"
-              >
-                {trade}
-              </span>
-            ))}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {TRADE_SLUGS.map((slug) => {
+              const t = TRADES[slug]
+              return (
+                <Link
+                  key={slug}
+                  href={`/services/method-statements-rams/${slug}`}
+                  className="group block bg-slate-50 hover:bg-amber-50 border border-slate-200 hover:border-amber-400 rounded-xl p-5 transition"
+                >
+                  <h3 className="font-semibold text-slate-900 group-hover:text-amber-700 mb-1">
+                    {t.name}
+                  </h3>
+                  <p className="text-slate-600 text-sm mb-3 line-clamp-2">
+                    {t.activities.slice(0, 3).join(' · ')}
+                  </p>
+                  <span className="inline-flex items-center text-amber-600 font-semibold text-sm">
+                    Method statements &amp; RAMS
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              )
+            })}
           </div>
           <p className="mt-8 text-slate-700">
             Lifting operations RAMS are produced by a CPCS A61 Appointed Person and can be paired
@@ -654,7 +667,39 @@ export default function MethodStatementsRamsPage() {
         </div>
       </section>
 
-      <RelatedServices currentSlug="method-statements-rams" />
+      {/* Deliberately NOT the shared <RelatedServices> block here. On every other
+          service page that component links to neighbouring lifting services, which
+          is correct — but on this page it would put four lifting links directly
+          under a service whose whole job is to demonstrate that we cover every
+          trade. The trade links below do that work instead; the lifting services
+          are still reachable from the header, footer and the lifting-interface
+          section on each trade page. */}
+      <section className="py-16 bg-slate-900/50 border-t border-slate-800 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl font-bold text-white mb-3">Browse by trade</h2>
+          <p className="text-gray-400 mb-10 max-w-2xl">
+            Every trade page covers the activities, hazards, applicable regulations and the specific
+            reasons documents in that trade get returned by principal contractors.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {TRADE_SLUGS.map((slug) => (
+              <Link
+                key={slug}
+                href={`/services/method-statements-rams/${slug}`}
+                className="group block bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-2xl p-6 transition"
+              >
+                <h3 className="font-display text-lg font-bold text-white mb-2 group-hover:text-amber-400 transition">
+                  {TRADES[slug].name}
+                </h3>
+                <span className="inline-flex items-center text-amber-400 font-semibold text-sm">
+                  View
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="py-16 bg-slate-900 text-white">

@@ -1,3 +1,5 @@
+import { TRADE_SLUGS } from '../services/method-statements-rams/trades';
+
 // Custom sitemap.xml route handler.
 //
 // Why a route handler instead of `app/sitemap.js`?
@@ -185,6 +187,19 @@ function buildSitemapXml() {
         changefreq: 'monthly',
         priority: '0.9',
         images: [HERO_IMAGE],
+      })
+    );
+  }
+
+  // Per-trade RAMS pages. Derived from the TRADES data object so adding a
+  // trade there automatically adds it to the sitemap — no second edit needed.
+  for (const slug of TRADE_SLUGS) {
+    entries.push(
+      buildUrlEntry({
+        loc: `${BASE_URL}/services/method-statements-rams/${slug}`,
+        lastmod: SITE_LAST_UPDATED,
+        changefreq: 'monthly',
+        priority: '0.8',
       })
     );
   }

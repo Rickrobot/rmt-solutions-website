@@ -14,8 +14,27 @@ export default function Footer() {
     { name: 'Tandem & Multi-Crane Lift Plans', href: '/services/tandem-lift-plans' },
     { name: 'Steel Erection Planning', href: '/services/steel-erection' },
     { name: 'Lift Plan Checking', href: '/services/lift-plan-checking' },
-    { name: 'Method Statements & RAMS', href: '/services/method-statements-rams' },
     { name: 'Lifting Operations Audit', href: '/services/lifting-operations-audit' },
+  ]
+
+  // Second service silo (Aug 2026). Kept as a separate labelled column rather
+  // than a fourteenth entry in the lifting list — as one line among thirteen
+  // crane services it read as "lifting company that also does a bit of
+  // paperwork", which is the opposite of what the RAMS service needs to
+  // convey. Two labelled columns make the two silos visible at a glance.
+  const documentationServices = [
+    { name: 'Method Statements & RAMS', href: '/services/method-statements-rams' },
+    { name: 'Groundworks & Excavation', href: '/services/method-statements-rams/groundworks' },
+    { name: 'Demolition & Soft Strip', href: '/services/method-statements-rams/demolition' },
+    { name: 'Roofing & Work at Height', href: '/services/method-statements-rams/roofing-work-at-height' },
+    { name: 'Mechanical & Electrical', href: '/services/method-statements-rams/mechanical-electrical' },
+    { name: 'Concrete & Temporary Works', href: '/services/method-statements-rams/concrete-works' },
+    { name: 'Cladding & Facades', href: '/services/method-statements-rams/cladding-facades' },
+    { name: 'Confined Spaces', href: '/services/method-statements-rams/confined-spaces' },
+    { name: 'Scaffolding', href: '/services/method-statements-rams/scaffolding' },
+    { name: 'Site Logistics', href: '/services/method-statements-rams/site-logistics' },
+    { name: 'Fit-Out & Finishes', href: '/services/method-statements-rams/fit-out-finishes' },
+    { name: 'Plant Operations', href: '/services/method-statements-rams/plant-operations' },
   ]
 
   // Locations linked from the footer. Order: regional flagships first (the
@@ -52,7 +71,8 @@ export default function Footer() {
   return (
     <footer className="bg-slate-950 border-t border-slate-800 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        {/* 5 columns since the services list split into two silos (Aug 2026) */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
@@ -62,15 +82,28 @@ export default function Footer() {
               <span className="text-xl font-display font-bold text-white">RMT Solutions</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Professional lift planning services from a CPCS Appointed Person. LOLER compliant lift plans for contractors across the UK — based in Warrington, working across Manchester, Liverpool and the North West.
+              Lift planning and construction safety documentation from a CPCS Appointed Person with a NEBOSH Diploma. LOLER compliant lift plans, method statements and risk assessments for contractors across the UK — based in Warrington, working across Manchester, Liverpool and the North West.
             </p>
           </div>
 
-          {/* Services */}
+          {/* Services — two labelled silos */}
           <div>
-            <p className="text-white font-display font-semibold mb-6">Lift Planning Services</p>
+            <p className="text-white font-display font-semibold mb-6">Lift Planning</p>
             <ul className="space-y-3 text-gray-400 text-sm">
               {services.map((service) => (
+                <li key={service.name}>
+                  <Link href={service.href} className="hover:text-amber-400 transition">
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-white font-display font-semibold mb-6">Safety Documentation</p>
+            <ul className="space-y-3 text-gray-400 text-sm">
+              {documentationServices.map((service) => (
                 <li key={service.name}>
                   <Link href={service.href} className="hover:text-amber-400 transition">
                     {service.name}
