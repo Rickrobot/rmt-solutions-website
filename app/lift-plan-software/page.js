@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import {
   ArrowRight, CheckCircle2, X, Database, FileCheck, PencilRuler, WifiOff,
@@ -310,6 +311,57 @@ export default function LiftPlanSoftwarePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ----------------------------------------------------------- screens */}
+      <section className="py-24 bg-slate-950 border-t border-slate-800/50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
+            What it looks like
+          </h2>
+          <p className="text-gray-400 text-center max-w-2xl mx-auto mb-14">
+            Screens from the application itself, not a mock-up.
+          </p>
+
+          <figure className="mb-16">
+            <div className="rounded-2xl overflow-hidden border border-slate-700/60 shadow-2xl shadow-black/40">
+              <Image
+                src="/images/liftplan-studio-machine-database.webp"
+                alt="The LiftPlan Studio machine database showing 1,948 lorry loaders, with a Palfinger PK62002 EH-E selected and its rated capacity table of radius, capacity and moment"
+                width={1600}
+                height={1000}
+                className="w-full h-auto"
+              />
+            </div>
+            <figcaption className="text-gray-400 text-sm mt-4 max-w-3xl">
+              <strong className="text-white">The machine database.</strong> 1,948 lorry
+              loaders, 123 of them verified fleet records with full published duty charts
+              and the rest manufacturer reference. Pick a machine and you get its
+              stabiliser spans, column offset, dead weight and the rated capacity at every
+              published radius — the figures a plan has to quote, with the source behind
+              them.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <div className="rounded-2xl overflow-hidden border border-slate-700/60 shadow-2xl shadow-black/40">
+              <Image
+                src="/images/liftplan-studio-loads-catalogue.webp"
+                alt="The LiftPlan Studio loads and tackle catalogue listing welfare units, generators and cabins with weights, dimensions, sail limits, sling lengths and the lifting tackle for each"
+                width={1600}
+                height={1000}
+                className="w-full h-auto"
+              />
+            </div>
+            <figcaption className="text-gray-400 text-sm mt-4 max-w-3xl">
+              <strong className="text-white">Loads and tackle.</strong> 193 units — welfare
+              cabins, toilet blocks, generators, fuel tanks, storage — each with its
+              verified weight, dimensions, sail limit for wind, the sling lengths top and
+              bottom, and the tackle to lift it with. Pick the unit and the schedule of
+              loads fills itself in.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
