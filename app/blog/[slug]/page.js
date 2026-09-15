@@ -244,6 +244,8 @@ const blogPosts = {
       </ul>
       <p>Well-known examples include 3D Lift Plan, Liebherr's Crane Planner and similar manufacturer tools. For mobile crane work on congested sites, this modelling genuinely earns its keep — a clearance problem found on screen is vastly cheaper than one found on the day.</p>
 
+      <p>Lorry loaders are the gap in that list. The crane planners do not cover them and the generic tools do not hold their duty charts, which is why most lorry loader planning is still done in a spreadsheet. We built <a href="/lift-plan-software">LiftPlan Studio</a> for that job specifically: duty charts for more than 1,900 lorry loaders, the ALLMI calculation in full, an 18-point compliance review and an A3 drawing set, issued under your own branding. It is a planning aid in exactly the sense this article means — it does the arithmetic and the paperwork, and it will not sign anything. There is a 14-day trial if you want to put it against a real job.</p>
+
       <h2>What the Software Cannot Do</h2>
       <p>LOLER 1998 Regulation 8 requires every lifting operation to be <strong>planned by a competent person</strong>. The duty attaches to a person, not a product. Software has no idea that:</p>
       <ul>

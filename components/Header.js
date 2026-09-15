@@ -29,6 +29,10 @@ export default function Header() {
   ]
 
   const navigation = [
+    // The software sits first and outside the Services dropdown on purpose: it
+    // is a product, not a service, and somebody looking for lift planning
+    // software will not think to open a menu labelled Services to find it.
+    { name: 'Software', href: '/lift-plan-software' },
     { name: 'Locations', href: '/locations' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Testimonials', href: '/testimonials' },

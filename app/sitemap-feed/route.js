@@ -25,7 +25,7 @@ import { TRADE_SLUGS } from '../services/method-statements-rams/trades';
 //   - Every route listed here MUST exist in the app.
 
 const BASE_URL = 'https://www.rmtsafetysolutions.com';
-const SITE_LAST_UPDATED = '2026-07-08';
+const SITE_LAST_UPDATED = '2026-09-15';
 
 // Canonical images surfaced via the image sitemap extension. These give
 // the listed pages a hard image association in Google Search and make
@@ -43,6 +43,10 @@ const STATIC_ROUTES = [
   { path: '/case-studies', changefreq: 'weekly',  priority: '0.8', images: [HERO_IMAGE] },
   { path: '/testimonials', changefreq: 'monthly', priority: '0.85', images: [OG_IMAGE] },
   { path: '/contact',      changefreq: 'monthly', priority: '0.7', images: [OG_IMAGE] },
+  // LiftPlan Studio. High priority: it is the only page on the site selling a
+  // product rather than time, and it carries its own SoftwareApplication and
+  // FAQPage schema.
+  { path: '/lift-plan-software', changefreq: 'weekly', priority: '0.9', images: [OG_IMAGE] },
 ];
 
 const SERVICE_SLUGS = [

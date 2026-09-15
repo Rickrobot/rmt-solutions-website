@@ -669,6 +669,61 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Software — LiftPlan Studio.
+          Sits after the case studies because it earns more trust once somebody
+          has seen the work it came out of: the product is the method on these
+          jobs, written down. Links to the dedicated page rather than carrying
+          the trial form here, so there is one place the offer is explained and
+          one conversion path to measure. */}
+      <section className="py-24 bg-slate-900 border-y border-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-14 items-center">
+            <div>
+              <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+                New — our own software
+              </span>
+              <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-6">
+                Plan your own lorry loader lifts
+              </h2>
+              <p className="text-gray-300 text-lg mb-5 leading-relaxed">
+                LiftPlan Studio is the method we use on these jobs, written down and made
+                usable: duty charts for more than 1,900 lorry loaders, the ALLMI
+                calculation in full, an 18-point compliance review and a complete pack with
+                A3 drawings, issued under your own branding.
+              </p>
+              <p className="text-gray-400 mb-8 leading-relaxed">
+                Try it on your own jobs for 14 days. No card, nothing to cancel — accounts
+                are set up by hand, usually the same working day.
+              </p>
+              <Link
+                href="/lift-plan-software"
+                className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-7 py-4 rounded-xl font-semibold transition"
+              >
+                See the software and start a trial
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+            <div className="bg-slate-950/60 border border-slate-800 rounded-2xl p-8">
+              <ul className="space-y-4">
+                {[
+                  'More than 1,900 lorry loaders, with their published duty charts',
+                  'The ALLMI method in full, every step shown',
+                  'A3 general arrangement, plan and rigging drawings to scale',
+                  '18-point compliance review before you issue, not after',
+                  'Works offline, in a compound with no signal',
+                  'Your branding on every document and every title block',
+                ].map((line) => (
+                  <li key={line} className="flex items-start gap-3 text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+                    <span>{line}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Homepage FAQ — visible.
           Fix #2 / #7, Jul 2026 SEO review. Rendered from faqJsonLd so the
           structured data emitted in the <head> and the copy on the page can
