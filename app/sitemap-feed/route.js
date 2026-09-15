@@ -131,7 +131,7 @@ const BLOG_POSTS = [
   { slug: 'cpcs-appointed-person-guide',                                      date: '2026-07-08' },
   { slug: 'common-lift-planning-mistakes',                                    date: '2026-05-22' },
   { slug: 'telehandler-lift-plans-complete-guide',                            date: '2026-06-11' },
-  { slug: 'lorry-loader-lift-plans-guide',                                    date: '2026-06-11' },
+  { slug: 'lorry-loader-lift-plans-guide',                                    date: '2026-09-15' },
   { slug: 'lift-plan-checking-what-gets-checked-and-why-plans-get-rejected',  date: '2026-02-22' },
   { slug: 'overhead-crane-lift-plan-guide',                                   date: '2026-05-22' },
 ];
