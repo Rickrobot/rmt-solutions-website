@@ -799,6 +799,8 @@ const blogPosts = {
       <p>"Critical lift" is a related term — used widely in industry and on some sites — for a lift where a failure would have serious consequences: high-value or irreplaceable loads, lifts over occupied areas or live plant, or operations where an incident would cause major harm or disruption. In UK practice a critical lift is generally treated as a complex lift and planned to the same high standard. The label matters less than the substance: identify what could go wrong, and plan to control it.</p>
 
       <h2>How the category changes the planning required</h2>
+      <p>If you would rather be walked through it than read it, the <a href="/resources/lift-plan-decision-tool">lift plan decision tool</a> asks the same three questions and gives you the category, with the ten complex-lift triggers set out as you go.</p>
+
       <p>The category is not bureaucracy — it sets the level of competence and detail the law expects. As a lift moves from basic to standard to complex, the plan becomes more detailed, the competence required to produce it rises, and the supervision on site increases. Getting the category wrong in either direction is a problem: under-plan a complex lift and you create real danger; over-plan a basic one and you waste time. A guide on <a href="/blog/crane-lift-plan-requirements">what a crane lift plan must contain</a> shows how the detail scales, and our guide on <a href="/blog/when-do-you-need-lift-plan">when you need a lift plan</a> covers the threshold question.</p>
 
       <h2>Who decides the lift category?</h2>
@@ -1541,6 +1543,7 @@ const blogPosts = {
         blurb:
           'Every question on this page as a single A4 flowchart — the LOLER Reg. 8 starting point, the ten BS 7121-1 complex-lift triggers, and the basic / standard / complex outcome. Print it and pin it up in the site cabin.',
       })}
+      <p><strong>Want the answer now?</strong> The same flowchart is on this site as a <a href="/resources/lift-plan-decision-tool">lift plan decision tool</a> — three questions, and it tells you whether yours is a basic, standard or complex lift and what each one requires. It takes about a minute and there is no sign-up.</p>
       <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 my-8">
         <p class="text-gray-300 mb-0">Short on time? If the lift is on the programme and you need the paperwork to stand up to a principal contractor, we write it for you. <a href="/services/lift-plans">Lift planning services</a> from a CPCS A61 Appointed Person — fixed price from £200 + VAT, delivered in 24–48 hours.</p>
         <p class="mt-4 mb-0"><a href="/contact" class="text-amber-400 font-semibold">Get a quote — reply within 4 working hours →</a></p>

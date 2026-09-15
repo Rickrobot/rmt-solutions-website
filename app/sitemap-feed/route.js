@@ -78,6 +78,10 @@ const RESOURCE_ROUTES = [
   // Generic template page (Jun 2026) — targets the head "lift plan
   // template" query cluster; priority above the equipment-specific pages.
   { path: '/resources/lift-plan-templates',                priority: '0.8' },
+  /* A tool rather than an article, and the only page on the site that answers
+     the "do I need one" query with something an AI Overview cannot hand over.
+     Priority matches the templates for that reason. */
+  { path: '/resources/lift-plan-decision-tool',            priority: '0.8' },
   // Competitor battle plan pages (Jun 2026): GC14 captures the CITB-form
   // demand currently held by paywalled form-mills; the mobile crane page
   // fills the one equipment gap in the template hub.

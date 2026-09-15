@@ -187,6 +187,31 @@ export default function ResourcesPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {/* First card on purpose: somebody who does not yet know which
+                template they need has to pick one from this grid, and this is
+                the only thing on the page that answers that for them. */}
+            <Link
+              href="/resources/lift-plan-decision-tool"
+              className="group bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 hover:border-amber-400 rounded-2xl p-8 transition"
+            >
+              <div className="w-14 h-14 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-5">
+                <HelpCircle className="w-7 h-7 text-amber-400" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-white group-hover:text-amber-400 transition mb-3">
+                Do I Need a Lift Plan?
+              </h3>
+              <p className="text-gray-400 leading-relaxed mb-5">
+                A free decision tool. Answer three questions and it tells you
+                whether the operation is a basic, standard or complex lift under
+                LOLER 1998 and BS 7121-1, and what each one requires. No
+                sign-up, nothing stored.
+              </p>
+              <span className="inline-flex items-center text-amber-400 font-semibold">
+                Start the tool
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+              </span>
+            </Link>
+
             <Link
               href="/resources/lift-plan-templates"
               className="group bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 hover:border-amber-400 rounded-2xl p-8 transition"
