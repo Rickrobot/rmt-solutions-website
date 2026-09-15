@@ -8,17 +8,30 @@ import TrialRequestForm from '@/components/TrialRequestForm'
 
 const APP_URL = 'https://liftplanstudio.com'
 
+/*
+ * Titles: layout.js appends " | RMT Solutions" (16 chars) and its own comment
+ * holds every page to 60 including that. 44 + 16 = 60.
+ *
+ * HIAB leads because Search Console says so rather than because it reads well.
+ * Over the period exported, "hiab" queries took 10 clicks from 562 impressions
+ * at positions 5-8; "lorry loader" queries took ZERO clicks from 149, including
+ * 103 impressions at position 2.74 for "lorry loader lift plan" — ranking
+ * second and converting nobody. Buyers type HIAB. Both terms are carried
+ * because the industry uses both: ALLMI's own training is "Lorry Loader / Hiab".
+ */
 export const metadata = {
-  title: 'Lift Plan Software for Lorry Loaders | LiftPlan Studio | 14-Day Trial',
+  title: 'HIAB & Lorry Loader Lift Plan Software',
+  /* 155 characters. Google truncates a description at about that, and the
+     14-day trial is the part that earns the click, so it must survive. */
   description:
-    'Lift planning software for lorry loaders, built by a CPCS A61 Appointed Person. Duty charts, the ALLMI method, an 18-point compliance review and a full A3 drawing pack. 14-day trial, no card.',
+    'Lift plan software for HIABs and lorry loaders. Duty charts for 1,900+ machines, the ALLMI method, an 18-point review and A3 drawings. 14-day trial, no card.',
   keywords:
-    'lift plan software, lift planning software, lorry loader lift plan software, HIAB lift plan software, ALLMI lift plan software, lift plan generator, lifting plan software UK, crane lift planning software, LOLER lift plan software, appointed person software',
+    'hiab lift plan software, lorry loader lift plan software, lift plan software, lift planning software, hiab lifting plan, lorry loader lift plan, ALLMI lift plan software, lift plan generator, lifting plan software UK, LOLER lift plan software',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/lift-plan-software',
   },
   openGraph: {
-    title: 'Lift Plan Software for Lorry Loaders | LiftPlan Studio',
+    title: 'HIAB & Lorry Loader Lift Plan Software | LiftPlan Studio',
     description:
       'Duty charts, the ALLMI method, an 18-point compliance review and a full A3 drawing pack. Written by a working Appointed Person. 14-day trial, no card.',
     url: 'https://www.rmtsafetysolutions.com/lift-plan-software',
@@ -111,6 +124,14 @@ const PAGE_FAQS = [
   {
     q: 'What do I get at the end of a plan?',
     a: 'A complete pack: cover, job details, the appliance and its duties, the schedule of loads, rigging, ground bearing and mats, the method and sequence of operations, a 5 x 5 risk assessment, the 18-point compliance review, pre-lift checks and a briefing and attendance sheet — plus A3 general arrangement, plan and rigging drawings. It prints to PDF and every sheet carries the document number, revision and issue reference.',
+  },
+  {
+    q: 'I just want a HIAB lift plan template — is this that?',
+    a: 'No, and it is worth being clear about the difference. A template is a blank document you fill in yourself, and there is a free one on this site if that is all you need. This produces the finished plan: you pick the machine and it brings its published duty chart with it, you pick the loads and the schedule fills itself in, and the ALLMI calculation, the risk assessment, the drawings and the 18-point review come out the other end as one pack under your own branding. Most people who start with a template end up wanting this, because the template does not know what a PK 62002 lifts at 7 m.',
+  },
+  {
+    q: 'Does it cover HIABs, or only machines badged as lorry loaders?',
+    a: 'Both — they are the same machine. HIAB is a manufacturer whose name became the everyday word for a loader crane, in the way Hoover did for vacuum cleaners. The database holds more than 1,900 of them across Fassi, Palfinger, HIAB, Effer, Atlas, Kennis, Maxilift and Cormach, so whichever name is on the door of the cab, the machine is in there.',
   },
   {
     q: 'What does it cost after the trial?',
@@ -207,7 +228,7 @@ export default function LiftPlanSoftwarePage() {
                 14-day trial · no card
               </div>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                Lift planning software for lorry loaders
+                Lift plan software for HIABs and lorry loaders
               </h1>
               <p className="text-xl text-gray-300 mb-6 leading-relaxed">
                 LiftPlan Studio does the duty chart, the ALLMI calculation, the risk

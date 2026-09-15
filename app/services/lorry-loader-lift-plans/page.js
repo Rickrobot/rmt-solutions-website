@@ -352,6 +352,32 @@ export default function LorryLoaderLiftPlansPage() {
         </div>
       </section>
 
+      {/* The most topically relevant internal link on the site: this page ranks
+          for "lorry loader lift plan" and "hiab lift plan", and the software is
+          the self-serve version of the service it sells. */}
+      <section className="py-14 bg-slate-950 border-t border-slate-800/50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-7 sm:p-8">
+            <h2 className="font-display text-xl sm:text-2xl font-bold text-white mb-3">
+              Or plan them yourself
+            </h2>
+            <p className="text-gray-400 leading-relaxed mb-5">
+              We also make the software we use. LiftPlan Studio holds published duty charts
+              for more than 1,900 HIABs and lorry loaders, works the ALLMI calculation in
+              full, runs an 18-point compliance review and produces the whole pack with A3
+              drawings under your own branding. 14-day trial, no card.
+            </p>
+            <Link
+              href="/lift-plan-software"
+              className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold"
+            >
+              See the lift plan software
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <RelatedServices currentSlug="lorry-loader-lift-plans" />
 
       {/* CTA */}
