@@ -238,7 +238,7 @@ export default function LiftPlanSoftwarePage() {
             </div>
 
             <div id="trial" className="scroll-mt-28">
-              <TrialRequestForm />
+              <TrialRequestForm idPrefix="trial-hero" />
             </div>
           </div>
         </div>
@@ -424,7 +424,7 @@ export default function LiftPlanSoftwarePage() {
               see whether the pack that comes out is one you would put your name to.
             </p>
           </div>
-          <TrialRequestForm heading="Request your 14-day trial" />
+          <TrialRequestForm idPrefix="trial-foot" heading="Request your 14-day trial" />
         </div>
       </section>
     </div>

@@ -31,7 +31,18 @@ const WEB3FORMS_ACCESS_KEY = 'ab804a58-66f9-44c4-8ad3-a2b6a2895839'
  * software trials and consultancy leads can be told apart in reporting rather
  * than landing in one undifferentiated conversion count.
  */
-export default function TrialRequestForm({ heading = 'Request your 14-day trial' }) {
+export default function TrialRequestForm({
+  heading = 'Request your 14-day trial',
+  /**
+   * Distinguishes this instance's element ids from any other on the same page.
+   * The page renders the form twice — once in the hero, once at the foot — and
+   * without this both copies emit the same ids. Duplicate ids
+   * make every `<label for>` ambiguous, so clicking a label can focus the other
+   * form's field, and a screen reader is given two different controls with the
+   * same name. Same reason InlineQuoteForm suffixes its ids with serviceName.
+   */
+  idPrefix = 'trial',
+}) {
   const [formData, setFormData] = useState({
     name: '', company: '', email: '', phone: '', role: '', machines: '', company_website: '',
   })
@@ -145,10 +156,10 @@ export default function TrialRequestForm({ heading = 'Request your 14-day trial'
           aria-hidden="true"
           style={{ position: 'absolute', left: '-9999px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden' }}
         >
-          <label htmlFor="trial-company-website">Company website (leave blank)</label>
+          <label htmlFor={`${idPrefix}-company-website`}>Company website (leave blank)</label>
           <input
             type="text"
-            id="trial-company-website"
+            id={`${idPrefix}-company-website`}
             name="company_website"
             tabIndex={-1}
             autoComplete="off"
@@ -159,14 +170,14 @@ export default function TrialRequestForm({ heading = 'Request your 14-day trial'
 
         <div className="grid md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="trial-name" className="sr-only">Your name</label>
-            <input type="text" id="trial-name" name="name" value={formData.name}
+            <label htmlFor={`${idPrefix}-name`} className="sr-only">Your name</label>
+            <input type="text" id={`${idPrefix}-name`} name="name" value={formData.name}
               onChange={handleChange} required autoComplete="name"
               placeholder="Your name *" className={field} />
           </div>
           <div>
-            <label htmlFor="trial-company" className="sr-only">Company</label>
-            <input type="text" id="trial-company" name="company" value={formData.company}
+            <label htmlFor={`${idPrefix}-company`} className="sr-only">Company</label>
+            <input type="text" id={`${idPrefix}-company`} name="company" value={formData.company}
               onChange={handleChange} required autoComplete="organization"
               placeholder="Company *" className={field} />
           </div>
@@ -174,22 +185,22 @@ export default function TrialRequestForm({ heading = 'Request your 14-day trial'
 
         <div className="grid md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="trial-email" className="sr-only">Work email address</label>
-            <input type="email" id="trial-email" name="email" value={formData.email}
+            <label htmlFor={`${idPrefix}-email`} className="sr-only">Work email address</label>
+            <input type="email" id={`${idPrefix}-email`} name="email" value={formData.email}
               onChange={handleChange} required autoComplete="email"
               placeholder="Work email *" className={field} />
           </div>
           <div>
-            <label htmlFor="trial-phone" className="sr-only">Phone</label>
-            <input type="tel" id="trial-phone" name="phone" value={formData.phone}
+            <label htmlFor={`${idPrefix}-phone`} className="sr-only">Phone</label>
+            <input type="tel" id={`${idPrefix}-phone`} name="phone" value={formData.phone}
               onChange={handleChange} autoComplete="tel"
               placeholder="Phone (optional)" className={field} />
           </div>
         </div>
 
         <div>
-          <label htmlFor="trial-role" className="sr-only">Your role</label>
-          <select id="trial-role" name="role" value={formData.role} onChange={handleChange}
+          <label htmlFor={`${idPrefix}-role`} className="sr-only">Your role</label>
+          <select id={`${idPrefix}-role`} name="role" value={formData.role} onChange={handleChange}
             required className={field}>
             <option value="">Your role *</option>
             <option>Appointed Person</option>
@@ -203,8 +214,8 @@ export default function TrialRequestForm({ heading = 'Request your 14-day trial'
         </div>
 
         <div>
-          <label htmlFor="trial-machines" className="sr-only">What you lift and what with</label>
-          <textarea id="trial-machines" name="machines" value={formData.machines}
+          <label htmlFor={`${idPrefix}-machines`} className="sr-only">What you lift and what with</label>
+          <textarea id={`${idPrefix}-machines`} name="machines" value={formData.machines}
             onChange={handleChange} rows={3}
             placeholder="What do you lift, and on what? (e.g. cabins and welfare units, Fassi F235 and a Palfinger PK 48002) — optional, but it lets me have your machines ready"
             className={`${field} resize-none`} />
