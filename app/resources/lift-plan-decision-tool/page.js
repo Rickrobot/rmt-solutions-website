@@ -264,7 +264,10 @@ export default function LiftPlanDecisionToolPage() {
                 key={f.q}
                 className="group bg-slate-900/60 border border-slate-800 rounded-2xl p-5 open:border-slate-700"
               >
-                <summary className="text-white font-semibold cursor-pointer list-none flex items-start gap-3 min-h-[28px]">
+                {/* min-h-11 is 44px. These are the only tappable things on the
+                    page that were under it on a phone — a 28px accordion row
+                    is a miss waiting to happen with a gloved thumb. */}
+                <summary className="text-white font-semibold cursor-pointer list-none flex items-start gap-3 min-h-11 py-1.5">
                   <span className="text-amber-400 flex-none transition-transform group-open:rotate-90" aria-hidden="true">
                     ▸
                   </span>
