@@ -22,7 +22,9 @@ export const metadata = {
     description:
       'Duty charts, the ALLMI method, an 18-point compliance review and a full A3 drawing pack. Written by a working Appointed Person. 14-day trial, no card.',
     url: 'https://www.rmtsafetysolutions.com/lift-plan-software',
-    images: ['/images/og-lift-planning.jpg'],
+    /* The loader crane rather than the generic site image: this page is about
+       one machine type, and the share card should say which. */
+    images: ['/images/lorry-loader-on-site.webp'],
     siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
@@ -242,6 +244,40 @@ export default function LiftPlanSoftwarePage() {
               <TrialRequestForm idPrefix="trial-hero" />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------ the machine */}
+      <section className="bg-slate-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <figure className="relative rounded-2xl overflow-hidden border border-slate-800">
+            <Image
+              src="/images/lorry-loader-on-site.webp"
+              alt="A lorry loader working on a construction site — knuckle-boom crane with a brick grab, stabilisers deployed, and a banksman in hi-vis and hard hat standing clear of the load"
+              width={1920}
+              height={960}
+              priority
+              className="w-full h-auto"
+            />
+            {/* Below the picture on a phone, over it from tablet up.
+                Overlaid at every width the caption fills most of a 2:1 image on
+                a 400 px screen and the heading lands on bright sky, which is
+                both unreadable and hides the boom — the part of the photograph
+                doing the work. The gradient only exists for the overlaid case. */}
+            <figcaption
+              className="p-5 bg-slate-900/60 md:bg-transparent md:p-8 md:absolute md:inset-x-0 md:bottom-0
+                         md:bg-gradient-to-t md:from-slate-950 md:via-slate-950/80 md:to-transparent"
+            >
+              <p className="text-white font-display text-lg sm:text-xl font-bold max-w-3xl">
+                This is the machine the software plans for.
+              </p>
+              <p className="text-gray-300 text-sm sm:text-base max-w-3xl mt-1">
+                Loader cranes do most of the lifting on a UK site and get the least
+                planning attention of anything that lifts. The duty chart is on the
+                machine, the plan is usually in a spreadsheet, and the two rarely meet.
+              </p>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
