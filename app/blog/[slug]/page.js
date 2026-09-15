@@ -2458,6 +2458,8 @@ const blogPosts = {
 
       <p>Lorry loader capacity reduces dramatically with radius. A machine rated at 10 tonne-metres might lift 2,500kg at 4 metres radius but only 1,000kg at 10 metres. The plan must check capacity at the actual maximum radius required, not at minimum radius.</p>
 
+      <p>Reading that figure off the correct duty chart is where most of the planning time goes and where most of the errors are made. Our <a href="/lift-plan-software">HIAB and lorry loader lift plan software</a> holds published duty charts for more than 1,900 loader cranes, so selecting the machine brings its rated capacity table with it and the radius check is made against the manufacturer’s own published figures rather than a remembered one.</p>
+
       <p>Where multiple items are being offloaded to different positions, the plan should check capacity for the most onerous lift \u2014 typically the heaviest item at the greatest radius.</p>
 
       <h3>Ground Bearing Pressure</h3>
@@ -2536,7 +2538,7 @@ const blogPosts = {
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need a Lorry Loader Lift Plan?</h3>
-        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant <a href="/services/lorry-loader-lift-plans">lorry loader lift plans</a> for all types of truck-mounted crane operations. Fast turnaround from a CPCS Appointed Person with 35 years of experience. Prefer to draft your own? Start from our <a href="/resources/lorry-loader-lift-plan-templates">free lorry loader lift plan template</a>.</p>
+        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant <a href="/services/lorry-loader-lift-plans">lorry loader lift plans</a> for all types of truck-mounted crane operations. Fast turnaround from a CPCS Appointed Person with 35 years of experience. Prefer to draft your own? Start from our <a href="/resources/lorry-loader-lift-plan-templates">free lorry loader lift plan template</a>, or produce the whole pack yourself in our <a href="/lift-plan-software">HIAB and lorry loader lift plan software</a> — free to try for 14 days.</p>
         <a href="/contact" class="btn-primary inline-block">Get a Quote</a>
       </div>
     `,

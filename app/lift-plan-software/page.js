@@ -13,11 +13,18 @@ const APP_URL = 'https://liftplanstudio.com'
  * holds every page to 60 including that. 44 + 16 = 60.
  *
  * HIAB leads because Search Console says so rather than because it reads well.
- * Over the period exported, "hiab" queries took 10 clicks from 562 impressions
- * at positions 5-8; "lorry loader" queries took ZERO clicks from 149, including
- * 103 impressions at position 2.74 for "lorry loader lift plan" — ranking
- * second and converting nobody. Buyers type HIAB. Both terms are carried
- * because the industry uses both: ALLMI's own training is "Lorry Loader / Hiab".
+ * The clearest pair in the September 2026 export, three months to the 13th:
+ *
+ *   "hiab lift plan"        256 impressions, position 2.12, 10 clicks
+ *   "lorry loader lift plan" 233 impressions, position 1.92,  1 click
+ *
+ * Same rank, same volume, ten times the clicks. "lorry loader" appears to be
+ * searched mostly by people studying for the CPCS A36 card; HIAB is what a
+ * contractor with a job to plan types. Both terms are carried because the
+ * industry uses both: ALLMI's own training is "Lorry Loader / Hiab".
+ *
+ * "lifting plan software" (190 impressions) also outweighs "lift plan
+ * software" (107), so both phrasings appear in the copy below.
  */
 export const metadata = {
   title: 'HIAB & Lorry Loader Lift Plan Software',
@@ -231,10 +238,10 @@ export default function LiftPlanSoftwarePage() {
                 Lift plan software for HIABs and lorry loaders
               </h1>
               <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-                LiftPlan Studio does the duty chart, the ALLMI calculation, the risk
-                assessment, the drawings and the whole document pack — and it is written
-                the way a lift plan has to be defended, by somebody who writes them for a
-                living.
+                LiftPlan Studio is lifting plan software that does the duty chart, the
+                ALLMI calculation, the risk assessment, the drawings and the whole
+                document pack — and it is written the way a lift plan has to be
+                defended, by somebody who writes them for a living.
               </p>
               <p className="text-gray-400 mb-8 leading-relaxed">
                 Built by a CPCS A61 Appointed Person out of 35 years of doing this on
@@ -349,7 +356,7 @@ export default function LiftPlanSoftwarePage() {
       <section className="py-24 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
-            What it does
+            What the lifting plan software does
           </h2>
           <p className="text-gray-400 text-center max-w-2xl mx-auto mb-14">
             One seat, unlimited plans, unlimited machines.
