@@ -456,6 +456,38 @@ export default function ResourcesPage() {
               </span>
             </a>
           </div>
+
+          {/* The software, placed after the downloads rather than among them.
+              This page is the site's second-biggest by clicks (197 a quarter,
+              9,340 impressions) and carried no link to the product at all —
+              every visitor here has already told us they need lift plan
+              paperwork, which makes it the best-qualified audience on the
+              site. A band rather than another card in the grid: the grid's
+              job is to give templates away, and a product tile sitting in it
+              reads as a bait-and-switch. */}
+          <div className="mt-14 max-w-4xl mx-auto bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 rounded-3xl p-8 sm:p-10 text-center">
+            <p className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-3">
+              If you fill one of these in every week
+            </p>
+            <h3 className="font-display text-2xl sm:text-3xl font-bold text-white mb-4">
+              There is software that fills it in for you
+            </h3>
+            <p className="text-gray-400 leading-relaxed mb-7 max-w-2xl mx-auto">
+              A template is a blank document — it does not know what a Palfinger
+              PK 62002 lifts at 7 m. LiftPlan Studio holds the published duty
+              charts for more than 1,900 HIABs and lorry loaders, works the ALLMI
+              calculation, runs an 18-point compliance review and issues the whole
+              pack with A3 drawings under your own branding. Lorry loaders only —
+              it says so plainly rather than pretending otherwise.
+            </p>
+            <Link
+              href="/lift-plan-software"
+              className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-7 py-4 rounded-xl font-semibold transition"
+            >
+              See the lift plan software — 14-day trial
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 

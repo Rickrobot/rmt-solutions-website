@@ -54,6 +54,26 @@ export default function LorryLoaderTemplatesPage() {
               Download Preview (.pdf)
             </a>
           </div>
+
+          {/* One line, directly under the download buttons.
+              The full software section further down this page sits at about
+              80% of its length, behind the download CTA — which means anyone
+              who came for the template has it and has gone long before they
+              reach it. This is the same offer placed where it is actually
+              seen. Deliberately a text link and not a second button: the
+              template download is what this page promised, and the promise
+              comes first. */}
+          <p className="mt-6 text-slate-400 text-sm max-w-3xl">
+            Filling one of these in every week?{' '}
+            <Link
+              href="/lift-plan-software"
+              className="text-amber-400 hover:text-amber-300 underline font-medium"
+            >
+              LiftPlan Studio
+            </Link>{' '}
+            does it for you — published duty charts for 1,900+ HIABs and lorry loaders,
+            the ALLMI calculation and the A3 drawings, free for 14 days.
+          </p>
         </div>
       </section>
 

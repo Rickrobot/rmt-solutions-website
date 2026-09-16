@@ -287,6 +287,21 @@ export default function LiftPlanTemplates() {
             cannot — load chart configurations, stabiliser deployment, attachment derating and
             machine-specific checks.
           </p>
+          {/* Lorry loaders get a line the other machine types do not, because
+              they are the one type where we sell something beyond a blank form.
+              Placed here rather than in the hero: this page targets the head
+              "lift plan template" query and the promise is a free template —
+              the software belongs at the point where somebody is already
+              choosing by machine type. */}
+          <p className="text-slate-400 text-sm max-w-3xl mb-10">
+            If the machine is a HIAB or lorry loader and you are writing these
+            regularly, there is also{' '}
+            <Link href="/lift-plan-software" className="text-amber-400 hover:text-amber-300 underline font-medium">
+              software that produces the finished plan
+            </Link>{' '}
+            — published duty charts for more than 1,900 machines, the ALLMI
+            calculation and the drawings, free for 14 days.
+          </p>
           <div className="grid md:grid-cols-2 gap-6">
             {equipmentTemplates.map((tpl) => (
               <Link

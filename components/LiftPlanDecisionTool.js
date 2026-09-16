@@ -352,6 +352,25 @@ function Result({ outcome, ticked, onReset }) {
         />
       )}
 
+      {/* Standard and complex only — the two outcomes that require a written,
+          site-specific plan, which is the thing the software actually
+          produces. Scoped out loud to lorry loaders, because that is all it
+          covers and somebody who has just been told they have a complex tower
+          crane lift should not be sold a HIAB product. Kept as a quiet line
+          rather than a third button: this is a decision tool and the moment it
+          reads as a funnel it stops being worth citing. */}
+      {(outcome === 'standard' || outcome === 'complex') && (
+        <p className="mt-5 text-gray-500 text-sm leading-relaxed">
+          If the machine is a HIAB or lorry loader, our{' '}
+          <Link href="/lift-plan-software" className="text-amber-400 hover:text-amber-300 underline">
+            lift plan software
+          </Link>{' '}
+          produces that plan — published duty charts for more than 1,900 machines,
+          the ALLMI calculation, the 18-point review and the A3 drawings. It does
+          not cover cranes, telehandlers or excavators.
+        </p>
+      )}
+
       {/* Shown on every outcome, including basic. It is the last line of the
           printed sheet and it is the honest one. */}
       <div className="mt-8 pt-6 border-t border-slate-700/50">

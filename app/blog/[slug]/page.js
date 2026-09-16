@@ -1185,6 +1185,8 @@ const blogPosts = {
 
       <p>Lorry loaders are involved in a disproportionately high number of lifting incidents in the UK, often because operators and site teams treat them as delivery equipment rather than as cranes. BS 7121-4 makes clear that they are cranes — and that the same planning, competence, and supervision requirements apply.</p>
 
+      <p>That is a planning burden most delivery operations are not set up for, which is why we built <a href="/lift-plan-software">lift plan software for HIABs and lorry loaders</a>: published duty charts for more than 1,900 machines, the ALLMI calculation worked in full, and a BS 7121-4 plan produced under your own branding. Free to try for 14 days.</p>
+
       <h3>BS 7121-5:2019 — Tower Cranes</h3>
       <p>Part 5 addresses tower cranes. This is one of the most detailed parts of the series, reflecting the complexity and risk profile of tower crane operations. It covers planning, erection, climbing, dismantling, anti-collision systems, wind speed management, foundations, and the specific competence requirements for tower crane teams.</p>
 
