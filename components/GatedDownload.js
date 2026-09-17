@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Download, CheckCircle2, Mail } from 'lucide-react'
 import { trackEvent as trackConversion } from '@/components/ConversionTracking'
+import Link from 'next/link'
 
 const WEB3FORMS_ACCESS_KEY = 'ab804a58-66f9-44c4-8ad3-a2b6a2895839'
 
@@ -197,8 +198,11 @@ export default function GatedDownload({
         {status && <p className="text-amber-400 text-sm">{status}</p>}
 
         <p className="text-gray-500 text-xs text-center">
-          Two fields, no newsletter. Your details stay private and we never share enquiries with third
-          parties.
+          Two fields, no newsletter. Delivered to us by email through our form provider and used
+          only to send you the file and see which resources get used.{' '}
+          <Link href="/privacy" className="underline hover:text-amber-400">
+            How we handle it
+          </Link>.
         </p>
       </form>
     </div>

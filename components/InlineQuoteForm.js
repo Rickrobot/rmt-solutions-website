@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Send, Phone } from 'lucide-react'
 import { trackEvent as trackConversion } from '@/components/ConversionTracking'
+import Link from 'next/link'
 
 const WEB3FORMS_ACCESS_KEY = 'ab804a58-66f9-44c4-8ad3-a2b6a2895839'
 
@@ -205,7 +206,11 @@ export default function InlineQuoteForm({
         </button>
 
         <p className="text-center text-gray-500 text-xs">
-          Your details stay private. We never share enquiries with third parties.
+          Delivered to us by email through our form provider and used only to answer you. No
+          mailing list, no marketing.{' '}
+          <Link href="/privacy" className="underline hover:text-amber-400">
+            How we handle it
+          </Link>.
         </p>
       </form>
     </div>

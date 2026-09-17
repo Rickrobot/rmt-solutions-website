@@ -190,6 +190,9 @@ export default function Footer() {
             <Link href="/locations" className="text-gray-400 hover:text-amber-400 transition text-sm">
               Locations
             </Link>
+            <Link href="/privacy" className="text-gray-400 hover:text-amber-400 transition text-sm">
+              Privacy &amp; Cookies
+            </Link>
             <Link href="/sitemap.xml" className="text-gray-400 hover:text-amber-400 transition text-sm">
               Sitemap
             </Link>

@@ -414,7 +414,11 @@ export default function ContactPage() {
                     {isSubmitting ? 'Sending...' : 'Send Enquiry — We Reply Within 4 Working Hours'}
                   </button>
                   <p className="text-center text-gray-500 text-xs mt-4">
-                    Your details stay private. We never share enquiries with third parties.
+                    Your enquiry is delivered to us by email through our form provider and used
+                    only to answer you. No mailing list, no marketing, nothing sold on.{' '}
+                    <Link href="/privacy" className="underline hover:text-amber-400">
+                      How we handle it
+                    </Link>.
                   </p>
 
                   {/* Internal links (Jul 2026): this page previously had none at all,

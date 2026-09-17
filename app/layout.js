@@ -4,6 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingCallButton from '@/components/FloatingCallButton'
 import Analytics from '@/components/Analytics'
+import CookieConsent from '@/components/CookieConsent'
 import ConversionTracking from '@/components/ConversionTracking'
 
 // PERFORMANCE FIX (SEO audit, May 2026):
@@ -114,6 +115,7 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
         <FloatingCallButton />
+        <CookieConsent />
       </body>
     </html>
   )

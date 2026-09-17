@@ -43,6 +43,10 @@ const STATIC_ROUTES = [
   { path: '/case-studies', changefreq: 'weekly',  priority: '0.8', images: [HERO_IMAGE] },
   { path: '/testimonials', changefreq: 'monthly', priority: '0.85', images: [OG_IMAGE] },
   { path: '/contact',      changefreq: 'monthly', priority: '0.7', images: [OG_IMAGE] },
+  // Low priority and rarely changed, but it must be crawlable: it is linked
+  // from every form on the site and from the cookie banner, and a privacy
+  // notice Google cannot reach is one a regulator would call hard to find.
+  { path: '/privacy',      changefreq: 'yearly',  priority: '0.3' },
   // LiftPlan Studio. High priority: it is the only page on the site selling a
   // product rather than time, and it carries its own SoftwareApplication and
   // FAQPage schema.
