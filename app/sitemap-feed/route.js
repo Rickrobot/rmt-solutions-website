@@ -31,6 +31,9 @@ const SITE_LAST_UPDATED = '2026-09-15';
 // the listed pages a hard image association in Google Search and make
 // the URLs eligible for Google Images results.
 const OG_IMAGE = `${BASE_URL}/images/og-lift-planning.jpg`;
+/* The rigging page's own image: a slung precast unit is what that tool is for,
+   and the generic site card says nothing about slinging. */
+const PRECAST_IMAGE = `${BASE_URL}/images/precast-concrete-lift.webp`;
 const HERO_IMAGE = `${BASE_URL}/images/mobile-crane-steel-erection.webp`;
 
 const STATIC_ROUTES = [
@@ -51,6 +54,11 @@ const STATIC_ROUTES = [
   // product rather than time, and it carries its own SoftwareApplication and
   // FAQPage schema.
   { path: '/lift-plan-software', changefreq: 'weekly', priority: '0.9', images: [OG_IMAGE] },
+  // The rigging tool, sold on its own. Same priority and the same reasoning as
+  // the page above it: a product page with its own SoftwareApplication and
+  // FAQPage schema, and the only other page on the site selling a thing rather
+  // than an hour.
+  { path: '/rigging-software', changefreq: 'weekly', priority: '0.9', images: [PRECAST_IMAGE] },
 ];
 
 const SERVICE_SLUGS = [

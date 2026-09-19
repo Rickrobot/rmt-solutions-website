@@ -46,6 +46,14 @@ export default function Footer() {
   // because Google interprets "lift plans Manchester" as elevator services.
   // Crane-prefixed anchors give the location pages a much better chance of
   // ranking for actual crane/LOLER lift planning intent.
+  // One application, two products sold from it. Kept as its own short list
+  // rather than folded into the services above, because they are not services:
+  // nobody does the work for you.
+  const software = [
+    { name: 'Lift Plan Software', href: '/lift-plan-software' },
+    { name: 'Rigging Software', href: '/rigging-software' },
+  ]
+
   const locations = [
     { name: 'Crane Lift Plan Manchester',  href: '/locations/manchester' },
     { name: 'Crane Lift Plan Liverpool',   href: '/locations/liverpool' },
@@ -129,6 +137,24 @@ export default function Footer() {
 
           {/* Qualifications + Contact */}
           <div>
+            {/* The software was reachable from the header and from inside a few
+                pages, and from nowhere in the footer — which is where somebody
+                who has read to the bottom of a service page goes looking. Both
+                products, together, because they are one application. */}
+            <p className="text-white font-display font-semibold mb-6">Software</p>
+            <ul className="space-y-3 mb-8">
+              {software.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-gray-400 hover:text-amber-400 transition text-sm"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
             <p className="text-white font-display font-semibold mb-6">Qualifications</p>
             <ul className="space-y-3 text-gray-400 text-sm">
               {qualifications.map((qual) => (

@@ -33,6 +33,12 @@ export default function Header() {
     // is a product, not a service, and somebody looking for lift planning
     // software will not think to open a menu labelled Services to find it.
     { name: 'Software', href: '/lift-plan-software' },
+    // Two products are sold from one application now, and the second is not a
+    // sub-page of the first: somebody wanting to work out sling angles has no
+    // reason to look under lift plan software for it. Its own item, next to
+    // its sibling, so the pair reads as a range rather than a page with an
+    // extra tab on it.
+    { name: 'Rigging', href: '/rigging-software' },
     { name: 'Locations', href: '/locations' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Testimonials', href: '/testimonials' },
@@ -81,8 +87,11 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          {/* Desktop Navigation.
+              space-x-6 rather than space-x-8, and nothing wraps: the bar gained
+              a second software item and "Case Studies" broke onto two lines,
+              which pushed the row taller than the logo beside it. */}
+          <div className="hidden lg:flex items-center space-x-6">
             {/* Services Dropdown */}
             <div
               ref={dropdownRef}
@@ -159,7 +168,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-400 hover:text-amber-400 transition font-medium"
+                className="text-gray-400 hover:text-amber-400 transition font-medium whitespace-nowrap"
               >
                 {item.name}
               </Link>

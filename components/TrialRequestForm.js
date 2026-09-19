@@ -7,7 +7,7 @@ import { trackEvent as trackConversion } from '@/components/ConversionTracking'
 const WEB3FORMS_ACCESS_KEY = 'ab804a58-66f9-44c4-8ad3-a2b6a2895839'
 
 /**
- * TrialRequestForm — request a 14-day trial of LiftPlan Studio.
+ * TrialRequestForm — request a trial of LiftPlan Studio, lift planning or rigging.
  *
  * WHY THIS IS NOT A SIGN-UP FORM
  *
@@ -31,8 +31,54 @@ const WEB3FORMS_ACCESS_KEY = 'ab804a58-66f9-44c4-8ad3-a2b6a2895839'
  * software trials and consultancy leads can be told apart in reporting rather
  * than landing in one undifferentiated conversion count.
  */
+/**
+ * WHAT IS BEING TRIALLED, AND FOR HOW LONG.
+ *
+ * Two products are sold from one application and their trials are not the same
+ * length: lift planning runs fourteen days, rigging runs seven. The form used
+ * to have "14-day" written into it in five places — the heading, the
+ * reassurance under it, the submit button, the thank-you and the subject line
+ * of the email it sends. A second product would have meant a second copy of the form, and two
+ * copies of a form are two places for the phone number to go out of date.
+ *
+ * So the wording that differs lives here and the form reads it. The lead source
+ * differs too, deliberately: a rigging trial and a lift planning trial are
+ * different buyers with different reasons, and they must be tellable apart in
+ * the inbox and in GA4 rather than landing in one undifferentiated count.
+ */
+export const TRIAL_PRODUCTS = {
+  liftplan: {
+    days: 14,
+    label: 'LiftPlan Studio',
+    heading: 'Request your 14-day trial',
+    subject: 'LiftPlan Studio TRIAL',
+    source: 'LiftPlan Studio — 14-day trial request',
+    leadSource: 'liftplan_studio_trial',
+    eventLabel: 'LiftPlan Studio trial',
+    asks: 'What you lift and what with',
+    placeholder:
+      'What do you lift, and on what? (e.g. cabins and welfare units, Fassi F235 and a '
+      + 'Palfinger PK 48002) — optional, but it lets me have your machines ready',
+  },
+  rigging: {
+    days: 7,
+    label: 'Rigging',
+    heading: 'Request your 7-day rigging trial',
+    subject: 'RIGGING TRIAL',
+    source: 'LiftPlan Studio Rigging — 7-day trial request',
+    leadSource: 'rigging_trial',
+    eventLabel: 'Rigging trial',
+    asks: 'What you sling and what with',
+    placeholder:
+      'What do you sling, and with what? (e.g. precast chambers on four-leg chain, '
+      + 'steel sections on round slings) — optional, but it lets me have your gear ready',
+  },
+}
+
 export default function TrialRequestForm({
-  heading = 'Request your 14-day trial',
+  /** which trial this form is asking for — see TRIAL_PRODUCTS above */
+  product = 'liftplan',
+  heading,
   /**
    * Distinguishes this instance's element ids from any other on the same page.
    * The page renders the form twice — once in the hero, once at the foot — and
@@ -43,6 +89,10 @@ export default function TrialRequestForm({
    */
   idPrefix = 'trial',
 }) {
+  /* Unknown name falls back to lift planning rather than rendering a form with
+     no words in it. */
+  const p = TRIAL_PRODUCTS[product] ?? TRIAL_PRODUCTS.liftplan
+  const title = heading ?? p.heading
   const [formData, setFormData] = useState({
     name: '', company: '', email: '', phone: '', role: '', machines: '', company_website: '',
   })
@@ -70,8 +120,8 @@ export default function TrialRequestForm({
           name: formData.name,
           email: formData.email,
           phone: formData.phone || 'Not provided',
-          subject: `[LiftPlan Studio TRIAL] ${formData.name}${formData.company ? ' — ' + formData.company : ''}`,
-          source: 'LiftPlan Studio — 14-day trial request',
+          subject: `[${p.subject}] ${formData.name}${formData.company ? ' — ' + formData.company : ''}`,
+          source: p.source,
           message: [
             `Company: ${formData.company || 'Not provided'}`,
             `Role: ${formData.role || 'Not provided'}`,
@@ -88,9 +138,9 @@ export default function TrialRequestForm({
       if (data.success) {
         setSubmitted(true)
         trackConversion('generate_lead', {
-          event_label: 'LiftPlan Studio trial',
+          event_label: p.eventLabel,
           form_name: 'trial_request',
-          lead_source: 'liftplan_studio_trial',
+          lead_source: p.leadSource,
         })
       } else {
         setStatus('Something went wrong. Please call 07803 808093 or email ricky@rmtsolutions.co.uk')
@@ -116,8 +166,8 @@ export default function TrialRequestForm({
           email with your sign-in details and a short note on getting started.
         </p>
         <p className="text-gray-400 text-sm mb-5">
-          Nothing to pay and no card held. The trial runs for 14 days and stops on its
-          own — there is nothing to cancel.
+          Nothing to pay and no card held. The trial runs for {p.days} days and stops on
+          its own — there is nothing to cancel.
         </p>
         <a
           href="tel:+447803808093"
@@ -136,7 +186,7 @@ export default function TrialRequestForm({
   return (
     <div className="bg-gradient-to-b from-slate-800/60 to-slate-900/60 rounded-2xl p-6 sm:p-8 border border-slate-700/50">
       <div className="flex items-start justify-between gap-4 mb-2 flex-wrap">
-        <h2 className="font-display text-xl sm:text-2xl font-bold text-white">{heading}</h2>
+        <h2 className="font-display text-xl sm:text-2xl font-bold text-white">{title}</h2>
         <a
           href="tel:+447803808093"
           className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold text-sm whitespace-nowrap"
@@ -214,10 +264,10 @@ export default function TrialRequestForm({
         </div>
 
         <div>
-          <label htmlFor={`${idPrefix}-machines`} className="sr-only">What you lift and what with</label>
+          <label htmlFor={`${idPrefix}-machines`} className="sr-only">{p.asks}</label>
           <textarea id={`${idPrefix}-machines`} name="machines" value={formData.machines}
             onChange={handleChange} rows={3}
-            placeholder="What do you lift, and on what? (e.g. cabins and welfare units, Fassi F235 and a Palfinger PK 48002) — optional, but it lets me have your machines ready"
+            placeholder={p.placeholder}
             className={`${field} resize-none`} />
         </div>
 
@@ -229,7 +279,7 @@ export default function TrialRequestForm({
 
         <button type="submit" disabled={isSubmitting}
           className="w-full inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 disabled:opacity-60 disabled:cursor-not-allowed text-slate-900 px-6 py-4 rounded-xl font-semibold transition">
-          {isSubmitting ? 'Sending…' : (<><Send className="w-4 h-4" /> Request the 14-day trial</>)}
+          {isSubmitting ? 'Sending…' : (<><Send className="w-4 h-4" /> Request the {p.days}-day trial</>)}
         </button>
 
         <p className="text-gray-500 text-xs">
