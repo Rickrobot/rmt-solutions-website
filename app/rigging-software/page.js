@@ -5,78 +5,10 @@ import {
   ShieldCheck, Clock, Boxes, Building2,
 } from 'lucide-react'
 import TrialRequestForm from '@/components/TrialRequestForm'
+import OtherProduct from '@/components/OtherProduct'
+import { APP_URL, planFor, pricingUrl, renewsAt, startUrl } from '@/lib/appPlans'
 
-const APP_URL = 'https://liftplanstudio.com'
-
-/*
- * One click from here into Stripe.
- *
- * /start is a GET on the application: it creates the Checkout Session and
- * redirects into it. A link, rather than a form post — this site and the
- * application are different origins, and a button that needs CORS to work is a
- * button that silently does not.
- */
-const START_URL = `${APP_URL}/start?product=rigging&plan=monthly`
-
-/**
- * What the rigging subscription costs, read from Stripe at build time and
- * hourly after that.
- *
- * The figure is never typed into this page. A price written into marketing copy
- * is a price that will one day disagree with the one the card screen charges,
- * and the customer finds out at the worst possible moment — which, on a page
- * that has just told them a card will be taken, is worse than merely
- * embarrassing. /api/plans reads it from Stripe; change it in the Stripe
- * dashboard and this page follows within the hour.
- *
- * If it cannot be read — the price is not set up yet, or the application is
- * unreachable during a build — this returns null and every sentence below says
- * nothing about a figure rather than guessing one.
- *
- * IT CHECKS WHAT IT WAS ANSWERED, NOT JUST THAT IT WAS ANSWERED
- *   The first build of this page quoted £110 as the rigging price. The
- *   deployment it asked was an older one whose /api/plans did not yet know
- *   about products: it ignored ?product=rigging and cheerfully returned the
- *   lift planning prices, and the page printed them into the offer as though
- *   they were the rigging ones.
- *
- *   So the reply is only used when it says which product it is for and that is
- *   the product asked for. An old deployment does not say, a wrong one says the
- *   wrong thing, and both end up here as null — no figure, rather than the
- *   wrong figure on a page that has just told somebody their card will be
- *   taken.
- */
-const WANT = 'rigging'
-
-async function riggingPlan() {
-  try {
-    const r = await fetch(`${APP_URL}/api/plans?product=${WANT}`, { next: { revalidate: 3600 } })
-    if (!r.ok) return null
-    const d = await r.json()
-    if (d?.product !== WANT) return null
-    const m = d?.available && (d.plans || []).find((p) => p.plan === 'monthly')
-    if (!m?.amount) return null
-    const pennies = m.amount % 100 !== 0
-    return {
-      /* "£29" or "£29.50" — never a bare number with a symbol stuck on it. */
-      price: new Intl.NumberFormat('en-GB', {
-        style: 'currency',
-        currency: String(m.currency || 'gbp').toUpperCase(),
-        minimumFractionDigits: pennies ? 2 : 0,
-        maximumFractionDigits: pennies ? 2 : 0,
-      }).format(m.amount / 100),
-      /* For the JSON-LD, which wants the number on its own. */
-      amount: (m.amount / 100).toFixed(2),
-      currency: String(m.currency || 'gbp').toUpperCase(),
-      days: d.trialDays || 7,
-    }
-  } catch {
-    return null
-  }
-}
-
-/** What it renews at, in words, whether or not Stripe could be asked. */
-const renewsAt = (plan) => (plan ? `${plan.price} + VAT a month` : 'the monthly subscription price')
+const START_URL = startUrl('rigging')
 
 /*
  * Titles: layout.js appends " | RMT Solutions" (16 chars) and holds every page
@@ -143,7 +75,7 @@ const softwareSchema = (plan) => ({
     '@type': 'Offer',
     priceCurrency: plan?.currency || 'GBP',
     availability: 'https://schema.org/InStock',
-    url: `${APP_URL}/pricing?product=rigging`,
+    url: pricingUrl('rigging'),
     description: plan
       ? `One seat, ${plan.price} + VAT a month. ${plan.days}-day free trial: a card is taken at `
         + 'sign-up, nothing is charged until the trial ends, and it can be cancelled at any time.'
@@ -311,10 +243,12 @@ const trialSteps = (plan) => [
 ]
 
 export default async function RiggingSoftwarePage() {
-  /* Asked once, used everywhere below — the badge, the buttons, the trial
-     steps, three of the FAQs and the structured data all quote the same
-     figure, because they are all reading the same one. */
-  const plan = await riggingPlan()
+  /* The rigging figure is asked for once and used everywhere below — the badge,
+     the buttons, the trial steps, three of the FAQs and the structured data all
+     quote it, because they are all reading the same one. The lift planning
+     figure is for the block that points honestly at the other product. The two
+     are independent, so they are fetched together. */
+  const [plan, liftplan] = await Promise.all([planFor('rigging'), planFor('liftplan')])
   const faqs = pageFaqs(plan)
 
   return (
@@ -682,6 +616,9 @@ export default async function RiggingSoftwarePage() {
           </div>
         </div>
       </section>
+
+      {/* ------------------------------------------------------- the other one */}
+      <OtherProduct product="liftplan" plan={liftplan} />
 
       {/* ---------------------------------------------------------------- FAQ */}
       <section className="py-24 bg-slate-950">

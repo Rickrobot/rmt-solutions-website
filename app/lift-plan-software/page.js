@@ -5,8 +5,8 @@ import {
   ShieldCheck, Clock, Boxes, Building2,
 } from 'lucide-react'
 import TrialRequestForm from '@/components/TrialRequestForm'
-
-const APP_URL = 'https://liftplanstudio.com'
+import OtherProduct from '@/components/OtherProduct'
+import { APP_URL, planFor, pricingUrl } from '@/lib/appPlans'
 
 /*
  * Titles: layout.js appends " | RMT Solutions" (16 chars) and its own comment
@@ -71,7 +71,7 @@ const softwareSchema = {
     priceCurrency: 'GBP',
     availability: 'https://schema.org/InStock',
     description: 'One seat, monthly or yearly. 14-day trial available on request, no card required.',
-    url: `${APP_URL}/pricing.html`,
+    url: pricingUrl('liftplan'),
   },
   featureList: [
     'Duty-chart database of more than 1,900 lorry loaders',
@@ -209,7 +209,12 @@ const TRIAL_STEPS = [
   },
 ]
 
-export default function LiftPlanSoftwarePage() {
+export default async function LiftPlanSoftwarePage() {
+  /* The rigging price, for the block that tells a rigger the £29 product
+     exists. Until now this page behaved as though it were the only one, so
+     anybody who came here looking for sling angles left again. */
+  const rigging = await planFor('rigging')
+
   return (
     <div className="bg-slate-950">
       <script
@@ -453,7 +458,7 @@ export default function LiftPlanSoftwarePage() {
             <p className="text-gray-400 text-sm">
               After the trial it is one seat, monthly or yearly, with unlimited plans.{' '}
               <a
-                href={`${APP_URL}/pricing.html`}
+                href={pricingUrl('liftplan')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-amber-400 hover:text-amber-300 font-semibold"
@@ -501,6 +506,9 @@ export default function LiftPlanSoftwarePage() {
           </div>
         </div>
       </section>
+
+      {/* ------------------------------------------------------- the other one */}
+      <OtherProduct product="rigging" plan={rigging} />
 
       {/* ---------------------------------------------------------------- FAQ */}
       <section className="py-24 bg-slate-900 border-t border-slate-800/50">

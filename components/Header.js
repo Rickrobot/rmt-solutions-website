@@ -32,12 +32,19 @@ export default function Header() {
     // The software sits first and outside the Services dropdown on purpose: it
     // is a product, not a service, and somebody looking for lift planning
     // software will not think to open a menu labelled Services to find it.
-    { name: 'Software', href: '/lift-plan-software' },
-    // Two products are sold from one application now, and the second is not a
-    // sub-page of the first: somebody wanting to work out sling angles has no
-    // reason to look under lift plan software for it. Its own item, next to
-    // its sibling, so the pair reads as a range rather than a page with an
-    // extra tab on it.
+    //
+    // NAMED FOR WHAT IT IS, NOT FOR ITS CATEGORY.
+    // This said "Software" for as long as there was only one. Beside Rigging
+    // that read as the software and then something else — so somebody who
+    // wanted the rigging tool clicked Software, found lift planning, and had no
+    // reason to think there was anything more. Two product names side by side
+    // read as a range; a category and a product read as a mistake.
+    //
+    // Both stay at the top level rather than folding into a dropdown. The
+    // Services menu only puts its links into the page while it is open, so a
+    // product hidden inside one loses the site-wide internal link that a new
+    // page most needs.
+    { name: 'Lift Planning', href: '/lift-plan-software' },
     { name: 'Rigging', href: '/rigging-software' },
     { name: 'Locations', href: '/locations' },
     { name: 'Case Studies', href: '/case-studies' },
