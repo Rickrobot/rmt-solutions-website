@@ -9,6 +9,76 @@ import TrialRequestForm from '@/components/TrialRequestForm'
 const APP_URL = 'https://liftplanstudio.com'
 
 /*
+ * One click from here into Stripe.
+ *
+ * /start is a GET on the application: it creates the Checkout Session and
+ * redirects into it. A link, rather than a form post — this site and the
+ * application are different origins, and a button that needs CORS to work is a
+ * button that silently does not.
+ */
+const START_URL = `${APP_URL}/start?product=rigging&plan=monthly`
+
+/**
+ * What the rigging subscription costs, read from Stripe at build time and
+ * hourly after that.
+ *
+ * The figure is never typed into this page. A price written into marketing copy
+ * is a price that will one day disagree with the one the card screen charges,
+ * and the customer finds out at the worst possible moment — which, on a page
+ * that has just told them a card will be taken, is worse than merely
+ * embarrassing. /api/plans reads it from Stripe; change it in the Stripe
+ * dashboard and this page follows within the hour.
+ *
+ * If it cannot be read — the price is not set up yet, or the application is
+ * unreachable during a build — this returns null and every sentence below says
+ * nothing about a figure rather than guessing one.
+ *
+ * IT CHECKS WHAT IT WAS ANSWERED, NOT JUST THAT IT WAS ANSWERED
+ *   The first build of this page quoted £110 as the rigging price. The
+ *   deployment it asked was an older one whose /api/plans did not yet know
+ *   about products: it ignored ?product=rigging and cheerfully returned the
+ *   lift planning prices, and the page printed them into the offer as though
+ *   they were the rigging ones.
+ *
+ *   So the reply is only used when it says which product it is for and that is
+ *   the product asked for. An old deployment does not say, a wrong one says the
+ *   wrong thing, and both end up here as null — no figure, rather than the
+ *   wrong figure on a page that has just told somebody their card will be
+ *   taken.
+ */
+const WANT = 'rigging'
+
+async function riggingPlan() {
+  try {
+    const r = await fetch(`${APP_URL}/api/plans?product=${WANT}`, { next: { revalidate: 3600 } })
+    if (!r.ok) return null
+    const d = await r.json()
+    if (d?.product !== WANT) return null
+    const m = d?.available && (d.plans || []).find((p) => p.plan === 'monthly')
+    if (!m?.amount) return null
+    const pennies = m.amount % 100 !== 0
+    return {
+      /* "£29" or "£29.50" — never a bare number with a symbol stuck on it. */
+      price: new Intl.NumberFormat('en-GB', {
+        style: 'currency',
+        currency: String(m.currency || 'gbp').toUpperCase(),
+        minimumFractionDigits: pennies ? 2 : 0,
+        maximumFractionDigits: pennies ? 2 : 0,
+      }).format(m.amount / 100),
+      /* For the JSON-LD, which wants the number on its own. */
+      amount: (m.amount / 100).toFixed(2),
+      currency: String(m.currency || 'gbp').toUpperCase(),
+      days: d.trialDays || 7,
+    }
+  } catch {
+    return null
+  }
+}
+
+/** What it renews at, in words, whether or not Stripe could be asked. */
+const renewsAt = (plan) => (plan ? `${plan.price} + VAT a month` : 'the monthly subscription price')
+
+/*
  * Titles: layout.js appends " | RMT Solutions" (16 chars) and holds every page
  * to 60 including it. 34 + 16 = 50.
  *
@@ -51,7 +121,7 @@ export const metadata = {
 
 /* --------------------------------------------------------------- schema */
 
-const softwareSchema = {
+const softwareSchema = (plan) => ({
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: 'LiftPlan Studio — Rigging',
@@ -65,12 +135,33 @@ const softwareSchema = {
     name: 'RMT Solutions Ltd',
     url: 'https://www.rmtsafetysolutions.com',
   },
+  /* The price comes from Stripe with the rest of the page. When it cannot be
+     read the offer is still declared — it is genuinely on sale — but with no
+     figure in it, because a figure in structured data is quoted back in search
+     results and a wrong one there is worse than none. */
   offers: {
     '@type': 'Offer',
-    priceCurrency: 'GBP',
+    priceCurrency: plan?.currency || 'GBP',
     availability: 'https://schema.org/InStock',
-    description: 'One seat. 7-day trial available on request, no card required.',
-    url: `${APP_URL}/pricing.html`,
+    url: `${APP_URL}/pricing?product=rigging`,
+    description: plan
+      ? `One seat, ${plan.price} + VAT a month. ${plan.days}-day free trial: a card is taken at `
+        + 'sign-up, nothing is charged until the trial ends, and it can be cancelled at any time.'
+      : 'One seat, billed monthly. 7-day free trial: a card is taken at sign-up, nothing is '
+        + 'charged until the trial ends, and it can be cancelled at any time.',
+    ...(plan
+      ? {
+        price: plan.amount,
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: plan.amount,
+          priceCurrency: plan.currency,
+          /* UN/CEFACT code for "month". */
+          unitCode: 'MON',
+          valueAddedTaxIncluded: false,
+        },
+      }
+      : {}),
   },
   featureList: [
     'Sling leg tensions worked by geometry, not a flat mode factor',
@@ -84,7 +175,7 @@ const softwareSchema = {
     'PASS or FAIL with the utilisation and the mode factor used',
     'A3 rigging drawing (RG-01) with the gear drawn as gear',
   ],
-}
+})
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -101,8 +192,11 @@ const breadcrumbSchema = {
 }
 
 /* Single source of truth for the FAQs — rendered on the page AND used to build
-   the FAQPage JSON-LD below. Add questions here only. */
-const PAGE_FAQS = [
+   the FAQPage JSON-LD below. Add questions here only.
+
+   A function rather than a constant because three of them are about money, and
+   the money comes from Stripe rather than from this file. */
+const pageFaqs = (plan) => [
   {
     q: 'What does it do that a sling angle calculator does not?',
     a: 'It puts the centre of gravity where it actually is. The usual method takes the load, divides it by the number of legs and applies a factor for the angle — which assumes the load is shared as the legs are arranged. Move the centre of gravity off centre and it is not. Take 6 tonnes on two legs at 30 degrees with pick centres of 4 m: the uniform method gives 4.29 tonnes a leg, and the geometry gives 4.68 tonnes on the leg nearer the centre of gravity. That is 9% more on the leg that governs, and it is the leg that fails.',
@@ -137,7 +231,15 @@ const PAGE_FAQS = [
   },
   {
     q: 'How does the 7-day trial work?',
-    a: 'You ask for it with the form on this page and the account is set up by hand, usually the same working day. You get an email with your sign-in details. It opens straight onto the rigging side with everything switched on, runs for seven days and then stops on its own. No card is taken and there is nothing to cancel.',
+    a: `You start it yourself on this page. Stripe takes your card and charges nothing, you set a password on the spot, and the account opens straight onto the rigging side with everything switched on. It runs for seven days. Stripe emails you before the first payment, and unless you have cancelled it then renews at ${renewsAt(plan)}. Cancel at any point in those seven days, from inside the application, and you are charged nothing at all.`,
+  },
+  {
+    q: 'Why is a card taken for a free trial?',
+    a: 'So that it starts the moment you decide to, at whatever hour that is, with nobody in the middle. Nothing is charged for seven days; the card is there so that the subscription can carry on by itself if you keep it, and so there is nothing to set up a second time if you do. If you would rather not put a card in before you have seen it, use the form at the foot of this page — the account is then set up by hand, usually the same working day, with no card taken and nothing to cancel.',
+  },
+  {
+    q: 'How do I cancel, and what happens to my work?',
+    a: 'From inside the application, which opens Stripe’s own billing pages, or by replying to the receipt Stripe sends you. During the trial that ends it with nothing charged at all. Afterwards you keep access to the end of the month you have paid for. Either way your saved work stays on your device — cancelling does not reach into it or delete anything.',
   },
   {
     q: 'Does it replace the Appointed Person or the slinger?',
@@ -145,15 +247,15 @@ const PAGE_FAQS = [
   },
 ]
 
-const faqSchema = {
+const faqSchema = (faqs) => ({
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: PAGE_FAQS.map((f) => ({
+  mainEntity: faqs.map((f) => ({
     '@type': 'Question',
     name: f.q,
     acceptedAnswer: { '@type': 'Answer', text: f.a },
   })),
-}
+})
 
 /* --------------------------------------------------------------- content */
 
@@ -190,30 +292,36 @@ const STEPS = [
   },
 ]
 
-const TRIAL_STEPS = [
+const trialSteps = (plan) => [
   {
     n: '1',
-    title: 'Ask on this page',
-    body: 'Name, company, email. Tell me what you sling and with what if you like — it means your gear can be ready when you sign in.',
+    title: 'Start it here',
+    body: 'One click to Stripe. Your card goes in and nothing is charged. Stripe handles it — the card never touches this site or the application, and I never see the number.',
   },
   {
     n: '2',
-    title: 'I set the account up by hand',
-    body: 'Usually the same working day. You get an email with your sign-in details. It opens straight onto the rigging side.',
+    title: 'Set a password and go',
+    body: 'Stripe sends you straight back and you set it on the spot. It opens on the rigging side with everything switched on — no cut-down version, no watermark across your work. Rig real loads with it.',
   },
   {
     n: '3',
-    title: 'Seven days, everything on',
-    body: 'No cut-down version and no watermark across your work. Rig real loads with it. It stops on its own — no card was taken, so there is nothing to cancel.',
+    title: 'Decide before day seven',
+    body: `Stripe emails you before the first payment. Cancel from inside the application at any point in those seven days and you are charged nothing at all. Do nothing and it carries on at ${renewsAt(plan)}.`,
   },
 ]
 
-export default function RiggingSoftwarePage() {
+export default async function RiggingSoftwarePage() {
+  /* Asked once, used everywhere below — the badge, the buttons, the trial
+     steps, three of the FAQs and the structured data all quote the same
+     figure, because they are all reading the same one. */
+  const plan = await riggingPlan()
+  const faqs = pageFaqs(plan)
+
   return (
     <div className="bg-slate-950">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema(plan)) }}
       />
       <script
         type="application/ld+json"
@@ -221,7 +329,7 @@ export default function RiggingSoftwarePage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }}
       />
 
       {/* ------------------------------------------------------------ hero */}
@@ -231,7 +339,7 @@ export default function RiggingSoftwarePage() {
             <div>
               <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
                 <Clock className="w-4 h-4" />
-                7-day trial · no card
+                {plan ? `7 days free · then ${plan.price} + VAT a month` : '7 days free · cancel any time'}
               </div>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
                 Rigging software that works the legs, not just the weight
@@ -250,10 +358,10 @@ export default function RiggingSoftwarePage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="#trial"
+                  href={START_URL}
                   className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-7 py-4 rounded-xl font-semibold transition"
                 >
-                  Try it for 7 days
+                  Start the 7-day trial
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <a
@@ -267,8 +375,67 @@ export default function RiggingSoftwarePage() {
               </div>
             </div>
 
+            {/*
+              THE TERMS, BESIDE THE BUTTON, NOT UNDER IT.
+              A card is taken and the subscription converts on its own. Both of
+              those belong where the decision is made, in the same words the
+              card screen will use. Nothing here is a number typed into the
+              page — the price comes from Stripe with the rest of the build.
+            */}
             <div id="trial" className="scroll-mt-28">
-              <TrialRequestForm product="rigging" idPrefix="rig-hero" />
+              <div className="bg-gradient-to-b from-slate-800/60 to-slate-900/60 rounded-2xl p-6 sm:p-8 border border-amber-500/40">
+                <h2 className="font-display text-xl sm:text-2xl font-bold text-white mb-2">
+                  Start the 7-day trial
+                </h2>
+                <p className="text-gray-400 text-sm mb-6">
+                  It opens straight away. No email to wait for, and nothing to unlock.
+                </p>
+
+                <ul className="space-y-3 mb-7">
+                  {[
+                    'Seven days free, with everything switched on',
+                    'Stripe takes your card now and charges nothing',
+                    plan
+                      ? `Renews at ${plan.price} + VAT a month unless you cancel`
+                      : 'Renews monthly unless you cancel',
+                    'Cancel inside those seven days and you pay nothing at all',
+                  ].map((t) => (
+                    <li key={t} className="flex items-start gap-3 text-gray-300 text-sm">
+                      <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href={START_URL}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-6 py-4 rounded-xl font-semibold transition"
+                >
+                  Start the trial
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+
+                <p className="text-gray-500 text-xs mt-5 leading-relaxed">
+                  Payment is handled by Stripe. No card details reach this site or the
+                  application. Subject to the{' '}
+                  <a
+                    href={`${APP_URL}/licence`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-amber-400 hover:text-amber-300"
+                  >
+                    Software Licence Agreement
+                  </a>
+                  , which is shown in full before you use it.
+                </p>
+                <p className="text-gray-500 text-xs mt-3 leading-relaxed">
+                  Would rather not put a card in first?{' '}
+                  <a href="#by-hand" className="text-amber-400 hover:text-amber-300">
+                    Ask and I will set it up by hand
+                  </a>{' '}
+                  — no card, nothing to cancel.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -420,15 +587,16 @@ export default function RiggingSoftwarePage() {
       <section className="py-24 bg-slate-950">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
-            Seven days, set up by hand
+            Seven days, starting the minute you decide
           </h2>
           <p className="text-gray-400 mb-12 leading-relaxed max-w-3xl">
-            There is no self-service sign-up, deliberately. Every account is set up
-            personally, which means a short conversation about what you rig rather than a
-            password and an empty screen.
+            A card is taken at the start and nothing is charged for seven days. That is
+            said plainly rather than in small print, because a &ldquo;free trial&rdquo; that
+            quietly wants a card is the thing most people have learned to close the tab on.
+            Here is exactly what happens.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
-            {TRIAL_STEPS.map((s) => (
+            {trialSteps(plan).map((s) => (
               <div key={s.n} className="bg-slate-900/60 rounded-2xl p-7 border border-slate-800">
                 <div className="w-10 h-10 rounded-lg bg-amber-500 text-slate-900 font-display font-bold text-lg flex items-center justify-center mb-5">
                   {s.n}
@@ -438,19 +606,36 @@ export default function RiggingSoftwarePage() {
               </div>
             ))}
           </div>
-          <div className="mt-10 bg-slate-900/60 border border-slate-800 rounded-2xl p-6 text-center">
-            <p className="text-gray-400 text-sm">
-              Rigging is sold on its own, and it is also part of the full application
-              alongside lift planning.{' '}
-              <Link
-                href="/lift-plan-software"
-                className="text-amber-400 hover:text-amber-300 font-semibold"
-              >
-                The lift planning side is here
-              </Link>
-              . Nothing is charged during the trial and it does not roll into a
-              subscription on its own.
-            </p>
+          <div className="mt-10 grid md:grid-cols-2 gap-6">
+            <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6">
+              <h3 className="font-display text-lg font-bold text-white mb-3">
+                What you are signing up to
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                A subscription to the rigging tool for one person, with seven days free at
+                the front of it. It renews {plan ? `at ${plan.price} + VAT` : 'monthly'} until
+                you stop it, and you can stop it at any time from inside the application —
+                during the trial for nothing, afterwards with access to the end of the month
+                you have paid for. Stripe emails you before the first payment, so it does not
+                arrive as a surprise.
+              </p>
+            </div>
+            <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6">
+              <h3 className="font-display text-lg font-bold text-white mb-3">
+                What it does not include
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Lorry loader, mobile crane and excavator lift planning. Rigging is sold on its
+                own here and is also part of the full application.{' '}
+                <Link
+                  href="/lift-plan-software"
+                  className="text-amber-400 hover:text-amber-300 font-semibold"
+                >
+                  The lift planning side is here
+                </Link>
+                , and it can be added to this account later without setting anything up again.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -505,7 +690,7 @@ export default function RiggingSoftwarePage() {
             Questions people actually ask
           </h2>
           <div className="space-y-4">
-            {PAGE_FAQS.map((f) => (
+            {faqs.map((f) => (
               <details
                 key={f.q}
                 className="group bg-slate-900/60 border border-slate-800 rounded-xl p-6 open:border-amber-500/30"
@@ -532,12 +717,51 @@ export default function RiggingSoftwarePage() {
               Put your own awkward load through it
             </h2>
             <p className="text-gray-400 leading-relaxed">
-              Seven days, everything switched on, no card. Take a load you have rigged
-              before, one with the centre of gravity somewhere unhelpful, and see whether
-              the figures match what you used.
+              Seven days with everything switched on. Take a load you have rigged before,
+              one with the centre of gravity somewhere unhelpful, and see whether the
+              figures match what you used.
             </p>
           </div>
-          <TrialRequestForm product="rigging" idPrefix="rig-foot" />
+
+          <div className="bg-slate-950/60 border border-amber-500/40 rounded-2xl p-8 text-center">
+            <a
+              href={START_URL}
+              className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-8 py-4 rounded-xl font-semibold transition"
+            >
+              Start the 7-day trial
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <p className="text-gray-400 text-sm mt-5 leading-relaxed">
+              Stripe takes your card and charges nothing for seven days. It then renews at{' '}
+              {plan ? `${plan.price} + VAT a month` : 'the monthly price'} unless you cancel,
+              and cancelling inside those seven days costs nothing at all.
+            </p>
+          </div>
+
+          {/*
+            THE OTHER WAY IN.
+            Not everybody will put a card into a product they have not seen, and
+            a lost lead is worse than a hand-typed account. This route is
+            unchanged — set up personally, no card, nothing to cancel — and it is
+            second on the page rather than first because the one above needs
+            nobody to be awake.
+          */}
+          <div id="by-hand" className="scroll-mt-28 mt-16">
+            <div className="text-center mb-8">
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-3">
+                Or have it set up by hand
+              </h2>
+              <p className="text-gray-400 text-sm leading-relaxed max-w-xl mx-auto">
+                No card, nothing to cancel, and a short conversation about what you sling so
+                your own gear can be in there when you sign in. Usually the same working day.
+              </p>
+            </div>
+            <TrialRequestForm
+              product="rigging"
+              idPrefix="rig-foot"
+              heading="Ask for a trial account"
+            />
+          </div>
         </div>
       </section>
     </div>
