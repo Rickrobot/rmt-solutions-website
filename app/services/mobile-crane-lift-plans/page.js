@@ -468,6 +468,14 @@ export default function MobileCraneLiftPlansPage() {
                 <li className="flex gap-3"><span className="text-amber-400">−</span><span>Fly jib or extension — including when it is stowed alongside the boom</span></li>
                 <li className="flex gap-3"><span className="text-amber-400">−</span><span>Any lifting attachment or handling frame</span></li>
               </ul>
+              <p className="text-gray-400 text-sm mb-4">
+                Each of those accessories has a rating of its own at the angle it is used at, which
+                the crane chart knows nothing about.{' '}
+                <Link href="/rigging-software" className="text-amber-400 hover:text-amber-300">
+                  Checking the tackle against its WLL
+                </Link>{' '}
+                is a separate calculation from the crane duty.
+              </p>
               <p className="text-gray-400 text-sm mt-4">
                 What is left is the net capacity. The load divided by that figure is your utilisation —
                 and many principal contractors set a threshold (commonly around 75–80%) above which the

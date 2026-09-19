@@ -28,20 +28,29 @@ const START_URL = startUrl('rigging')
  * somebody can issue.
  */
 export const metadata = {
-  title: 'Rigging Software & Sling Calculator',
-  /* 154 characters. The 7-day trial earns the click and has to survive the
-     truncation, so it goes last and short. */
+  /* THE QUERY FIRST, THE CATEGORY SECOND.
+     This led on "Rigging Software", which is a thin UK term and ambiguous with
+     theatrical and offshore rigging. What people actually type is the
+     calculator, and "sling angle calculator" beats "sling calculator" because
+     the angle is the thing they are stuck on. 41 + 16 for the suffix
+     layout.js appends = 57. */
+  title: 'Sling Angle Calculator & Rigging Software',
+  /* 156 characters. "not a flat factor" and "PASS or FAIL" were house jargon
+     that meant nothing to somebody who had not read the page; the room they
+     were taking now carries UK and the two terms stamped on the gear — WLL,
+     and the mode factor the EN tables are written in. */
   description:
-    'Rigging software that works sling legs by geometry, not a flat factor. Slings, shackles and beams to BS EN, an A3 rigging drawing, PASS or FAIL. 7-day trial.',
+    'UK rigging software and sling angle calculator. Works each leg by geometry with the centre of gravity off centre, WLL and mode factors from the BS EN tables.',
   keywords:
     'rigging software, sling angle calculator, sling load calculator, lifting sling calculator, WLL calculator, lifting gear calculator, rigging calculator UK, sling angle factor, centre of gravity lifting calculator, BS EN 13414 calculator, BS EN 1492 sling calculator, lifting beam calculator',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/rigging-software',
   },
   openGraph: {
-    title: 'Rigging Software & Sling Calculator | LiftPlan Studio',
+    title: 'Sling Angle Calculator & Rigging Software | LiftPlan Studio',
     description:
-      'Sling legs worked by geometry with the centre of gravity where it actually is. Gear from the EN range, an A3 rigging drawing, and the table behind every figure. 7-day trial.',
+      'Sling leg tensions worked by geometry with the centre of gravity where it actually is. WLL and mode factors from the BS EN tables, an A3 rigging drawing, and the clause behind every figure. 7-day trial.',
+    locale: 'en_GB',
     /* A slung precast unit rather than the generic site card: this page is
        about what happens between the hook and the load. */
     images: ['/images/precast-concrete-lift.webp'],
@@ -134,6 +143,14 @@ const pageFaqs = (plan) => [
     a: 'It puts the centre of gravity where it actually is. The usual method takes the load, divides it by the number of legs and applies a factor for the angle — which assumes the load is shared as the legs are arranged. Move the centre of gravity off centre and it is not. Take 6 tonnes on two legs at 30 degrees with pick centres of 4 m: the uniform method gives 4.29 tonnes a leg, and the geometry gives 4.68 tonnes on the leg nearer the centre of gravity. That is 9% more on the leg that governs, and it is the leg that fails.',
   },
   {
+    q: 'Is it WLL or SWL — and what is the difference?',
+    a: 'Working load limit. WLL is the maximum load the manufacturer certifies the accessory for in a stated configuration, and it is what is marked on the tag and on the certificate. Safe working load is the older term, still in everyday use on site and still written on older gear; where you see SWL on a tag, treat it as the WLL for that item and go to the certificate if there is any doubt. The tool works to the WLL of the actual item you select and shows the utilisation against it, so a set at 85% and a set at 105% are told apart rather than both being called "fine".',
+  },
+  {
+    q: 'Why is a four-leg sling rated as though only two legs take the load?',
+    a: 'Because four legs cannot be relied on to share a rigid load evenly. Small differences in leg length, in lifting point height and in where the centre of gravity actually sits mean two legs can take almost everything while the other two hang on. BS EN 818-4 and BS EN 13414-1 therefore rate a four-leg set on two legs, and that is the figure the tool uses. It then goes further: where you tell it the centre of gravity is off centre, it works the leg tensions by geometry and names the leg that governs, because the two-leg rule is a safe assumption about sharing and not a calculation of what any particular leg is carrying.',
+  },
+  {
     q: 'Which standards are the figures worked to?',
     a: 'Mode factors come from BS EN 818-4 Table 3 for chain, BS EN 13414-1 Tables 3 and 4 with BS EN 13414-2 Annex A for wire rope, BS EN 1492-1 Table 3 for webbing and BS EN 1492-2 Table 2 for round slings. Shackles are to BS EN 13889 and LEEA COPSULE Section 18, beams to BS EN 13155 and the maker’s own span and angle rating. The planning duty behind it is BS 7121-1:2016 clause 4.3.2(l) and LOLER 1998 regulation 8. Every result names the table it came from, so it can be checked rather than believed.',
   },
@@ -194,32 +211,32 @@ const faqSchema = (faqs) => ({
 const STEPS = [
   {
     icon: Boxes,
-    title: 'R1 · The load',
+    title: 'The load (R1)',
     body: 'Weight, size and shape — box, cylinder, pipe, a Blue Book section or a steel frame member. A shape can work the weight out for you, and it is marked as calculated so nobody mistakes it for a weighed figure.',
   },
   {
     icon: PencilRuler,
-    title: 'R2 · The arrangement',
+    title: 'The arrangement (R2)',
     body: 'Straight, choke, double-wrap choke or basket. Lifting points, the height from the hook to the load, and the centre of gravity where it actually sits. The sling length to order comes out of it.',
   },
   {
     icon: Database,
-    title: 'R3 · The gear',
-    body: 'Slings, shackles, master link and hooks from the EN range — Green Pin, Crosby, Gunnebo, grade 10 chain sets. The sling set weight goes in off the tag.',
+    title: 'The gear and its WLL (R3)',
+    body: 'Slings, shackles, eyebolts, master links and hooks from the EN range — Green Pin, Crosby, Gunnebo, grade 10 chain sets. Each item is checked against its own working load limit, and the sling set weight goes in off the tag along with the WLL stamped on it.',
   },
   {
     icon: ShieldCheck,
-    title: 'R4 · Beams and spreaders',
-    body: 'A Modulift MOD beam read from Modulift’s own tables, or any beam entered from its rating plate. Top sling angle and length checked against the beam’s span rating.',
+    title: 'Beams and spreaders (R4)',
+    body: 'A Modulift MOD beam read from Modulift’s own tables, or any beam entered from its rating plate. Top sling angle and length checked against the beam’s span rating, with the side-loading and angle-of-pull reductions applied rather than left for somebody to remember.',
   },
   {
     icon: CheckCircle2,
     title: 'The result',
-    body: 'PASS or FAIL, the utilisation, and the mode factor used with the table it came from. A warning is not a pass: the Appointed Person accepts it by name or the job does not complete.',
+    body: 'PASS or FAIL, the leg tension, the utilisation against the working load limit, and the mode factor used with the table it came from. A warning is not a pass: the Appointed Person accepts it by name or the job does not complete.',
   },
   {
     icon: FileCheck,
-    title: 'R7 · The drawing',
+    title: 'The rigging drawing (R7)',
     body: 'RG-01, an A3 sheet to print or save as PDF, with the gear drawn as gear — master link, chain legs, safety-lock hooks, shackles, round slings — under your own branding.',
   },
 ]
@@ -276,7 +293,7 @@ export default async function RiggingSoftwarePage() {
                 {plan ? `7 days free · then ${plan.price} + VAT a month` : '7 days free · cancel any time'}
               </div>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                Rigging software that works the legs, not just the weight
+                Sling angle calculator that puts the centre of gravity where it is
               </h1>
               <p className="text-xl text-gray-300 mb-6 leading-relaxed">
                 Most sling calculators divide the load by the number of legs and
@@ -379,7 +396,7 @@ export default async function RiggingSoftwarePage() {
       <section className="py-20 bg-slate-900 border-y border-slate-800/50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
-            The same lift, worked two ways
+            Working out the load on each sling leg, two ways
           </h2>
           <p className="text-gray-400 mb-10 leading-relaxed">
             Six tonnes, two legs at 30&deg; to the vertical, pick centres 4 m, and the
@@ -393,9 +410,9 @@ export default async function RiggingSoftwarePage() {
               </div>
               <p className="font-display text-4xl font-bold text-white mb-2">4.29 t</p>
               <p className="text-gray-400 text-sm leading-relaxed">
-                a leg. The load divided by two, with the angle factor applied. It is the
-                method behind nearly every free calculator, and it is correct only while
-                the centre of gravity is in the middle.
+                of leg tension. The load divided by two, with the mode factor for the
+                angle applied. It is the method behind nearly every free sling calculator,
+                and it is correct only while the centre of gravity is in the middle.
               </p>
             </div>
             <div className="bg-slate-950/60 rounded-2xl p-7 border border-amber-500/30">
@@ -404,17 +421,24 @@ export default async function RiggingSoftwarePage() {
               </div>
               <p className="font-display text-4xl font-bold text-white mb-2">4.68 t</p>
               <p className="text-gray-400 text-sm leading-relaxed">
-                on the leg nearer the centre of gravity. Nine per cent more, on the leg
-                that governs the whole arrangement. The far leg is flatter and carries
-                less — which is why the average looks fine.
+                of leg tension on the leg nearer the centre of gravity. Nine per cent
+                more, on the leg that governs the whole arrangement. The far leg is
+                flatter and carries less — which is why the average looks fine.
               </p>
             </div>
           </div>
           <p className="text-gray-400 text-sm mt-8 leading-relaxed">
-            Nine per cent is not a rounding error when a sling is at 85% utilisation. It
-            is the difference between a set that is inside its rating and a set that is
-            not, and nothing on the tag tells you which — because the tag does not know
-            where you put the hook.
+            Nine per cent is not a rounding error when a sling is at 85% of its working
+            load limit. It is the difference between a set that is inside its WLL and a
+            set that is not, and nothing on the tag tells you which — because the tag does
+            not know where you put the hook.
+          </p>
+          <p className="text-gray-400 text-sm mt-4 leading-relaxed">
+            The same arithmetic is why a four-leg sling is rated as though only two legs
+            take the load. Four legs cannot be relied on to share a rigid load evenly, so
+            BS EN 818-4 and BS EN 13414-1 rate the set on two — and when the centre of
+            gravity is off centre as well, the leg that governs is carrying more than even
+            that allows for. The tool says which leg it is and what it is carrying.
           </p>
         </div>
       </section>
@@ -452,11 +476,11 @@ export default async function RiggingSoftwarePage() {
       <section className="py-24 bg-slate-950">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
-            What it asks, and what it gives back
+            How the sling calculator works, step by step
           </h2>
           <p className="text-gray-400 mb-12 leading-relaxed max-w-3xl">
-            Eight steps, in the order a rigger works. You can stop at the answer or carry
-            on to the drawing.
+            The main steps, in the order a rigger works. You can stop at the answer or
+            carry on to the drawing.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {STEPS.map((s) => {
@@ -480,13 +504,14 @@ export default async function RiggingSoftwarePage() {
       <section className="py-20 bg-slate-900 border-y border-slate-800/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-5">
-            Every figure names the table it came from
+            Every mode factor names the BS EN table it came from
           </h2>
           <p className="text-gray-400 mb-8 leading-relaxed">
             Not &ldquo;worked to BS EN&rdquo; in a footer. Each result carries the clause
             behind it, so a reviewer can check it instead of taking it on trust — and so
             can you, three months later, when somebody asks why that leg was rated at
-            that figure.
+            that figure. These are lifting accessories in the language of LOLER, and the
+            duty to plan their use sits with a competent person, not with a spreadsheet.
           </p>
           <ul className="grid sm:grid-cols-2 gap-3 text-sm">
             {[
@@ -521,7 +546,7 @@ export default async function RiggingSoftwarePage() {
       <section className="py-24 bg-slate-950">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
-            Seven days, starting the minute you decide
+            How the 7-day trial works, start to finish
           </h2>
           <p className="text-gray-400 mb-12 leading-relaxed max-w-3xl">
             A card is taken at the start and nothing is charged for seven days. That is
@@ -559,8 +584,9 @@ export default async function RiggingSoftwarePage() {
                 What it does not include
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Lorry loader, mobile crane and excavator lift planning. Rigging is sold on its
-                own here and is also part of the full application.{' '}
+                Lorry loader lift planning — the duty chart, the ALLMI calculation, the ground
+                bearing and the document pack. Rigging is sold on its own here and is also part of
+                the full application.{' '}
                 <Link
                   href="/lift-plan-software"
                   className="text-amber-400 hover:text-amber-300 font-semibold"
@@ -624,7 +650,7 @@ export default async function RiggingSoftwarePage() {
       <section className="py-24 bg-slate-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-12 text-center">
-            Questions people actually ask
+            Sling and rigging questions people actually ask
           </h2>
           <div className="space-y-4">
             {faqs.map((f) => (

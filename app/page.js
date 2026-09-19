@@ -693,7 +693,12 @@ export default function HomePage() {
               </p>
               <p className="text-gray-400 mb-8 leading-relaxed">
                 Try it on your own jobs for 14 days. No card, nothing to cancel — accounts
-                are set up by hand, usually the same working day.
+                are set up by hand, usually the same working day. The rigging side is sold
+                on its own too:{' '}
+                <Link href="/rigging-software" className="text-amber-400 hover:text-amber-300 font-semibold">
+                  a sling angle calculator that works each leg by geometry
+                </Link>
+                , with a 7-day trial.
               </p>
               <Link
                 href="/lift-plan-software"

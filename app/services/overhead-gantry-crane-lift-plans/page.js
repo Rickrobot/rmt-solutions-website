@@ -321,7 +321,11 @@ export default function OverheadGantryCraneLiftPlansPage() {
           <p className="mt-8 text-slate-600">
             A proper overhead crane lift plan deals with each of these in writing — load weight and
             centre of gravity, SWL verification, lifting accessories, travel route and exclusion
-            zones, slinger/signaller arrangements and a method everyone has been briefed on. For
+            zones, slinger/signaller arrangements and a method everyone has been briefed on. To{' '}
+            <Link href="/rigging-software" className="text-amber-600 hover:text-amber-700 underline">
+              work the load on each sling leg and check the accessories against their WLL
+            </Link>
+            , there is software for that part. For
             background on how a plan is built and when one is required, see{' '}
             <Link href="/blog/overhead-crane-lift-plan-guide" className="text-amber-600 hover:text-amber-700 underline">
               do you need a lift plan for an overhead crane

@@ -33,12 +33,17 @@ const COPY = {
     title: 'Lift planning — the whole document, not just the gear',
     href: '/lift-plan-software',
     body:
-      'The machine and its duty chart, the ALLMI calculation, ground bearing pressure and mats, '
-      + 'the method and sequence, a 5 × 5 risk assessment, the 18-point compliance review and an '
-      + 'A3 drawing set — issued as one document under your own name and logo.',
-    who: 'For the Appointed Person who has a plan to produce and defend.',
+      'The lorry loader and its duty chart, the ALLMI calculation, ground bearing pressure and '
+      + 'mats, the method and sequence, a 5 × 5 risk assessment, the 18-point compliance review '
+      + 'and an A3 drawing set — issued as one document under your own name and logo.',
+    who: 'For the Appointed Person who has a lorry loader plan to produce and defend.',
+    /* LORRY LOADERS, AND NOT A WORD MORE.
+       The application holds mobile crane and excavator data, and neither is in
+       front of customers: both are owner-only while the compilation licence and
+       the coverage are settled. Listing them here would sell a tab that does
+       not appear after somebody pays. */
     points: [
-      '1,947 lorry loaders, 564 mobile cranes and the excavator duty charts',
+      'More than 1,900 lorry loaders, 122 with full duty charts',
       'EL-01, PL-01 and RG-01 drawn to the machine’s published dimensions',
       'Works offline on site once installed',
     ],

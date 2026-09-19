@@ -361,7 +361,12 @@ export default function ExcavatorLiftPlansPage() {
           <p className="mt-8 text-slate-600">
             A proper excavator lift plan addresses each of these risks in writing — load weight,
             radius, capacity check, ground bearing, exclusion zones, slinger/signaller arrangements
-            and a documented method everyone has been briefed on. For a longer walk-through of how
+            and a documented method everyone has been briefed on. The chains and slings between the
+            hitch and the load are part of that plan too —{' '}
+            <Link href="/rigging-software" className="text-amber-600 hover:text-amber-700 underline">
+              software to rate the tackle and work each leg
+            </Link>{' '}
+            is sold separately. For a longer walk-through of how
             a plan is built, see our guide on{' '}
             <Link href="/blog/excavator-lift-plans-complete-guide" className="text-amber-600 hover:text-amber-700 underline">
               excavator lift plans

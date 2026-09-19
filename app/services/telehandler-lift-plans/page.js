@@ -246,7 +246,12 @@ export default function TelehandlerLiftPlansPage() {
               Routine fork-handling of palletised loads (brick packs, kit, formwork) is not a LOLER
               lifting operation. As soon as the load is suspended — hook, lifting jib, slings,
               chains — or the machine is being used as a MEWP for personnel, the operation falls
-              under LOLER 1998 and needs a written lift plan.
+              under LOLER 1998 and needs a written lift plan. Where the load is on slings,{' '}
+              <Link href="/rigging-software" className="text-amber-600 hover:text-amber-700 underline">
+                working out what each leg is actually carrying
+              </Link>{' '}
+              is a separate question from the machine&rsquo;s capacity, and the two are not
+              interchangeable.
             </p>
           </div>
           <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6">

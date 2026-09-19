@@ -263,7 +263,7 @@ const blogPosts = {
         <li><strong>Capacity at radius</strong> — the crane or machine's rated capacity from the load chart <em>in the actual configuration</em> (boom length, counterweight, outrigger spread), at the worst-case working radius.</li>
         <li><strong>Utilisation</strong> — gross load divided by capacity at radius, expressed as a percentage. Most UK contractors work to a maximum of around 80% for routine lifts; many tier 1 sites set lower thresholds for complex operations.</li>
         <li><strong>Ground bearing pressure</strong> — outrigger or track loads against the allowable bearing capacity of the ground, sizing mats accordingly.</li>
-        <li><strong>Accessory ratings</strong> — sling angles and working load limits for every item in the rigging arrangement.</li>
+        <li><strong>Accessory ratings</strong> — sling angles and working load limits for every item in the rigging arrangement. Our <a href="/rigging-software">sling angle calculator</a> works each leg from the published BS EN mode factor tables and names the one that governs.</li>
       </ul>
       <p>If a plan you have been handed shows none of these numbers, it is not a lift plan — whatever software it came out of.</p>
 
@@ -505,7 +505,7 @@ const blogPosts = {
       <ol>
         <li><strong>Who planned it?</strong> Name, competence and experience of the planner. An <a href="/blog/cpcs-appointed-person-guide">Appointed Person</a> with a card level matching the lift category answers this cleanly; "the operator sorted it" does not.</li>
         <li><strong>Was the load actually known?</strong> A confirmed weight with a source — drawing, delivery note, weighbridge — not an estimate. Underestimated loads sit behind a large share of lifting incidents.</li>
-        <li><strong>Do the numbers stack up?</strong> Capacity at the working radius in the machine's real configuration, utilisation percentage, accessory ratings at the sling angles used — the <a href="/blog/lift-plan-software-vs-appointed-person">core lifting plan calculations</a>.</li>
+        <li><strong>Do the numbers stack up?</strong> Capacity at the working radius in the machine's real configuration, utilisation percentage, accessory ratings at the sling angles used — the <a href="/blog/lift-plan-software-vs-appointed-person">core lifting plan calculations</a>. The rigging line is where plans most often come back: <a href="/rigging-software">working out what each sling leg is actually carrying</a> is a different sum from dividing the load by the number of legs.</li>
         <li><strong>Was the ground assessed?</strong> Outrigger loads against allowable bearing pressure, mats specified, services and voids checked.</li>
         <li><strong>Does the paper match the site?</strong> The killer question. A plan describing firm level ground while the crane sits on backfill, or a "10m radius" lift executed at 14m, demonstrates the planning was theatre. Inspectors walk the lift and compare.</li>
         <li><strong>Were the people briefed and supervised?</strong> Signed briefing records, a named lift supervisor, and evidence the team could stop the lift if conditions changed.</li>
@@ -1407,7 +1407,7 @@ const blogPosts = {
       <h3>Load Details</h3>
       <p>Accurate information about the load is essential. The plan must record the weight of the load, its dimensions, the position of its centre of gravity, and any characteristics that could affect the lift. This includes factors such as wind loading on large flat panels, the risk of retained water in hollow sections, whether the load is rigid or flexible, and whether it could shift during lifting.</p>
 
-      <p>The weight of all lifting accessories \u2014 slings, shackles, spreader beams, lifting frames \u2014 must be included in the total suspended load. Underestimating load weight is one of the most common causes of lifting incidents.</p>
+      <p>The weight of all lifting accessories \u2014 slings, shackles, spreader beams, lifting frames \u2014 must be included in the total suspended load, and <a href="/rigging-software">each item checked against its own working load limit at the angle it is used at</a>. Underestimating load weight is one of the most common causes of lifting incidents.</p>
 
       <h3>Lifting Equipment Selection</h3>
       <p>The plan must identify the specific machine to be used \u2014 not just "a 50 tonne crane" but the actual make, model, and configuration. This matters because lifting capacity varies significantly between machines of similar rated capacity depending on their boom length, counterweight configuration, and operating radius.</p>
@@ -1420,7 +1420,7 @@ const blogPosts = {
       <p>Industry practice is to express this as a percentage utilisation \u2014 for example, a 2 tonne load on a machine rated at 3 tonnes at the working radius gives 67% utilisation. Most companies and Appointed Persons work to a maximum of 80% utilisation for routine lifts, reserving higher utilisations for exceptional circumstances with additional controls in place.</p>
 
       <h3>Rigging Arrangement</h3>
-      <p>The plan should describe how the load will be attached to the lifting equipment. This includes the type, size, and configuration of slings, the attachment points on the load, the sling angles, and the resulting forces in each leg. For complex or asymmetric loads, the rigging arrangement is critical to ensuring the load remains stable and balanced during the lift.</p>
+      <p>The plan should describe how the load will be attached to the lifting equipment. This includes the type, size, and configuration of slings, the attachment points on the load, the sling angles, and the resulting forces in each leg. For complex or asymmetric loads, the rigging arrangement is critical to ensuring the load remains stable and balanced during the lift — and where the centre of gravity is off centre, <a href="/rigging-software">the leg tensions have to be worked by geometry</a> rather than by dividing the load between the legs.</p>
 
       <h3>Ground Conditions</h3>
       <p>The ground on which the lifting equipment operates must be capable of supporting the imposed loads. The plan should assess ground bearing capacity at the machine's operating position and under outrigger or stabiliser pads. Where ground conditions are uncertain \u2014 such as on made-up ground, near excavations, or over underground services \u2014 specific measures such as timber mats, steel plates, or engineered foundations may be required.</p>

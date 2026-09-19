@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import TrialRequestForm from '@/components/TrialRequestForm'
 import OtherProduct from '@/components/OtherProduct'
-import { APP_URL, planFor, pricingUrl } from '@/lib/appPlans'
+import { APP_URL, costs, planFor, pricingUrl } from '@/lib/appPlans'
 
 /*
  * Titles: layout.js appends " | RMT Solutions" (16 chars) and its own comment
@@ -27,21 +27,24 @@ import { APP_URL, planFor, pricingUrl } from '@/lib/appPlans'
  * software" (107), so both phrasings appear in the copy below.
  */
 export const metadata = {
-  title: 'HIAB & Lorry Loader Lift Plan Software',
-  /* 155 characters. Google truncates a description at about that, and the
-     14-day trial is the part that earns the click, so it must survive. */
+  title: 'UK HIAB & Lorry Loader Lift Plan Software',
+  /* 153 characters. Google truncates a description at about that, and the
+     14-day trial is the part that earns the click, so it must survive.
+     LOLER and BS 7121 are what this audience scans a result for, and the page
+     itself did not use either term — see the compliance review section. */
   description:
-    'Lift plan software for HIABs and lorry loaders. Duty charts for 1,900+ machines, the ALLMI method, an 18-point review and A3 drawings. 14-day trial, no card.',
+    'UK lift plan software for HIABs and lorry loaders. 1,900+ duty charts, the ALLMI method, an 18-point LOLER and BS 7121 review, A3 drawings. 14-day trial.',
   keywords:
     'hiab lift plan software, lorry loader lift plan software, lift plan software, lift planning software, hiab lifting plan, lorry loader lift plan, ALLMI lift plan software, lift plan generator, lifting plan software UK, LOLER lift plan software',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/lift-plan-software',
   },
   openGraph: {
-    title: 'HIAB & Lorry Loader Lift Plan Software | LiftPlan Studio',
+    title: 'UK HIAB & Lorry Loader Lift Plan Software | LiftPlan Studio',
     description:
       'Duty charts, the ALLMI method, an 18-point compliance review and a full A3 drawing pack. Written by a working Appointed Person. 14-day trial, no card.',
     url: 'https://www.rmtsafetysolutions.com/lift-plan-software',
+    locale: 'en_GB',
     /* The loader crane rather than the generic site image: this page is about
        one machine type, and the share card should say which. */
     images: ['/images/lorry-loader-on-site.webp'],
@@ -52,7 +55,7 @@ export const metadata = {
 
 /* --------------------------------------------------------------- schema */
 
-const softwareSchema = {
+const softwareSchema = (plan) => ({
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: 'LiftPlan Studio',
@@ -68,10 +71,26 @@ const softwareSchema = {
   },
   offers: {
     '@type': 'Offer',
-    priceCurrency: 'GBP',
+    priceCurrency: plan?.currency || 'GBP',
     availability: 'https://schema.org/InStock',
-    description: 'One seat, monthly or yearly. 14-day trial available on request, no card required.',
+    description: plan
+      ? `One seat, ${plan.price} + VAT a month, or a year at a discount. 14-day trial available `
+        + 'on request, no card required.'
+      : 'One seat, monthly or yearly. 14-day trial available on request, no card required.',
     url: pricingUrl('liftplan'),
+    ...(plan
+      ? {
+        price: plan.amount,
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: plan.amount,
+          priceCurrency: plan.currency,
+          /* UN/CEFACT code for "month". */
+          unitCode: 'MON',
+          valueAddedTaxIncluded: false,
+        },
+      }
+      : {}),
   },
   featureList: [
     'Duty-chart database of more than 1,900 lorry loaders',
@@ -85,7 +104,7 @@ const softwareSchema = {
     'Works offline on site',
     'Your own branding on every document',
   ],
-}
+})
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -126,11 +145,11 @@ const PAGE_FAQS = [
   },
   {
     q: 'Does it replace the Appointed Person?',
-    a: 'No, and it is built so it cannot pretend to. It does the arithmetic, holds the published figures and produces the paperwork. Deciding whether a lift is safe is a competent person’s judgement and stays with them. Where a figure is not published the application refuses and says so rather than producing a number, and the load chart fitted to the actual machine always governs.',
+    a: 'No, and it is built so it cannot pretend to. LOLER 1998 regulation 8 requires every lifting operation to be properly planned by a competent person, and BS 7121 puts that planning with the Appointed Person; neither duty can be discharged by a piece of software. It does the arithmetic, holds the published figures and produces the paperwork. Deciding whether a lift is safe is a competent person’s judgement and stays with them. Where a figure is not published the application refuses and says so rather than producing a number, and the load chart fitted to the actual machine always governs.',
   },
   {
     q: 'What do I get at the end of a plan?',
-    a: 'A complete pack: cover, job details, the appliance and its duties, the schedule of loads, rigging, ground bearing and mats, the method and sequence of operations, a 5 x 5 risk assessment, the 18-point compliance review, pre-lift checks and a briefing and attendance sheet — plus A3 general arrangement, plan and rigging drawings. It prints to PDF and every sheet carries the document number, revision and issue reference.',
+    a: 'A complete pack: cover, job details, the appliance and its duties, the schedule of loads, rigging, ground bearing and mats, the method statement — the method and sequence of operations — a 5 x 5 risk assessment, the 18-point compliance review, pre-lift checks and a briefing and attendance sheet. That is the RAMS and the lift plan in one document, plus A3 general arrangement, plan and rigging drawings. It prints to PDF and every sheet carries the document number, revision and issue reference.',
   },
   {
     q: 'I just want a HIAB lift plan template — is this that?',
@@ -162,7 +181,7 @@ const FEATURES = [
   {
     icon: Database,
     title: 'More than 1,900 lorry loaders',
-    body: 'Fassi, Palfinger, HIAB, Effer, Atlas, Kennis, Maxilift, Cormach. Duty charts, moments, outreach, stabiliser geometry and published ground pressures where the manufacturer publishes them — and a plain statement of what is missing where they do not.',
+    body: 'Fassi, Palfinger, HIAB, Effer, Atlas, Kennis, Maxilift, Cormach. Duty charts, moments, outreach, stabiliser and outrigger geometry and published ground pressures where the manufacturer publishes them — UK and European sheets only — and a plain statement of what is missing where they do not.',
   },
   {
     icon: FileCheck,
@@ -172,7 +191,7 @@ const FEATURES = [
   {
     icon: ShieldCheck,
     title: 'An 18-point compliance review',
-    body: 'The plan is checked against the same 18 points used on independent reviews, and comes out as Category A or Category B with every finding named. You see what a reviewer would see before you issue it, not afterwards.',
+    body: 'The plan is checked against the same 18 points used on independent reviews — the duties LOLER 1998 and BS 7121 put on the Appointed Person, applied to the plan in front of you — and comes out as Category A or Category B with every finding named. You see what a reviewer would see before you issue it, not afterwards.',
   },
   {
     icon: PencilRuler,
@@ -182,12 +201,12 @@ const FEATURES = [
   {
     icon: Boxes,
     title: 'Loads, tackle and ground',
-    body: 'A catalogue of loads with verified weights, dimensions, slinging notes and wind limits, the lifting tackle to go with them, and ground bearing pressure with mat sizing worked from the ALLMI calculation.',
+    body: 'A catalogue of loads with verified weights, dimensions, slinging notes and the permissible wind for the sail area, the lifting tackle to go with them, and ground bearing pressure under the stabilisers with mat sizing worked from the ALLMI calculation.',
   },
   {
     icon: WifiOff,
-    title: 'Works with no signal',
-    body: 'Installs to the device and runs offline — machine database included. A plan opened in a compound with no bars still opens.',
+    title: 'Works offline on site',
+    body: 'Installs to the device and runs offline — machine database included. A plan opened in a compound with no signal still opens.',
   },
 ]
 
@@ -213,13 +232,13 @@ export default async function LiftPlanSoftwarePage() {
   /* The rigging price, for the block that tells a rigger the £29 product
      exists. Until now this page behaved as though it were the only one, so
      anybody who came here looking for sling angles left again. */
-  const rigging = await planFor('rigging')
+  const [rigging, liftplan] = await Promise.all([planFor('rigging'), planFor('liftplan')])
 
   return (
     <div className="bg-slate-950">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema(liftplan)) }}
       />
       <script
         type="application/ld+json"
@@ -318,12 +337,13 @@ export default async function LiftPlanSoftwarePage() {
       <section className="py-20 bg-slate-900 border-y border-slate-800/50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
-            It came out of a spreadsheet, because most lift planning still is one
+            Lift planning in Excel, and what replaces it
           </h2>
           <p className="text-gray-400 mb-10 leading-relaxed">
             LiftPlan Studio started as a replacement for one contractor&rsquo;s lift
-            planning workbook — the same data and the same maths, rebuilt as something
-            that could be checked, revised and defended. If any of the left-hand column
+            planning spreadsheet — the same data and the same maths, rebuilt as something
+            that could be checked, revised and defended. Most lift planning in this country
+            is still an Excel workbook and a Word template. If any of the left-hand column
             looks familiar, that is who it was built for.
           </p>
           <div className="grid md:grid-cols-2 gap-6">
@@ -387,7 +407,7 @@ export default async function LiftPlanSoftwarePage() {
       <section className="py-24 bg-slate-950 border-t border-slate-800/50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
-            What it looks like
+            What a lorry loader lift plan looks like
           </h2>
           <p className="text-gray-400 text-center max-w-2xl mx-auto mb-14">
             Screens from the application itself, not a mock-up.
@@ -456,7 +476,8 @@ export default async function LiftPlanSoftwarePage() {
           </div>
           <div className="mt-10 bg-slate-950/60 border border-slate-800 rounded-2xl p-6 text-center">
             <p className="text-gray-400 text-sm">
-              After the trial it is one seat, monthly or yearly, with unlimited plans.{' '}
+              After the trial it is one seat, {costs(liftplan)}, or a year at a discount —
+              unlimited plans either way.{' '}
               <a
                 href={pricingUrl('liftplan')}
                 target="_blank"
@@ -494,11 +515,25 @@ export default async function LiftPlanSoftwarePage() {
                 disagree the machine is right.
               </p>
               <p>
-                <strong className="text-white">It is for lorry loaders.</strong> Not
-                mobile cranes, not tower cranes, not excavators in object handling. If you
-                need those planned,{' '}
-                <Link href="/services/lift-plans" className="text-amber-400 hover:text-amber-300">
-                  I write those plans as a service
+                <strong className="text-white">It is for lorry loader lift plans.</strong> Not
+                mobile cranes, not tower cranes, not excavators in object handling — the
+                data for those is held but is not released to customers, and selling a tab
+                that does not appear is not something I am willing to do. If you need those
+                planned, I write them as a service:{' '}
+                <Link href="/services/mobile-crane-lift-plans" className="text-amber-400 hover:text-amber-300">
+                  mobile crane lift plans
+                </Link>
+                ,{' '}
+                <Link href="/services/tower-crane" className="text-amber-400 hover:text-amber-300">
+                  tower crane contracts
+                </Link>
+                {' '}and{' '}
+                <Link href="/services/excavator-lift-plans" className="text-amber-400 hover:text-amber-300">
+                  excavator lift plans
+                </Link>
+                . For the gear between the hook and the load,{' '}
+                <Link href="/rigging-software" className="text-amber-400 hover:text-amber-300">
+                  the sling angle calculator is sold separately
                 </Link>
                 .
               </p>
@@ -514,7 +549,7 @@ export default async function LiftPlanSoftwarePage() {
       <section className="py-24 bg-slate-900 border-t border-slate-800/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-12 text-center">
-            Questions people actually ask
+            Lift plan software questions people actually ask
           </h2>
           <div className="space-y-4">
             {PAGE_FAQS.map((f) => (
@@ -548,7 +583,7 @@ export default async function LiftPlanSoftwarePage() {
               see whether the pack that comes out is one you would put your name to.
             </p>
           </div>
-          <TrialRequestForm idPrefix="trial-foot" heading="Request your 14-day trial" />
+          <TrialRequestForm idPrefix="trial-foot" heading="Start your 14-day trial" />
         </div>
       </section>
     </div>
