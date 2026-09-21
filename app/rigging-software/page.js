@@ -86,7 +86,7 @@ const softwareSchema = (plan) => ({
     availability: 'https://schema.org/InStock',
     url: pricingUrl('rigging'),
     description: plan
-      ? `One seat, ${plan.price} + VAT a month. ${plan.days}-day free trial: a card is taken at `
+      ? `One seat, ${plan.price} + VAT a month. ${plan.trialDays || 7}-day free trial: a card is taken at `
         + 'sign-up, nothing is charged until the trial ends, and it can be cancelled at any time.'
       : 'One seat, billed monthly. 7-day free trial: a card is taken at sign-up, nothing is '
         + 'charged until the trial ends, and it can be cancelled at any time.',
