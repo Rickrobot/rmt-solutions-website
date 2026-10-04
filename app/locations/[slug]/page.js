@@ -315,8 +315,13 @@ const SERVICE_LINKS = [
   { slug: 'aerial-site-surveys',       title: 'Aerial Site Surveys' },
 ]
 
+// Oct 2026: only these three keep their own page. The other cities 301 to
+// /locations (see next.config.js) — their pages shared ~44% of their wording
+// and earned 11 clicks in three months between them.
+const PAGE_SLUGS = ['warrington', 'manchester', 'liverpool']
+
 export async function generateStaticParams() {
-  return Object.keys(LOCATIONS).map((slug) => ({ slug }))
+  return PAGE_SLUGS.map((slug) => ({ slug }))
 }
 
 export async function generateMetadata({ params }) {

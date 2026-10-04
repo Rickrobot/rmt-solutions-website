@@ -543,7 +543,7 @@ export default function ResourcesPage() {
             </p>
 
             <p>
-              Travel time from our Warrington base ranges from 35 minutes to <Link href="/locations/manchester" className="text-amber-400 hover:text-amber-300 underline">Manchester</Link> to about 4 hours to <Link href="/locations/edinburgh" className="text-amber-400 hover:text-amber-300 underline">Edinburgh</Link>. Same-day site attendance is practical across the North West and feasible into the Midlands; further afield we plan visits 48–72 hours ahead. The plans themselves are written to the same standard regardless of where the site is — what varies by region is local context (oversail agreements, listed building constraints, access routes, which crane hire firms operate in the area), not the compliance baseline.
+              Travel time from our Warrington base ranges from 35 minutes to <Link href="/locations/manchester" className="text-amber-400 hover:text-amber-300 underline">Manchester</Link> to about 4 hours to Edinburgh. Same-day site attendance is practical across the North West and feasible into the Midlands; further afield we plan visits 48–72 hours ahead. The plans themselves are written to the same standard regardless of where the site is — what varies by region is local context (oversail agreements, listed building constraints, access routes, which crane hire firms operate in the area), not the compliance baseline.
             </p>
 
             <p>
