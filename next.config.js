@@ -44,38 +44,52 @@ const nextConfig = {
   async redirects() {
     return [
       // ============================================
+      // VERCEL ALIAS -> CANONICAL DOMAIN (Oct 2026)
+      // ============================================
+      // rmt-solutions-website.vercel.app is a public production alias that
+      // served a full second copy of the site (HTTP 200). The canonical tags
+      // already point at www, but a 308 closes the duplicate outright so
+      // Google only ever crawls one host.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'rmt-solutions-website.vercel.app' }],
+        destination: 'https://www.rmtsafetysolutions.com/:path*',
+        permanent: true,
+      },
+
+      // ============================================
       // EXISTING REDIRECTS (preserved)
       // ============================================
       
       // Old lift plan pages
       {
         source: '/telehandler-lift-plan',
-        destination: '/services/lift-plans',
+        destination: '/services/telehandler-lift-plans',
         permanent: true,
       },
       {
         source: '/telehandler-lift-plan/',
-        destination: '/services/lift-plans',
+        destination: '/services/telehandler-lift-plans',
         permanent: true,
       },
       {
         source: '/excavator-lift-plan',
-        destination: '/services/lift-plans',
+        destination: '/services/excavator-lift-plans',
         permanent: true,
       },
       {
         source: '/excavator-lift-plan/',
-        destination: '/services/lift-plans',
+        destination: '/services/excavator-lift-plans',
         permanent: true,
       },
       {
         source: '/hiab-lift-plan-2',
-        destination: '/services/lift-plans',
+        destination: '/services/lorry-loader-lift-plans',
         permanent: true,
       },
       {
         source: '/hiab-lift-plan-2/',
-        destination: '/services/lift-plans',
+        destination: '/services/lorry-loader-lift-plans',
         permanent: true,
       },
       // Tower crane pages
@@ -129,7 +143,7 @@ const nextConfig = {
       // Hiab lift plan (old URL without -2)
       {
         source: '/hiab-lift-plan',
-        destination: '/services/lift-plans',
+        destination: '/services/lorry-loader-lift-plans',
         permanent: true,
       },
       
