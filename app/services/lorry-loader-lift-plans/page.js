@@ -1,3 +1,4 @@
+import LiftDrawingExamples from '@/components/LiftDrawingExamples'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -257,6 +258,8 @@ export default function LorryLoaderLiftPlansPage() {
           </div>
         </div>
       </section>
+
+      <LiftDrawingExamples type="lorry-loader" />
 
       {/* Free Template — internal link to the resources download page so the
           service page passes equity to the template page and gives visitors a

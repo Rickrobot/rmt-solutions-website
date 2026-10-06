@@ -1,3 +1,4 @@
+import LiftDrawingExamples from '@/components/LiftDrawingExamples'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, FileText, Layers, Ruler, Users } from 'lucide-react'
@@ -254,6 +255,8 @@ export default function SteelErectionPage() {
           </div>
         </div>
       </section>
+
+      <LiftDrawingExamples type="steel" />
 
       {/* Long-form body copy.
           Fix #8, Jul 2026 SEO review. This page was 437 words — the thinnest

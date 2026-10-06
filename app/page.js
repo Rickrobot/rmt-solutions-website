@@ -1,3 +1,4 @@
+import LiftDrawingShowcase from '@/components/LiftDrawingShowcase'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FileText, Building2, Layers, ArrowRight, CheckCircle, Phone } from 'lucide-react'
@@ -572,6 +573,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <LiftDrawingShowcase />
 
       {/* How We Work — process section (adapted from the Tailwind "Studio" template
           into RMT's dark slate/amber theme). Inline markup, no separate component. */}

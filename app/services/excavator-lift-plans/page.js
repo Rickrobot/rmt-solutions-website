@@ -1,3 +1,4 @@
+import LiftDrawingExamples from '@/components/LiftDrawingExamples'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Clock, ShieldCheck, FileCheck, PhoneCall, CheckCircle2, AlertTriangle, ArrowRight } from 'lucide-react'
@@ -469,6 +470,8 @@ export default function ExcavatorLiftPlansPage() {
           </div>
         </div>
       </section>
+
+      <LiftDrawingExamples type="excavator" />
 
       {/* Image Break */}
       <section className="relative h-80">
