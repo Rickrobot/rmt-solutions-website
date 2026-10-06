@@ -1,3 +1,4 @@
+import LiftDrawingExamples from '@/components/LiftDrawingExamples'
 import Link from 'next/link'
 import { Clock, ShieldCheck, FileCheck, PhoneCall, CheckCircle2, ArrowRight } from 'lucide-react'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
@@ -347,6 +348,8 @@ export default function TelehandlerLiftPlansPage() {
           </div>
         </div>
       </section>
+
+      <LiftDrawingExamples type="telehandler" />
 
       {/* Process */}
       <section className="py-16 bg-white">
