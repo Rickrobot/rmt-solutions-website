@@ -1,3 +1,4 @@
+import { liftDrawingExamples, LIFT_DRAWINGS_PUBLISHED } from '@/lib/liftDrawingExamples';
 import { TRADE_SLUGS } from '../services/method-statements-rams/trades';
 
 // Custom sitemap.xml route handler.
@@ -28,8 +29,8 @@ const BASE_URL = 'https://www.rmtsafetysolutions.com';
 const SITE_LAST_UPDATED = '2026-09-15';
 
 // Canonical images surfaced via the image sitemap extension. These give
-// the listed pages a hard image association in Google Search and make
-// the URLs eligible for Google Images results.
+// crawlers the image URLs associated with each page. Search appearance
+// and indexing remain decisions for the search engine.
 const OG_IMAGE = `${BASE_URL}/images/og-lift-planning.jpg`;
 /* The rigging page's own image: a slung precast unit is what that tool is for,
    and the generic site card says nothing about slinging. */
@@ -37,7 +38,7 @@ const PRECAST_IMAGE = `${BASE_URL}/images/precast-concrete-lift.webp`;
 const HERO_IMAGE = `${BASE_URL}/images/mobile-crane-steel-erection.webp`;
 
 const STATIC_ROUTES = [
-  { path: '',              changefreq: 'weekly',  priority: '1.0', images: [HERO_IMAGE, OG_IMAGE] },
+  { path: '',              changefreq: 'weekly',  priority: '1.0', images: [HERO_IMAGE, OG_IMAGE, ...liftDrawingExamples.map(example => `${BASE_URL}${example.drawings[0].src}`)] },
   { path: '/about',        changefreq: 'monthly', priority: '0.8', images: [OG_IMAGE] },
   // Services hub — parent of every /services/{slug} leaf. Priority is
   // set high (0.9) because every service leaf's BreadcrumbList JSON-LD
@@ -190,7 +191,7 @@ function buildSitemapXml() {
     entries.push(
       buildUrlEntry({
         loc: `${BASE_URL}${r.path}`,
-        lastmod: SITE_LAST_UPDATED,
+        lastmod: r.path === '' ? LIFT_DRAWINGS_PUBLISHED : SITE_LAST_UPDATED,
         changefreq: r.changefreq,
         priority: r.priority,
         images: r.images,
@@ -198,15 +199,18 @@ function buildSitemapXml() {
     );
   }
 
-  // Service pages — each gets the hero image surfaced
+  // Associate the public drawing originals with their service landing pages.
   for (const slug of SERVICE_SLUGS) {
+    const drawingExample = liftDrawingExamples.find(example => example.href === `/services/${slug}`);
     entries.push(
       buildUrlEntry({
         loc: `${BASE_URL}/services/${slug}`,
-        lastmod: SITE_LAST_UPDATED,
+        lastmod: drawingExample ? LIFT_DRAWINGS_PUBLISHED : SITE_LAST_UPDATED,
         changefreq: 'monthly',
         priority: '0.9',
-        images: [HERO_IMAGE],
+        images: drawingExample
+          ? drawingExample.drawings.map(drawing => `${BASE_URL}${drawing.src}`)
+          : [HERO_IMAGE],
       })
     );
   }

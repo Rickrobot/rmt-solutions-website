@@ -5,8 +5,38 @@ import { liftDrawingExamples } from '@/lib/liftDrawingExamples'
 
 export default function LiftDrawingExamples({ type }) {
   const example = liftDrawingExamples.find((item) => item.id === type)
+  const pageUrl = `https://www.rmtsafetysolutions.com${example.href}`
+  const imageObjects = example.drawings.map((drawing) => ({
+    '@type': 'ImageObject',
+    '@id': `https://www.rmtsafetysolutions.com${drawing.src}#image`,
+    contentUrl: `https://www.rmtsafetysolutions.com${drawing.src}`,
+    url: `https://www.rmtsafetysolutions.com${drawing.src}`,
+    name: drawing.title,
+    caption: drawing.caption,
+    description: drawing.alt,
+    encodingFormat: 'image/webp',
+    width: 2382,
+    height: 1684,
+    creator: { '@type': 'Organization', name: 'RMT Solutions Ltd', url: 'https://www.rmtsafetysolutions.com' },
+    isPartOf: { '@id': `${pageUrl}#webpage` },
+  }))
+  const imageSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: example.title,
+        primaryImageOfPage: { '@id': imageObjects[0]['@id'] },
+        image: imageObjects.map((drawing) => ({ '@id': drawing['@id'] })),
+      },
+      ...imageObjects,
+    ],
+  }
   return (
     <section id="drawing-examples" aria-labelledby="drawing-examples-heading" className="scroll-mt-28 py-20 bg-slate-950 border-y border-slate-800">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema).replace(/</g, '\\u003c') }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4">RMT drawing examples</p>
         <h2 id="drawing-examples-heading" className="font-display text-3xl sm:text-4xl font-bold text-white mb-5">{example.title}</h2>
