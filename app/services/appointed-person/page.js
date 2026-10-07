@@ -257,7 +257,7 @@ export default function AppointedPersonPage() {
               </h3>
               <p className="text-gray-400 mb-6 leading-relaxed">
                 RMT Solutions is run by Ricky Marsh, a CPCS A61 Appointed Person
-                with 35 years of UK construction experience. The A61 ticket is backed by a NEBOSH National
+                with 35 years of UK construction experience. The A61 ticket is backed by the NEBOSH
                 Diploma, CertIOSH, MIIRSM and TIFSM — so the person planning your lift holds both the
                 lifting competence and the wider health and safety qualifications a principal contractor
                 expects to see.
