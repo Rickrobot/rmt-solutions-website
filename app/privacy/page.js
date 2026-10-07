@@ -4,15 +4,14 @@ import CookieChoice from '@/components/CookieChoice'
 /**
  * The privacy notice for this website.
  *
- * Separate from the LiftPlan Studio notice at liftplanstudio.com/privacy, and
- * deliberately so: that one covers a signed-in product with accounts and
- * subscriptions, this one covers a marketing site with four enquiry forms.
- * One document trying to be both would be accurate about neither.
+ * Covers the consultancy website only. The LiftPlan Studio trial form was
+ * removed with the software pages in October 2026, so this notice no longer
+ * describes it.
  *
  * Every factual claim here was written from the code: the forms in
- * app/contact, components/InlineQuoteForm, components/GatedDownload and
- * components/TrialRequestForm, the analytics in components/Analytics, and the
- * consent gate in lib/consent. If a form changes, this page changes with it.
+ * app/contact, components/InlineQuoteForm and components/GatedDownload, the
+ * analytics in components/Analytics, and the consent gate in lib/consent. If a
+ * form changes, this page changes with it.
  */
 
 export const metadata = {
@@ -28,7 +27,7 @@ export const metadata = {
   },
 }
 
-const EFFECTIVE = '17 September 2026'
+const EFFECTIVE = '7 October 2026'
 
 function Section({ n, title, children }) {
   return (
@@ -109,20 +108,7 @@ export default function PrivacyPage() {
         <Section n={2} title="What this notice covers">
           <p>
             This website, and what happens when you use it. It covers the enquiry forms, the
-            template downloads, the trial request form and the analytics.
-          </p>
-          <p>
-            It does not cover <strong className="text-white">LiftPlan Studio</strong>, the software
-            we sell. That has accounts, subscriptions and its own notice, at{' '}
-            <a
-              href="https://liftplanstudio.com/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-amber-400 hover:text-amber-300 underline"
-            >
-              liftplanstudio.com/privacy
-            </a>
-            . Requesting a trial from this site is covered here; using the product is covered there.
+            template downloads and the analytics.
           </p>
           <p>
             It also does not cover the lift plans and safety documents we produce for clients. Those
@@ -145,12 +131,6 @@ export default function PrivacyPage() {
               <p>
                 Some resources ask for a name and an email address before the file downloads. We
                 also record which template it was. Two fields, and no newsletter.
-              </p>
-            </Row>
-            <Row label="LiftPlan Studio trial requests">
-              <p>
-                Name, email address, telephone number, company, your role, and a description of
-                what you lift or which machines you use.
               </p>
             </Row>
             <Row label="Analytics, but only if you agree">
@@ -177,8 +157,8 @@ export default function PrivacyPage() {
 
         <Section n={4} title="Why we hold it, and the lawful basis">
           <p>
-            <strong className="text-white">Answering you.</strong> Where you send an enquiry, a
-            quote request or a trial request, we process it under Article 6(1)(b) of the UK GDPR
+            <strong className="text-white">Answering you.</strong> Where you send an enquiry or a
+            quote request, we process it under Article 6(1)(b) of the UK GDPR
             &mdash; steps taken at your request before entering a contract &mdash; and, where no
             contract follows, under Article 6(1)(f), our legitimate interest in replying to
             somebody who asked us a question.

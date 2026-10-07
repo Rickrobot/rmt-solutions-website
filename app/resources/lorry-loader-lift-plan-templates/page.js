@@ -55,25 +55,6 @@ export default function LorryLoaderTemplatesPage() {
             </a>
           </div>
 
-          {/* One line, directly under the download buttons.
-              The full software section further down this page sits at about
-              80% of its length, behind the download CTA — which means anyone
-              who came for the template has it and has gone long before they
-              reach it. This is the same offer placed where it is actually
-              seen. Deliberately a text link and not a second button: the
-              template download is what this page promised, and the promise
-              comes first. */}
-          <p className="mt-6 text-slate-400 text-sm max-w-3xl">
-            Filling one of these in every week?{' '}
-            <Link
-              href="/lift-plan-software"
-              className="text-amber-400 hover:text-amber-300 underline font-medium"
-            >
-              LiftPlan Studio
-            </Link>{' '}
-            does it for you — published duty charts for 1,900+ HIABs and lorry loaders,
-            the ALLMI calculation and the A3 drawings, free for 14 days.
-          </p>
         </div>
       </section>
 
@@ -509,39 +490,6 @@ export default function LorryLoaderTemplatesPage() {
                 {service.title} →
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Tired of filling the template in by hand?
-          This page ranks for the template queries and they are the same people
-          who need the software — somebody searching "hiab lift plan template"
-          is trying to produce a lift plan themselves, which is exactly who
-          LiftPlan Studio is for. The template stays free and stays the offer;
-          this is the next step for anybody who wants one. */}
-      <section className="py-16 bg-slate-950 border-t border-slate-800/50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-slate-900/60 border border-amber-500/30 rounded-2xl p-8">
-            <p className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-3">
-              If you fill one of these in every week
-            </p>
-            <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-4">
-              The software fills it in for you
-            </h2>
-            <p className="text-gray-400 leading-relaxed mb-6">
-              A template is a blank document — it does not know what a Palfinger PK 62002
-              lifts at 7 m. LiftPlan Studio holds the published duty charts for more than
-              1,900 HIABs and lorry loaders, works the ALLMI calculation, runs an 18-point
-              compliance review and produces the whole pack with A3 drawings under your own
-              branding. There is a 14-day trial, and no card is taken.
-            </p>
-            <Link
-              href="/lift-plan-software"
-              className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 px-6 py-3 rounded-xl font-semibold transition"
-            >
-              See the lift plan software
-              <span aria-hidden="true">→</span>
-            </Link>
           </div>
         </div>
       </section>

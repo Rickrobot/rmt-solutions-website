@@ -470,11 +470,8 @@ export default function MobileCraneLiftPlansPage() {
               </ul>
               <p className="text-gray-400 text-sm mb-4">
                 Each of those accessories has a rating of its own at the angle it is used at, which
-                the crane chart knows nothing about.{' '}
-                <Link href="/rigging-software" className="text-amber-400 hover:text-amber-300">
-                  Checking the tackle against its WLL
-                </Link>{' '}
-                is a separate calculation from the crane duty.
+                the crane chart knows nothing about. Checking the tackle against its WLL is a
+                separate calculation from the crane duty.
               </p>
               <p className="text-gray-400 text-sm mt-4">
                 What is left is the net capacity. The load divided by that figure is your utilisation —

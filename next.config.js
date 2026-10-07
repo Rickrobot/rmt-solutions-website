@@ -58,6 +58,25 @@ const nextConfig = {
       },
 
       // ============================================
+      // SOFTWARE PAGES REMOVED (Oct 2026)
+      // ============================================
+      // LiftPlan Studio and the rigging calculator are no longer sold from
+      // this site. Both URLs were indexed and in the sitemap, so they 301 to
+      // the closest consultancy page rather than 404: the lift plan software
+      // page was HIAB / lorry loader only, and rigging is planned as part of
+      // every lift plan we write.
+      {
+        source: '/lift-plan-software',
+        destination: '/services/lorry-loader-lift-plans',
+        permanent: true,
+      },
+      {
+        source: '/rigging-software',
+        destination: '/services/lift-plans',
+        permanent: true,
+      },
+
+      // ============================================
       // EXISTING REDIRECTS (preserved)
       // ============================================
       

@@ -244,7 +244,7 @@ const blogPosts = {
       </ul>
       <p>Well-known examples include 3D Lift Plan, Liebherr's Crane Planner and similar manufacturer tools. For mobile crane work on congested sites, this modelling genuinely earns its keep — a clearance problem found on screen is vastly cheaper than one found on the day.</p>
 
-      <p>Lorry loaders are the gap in that list. The crane planners do not cover them and the generic tools do not hold their duty charts, which is why most lorry loader planning is still done in a spreadsheet. We built <a href="/lift-plan-software">LiftPlan Studio</a> for that job specifically: duty charts for more than 1,900 lorry loaders, the ALLMI calculation in full, an 18-point compliance review and an A3 drawing set, issued under your own branding. It is a planning aid in exactly the sense this article means — it does the arithmetic and the paperwork, and it will not sign anything. There is a 14-day trial if you want to put it against a real job.</p>
+      <p>Lorry loaders are the gap in that list. The crane planners do not cover them and the generic tools do not hold their duty charts, which is why most lorry loader planning is still done in a spreadsheet. For those machines the planning aid is usually the Appointed Person's own working: the published duty chart for the exact machine, the ALLMI calculation done in full and the drawings produced by hand — which is how we write <a href="/services/lorry-loader-lift-plans">lorry loader lift plans</a>.</p>
 
       <h2>What the Software Cannot Do</h2>
       <p>LOLER 1998 Regulation 8 requires every lifting operation to be <strong>planned by a competent person</strong>. The duty attaches to a person, not a product. Software has no idea that:</p>
@@ -263,7 +263,7 @@ const blogPosts = {
         <li><strong>Capacity at radius</strong> — the crane or machine's rated capacity from the load chart <em>in the actual configuration</em> (boom length, counterweight, outrigger spread), at the worst-case working radius.</li>
         <li><strong>Utilisation</strong> — gross load divided by capacity at radius, expressed as a percentage. Most UK contractors work to a maximum of around 80% for routine lifts; many tier 1 sites set lower thresholds for complex operations.</li>
         <li><strong>Ground bearing pressure</strong> — outrigger or track loads against the allowable bearing capacity of the ground, sizing mats accordingly.</li>
-        <li><strong>Accessory ratings</strong> — sling angles and working load limits for every item in the rigging arrangement. Our <a href="/rigging-software">sling angle calculator</a> works each leg from the published BS EN mode factor tables and names the one that governs.</li>
+        <li><strong>Accessory ratings</strong> — sling angles and working load limits for every item in the rigging arrangement, with each leg worked from the published BS EN mode factor tables and the governing one named.</li>
       </ul>
       <p>If a plan you have been handed shows none of these numbers, it is not a lift plan — whatever software it came out of.</p>
 
@@ -505,7 +505,7 @@ const blogPosts = {
       <ol>
         <li><strong>Who planned it?</strong> Name, competence and experience of the planner. An <a href="/blog/cpcs-appointed-person-guide">Appointed Person</a> with a card level matching the lift category answers this cleanly; "the operator sorted it" does not.</li>
         <li><strong>Was the load actually known?</strong> A confirmed weight with a source — drawing, delivery note, weighbridge — not an estimate. Underestimated loads sit behind a large share of lifting incidents.</li>
-        <li><strong>Do the numbers stack up?</strong> Capacity at the working radius in the machine's real configuration, utilisation percentage, accessory ratings at the sling angles used — the <a href="/blog/lift-plan-software-vs-appointed-person">core lifting plan calculations</a>. The rigging line is where plans most often come back: <a href="/rigging-software">working out what each sling leg is actually carrying</a> is a different sum from dividing the load by the number of legs.</li>
+        <li><strong>Do the numbers stack up?</strong> Capacity at the working radius in the machine's real configuration, utilisation percentage, accessory ratings at the sling angles used — the <a href="/blog/lift-plan-software-vs-appointed-person">core lifting plan calculations</a>. The rigging line is where plans most often come back: working out what each sling leg is actually carrying is a different sum from dividing the load by the number of legs.</li>
         <li><strong>Was the ground assessed?</strong> Outrigger loads against allowable bearing pressure, mats specified, services and voids checked.</li>
         <li><strong>Does the paper match the site?</strong> The killer question. A plan describing firm level ground while the crane sits on backfill, or a "10m radius" lift executed at 14m, demonstrates the planning was theatre. Inspectors walk the lift and compare.</li>
         <li><strong>Were the people briefed and supervised?</strong> Signed briefing records, a named lift supervisor, and evidence the team could stop the lift if conditions changed.</li>
@@ -1185,7 +1185,7 @@ const blogPosts = {
 
       <p>Lorry loaders are involved in a disproportionately high number of lifting incidents in the UK, often because operators and site teams treat them as delivery equipment rather than as cranes. BS 7121-4 makes clear that they are cranes — and that the same planning, competence, and supervision requirements apply.</p>
 
-      <p>That is a planning burden most delivery operations are not set up for, which is why we built <a href="/lift-plan-software">lift plan software for HIABs and lorry loaders</a>: published duty charts for more than 1,900 machines, the ALLMI calculation worked in full, and a BS 7121-4 plan produced under your own branding. Free to try for 14 days.</p>
+      <p>That is a planning burden most delivery operations are not set up for. A <a href="/services/lorry-loader-lift-plans">lorry loader lift plan</a> written by a CPCS Appointed Person — from the published duty chart, with the ALLMI calculation worked in full and to BS 7121-4 — takes it off their hands.</p>
 
       <h3>BS 7121-5:2019 — Tower Cranes</h3>
       <p>Part 5 addresses tower cranes. This is one of the most detailed parts of the series, reflecting the complexity and risk profile of tower crane operations. It covers planning, erection, climbing, dismantling, anti-collision systems, wind speed management, foundations, and the specific competence requirements for tower crane teams.</p>
@@ -1407,7 +1407,7 @@ const blogPosts = {
       <h3>Load Details</h3>
       <p>Accurate information about the load is essential. The plan must record the weight of the load, its dimensions, the position of its centre of gravity, and any characteristics that could affect the lift. This includes factors such as wind loading on large flat panels, the risk of retained water in hollow sections, whether the load is rigid or flexible, and whether it could shift during lifting.</p>
 
-      <p>The weight of all lifting accessories \u2014 slings, shackles, spreader beams, lifting frames \u2014 must be included in the total suspended load, and <a href="/rigging-software">each item checked against its own working load limit at the angle it is used at</a>. Underestimating load weight is one of the most common causes of lifting incidents.</p>
+      <p>The weight of all lifting accessories \u2014 slings, shackles, spreader beams, lifting frames \u2014 must be included in the total suspended load, and each item checked against its own working load limit at the angle it is used at. Underestimating load weight is one of the most common causes of lifting incidents.</p>
 
       <h3>Lifting Equipment Selection</h3>
       <p>The plan must identify the specific machine to be used \u2014 not just "a 50 tonne crane" but the actual make, model, and configuration. This matters because lifting capacity varies significantly between machines of similar rated capacity depending on their boom length, counterweight configuration, and operating radius.</p>
@@ -1420,7 +1420,7 @@ const blogPosts = {
       <p>Industry practice is to express this as a percentage utilisation \u2014 for example, a 2 tonne load on a machine rated at 3 tonnes at the working radius gives 67% utilisation. Most companies and Appointed Persons work to a maximum of 80% utilisation for routine lifts, reserving higher utilisations for exceptional circumstances with additional controls in place.</p>
 
       <h3>Rigging Arrangement</h3>
-      <p>The plan should describe how the load will be attached to the lifting equipment. This includes the type, size, and configuration of slings, the attachment points on the load, the sling angles, and the resulting forces in each leg. For complex or asymmetric loads, the rigging arrangement is critical to ensuring the load remains stable and balanced during the lift — and where the centre of gravity is off centre, <a href="/rigging-software">the leg tensions have to be worked by geometry</a> rather than by dividing the load between the legs.</p>
+      <p>The plan should describe how the load will be attached to the lifting equipment. This includes the type, size, and configuration of slings, the attachment points on the load, the sling angles, and the resulting forces in each leg. For complex or asymmetric loads, the rigging arrangement is critical to ensuring the load remains stable and balanced during the lift — and where the centre of gravity is off centre, the leg tensions have to be worked by geometry rather than by dividing the load between the legs.</p>
 
       <h3>Ground Conditions</h3>
       <p>The ground on which the lifting equipment operates must be capable of supporting the imposed loads. The plan should assess ground bearing capacity at the machine's operating position and under outrigger or stabiliser pads. Where ground conditions are uncertain \u2014 such as on made-up ground, near excavations, or over underground services \u2014 specific measures such as timber mats, steel plates, or engineered foundations may be required.</p>
@@ -2463,7 +2463,7 @@ const blogPosts = {
 
       <p>Lorry loader capacity reduces dramatically with radius. A machine rated at 10 tonne-metres might lift 2,500kg at 4 metres radius but only 1,000kg at 10 metres. The plan must check capacity at the actual maximum radius required, not at minimum radius.</p>
 
-      <p>Reading that figure off the correct duty chart is where most of the planning time goes and where most of the errors are made. Our <a href="/lift-plan-software">HIAB and lorry loader lift plan software</a> holds published duty charts for more than 1,900 loader cranes, so selecting the machine brings its rated capacity table with it and the radius check is made against the manufacturer’s own published figures rather than a remembered one.</p>
+      <p>Reading that figure off the correct duty chart is where most of the planning time goes and where most of the errors are made. The radius check has to be made against the manufacturer’s own published duty chart for that exact machine and configuration, never a remembered figure.</p>
 
       <p>Where multiple items are being offloaded to different positions, the plan should check capacity for the most onerous lift \u2014 typically the heaviest item at the greatest radius.</p>
 
@@ -2543,7 +2543,7 @@ const blogPosts = {
 
       <div class="bg-slate-800/50 border border-amber-500/30 rounded-2xl p-8 my-12">
         <h3 class="text-amber-400 font-display text-2xl font-bold mb-4">Need a Lorry Loader Lift Plan?</h3>
-        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant <a href="/services/lorry-loader-lift-plans">lorry loader lift plans</a> for all types of truck-mounted crane operations. Fast turnaround from a CPCS Appointed Person with 35 years of experience. Prefer to draft your own? Start from our <a href="/resources/lorry-loader-lift-plan-templates">free lorry loader lift plan template</a>, or produce the whole pack yourself in our <a href="/lift-plan-software">HIAB and lorry loader lift plan software</a> — free to try for 14 days.</p>
+        <p class="text-gray-300 mb-6">RMT Solutions provides LOLER-compliant <a href="/services/lorry-loader-lift-plans">lorry loader lift plans</a> for all types of truck-mounted crane operations. Fast turnaround from a CPCS Appointed Person with 35 years of experience. Prefer to draft your own? Start from our <a href="/resources/lorry-loader-lift-plan-templates">free lorry loader lift plan template</a>.</p>
         <a href="/contact" class="btn-primary inline-block">Get a Quote</a>
       </div>
     `,

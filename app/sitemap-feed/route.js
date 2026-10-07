@@ -26,15 +26,12 @@ import { TRADE_SLUGS } from '../services/method-statements-rams/trades';
 //   - Every route listed here MUST exist in the app.
 
 const BASE_URL = 'https://www.rmtsafetysolutions.com';
-const SITE_LAST_UPDATED = '2026-09-15';
+const SITE_LAST_UPDATED = '2026-10-07';
 
 // Canonical images surfaced via the image sitemap extension. These give
 // crawlers the image URLs associated with each page. Search appearance
 // and indexing remain decisions for the search engine.
 const OG_IMAGE = `${BASE_URL}/images/og-lift-planning.jpg`;
-/* The rigging page's own image: a slung precast unit is what that tool is for,
-   and the generic site card says nothing about slinging. */
-const PRECAST_IMAGE = `${BASE_URL}/images/precast-concrete-lift.webp`;
 const HERO_IMAGE = `${BASE_URL}/images/mobile-crane-steel-erection.webp`;
 
 const STATIC_ROUTES = [
@@ -51,15 +48,6 @@ const STATIC_ROUTES = [
   // from every form on the site and from the cookie banner, and a privacy
   // notice Google cannot reach is one a regulator would call hard to find.
   { path: '/privacy',      changefreq: 'yearly',  priority: '0.3' },
-  // LiftPlan Studio. High priority: it is the only page on the site selling a
-  // product rather than time, and it carries its own SoftwareApplication and
-  // FAQPage schema.
-  { path: '/lift-plan-software', changefreq: 'weekly', priority: '0.9', images: [OG_IMAGE] },
-  // The rigging tool, sold on its own. Same priority and the same reasoning as
-  // the page above it: a product page with its own SoftwareApplication and
-  // FAQPage schema, and the only other page on the site selling a thing rather
-  // than an hour.
-  { path: '/rigging-software', changefreq: 'weekly', priority: '0.9', images: [PRECAST_IMAGE] },
 ];
 
 const SERVICE_SLUGS = [
