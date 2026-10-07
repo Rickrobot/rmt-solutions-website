@@ -61,7 +61,7 @@ export default function Footer() {
 
   const qualifications = [
     'CPCS Appointed Person A61',
-    'NEBOSH National Diploma',
+    'NEBOSH Diploma',
     'CertIOSH',
     'MIIRSM',
     'TIFSM',

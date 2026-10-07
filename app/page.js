@@ -78,7 +78,7 @@ const jsonLd = {
   },
   hasCredential: [
     { '@type': 'EducationalOccupationalCredential', name: 'CPCS Appointed Person A61' },
-    { '@type': 'EducationalOccupationalCredential', name: 'NEBOSH National Diploma' },
+    { '@type': 'EducationalOccupationalCredential', name: 'NEBOSH Diploma' },
     { '@type': 'EducationalOccupationalCredential', name: 'CertIOSH (Certified Member, Institution of Occupational Safety and Health)' },
     { '@type': 'EducationalOccupationalCredential', name: 'MIIRSM (Member, International Institute of Risk and Safety Management)' },
     { '@type': 'EducationalOccupationalCredential', name: 'TIFSM (Technician Member, Institute of Fire Safety Managers)' },

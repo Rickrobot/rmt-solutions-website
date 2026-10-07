@@ -927,7 +927,7 @@ export default function ExcavatorLiftPlansPage() {
               },
               {
                 title: 'NEBOSH Diploma · CertIOSH · MIIRSM · TIFSM',
-                desc: 'Construction-specific NEBOSH National Diploma, CertIOSH (Certified IOSH member), MIIRSM and TIFSM — the planning is grounded in proper risk assessment, not just box-ticking.',
+                desc: 'Construction-specific NEBOSH Diploma, CertIOSH (Certified IOSH member), MIIRSM and TIFSM — the planning is grounded in proper risk assessment, not just box-ticking.',
               },
               {
                 title: 'Fixed-fee, fast turnaround',

@@ -726,7 +726,7 @@ export default function TelehandlerLiftPlansPage() {
               },
               {
                 title: 'NEBOSH Diploma · CertIOSH · MIIRSM · TIFSM',
-                desc: 'Construction-specific NEBOSH National Diploma, CertIOSH (Certified IOSH member), MIIRSM and TIFSM. Risk assessment grounded in proper methodology.',
+                desc: 'Construction-specific NEBOSH Diploma, CertIOSH (Certified IOSH member), MIIRSM and TIFSM. Risk assessment grounded in proper methodology.',
               },
               {
                 title: 'Fixed-fee, fast turnaround',

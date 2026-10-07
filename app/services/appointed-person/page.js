@@ -263,7 +263,7 @@ export default function AppointedPersonPage() {
                 expects to see.
               </p>
               <ul className="space-y-3 mb-6">
-                {['CPCS A61 Appointed Person', 'NEBOSH National Diploma', 'CertIOSH, MIIRSM, TIFSM', '35 years in UK construction'].map((c) => (
+                {['CPCS A61 Appointed Person', 'NEBOSH Diploma', 'CertIOSH, MIIRSM, TIFSM', '35 years in UK construction'].map((c) => (
                   <li key={c} className="flex items-start text-gray-300">
                     <ShieldCheck className="w-5 h-5 text-amber-400 mr-3 mt-0.5 flex-shrink-0" />
                     <span>{c}</span>

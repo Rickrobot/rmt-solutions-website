@@ -685,7 +685,7 @@ export default function LiftPlanCheckingPage() {
               },
               {
                 title: 'NEBOSH Diploma · CertIOSH · MIIRSM · TIFSM',
-                desc: 'Construction-specific NEBOSH National Diploma, CertIOSH (Certified IOSH member), MIIRSM and TIFSM behind every finding.',
+                desc: 'Construction-specific NEBOSH Diploma, CertIOSH (Certified IOSH member), MIIRSM and TIFSM behind every finding.',
               },
               {
                 title: '18-point methodology',

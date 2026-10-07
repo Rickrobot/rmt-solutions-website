@@ -103,7 +103,7 @@ const PAGE_FAQS = [
   },
   {
     q: 'Who writes the documents?',
-    a: 'Ricky Marsh — NEBOSH National Diploma, CertIOSH, MIIRSM, CPCS A61 Appointed Person, with 35 years in UK construction including time as a contracts manager. That reviewing-side experience is the point: these documents are written by someone who has spent years on the other side of the desk deciding whether submissions were good enough.',
+    a: 'Ricky Marsh — NEBOSH Diploma, CertIOSH, MIIRSM, CPCS A61 Appointed Person, with 35 years in UK construction including time as a contracts manager. That reviewing-side experience is the point: these documents are written by someone who has spent years on the other side of the desk deciding whether submissions were good enough.',
   },
   {
     q: 'Will you deal with the principal contractor directly?',
@@ -226,7 +226,7 @@ export default function MethodStatementsRamsPage() {
             </div>
             <div>
               <div className="text-2xl font-bold text-slate-900">NEBOSH</div>
-              <div className="text-sm text-slate-600">National Diploma · CertIOSH · MIIRSM</div>
+              <div className="text-sm text-slate-600">Diploma · CertIOSH · MIIRSM</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-slate-900">Tier 1</div>
@@ -654,7 +654,7 @@ export default function MethodStatementsRamsPage() {
             <p className="text-white font-semibold mb-4">What stands behind the document</p>
             <ul className="grid sm:grid-cols-2 gap-3 text-gray-300 text-sm">
               {[
-                'NEBOSH National Diploma in Occupational Health & Safety',
+                'NEBOSH Diploma in Occupational Health & Safety',
                 'CertIOSH — IOSH chartered-track grade',
                 'MIIRSM — International Institute of Risk & Safety Management',
                 '35 years in UK construction, including as a contracts manager',

@@ -524,7 +524,7 @@ export default function ContactPage() {
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-amber-400 rounded-full mr-3" />
-                    NEBOSH National Diploma
+                    NEBOSH Diploma
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-amber-400 rounded-full mr-3" />
