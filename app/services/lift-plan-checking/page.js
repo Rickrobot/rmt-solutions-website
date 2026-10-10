@@ -737,7 +737,7 @@ export default function LiftPlanCheckingPage() {
             <figcaption className="mt-4 text-sm">
               <span className="text-white font-semibold">Kevin Duffy</span>
               <span className="text-gray-400"> — Senior Project Manager, Caddick Construction</span>
-              <a href="/testimonials" className="text-amber-400 hover:text-amber-300 ml-2">More testimonials →</a>
+              <a href="/testimonials" className="text-amber-400 hover:text-amber-300 underline underline-offset-2 ml-2">More testimonials →</a>
             </figcaption>
           </figure>
           <InlineQuoteForm

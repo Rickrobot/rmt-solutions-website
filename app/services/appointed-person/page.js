@@ -465,7 +465,7 @@ export default function AppointedPersonPage() {
             <figcaption className="mt-4 text-sm">
               <span className="text-white font-semibold">Tom Herd</span>
               <span className="text-gray-400"> — Project Manager, Caddick Construction</span>
-              <a href="/testimonials" className="text-amber-400 hover:text-amber-300 ml-2">More testimonials →</a>
+              <a href="/testimonials" className="text-amber-400 hover:text-amber-300 underline underline-offset-2 ml-2">More testimonials →</a>
             </figcaption>
           </figure>
           <InlineQuoteForm serviceName="Appointed Person" heading="Get a quote for Appointed Person services" />

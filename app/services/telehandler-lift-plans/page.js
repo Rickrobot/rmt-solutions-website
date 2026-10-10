@@ -175,7 +175,7 @@ export default function TelehandlerLiftPlansPage() {
 
           <div className="flex flex-wrap gap-3 mb-8">
             <div className="flex items-center gap-2 bg-amber-500 px-4 py-2 rounded-full">
-              <span className="text-sm font-bold text-white">Lift plans from £200 + VAT</span>
+              <span className="text-sm font-bold text-slate-900">Lift plans from £200 + VAT</span>
             </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur px-4 py-2 rounded-full border border-white/20">
               <Clock className="w-4 h-4 text-amber-400" />
@@ -552,7 +552,7 @@ export default function TelehandlerLiftPlansPage() {
               {
                 level: 'Basic',
                 tag: 'Combined role allowed',
-                headerClass: 'bg-emerald-600',
+                headerClass: 'bg-emerald-700',
                 headText: 'text-white',
                 situation:
                   'Known-weight load with designated lifting points and a stable centre of gravity. A short, straightforward lift on firm, level ground with stabilisers deployed, a clear line of sight, no travelling and no proximity hazards.',
@@ -563,7 +563,7 @@ export default function TelehandlerLiftPlansPage() {
                 level: 'Intermediate',
                 tag: 'Separate A62 usually',
                 headerClass: 'bg-amber-500',
-                headText: 'text-white',
+                headText: 'text-slate-900',
                 situation:
                   'Estimated weight or centre of gravity, or no designated lifting points; lifting free on wheels; restricted line of sight; or some travelling with the suspended load.',
                 requirement:
@@ -572,7 +572,7 @@ export default function TelehandlerLiftPlansPage() {
               {
                 level: 'Complex',
                 tag: 'Dedicated A62 required',
-                headerClass: 'bg-rose-600',
+                headerClass: 'bg-rose-700',
                 headText: 'text-white',
                 situation:
                   'Fragile, unstable or fluid loads; bulky wind-affected loads such as roof trusses; lifting near proximity hazards — structures, overhead power lines, traffic or the public; or travelling a suspended load over difficult ground.',
@@ -586,7 +586,7 @@ export default function TelehandlerLiftPlansPage() {
               >
                 <div className={`${cat.headerClass} px-6 py-4 flex items-center justify-between`}>
                   <span className={`${cat.headText} text-lg font-bold`}>{cat.level}</span>
-                  <span className={`${cat.headText} text-xs font-semibold uppercase tracking-wider opacity-90`}>
+                  <span className={`${cat.headText} text-xs font-semibold uppercase tracking-wider`}>
                     {cat.tag}
                   </span>
                 </div>
