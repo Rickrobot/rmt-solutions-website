@@ -231,7 +231,7 @@ export default function LiftPlanDecisionToolPage() {
                 className="bg-gradient-to-b from-slate-800/40 to-slate-900/40 border border-slate-700/50 rounded-2xl p-6"
               >
                 <h3 className="font-display text-xl font-bold text-amber-400 mb-2">{c.name}</h3>
-                <p className="text-slate-500 text-sm mb-3">{c.when}</p>
+                <p className="text-gray-400 text-sm mb-3">{c.when}</p>
                 <p className="text-slate-300 leading-relaxed">{c.rule}</p>
               </div>
             ))}
@@ -318,7 +318,7 @@ export default function LiftPlanDecisionToolPage() {
             </Link>
           </div>
 
-          <p className="text-slate-500 text-sm mt-10 leading-relaxed">
+          <p className="text-gray-400 text-sm mt-10 leading-relaxed">
             Written and maintained by Michael Marsh, CPCS A61 Appointed Person (registration
             40389279), RMT Solutions Ltd — 35 years in UK lifting operations. The logic on this
             page follows LOLER 1998 Regulation 8 and the complex-lift triggers in

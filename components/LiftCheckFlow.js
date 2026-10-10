@@ -37,18 +37,18 @@ export default function LiftCheckFlow() {
   }, [])
 
   const card = (delay) =>
-    `lc-init ${inView ? 'lc-in' : ''} bg-white border rounded-xl p-5 shadow-sm w-full sm:w-56`
+    `lc-init ${inView ? 'lc-in' : ''} bg-slate-800/40 border rounded-xl p-5 shadow-sm w-full sm:w-56`
 
   return (
     <div ref={ref}>
       <style dangerouslySetInnerHTML={{ __html: css }} />
       <div className="flex flex-wrap items-center justify-center gap-3">
         {/* Submit */}
-        <div className={`${card()} border-slate-200`} style={{ animationDelay: '0.05s' }}>
-          <FileCheck className="w-6 h-6 text-slate-500" aria-hidden="true" />
-          <p className="text-xs mt-3 mb-1 text-slate-500">Step 1</p>
-          <p className="text-slate-900 font-medium leading-tight">Submit a complete plan</p>
-          <p className="text-slate-600 text-sm mt-1">Drawing, RAMS, certs, competencies</p>
+        <div className={`${card()} border-slate-700/50`} style={{ animationDelay: '0.05s' }}>
+          <FileCheck className="w-6 h-6 text-gray-400" aria-hidden="true" />
+          <p className="text-xs mt-3 mb-1 text-gray-400">Step 1</p>
+          <p className="text-white font-medium leading-tight">Submit a complete plan</p>
+          <p className="text-gray-400 text-sm mt-1">Drawing, RAMS, certs, competencies</p>
         </div>
 
         <div className="hidden sm:flex items-center text-slate-300" aria-hidden="true">
@@ -56,11 +56,11 @@ export default function LiftCheckFlow() {
         </div>
 
         {/* Review */}
-        <div className={`${card()} border-amber-200`} style={{ animationDelay: '0.3s' }}>
+        <div className={`${card()} border-amber-500/30`} style={{ animationDelay: '0.3s' }}>
           <ShieldCheck className={`w-6 h-6 text-amber-500 ${inView ? 'lc-pulse-on' : ''}`} aria-hidden="true" />
-          <p className="text-xs mt-3 mb-1 text-amber-600">Step 2</p>
-          <p className="text-slate-900 font-medium leading-tight">18-point review</p>
-          <p className="text-slate-600 text-sm mt-1">LOLER 1998 · BS 7121 · ISO 10567</p>
+          <p className="text-xs mt-3 mb-1 text-amber-400">Step 2</p>
+          <p className="text-white font-medium leading-tight">19-point review</p>
+          <p className="text-gray-400 text-sm mt-1">LOLER 1998 · BS 7121 · ISO 10567</p>
         </div>
 
         <div className="hidden sm:flex items-center text-slate-300" aria-hidden="true">
@@ -69,16 +69,16 @@ export default function LiftCheckFlow() {
 
         {/* Outcomes */}
         <div className="flex flex-col gap-3 w-full sm:w-60">
-          <div className={`${card().replace('sm:w-56', '')} border-emerald-200`} style={{ animationDelay: '0.55s' }}>
-            <CheckCircle2 className="w-6 h-6 text-emerald-600" aria-hidden="true" />
-            <p className="text-xs mt-3 mb-1 text-emerald-700">Category A</p>
-            <p className="text-slate-900 font-medium leading-tight">Acceptable — lift proceeds</p>
+          <div className={`${card().replace('sm:w-56', '')} border-emerald-500/30`} style={{ animationDelay: '0.55s' }}>
+            <CheckCircle2 className="w-6 h-6 text-emerald-400" aria-hidden="true" />
+            <p className="text-xs mt-3 mb-1 text-emerald-300">Category A</p>
+            <p className="text-white font-medium leading-tight">Acceptable — lift proceeds</p>
           </div>
-          <div className={`${card().replace('sm:w-56', '')} border-rose-200`} style={{ animationDelay: '0.75s' }}>
-            <AlertTriangle className="w-6 h-6 text-rose-600" aria-hidden="true" />
-            <p className="text-xs mt-3 mb-1 text-rose-700">Category B</p>
-            <p className="text-slate-900 font-medium leading-tight">Findings &amp; required amendments</p>
-            <p className="text-slate-600 text-sm mt-2 flex items-center gap-1.5">
+          <div className={`${card().replace('sm:w-56', '')} border-rose-500/30`} style={{ animationDelay: '0.75s' }}>
+            <AlertTriangle className="w-6 h-6 text-rose-400" aria-hidden="true" />
+            <p className="text-xs mt-3 mb-1 text-rose-300">Category B</p>
+            <p className="text-white font-medium leading-tight">Findings &amp; required amendments</p>
+            <p className="text-gray-400 text-sm mt-2 flex items-center gap-1.5">
               <RefreshCw className="w-4 h-4 text-slate-400" aria-hidden="true" />
               Revise and resubmit for verification
             </p>

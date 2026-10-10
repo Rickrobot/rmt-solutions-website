@@ -15,6 +15,7 @@ import {
 import SectionHeader from '@/components/ui/SectionHeader'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
+import ProofStrip from '@/components/ProofStrip'
 
 export const metadata = {
   // Fix #6, Jul 2026 SEO review: the URL said tower-crane, the title said
@@ -282,8 +283,8 @@ export default function TowerCranePage() {
       body: 'Specific lift plans from your trades and lift suppliers are checked against BS 7121-1, ISO 10567 and your generic site plan envelope — no rubber-stamping.',
     },
     {
-      title: '18-point review methodology',
-      body: 'Every plan we sign off is run through our 18-point review covering load data, crane configuration, ground bearing, accessories and rescue arrangements.',
+      title: '19-point review methodology',
+      body: 'Every plan we sign off is run through our 19-point review covering load data, crane configuration, ground bearing, accessories, rescue arrangements and environmental management.',
     },
     {
       title: 'On-call, not a queue',
@@ -349,6 +350,7 @@ export default function TowerCranePage() {
           </div>
         </div>
       </section>
+      <ProofStrip id="curtis" />
 
       {/* Trust strip */}
       <section className="bg-slate-950 border-y border-slate-800">

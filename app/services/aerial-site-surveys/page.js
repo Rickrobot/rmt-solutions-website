@@ -116,7 +116,7 @@ export default function AerialSiteSurveysPage() {
       {/* Hero */}
       <section className="relative bg-slate-900 text-white">
         <div className="relative max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
-          <p className="text-blue-400 font-medium mb-4">Aerial &amp; Ground-Level</p>
+          <p className="text-amber-400 font-medium mb-4">Aerial &amp; Ground-Level</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Aerial Surveys &amp; Site Photography</h1>
           <p className="text-xl text-slate-300 max-w-3xl mb-8">
             Aerial site surveys and construction site photography from someone who understands 
@@ -125,7 +125,7 @@ export default function AerialSiteSurveysPage() {
             Appointed Person with GVC qualification and CAA Operational Authorisation.
           </p>
           <div className="flex flex-wrap gap-4 mb-8">
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+            <Link href="/contact" className="bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold px-8 py-3 rounded-lg font-medium transition-colors">
               Request a Quote
             </Link>
             <a href="tel:+447803808093" className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-medium transition-colors">
@@ -133,23 +133,23 @@ export default function AerialSiteSurveysPage() {
             </a>
           </div>
           <div className="flex flex-wrap gap-8 text-sm">
-            <div><span className="text-blue-400 font-bold text-2xl">GVC</span><br />Qualified Pilot</div>
-            <div><span className="text-blue-400 font-bold text-2xl">CAA</span><br />Operational Authorisation</div>
-            <div><span className="text-blue-400 font-bold text-2xl">CPCS A61</span><br />Appointed Person</div>
+            <div><span className="text-amber-400 font-bold text-2xl">GVC</span><br />Qualified Pilot</div>
+            <div><span className="text-amber-400 font-bold text-2xl">CAA</span><br />Operational Authorisation</div>
+            <div><span className="text-amber-400 font-bold text-2xl">CPCS A61</span><br />Appointed Person</div>
           </div>
         </div>
       </section>
 
       {/* The Difference */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Why Our Service Is Different</h2>
-          <p className="text-lg text-slate-600 mb-6">
+          <h2 className="text-3xl font-bold text-white mb-8">Why Our Service Is Different</h2>
+          <p className="text-lg text-gray-400 mb-6">
             Most drone and photography companies can take pictures of a construction site. What they 
             cannot do is look at that site through the eyes of someone with 35 years of construction 
             experience and understand what they are looking at.
           </p>
-          <p className="text-lg text-slate-600 mb-6">
+          <p className="text-lg text-gray-400 mb-6">
             We are not a photography company that occasionally works on construction sites. We are a 
             lift planning consultancy that offers aerial surveys and site photography as a natural 
             extension of the work we already do. We hold the site qualifications to work safely and 
@@ -157,7 +157,7 @@ export default function AerialSiteSurveysPage() {
             escort, we do not need a site induction explaining what a crane is, and we do not create 
             additional management overhead for your site team.
           </p>
-          <p className="text-lg text-slate-600">
+          <p className="text-lg text-gray-400">
             The result is photography and survey data captured by someone who knows what matters 
             on a construction site — because we work on them every day.
           </p>
@@ -165,42 +165,42 @@ export default function AerialSiteSurveysPage() {
       </section>
 
       {/* Two Services */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">What We Offer</h2>
+          <h2 className="text-3xl font-bold text-white mb-12">What We Offer</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-sm border-2 border-blue-500">
-              <h3 className="text-2xl font-semibold text-slate-900 mb-4">Aerial Surveys</h3>
-              <p className="text-slate-600 mb-6">
+            <div className="bg-slate-800/40 p-8 rounded-xl shadow-sm border-2 border-amber-500">
+              <h3 className="text-2xl font-semibold text-white mb-4">Aerial Surveys</h3>
+              <p className="text-gray-400 mb-6">
                 Drone-based aerial surveys of construction sites using high-resolution imagery. 
                 Particularly valuable for lift planning, where overhead views of the site reveal 
                 information that is difficult or impossible to assess from ground level.
               </p>
-              <ul className="space-y-3 text-slate-600">
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>High-resolution overhead site imagery</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Crane access routes and setup positions</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Overhead obstructions and hazard identification</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Ground conditions assessment from above</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Tower crane jib zones and overlapping areas</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Site progress overview and comparison over time</li>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>High-resolution overhead site imagery</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Crane access routes and setup positions</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Overhead obstructions and hazard identification</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Ground conditions assessment from above</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Tower crane jib zones and overlapping areas</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Site progress overview and comparison over time</li>
               </ul>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm border-2 border-slate-200">
-              <h3 className="text-2xl font-semibold text-slate-900 mb-4">Site Photography</h3>
-              <p className="text-slate-600 mb-6">
+            <div className="bg-slate-800/40 p-8 rounded-xl shadow-sm border-2 border-slate-700/50">
+              <h3 className="text-2xl font-semibold text-white mb-4">Site Photography</h3>
+              <p className="text-gray-400 mb-6">
                 Ground-level construction site photography for project documentation, progress 
                 records, safety evidence, and stakeholder reporting. Professional quality from 
                 someone who can work independently on a live site.
               </p>
-              <ul className="space-y-3 text-slate-600">
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Construction progress photography</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Lifting operations documentation</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Safety and compliance evidence capture</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Pre-lift site condition records</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Stakeholder and client progress reports</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Combined aerial and ground-level packages</li>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Construction progress photography</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Lifting operations documentation</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Safety and compliance evidence capture</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Pre-lift site condition records</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Stakeholder and client progress reports</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Combined aerial and ground-level packages</li>
               </ul>
             </div>
           </div>
@@ -208,56 +208,56 @@ export default function AerialSiteSurveysPage() {
       </section>
 
       {/* How It Supports Lift Planning */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">How Aerial Surveys Support Lift Planning</h2>
-          <p className="text-lg text-slate-600 mb-8">
+          <h2 className="text-3xl font-bold text-white mb-8">How Aerial Surveys Support Lift Planning</h2>
+          <p className="text-lg text-gray-400 mb-8">
             When we conduct an aerial survey for lift planning, we are not simply capturing images. We are
             assessing the site from the perspective of someone who will plan or review lifting operations on it.
             We know what to look for because we know what a lift plan needs — see our guide to{' '}
-            <Link href="/blog/what-is-a-lift-plan" className="text-blue-600 hover:text-blue-700 underline">
+            <Link href="/blog/what-is-a-lift-plan" className="text-amber-400 hover:text-amber-300 underline">
               what a lift plan is
             </Link>{' '}
             and the{' '}
-            <Link href="/blog/common-lift-planning-mistakes" className="text-blue-600 hover:text-blue-700 underline">
+            <Link href="/blog/common-lift-planning-mistakes" className="text-amber-400 hover:text-amber-300 underline">
               common lift planning mistakes
             </Link>{' '}
             a good site survey helps you avoid.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="border border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Writing Lift Plans</h3>
-              <p className="text-slate-600 mb-4">
+            <div className="border border-slate-700/50 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-4">Writing Lift Plans</h3>
+              <p className="text-gray-400 mb-4">
                 When we write a lift plan for a site we have not physically visited, the aerial survey 
                 provides the site-specific data that makes the plan accurate and practical. We can see 
                 actual conditions rather than relying on drawings that may be out of date.
               </p>
-              <Link href="/services/lift-plans" className="text-blue-600 hover:text-blue-700 font-medium text-sm">
+              <Link href="/services/lift-plans" className="text-amber-400 hover:text-amber-300 font-medium text-sm">
                 Lift plan writing service →
               </Link>
             </div>
 
-            <div className="border border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Reviewing Lift Plans</h3>
-              <p className="text-slate-600 mb-4">
+            <div className="border border-slate-700/50 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-4">Reviewing Lift Plans</h3>
+              <p className="text-gray-400 mb-4">
                 When reviewing a submitted lift plan, aerial imagery allows us to verify whether the 
                 plan reflects actual site conditions. If a plan shows clear access but the survey shows 
                 a congested site, that discrepancy needs addressing before the lift proceeds.
               </p>
-              <Link href="/services/lift-plan-checking" className="text-blue-600 hover:text-blue-700 font-medium text-sm">
+              <Link href="/services/lift-plan-checking" className="text-amber-400 hover:text-amber-300 font-medium text-sm">
                 Lift plan review service →
               </Link>
             </div>
 
-            <div className="border border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Tower Crane Projects</h3>
-              <p className="text-slate-600 mb-4">
+            <div className="border border-slate-700/50 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-4">Tower Crane Projects</h3>
+              <p className="text-gray-400 mb-4">
                 On long-duration tower crane contracts, periodic aerial surveys track how the site 
                 changes — new structures, additional cranes, changing access routes. This ensures 
                 lift planning keeps pace with reality on the ground.
               </p>
-              <Link href="/services/tower-crane" className="text-blue-600 hover:text-blue-700 font-medium text-sm">
+              <Link href="/services/tower-crane" className="text-amber-400 hover:text-amber-300 font-medium text-sm">
                 Tower crane contracts →
               </Link>
             </div>
@@ -266,48 +266,48 @@ export default function AerialSiteSurveysPage() {
       </section>
 
       {/* What We Capture - Aerial */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">What We Capture — Aerial</h2>
+          <h2 className="text-3xl font-bold text-white mb-12">What We Capture — Aerial</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Site Layout &amp; Access</h3>
-              <ul className="space-y-3 text-slate-600">
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Overhead imagery showing actual site layout and working areas</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Crane access routes and potential setup positions</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Vehicle access constraints and turning areas</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Material storage and laydown areas</li>
+            <div className="bg-slate-800/40 p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold text-white mb-4">Site Layout &amp; Access</h3>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Overhead imagery showing actual site layout and working areas</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Crane access routes and potential setup positions</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Vehicle access constraints and turning areas</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Material storage and laydown areas</li>
               </ul>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Obstructions &amp; Hazards</h3>
-              <ul className="space-y-3 text-slate-600">
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Overhead power lines, their routes and approximate heights</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Adjacent structures, buildings, and scaffolding</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Tower crane jib positions and overlapping zones</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Trees, boundary walls, and other fixed obstructions</li>
+            <div className="bg-slate-800/40 p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold text-white mb-4">Obstructions &amp; Hazards</h3>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Overhead power lines, their routes and approximate heights</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Adjacent structures, buildings, and scaffolding</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Tower crane jib positions and overlapping zones</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Trees, boundary walls, and other fixed obstructions</li>
               </ul>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Ground Conditions</h3>
-              <ul className="space-y-3 text-slate-600">
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Visual assessment of ground at planned operating positions</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Evidence of made-up ground, backfilled trenches, or soft areas</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Drainage routes and areas prone to waterlogging</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Surface conditions for outrigger and stabiliser positions</li>
+            <div className="bg-slate-800/40 p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold text-white mb-4">Ground Conditions</h3>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Visual assessment of ground at planned operating positions</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Evidence of made-up ground, backfilled trenches, or soft areas</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Drainage routes and areas prone to waterlogging</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Surface conditions for outrigger and stabiliser positions</li>
               </ul>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Lifting Operation Context</h3>
-              <ul className="space-y-3 text-slate-600">
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Load pick-up and landing positions relative to site features</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Exclusion zone requirements based on actual conditions</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Pedestrian and vehicle routes that may be affected</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Proximity of occupied areas and public spaces</li>
+            <div className="bg-slate-800/40 p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold text-white mb-4">Lifting Operation Context</h3>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Load pick-up and landing positions relative to site features</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Exclusion zone requirements based on actual conditions</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Pedestrian and vehicle routes that may be affected</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Proximity of occupied areas and public spaces</li>
               </ul>
             </div>
           </div>
@@ -315,10 +315,10 @@ export default function AerialSiteSurveysPage() {
       </section>
 
       {/* Site Photography Uses */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Construction Site Photography</h2>
-          <p className="text-lg text-slate-600 mb-8">
+          <h2 className="text-3xl font-bold text-white mb-8">Construction Site Photography</h2>
+          <p className="text-lg text-gray-400 mb-8">
             Ground-level site photography for clients who need professional documentation of their 
             construction projects. Because we already hold the qualifications and site experience to 
             work on live construction sites, we can attend your site and work independently without 
@@ -352,9 +352,9 @@ export default function AerialSiteSurveysPage() {
                 desc: 'One-off site visits to capture specific conditions, record an incident scene, or document a particular operation. Available at short notice when you need a qualified person on site with a camera.',
               },
             ].map((item) => (
-              <div key={item.title} className="bg-slate-50 p-6 rounded-xl">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-slate-600 text-sm">{item.desc}</p>
+              <div key={item.title} className="bg-slate-800/40 p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                <p className="text-gray-400 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -374,7 +374,7 @@ export default function AerialSiteSurveysPage() {
               { step: '4', title: 'Delivery', desc: 'You receive the survey data and photographs — annotated where relevant, organised by area or operation, and delivered within 24 hours of the site visit.' },
             ].map((item) => (
               <div key={item.step} className="text-center">
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                <div className="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   {item.step}
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
@@ -386,10 +386,10 @@ export default function AerialSiteSurveysPage() {
       </section>
 
       {/* When to Use */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">When an Aerial Survey Adds Most Value</h2>
-          <p className="text-lg text-slate-600 mb-8">
+          <h2 className="text-3xl font-bold text-white mb-8">When an Aerial Survey Adds Most Value</h2>
+          <p className="text-lg text-gray-400 mb-8">
             Not every lifting operation needs a drone survey. For straightforward operations on 
             well-documented sites, conventional information is usually sufficient. But there are 
             situations where aerial survey data materially improves the quality of the lift plan.
@@ -404,9 +404,9 @@ export default function AerialSiteSurveysPage() {
               { title: 'Tandem lifts and multi-crane operations', desc: 'Operations involving multiple machines working in close proximity require precise understanding of the spatial relationships on site.' },
               { title: 'Disputes or verification', desc: 'When a submitted lift plan does not appear to reflect actual site conditions, aerial imagery provides objective evidence to resolve the question.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white p-6 rounded-xl shadow-sm">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-slate-600 text-sm">{item.desc}</p>
+              <div key={item.title} className="bg-slate-800/40 p-6 rounded-xl shadow-sm">
+                <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                <p className="text-gray-400 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -414,10 +414,10 @@ export default function AerialSiteSurveysPage() {
       </section>
 
       {/* Qualifications */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Qualifications &amp; Authorisations</h2>
-          <p className="text-lg text-slate-600 mb-8">
+          <h2 className="text-3xl font-bold text-white mb-8">Qualifications &amp; Authorisations</h2>
+          <p className="text-lg text-gray-400 mb-8">
             Our aerial surveys and site photography are conducted by someone who holds both the 
             drone qualifications required by the CAA and the construction industry qualifications 
             needed to work safely on live sites. This means no escorts, no additional supervision, 
@@ -425,22 +425,22 @@ export default function AerialSiteSurveysPage() {
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-slate-50 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Drone &amp; Photography</h3>
-              <ul className="space-y-3 text-slate-600">
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>GVC (General VLOS Certificate) qualified pilot</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>CAA Operational Authorisation — flight in congested areas including active construction sites</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>Full public liability insurance for drone operations</li>
+            <div className="bg-slate-800/40 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-4">Drone &amp; Photography</h3>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>GVC (General VLOS Certificate) qualified pilot</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>CAA Operational Authorisation — flight in congested areas including active construction sites</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>Full public liability insurance for drone operations</li>
               </ul>
             </div>
 
-            <div className="bg-slate-50 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Construction Industry</h3>
-              <ul className="space-y-3 text-slate-600">
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>CPCS A61 Appointed Person</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>35+ years construction industry experience</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>NEBOSH Diploma</li>
-                <li className="flex items-start gap-3"><span className="text-blue-600">✓</span>CertIOSH · MIIRSM · TIFSM</li>
+            <div className="bg-slate-800/40 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-4">Construction Industry</h3>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>CPCS A61 Appointed Person</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>35+ years construction industry experience</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>NEBOSH Diploma</li>
+                <li className="flex items-start gap-3"><span className="text-amber-400">✓</span>CertIOSH · MIIRSM · TIFSM</li>
               </ul>
             </div>
           </div>
@@ -448,15 +448,15 @@ export default function AerialSiteSurveysPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-white mb-12">Frequently Asked Questions</h2>
 
           <div className="space-y-6">
             {PAGE_FAQS.map((faq) => (
-              <div key={faq.q} className="bg-white p-6 rounded-xl">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">{faq.q}</h3>
-                <p className="text-slate-600">{faq.a}</p>
+              <div key={faq.q} className="bg-slate-800/40 p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-white mb-3">{faq.q}</h3>
+                <p className="text-gray-400">{faq.a}</p>
               </div>
             ))}
           </div>
@@ -473,16 +473,16 @@ export default function AerialSiteSurveysPage() {
       <RelatedServices currentSlug="aerial-site-surveys" />
 
       {/* CTA */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-slate-900 border-y border-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Need Aerial Surveys or Site Photography?</h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             Get in touch to discuss your requirements. Whether you need drone survey data for a 
             lift plan, progress photography for a long-term project, or a combined package, we 
             provide the site intelligence your project needs.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-medium transition-colors">
+            <Link href="/contact" className="px-8 py-3 rounded-lg font-medium transition-colors bg-amber-500 text-slate-900 font-semibold hover:bg-amber-400">
               Request a Quote
             </Link>
             <a href="tel:+447803808093" className="bg-white/20 hover:bg-white/30 text-white px-8 py-3 rounded-lg font-medium transition-colors">

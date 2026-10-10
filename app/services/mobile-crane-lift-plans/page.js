@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle, Building2, FileText, ShieldCheck, MapPin } fro
 import SectionHeader from '@/components/ui/SectionHeader'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
+import ProofStrip from '@/components/ProofStrip'
 
 export const metadata = {
   title: 'Mobile Crane Lift Plans UK | BS 7121',
@@ -212,6 +213,7 @@ export default function MobileCraneLiftPlansPage() {
           </div>
         </div>
       </section>
+      <ProofStrip id="rooney" />
 
       {/* What's included */}
       <section className="py-24 bg-slate-950">

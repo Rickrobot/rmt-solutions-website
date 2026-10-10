@@ -67,21 +67,27 @@ export default function Header() {
     <nav className="fixed w-full z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-slate-900 font-display font-bold text-2xl">R</span>
-            </div>
-            <div>
-              <span className="text-xl font-display font-bold text-white">RMT Solutions</span>
-              <span className="hidden sm:block text-xs text-gray-500 tracking-wider uppercase">
-                Lift Planning Specialists
-              </span>
-            </div>
+          {/* Logo — the approved RMT Solutions vector master (Oct 2026). It was
+              an orange "R" tile, so the website and the drawings on it carried
+              two different brands. The master is navy and green, which would
+              disappear on this dark bar, so it sits on a white plate rather
+              than being recoloured. */}
+          <Link href="/" className="flex items-center flex-shrink-0" aria-label="RMT Solutions — home">
+            <span className="flex items-center bg-white rounded-xl px-2.5 py-1.5 shadow-lg shadow-black/30">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/rmt-logo.svg"
+                alt="RMT Solutions — The Complete Lift Plan Company"
+                width={402}
+                height={144}
+                className="h-10 sm:h-11 w-auto"
+              />
+            </span>
           </Link>
 
-          {/* Desktop Navigation. space-x-6 keeps "Case Studies" on one line. */}
-          <div className="hidden lg:flex items-center space-x-6">
+          {/* Desktop Navigation. Tighter gaps below xl so the phone number and
+              the quote button stay on one line on a standard laptop screen. */}
+          <div className="hidden lg:flex items-center gap-4 xl:gap-6">
             {/* Services Dropdown */}
             <div
               ref={dropdownRef}
@@ -90,7 +96,7 @@ export default function Header() {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className="flex items-center gap-1 text-gray-400 hover:text-amber-400 transition font-medium"
+                className="flex items-center gap-1 text-gray-400 hover:text-amber-400 transition font-medium whitespace-nowrap"
                 onClick={() => setServicesOpen(!servicesOpen)}
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
@@ -167,7 +173,7 @@ export default function Header() {
             {/* Phone CTA — desktop */}
             <a
               href="tel:+447803808093"
-              className="flex items-center gap-2 text-amber-400 hover:text-amber-300 transition font-semibold"
+              className="flex items-center gap-2 text-amber-400 hover:text-amber-300 transition font-semibold whitespace-nowrap"
               aria-label="Call RMT Solutions on 07803 808093"
             >
               <Phone className="w-4 h-4" />
@@ -177,7 +183,7 @@ export default function Header() {
 
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-900 px-6 py-3 rounded-xl font-semibold transition shadow-lg shadow-amber-500/20"
+              className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-900 px-5 py-3 rounded-xl font-semibold transition shadow-lg shadow-amber-500/20 whitespace-nowrap"
             >
               Get a Quote
             </Link>

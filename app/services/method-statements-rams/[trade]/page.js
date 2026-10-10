@@ -142,18 +142,18 @@ export default function TradeRamsPage({ params }) {
       </section>
 
       {/* Activities covered */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Activities covered</h2>
-          <p className="text-lg text-slate-600 mb-10 max-w-3xl">
+          <h2 className="text-3xl font-bold text-white mb-4">Activities covered</h2>
+          <p className="text-lg text-gray-400 mb-10 max-w-3xl">
             Each document is written for the specific activity, site and programme — not adapted
             from a template for the trade.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {t.activities.map((a) => (
-              <div key={a} className="flex items-start gap-3 bg-slate-50 border border-slate-200 rounded-xl p-4">
+              <div key={a} className="flex items-start gap-3 bg-slate-800/40 border border-slate-700/50 rounded-xl p-4">
                 <CheckCircle2 className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                <span className="text-slate-700 text-sm">{a}</span>
+                <span className="text-gray-300 text-sm">{a}</span>
               </div>
             ))}
           </div>
@@ -161,17 +161,17 @@ export default function TradeRamsPage({ params }) {
       </section>
 
       {/* Hazards + regs */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+              <h2 className="text-3xl font-bold text-white mb-6">
                 Hazards the assessment must address
               </h2>
               <ul className="space-y-3">
                 {t.hazards.map((h) => (
-                  <li key={h} className="flex items-start gap-3 text-slate-700">
-                    <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                  <li key={h} className="flex items-start gap-3 text-gray-300">
+                    <AlertTriangle className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
                     <span>{h}</span>
                   </li>
                 ))}
@@ -179,15 +179,15 @@ export default function TradeRamsPage({ params }) {
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">Regulations that apply</h2>
+              <h2 className="text-3xl font-bold text-white mb-6">Regulations that apply</h2>
               <div className="space-y-4">
                 {t.regulations.map((r) => (
-                  <div key={r.ref} className="bg-white border border-slate-200 rounded-xl p-5">
+                  <div key={r.ref} className="bg-slate-800/40 border border-slate-700/50 rounded-xl p-5">
                     <div className="flex items-start gap-3">
                       <Scale className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
                       <div>
-                        <span className="font-semibold text-slate-900 block">{r.ref}</span>
-                        <span className="text-slate-600 text-sm">{r.detail}</span>
+                        <span className="font-semibold text-white block">{r.ref}</span>
+                        <span className="text-gray-400 text-sm">{r.detail}</span>
                       </div>
                     </div>
                   </div>
@@ -199,29 +199,29 @@ export default function TradeRamsPage({ params }) {
       </section>
 
       {/* Rejection reasons — the money section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Why {t.shortName.toLowerCase()} RAMS get rejected
           </h2>
-          <p className="text-lg text-slate-600 mb-8 max-w-3xl">
+          <p className="text-lg text-gray-400 mb-8 max-w-3xl">
             These are the findings that come up repeatedly on the reviewing side for this trade. If
             your document has been returned, the reason is very likely in this list.
           </p>
 
-          <div className="bg-rose-50 border border-rose-200 p-8 rounded-xl">
+          <div className="bg-rose-500/10 border border-rose-500/30 p-8 rounded-xl">
             <div className="grid md:grid-cols-2 gap-4">
               {t.rejectionReasons.map((r) => (
                 <div key={r} className="flex items-start gap-3">
-                  <X className="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-rose-900">{r}</span>
+                  <X className="w-5 h-5 text-rose-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-rose-200">{r}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="mt-8 bg-amber-50 border-l-4 border-amber-400 p-6 rounded-r-xl">
-            <p className="text-slate-800">
+          <div className="mt-8 bg-amber-500/10 border-l-4 border-amber-400 p-6 rounded-r-xl">
+            <p className="text-gray-100">
               <strong>Already been rejected?</strong> Send the document and the reviewer&apos;s
               comments. We diagnose exactly why it failed, rewrite it against your site information,
               and support the resubmission until it is accepted — at no extra charge.
@@ -256,10 +256,10 @@ export default function TradeRamsPage({ params }) {
       </section>
 
       {/* Sibling trades */}
-      <section className="py-16 bg-white border-t border-slate-200">
+      <section className="py-16 bg-slate-950 border-t border-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-3">Other trades we write for</h2>
-          <p className="text-slate-600 mb-8 max-w-2xl">
+          <h2 className="text-3xl font-bold text-white mb-3">Other trades we write for</h2>
+          <p className="text-gray-400 mb-8 max-w-2xl">
             Method statements and risk assessments across the full range of construction activities.
           </p>
           <div className="flex flex-wrap gap-3">
@@ -267,7 +267,7 @@ export default function TradeRamsPage({ params }) {
               <Link
                 key={s}
                 href={`/services/method-statements-rams/${s}`}
-                className="bg-slate-100 hover:bg-amber-50 border border-slate-200 hover:border-amber-400 rounded-xl px-4 py-3 text-slate-700 hover:text-amber-700 font-medium text-sm transition"
+                className="bg-slate-800 hover:bg-amber-500/10 border border-slate-700/50 hover:border-amber-400 rounded-xl px-4 py-3 text-gray-300 hover:text-amber-300 font-medium text-sm transition"
               >
                 {TRADES[s].shortName} →
               </Link>

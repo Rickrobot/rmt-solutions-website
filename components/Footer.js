@@ -69,11 +69,17 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center">
-                <span className="text-slate-900 font-display font-bold text-lg">R</span>
-              </div>
-              <span className="text-xl font-display font-bold text-white">RMT Solutions</span>
+            {/* The approved logo on a white plate, as in the header. */}
+            <div className="inline-flex bg-white rounded-xl px-3 py-2 mb-6">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/rmt-logo.svg"
+                alt="RMT Solutions — The Complete Lift Plan Company"
+                width={402}
+                height={144}
+                loading="lazy"
+                className="h-14 w-auto"
+              />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Lift planning and construction safety documentation from a CPCS Appointed Person with a NEBOSH Diploma. LOLER compliant lift plans, method statements and risk assessments for contractors across the UK — based in Warrington, working across Manchester, Liverpool and the North West.

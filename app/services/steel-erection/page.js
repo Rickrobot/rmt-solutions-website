@@ -5,6 +5,7 @@ import { ArrowRight, CheckCircle, FileText, Layers, Ruler, Users } from 'lucide-
 import SectionHeader from '@/components/ui/SectionHeader'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
+import ProofStrip from '@/components/ProofStrip'
 
 export const metadata = {
   // Fix #6/#8, Jul 2026 SEO review: title now leads on "steel erection lift
@@ -179,6 +180,7 @@ export default function SteelErectionPage() {
           </div>
         </div>
       </section>
+      <ProofStrip id="liddell" />
 
       {/* Services */}
       <section className="py-24 bg-slate-950">

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Clock, ShieldCheck, FileCheck, PhoneCall, CheckCircle2, AlertTriangle, ArrowRight } from 'lucide-react'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
+import ProofStrip from '@/components/ProofStrip'
 
 export const metadata = {
   title: 'Overhead & Gantry Crane Lift Plans UK',
@@ -218,38 +219,39 @@ export default function OverheadGantryCraneLiftPlansPage() {
           </div>
         </div>
       </section>
+      <ProofStrip id="duffy" />
 
       {/* Trust strip */}
-      <section className="bg-slate-50 border-y border-slate-200">
+      <section className="bg-slate-900 border-y border-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-2xl font-bold text-slate-900">35+</div>
-              <div className="text-sm text-slate-600">Years of construction &amp; lifting experience</div>
+              <div className="text-2xl font-bold text-white">35+</div>
+              <div className="text-sm text-gray-400">Years of construction &amp; lifting experience</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-slate-900">CPCS A61</div>
-              <div className="text-sm text-slate-600">Appointed Person, current card</div>
+              <div className="text-2xl font-bold text-white">CPCS A61</div>
+              <div className="text-sm text-gray-400">Appointed Person, current card</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-slate-900">NEBOSH</div>
-              <div className="text-sm text-slate-600">Construction Diploma · CertIOSH</div>
+              <div className="text-2xl font-bold text-white">NEBOSH</div>
+              <div className="text-sm text-gray-400">Construction Diploma · CertIOSH</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-slate-900">UK-wide</div>
-              <div className="text-sm text-slate-600">Remote and on-site coverage</div>
+              <div className="text-2xl font-bold text-white">UK-wide</div>
+              <div className="text-sm text-gray-400">Remote and on-site coverage</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Why You Need Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <h2 className="text-3xl font-bold text-white mb-6">
             Why overhead and gantry crane lifting needs proper planning
           </h2>
-          <div className="prose prose-lg max-w-none text-slate-600">
+          <div className="prose prose-lg max-w-none text-gray-400">
             <p>
               Overhead travelling cranes, gantries and bridge cranes are the backbone of lifting in
               UK factories, warehouses, fabrication shops, steel stockholders and engineering
@@ -275,7 +277,7 @@ export default function OverheadGantryCraneLiftPlansPage() {
                 className="object-cover"
               />
             </div>
-            <figcaption className="mt-3 text-sm text-slate-500">
+            <figcaption className="mt-3 text-sm text-gray-400">
               Overhead travelling bridge cranes serving a roller-conveyor line in a UK steel-processing
               workshop — the kind of fixed factory lifting equipment covered by BS 7121-7 and LOLER 1998.
             </figcaption>
@@ -307,28 +309,28 @@ export default function OverheadGantryCraneLiftPlansPage() {
                 desc: 'Overhead cranes load the building structure or their own gantry legs; wheel loads, end-stop forces and maintenance lifts all need checking.',
               },
             ].map((item) => (
-              <div key={item.title} className="bg-slate-50 p-6 rounded-lg">
+              <div key={item.title} className="bg-slate-800/40 p-6 rounded-lg">
                 <div className="flex items-start gap-3">
                   <AlertTriangle className="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-slate-900 mb-2">{item.title}</h3>
-                    <p className="text-slate-600 text-sm">{item.desc}</p>
+                    <h3 className="font-semibold text-white mb-2">{item.title}</h3>
+                    <p className="text-gray-400 text-sm">{item.desc}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <p className="mt-8 text-slate-600">
+          <p className="mt-8 text-gray-400">
             A proper overhead crane lift plan deals with each of these in writing — load weight and
             centre of gravity, SWL verification, lifting accessories, travel route and exclusion
             zones, slinger/signaller arrangements and a method everyone has been briefed on, with
             the load on each sling leg worked out and every accessory checked against its WLL. For
             background on how a plan is built and when one is required, see{' '}
-            <Link href="/blog/overhead-crane-lift-plan-guide" className="text-amber-600 hover:text-amber-700 underline">
+            <Link href="/blog/overhead-crane-lift-plan-guide" className="text-amber-400 hover:text-amber-300 underline">
               do you need a lift plan for an overhead crane
             </Link>{' '}
             and the broader{' '}
-            <Link href="/blog/what-is-a-lift-plan" className="text-amber-600 hover:text-amber-700 underline">
+            <Link href="/blog/what-is-a-lift-plan" className="text-amber-400 hover:text-amber-300 underline">
               what is a lift plan
             </Link>{' '}
             article.
@@ -337,21 +339,21 @@ export default function OverheadGantryCraneLiftPlansPage() {
       </section>
 
       {/* What's Included Section */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             What&apos;s included in your overhead crane lift plan
           </h2>
-          <p className="text-lg text-slate-600 mb-12 max-w-3xl">
+          <p className="text-lg text-gray-400 mb-12 max-w-3xl">
             Every lift plan we issue is a complete pack — risk assessment, method statement,
             calculations and arrangement drawing in one place. It is briefed to your team, signed
             off by an Appointed Person and ready to drop into your safety file or CDM documentation.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Crane &amp; environment assessment</h3>
-              <ul className="space-y-3 text-slate-600">
+            <div className="bg-slate-800/40 p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold text-white mb-4">Crane &amp; environment assessment</h3>
+              <ul className="space-y-3 text-gray-400">
                 {[
                   'Crane type, span, SWL and configuration confirmed from the data plate',
                   'Travel route, walkways and occupied-area review (loads over people)',
@@ -367,9 +369,9 @@ export default function OverheadGantryCraneLiftPlansPage() {
               </ul>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Equipment verification</h3>
-              <ul className="space-y-3 text-slate-600">
+            <div className="bg-slate-800/40 p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold text-white mb-4">Equipment verification</h3>
+              <ul className="space-y-3 text-gray-400">
                 {[
                   'Crane SWL and current LOLER thorough examination certificate',
                   'Hoist, rope/chain and limit-switch (over-hoist) condition',
@@ -385,9 +387,9 @@ export default function OverheadGantryCraneLiftPlansPage() {
               </ul>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Lift calculations</h3>
-              <ul className="space-y-3 text-slate-600">
+            <div className="bg-slate-800/40 p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold text-white mb-4">Lift calculations</h3>
+              <ul className="space-y-3 text-gray-400">
                 {[
                   'Load weight including rigging and below-the-hook equipment',
                   'Centre-of-gravity identification and slinging method',
@@ -403,9 +405,9 @@ export default function OverheadGantryCraneLiftPlansPage() {
               </ul>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Documentation pack</h3>
-              <ul className="space-y-3 text-slate-600">
+            <div className="bg-slate-800/40 p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold text-white mb-4">Documentation pack</h3>
+              <ul className="space-y-3 text-gray-400">
                 {[
                   'Lift plan arrangement drawing with travel route and exclusion zones marked',
                   'Risk assessment with site-specific control measures',
@@ -436,12 +438,12 @@ export default function OverheadGantryCraneLiftPlansPage() {
       </section>
 
       {/* Process / Response time promise */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             How it works — and how fast
           </h2>
-          <p className="text-lg text-slate-600 mb-12 max-w-3xl">
+          <p className="text-lg text-gray-400 mb-12 max-w-3xl">
             Quote-on-application, no sign-up, no hidden fees. Send the brief and we&apos;ll come
             back to you the same working day.
           </p>
@@ -473,13 +475,13 @@ export default function OverheadGantryCraneLiftPlansPage() {
                 badge: 'Same day',
               },
             ].map((item) => (
-              <div key={item.step} className="relative bg-slate-50 p-6 rounded-xl border border-slate-200">
+              <div key={item.step} className="relative bg-slate-800/40 p-6 rounded-xl border border-slate-700/50">
                 <div className="absolute -top-3 left-6 bg-amber-500 text-slate-900 text-xs font-bold uppercase tracking-wider px-2 py-1 rounded">
                   Step {item.step}
                 </div>
-                <h3 className="font-semibold text-slate-900 mt-2 mb-2">{item.title}</h3>
-                <p className="text-slate-600 text-sm mb-4">{item.desc}</p>
-                <div className="inline-flex items-center gap-1 text-xs text-amber-700 font-semibold">
+                <h3 className="font-semibold text-white mt-2 mb-2">{item.title}</h3>
+                <p className="text-gray-400 text-sm mb-4">{item.desc}</p>
+                <div className="inline-flex items-center gap-1 text-xs text-amber-400 font-semibold">
                   <Clock className="w-3 h-3" />
                   {item.badge}
                 </div>
@@ -487,9 +489,9 @@ export default function OverheadGantryCraneLiftPlansPage() {
             ))}
           </div>
 
-          <p className="mt-10 text-slate-600 italic">
+          <p className="mt-10 text-gray-400 italic">
             Urgent or same-day work is accommodated where possible — call{' '}
-            <a href="tel:+447803808093" className="text-amber-600 hover:text-amber-700 font-semibold">
+            <a href="tel:+447803808093" className="text-amber-400 hover:text-amber-300 font-semibold">
               07803 808093
             </a>{' '}
             and we&apos;ll tell you straight whether it can be done.
@@ -498,24 +500,24 @@ export default function OverheadGantryCraneLiftPlansPage() {
       </section>
 
       {/* Crane Types */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Overhead crane types we cover
           </h2>
-          <p className="text-lg text-slate-600 mb-12 max-w-3xl">
+          <p className="text-lg text-gray-400 mb-12 max-w-3xl">
             From a 1-tonne workshop jib to a 50-tonne twin-girder EOT crane in a steel mill — if
             it&apos;s a fixed lifting machine, we&apos;ll plan the lift.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl border border-slate-200">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Overhead travelling (EOT) cranes</h3>
-              <p className="text-slate-600 mb-4">
+            <div className="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50">
+              <h3 className="text-xl font-semibold text-white mb-4">Overhead travelling (EOT) cranes</h3>
+              <p className="text-gray-400 mb-4">
                 Single- and double-girder bridge cranes running on building-mounted runway beams —
                 the standard factory and fabrication-shop crane.
               </p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li>• Pendant and radio-control operation</li>
                 <li>• Cross-travel, long-travel and hoist envelopes</li>
                 <li>• Loads-over-people routing and exclusion zones</li>
@@ -523,13 +525,13 @@ export default function OverheadGantryCraneLiftPlansPage() {
               </ul>
             </div>
 
-            <div className="bg-white p-6 rounded-xl border border-slate-200">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Goliath &amp; gantry cranes</h3>
-              <p className="text-slate-600 mb-4">
+            <div className="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50">
+              <h3 className="text-xl font-semibold text-white mb-4">Goliath &amp; gantry cranes</h3>
+              <p className="text-gray-400 mb-4">
                 Self-supporting goliath and semi-goliath gantries that travel on floor or yard
                 rails — common in stockyards, precast plants and laydown areas.
               </p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li>• Rail and wheel-loading checks</li>
                 <li>• Outdoor wind and weather considerations</li>
                 <li>• Long-load and out-of-balance handling</li>
@@ -537,13 +539,13 @@ export default function OverheadGantryCraneLiftPlansPage() {
               </ul>
             </div>
 
-            <div className="bg-white p-6 rounded-xl border border-slate-200">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Jib, pillar &amp; bespoke cranes</h3>
-              <p className="text-slate-600 mb-4">
+            <div className="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50">
+              <h3 className="text-xl font-semibold text-white mb-4">Jib, pillar &amp; bespoke cranes</h3>
+              <p className="text-gray-400 mb-4">
                 Slewing jib cranes, wall-mounted and pillar cranes, plus tandem lifts and
                 below-the-hook lifting beams that need specific planning.
               </p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li>• Slewing radius and SWL-at-reach checks</li>
                 <li>• Spreader and lifting-beam configurations</li>
                 <li>• Twin-crane / tandem lift load sharing</li>
@@ -613,12 +615,12 @@ export default function OverheadGantryCraneLiftPlansPage() {
       </section>
 
       {/* When You Need Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">
+          <h2 className="text-3xl font-bold text-white mb-8">
             When do you need an overhead crane lift plan?
           </h2>
-          <p className="text-lg text-slate-600 mb-8 max-w-3xl">
+          <p className="text-lg text-gray-400 mb-8 max-w-3xl">
             Under LOLER 1998 Regulation 8, every lifting operation must be properly planned by a
             competent person. For overhead, gantry and jib cranes, a specific written lift plan is
             needed when any of the following apply:
@@ -636,18 +638,18 @@ export default function OverheadGantryCraneLiftPlansPage() {
               'New process, new product or a changed lift route',
               'When specified by your duty holder or principal contractor',
             ].map((item) => (
-              <div key={item} className="flex items-center gap-3 bg-slate-50 p-4 rounded-lg border border-slate-100">
+              <div key={item} className="flex items-center gap-3 bg-slate-800/40 p-4 rounded-lg border border-slate-800">
                 <CheckCircle2 className="w-5 h-5 text-amber-500 flex-shrink-0" />
-                <span className="text-slate-700">{item}</span>
+                <span className="text-gray-300">{item}</span>
               </div>
             ))}
           </div>
 
-          <p className="mt-8 text-slate-600 italic">
+          <p className="mt-8 text-gray-400 italic">
             Even where a routine generic plan would do, having documented evidence demonstrates due
             diligence under LOLER and gives the lifting team something concrete to brief against.
             For more detail, see{' '}
-            <Link href="/blog/when-do-you-need-lift-plan" className="text-amber-600 hover:text-amber-700 underline">
+            <Link href="/blog/when-do-you-need-lift-plan" className="text-amber-400 hover:text-amber-300 underline">
               when do you need a lift plan
             </Link>
             .
@@ -680,9 +682,9 @@ export default function OverheadGantryCraneLiftPlansPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">
+          <h2 className="text-3xl font-bold text-white mb-12">
             Why manufacturers send their overhead crane lifts to us
           </h2>
 
@@ -713,9 +715,9 @@ export default function OverheadGantryCraneLiftPlansPage() {
                 desc: 'AutoCAD for the arrangement drawing and load modelling for capacity and load-share checks — output that looks the part and stands up to review.',
               },
             ].map((item) => (
-              <div key={item.title} className="border border-slate-200 p-6 rounded-xl">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">{item.title}</h3>
-                <p className="text-slate-600">{item.desc}</p>
+              <div key={item.title} className="border border-slate-700/50 p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-white mb-3">{item.title}</h3>
+                <p className="text-gray-400">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -723,9 +725,9 @@ export default function OverheadGantryCraneLiftPlansPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">
+          <h2 className="text-3xl font-bold text-white mb-12">
             Overhead &amp; gantry crane lift plan FAQs
           </h2>
 
@@ -768,9 +770,9 @@ export default function OverheadGantryCraneLiftPlansPage() {
                 a: 'Yes. We work with manufacturers, contractors and facilities teams right across the UK from our base in Warrington, Cheshire. Remote desk-based plans can be issued anywhere in the country; site visits and follow-up briefings are arranged when needed.',
               },
             ].map((faq) => (
-              <div key={faq.q} className="bg-white p-6 rounded-xl border border-slate-200">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">{faq.q}</h3>
-                <p className="text-slate-600">{faq.a}</p>
+              <div key={faq.q} className="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50">
+                <h3 className="text-lg font-semibold text-white mb-3">{faq.q}</h3>
+                <p className="text-gray-400">{faq.a}</p>
               </div>
             ))}
           </div>
@@ -828,28 +830,6 @@ export default function OverheadGantryCraneLiftPlansPage() {
         </div>
       </section>
 
-      {/* Related Services */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-8">Related Services</h2>
-          <div className="grid md:grid-cols-4 gap-4">
-            {[
-              { href: '/services/mobile-crane-lift-plans', title: 'Mobile Crane Lift Plans' },
-              { href: '/services/excavator-lift-plans', title: 'Excavator Lift Plans' },
-              { href: '/services/lift-plan-checking', title: 'Lift Plan Checking Service' },
-              { href: '/services/tower-crane', title: 'Tower Crane Contracts' },
-            ].map((service) => (
-              <Link
-                key={service.href}
-                href={service.href}
-                className="bg-slate-50 hover:bg-slate-100 p-4 rounded-lg text-slate-900 font-medium transition-colors"
-              >
-                {service.title} →
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* Available across the UK — reciprocates the inbound links from /locations/* */}
       <section className="py-16 bg-slate-900 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

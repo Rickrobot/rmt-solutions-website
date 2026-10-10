@@ -35,6 +35,7 @@ const personJsonLd = {
   description:
     'CPCS A61 Appointed Person and founder of RMT Solutions Ltd, with 35 years of UK construction industry experience. NEBOSH Diploma qualified, CertIOSH, MIIRSM and TIFSM.',
   url: 'https://www.rmtsafetysolutions.com/about',
+  image: 'https://www.rmtsafetysolutions.com/images/ricky-marsh.webp',
   email: 'ricky@rmtsolutions.co.uk',
   telephone: '+447803808093',
   worksFor: {
@@ -98,17 +99,38 @@ export default function AboutPage() {
         <div className="hero-overlay absolute inset-0" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
-              About RMT Solutions
-            </span>
-            <h1 className="font-display text-5xl sm:text-6xl font-bold text-white mb-6">
-              35 Years of <span className="gradient-text">Lift Planning</span> Expertise
-            </h1>
-            <p className="text-xl text-gray-300 leading-relaxed">
-              Professional lift planning consultancy led by a CPCS Appointed Person with extensive 
-              experience across the UK construction industry.
-            </p>
+          <div className="grid lg:grid-cols-[minmax(0,1fr)_340px] gap-10 lg:gap-16 items-center">
+            <div className="max-w-3xl">
+              <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+                About RMT Solutions
+              </span>
+              <h1 className="font-display text-4xl sm:text-6xl font-bold text-white mb-6">
+                35 Years of <span className="gradient-text">Lift Planning</span> Expertise
+              </h1>
+              <p className="text-xl text-gray-300 leading-relaxed">
+                Professional lift planning consultancy led by a CPCS Appointed Person with extensive 
+                experience across the UK construction industry.
+              </p>
+            </div>
+            {/* Oct 2026: a face for a one-person consultancy. Buyers want to
+                see who they will be dealing with. */}
+            <figure className="w-full max-w-[340px] mx-auto lg:mx-0">
+              <div className="rounded-3xl overflow-hidden border border-slate-700/60 shadow-2xl amber-glow">
+                <Image
+                  src="/images/ricky-marsh.webp"
+                  alt="Ricky Marsh, CPCS A61 Appointed Person and founder of RMT Solutions"
+                  width={896}
+                  height={1195}
+                  sizes="(max-width: 1023px) 340px, 340px"
+                  priority
+                  className="w-full h-auto"
+                />
+              </div>
+              <figcaption className="mt-4 text-center lg:text-left">
+                <span className="block text-white font-semibold">Ricky Marsh</span>
+                <span className="block text-sm text-gray-400">CPCS A61 Appointed Person · Founder, RMT Solutions</span>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>

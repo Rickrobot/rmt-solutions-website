@@ -4,6 +4,7 @@ import { Clock, ShieldCheck, FileCheck, PhoneCall, CheckCircle2, X, ArrowRight }
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 import LiftCheckFlow from '@/components/LiftCheckFlow'
+import ProofStrip from '@/components/ProofStrip'
 
 export const metadata = {
   title: 'Independent Lift Plan Checking & Review UK',
@@ -213,36 +214,37 @@ export default function LiftPlanCheckingPage() {
           </div>
         </div>
       </section>
+      <ProofStrip id="banting" />
 
       {/* Trust strip */}
-      <section className="bg-slate-50 border-y border-slate-200">
+      <section className="bg-slate-900 border-y border-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-2xl font-bold text-slate-900">35+</div>
-              <div className="text-sm text-slate-600">Years of construction experience</div>
+              <div className="text-2xl font-bold text-white">35+</div>
+              <div className="text-sm text-gray-400">Years of construction experience</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-slate-900">CPCS A61</div>
-              <div className="text-sm text-slate-600">Appointed Person, current card</div>
+              <div className="text-2xl font-bold text-white">CPCS A61</div>
+              <div className="text-sm text-gray-400">Appointed Person, current card</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-slate-900">NEBOSH</div>
-              <div className="text-sm text-slate-600">Construction Diploma · CertIOSH</div>
+              <div className="text-2xl font-bold text-white">NEBOSH</div>
+              <div className="text-sm text-gray-400">Construction Diploma · CertIOSH</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-slate-900">UK-wide</div>
-              <div className="text-sm text-slate-600">Remote and on-site coverage</div>
+              <div className="text-2xl font-bold text-white">UK-wide</div>
+              <div className="text-sm text-gray-400">Remote and on-site coverage</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Why You Need This */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">Why independent lift plan checking matters</h2>
-          <div className="prose prose-lg max-w-none text-slate-600 mb-8">
+          <h2 className="text-3xl font-bold text-white mb-6">Why independent lift plan checking matters</h2>
+          <div className="prose prose-lg max-w-none text-gray-400 mb-8">
             <p>
               As a principal contractor under CDM 2015 you have duties to ensure safe systems of
               work on your site — including the lifting operations carried out by your
@@ -256,8 +258,8 @@ export default function LiftPlanCheckingPage() {
             </p>
           </div>
 
-          <div className="bg-rose-50 border border-rose-200 p-8 rounded-xl mb-8">
-            <h3 className="text-xl font-semibold text-rose-900 mb-4">Common problems we find</h3>
+          <div className="bg-rose-500/10 border border-rose-500/30 p-8 rounded-xl mb-8">
+            <h3 className="text-xl font-semibold text-rose-200 mb-4">Common problems we find</h3>
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 'Incorrect capacity readings from load charts',
@@ -270,21 +272,21 @@ export default function LiftPlanCheckingPage() {
                 'No CDM-relevant interface check (services, exclusions)',
               ].map((problem) => (
                 <div key={problem} className="flex items-start gap-3">
-                  <X className="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-rose-900">{problem}</span>
+                  <X className="w-5 h-5 text-rose-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-rose-200">{problem}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <p className="text-slate-700 font-medium text-lg">
+          <p className="text-gray-300 font-medium text-lg">
             Independent checking is the cheapest insurance you can buy on a lift. For deeper
             background see our blog on{' '}
-            <Link href="/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected" className="text-amber-600 hover:text-amber-700 underline">
+            <Link href="/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected" className="text-amber-400 hover:text-amber-300 underline">
               what gets checked and why plans get rejected
             </Link>
             . The same review standard is applied to the wider document package through our{' '}
-            <Link href="/services/method-statements-rams" className="text-amber-600 hover:text-amber-700 underline">
+            <Link href="/services/method-statements-rams" className="text-amber-400 hover:text-amber-300 underline">
               method statement and RAMS service
             </Link>
             .
@@ -293,10 +295,10 @@ export default function LiftPlanCheckingPage() {
       </section>
 
       {/* Review flow */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-2">How the review works</h2>
-          <p className="text-lg text-slate-600 mb-10 max-w-3xl">
+          <h2 className="text-3xl font-bold text-white mb-2">How the review works</h2>
+          <p className="text-lg text-gray-400 mb-10 max-w-3xl">
             From a complete submission to a clear Category A or Category B determination, with
             findings you can act on.
           </p>
@@ -305,11 +307,11 @@ export default function LiftPlanCheckingPage() {
       </section>
 
       {/* What We Review */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">What we review</h2>
-          <p className="text-lg text-slate-600 mb-12 max-w-3xl">
-            Our review runs the full 18-point methodology against BS 7121, LOLER 1998, ISO 10567
+          <h2 className="text-3xl font-bold text-white mb-4">What we review</h2>
+          <p className="text-lg text-gray-400 mb-12 max-w-3xl">
+            Our review runs the full 19-point methodology against BS 7121, LOLER 1998, ISO 10567
             and the project&apos;s own standing rules. Every check returns a written finding.
           </p>
 
@@ -345,6 +347,7 @@ export default function LiftPlanCheckingPage() {
                   'Control measures adequate, proportionate and workable',
                   'Residual risk acceptable',
                   'Weather limits and stop conditions clear',
+                  'Environmental impacts identified and controlled',
                 ],
               },
               {
@@ -358,9 +361,9 @@ export default function LiftPlanCheckingPage() {
                 ],
               },
             ].map((section) => (
-              <div key={section.title} className="bg-white p-8 rounded-xl shadow-sm">
-                <h3 className="text-xl font-semibold text-slate-900 mb-4">{section.title}</h3>
-                <ul className="space-y-3 text-slate-600">
+              <div key={section.title} className="bg-slate-800/40 p-8 rounded-xl shadow-sm">
+                <h3 className="text-xl font-semibold text-white mb-4">{section.title}</h3>
+                <ul className="space-y-3 text-gray-400">
                   {section.items.map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
@@ -375,29 +378,29 @@ export default function LiftPlanCheckingPage() {
       </section>
 
       {/* What You Receive */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">What you receive</h2>
-          <p className="text-lg text-slate-600 mb-12 max-w-3xl">
+          <h2 className="text-3xl font-bold text-white mb-4">What you receive</h2>
+          <p className="text-lg text-gray-400 mb-12 max-w-3xl">
             A formal written check report — clear status, every finding documented, every required
             amendment listed. Designed to drop straight into your CDM file and to brief the
             submitter without ambiguity.
           </p>
 
-          <div className="bg-slate-50 p-8 rounded-xl">
-            <h3 className="text-xl font-semibold text-slate-900 mb-6">Possible outcomes</h3>
+          <div className="bg-slate-800/40 p-8 rounded-xl">
+            <h3 className="text-xl font-semibold text-white mb-6">Possible outcomes</h3>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-emerald-100 p-6 rounded-lg">
-                <span className="text-emerald-700 font-bold text-lg block mb-2">Category A — Acceptable</span>
-                <p className="text-emerald-900 text-sm">
+              <div className="bg-emerald-500/15 p-6 rounded-lg">
+                <span className="text-emerald-300 font-bold text-lg block mb-2">Category A — Acceptable</span>
+                <p className="text-emerald-200 text-sm">
                   Plan is technically correct, compliant and site-suitable. Lift can proceed. Any
                   minor advisory comments are listed for the submitter&apos;s information.
                 </p>
               </div>
-              <div className="bg-rose-100 p-6 rounded-lg">
-                <span className="text-rose-700 font-bold text-lg block mb-2">Category B — Not acceptable</span>
-                <p className="text-rose-900 text-sm">
+              <div className="bg-rose-500/15 p-6 rounded-lg">
+                <span className="text-rose-300 font-bold text-lg block mb-2">Category B — Not acceptable</span>
+                <p className="text-rose-200 text-sm">
                   Plan must be amended before the lift can go ahead. Each finding is set out with
                   the standard reference and what is required to close it. Resubmission verification
                   is included in the fee.
@@ -405,7 +408,7 @@ export default function LiftPlanCheckingPage() {
               </div>
             </div>
 
-            <ul className="mt-8 space-y-3 text-slate-700">
+            <ul className="mt-8 space-y-3 text-gray-300">
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
                 Issues found with explanations and BS 7121 / LOLER references
@@ -447,7 +450,7 @@ export default function LiftPlanCheckingPage() {
               {
                 step: '2',
                 title: 'Review',
-                desc: 'Our CPCS A61 Appointed Person runs the full 18-point methodology against BS 7121, LOLER and project-specific rules.',
+                desc: 'Our CPCS A61 Appointed Person runs the full 19-point methodology against BS 7121, LOLER and project-specific rules.',
                 badge: 'Same day',
               },
               {
@@ -485,18 +488,18 @@ export default function LiftPlanCheckingPage() {
       </section>
 
       {/* Who Uses This */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">Who uses this service?</h2>
+          <h2 className="text-3xl font-bold text-white mb-12">Who uses this service?</h2>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="border border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Tier 1 main contractors</h3>
-              <p className="text-slate-600 mb-4">
+            <div className="border border-slate-700/50 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-4">Tier 1 main contractors</h3>
+              <p className="text-gray-400 mb-4">
                 Receiving lift plans from multiple subcontractors and suppliers daily. You need
                 consistency, defensibility, and zero surprises.
               </p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Confidence that lifting operations are properly planned</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Documented due diligence under CDM 2015</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Reduced risk of incidents and HSE intervention</li>
@@ -504,26 +507,26 @@ export default function LiftPlanCheckingPage() {
               </ul>
             </div>
 
-            <div className="border border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Project managers</h3>
-              <p className="text-slate-600 mb-4">
+            <div className="border border-slate-700/50 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-4">Project managers</h3>
+              <p className="text-gray-400 mb-4">
                 Signing off lift plans without being a lifting specialist. You need expert backup
                 to support your approval decisions.
               </p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Expert review behind your approval signature</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Plain-language reports you can act on</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Technical backup when challenging submissions</li>
               </ul>
             </div>
 
-            <div className="border border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Health &amp; Safety managers</h3>
-              <p className="text-slate-600 mb-4">
+            <div className="border border-slate-700/50 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-4">Health &amp; Safety managers</h3>
+              <p className="text-gray-400 mb-4">
                 Responsible for site safety but can&apos;t be expert in every discipline. You need
                 a specialist on tap.
               </p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Specialist lift planning expertise on call</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Independent verification of subcontractor competence</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Evidence of robust checking systems for audit</li>
@@ -534,44 +537,44 @@ export default function LiftPlanCheckingPage() {
       </section>
 
       {/* Good vs Poor */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">What separates a good lift plan from a poor one</h2>
-          <p className="text-lg text-slate-600 mb-8 max-w-3xl">
+          <h2 className="text-3xl font-bold text-white mb-4">What separates a good lift plan from a poor one</h2>
+          <p className="text-lg text-gray-400 mb-8 max-w-3xl">
             Through thousands of reviews these are the patterns that come up again and again. We
             don&apos;t just check boxes — we assess whether the plan will actually work safely on
             your site.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-emerald-50 p-8 rounded-xl border border-emerald-200">
-              <h3 className="text-xl font-semibold text-emerald-900 mb-4">Good lift plans have</h3>
-              <ul className="space-y-3 text-emerald-900">
-                <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />Clear scale drawings showing equipment position, radii, and load path</li>
-                <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />Verified capacity with specific duty chart references</li>
-                <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />Ground assessment addressing actual site conditions</li>
-                <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />Site-specific risk assessment with proportionate controls</li>
-                <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />Workable method statements that match the drawing</li>
-                <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />Named, competent personnel with current cards</li>
+            <div className="bg-emerald-500/10 p-8 rounded-xl border border-emerald-500/30">
+              <h3 className="text-xl font-semibold text-emerald-200 mb-4">Good lift plans have</h3>
+              <ul className="space-y-3 text-emerald-200">
+                <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />Clear scale drawings showing equipment position, radii, and load path</li>
+                <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />Verified capacity with specific duty chart references</li>
+                <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />Ground assessment addressing actual site conditions</li>
+                <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />Site-specific risk assessment with proportionate controls</li>
+                <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />Workable method statements that match the drawing</li>
+                <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />Named, competent personnel with current cards</li>
               </ul>
             </div>
 
-            <div className="bg-rose-50 p-8 rounded-xl border border-rose-200">
-              <h3 className="text-xl font-semibold text-rose-900 mb-4">Poor lift plans often have</h3>
-              <ul className="space-y-3 text-rose-900">
-                <li className="flex items-start gap-3"><X className="w-5 h-5 text-rose-600 mt-0.5 flex-shrink-0" />Generic content copied without site-specific adaptation</li>
-                <li className="flex items-start gap-3"><X className="w-5 h-5 text-rose-600 mt-0.5 flex-shrink-0" />Missing calculations or &ldquo;available on request&rdquo;</li>
-                <li className="flex items-start gap-3"><X className="w-5 h-5 text-rose-600 mt-0.5 flex-shrink-0" />Assumed ground conditions without verification</li>
-                <li className="flex items-start gap-3"><X className="w-5 h-5 text-rose-600 mt-0.5 flex-shrink-0" />Risk assessments missing obvious hazards</li>
-                <li className="flex items-start gap-3"><X className="w-5 h-5 text-rose-600 mt-0.5 flex-shrink-0" />Method statements that don&apos;t provide useful guidance</li>
-                <li className="flex items-start gap-3"><X className="w-5 h-5 text-rose-600 mt-0.5 flex-shrink-0" />Personnel listed without verifiable competencies</li>
+            <div className="bg-rose-500/10 p-8 rounded-xl border border-rose-500/30">
+              <h3 className="text-xl font-semibold text-rose-200 mb-4">Poor lift plans often have</h3>
+              <ul className="space-y-3 text-rose-200">
+                <li className="flex items-start gap-3"><X className="w-5 h-5 text-rose-400 mt-0.5 flex-shrink-0" />Generic content copied without site-specific adaptation</li>
+                <li className="flex items-start gap-3"><X className="w-5 h-5 text-rose-400 mt-0.5 flex-shrink-0" />Missing calculations or &ldquo;available on request&rdquo;</li>
+                <li className="flex items-start gap-3"><X className="w-5 h-5 text-rose-400 mt-0.5 flex-shrink-0" />Assumed ground conditions without verification</li>
+                <li className="flex items-start gap-3"><X className="w-5 h-5 text-rose-400 mt-0.5 flex-shrink-0" />Risk assessments missing obvious hazards</li>
+                <li className="flex items-start gap-3"><X className="w-5 h-5 text-rose-400 mt-0.5 flex-shrink-0" />Method statements that don&apos;t provide useful guidance</li>
+                <li className="flex items-start gap-3"><X className="w-5 h-5 text-rose-400 mt-0.5 flex-shrink-0" />Personnel listed without verifiable competencies</li>
               </ul>
             </div>
           </div>
 
-          <p className="mt-8 text-slate-600">
+          <p className="mt-8 text-gray-400">
             For more on common rejection patterns see our blog on{' '}
-            <Link href="/blog/common-lift-planning-mistakes" className="text-amber-600 hover:text-amber-700 underline">
+            <Link href="/blog/common-lift-planning-mistakes" className="text-amber-400 hover:text-amber-300 underline">
               common lift planning mistakes
             </Link>
             .
@@ -582,10 +585,10 @@ export default function LiftPlanCheckingPage() {
       {/* Equipment Types — merged in from /services/lift-plan-review (Jul 2026).
           Gives the page an equipment-level entry point and reciprocates links
           to each equipment service leaf. */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Equipment types we review</h2>
-          <p className="text-lg text-slate-600 mb-8 max-w-3xl">
+          <h2 className="text-3xl font-bold text-white mb-4">Equipment types we review</h2>
+          <p className="text-lg text-gray-400 mb-8 max-w-3xl">
             We check and review lift plans for every type of lifting equipment in common use on UK
             construction sites. Each has its own technical traps, and the review is tailored accordingly.
           </p>
@@ -599,9 +602,9 @@ export default function LiftPlanCheckingPage() {
               { name: 'Tower Crane Lift Plans', desc: 'Free-standing and tied configurations, overlapping jib zones, foundation loads, and climb sequence planning.', href: '/services/tower-crane' },
               { name: 'Steel Erection Plans', desc: 'Fabrication drawing review, erection sequence, temporary stability, and connection methodology.', href: '/services/steel-erection' },
             ].map((item) => (
-              <Link key={item.href} href={item.href} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">{item.name}</h3>
-                <p className="text-slate-600 text-sm">{item.desc}</p>
+              <Link key={item.href} href={item.href} className="bg-slate-800/40 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-amber-400 transition-colors">{item.name}</h3>
+                <p className="text-gray-400 text-sm">{item.desc}</p>
               </Link>
             ))}
           </div>
@@ -609,33 +612,33 @@ export default function LiftPlanCheckingPage() {
       </section>
 
       {/* Service Options */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Service options</h2>
-          <p className="text-lg text-slate-600 mb-12 max-w-3xl">
+          <h2 className="text-3xl font-bold text-white mb-4">Service options</h2>
+          <p className="text-lg text-gray-400 mb-12 max-w-3xl">
             Three ways to engage — pick whichever fits the shape of your project.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="border-2 border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">Per-plan checking</h3>
-              <p className="text-slate-500 text-sm mb-4">Quote on application</p>
-              <p className="text-slate-600 mb-4">Individual reviews charged per submission. Best for:</p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+            <div className="border-2 border-slate-700/50 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-2">Per-plan checking</h3>
+              <p className="text-gray-400 text-sm mb-4">Quote on application</p>
+              <p className="text-gray-400 mb-4">Individual reviews charged per submission. Best for:</p>
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li>• Occasional checking requirements</li>
                 <li>• Specific complex or one-off lifts</li>
                 <li>• Projects with few lifting operations</li>
               </ul>
             </div>
 
-            <div className="border-2 border-amber-500 p-8 rounded-xl bg-amber-50 relative">
+            <div className="border-2 border-amber-500 p-8 rounded-xl bg-amber-500/10 relative">
               <div className="absolute -top-3 left-6 bg-amber-500 text-slate-900 text-xs font-bold uppercase tracking-wider px-2 py-1 rounded">
                 Most popular
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2 mt-2">Retained service</h3>
-              <p className="text-slate-500 text-sm mb-4">Agreed monthly fee</p>
-              <p className="text-slate-600 mb-4">Unlimited lift plan checks at a fixed monthly rate. Best for:</p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+              <h3 className="text-xl font-semibold text-white mb-2 mt-2">Retained service</h3>
+              <p className="text-gray-400 text-sm mb-4">Agreed monthly fee</p>
+              <p className="text-gray-400 mb-4">Unlimited lift plan checks at a fixed monthly rate. Best for:</p>
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li>• Large projects with frequent submissions</li>
                 <li>• Multi-site operations</li>
                 <li>• Long-term contractor relationships</li>
@@ -643,11 +646,11 @@ export default function LiftPlanCheckingPage() {
               </ul>
             </div>
 
-            <div className="border-2 border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">On-site presence</h3>
-              <p className="text-slate-500 text-sm mb-4">Day rate</p>
-              <p className="text-slate-600 mb-4">CPCS A61 Appointed Person attending your site. Best for:</p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+            <div className="border-2 border-slate-700/50 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-2">On-site presence</h3>
+              <p className="text-gray-400 text-sm mb-4">Day rate</p>
+              <p className="text-gray-400 mb-4">CPCS A61 Appointed Person attending your site. Best for:</p>
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li>• Real-time lift plan review</li>
                 <li>• Pre-lift briefings</li>
                 <li>• Complex operation supervision</li>
@@ -657,7 +660,7 @@ export default function LiftPlanCheckingPage() {
           </div>
 
           <div className="mt-8 text-center">
-            <Link href="/contact" className="text-amber-600 hover:text-amber-700 font-semibold inline-flex items-center gap-2">
+            <Link href="/contact" className="text-amber-400 hover:text-amber-300 font-semibold inline-flex items-center gap-2">
               Discuss the right option for your project
               <ArrowRight className="w-4 h-4" />
             </Link>
@@ -666,9 +669,9 @@ export default function LiftPlanCheckingPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">Why contractors send their checking to us</h2>
+          <h2 className="text-3xl font-bold text-white mb-12">Why contractors send their checking to us</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -688,17 +691,17 @@ export default function LiftPlanCheckingPage() {
                 desc: 'Construction-specific NEBOSH Diploma, CertIOSH (Certified IOSH member), MIIRSM and TIFSM behind every finding.',
               },
               {
-                title: '18-point methodology',
-                desc: 'Structured review (P01–P17) against BS 7121, LOLER 1998 and ISO 10567. No misses, no opinion-driven feedback.',
+                title: '19-point methodology',
+                desc: 'Structured review (P01–P19, point 19 covering environmental management) against BS 7121, LOLER 1998 and ISO 10567. No misses, no opinion-driven feedback.',
               },
               {
                 title: 'Defensible reports',
                 desc: 'Every finding referenced to a standard or project rule. Reports designed to drop into your CDM file and stand up to HSE scrutiny.',
               },
             ].map((item) => (
-              <div key={item.title} className="bg-white border border-slate-200 p-6 rounded-xl">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">{item.title}</h3>
-                <p className="text-slate-600">{item.desc}</p>
+              <div key={item.title} className="bg-slate-800/40 border border-slate-700/50 p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-white mb-3">{item.title}</h3>
+                <p className="text-gray-400">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -706,15 +709,15 @@ export default function LiftPlanCheckingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">Lift plan checking FAQs</h2>
+          <h2 className="text-3xl font-bold text-white mb-12">Lift plan checking FAQs</h2>
 
           <div className="space-y-6 max-w-4xl">
             {PAGE_FAQS.map((faq) => (
-              <div key={faq.q} className="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">{faq.q}</h3>
-                <p className="text-slate-600">{faq.a}</p>
+              <div key={faq.q} className="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50">
+                <h3 className="text-lg font-semibold text-white mb-3">{faq.q}</h3>
+                <p className="text-gray-400">{faq.a}</p>
               </div>
             ))}
           </div>

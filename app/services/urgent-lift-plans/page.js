@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle, Clock, Phone, AlertTriangle, FileText } from 'lucide-react'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
+import ProofStrip from '@/components/ProofStrip'
 
 // Same-day / urgent lift plans.
 //
@@ -233,6 +234,7 @@ export default function UrgentLiftPlansPage() {
           </div>
         </div>
       </section>
+      <ProofStrip id="musetti" />
 
       {/* The honest version */}
       <section className="py-20 bg-slate-950 border-y border-slate-800/50">
