@@ -984,6 +984,7 @@ const blogPosts = {
       <p>Ask three people on a construction site what paperwork a lift needs and you will often get three different answers: a lift plan, a method statement, a risk assessment, or "the RAMS". They are related but not interchangeable — and principal contractors reject lifting documentation every week because the wrong document was supplied, or because a generic template was used where a written, site-specific plan was required.</p>
 
       <p>This guide explains what a lifting method statement and RAMS are, what the law requires, what a good one contains, and who is competent to write it.</p>
+      <p>Need one written for a lift on your site? We write <a href="/services/method-statements-rams">lifting method statements</a> and RAMS to order, alongside the lift plan, so the two agree — usually within 24–48 hours.</p>
 
       <h2>Lifting method statement, RAMS and lift plan — what is the difference?</h2>
       <p>The terms describe different but overlapping documents:</p>
@@ -1353,7 +1354,7 @@ const blogPosts = {
     content: `
       <p class="lead">A lift plan is one of the most important documents on any UK construction site \u2014 yet it remains one of the most misunderstood. Whether you are a principal contractor managing a major project, a subcontractor organising a steel delivery, or a site manager trying to keep operations moving safely, understanding what a lift plan is, what it should contain, and when you need one is fundamental to LOLER compliance and site safety.</p>
       <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 my-8">
-        <p class="text-gray-300 mb-0">Need one written rather than explained? Our <a href="/services/lift-plans">lift plan writing service</a> covers excavator, telehandler, lorry loader and mobile crane operations — fixed price from £200 + VAT, quoted within 4 working hours.</p>
+        <p class="text-gray-300 mb-0">Need one written rather than explained? Our <a href="/services/lift-plans">lift plan services</a> cover excavator, telehandler, lorry loader and mobile crane operations — fixed price from £200 + VAT, quoted within 4 working hours.</p>
         <p class="mt-4 mb-0"><a href="/contact" class="text-amber-400 font-semibold">Get a quote — reply within 4 working hours →</a></p>
       </div>
 

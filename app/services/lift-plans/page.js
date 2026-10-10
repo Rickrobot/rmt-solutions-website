@@ -14,14 +14,18 @@ export const metadata = {
   // query "lift planning services" (227 impressions, 0 clicks, pos ~20).
   // `absolute` skips the layout's brand suffix so the £200 price hook stays
   // visible within the ~60-char SERP limit.
-  title: { absolute: 'Lift Planning Services UK | Lift Plans from £200' },
-  description: 'Expert lift planning services for UK construction. LOLER-compliant lift plans from a CPCS Appointed Person — fixed prices from £200, 24-48 hour turnaround.',
+  // Oct 2026: "lift plan" (pos 7.1, 184 UK impressions) was being won by
+  // /blog/what-is-a-lift-plan and "lift planning services" (pos 9.6) by the
+  // homepage. The title and H1 now lead with "Lift Plans" and keep "Lift
+  // Planning Services", so this page is the strongest match for both.
+  title: { absolute: 'Lift Plans & Lift Planning Services UK | From £200' },
+  description: 'Lift plans for UK construction, written by a CPCS A61 Appointed Person: excavators, telehandlers, lorry loaders and cranes. From £200, 24–48hr turnaround.',
   keywords: ['lift planning services', 'lift planning experts', 'lift plan', 'lift plans', 'lift planning', 'lift planner', 'lift plan writing', 'lifting plan', 'lifting plans', 'excavator lift plan', 'telehandler lift plan', 'mobile crane lift plan', 'lorry loader lift plan', 'LOLER compliant'],
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lift-plans',
   },
   openGraph: {
-    title: 'Lift Planning Services UK | Lift Plans from £200',
+    title: 'Lift Plans & Lift Planning Services UK | From £200',
     description: 'Expert lift planning services from a CPCS Appointed Person. LOLER compliant lift plans for excavators, telehandlers, lorry loaders, mobile and tower cranes. Fixed prices, UK-wide.',
     url: 'https://www.rmtsafetysolutions.com/services/lift-plans',
     siteName: 'RMT Solutions - Lift Planning Specialists',
@@ -188,11 +192,12 @@ export default function LiftPlansPage() {
                 outright (Jul 2026 SEO review, fix #1) — the homepage and
                 /services H1s were retargeted away from it. */}
             <h1 className="font-display text-5xl sm:text-6xl font-bold text-white mb-6">
-              Lift Planning <span className="gradient-text">Services UK</span>
+              Lift Plans &amp; Lift Planning <span className="gradient-text">Services UK</span>
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
-              Expert lift planning services for excavators, telehandlers, lorry loaders, and mobile cranes.
-              Fixed prices from £200 and fast turnaround from a CPCS Appointed Person with 35 years experience.
+              A lift plan for every lifting machine on site — excavators, telehandlers, lorry loaders and
+              mobile cranes. Fixed prices from £200 and fast turnaround from a CPCS Appointed Person with
+              35 years&apos; experience.
             </p>
             <Link href="/contact" className="btn-primary inline-flex items-center">
               Get a Quote
