@@ -358,6 +358,18 @@ export default function AerialSiteSurveysPage() {
               </div>
             ))}
           </div>
+
+          {/* Oct 2026: a real example, on Ricky's photography site. */}
+          <p className="mt-8 text-gray-400">
+            See an example:{' '}
+            <a
+              href="https://www.rmtvisuals.com/work/caddick-tawd-valley"
+              className="text-amber-400 hover:text-amber-300 underline underline-offset-4"
+            >
+              aerial progress photography for Caddick Construction at Tawd Valley, Skelmersdale
+            </a>
+            , on RMT Visuals.
+          </p>
         </div>
       </section>
 
