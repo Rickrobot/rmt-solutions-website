@@ -672,10 +672,38 @@ export default function HomePage() {
             description="Proper lift planning is a legal requirement under LOLER 1998. Here is what stands behind every RMT plan."
           />
 
-          <div className="grid md:grid-cols-4 gap-6">
-            {stats.map((stat) => (
-              <StatCard key={stat.label} {...stat} />
-            ))}
+          {/* Oct 2026: who the visitor will actually deal with, beside the
+              facts. RMT is one person; showing him is the point. */}
+          <div className="grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-8 items-stretch">
+            <figure className="flex flex-col sm:flex-row lg:flex-col gap-6 rounded-3xl border border-slate-700/50 bg-slate-800/30 p-6 sm:p-8">
+              <div className="w-40 sm:w-48 lg:w-56 flex-shrink-0 mx-auto sm:mx-0 rounded-2xl overflow-hidden border border-slate-700/60">
+                <Image
+                  src="/images/ricky-marsh.webp"
+                  alt="Ricky Marsh, CPCS A61 Appointed Person and founder of RMT Solutions"
+                  width={896}
+                  height={1195}
+                  sizes="224px"
+                  className="w-full h-auto"
+                />
+              </div>
+              <figcaption className="flex flex-col justify-center">
+                <span className="block font-display text-2xl font-bold text-white">Ricky Marsh</span>
+                <span className="block text-amber-400 text-sm font-semibold mt-1">CPCS A61 Appointed Person · NEBOSH Diploma · CertIOSH</span>
+                <p className="text-gray-300 leading-relaxed mt-4">
+                  RMT Solutions is run by Ricky Marsh, with 35 years in UK construction. When you
+                  ring, you speak to the Appointed Person who signs off your plan.
+                </p>
+                <Link href="/about" className="mt-4 inline-flex items-center text-amber-400 hover:text-amber-300 font-semibold">
+                  About Ricky
+                  <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
+                </Link>
+              </figcaption>
+            </figure>
+            <div className="grid sm:grid-cols-2 gap-6">
+              {stats.map((stat) => (
+                <StatCard key={stat.label} {...stat} />
+              ))}
+            </div>
           </div>
         </div>
       </section>

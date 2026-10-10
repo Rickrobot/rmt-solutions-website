@@ -219,6 +219,17 @@ export default function ContactPage() {
                     <Icon className="w-5 h-5 text-amber-400" />
                   </div>
                   <span className="text-amber-400 font-display font-bold">{step}</span>
+                  {step === '02' && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src="/images/ricky-marsh.webp"
+                      alt="Ricky Marsh"
+                      width={40}
+                      height={40}
+                      loading="lazy"
+                      className="ml-auto w-10 h-10 rounded-full object-cover object-top border-2 border-amber-500/60"
+                    />
+                  )}
                 </div>
                 <h3 className="font-display text-lg font-bold text-white mb-2">{title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{body}</p>
