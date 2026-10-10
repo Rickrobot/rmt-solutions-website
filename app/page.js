@@ -403,7 +403,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-gray-400">
-            <span className="text-xs font-semibold tracking-widest uppercase text-gray-500">Clients include</span>
+            <span className="text-xs font-semibold tracking-widest uppercase text-gray-400">Clients include</span>
             <span className="font-display font-bold text-lg">CADDICK</span>
             <span className="font-display font-bold text-lg">WATES</span>
             <span className="font-display font-bold text-lg">SUNEL GROUP</span>

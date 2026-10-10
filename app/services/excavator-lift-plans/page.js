@@ -243,7 +243,7 @@ export default function ExcavatorLiftPlansPage() {
           {/* Response-time promise badges */}
           <div className="flex flex-wrap gap-3 mb-8">
             <div className="flex items-center gap-2 bg-amber-500 px-4 py-2 rounded-full">
-              <span className="text-sm font-bold text-white">Lift plans from £200 + VAT</span>
+              <span className="text-sm font-bold text-slate-900">Lift plans from £200 + VAT</span>
             </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur px-4 py-2 rounded-full border border-white/20">
               <Clock className="w-4 h-4 text-amber-400" />
@@ -749,7 +749,7 @@ export default function ExcavatorLiftPlansPage() {
               {
                 level: 'Basic',
                 tag: 'Combined role allowed',
-                headerClass: 'bg-emerald-600',
+                headerClass: 'bg-emerald-700',
                 headText: 'text-white',
                 situation:
                   'Known-weight load with designated top lifting points and a central centre of gravity; the operator has clear sight of the load path; the load is lifted to and from the ground; no proximity hazards.',
@@ -760,7 +760,7 @@ export default function ExcavatorLiftPlansPage() {
                 level: 'Intermediate',
                 tag: 'Separate A62 often',
                 headerClass: 'bg-amber-500',
-                headText: 'text-white',
+                headText: 'text-slate-900',
                 situation:
                   'Load of estimated weight or centre of gravity, or without designated lifting points; or the load is placed over an obstruction where the operator may not have a clear sight of the landing area.',
                 requirement:
@@ -769,7 +769,7 @@ export default function ExcavatorLiftPlansPage() {
               {
                 level: 'Complex',
                 tag: 'Dedicated A62 required',
-                headerClass: 'bg-rose-600',
+                headerClass: 'bg-rose-700',
                 headText: 'text-white',
                 situation:
                   'Estimated weight and centre of gravity, no designated lifting points, or a load that contains fluids, is fragile or is unstable when landed; or placed without line of sight and near proximity hazards such as scaffolding or overhead power lines.',
@@ -783,7 +783,7 @@ export default function ExcavatorLiftPlansPage() {
               >
                 <div className={`${cat.headerClass} px-6 py-4 flex items-center justify-between`}>
                   <span className={`${cat.headText} text-lg font-bold`}>{cat.level}</span>
-                  <span className={`${cat.headText} text-xs font-semibold uppercase tracking-wider opacity-90`}>
+                  <span className={`${cat.headText} text-xs font-semibold uppercase tracking-wider`}>
                     {cat.tag}
                   </span>
                 </div>
@@ -1017,7 +1017,7 @@ export default function ExcavatorLiftPlansPage() {
             <figcaption className="mt-4 text-sm">
               <span className="text-white font-semibold">Andrew Pryce</span>
               <span className="text-gray-400"> — QHSE Manager, Sunel Group</span>
-              <a href="/testimonials" className="text-amber-400 hover:text-amber-300 ml-2">More testimonials →</a>
+              <a href="/testimonials" className="text-amber-400 hover:text-amber-300 underline underline-offset-2 ml-2">More testimonials →</a>
             </figcaption>
           </figure>
           <InlineQuoteForm

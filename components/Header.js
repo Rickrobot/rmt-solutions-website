@@ -105,10 +105,25 @@ export default function Header() {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
 
-              {/* Dropdown Panel */}
-              {servicesOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
+              {/* Dropdown Panel.
+                  Always in the HTML, hidden with CSS while closed (Oct 2026).
+                  It used to be rendered only when opened, so the server HTML
+                  of every page had no header links to any service page and
+                  Google had to find them from the body and footer alone —
+                  Search Console showed the Appointed Person and Excavator
+                  pages as "URL is unknown to Google". display:none keeps the
+                  closed menu out of the tab order and away from screen
+                  readers exactly as before. */}
+              <div className={`absolute top-full left-1/2 -translate-x-1/2 pt-3 ${servicesOpen ? 'block' : 'hidden'}`}>
                   <div className="bg-slate-900 border border-slate-800 rounded-xl shadow-2xl shadow-black/40 p-2 min-w-[280px]">
+                    <Link
+                      href="/services"
+                      className="flex items-center justify-between px-4 py-2.5 mb-2 rounded-lg bg-slate-800/50 text-amber-400 hover:text-amber-300 transition text-sm font-semibold"
+                      onClick={() => setServicesOpen(false)}
+                    >
+                      All lift planning services
+                      <span aria-hidden="true">&rarr;</span>
+                    </Link>
                     {/* Primary Services */}
                     <div className="pb-2 mb-2 border-b border-slate-800">
                       {services.slice(0, 4).map((service) => (
@@ -155,8 +170,7 @@ export default function Header() {
                       ))}
                     </div>
                   </div>
-                </div>
-              )}
+              </div>
             </div>
 
             {/* Other Nav Links */}
