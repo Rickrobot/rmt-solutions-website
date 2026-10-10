@@ -1,5 +1,4 @@
 import { liftDrawingExamples, LIFT_DRAWINGS_PUBLISHED } from '@/lib/liftDrawingExamples';
-import { TRADE_SLUGS } from '../services/method-statements-rams/trades';
 
 // Custom sitemap.xml route handler.
 //
@@ -96,16 +95,6 @@ const LOCATION_SLUGS = [
   'warrington',
   'manchester',
   'liverpool',
-  'salford',
-  'stockport',
-  'trafford',
-  'wirral',
-  'leeds',
-  'birmingham',
-  'london',
-  'bristol',
-  'glasgow',
-  'edinburgh',
 ];
 
 const BLOG_POSTS = [
@@ -203,9 +192,9 @@ function buildSitemapXml() {
     );
   }
 
-  // Per-trade RAMS pages. Derived from the TRADES data object so adding a
-  // trade there automatically adds it to the sitemap — no second edit needed.
-  for (const slug of TRADE_SLUGS) {
+  // Per-trade RAMS pages are noindexed (Oct 2026) and so are left out of the
+  // sitemap: a sitemap should list only URLs we want indexed.
+  for (const slug of []) {
     entries.push(
       buildUrlEntry({
         loc: `${BASE_URL}/services/method-statements-rams/${slug}`,

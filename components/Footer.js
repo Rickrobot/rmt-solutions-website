@@ -47,16 +47,10 @@ export default function Footer() {
   // Crane-prefixed anchors give the location pages a much better chance of
   // ranking for actual crane/LOLER lift planning intent.
   const locations = [
-    { name: 'Crane Lift Plan Manchester',  href: '/locations/manchester' },
-    { name: 'Crane Lift Plan Liverpool',   href: '/locations/liverpool' },
-    { name: 'Crane Lift Plan Salford',     href: '/locations/salford' },
-    { name: 'Crane Lift Plan Stockport',   href: '/locations/stockport' },
-    { name: 'Crane Lift Plan Trafford',    href: '/locations/trafford' },
-    { name: 'Crane Lift Plan Wirral',      href: '/locations/wirral' },
-    { name: 'Crane Lift Plan Leeds',       href: '/locations/leeds' },
-    { name: 'Crane Lift Plan Birmingham',  href: '/locations/birmingham' },
-    { name: 'Crane Lift Plan London',      href: '/locations/london' },
-    { name: 'All UK locations',            href: '/locations' },
+    { name: 'Crane Lift Plan Warrington', href: '/locations/warrington' },
+    { name: 'Crane Lift Plan Manchester', href: '/locations/manchester' },
+    { name: 'Crane Lift Plan Liverpool',  href: '/locations/liverpool' },
+    { name: 'All areas we cover',         href: '/locations' },
   ]
 
   const qualifications = [

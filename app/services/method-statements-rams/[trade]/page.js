@@ -19,6 +19,10 @@ export async function generateMetadata({ params }) {
     description: t.metaDescription,
     keywords: t.keywords,
     alternates: { canonical: url },
+    // Oct 2026: kept for visitors from the RAMS hub, but out of Google's index.
+    // Twelve ~600-word pages built from one template earned 6 clicks in three
+    // months and fit the pattern Google's scaled-content policy describes.
+    robots: { index: false, follow: true },
     openGraph: {
       title: t.metaTitle,
       description: t.metaDescription,

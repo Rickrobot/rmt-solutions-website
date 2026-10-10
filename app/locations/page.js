@@ -13,6 +13,10 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 // city is added or removed, update both this file and
 // app/locations/[slug]/page.js.
 
+// Oct 2026: only these three cities keep their own page; the rest are
+// described here and their old URLs 301 to this hub (see next.config.js).
+const PAGE_SLUGS = new Set(['warrington', 'manchester', 'liverpool'])
+
 const CITIES = [
   {
     slug: 'warrington',
@@ -151,7 +155,7 @@ const collectionJsonLd = {
   },
   mainEntity: {
     '@type': 'ItemList',
-    itemListElement: CITIES.map((c, i) => ({
+    itemListElement: CITIES.filter((c) => PAGE_SLUGS.has(c.slug)).map((c, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       name: `Lift Plans ${c.city}`,
@@ -231,7 +235,8 @@ export default function LocationsHub() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {CITIES.map((c) => (
+            {CITIES.map((c) =>
+              PAGE_SLUGS.has(c.slug) ? (
               <Link
                 key={c.slug}
                 href={`/locations/${c.slug}`}
@@ -258,7 +263,28 @@ export default function LocationsHub() {
                   </span>
                 </div>
               </Link>
-            ))}
+              ) : (
+              <div key={c.slug} className="block bg-slate-800/40 border border-slate-700/50 rounded-2xl p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="font-display text-2xl font-bold text-white">
+                    {c.city}
+                  </h3>
+                  <MapPin className="w-5 h-5 text-amber-400/70" />
+                </div>
+                <p className="text-sm text-gray-500 mb-3">{c.region}</p>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                  {c.blurb}
+                </p>
+                <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
+                  <span className="inline-flex items-center text-xs text-gray-400">
+                    <Clock className="w-4 h-4 mr-1.5" />
+                    ~{c.travelMinutes} min from Warrington
+                  </span>
+                  <span className="text-xs text-gray-400">Covered from Warrington</span>
+                </div>
+              </div>
+              )
+            )}
           </div>
         </div>
       </section>
