@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Award, Clock, Users, Shield, ArrowRight } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
+import CredentialChips from '@/components/CredentialChips'
 
 export const metadata = {
   title: 'About | CPCS Appointed Person, 35 Years',
@@ -127,8 +128,11 @@ export default function AboutPage() {
                 />
               </div>
               <figcaption className="mt-4 text-center lg:text-left">
-                <span className="block text-white font-semibold">Ricky Marsh</span>
-                <span className="block text-sm text-gray-400">CPCS A61 Appointed Person · Founder, RMT Solutions</span>
+                <span className="block text-white font-semibold">
+                  Ricky Marsh <span className="text-sm text-gray-400">CertIOSH MIIRSM</span>
+                </span>
+                <span className="block text-sm text-gray-400">Founder, RMT Solutions</span>
+                <CredentialChips className="mt-3 justify-center lg:justify-start" />
               </figcaption>
             </figure>
           </div>

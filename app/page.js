@@ -7,6 +7,7 @@ import ServiceCard from '@/components/ui/ServiceCard'
 import StatCard from '@/components/ui/StatCard'
 import CaseStudyCard from '@/components/ui/CaseStudyCard'
 import SectionHeader from '@/components/ui/SectionHeader'
+import CredentialChips from '@/components/CredentialChips'
 
 // JSON-LD Schema for SEO
 const jsonLd = {
@@ -687,8 +688,10 @@ export default function HomePage() {
                 />
               </div>
               <figcaption className="flex flex-col justify-center">
-                <span className="block font-display text-2xl font-bold text-white">Ricky Marsh</span>
-                <span className="block text-amber-400 text-sm font-semibold mt-1">CPCS A61 Appointed Person · NEBOSH Diploma · CertIOSH</span>
+                <span className="block font-display text-2xl font-bold text-white">
+                  Ricky Marsh <span className="text-base font-semibold text-gray-400">CertIOSH MIIRSM</span>
+                </span>
+                <CredentialChips className="mt-3" />
                 <p className="text-gray-300 leading-relaxed mt-4">
                   RMT Solutions is run by Ricky Marsh, with 35 years in UK construction. When you
                   ring, you speak to the Appointed Person who signs off your plan.
