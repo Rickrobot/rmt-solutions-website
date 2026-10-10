@@ -884,46 +884,11 @@ export default function OverheadGantryCraneLiftPlansPage() {
                 Liverpool →
               </Link>
               <Link
-                key="leeds"
-                href="/locations/leeds"
+                key="all-areas"
+                href="/locations"
                 className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-xl px-4 py-3 text-gray-200 hover:text-amber-400 font-medium text-sm transition"
               >
-                Leeds →
-              </Link>
-              <Link
-                key="birmingham"
-                href="/locations/birmingham"
-                className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-xl px-4 py-3 text-gray-200 hover:text-amber-400 font-medium text-sm transition"
-              >
-                Birmingham →
-              </Link>
-              <Link
-                key="london"
-                href="/locations/london"
-                className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-xl px-4 py-3 text-gray-200 hover:text-amber-400 font-medium text-sm transition"
-              >
-                London →
-              </Link>
-              <Link
-                key="bristol"
-                href="/locations/bristol"
-                className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-xl px-4 py-3 text-gray-200 hover:text-amber-400 font-medium text-sm transition"
-              >
-                Bristol →
-              </Link>
-              <Link
-                key="glasgow"
-                href="/locations/glasgow"
-                className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-xl px-4 py-3 text-gray-200 hover:text-amber-400 font-medium text-sm transition"
-              >
-                Glasgow →
-              </Link>
-              <Link
-                key="edinburgh"
-                href="/locations/edinburgh"
-                className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-xl px-4 py-3 text-gray-200 hover:text-amber-400 font-medium text-sm transition"
-              >
-                Edinburgh →
+                All areas we cover →
               </Link>
           </div>
         </div>

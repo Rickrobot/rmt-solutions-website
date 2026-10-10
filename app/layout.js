@@ -47,7 +47,11 @@ export const metadata = {
     // while the money page sat at pos 30.8 with 4,415 imps and 5 clicks.
     // The homepage now leads on brand, credential and trust, ceding the
     // commercial head terms outright to the service page.
-    default: 'RMT Solutions | CPCS Appointed Person, 35 Years, UK-Wide',
+    // Oct 2026: lift plans back in. The homepage holds every external link the
+    // site has, and with no service words in its title it asked to rank for
+    // nothing commercial. Brand stays first (it ranks ~#2.6 for "rmt
+    // solutions"); "Lift Planning Services" stays with /services/lift-plans.
+    default: 'RMT Solutions | Lift Plans & CPCS Appointed Person, UK-Wide',
     template: '%s | RMT Solutions'
   },
   description: 'Independent CPCS A61 Appointed Person with 35 years on UK construction sites. Lift plans, lift plan checking and lifting operations audits — fixed prices, 24-48hr turnaround.',
@@ -71,7 +75,7 @@ export const metadata = {
     locale: 'en_GB',
     url: 'https://www.rmtsafetysolutions.com',
     siteName: 'RMT Solutions - Lift Planning Specialists',
-    title: 'RMT Solutions | CPCS Appointed Person, 35 Years, UK-Wide',
+    title: 'RMT Solutions | Lift Plans & CPCS Appointed Person, UK-Wide',
     description: 'Independent CPCS A61 Appointed Person with 35 years on UK construction sites. Lift plans, lift plan checking and lifting operations audits, UK-wide.',
     images: [
       {

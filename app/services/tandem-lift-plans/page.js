@@ -141,12 +141,6 @@ const CITIES = [
   ['warrington', 'Warrington'],
   ['manchester', 'Manchester'],
   ['liverpool', 'Liverpool'],
-  ['leeds', 'Leeds'],
-  ['birmingham', 'Birmingham'],
-  ['london', 'London'],
-  ['bristol', 'Bristol'],
-  ['glasgow', 'Glasgow'],
-  ['edinburgh', 'Edinburgh'],
 ]
 
 export default function TandemLiftPlansPage() {
@@ -486,6 +480,12 @@ export default function TandemLiftPlansPage() {
                 {name} &rarr;
               </Link>
             ))}
+            <Link
+              href="/locations"
+              className="bg-slate-800/40 hover:bg-slate-800/70 border border-slate-700/50 hover:border-amber-500/40 rounded-xl px-4 py-3 text-gray-200 hover:text-amber-400 font-medium text-sm transition"
+            >
+              All areas we cover &rarr;
+            </Link>
           </div>
         </div>
       </section>

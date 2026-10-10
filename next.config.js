@@ -77,6 +77,62 @@ const nextConfig = {
       },
 
       // ============================================
+      // RETIRED CITY PAGES -> LOCATIONS HUB (Oct 2026)
+      // ============================================
+      // Thirteen near-identical city pages became three (Warrington,
+      // Manchester, Liverpool). The other ten are described on the hub.
+      {
+        source: '/locations/salford',
+        destination: '/locations',
+        permanent: true,
+      },
+      {
+        source: '/locations/stockport',
+        destination: '/locations',
+        permanent: true,
+      },
+      {
+        source: '/locations/trafford',
+        destination: '/locations',
+        permanent: true,
+      },
+      {
+        source: '/locations/wirral',
+        destination: '/locations',
+        permanent: true,
+      },
+      {
+        source: '/locations/leeds',
+        destination: '/locations',
+        permanent: true,
+      },
+      {
+        source: '/locations/birmingham',
+        destination: '/locations',
+        permanent: true,
+      },
+      {
+        source: '/locations/london',
+        destination: '/locations',
+        permanent: true,
+      },
+      {
+        source: '/locations/bristol',
+        destination: '/locations',
+        permanent: true,
+      },
+      {
+        source: '/locations/glasgow',
+        destination: '/locations',
+        permanent: true,
+      },
+      {
+        source: '/locations/edinburgh',
+        destination: '/locations',
+        permanent: true,
+      },
+
+      // ============================================
       // EXISTING REDIRECTS (preserved)
       // ============================================
       
