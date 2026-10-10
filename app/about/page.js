@@ -53,8 +53,12 @@ const personJsonLd = {
     { '@type': 'EducationalOccupationalCredential', name: 'GVC Drone Pilot (CAA)' },
   ],
   knowsAbout: ['LOLER 1998', 'BS 7121', 'Lifting Operations', 'Tower Cranes', 'Mobile Cranes', 'Steel Erection', 'ISO 10567'],
+  // Oct 2026: his personal and photography sites added, so Google links
+  // this Ricky Marsh to rickymarsh.com (which ranked on page two for his name).
   sameAs: [
     'https://www.linkedin.com/in/ricky-marsh-certiosh-tier-2-cfrar-mifsm-88b72680/',
+    'https://www.rickymarsh.com/',
+    'https://wildlifephotographs.co.uk/',
   ],
 }
 
@@ -133,6 +137,12 @@ export default function AboutPage() {
                 </span>
                 <span className="block text-sm text-gray-400">Founder, RMT Solutions</span>
                 <CredentialChips className="mt-3 justify-center lg:justify-start" />
+                <a
+                  href="https://www.rickymarsh.com/about"
+                  className="mt-3 inline-block text-sm text-amber-400 hover:text-amber-300 underline underline-offset-4"
+                >
+                  More about Ricky at rickymarsh.com
+                </a>
               </figcaption>
             </figure>
           </div>
