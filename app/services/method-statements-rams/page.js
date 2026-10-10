@@ -5,16 +5,20 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import { TRADES, TRADE_SLUGS } from './trades'
 
 export const metadata = {
-  title: 'Method Statement & RAMS Writing UK | Rejected RAMS Fixed',
+  // Oct 2026: "lifting method statement" (a priority search, slipped from 5.5
+  // to 8.5) was going to /blog/lifting-method-statements-rams-guide. The title
+  // now opens with the phrase and the page has a section answering it; the
+  // description was 213 characters and is now inside Google's ~155.
+  title: { absolute: 'Lifting Method Statements & RAMS Writing UK | 24–48hr' },
   description:
-    'Had your RAMS rejected by the principal contractor? Bespoke method statements and risk assessments written by a NEBOSH Diploma / CertIOSH consultant who checks documents for tier 1 contractors. 24-48hr turnaround.',
+    'Lifting method statements and RAMS for every trade, written to pass principal contractor review by a NEBOSH Diploma, CertIOSH consultant. 24–48hr.',
   keywords:
     'method statement writing service, RAMS writing service, risk assessment method statement, RAMS rejected, why RAMS get rejected, bespoke method statement UK, construction RAMS, method statement rewrite, RAMS resubmission, principal contractor RAMS approval, site specific RAMS, CDM 2015 method statement',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/method-statements-rams',
   },
   openGraph: {
-    title: 'Method Statement & RAMS Writing UK | Rejected RAMS Fixed',
+    title: 'Lifting Method Statements & RAMS Writing UK | 24–48hr',
     description:
       'Bespoke method statements and risk assessments written to pass principal contractor review. Rejection recovery a speciality. 24-48hr turnaround.',
     url: 'https://www.rmtsafetysolutions.com/services/method-statements-rams',
@@ -297,6 +301,62 @@ export default function MethodStatementsRamsPage() {
                 matters more than the fee.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Lifting method statements (Oct 2026). "lifting method statement" is a
+          priority search for this page; it had slipped from 5.5 to 8.5 with
+          Google showing the blog guide instead. This answers it directly and
+          ties the method statement to the lift plan, which is the point a
+          principal contractor's reviewer checks first. */}
+      <section className="py-16 bg-slate-900 border-b border-slate-800" aria-labelledby="lifting-method-statements">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 id="lifting-method-statements" className="text-3xl font-bold text-white mb-6">
+              Lifting method statements
+            </h2>
+            <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
+              <p>
+                A lifting method statement sets out, step by step, how a lift will be carried out
+                safely on your site: the sequence, the machine and lifting accessories, who does
+                what, and what happens if the lift has to stop. LOLER 1998 requires every lifting
+                operation to be properly planned by a competent person, and the method statement
+                is how that plan is briefed to the people doing the lift.
+              </p>
+              <p>
+                One of the commonest reasons lifting RAMS come back is a method statement that does
+                not match the lift plan drawing. Because RMT Solutions is run by a CPCS A61 Appointed
+                Person, the <Link href="/services/lift-plans" className="text-amber-400 hover:text-amber-300 underline underline-offset-2">lift plan</Link>{' '}
+                and the lifting method statement are written together, so they agree.
+              </p>
+              <p className="text-base text-gray-400">
+                For the background, see our{' '}
+                <Link href="/blog/lifting-method-statements-rams-guide" className="text-amber-400 hover:text-amber-300 underline underline-offset-2">
+                  guide to lifting method statements and RAMS
+                </Link>.
+              </p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-slate-700/50 bg-slate-800/40 p-8">
+            <h3 className="text-xl font-semibold text-white mb-4">What a lifting method statement covers</h3>
+            <ul className="space-y-3">
+              {[
+                'The sequence of the lift, from setting up to making safe',
+                'The machine, its configuration and the lifting accessories, with their WLLs',
+                'Roles and competence: Appointed Person, lift supervisor, operator, slinger/signaller',
+                'Exclusion zones and how the public and other trades are kept clear',
+                'How the team communicates during the lift',
+                'Weather and wind limits, and when the lift stops',
+                'Emergency and rescue arrangements',
+                'Cross-references to the lift plan drawing and ground bearing assessment',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-gray-300">
+                  <CheckCircle2 className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

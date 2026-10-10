@@ -11,9 +11,13 @@ export const metadata = {
   // hire" on its own returns a SERP that is roughly 80% job boards, because
   // Google reads "hire" as "employ a person" — binding it to the lifting
   // qualifier is what keeps this page out of the recruitment results.
-  title: 'Hire a CPCS A61 Appointed Person UK',
+  // Oct 2026: "cpcs appointed person" (pos 9.6, 169 UK impressions) went to
+  // /blog/cpcs-appointed-person-guide — the "A61" in the middle of the old
+  // title split the exact phrase. It now reads in order, still bound to
+  // "lifting" for the reason above. `absolute` keeps it inside ~60 chars.
+  title: { absolute: 'Hire a CPCS Appointed Person (A61) for Lifting, UK' },
   description:
-    'Hire a CPCS A61 Appointed Person for your lifting operations: 35 years of experience, LOLER 1998 and BS 7121 compliant. UK-wide, fast turnaround.',
+    "Hire a CPCS Appointed Person (A61) to plan your lifting operations and sign off lift plans to LOLER 1998 and BS 7121. 35 years' experience, UK-wide.",
   keywords: [
     'cpcs a61 appointed person',
     'appointed person',
@@ -29,7 +33,7 @@ export const metadata = {
     canonical: 'https://www.rmtsafetysolutions.com/services/appointed-person',
   },
   openGraph: {
-    title: 'CPCS A61 Appointed Person Services UK',
+    title: 'CPCS Appointed Person (A61) Hire & Services, UK',
     description:
       'Hire a CPCS A61 Appointed Person for your lifting operations. 35 years of construction experience, LOLER 1998 and BS 7121 compliant, UK-wide.',
     url: 'https://www.rmtsafetysolutions.com/services/appointed-person',
@@ -202,7 +206,8 @@ export default function AppointedPersonPage() {
               Appointed Person Services
             </span>
             <h1 className="font-display text-5xl sm:text-6xl font-bold text-white mb-6">
-              CPCS A61 <span className="gradient-text">Appointed Person</span>
+              CPCS <span className="gradient-text">Appointed Person</span>
+              <span className="block text-2xl sm:text-3xl text-gray-300 font-semibold mt-3">A61, for hire UK-wide</span>
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
               Under LOLER 1998 every lifting operation must be planned by a competent person. We provide
@@ -228,7 +233,7 @@ export default function AppointedPersonPage() {
                 The Role
               </span>
               <h2 className="font-display text-4xl font-bold text-white mb-6">
-                What a CPCS A61 Appointed Person does
+                What a CPCS Appointed Person (A61) does
               </h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
                 The Appointed Person carries overall responsibility for the safe planning of a lifting
