@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
+import ProofStrip from '@/components/ProofStrip'
 
 export const metadata = {
   // CTR fix (Jul 2026): GSC shows "lifting operations site audit" at 453
@@ -133,14 +134,14 @@ export default function LiftingOperationsAuditPage() {
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
-          <p className="text-blue-400 font-medium mb-4">CPCS Appointed Person A61</p>
+          <p className="text-amber-400 font-medium mb-4">CPCS Appointed Person A61</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Lifting Operations Audit</h1>
           <p className="text-xl text-slate-300 max-w-3xl mb-8">
             Independent assessment of your lifting operations, procedures, and compliance. We evaluate how well 
             your organisation manages lifting activities against LOLER, BS 7121, and industry best practice.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+            <Link href="/contact" className="bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold px-8 py-3 rounded-lg font-medium transition-colors">
               Request a Quote
             </Link>
             <a href="tel:+447803808093" className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-medium transition-colors">
@@ -149,19 +150,20 @@ export default function LiftingOperationsAuditPage() {
           </div>
         </div>
       </section>
+      <ProofStrip id="pryce" />
 
       {/* Why Audit */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Why Audit Your Lifting Operations?</h2>
-          <p className="text-lg text-slate-600 mb-8">
+          <h2 className="text-3xl font-bold text-white mb-8">Why Audit Your Lifting Operations?</h2>
+          <p className="text-lg text-gray-400 mb-8">
             Lifting operations remain one of the highest-risk activities in construction. The consequences of
             failure are severe - serious injuries, fatalities, significant equipment damage, and prosecution.
             For a walk-through of the process, see{' '}
-            <Link href="/services/lifting-operations-audit" className="text-blue-600 hover:text-blue-700 underline">
+            <Link href="/services/lifting-operations-audit" className="text-amber-400 hover:text-amber-300 underline">
               what to expect from a lifting operations audit
             </Link>, and our{' '}
-            <Link href="/blog/what-is-loler-complete-guide" className="text-blue-600 hover:text-blue-700 underline">
+            <Link href="/blog/what-is-loler-complete-guide" className="text-amber-400 hover:text-amber-300 underline">
               complete guide to LOLER
             </Link>{' '}
             covers the regulations we audit against.
@@ -175,9 +177,9 @@ export default function LiftingOperationsAuditPage() {
               { title: 'Improvement Roadmap', desc: 'Prioritised recommendations for strengthening your lifting operations.' },
               { title: 'Due Diligence Evidence', desc: 'Documented evidence of proactive safety management - valuable for client prequalification and any regulatory scrutiny.' },
             ].map((item) => (
-              <div key={item.title} className="bg-slate-50 p-6 rounded-xl">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-slate-600">{item.desc}</p>
+              <div key={item.title} className="bg-slate-800/40 p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                <p className="text-gray-400">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -185,9 +187,9 @@ export default function LiftingOperationsAuditPage() {
       </section>
 
       {/* What We Assess */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">What We Assess</h2>
+          <h2 className="text-3xl font-bold text-white mb-12">What We Assess</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -216,12 +218,12 @@ export default function LiftingOperationsAuditPage() {
                 items: ['Operator qualifications', 'Appointed Person competence', 'Slinger/signaller certification', 'Ongoing training and development'],
               },
             ].map((section) => (
-              <div key={section.title} className="bg-white p-6 rounded-xl shadow-sm">
-                <h3 className="text-lg font-semibold text-slate-900 mb-4">{section.title}</h3>
-                <ul className="space-y-2 text-slate-600">
+              <div key={section.title} className="bg-slate-800/40 p-6 rounded-xl shadow-sm">
+                <h3 className="text-lg font-semibold text-white mb-4">{section.title}</h3>
+                <ul className="space-y-2 text-gray-400">
                   {section.items.map((item) => (
                     <li key={item} className="flex items-start gap-2">
-                      <span className="text-blue-600 mt-0.5">•</span>{item}
+                      <span className="text-amber-400 mt-0.5">•</span>{item}
                     </li>
                   ))}
                 </ul>
@@ -232,30 +234,30 @@ export default function LiftingOperationsAuditPage() {
       </section>
 
       {/* Audit Types */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">Audit Types</h2>
+          <h2 className="text-3xl font-bold text-white mb-12">Audit Types</h2>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="border border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Desktop Audit</h3>
-              <p className="text-slate-600">
+            <div className="border border-slate-700/50 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-4">Desktop Audit</h3>
+              <p className="text-gray-400">
                 Review of your documented procedures, lift plans, certificates, and records. Identifies gaps 
                 in your management system.
               </p>
             </div>
 
-            <div className="border border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Site Audit</h3>
-              <p className="text-slate-600">
+            <div className="border border-slate-700/50 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-4">Site Audit</h3>
+              <p className="text-gray-400">
                 Physical inspection of lifting operations, equipment condition, and working practices. 
                 Verifies that documented procedures are being followed.
               </p>
             </div>
 
-            <div className="border-2 border-blue-500 p-8 rounded-xl bg-blue-50">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Combined Audit</h3>
-              <p className="text-slate-600">
+            <div className="border-2 border-amber-500 p-8 rounded-xl bg-amber-500/10">
+              <h3 className="text-xl font-semibold text-white mb-4">Combined Audit</h3>
+              <p className="text-gray-400">
                 Both desktop and site elements for comprehensive assessment. Our recommended approach for 
                 maximum insight.
               </p>
@@ -278,7 +280,7 @@ export default function LiftingOperationsAuditPage() {
               { step: '5', title: 'Debrief', desc: 'Discussion of findings and recommendations with your team.' },
             ].map((item) => (
               <div key={item.step} className="text-center">
-                <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                <div className="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
                   {item.step}
                 </div>
                 <h3 className="font-semibold mb-2">{item.title}</h3>
@@ -290,23 +292,23 @@ export default function LiftingOperationsAuditPage() {
       </section>
 
       {/* What We Look For */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">What We Look For</h2>
+          <h2 className="text-3xl font-bold text-white mb-12">What We Look For</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Lift Planning Quality</h3>
-              <p className="text-slate-600 mb-4">We assess whether your lift plans:</p>
-              <ul className="text-slate-600 space-y-2 mb-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Lift Planning Quality</h3>
+              <p className="text-gray-400 mb-4">We assess whether your lift plans:</p>
+              <ul className="text-gray-400 space-y-2 mb-6">
                 <li>• Address all LOLER requirements</li>
                 <li>• Contain accurate calculations</li>
                 <li>• Include adequate risk assessment</li>
                 <li>• Provide workable method statements</li>
               </ul>
-              <div className="bg-red-50 p-4 rounded-lg">
-                <p className="text-red-800 font-medium mb-2">Common findings:</p>
-                <ul className="text-red-700 text-sm space-y-1">
+              <div className="bg-red-500/10 p-4 rounded-lg">
+                <p className="text-red-200 font-medium mb-2">Common findings:</p>
+                <ul className="text-red-300 text-sm space-y-1">
                   <li>• Lift plans not site-specific</li>
                   <li>• Calculations not verified</li>
                   <li>• Inadequate ground bearing assessment</li>
@@ -315,17 +317,17 @@ export default function LiftingOperationsAuditPage() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Equipment Management</h3>
-              <p className="text-slate-600 mb-4">We verify:</p>
-              <ul className="text-slate-600 space-y-2 mb-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Equipment Management</h3>
+              <p className="text-gray-400 mb-4">We verify:</p>
+              <ul className="text-gray-400 space-y-2 mb-6">
                 <li>• All lifting equipment is registered</li>
                 <li>• Thorough examinations are current</li>
                 <li>• Defects are reported and actioned</li>
                 <li>• Accessories are properly controlled</li>
               </ul>
-              <div className="bg-red-50 p-4 rounded-lg">
-                <p className="text-red-800 font-medium mb-2">Common findings:</p>
-                <ul className="text-red-700 text-sm space-y-1">
+              <div className="bg-red-500/10 p-4 rounded-lg">
+                <p className="text-red-200 font-medium mb-2">Common findings:</p>
+                <ul className="text-red-300 text-sm space-y-1">
                   <li>• Equipment used without current examination</li>
                   <li>• Defect reports not actioned</li>
                   <li>• Certificates not available on site</li>
@@ -334,17 +336,17 @@ export default function LiftingOperationsAuditPage() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Competence Arrangements</h3>
-              <p className="text-slate-600 mb-4">We check:</p>
-              <ul className="text-slate-600 space-y-2 mb-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Competence Arrangements</h3>
+              <p className="text-gray-400 mb-4">We check:</p>
+              <ul className="text-gray-400 space-y-2 mb-6">
                 <li>• Operators hold appropriate qualifications</li>
                 <li>• Appointed Persons meet BS 7121 requirements</li>
                 <li>• Slingers/signallers are certified</li>
                 <li>• Training is current and documented</li>
               </ul>
-              <div className="bg-red-50 p-4 rounded-lg">
-                <p className="text-red-800 font-medium mb-2">Common findings:</p>
-                <ul className="text-red-700 text-sm space-y-1">
+              <div className="bg-red-500/10 p-4 rounded-lg">
+                <p className="text-red-200 font-medium mb-2">Common findings:</p>
+                <ul className="text-red-300 text-sm space-y-1">
                   <li>• Expired or inappropriate qualifications</li>
                   <li>• No evidence of AP competence</li>
                   <li>• Training records incomplete</li>
@@ -353,17 +355,17 @@ export default function LiftingOperationsAuditPage() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Working Practices</h3>
-              <p className="text-slate-600 mb-4">We observe:</p>
-              <ul className="text-slate-600 space-y-2 mb-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Working Practices</h3>
+              <p className="text-gray-400 mb-4">We observe:</p>
+              <ul className="text-gray-400 space-y-2 mb-6">
                 <li>• Pre-lift briefings conducted</li>
                 <li>• Lift plans communicated to lifting team</li>
                 <li>• Exclusion zones established</li>
                 <li>• Supervision adequate</li>
               </ul>
-              <div className="bg-red-50 p-4 rounded-lg">
-                <p className="text-red-800 font-medium mb-2">Common findings:</p>
-                <ul className="text-red-700 text-sm space-y-1">
+              <div className="bg-red-500/10 p-4 rounded-lg">
+                <p className="text-red-200 font-medium mb-2">Common findings:</p>
+                <ul className="text-red-300 text-sm space-y-1">
                   <li>• Briefings rushed or skipped</li>
                   <li>• Exclusion zones not maintained</li>
                   <li>• Supervision absent or inadequate</li>
@@ -375,9 +377,9 @@ export default function LiftingOperationsAuditPage() {
       </section>
 
       {/* Who Needs This */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Who Needs a Lifting Operations Audit?</h2>
+          <h2 className="text-3xl font-bold text-white mb-8">Who Needs a Lifting Operations Audit?</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -387,9 +389,9 @@ export default function LiftingOperationsAuditPage() {
               { title: 'Following Incidents', desc: 'Understand what went wrong and how to prevent recurrence.' },
               { title: 'Seeking Accreditation', desc: 'Evidence robust lifting arrangements for ISO, contractor prequalification, or supply chain membership.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white p-6 rounded-xl">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-slate-600">{item.desc}</p>
+              <div key={item.title} className="bg-slate-800/40 p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                <p className="text-gray-400">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -404,13 +406,13 @@ export default function LiftingOperationsAuditPage() {
           The audit-vs-thorough-examination section below is deliberate: Google
           currently resolves "lifting operations audit" to LOLER thorough
           examination, and no competitor has noticed the intent confusion. */}
-      <section className="py-20 bg-slate-50 border-t border-slate-200">
+      <section className="py-20 bg-slate-900 border-t border-slate-700/50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">
+          <h2 className="text-3xl font-bold text-white mb-8">
             What a lifting operations audit actually involves
           </h2>
 
-          <div className="space-y-5 text-slate-700 leading-relaxed text-lg">
+          <div className="space-y-5 text-gray-300 leading-relaxed text-lg">
             <p>
               A lifting operations audit is an independent, systematic assessment of how lifting
               activities are being planned, managed and carried out on a site. It looks at the whole
@@ -425,7 +427,7 @@ export default function LiftingOperationsAuditPage() {
               correcting — with the findings prioritised so the serious items are unmistakable.
             </p>
 
-            <h3 className="text-2xl font-bold text-slate-900 pt-6">
+            <h3 className="text-2xl font-bold text-white pt-6">
               Audit versus LOLER thorough examination — they are not the same thing
             </h3>
             <p>
@@ -446,27 +448,27 @@ export default function LiftingOperationsAuditPage() {
               Neither one substitutes for the other. A site can have a perfect set of thorough
               examination reports and still be planning its lifts badly, and that combination is
               exactly what an audit is designed to surface. See our guide to{' '}
-              <Link href="/blog/loler-thorough-examination-guide" className="text-blue-600 hover:text-blue-700 underline">
+              <Link href="/blog/loler-thorough-examination-guide" className="text-amber-400 hover:text-amber-300 underline">
                 LOLER thorough examinations
               </Link>{' '}
               for the equipment side.
             </p>
 
-            <h3 className="text-2xl font-bold text-slate-900 pt-6">
+            <h3 className="text-2xl font-bold text-white pt-6">
               What gets checked
             </h3>
             <p>
               Documentation is the starting point. The auditor reviews the lift plans in place for the
               operations actually happening on site — not just crane lifts, but{' '}
-              <Link href="/services/excavator-lift-plans" className="text-blue-600 hover:text-blue-700 underline">
+              <Link href="/services/excavator-lift-plans" className="text-amber-400 hover:text-amber-300 underline">
                 excavator lifting
               </Link>
               ,{' '}
-              <Link href="/services/telehandler-lift-plans" className="text-blue-600 hover:text-blue-700 underline">
+              <Link href="/services/telehandler-lift-plans" className="text-amber-400 hover:text-amber-300 underline">
                 telehandler crane duties
               </Link>{' '}
               and{' '}
-              <Link href="/services/lorry-loader-lift-plans" className="text-blue-600 hover:text-blue-700 underline">
+              <Link href="/services/lorry-loader-lift-plans" className="text-amber-400 hover:text-amber-300 underline">
                 lorry loader deliveries
               </Link>
               , which are the operations most often found running with no plan at all. Each plan is
@@ -485,7 +487,7 @@ export default function LiftingOperationsAuditPage() {
               lifting and work at height overlap.
             </p>
 
-            <h3 className="text-2xl font-bold text-slate-900 pt-6">
+            <h3 className="text-2xl font-bold text-white pt-6">
               What comes up again and again
             </h3>
             <p>
@@ -500,7 +502,7 @@ export default function LiftingOperationsAuditPage() {
               a plan, which is not a judgement LOLER allows anyone to make.
             </p>
 
-            <h3 className="text-2xl font-bold text-slate-900 pt-6">
+            <h3 className="text-2xl font-bold text-white pt-6">
               How to prepare
             </h3>
             <p>
@@ -517,12 +519,12 @@ export default function LiftingOperationsAuditPage() {
               held back for the written report — that is not a courtesy, it is the point.
             </p>
 
-            <h3 className="text-2xl font-bold text-slate-900 pt-6">
+            <h3 className="text-2xl font-bold text-white pt-6">
               Audit or lift plan check — which do you need?
             </h3>
             <p>
               If the question is <em>"is this specific lift plan any good?"</em>, that is{' '}
-              <Link href="/services/lift-plan-checking" className="text-blue-600 hover:text-blue-700 underline">
+              <Link href="/services/lift-plan-checking" className="text-amber-400 hover:text-amber-300 underline">
                 lift plan checking
               </Link>{' '}
               — a document-level review of one submission, usually turned round in 24 to 48 hours.
@@ -536,15 +538,15 @@ export default function LiftingOperationsAuditPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-white mb-12">Frequently Asked Questions</h2>
           
           <div className="space-y-6">
             {PAGE_FAQS.map((faq) => (
-              <div key={faq.q} className="bg-slate-50 p-6 rounded-xl">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">{faq.q}</h3>
-                <p className="text-slate-600">{faq.a}</p>
+              <div key={faq.q} className="bg-slate-800/40 p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-white mb-3">{faq.q}</h3>
+                <p className="text-gray-400">{faq.a}</p>
               </div>
             ))}
           </div>
@@ -561,14 +563,14 @@ export default function LiftingOperationsAuditPage() {
       <RelatedServices currentSlug="lifting-operations-audit" />
 
       {/* CTA */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-slate-900 border-y border-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Get Started</h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             Contact us to discuss your lifting operations audit requirements.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-medium transition-colors">
+            <Link href="/contact" className="px-8 py-3 rounded-lg font-medium transition-colors bg-amber-500 text-slate-900 font-semibold hover:bg-amber-400">
               Request a Quote
             </Link>
             <a href="tel:+447803808093" className="bg-white/20 hover:bg-white/30 text-white px-8 py-3 rounded-lg font-medium transition-colors">
@@ -578,24 +580,6 @@ export default function LiftingOperationsAuditPage() {
         </div>
       </section>
 
-      {/* Related Services */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-8">Related Services</h2>
-          <div className="grid md:grid-cols-4 gap-4">
-            {[
-              { href: '/services/lift-plan-checking', title: 'Lift Plan Checking' },
-              { href: '/services/tower-crane', title: 'Tower Crane Contracts' },
-              { href: '/services/excavator-lift-plans', title: 'Excavator Lift Plans' },
-              { href: '/services/mobile-crane-lift-plans', title: 'Mobile Crane Lift Plans' },
-            ].map((service) => (
-              <Link key={service.href} href={service.href} className="bg-slate-50 hover:bg-slate-100 p-4 rounded-lg text-slate-900 font-medium transition-colors">
-                {service.title} →
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* Available across the UK — reciprocates the inbound links from /locations/* */}
       <section className="py-16 bg-slate-900 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

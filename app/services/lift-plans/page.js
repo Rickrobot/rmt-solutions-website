@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle, FileText, Truck, Shovel, Building2, HelpCircle
 import SectionHeader from '@/components/ui/SectionHeader'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
+import ProofStrip from '@/components/ProofStrip'
 
 export const metadata = {
   // SEO fix (Jun 2026): differentiated from the homepage, which targets the
@@ -200,6 +201,7 @@ export default function LiftPlansPage() {
           </div>
         </div>
       </section>
+      <ProofStrip id="hebditch" />
 
       {/* Pillar intro — keyword-rich body copy targeting the high-volume
           head terms: "lift plan", "lift plans", "lift planning",

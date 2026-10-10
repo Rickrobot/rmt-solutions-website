@@ -549,32 +549,46 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map — Warrington office location. An embedded map on the contact
-          page reinforces the LocalBusiness schema with a visual signal, gives
-          Google a hard textual association between the page and Warrington,
-          and helps users orient before requesting a site visit. The iframe
-          uses the no-key Google Maps embed (search variant), which is the
-          standard pattern for static office locations. */}
+      {/* Where we work (Oct 2026). Replaced an embedded Google map that only
+          pinned the town of Warrington under the heading "Our Warrington
+          Office" — it told a visitor nothing they could use, and a Google
+          Maps frame loads Google's own scripts, which sits awkwardly beside a
+          site that runs nothing third-party before consent. Plain facts about
+          coverage instead, with the Warrington location kept in the text. */}
       <section className="pb-24 bg-slate-950" aria-labelledby="office-location">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="office-location" className="font-display text-2xl font-bold text-white mb-6 text-center">
-            Our Warrington Office
-          </h2>
-          <div className="rounded-3xl overflow-hidden border border-slate-700/50 shadow-2xl">
-            <iframe
-              src="https://www.google.com/maps?q=Warrington%2C+Cheshire%2C+UK&output=embed"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="RMT Solutions office location in Warrington, Cheshire"
-            />
+          <div className="rounded-3xl border border-slate-700/50 bg-slate-900 p-8 sm:p-10">
+            <h2 id="office-location" className="font-display text-2xl sm:text-3xl font-bold text-white mb-2">
+              Where we work
+            </h2>
+            <p className="text-gray-400 mb-8">
+              Based near Warrington at the M62/M6 junction — 35 minutes from Manchester, 40 from Liverpool.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="rounded-2xl bg-slate-800/40 border border-slate-700/50 p-6">
+                <MapPin className="w-6 h-6 text-amber-400 mb-3" aria-hidden="true" />
+                <h3 className="text-white font-semibold mb-2">Same-day site visits</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Within about 90 minutes of Warrington — Manchester, Liverpool, Leeds and the wider North West.
+                </p>
+              </div>
+              <div className="rounded-2xl bg-slate-800/40 border border-slate-700/50 p-6">
+                <FileCheck className="w-6 h-6 text-amber-400 mb-3" aria-hidden="true" />
+                <h3 className="text-white font-semibold mb-2">Lift plans UK-wide</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Plans are produced remotely and delivered anywhere from Cornwall to the Scottish central belt.
+                </p>
+              </div>
+              <div className="rounded-2xl bg-slate-800/40 border border-slate-700/50 p-6">
+                <Clock className="w-6 h-6 text-amber-400 mb-3" aria-hidden="true" />
+                <h3 className="text-white font-semibold mb-2">Further afield</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Site visits are scheduled around your critical lifts.{' '}
+                  <Link href="/locations" className="text-amber-400 hover:text-amber-300 underline">See the areas we cover</Link>.
+                </p>
+              </div>
+            </div>
           </div>
-          <p className="text-center text-gray-500 text-sm mt-4">
-            Based at the M62/M6 junction — 35 minutes from Manchester, 40 from Liverpool, UK-wide service.
-          </p>
         </div>
       </section>
     </>

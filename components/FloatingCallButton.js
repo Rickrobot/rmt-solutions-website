@@ -2,20 +2,26 @@
 import { Phone } from 'lucide-react'
 
 /**
- * Sticky mobile-only contact buttons.
- * Fixed bottom-right; visible only below the lg breakpoint to avoid
- * overlapping the desktop header phone CTA.
+ * Mobile contact bar — Call and WhatsApp, fixed to the bottom of the screen
+ * on phones and tablets (hidden from the lg breakpoint, where the header
+ * carries the phone number and the quote button).
  *
- * Conversion fix (Jul 2026): added a WhatsApp button above the call
- * button. Site managers standing on a job frequently prefer WhatsApp —
- * they can send the load details, a photo of the machine plate or the
- * drawing without stopping work for a phone call. The wa.me deep link
- * opens the chat pre-filled so the first message takes one tap.
+ * WHY A BAR AND NOT FLOATING PILLS (Oct 2026 design review)
+ *   The two stacked pills that were here sat on top of the page: on the home
+ *   page the "Call Now" pill covered the "Request a Lift Plan Quote" button
+ *   and the WhatsApp pill covered the text above it, and they did the same on
+ *   every page at every scroll position. A full-width bar takes a fixed strip
+ *   at the bottom instead, and the spacer in app/layout.js stops it covering
+ *   the end of the footer. Both buttons are the same size, side by side.
  *
- * Click tracking is handled site-wide by <ConversionTracking /> (mounted in
- * the root layout), which listens for tel: and wa.me clicks anywhere on the
- * page. These two buttons carry data-track-location="mobile_sticky_cta" so
- * their events are attributable to the sticky CTA rather than an inline link.
+ * WhatsApp stays because site managers often prefer to send the load details,
+ * a photo of the machine plate or the drawing without stopping for a call
+ * (Jul 2026 conversion fix). Click tracking is handled site-wide by
+ * <ConversionTracking />, which listens for tel: and wa.me clicks; both links
+ * keep data-track-location="mobile_sticky_cta" so the events stay comparable
+ * with the old buttons.
+ *
+ * The cookie banner sits above this bar (z-[60]) until a choice is made.
  */
 
 // WhatsApp glyph (lucide-react ships no brand icons).
@@ -34,27 +40,29 @@ function WhatsAppIcon({ className }) {
 
 export default function FloatingCallButton() {
   return (
-    <div className="lg:hidden fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
-      <a
-        href="https://wa.me/447803808093?text=Hi%20Ricky%2C%20I%20need%20help%20with%20a%20lift%20plan."
-        target="_blank"
-        rel="noopener noreferrer"
-        data-track-location="mobile_sticky_cta"
-        aria-label="Message RMT Solutions on WhatsApp"
-        className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5b] text-white px-5 py-3 rounded-full font-semibold shadow-2xl shadow-emerald-500/40 active:scale-95 transition"
-      >
-        <WhatsAppIcon className="w-5 h-5" />
-        <span>WhatsApp</span>
-      </a>
-      <a
-        href="tel:+447803808093"
-        data-track-location="mobile_sticky_cta"
-        aria-label="Call RMT Solutions on 07803 808093"
-        className="flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-900 px-5 py-3 rounded-full font-semibold shadow-2xl shadow-amber-500/40 active:scale-95 transition"
-      >
-        <Phone className="w-5 h-5" />
-        <span>Call Now</span>
-      </a>
+    <div className="lg:hidden fixed inset-x-0 bottom-0 z-50 border-t border-slate-800 bg-slate-950/95 backdrop-blur-md px-3 pt-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))]">
+      <div className="grid grid-cols-2 gap-2 max-w-lg mx-auto">
+        <a
+          href="tel:+447803808093"
+          data-track-location="mobile_sticky_cta"
+          aria-label="Call RMT Solutions on 07803 808093"
+          className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-900 py-3 font-semibold active:scale-[0.98] transition"
+        >
+          <Phone className="w-5 h-5" aria-hidden="true" />
+          <span>Call Ricky</span>
+        </a>
+        <a
+          href="https://wa.me/447803808093?text=Hi%20Ricky%2C%20I%20need%20help%20with%20a%20lift%20plan."
+          target="_blank"
+          rel="noopener noreferrer"
+          data-track-location="mobile_sticky_cta"
+          aria-label="Message RMT Solutions on WhatsApp"
+          className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] text-slate-950 py-3 font-semibold active:scale-[0.98] transition"
+        >
+          <WhatsAppIcon className="w-5 h-5" />
+          <span>WhatsApp</span>
+        </a>
+      </div>
     </div>
   )
 }

@@ -118,6 +118,9 @@ export default function RootLayout({ children }) {
         <Header />
         <main>{children}</main>
         <Footer />
+        {/* Room for the mobile contact bar, so it never covers the end of the
+            footer. Same height as the bar; nothing on large screens. */}
+        <div aria-hidden="true" className="lg:hidden h-[calc(4.25rem+env(safe-area-inset-bottom))]" />
         <FloatingCallButton />
         <CookieConsent />
       </body>

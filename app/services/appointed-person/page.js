@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle, Building2, FileText, ShieldCheck, MapPin, Awar
 import SectionHeader from '@/components/ui/SectionHeader'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
+import ProofStrip from '@/components/ProofStrip'
 
 export const metadata = {
   // Fix #6, Jul 2026 SEO review: retargeted to buy intent. "Appointed person
@@ -216,6 +217,7 @@ export default function AppointedPersonPage() {
           </div>
         </div>
       </section>
+      <ProofStrip id="saville" />
 
       {/* What an AP does + credentials */}
       <section className="py-24 bg-slate-950">

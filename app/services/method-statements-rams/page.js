@@ -217,36 +217,36 @@ export default function MethodStatementsRamsPage() {
       </section>
 
       {/* Trust strip */}
-      <section className="bg-slate-50 border-y border-slate-200">
+      <section className="bg-slate-900 border-y border-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-2xl font-bold text-slate-900">35+</div>
-              <div className="text-sm text-slate-600">Years of construction experience</div>
+              <div className="text-2xl font-bold text-white">35+</div>
+              <div className="text-sm text-gray-400">Years of construction experience</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-slate-900">NEBOSH</div>
-              <div className="text-sm text-slate-600">Diploma · CertIOSH · MIIRSM</div>
+              <div className="text-2xl font-bold text-white">NEBOSH</div>
+              <div className="text-sm text-gray-400">Diploma · CertIOSH · MIIRSM</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-slate-900">Tier 1</div>
-              <div className="text-sm text-slate-600">Trusted to review submissions</div>
+              <div className="text-2xl font-bold text-white">Tier 1</div>
+              <div className="text-sm text-gray-400">Trusted to review submissions</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-slate-900">UK-wide</div>
-              <div className="text-sm text-slate-600">Documents produced remotely</div>
+              <div className="text-2xl font-bold text-white">UK-wide</div>
+              <div className="text-sm text-gray-400">Documents produced remotely</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Why RAMS get rejected — primary search target */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <h2 className="text-3xl font-bold text-white mb-6">
             Why RAMS get rejected by principal contractors
           </h2>
-          <div className="prose prose-lg max-w-none text-slate-600 mb-8">
+          <div className="prose prose-lg max-w-none text-gray-400 mb-8">
             <p>
               Almost every rejected RAMS fails for the same underlying reason: the document
               describes the <em>trade</em>, not the <em>job</em>. It could have been submitted on
@@ -262,8 +262,8 @@ export default function MethodStatementsRamsPage() {
             <p>These are the findings that come up again and again on the reviewing side:</p>
           </div>
 
-          <div className="bg-rose-50 border border-rose-200 p-8 rounded-xl mb-8">
-            <h3 className="text-xl font-semibold text-rose-900 mb-4">Common reasons for rejection</h3>
+          <div className="bg-rose-500/10 border border-rose-500/30 p-8 rounded-xl mb-8">
+            <h3 className="text-xl font-semibold text-rose-200 mb-4">Common reasons for rejection</h3>
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 'Generic content with no site-specific hazards identified',
@@ -280,17 +280,17 @@ export default function MethodStatementsRamsPage() {
                 'Named supervisor and lines of responsibility unclear',
               ].map((problem) => (
                 <div key={problem} className="flex items-start gap-3">
-                  <X className="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-rose-900">{problem}</span>
+                  <X className="w-5 h-5 text-rose-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-rose-200">{problem}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="bg-amber-50 border-l-4 border-amber-400 p-6 rounded-r-xl">
+          <div className="bg-amber-500/10 border-l-4 border-amber-400 p-6 rounded-r-xl">
             <div className="flex items-start gap-3">
-              <AlertTriangle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" />
-              <p className="text-slate-800">
+              <AlertTriangle className="w-6 h-6 text-amber-400 flex-shrink-0 mt-0.5" />
+              <p className="text-gray-100">
                 <strong>The cost of a rejection is rarely the document.</strong> It is the labour
                 standing down, the programme slipping, and the main contractor forming a view about
                 whether you are worth engaging next time. Getting it right at the second attempt
@@ -302,12 +302,12 @@ export default function MethodStatementsRamsPage() {
       </section>
 
       {/* The 18-point standard */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Written to the standard used to review them
           </h2>
-          <p className="text-lg text-slate-600 mb-12 max-w-3xl">
+          <p className="text-lg text-gray-400 mb-12 max-w-3xl">
             Every document produced here is quality assured against the same 18-point compliance
             standard applied when reviewing submissions on behalf of principal contractors. That is
             the difference between a document that reads well and a document that clears review —
@@ -359,9 +359,9 @@ export default function MethodStatementsRamsPage() {
                 ],
               },
             ].map((section) => (
-              <div key={section.title} className="bg-white p-8 rounded-xl shadow-sm">
-                <h3 className="text-xl font-semibold text-slate-900 mb-4">{section.title}</h3>
-                <ul className="space-y-3 text-slate-600">
+              <div key={section.title} className="bg-slate-800/40 p-8 rounded-xl shadow-sm">
+                <h3 className="text-xl font-semibold text-white mb-4">{section.title}</h3>
+                <ul className="space-y-3 text-gray-400">
                   {section.items.map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
@@ -376,10 +376,10 @@ export default function MethodStatementsRamsPage() {
       </section>
 
       {/* Three ways in */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Three ways to use this service</h2>
-          <p className="text-lg text-slate-600 mb-12 max-w-3xl">
+          <h2 className="text-3xl font-bold text-white mb-4">Three ways to use this service</h2>
+          <p className="text-lg text-gray-400 mb-12 max-w-3xl">
             Every engagement is fixed-price and agreed before work starts. Send the scope and you
             will have a quote the same day.
           </p>
@@ -389,13 +389,13 @@ export default function MethodStatementsRamsPage() {
               <div className="absolute -top-3 left-6 bg-amber-500 text-slate-900 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded">
                 Most urgent
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3 mt-2">Rejection recovery</h3>
-              <p className="text-slate-600 mb-4">
+              <h3 className="text-xl font-semibold text-white mb-3 mt-2">Rejection recovery</h3>
+              <p className="text-gray-400 mb-4">
                 Your RAMS has been returned by the principal contractor and work cannot start. Send
                 the document and their comments — we diagnose why it failed and rewrite it to be
                 accepted.
               </p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Written diagnosis of every rejection point</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Full rewrite against your site information</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Resubmission support until accepted</li>
@@ -403,13 +403,13 @@ export default function MethodStatementsRamsPage() {
               </ul>
             </div>
 
-            <div className="border border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Pre-submission review</h3>
-              <p className="text-slate-600 mb-4">
+            <div className="border border-slate-700/50 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-3">Pre-submission review</h3>
+              <p className="text-gray-400 mb-4">
                 You have a document but you are not confident it will pass. We review it against the
                 18-point standard and return written findings so you can fix it in private.
               </p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Lowest-cost option</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Findings you can action yourself</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Protects your standing with the main contractor</li>
@@ -417,13 +417,13 @@ export default function MethodStatementsRamsPage() {
               </ul>
             </div>
 
-            <div className="border border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Written from scratch</h3>
-              <p className="text-slate-600 mb-4">
+            <div className="border border-slate-700/50 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-3">Written from scratch</h3>
+              <p className="text-gray-400 mb-4">
                 No document yet, or the activity is complex, high-risk or unfamiliar. We write the
                 full RAMS package from your scope and site information.
               </p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Risk assessment and method statement as one package</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />COSHH assessments where substances are used</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Issued in your branding, under revision control</li>
@@ -494,10 +494,10 @@ export default function MethodStatementsRamsPage() {
       </section>
 
       {/* Trades covered */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Trades and activities covered</h2>
-          <p className="text-lg text-slate-600 mb-10 max-w-3xl">
+          <h2 className="text-3xl font-bold text-white mb-4">Trades and activities covered</h2>
+          <p className="text-lg text-gray-400 mb-10 max-w-3xl">
             Lifting operations are a specialism, not a limit. Each trade below has its own page
             setting out the activities covered, the hazards the assessment must address, the
             regulations that apply, and the reasons documents in that trade get rejected. If your
@@ -510,15 +510,15 @@ export default function MethodStatementsRamsPage() {
                 <Link
                   key={slug}
                   href={`/services/method-statements-rams/${slug}`}
-                  className="group block bg-slate-50 hover:bg-amber-50 border border-slate-200 hover:border-amber-400 rounded-xl p-5 transition"
+                  className="group block bg-slate-800/40 hover:bg-amber-500/10 border border-slate-700/50 hover:border-amber-400 rounded-xl p-5 transition"
                 >
-                  <h3 className="font-semibold text-slate-900 group-hover:text-amber-700 mb-1">
+                  <h3 className="font-semibold text-white group-hover:text-amber-700 mb-1">
                     {t.name}
                   </h3>
-                  <p className="text-slate-600 text-sm mb-3 line-clamp-2">
+                  <p className="text-gray-400 text-sm mb-3 line-clamp-2">
                     {t.activities.slice(0, 3).join(' · ')}
                   </p>
-                  <span className="inline-flex items-center text-amber-600 font-semibold text-sm">
+                  <span className="inline-flex items-center text-amber-400 font-semibold text-sm">
                     Method statements &amp; RAMS
                     <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </span>
@@ -526,16 +526,16 @@ export default function MethodStatementsRamsPage() {
               )
             })}
           </div>
-          <p className="mt-8 text-slate-700">
+          <p className="mt-8 text-gray-300">
             Lifting operations RAMS are produced by a CPCS A61 Appointed Person and can be paired
             with a full{' '}
-            <Link href="/services/lift-plans" className="text-amber-600 hover:text-amber-700 underline">
+            <Link href="/services/lift-plans" className="text-amber-400 hover:text-amber-300 underline">
               LOLER compliant lift plan
             </Link>
             . For background see our guide to{' '}
             <Link
               href="/blog/lifting-method-statements-rams-guide"
-              className="text-amber-600 hover:text-amber-700 underline"
+              className="text-amber-400 hover:text-amber-300 underline"
             >
               lifting method statements and RAMS
             </Link>
@@ -545,44 +545,44 @@ export default function MethodStatementsRamsPage() {
       </section>
 
       {/* Who uses this */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">Who uses this service?</h2>
+          <h2 className="text-3xl font-bold text-white mb-12">Who uses this service?</h2>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="border border-slate-200 bg-white p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Subcontractors</h3>
-              <p className="text-slate-600 mb-4">
+            <div className="border border-slate-700/50 bg-slate-800/40 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-4">Subcontractors</h3>
+              <p className="text-gray-400 mb-4">
                 You are good at the work but the paperwork keeps bouncing, and every rejection costs
                 you days you cannot recover.
               </p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Documents that clear review first time</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Labour on site instead of standing down</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Reputation protected with the main contractor</li>
               </ul>
             </div>
 
-            <div className="border border-slate-200 bg-white p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Small and growing contractors</h3>
-              <p className="text-slate-600 mb-4">
+            <div className="border border-slate-700/50 bg-slate-800/40 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-4">Small and growing contractors</h3>
+              <p className="text-gray-400 mb-4">
                 No in-house health and safety resource, but tier 1 clients expect tier 1 paperwork
                 from day one.
               </p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Competent-person capability without a salary</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Documents issued in your own branding</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Credibility on PQQs and prequalification</li>
               </ul>
             </div>
 
-            <div className="border border-slate-200 bg-white p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Principal contractors</h3>
-              <p className="text-slate-600 mb-4">
+            <div className="border border-slate-700/50 bg-slate-800/40 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-4">Principal contractors</h3>
+              <p className="text-gray-400 mb-4">
                 Drowning in subcontractor submissions of wildly varying quality, and needing a
                 consistent, defensible standard applied to all of them.
               </p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Independent review against a fixed standard</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Documented due diligence under CDM 2015</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />Retained arrangements available</li>
@@ -593,16 +593,16 @@ export default function MethodStatementsRamsPage() {
       </section>
 
       {/* What you receive */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">What you receive</h2>
-          <p className="text-lg text-slate-600 mb-10 max-w-3xl">
+          <h2 className="text-3xl font-bold text-white mb-4">What you receive</h2>
+          <p className="text-lg text-gray-400 mb-10 max-w-3xl">
             A complete, submission-ready package in editable and PDF format, issued in your own
             branding where you want it.
           </p>
 
-          <div className="bg-slate-50 p-8 rounded-xl">
-            <ul className="grid md:grid-cols-2 gap-4 text-slate-700">
+          <div className="bg-slate-800/40 p-8 rounded-xl">
+            <ul className="grid md:grid-cols-2 gap-4 text-gray-300">
               {[
                 'Site-specific risk assessment with initial and residual risk ratings',
                 'Step-by-step method statement matching the actual sequence of work',
@@ -624,17 +624,17 @@ export default function MethodStatementsRamsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">
+          <h2 className="text-3xl font-bold text-white mb-12">
             Method statement &amp; RAMS FAQs
           </h2>
 
           <div className="space-y-6 max-w-4xl">
             {PAGE_FAQS.map((faq) => (
-              <div key={faq.q} className="bg-white p-6 rounded-xl border border-slate-200">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">{faq.q}</h3>
-                <p className="text-slate-600">{faq.a}</p>
+              <div key={faq.q} className="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50">
+                <h3 className="text-lg font-semibold text-white mb-3">{faq.q}</h3>
+                <p className="text-gray-400">{faq.a}</p>
               </div>
             ))}
           </div>

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Clock, ShieldCheck, FileCheck, PhoneCall, CheckCircle2, ArrowRight } from 'lucide-react'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
+import ProofStrip from '@/components/ProofStrip'
 
 export const metadata = {
   title: 'Telehandler Lift Plans UK | LOLER Compliant',
@@ -174,7 +175,7 @@ export default function TelehandlerLiftPlansPage() {
 
           <div className="flex flex-wrap gap-3 mb-8">
             <div className="flex items-center gap-2 bg-amber-500 px-4 py-2 rounded-full">
-              <span className="text-sm font-bold text-slate-900">Lift plans from £200 + VAT</span>
+              <span className="text-sm font-bold text-white">Lift plans from £200 + VAT</span>
             </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur px-4 py-2 rounded-full border border-white/20">
               <Clock className="w-4 h-4 text-amber-400" />
@@ -207,36 +208,37 @@ export default function TelehandlerLiftPlansPage() {
           </div>
         </div>
       </section>
+      <ProofStrip id="geary" />
 
       {/* Trust strip */}
-      <section className="bg-slate-50 border-y border-slate-200">
+      <section className="bg-slate-900 border-y border-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-2xl font-bold text-slate-900">35+</div>
-              <div className="text-sm text-slate-600">Years of construction experience</div>
+              <div className="text-2xl font-bold text-white">35+</div>
+              <div className="text-sm text-gray-400">Years of construction experience</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-slate-900">CPCS A61</div>
-              <div className="text-sm text-slate-600">Appointed Person, current card</div>
+              <div className="text-2xl font-bold text-white">CPCS A61</div>
+              <div className="text-sm text-gray-400">Appointed Person, current card</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-slate-900">NEBOSH</div>
-              <div className="text-sm text-slate-600">Construction Diploma · CertIOSH</div>
+              <div className="text-2xl font-bold text-white">NEBOSH</div>
+              <div className="text-sm text-gray-400">Construction Diploma · CertIOSH</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-slate-900">UK-wide</div>
-              <div className="text-sm text-slate-600">Remote and on-site coverage</div>
+              <div className="text-2xl font-bold text-white">UK-wide</div>
+              <div className="text-sm text-gray-400">Remote and on-site coverage</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Understanding */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">Telehandler lifting — when it&apos;s a LOLER lift</h2>
-          <div className="prose prose-lg max-w-none text-slate-600">
+          <h2 className="text-3xl font-bold text-white mb-6">Telehandler lifting — when it&apos;s a LOLER lift</h2>
+          <div className="prose prose-lg max-w-none text-gray-400">
             <p>
               Telehandlers are the most versatile machines on UK construction sites — moving brick
               packs at first fix, then lifting steel and trusses, then offering a work platform for
@@ -259,18 +261,18 @@ export default function TelehandlerLiftPlansPage() {
               'Placing materials at height (steel, trusses, plant)',
               'Brick grabs, block clamps, rotating attachments',
             ].map((item) => (
-              <div key={item} className="bg-slate-50 p-6 rounded-xl">
-                <p className="text-slate-700">{item}</p>
+              <div key={item} className="bg-slate-800/40 p-6 rounded-xl">
+                <p className="text-gray-300">{item}</p>
               </div>
             ))}
           </div>
-          <p className="mt-8 text-slate-600">
+          <p className="mt-8 text-gray-400">
             For background reading see our guides on{' '}
-            <Link href="/blog/what-is-a-lift-plan" className="text-amber-600 hover:text-amber-700 underline">
+            <Link href="/blog/what-is-a-lift-plan" className="text-amber-400 hover:text-amber-300 underline">
               what is a lift plan
             </Link>{' '}
             and{' '}
-            <Link href="/blog/when-do-you-need-lift-plan" className="text-amber-600 hover:text-amber-700 underline">
+            <Link href="/blog/when-do-you-need-lift-plan" className="text-amber-400 hover:text-amber-300 underline">
               when do you need a lift plan
             </Link>
             .
@@ -279,10 +281,10 @@ export default function TelehandlerLiftPlansPage() {
       </section>
 
       {/* What's Included */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">What&apos;s in your telehandler lift plan</h2>
-          <p className="text-lg text-slate-600 mb-12 max-w-3xl">
+          <h2 className="text-3xl font-bold text-white mb-4">What&apos;s in your telehandler lift plan</h2>
+          <p className="text-lg text-gray-400 mb-12 max-w-3xl">
             One complete pack — drawing, calcs, RA/MS and accessories schedule, signed off by an
             Appointed Person and ready to drop into your CDM file.
           </p>
@@ -330,9 +332,9 @@ export default function TelehandlerLiftPlansPage() {
                 ],
               },
             ].map((section) => (
-              <div key={section.title} className="bg-white p-8 rounded-xl shadow-sm">
-                <h3 className="text-xl font-semibold text-slate-900 mb-4">{section.title}</h3>
-                <ul className="space-y-3 text-slate-600">
+              <div key={section.title} className="bg-slate-800/40 p-8 rounded-xl shadow-sm">
+                <h3 className="text-xl font-semibold text-white mb-4">{section.title}</h3>
+                <ul className="space-y-3 text-gray-400">
                   {section.items.map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
@@ -349,10 +351,10 @@ export default function TelehandlerLiftPlansPage() {
       <LiftDrawingExamples type="telehandler" />
 
       {/* Process */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">How it works — and how fast</h2>
-          <p className="text-lg text-slate-600 mb-12 max-w-3xl">
+          <h2 className="text-3xl font-bold text-white mb-4">How it works — and how fast</h2>
+          <p className="text-lg text-gray-400 mb-12 max-w-3xl">
             From £200 + VAT, fixed fee, no hourly drift. Send the brief and we&apos;ll come
             back to you the same working day.
           </p>
@@ -384,13 +386,13 @@ export default function TelehandlerLiftPlansPage() {
                 badge: 'Same day',
               },
             ].map((item) => (
-              <div key={item.step} className="relative bg-slate-50 p-6 rounded-xl border border-slate-200">
+              <div key={item.step} className="relative bg-slate-800/40 p-6 rounded-xl border border-slate-700/50">
                 <div className="absolute -top-3 left-6 bg-amber-500 text-slate-900 text-xs font-bold uppercase tracking-wider px-2 py-1 rounded">
                   Step {item.step}
                 </div>
-                <h3 className="font-semibold text-slate-900 mt-2 mb-2">{item.title}</h3>
-                <p className="text-slate-600 text-sm mb-4">{item.desc}</p>
-                <div className="inline-flex items-center gap-1 text-xs text-amber-700 font-semibold">
+                <h3 className="font-semibold text-white mt-2 mb-2">{item.title}</h3>
+                <p className="text-gray-400 text-sm mb-4">{item.desc}</p>
+                <div className="inline-flex items-center gap-1 text-xs text-amber-400 font-semibold">
                   <Clock className="w-3 h-3" />
                   {item.badge}
                 </div>
@@ -401,9 +403,9 @@ export default function TelehandlerLiftPlansPage() {
       </section>
 
       {/* When You Need */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">When you need a telehandler lift plan</h2>
+          <h2 className="text-3xl font-bold text-white mb-8">When you need a telehandler lift plan</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
@@ -431,9 +433,9 @@ export default function TelehandlerLiftPlansPage() {
                 desc: 'When your main contractor requires a written lift plan as part of their site-specific RAMS package.',
               },
             ].map((item) => (
-              <div key={item.title} className="bg-white p-8 rounded-xl border border-slate-200">
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">{item.title}</h3>
-                <p className="text-slate-600">{item.desc}</p>
+              <div key={item.title} className="bg-slate-800/40 p-8 rounded-xl border border-slate-700/50">
+                <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>
+                <p className="text-gray-400">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -507,14 +509,14 @@ export default function TelehandlerLiftPlansPage() {
       </section>
 
       {/* Lift Supervisor — when a CPCS A62 is required */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-14">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+              <h2 className="text-3xl font-bold text-white mb-6">
                 When is a lift supervisor required for a telehandler lift?
               </h2>
-              <div className="prose prose-lg max-w-none text-slate-600 space-y-4">
+              <div className="prose prose-lg max-w-none text-gray-400 space-y-4">
                 <p>
                   Every <strong>suspended-load</strong> telehandler lift — anything on a hook, jib,
                   slings or chains — must be supervised. The real question is whether that lift
@@ -524,7 +526,7 @@ export default function TelehandlerLiftPlansPage() {
                 <p>
                   It&apos;s the <strong>lift category</strong> — basic, intermediate or complex —
                   that decides. Your{' '}
-                  <Link href="/services/appointed-person" className="text-amber-600 hover:text-amber-700 underline">
+                  <Link href="/services/appointed-person" className="text-amber-400 hover:text-amber-300 underline">
                     CPCS Appointed Person (A61)
                   </Link>{' '}
                   sets the category from the risk assessment, and the higher it is, the more
@@ -561,7 +563,7 @@ export default function TelehandlerLiftPlansPage() {
                 level: 'Intermediate',
                 tag: 'Separate A62 usually',
                 headerClass: 'bg-amber-500',
-                headText: 'text-slate-900',
+                headText: 'text-white',
                 situation:
                   'Estimated weight or centre of gravity, or no designated lifting points; lifting free on wheels; restricted line of sight; or some travelling with the suspended load.',
                 requirement:
@@ -580,7 +582,7 @@ export default function TelehandlerLiftPlansPage() {
             ].map((cat) => (
               <div
                 key={cat.level}
-                className="flex flex-col rounded-xl border border-slate-200 bg-slate-50 overflow-hidden"
+                className="flex flex-col rounded-xl border border-slate-700/50 bg-slate-800/40 overflow-hidden"
               >
                 <div className={`${cat.headerClass} px-6 py-4 flex items-center justify-between`}>
                   <span className={`${cat.headText} text-lg font-bold`}>{cat.level}</span>
@@ -589,34 +591,34 @@ export default function TelehandlerLiftPlansPage() {
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col p-6">
-                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-2">
                     Typical situation
                   </p>
-                  <p className="text-slate-600 mb-5">{cat.situation}</p>
-                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2">
+                  <p className="text-gray-400 mb-5">{cat.situation}</p>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-2">
                     Lift supervisor requirement
                   </p>
-                  <p className="font-medium text-slate-800">{cat.requirement}</p>
+                  <p className="font-medium text-gray-100">{cat.requirement}</p>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Combining roles callout */}
-          <div className="mt-10 rounded-xl border border-amber-200 bg-amber-50 p-8">
+          <div className="mt-10 rounded-xl border border-amber-500/30 bg-amber-500/10 p-8">
             <div className="flex items-start gap-4">
-              <ShieldCheck className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+              <ShieldCheck className="w-6 h-6 text-amber-400 flex-shrink-0 mt-1" />
               <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                <h3 className="text-xl font-semibold text-white mb-3">
                   Can an A40 slinger/signaller supervise a basic lift?
                 </h3>
-                <p className="text-slate-600 mb-4">
+                <p className="text-gray-400 mb-4">
                   On a genuinely basic suspended-load lift the supervisor role may be combined with
                   the slinger/signaller, so a separate CPCS A62 supervisor is not always required.
                   The A40 card evidences slinging and signalling, not supervision — so combining is
                   only acceptable where:
                 </p>
-                <ul className="space-y-2 text-slate-600 mb-4">
+                <ul className="space-y-2 text-gray-400 mb-4">
                   {[
                     'the lift is genuinely basic — known weight and lifting points, firm level ground, stabilisers deployed, clear line of sight, no travelling and no proximity hazards;',
                     'the Appointed Person has reviewed and authorised the combined role;',
@@ -629,7 +631,7 @@ export default function TelehandlerLiftPlansPage() {
                     </li>
                   ))}
                 </ul>
-                <p className="text-slate-600">
+                <p className="text-gray-400">
                   For all intermediate and complex lifts, provide a dedicated CPCS A62 (or NPORS)
                   supervisor. LOLER requires competence, not a specific card — but many principal
                   contractors require an A62 supervisor on every suspended-load lift, so check the
@@ -641,8 +643,8 @@ export default function TelehandlerLiftPlansPage() {
 
           {/* The lifting team */}
           <div className="mt-14">
-            <h3 className="text-2xl font-bold text-slate-900 mb-3">The telehandler lifting team</h3>
-            <p className="text-slate-600 mb-8 max-w-3xl">
+            <h3 className="text-2xl font-bold text-white mb-3">The telehandler lifting team</h3>
+            <p className="text-gray-400 mb-8 max-w-3xl">
               For suspended-load lifting the same BS 7121 lifting team applies as for a crane, with a
               telehandler-specific operator endorsement. A card is evidence of training, not a
               substitute for demonstrated competence and written site authorisation.
@@ -670,12 +672,12 @@ export default function TelehandlerLiftPlansPage() {
                   desc: 'Slings the load and directs machine movement — essential where visibility is reduced; a marshaller when travelling with a suspended load.',
                 },
               ].map((r) => (
-                <div key={r.role} className="rounded-xl border border-slate-200 p-6">
+                <div key={r.role} className="rounded-xl border border-slate-700/50 p-6">
                   <div className="inline-flex items-center rounded-full bg-slate-900 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-400 mb-3">
                     {r.card}
                   </div>
-                  <h4 className="font-semibold text-slate-900 mb-2">{r.role}</h4>
-                  <p className="text-sm text-slate-600">{r.desc}</p>
+                  <h4 className="font-semibold text-white mb-2">{r.role}</h4>
+                  <p className="text-sm text-gray-400">{r.desc}</p>
                 </div>
               ))}
             </div>
@@ -707,9 +709,9 @@ export default function TelehandlerLiftPlansPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">Why contractors send their telehandler lifts to us</h2>
+          <h2 className="text-3xl font-bold text-white mb-12">Why contractors send their telehandler lifts to us</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -737,9 +739,9 @@ export default function TelehandlerLiftPlansPage() {
                 desc: 'AutoCAD for the lift drawing, manufacturer-data-driven capacity modelling — output that looks the part and stands up to review.',
               },
             ].map((item) => (
-              <div key={item.title} className="border border-slate-200 p-6 rounded-xl">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">{item.title}</h3>
-                <p className="text-slate-600">{item.desc}</p>
+              <div key={item.title} className="border border-slate-700/50 p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-white mb-3">{item.title}</h3>
+                <p className="text-gray-400">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -747,9 +749,9 @@ export default function TelehandlerLiftPlansPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">Telehandler lift plan FAQs</h2>
+          <h2 className="text-3xl font-bold text-white mb-12">Telehandler lift plan FAQs</h2>
           <div className="space-y-6 max-w-4xl">
             {[
               {
@@ -801,9 +803,9 @@ export default function TelehandlerLiftPlansPage() {
                 a: 'Yes. Our plans are written to the standard expected by Tier 1 main contractors including Wates, Caddick and GMI, and routinely pass first-time review. If a specific reviewer comes back with comments, we handle the back-and-forth as part of the fixed fee.',
               },
             ].map((faq) => (
-              <div key={faq.q} className="bg-white p-6 rounded-xl border border-slate-200">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">{faq.q}</h3>
-                <p className="text-slate-600">{faq.a}</p>
+              <div key={faq.q} className="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50">
+                <h3 className="text-lg font-semibold text-white mb-3">{faq.q}</h3>
+                <p className="text-gray-400">{faq.a}</p>
               </div>
             ))}
           </div>
@@ -862,27 +864,6 @@ export default function TelehandlerLiftPlansPage() {
       </section>
 
       {/* Related */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-8">Related Services</h2>
-          <div className="grid md:grid-cols-4 gap-4">
-            {[
-              { href: '/services/excavator-lift-plans', title: 'Excavator Lift Plans' },
-              { href: '/services/mobile-crane-lift-plans', title: 'Mobile Crane Lift Plans' },
-              { href: '/services/lorry-loader-lift-plans', title: 'Lorry Loader Lift Plans' },
-              { href: '/services/lift-plan-checking', title: 'Lift Plan Checking' },
-            ].map((s) => (
-              <Link
-                key={s.href}
-                href={s.href}
-                className="bg-slate-50 hover:bg-slate-100 p-4 rounded-lg text-slate-900 font-medium transition-colors"
-              >
-                {s.title} →
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* Available across the UK — reciprocates the inbound links from /locations/* */}
       <section className="py-16 bg-slate-900 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

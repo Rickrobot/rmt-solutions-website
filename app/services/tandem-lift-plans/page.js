@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle, Layers, Phone, AlertTriangle, Ruler } from 'lucide-react'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
+import ProofStrip from '@/components/ProofStrip'
 
 // Tandem and multi-crane lift plans.
 //
@@ -222,6 +223,7 @@ export default function TandemLiftPlansPage() {
           </div>
         </div>
       </section>
+      <ProofStrip id="bibby" />
 
       {/* Why it is different */}
       <section className="py-20 bg-slate-950 border-y border-slate-800/50">

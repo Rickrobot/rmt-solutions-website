@@ -1,7 +1,8 @@
 import LiftDrawingShowcase from '@/components/LiftDrawingShowcase'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FileText, Building2, Layers, ArrowRight, Phone } from 'lucide-react'
+import { FileText, Building2, Layers, ArrowRight, Phone, Quote } from 'lucide-react'
+import { getTestimonial, testimonials } from '@/lib/testimonials'
 import ServiceCard from '@/components/ui/ServiceCard'
 import StatCard from '@/components/ui/StatCard'
 import CaseStudyCard from '@/components/ui/CaseStudyCard'
@@ -218,32 +219,46 @@ export default function HomePage() {
     { name: 'Lifting Operations Audits', href: '/services/lifting-operations-audit' },
   ]
 
+  // Oct 2026: the three named, real jobs that have their own case-study
+  // pages. The cards that were here ("Industrial Warehouse", "Manchester
+  // Development", "Utility Pipeline") had no page behind them and the
+  // pipeline card showed a photo of a precast panel.
   const caseStudies = [
     {
-      title: 'Industrial Warehouse',
-      description: 'Complete lift planning for 15,000m² steel frame erection.',
+      title: 'Caddick Tawd Valley Junction 4, Skelmersdale',
+      description: 'Lift plan reviews for every lifting activity on a 45-unit industrial scheme, with a drone survey of the site.',
       category: 'Steel Erection',
-      image: '/images/mobile-crane-steel-erection.webp',
+      image: '/images/caddick-tawd-valley-junction-4-hero.jpg',
+      href: '/case-studies/caddick-tawd-valley-junction-4',
     },
     {
-      title: 'Manchester Development',
-      description: '18-month tower crane AP contract.',
-      category: 'Tower Crane',
-      image: '/images/residential-tower-crane.webp',
+      title: 'Rivington Chase, Horwich',
+      description: 'Appointed Person duties and independent lift plan reviews for Caddick on 116 homes at the former Horwich Loco Works.',
+      category: 'Appointed Person',
+      image: '/images/rivington-chase-horwich-hero.jpg',
+      href: '/case-studies/rivington-chase-horwich-loco-works',
     },
     {
-      title: 'Utility Pipeline',
-      description: 'Series of excavator lift plans for 3km pipeline.',
-      category: 'Excavator',
-      image: '/images/precast-concrete-lift.webp',
+      title: 'Chorlton Baths Balcony Lift, Manchester',
+      description: 'Site verification of a mobile crane installing steel balconies on a constrained urban site, with the public segregated.',
+      category: 'Mobile Crane',
+      image: '/images/chorlton-baths-balcony-lift.jpg',
+      href: '/case-studies/chorlton-baths-balcony-lift',
     },
   ]
 
+  // Three named quotes for the home page, verbatim from lib/testimonials.js.
+  const homeQuotes = ['saville', 'chadwick', 'achonu'].map(getTestimonial)
+
+  // Oct 2026: replaced "40+ fatal injuries per year from lifting operations",
+  // "70% of incidents result from poor planning" and two other figures that
+  // had no source. The buyers here are H&S managers; an unsourced scare
+  // statistic costs credibility. These are RMT's own, checkable facts.
   const stats = [
-    { value: '40+', label: 'Fatal Injuries', sublabel: 'Per year from lifting operations' },
-    { value: '£1M+', label: 'Potential Fines', sublabel: 'For LOLER non-compliance' },
-    { value: '100%', label: 'AP Required', sublabel: 'For complex lifting operations' },
-    { value: '70%', label: 'Of Incidents', sublabel: 'Result from poor planning' },
+    { value: '35+', label: 'Years in construction', sublabel: 'Lifting operations on UK construction sites' },
+    { value: '1,000+', label: 'Lift plans delivered', sublabel: 'Excavators to tandem crane lifts' },
+    { value: String(testimonials.length), label: 'Named client reviews', sublabel: 'Caddick, Wates, Sunel and DGS site teams' },
+    { value: 'From £200', label: 'Published, fixed prices', sublabel: 'Excavator and telehandler lift plans, plus VAT' },
   ]
 
   return (
@@ -259,7 +274,7 @@ export default function HomePage() {
       />
 
       {/* Hero Section */}
-      <header className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      <header className="relative lg:min-h-screen flex items-center pt-20 overflow-hidden">
         <div className="absolute inset-0 bg-slate-900">
           <Image
             src="/images/mobile-crane-steel-erection.webp"
@@ -273,10 +288,10 @@ export default function HomePage() {
         </div>
         <div className="hero-overlay absolute inset-0" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
-              <div className="inline-flex items-center bg-amber-500/10 border border-amber-500/30 rounded-full px-5 py-2.5 mb-8">
+              <div className="inline-flex items-center bg-amber-500/10 border border-amber-500/30 rounded-full px-4 py-2 sm:px-5 sm:py-2.5 mb-6 sm:mb-8">
                 <span className="w-2 h-2 bg-amber-500 rounded-full mr-3 animate-pulse" />
                 <span className="text-amber-400 text-sm font-semibold tracking-wide">
                   CPCS Appointed Person A61
@@ -292,17 +307,17 @@ export default function HomePage() {
                   "lift planning services UK" now belongs to /services/lift-plans;
                   the homepage leads on LOLER + Appointed Person instead, which is
                   also what the <title> and meta description already targeted. */}
-              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 sm:mb-8">
                 <span className="text-white">LOLER-Compliant</span>
                 <br />
                 <span className="gradient-text">Lift Plans</span>
                 <br />
-                <span className="text-white text-3xl sm:text-4xl lg:text-5xl">
+                <span className="text-white text-2xl sm:text-4xl lg:text-5xl">
                   from a CPCS Appointed Person
                 </span>
               </h1>
 
-              <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
+              <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 leading-relaxed max-w-xl">
                 <strong>LOLER compliant lift plans</strong> from a qualified Appointed Person with{' '}
                 <strong>35 years construction industry experience</strong>. Tower crane contracts,
                 steel erection planning, mobile crane and excavator lift plans.
@@ -327,52 +342,74 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="relative">
-              <div className="stat-card rounded-3xl p-10 border border-slate-700/50 amber-glow">
-                <div className="grid grid-cols-2 gap-8">
-                  <div className="text-center p-6 rounded-2xl bg-slate-800/30">
-                    <div className="text-5xl font-display font-bold text-amber-400">35+</div>
-                    <div className="text-gray-400 mt-2 font-medium">Years Experience</div>
-                  </div>
-                  <div className="text-center p-6 rounded-2xl bg-slate-800/30">
-                    <div className="text-5xl font-display font-bold text-amber-400">1000+</div>
-                    <div className="text-gray-400 mt-2 font-medium">Lift Plans Delivered</div>
-                  </div>
-                  <div className="text-center p-6 rounded-2xl bg-slate-800/30">
-                    <div className="text-5xl font-display font-bold text-amber-400">100%</div>
-                    <div className="text-gray-400 mt-2 font-medium">LOLER Compliant</div>
-                  </div>
-                  <div className="text-center p-6 rounded-2xl bg-slate-800/30">
-                    <div className="text-5xl font-display font-bold text-amber-400">UK</div>
-                    <div className="text-gray-400 mt-2 font-medium">Wide Coverage</div>
-                  </div>
+            {/* Oct 2026: a drawing from an RMT lift plan in the first screen,
+                instead of four number boxes. The drawings are the clearest
+                proof of the quality of the work, and they sat halfway down. */}
+            <figure className="relative rounded-3xl overflow-hidden border border-slate-700/60 bg-slate-900/80 shadow-2xl amber-glow">
+              <Link href="/services/excavator-lift-plans#drawing-examples" className="block bg-white p-2 sm:p-3" aria-label="See the excavator lift plan drawing examples">
+                <Image
+                  src="/images/lift-drawing-examples/excavator-elevation.webp"
+                  alt="RMT excavator lift drawing showing a JCB 140X LC lifting a trench box"
+                  width={2382}
+                  height={1684}
+                  sizes="(max-width: 1023px) 100vw, 600px"
+                  priority
+                  className="w-full h-auto"
+                />
+              </Link>
+              <figcaption className="p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <div>
+                  <p className="text-white font-semibold">From an RMT lift plan drawing set</p>
+                  <p className="text-gray-400 text-sm mt-1">JCB 140X lifting elevation — machine, load and lifting geometry to scale.</p>
                 </div>
-              </div>
-            </div>
+                <Link href="/services/excavator-lift-plans#drawing-examples" className="inline-flex items-center gap-1 text-amber-400 hover:text-amber-300 font-semibold text-sm whitespace-nowrap">
+                  More drawings <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </Link>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </header>
 
-      {/* Trusted By */}
-      <section className="py-16 bg-slate-900 border-y border-slate-800/50">
+      {/* What site teams say (Oct 2026). Replaced a row of client names in
+          grey text. Three named quotes, verbatim from lib/testimonials.js, from
+          a Caddick Senior HSE Manager, a Wates Project Manager and a Sunel
+          QHSE Manager — the people who sign off lifting on site. */}
+      <section className="py-16 sm:py-20 bg-slate-900 border-y border-slate-800/50" aria-labelledby="client-quotes">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-gray-400 text-sm font-semibold tracking-widest uppercase mb-10">
-            Trusted by leading UK contractors for lift planning
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16">
-            <span className="text-gray-400 font-display font-bold text-xl">WATES</span>
-            <span className="text-gray-400 font-display font-bold text-xl">CADDICK</span>
-            <span className="text-gray-400 font-display font-bold text-xl">GMI</span>
-            <img
-              src="/images/constructionline-gold.png"
-              alt="Constructionline Gold Member"
-              className="h-10 opacity-60 hover:opacity-90 transition"
-            />
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+            <div>
+              <p className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-3">What site teams say</p>
+              <h2 id="client-quotes" className="font-display text-3xl sm:text-4xl font-bold text-white">
+                Trusted by the people who sign off the lift
+              </h2>
+            </div>
+            <Link href="/testimonials" className="inline-flex items-center text-amber-400 hover:text-amber-300 font-semibold">
+              Read all {testimonials.length} client reviews
+              <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
+            </Link>
           </div>
-          <div className="text-center mt-8">
-            <a href="/testimonials" className="text-amber-400 hover:text-amber-300 text-sm font-semibold transition">
-              See what they say →
-            </a>
+          <div className="grid md:grid-cols-3 gap-6">
+            {homeQuotes.map((t) => (
+              <figure key={t.id} className="flex flex-col rounded-2xl border border-slate-700/50 bg-slate-800/40 p-6 sm:p-7">
+                <Quote className="w-7 h-7 text-amber-400 mb-4" aria-hidden="true" />
+                <blockquote className="text-gray-200 leading-relaxed flex-1">&ldquo;{t.pull}&rdquo;</blockquote>
+                <figcaption className="mt-5 pt-5 border-t border-slate-700/50">
+                  <span className="block text-white font-semibold">{t.name}</span>
+                  <span className="block text-sm text-gray-400">{t.role}, {t.company}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-gray-400">
+            <span className="text-xs font-semibold tracking-widest uppercase text-gray-500">Clients include</span>
+            <span className="font-display font-bold text-lg">CADDICK</span>
+            <span className="font-display font-bold text-lg">WATES</span>
+            <span className="font-display font-bold text-lg">SUNEL GROUP</span>
+            <span className="font-display font-bold text-lg">DGS</span>
+            <span className="font-display font-bold text-lg">GMI</span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/constructionline-gold.png" alt="Constructionline Gold Member" className="h-10" loading="lazy" />
           </div>
         </div>
       </section>
@@ -630,9 +667,9 @@ export default function HomePage() {
       <section className="py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            eyebrow="Why Proper Lift Planning Matters"
-            title="UK Lifting Operations Safety"
-            description="Proper lift planning is a legal requirement under LOLER 1998 and essential for construction site safety"
+            eyebrow="Why contractors use RMT"
+            title="Experience You Can Check"
+            description="Proper lift planning is a legal requirement under LOLER 1998. Here is what stands behind every RMT plan."
           />
 
           <div className="grid md:grid-cols-4 gap-6">

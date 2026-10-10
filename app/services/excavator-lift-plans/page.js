@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Clock, ShieldCheck, FileCheck, PhoneCall, CheckCircle2, AlertTriangle, ArrowRight } from 'lucide-react'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
+import ProofStrip from '@/components/ProofStrip'
 
 export const metadata = {
   title: 'Excavator Lift Plans UK | ISO 10567 & LOLER',
@@ -242,7 +243,7 @@ export default function ExcavatorLiftPlansPage() {
           {/* Response-time promise badges */}
           <div className="flex flex-wrap gap-3 mb-8">
             <div className="flex items-center gap-2 bg-amber-500 px-4 py-2 rounded-full">
-              <span className="text-sm font-bold text-slate-900">Lift plans from £200 + VAT</span>
+              <span className="text-sm font-bold text-white">Lift plans from £200 + VAT</span>
             </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur px-4 py-2 rounded-full border border-white/20">
               <Clock className="w-4 h-4 text-amber-400" />
@@ -275,38 +276,39 @@ export default function ExcavatorLiftPlansPage() {
           </div>
         </div>
       </section>
+      <ProofStrip id="achonu" />
 
       {/* Trust strip */}
-      <section className="bg-slate-50 border-y border-slate-200">
+      <section className="bg-slate-900 border-y border-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-2xl font-bold text-slate-900">35+</div>
-              <div className="text-sm text-slate-600">Years of construction experience</div>
+              <div className="text-2xl font-bold text-white">35+</div>
+              <div className="text-sm text-gray-400">Years of construction experience</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-slate-900">CPCS A61</div>
-              <div className="text-sm text-slate-600">Appointed Person, current card</div>
+              <div className="text-2xl font-bold text-white">CPCS A61</div>
+              <div className="text-sm text-gray-400">Appointed Person, current card</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-slate-900">NEBOSH</div>
-              <div className="text-sm text-slate-600">Construction Diploma · CertIOSH</div>
+              <div className="text-2xl font-bold text-white">NEBOSH</div>
+              <div className="text-sm text-gray-400">Construction Diploma · CertIOSH</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-slate-900">UK-wide</div>
-              <div className="text-sm text-slate-600">Remote and on-site coverage</div>
+              <div className="text-2xl font-bold text-white">UK-wide</div>
+              <div className="text-sm text-gray-400">Remote and on-site coverage</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Why You Need Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <h2 className="text-3xl font-bold text-white mb-6">
             Why excavator lifting needs its own plan
           </h2>
-          <div className="prose prose-lg max-w-none text-slate-600">
+          <div className="prose prose-lg max-w-none text-gray-400">
             <p>
               Excavators are now the default lifting machine on most UK construction sites — they
               are already there for muck-shifting, the operator can pick a load straight from the
@@ -348,29 +350,29 @@ export default function ExcavatorLiftPlansPage() {
                 desc: 'Hitches reduce lifting capacity and, if used incorrectly, are a known cause of dropped buckets and loads.',
               },
             ].map((item) => (
-              <div key={item.title} className="bg-slate-50 p-6 rounded-lg">
+              <div key={item.title} className="bg-slate-800/40 p-6 rounded-lg">
                 <div className="flex items-start gap-3">
                   <AlertTriangle className="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-slate-900 mb-2">{item.title}</h3>
-                    <p className="text-slate-600 text-sm">{item.desc}</p>
+                    <h3 className="font-semibold text-white mb-2">{item.title}</h3>
+                    <p className="text-gray-400 text-sm">{item.desc}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <p className="mt-8 text-slate-600">
+          <p className="mt-8 text-gray-400">
             A proper excavator lift plan addresses each of these risks in writing — load weight,
             radius, capacity check, ground bearing, exclusion zones, slinger/signaller arrangements
             and a documented method everyone has been briefed on. The chains and slings between the
             hitch and the load are part of that plan too, each item rated at the angle it is
             used at. For a longer walk-through of how
             a plan is built, see our guide on{' '}
-            <Link href="/blog/excavator-lift-plans-complete-guide" className="text-amber-600 hover:text-amber-700 underline">
+            <Link href="/blog/excavator-lift-plans-complete-guide" className="text-amber-400 hover:text-amber-300 underline">
               excavator lift plans
             </Link>{' '}
             and the broader{' '}
-            <Link href="/blog/what-is-a-lift-plan" className="text-amber-600 hover:text-amber-700 underline">
+            <Link href="/blog/what-is-a-lift-plan" className="text-amber-400 hover:text-amber-300 underline">
               what is a lift plan
             </Link>{' '}
             article.
@@ -379,21 +381,21 @@ export default function ExcavatorLiftPlansPage() {
       </section>
 
       {/* What's Included Section */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             What&apos;s included in your excavator lift plan
           </h2>
-          <p className="text-lg text-slate-600 mb-12 max-w-3xl">
+          <p className="text-lg text-gray-400 mb-12 max-w-3xl">
             Every excavator lift plan we issue is a complete pack — risk assessment, method
             statement, calculations and drawing in one place. It is briefed to your team, signed
             off by an Appointed Person and ready to drop into your CDM file.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Site assessment</h3>
-              <ul className="space-y-3 text-slate-600">
+            <div className="bg-slate-800/40 p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold text-white mb-4">Site assessment</h3>
+              <ul className="space-y-3 text-gray-400">
                 {[
                   'Ground bearing capacity evaluation against tracked-machine pressure',
                   'Overhead obstruction identification (lines, structures, scaffolds)',
@@ -409,9 +411,9 @@ export default function ExcavatorLiftPlansPage() {
               </ul>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Equipment verification</h3>
-              <ul className="space-y-3 text-slate-600">
+            <div className="bg-slate-800/40 p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold text-white mb-4">Equipment verification</h3>
+              <ul className="space-y-3 text-gray-400">
                 {[
                   'Excavator make, model and configuration cross-checked against load chart',
                   'Lifting attachment certification check (hook, eye, hitch)',
@@ -427,9 +429,9 @@ export default function ExcavatorLiftPlansPage() {
               </ul>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Lift calculations</h3>
-              <ul className="space-y-3 text-slate-600">
+            <div className="bg-slate-800/40 p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold text-white mb-4">Lift calculations</h3>
+              <ul className="space-y-3 text-gray-400">
                 {[
                   'Load weight including rigging and any attached fittings',
                   'Centre-of-gravity identification and slinging method',
@@ -446,9 +448,9 @@ export default function ExcavatorLiftPlansPage() {
               </ul>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Documentation pack</h3>
-              <ul className="space-y-3 text-slate-600">
+            <div className="bg-slate-800/40 p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold text-white mb-4">Documentation pack</h3>
+              <ul className="space-y-3 text-gray-400">
                 {[
                   'Lift plan drawing (AutoCAD plan and elevation, exclusion zones marked)',
                   'Risk assessment with site-specific control measures',
@@ -481,12 +483,12 @@ export default function ExcavatorLiftPlansPage() {
       </section>
 
       {/* Process / Response time promise */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             How it works — and how fast
           </h2>
-          <p className="text-lg text-slate-600 mb-12 max-w-3xl">
+          <p className="text-lg text-gray-400 mb-12 max-w-3xl">
             Quote-on-application, no sign-up, no hidden fees. Send the brief and we&apos;ll come
             back to you the same working day.
           </p>
@@ -518,13 +520,13 @@ export default function ExcavatorLiftPlansPage() {
                 badge: 'Same day',
               },
             ].map((item) => (
-              <div key={item.step} className="relative bg-slate-50 p-6 rounded-xl border border-slate-200">
+              <div key={item.step} className="relative bg-slate-800/40 p-6 rounded-xl border border-slate-700/50">
                 <div className="absolute -top-3 left-6 bg-amber-500 text-slate-900 text-xs font-bold uppercase tracking-wider px-2 py-1 rounded">
                   Step {item.step}
                 </div>
-                <h3 className="font-semibold text-slate-900 mt-2 mb-2">{item.title}</h3>
-                <p className="text-slate-600 text-sm mb-4">{item.desc}</p>
-                <div className="inline-flex items-center gap-1 text-xs text-amber-700 font-semibold">
+                <h3 className="font-semibold text-white mt-2 mb-2">{item.title}</h3>
+                <p className="text-gray-400 text-sm mb-4">{item.desc}</p>
+                <div className="inline-flex items-center gap-1 text-xs text-amber-400 font-semibold">
                   <Clock className="w-3 h-3" />
                   {item.badge}
                 </div>
@@ -532,9 +534,9 @@ export default function ExcavatorLiftPlansPage() {
             ))}
           </div>
 
-          <p className="mt-10 text-slate-600 italic">
+          <p className="mt-10 text-gray-400 italic">
             Urgent or same-day work is accommodated where possible — call{' '}
-            <a href="tel:+447803808093" className="text-amber-600 hover:text-amber-700 font-semibold">
+            <a href="tel:+447803808093" className="text-amber-400 hover:text-amber-300 font-semibold">
               07803 808093
             </a>{' '}
             and we&apos;ll tell you straight whether it can be done.
@@ -543,24 +545,24 @@ export default function ExcavatorLiftPlansPage() {
       </section>
 
       {/* Excavator Types */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Excavator types we cover
           </h2>
-          <p className="text-lg text-slate-600 mb-12 max-w-3xl">
+          <p className="text-lg text-gray-400 mb-12 max-w-3xl">
             From a 1.5-tonne mini in a back garden to an 80-tonne tracked machine on a Tier 1
             infrastructure job — if it&apos;s rated to lift, we&apos;ll plan the lift.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl border border-slate-200">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">360° tracked excavators</h3>
-              <p className="text-slate-600 mb-4">
+            <div className="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50">
+              <h3 className="text-xl font-semibold text-white mb-4">360° tracked excavators</h3>
+              <p className="text-gray-400 mb-4">
                 The typical workhorse — full slew, tracks deployed, lifting from the bucket pin or
                 lift eye on the dipper.
               </p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li>• Over-front and over-side lifting envelopes</li>
                 <li>• Pick-and-carry operations with capacity reductions</li>
                 <li>• Boom and dipper arm length variants</li>
@@ -568,13 +570,13 @@ export default function ExcavatorLiftPlansPage() {
               </ul>
             </div>
 
-            <div className="bg-white p-6 rounded-xl border border-slate-200">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">180° wheeled excavators</h3>
-              <p className="text-slate-600 mb-4">
+            <div className="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50">
+              <h3 className="text-xl font-semibold text-white mb-4">180° wheeled excavators</h3>
+              <p className="text-gray-400 mb-4">
                 Wheeled machines bring extra variables — every plan accounts for stability mode and
                 stabiliser arrangement.
               </p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li>• Stabiliser deployment configurations (front/rear/all-round)</li>
                 <li>• Pad bearing pressure on the as-found ground</li>
                 <li>• Stability during slew on rubber tyres</li>
@@ -582,13 +584,13 @@ export default function ExcavatorLiftPlansPage() {
               </ul>
             </div>
 
-            <div className="bg-white p-6 rounded-xl border border-slate-200">
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">Excavators with quick hitches</h3>
-              <p className="text-slate-600 mb-4">
+            <div className="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50">
+              <h3 className="text-xl font-semibold text-white mb-4">Excavators with quick hitches</h3>
+              <p className="text-gray-400 mb-4">
                 Quick hitches change capacity and add a recognised dropped-attachment risk — they
                 must be specifically planned for.
               </p>
-              <ul className="text-slate-600 space-y-2 text-sm">
+              <ul className="text-gray-400 space-y-2 text-sm">
                 <li>• Hitch certification and weight deduction</li>
                 <li>• Lifting eye integrity and rated capacity</li>
                 <li>• Manual vs semi-automatic vs fully-automatic</li>
@@ -658,12 +660,12 @@ export default function ExcavatorLiftPlansPage() {
       </section>
 
       {/* When You Need Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">
+          <h2 className="text-3xl font-bold text-white mb-8">
             When do you need an excavator lift plan?
           </h2>
-          <p className="text-lg text-slate-600 mb-8 max-w-3xl">
+          <p className="text-lg text-gray-400 mb-8 max-w-3xl">
             Under LOLER 1998 Regulation 8, every lifting operation must be properly planned by a
             competent person. For excavator lifting, a written lift plan is needed when any of the
             following apply:
@@ -681,18 +683,18 @@ export default function ExcavatorLiftPlansPage() {
               'Working close to excavations or trench edges',
               'When specified by your principal contractor',
             ].map((item) => (
-              <div key={item} className="flex items-center gap-3 bg-slate-50 p-4 rounded-lg border border-slate-100">
+              <div key={item} className="flex items-center gap-3 bg-slate-800/40 p-4 rounded-lg border border-slate-800">
                 <CheckCircle2 className="w-5 h-5 text-amber-500 flex-shrink-0" />
-                <span className="text-slate-700">{item}</span>
+                <span className="text-gray-300">{item}</span>
               </div>
             ))}
           </div>
 
-          <p className="mt-8 text-slate-600 italic">
+          <p className="mt-8 text-gray-400 italic">
             Even where a routine generic RAMS would do, having a documented lift plan demonstrates
             due diligence under LOLER and gives the lifting team something concrete to brief against.
             For more detail, see{' '}
-            <Link href="/blog/when-do-you-need-lift-plan" className="text-amber-600 hover:text-amber-700 underline">
+            <Link href="/blog/when-do-you-need-lift-plan" className="text-amber-400 hover:text-amber-300 underline">
               when do you need a lift plan
             </Link>
             .
@@ -701,14 +703,14 @@ export default function ExcavatorLiftPlansPage() {
       </section>
 
       {/* Lift Supervisor — when a CPCS A62 is required (excavator) */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-14">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+              <h2 className="text-3xl font-bold text-white mb-6">
                 When is a lift supervisor required for an excavator lift?
               </h2>
-              <div className="prose prose-lg max-w-none text-slate-600 space-y-4">
+              <div className="prose prose-lg max-w-none text-gray-400 space-y-4">
                 <p>
                   Every excavator lifting operation must be supervised. The moment an excavator
                   lifts and places a load on slings, chains or a lifting eye it is lifting equipment
@@ -720,7 +722,7 @@ export default function ExcavatorLiftPlansPage() {
                 <p>
                   It&apos;s the <strong>lift category</strong> — basic, intermediate or complex —
                   that decides. Your{' '}
-                  <Link href="/services/appointed-person" className="text-amber-600 hover:text-amber-700 underline">
+                  <Link href="/services/appointed-person" className="text-amber-400 hover:text-amber-300 underline">
                     CPCS Appointed Person (A61)
                   </Link>{' '}
                   sets the category from the risk assessment using the Complexity Index
@@ -758,7 +760,7 @@ export default function ExcavatorLiftPlansPage() {
                 level: 'Intermediate',
                 tag: 'Separate A62 often',
                 headerClass: 'bg-amber-500',
-                headText: 'text-slate-900',
+                headText: 'text-white',
                 situation:
                   'Load of estimated weight or centre of gravity, or without designated lifting points; or the load is placed over an obstruction where the operator may not have a clear sight of the landing area.',
                 requirement:
@@ -777,7 +779,7 @@ export default function ExcavatorLiftPlansPage() {
             ].map((cat) => (
               <div
                 key={cat.level}
-                className="flex flex-col rounded-xl border border-slate-200 bg-white overflow-hidden"
+                className="flex flex-col rounded-xl border border-slate-700/50 bg-slate-800/40 overflow-hidden"
               >
                 <div className={`${cat.headerClass} px-6 py-4 flex items-center justify-between`}>
                   <span className={`${cat.headText} text-lg font-bold`}>{cat.level}</span>
@@ -786,34 +788,34 @@ export default function ExcavatorLiftPlansPage() {
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col p-6">
-                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-2">
                     Typical excavator lift
                   </p>
-                  <p className="text-slate-600 mb-5">{cat.situation}</p>
-                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 mb-2">
+                  <p className="text-gray-400 mb-5">{cat.situation}</p>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-2">
                     Lift supervisor requirement
                   </p>
-                  <p className="font-medium text-slate-800">{cat.requirement}</p>
+                  <p className="font-medium text-gray-100">{cat.requirement}</p>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Combining roles callout */}
-          <div className="mt-10 rounded-xl border border-amber-200 bg-amber-50 p-8">
+          <div className="mt-10 rounded-xl border border-amber-500/30 bg-amber-500/10 p-8">
             <div className="flex items-start gap-4">
-              <ShieldCheck className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+              <ShieldCheck className="w-6 h-6 text-amber-400 flex-shrink-0 mt-1" />
               <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                <h3 className="text-xl font-semibold text-white mb-3">
                   Can an A40 slinger/signaller supervise a basic excavator lift?
                 </h3>
-                <p className="text-slate-600 mb-4">
+                <p className="text-gray-400 mb-4">
                   On a genuinely basic lift the supervisor role may be combined with the
                   slinger/signaller, so a separate CPCS A62 supervisor is not always required. The
                   A40 card evidences slinging and signalling, not supervision — so combining is only
                   acceptable where all of the following apply:
                 </p>
-                <ul className="space-y-2 text-slate-600 mb-4">
+                <ul className="space-y-2 text-gray-400 mb-4">
                   {[
                     'the lift is genuinely basic — known weight, designated top lifting points, a central centre of gravity, clear line of sight, lifted to and from the ground, and no proximity hazards;',
                     'the Appointed Person has reviewed and authorised the combined role;',
@@ -826,7 +828,7 @@ export default function ExcavatorLiftPlansPage() {
                     </li>
                   ))}
                 </ul>
-                <p className="text-slate-600">
+                <p className="text-gray-400">
                   The card alone does not make it sufficient — it is the Appointed Person’s
                   competence assessment and sign-off that does. LOLER requires competence, not a
                   specific card, and some principal contractors require an A62 supervisor even on
@@ -838,8 +840,8 @@ export default function ExcavatorLiftPlansPage() {
 
           {/* The lifting team */}
           <div className="mt-14">
-            <h3 className="text-2xl font-bold text-slate-900 mb-3">The excavator lifting team</h3>
-            <p className="text-slate-600 mb-8 max-w-3xl">
+            <h3 className="text-2xl font-bold text-white mb-3">The excavator lifting team</h3>
+            <p className="text-gray-400 mb-8 max-w-3xl">
               The recognised qualification for the supervisor is the CPCS A62 (or NPORS equivalent).
               A card is evidence of training, not a substitute for demonstrated competence, relevant
               excavator-lifting experience and written site authorisation.
@@ -867,12 +869,12 @@ export default function ExcavatorLiftPlansPage() {
                   desc: 'Slings the load and directs machine movement. On a basic lift this person may also be the lift supervisor — if competent and authorised by the Appointed Person.',
                 },
               ].map((r) => (
-                <div key={r.role} className="rounded-xl border border-slate-200 bg-white p-6">
+                <div key={r.role} className="rounded-xl border border-slate-700/50 bg-slate-800/40 p-6">
                   <div className="inline-flex items-center rounded-full bg-slate-900 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-400 mb-3">
                     {r.card}
                   </div>
-                  <h4 className="font-semibold text-slate-900 mb-2">{r.role}</h4>
-                  <p className="text-sm text-slate-600">{r.desc}</p>
+                  <h4 className="font-semibold text-white mb-2">{r.role}</h4>
+                  <p className="text-sm text-gray-400">{r.desc}</p>
                 </div>
               ))}
             </div>
@@ -905,9 +907,9 @@ export default function ExcavatorLiftPlansPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12">
+          <h2 className="text-3xl font-bold text-white mb-12">
             Why contractors send their excavator lifts to us
           </h2>
 
@@ -938,9 +940,9 @@ export default function ExcavatorLiftPlansPage() {
                 desc: 'AutoCAD for the lift drawing, LICCON and 3D Lift Plan for capacity modelling — output that looks the part and stands up to review.',
               },
             ].map((item) => (
-              <div key={item.title} className="border border-slate-200 p-6 rounded-xl">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">{item.title}</h3>
-                <p className="text-slate-600">{item.desc}</p>
+              <div key={item.title} className="border border-slate-700/50 p-6 rounded-xl">
+                <h3 className="text-lg font-semibold text-white mb-3">{item.title}</h3>
+                <p className="text-gray-400">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -958,13 +960,13 @@ export default function ExcavatorLiftPlansPage() {
           the visible copy and the structured data in sync by construction. */}
 
       {/* DIY templates callout */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-slate-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-slate-50 border border-slate-200 rounded-xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-slate-900 mb-3">Prefer to plan a straightforward lift yourself?</h2>
-            <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
+          <div className="bg-slate-800/40 border border-slate-700/50 rounded-xl p-8 text-center">
+            <h2 className="text-2xl font-bold text-white mb-3">Prefer to plan a straightforward lift yourself?</h2>
+            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
               For simple, low-risk lifts you can start from our free, CPA/SFPSG-compliant{' '}
-              <Link href="/resources/excavator-lift-plan-templates" className="text-amber-600 font-semibold underline">
+              <Link href="/resources/excavator-lift-plan-templates" className="text-amber-400 font-semibold underline">
                 excavator lift plan template
               </Link>{' '}
               and risk assessment — built around CIG 0801, ready to adapt for your site. For complex,
@@ -1066,28 +1068,6 @@ export default function ExcavatorLiftPlansPage() {
         </div>
       </section>
 
-      {/* Related Services */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-8">Related Services</h2>
-          <div className="grid md:grid-cols-4 gap-4">
-            {[
-              { href: '/services/mobile-crane-lift-plans', title: 'Mobile Crane Lift Plans' },
-              { href: '/services/telehandler-lift-plans', title: 'Telehandler Lift Plans' },
-              { href: '/services/lift-plan-checking', title: 'Lift Plan Checking Service' },
-              { href: '/services/tower-crane', title: 'Tower Crane Contracts' },
-            ].map((service) => (
-              <Link
-                key={service.href}
-                href={service.href}
-                className="bg-slate-50 hover:bg-slate-100 p-4 rounded-lg text-slate-900 font-medium transition-colors"
-              >
-                {service.title} →
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* Available across the UK — reciprocates the inbound links from /locations/* */}
       <section className="py-16 bg-slate-900 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
