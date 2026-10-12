@@ -1,0 +1,65 @@
+SEO FIXES — ROUND 15 (12 October 2026)
+======================================
+
+GOOGLE SEARCH CONSOLE: "Image metadata" structured data — 4 non-critical issues
+
+  Missing field 'license'
+  Missing field 'creditText'
+  Missing field 'copyrightNotice'
+  Missing field 'acquireLicensePage'
+
+Verified against a real `next build`: compiled clean, and every ImageObject
+with a contentUrl in the rendered HTML (14 drawings across 4 pages) now
+carries all four fields plus creator.
+
+
+WHERE THE ISSUES CAME FROM
+--------------------------------------------------------------------------
+components/LiftDrawingExamples.js. The drawing galleries on
+
+  /services/steel-erection            (3 drawings)
+  /services/excavator-lift-plans      (3 drawings)
+  /services/lorry-loader-lift-plans   (4 drawings)
+  /services/telehandler-lift-plans    (4 drawings)
+
+publish each drawing as an ImageObject with a contentUrl and a creator. That
+is what puts an image into Google's Image metadata report, and Google then
+expects the rights fields as well. They were not there.
+
+No other ImageObject on the site has a contentUrl — the case study hero
+images and the publisher logos use `url` only — so they are not part of this
+report and were left alone.
+
+
+WHAT CHANGED
+--------------------------------------------------------------------------
+NEW   lib/imageRights.js
+      One shared IMAGE_RIGHTS object: license, acquireLicensePage,
+      creditText, copyrightNotice, creator, copyrightHolder. Spread it into an
+      ImageObject only for images RMT made itself — never a client's,
+      manufacturer's or third party's image.
+
+NEW   app/image-licence/page.js   →  /image-licence
+      The page `license` points at. States the terms (all rights reserved,
+      linking is fine, reuse needs written permission) and has a
+      #request-permission section, which is the acquireLicensePage target.
+      Same layout and tone as /privacy.
+
+MOD   components/LiftDrawingExamples.js
+      Each drawing ImageObject spreads IMAGE_RIGHTS.
+
+MOD   app/sitemap-feed/route.js
+      /image-licence added (yearly, 0.3) so Google can crawl the licence page
+      it is being pointed at.
+
+MOD   components/Footer.js
+      "Image Licence" link in the bottom bar. The bar now wraps
+      (flex-wrap, gap-x-6) so five links fit at phone width.
+
+
+AFTER DEPLOY
+--------------------------------------------------------------------------
+1. Rich Results Test any one of the four service pages — the image entries
+   should show no warnings.
+2. Search Console → Enhancements → Image metadata → open each issue →
+   "Validate fix". Validation usually takes a few days to a couple of weeks.
