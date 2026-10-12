@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Download, Expand, ArrowRight } from 'lucide-react'
 import { liftDrawingExamples } from '@/lib/liftDrawingExamples'
+import { IMAGE_RIGHTS } from '@/lib/imageRights'
 
 export default function LiftDrawingExamples({ type }) {
   const example = liftDrawingExamples.find((item) => item.id === type)
@@ -17,7 +18,9 @@ export default function LiftDrawingExamples({ type }) {
     encodingFormat: 'image/webp',
     width: 2382,
     height: 1684,
-    creator: { '@type': 'Organization', name: 'RMT Solutions Ltd', url: 'https://www.rmtsafetysolutions.com' },
+    // creator, creditText, copyrightNotice, license and acquireLicensePage —
+    // the drawings are RMT's own work, so they carry RMT's rights metadata.
+    ...IMAGE_RIGHTS,
     isPartOf: { '@id': `${pageUrl}#webpage` },
   }))
   const imageSchema = {

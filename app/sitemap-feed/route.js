@@ -47,6 +47,10 @@ const STATIC_ROUTES = [
   // from every form on the site and from the cookie banner, and a privacy
   // notice Google cannot reach is one a regulator would call hard to find.
   { path: '/privacy',      changefreq: 'yearly',  priority: '0.3' },
+  // The target of every ImageObject `license` / `acquireLicensePage` link
+  // (lib/imageRights.js). Google follows those links when it validates image
+  // metadata, so the page must be crawlable.
+  { path: '/image-licence', changefreq: 'yearly', priority: '0.3' },
 ];
 
 const SERVICE_SLUGS = [

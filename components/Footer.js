@@ -186,12 +186,15 @@ export default function Footer() {
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} RMT Solutions Ltd. LOLER Compliant Lift Planning Services UK.
           </p>
-          <nav className="flex space-x-6 mt-4 md:mt-0">
+          <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-4 md:mt-0">
             <Link href="/locations" className="text-gray-400 hover:text-amber-400 transition text-sm">
               Locations
             </Link>
             <Link href="/privacy" className="text-gray-400 hover:text-amber-400 transition text-sm">
               Privacy &amp; Cookies
+            </Link>
+            <Link href="/image-licence" className="text-gray-400 hover:text-amber-400 transition text-sm">
+              Image Licence
             </Link>
             <Link href="/sitemap.xml" className="text-gray-400 hover:text-amber-400 transition text-sm">
               Sitemap
