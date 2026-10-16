@@ -39,6 +39,11 @@ export default function LorryLoaderTemplatesPage() {
             Complex lifts. Written by a CPCS Appointed Person with 35+ years of construction experience
             and graded against a 19-point lift plan review covering BS 7121-1, BS 7121-4, LOLER 1998,
             ALLMI and CDM 2015. Download, customise, and use on your projects — completely free.
+            Need one written for you instead? Our{' '}
+            <Link href="/services/lorry-loader-lift-plans" className="text-amber-400 hover:text-amber-300 underline">
+              lorry loader lift plans
+            </Link>{' '}
+            are written by a CPCS A61 Appointed Person from £200, with a 24-48 hour turnaround.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -53,6 +58,12 @@ export default function LorryLoaderTemplatesPage() {
             >
               Download Preview (.pdf)
             </a>
+            <Link
+              href="/services/lorry-loader-lift-plans"
+              className="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-8 py-3 rounded-xl font-semibold transition"
+            >
+              Get a HIAB Lift Plan Written →
+            </Link>
           </div>
 
         </div>

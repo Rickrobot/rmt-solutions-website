@@ -159,6 +159,25 @@ export default function ResourcesPage() {
             <p className="text-xl text-gray-300 leading-relaxed">
               Free guidance on lift planning, LOLER compliance, and lifting operations in the UK.
             </p>
+            {/* Oct 2026 Search Console review: this hub ranks for buying
+                searches ("lifting plan" 4.4, "mobile crane lift plan" 9.2)
+                but only linked the service pages from deep in the body, so
+                Google sent those searches here instead of to the pages that
+                take the enquiry. One line, above the fold, to every
+                machine-specific service page. */}
+            <p className="text-gray-300 leading-relaxed mt-6">
+              Rather have it written for you? Get a{' '}
+              <Link href="/services/lift-plans" className="text-amber-400 hover:text-amber-300 underline">lift plan</Link>{' '}
+              from a CPCS A61 Appointed Person from £200 — for a{' '}
+              <Link href="/services/telehandler-lift-plans" className="text-amber-400 hover:text-amber-300 underline">telehandler</Link>,{' '}
+              <Link href="/services/lorry-loader-lift-plans" className="text-amber-400 hover:text-amber-300 underline">lorry loader (HIAB)</Link>,{' '}
+              <Link href="/services/mobile-crane-lift-plans" className="text-amber-400 hover:text-amber-300 underline">mobile crane</Link>{' '}
+              or{' '}
+              <Link href="/services/excavator-lift-plans" className="text-amber-400 hover:text-amber-300 underline">excavator</Link>
+              , or{' '}
+              <Link href="/services/appointed-person" className="text-amber-400 hover:text-amber-300 underline">hire an Appointed Person</Link>{' '}
+              for the whole job.
+            </p>
           </div>
         </div>
       </section>
@@ -480,7 +499,7 @@ export default function ResourcesPage() {
             </p>
 
             <p>
-              In practice, BS 7121 — the British Standard for the safe use of cranes — is what most of the industry treats as the working interpretation of LOLER. Part 1 sets out the general principles. Part 2 deals with inspection and maintenance. Part 3 covers mobile cranes. Part 5 covers tower cranes. Part 13 covers hydraulic loader cranes (the kit you will see on a HIAB or lorry loader). If you are lifting with an excavator, you are also in the territory of ISO 10567 — the international standard for hydraulic excavator lift capacities — and that is where the 75% / 87% / 66% derating rules come from depending on whether you are lifting over the side, over the front, or with outriggers down.
+              In practice, BS 7121 — the British Standard for the safe use of cranes — is what most of the industry treats as the working interpretation of LOLER. Part 1 sets out the general principles. Part 2 deals with inspection and maintenance. Part 3 covers mobile cranes. Part 5 covers tower cranes. Part 4 covers lorry loaders (the kit you will see on a HIAB). If you are lifting with an excavator, you are also in the territory of ISO 10567 — the international standard for hydraulic excavator lift capacities — and that is where the 75% / 87% / 66% derating rules come from depending on whether you are lifting over the side, over the front, or with outriggers down.
             </p>
 
             <h3 className="font-display text-2xl font-bold text-white pt-4">
