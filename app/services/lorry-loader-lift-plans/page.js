@@ -7,14 +7,17 @@ import RelatedServices from '@/components/RelatedServices'
 import ProofStrip from '@/components/ProofStrip'
 
 export const metadata = {
-  title: 'Lorry Loader Lift Plans UK | HIAB Plans',
+  // Oct 2026: "HIAB lift plan" searches surfaced the blog guide but not this
+  // service page — the old title only said "HIAB Plans". Leading with HIAB
+  // puts the searched phrase in the title; the suffix keeps it at 49 chars.
+  title: 'HIAB & Lorry Loader Lift Plans UK',
   description: 'Lorry loader (HIAB) lift plans from £250 + VAT, by a CPCS Appointed Person. LOLER compliant plans for deliveries and site lifting.',
   keywords: 'lorry loader lift plan, HIAB lift plan, lorry mounted crane lift plan, loader crane lift plan, ALLMI lift plan',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lorry-loader-lift-plans',
   },
   openGraph: {
-    title: 'Lorry Loader Lift Plans UK | HIAB Plans',
+    title: 'HIAB & Lorry Loader Lift Plans UK',
     description: 'Lorry loader (HIAB) lift plans from £250 + VAT, by a CPCS Appointed Person. LOLER compliant plans for deliveries and site lifting.',
     url: 'https://www.rmtsafetysolutions.com/services/lorry-loader-lift-plans',
     images: ['/images/og-lift-planning.jpg'],
@@ -136,7 +139,7 @@ export default function LorryLoaderLiftPlansPage() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
           <p className="text-amber-400 font-medium mb-4">CPCS Appointed Person A61</p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Lorry Loader Lift Plans UK</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">HIAB &amp; Lorry Loader Lift Plans UK</h1>
           <p className="text-xl text-slate-300 max-w-3xl mb-8">
             Professional lorry loader lift plans from a CPCS Appointed Person with over 35 years of construction 
             industry experience. LOLER compliant plans for HIAB, Palfinger, Fassi, Atlas, and all lorry mounted crane operations.
