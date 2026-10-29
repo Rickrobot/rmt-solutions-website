@@ -33,6 +33,26 @@ function downloadBox({ href, label, blurb, meta = 'Free PDF · A4 · no sign-up'
 `;
 }
 
+/**
+ * Service callout for guide pages (Oct 2026 GSC review, round 16).
+ *
+ * WHY: the guides carry the site's impressions; the service pages that win
+ * the work barely appear (about 50 of 2,049 clicks Jul-Oct went to a service
+ * page). Three service pages Google had not indexed by 29 Oct
+ * (appointed-person, mobile-crane-lift-plans, overhead-gantry-crane-lift-plans)
+ * are each linked here from an indexed, regularly-crawled guide, near the top
+ * of the article, with the service phrase as the anchor text. Same look as the
+ * existing slate in-content callouts.
+ */
+function serviceBox(html) {
+  return `
+      <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 my-8">
+        <p class="text-gray-300 mb-0">${html}</p>
+        <p class="mt-4 mb-0"><a href="/contact" class="text-amber-400 font-semibold">Get a quote — reply within 4 working hours →</a></p>
+      </div>
+`;
+}
+
 // Blog posts content
 const blogPosts = {
   // NEW (Jul 2026) — targets the "generic lift plan" query cluster (GSC:
@@ -303,6 +323,7 @@ const blogPosts = {
     imageAlt: 'Appointed Person overseeing a lifting operation on a UK construction site — carrying the overall responsibility BS 7121 places on the role',
     content: `
       <p class="lead">BS 7121-1:2016 gives one individual overall control of every lifting operation: the Appointed Person. It is a role with real legal weight — if a lift goes wrong, the planning decisions land on the AP's desk first. Yet on many sites the role is misunderstood as "the person who signs the lift plan". This guide sets out what an Appointed Person is actually responsible for, duty by duty, what they remain accountable for even when they are not on site, and what they can legitimately delegate.</p>
+      ${serviceBox('Need the role filled rather than explained? You can <a href="/services/appointed-person">hire a CPCS A61 Appointed Person</a> for a single lift, a project or a retained contract.')}
 
       <h2>Where the Duties Come From</h2>
       <p>Two documents define the role. <strong>LOLER 1998 Regulation 8</strong> requires every lifting operation to be properly planned by a competent person, appropriately supervised, and carried out in a safe manner. <strong>BS 7121-1:2016</strong> — the code of practice for the safe use of cranes — names the Appointed Person as the individual with overall control of the lifting operation and describes what that control involves. On UK construction sites the competence is normally evidenced by the <a href="/blog/cpcs-appointed-person-guide">CPCS A61 card</a>.</p>
@@ -347,6 +368,7 @@ const blogPosts = {
     imageAlt: 'CPCS A61 Appointed Person reviewing a lift plan on site — the qualification held at Basic or Advanced level',
     content: `
       <p class="lead">The CPCS A61 Appointed Person card is the recognised UK qualification for planning lifting operations — but it is not one card. A61 is awarded at two levels, <strong>Basic</strong> and <strong>Advanced</strong>, and the difference matters: it determines which lifting operations the holder is qualified to plan, and principal contractors increasingly check the level, not just the card. This guide explains what each level covers, what the courses and practical scenarios involve, and which one your project actually needs.</p>
+      ${serviceBox('Need an Appointed Person on your project rather than the card yourself? You can <a href="/services/appointed-person">hire a CPCS A61 Appointed Person</a> for basic, standard and complex lifts.')}
 
       <h2>The Two Levels at a Glance</h2>
       <p><strong>A61 Basic</strong> qualifies the holder to plan <a href="/blog/basic-standard-complex-lifts">basic and standard lifts</a> — routine lifting with a single machine, well within capacity, in unexceptional conditions. Think telehandler offloading, excavator pipe-laying, straightforward lorry loader deliveries.</p>
@@ -493,6 +515,7 @@ const blogPosts = {
     imageAlt: 'Inspector reviewing lifting documentation on a clipboard at a UK construction site — the scrutiny a lifting plan must stand up to',
     content: `
       <p class="lead">Search "HSE lifting plan" and you might expect to find an official template on hse.gov.uk. There isn't one — and that surprises a lot of site managers. The HSE is the <em>enforcer</em>, not the form-provider: it sets the standard through LOLER 1998 and the L113 Approved Code of Practice, then judges whatever documents you produce against that standard. Having spent 35 years on the other side of that scrutiny, this guide covers what the HSE actually requires, what inspectors look for when they examine a lifting plan, and the failures that turn a site visit into an enforcement notice.</p>
+      ${serviceBox('Want a plan that stands up to an HSE visit? We write site-specific <a href="/services/lift-plans">lift plans</a> from £200 + VAT, and our <a href="/services/lift-plan-checking">independent lift plan checking</a> reviews plans your subcontractors have written.')}
 
       <h2>What the HSE Actually Requires</h2>
       <p>The legal requirement is LOLER 1998 Regulation 8: every lifting operation must be <strong>properly planned by a competent person, appropriately supervised, and carried out in a safe manner</strong>. The supporting detail sits in <a href="/blog/loler-acop-l113-explained">the L113 ACOP</a>, which has semi-legal status — depart from it and the burden falls on you to prove your approach was equally effective. Neither document prescribes a form, a layout or a logo. The HSE's question is never "did you use the right template?" — it is "can you demonstrate this lift was competently planned?"</p>
@@ -642,6 +665,7 @@ const blogPosts = {
     imageAlt: 'Tower crane working over a UK development — wind is the environmental factor that stops more lifts than any other',
     content: `
       <p class="lead">Ask three people the wind limit for a crane and you will get three numbers — because there is no single legal limit. LOLER requires the lift to be planned and carried out safely; the actual number comes from the <strong>manufacturer's load chart for that machine in that configuration</strong>, adjusted for the load on the hook that day. What follows are the typical figures UK planning works to, why the "sail area" of the load can halve them, and the decision framework an Appointed Person actually uses on a windy morning.</p>
+      ${serviceBox('Wind limits belong in the lift plan, taken from the chart for the configuration you will actually rig. Our <a href="/services/mobile-crane-lift-plans">mobile crane lift plans</a> set the in-service limit, the stop point and who makes the call.')}
 
       <h2>Typical In-Service Wind Limits</h2>
       <ul>
@@ -1119,7 +1143,9 @@ const blogPosts = {
     // the title is made concrete and scannable: naming the parts range gives
     // the searcher something specific the Overview summary won't contain.
     title: 'BS 7121 Explained: Parts 1-14 and What Sites Get Wrong',
-    description: 'What each part of BS 7121 covers — Parts 1 to 14 — how it links to LOLER 1998, and the gaps where UK sites most often fall short of the standard in practice.',
+    // CTR fix (29 Oct 2026): "bs7121" + "bs 7121" = 454 UK impressions at
+    // about position 6.7 and 2 clicks. Lead with the one-line answer.
+    description: 'BS 7121 is the UK code of practice for the safe use of cranes. What each part covers, its status under LOLER 1998, and where UK sites fall short.',
     keywords: 'bs 7121, what is bs 7121, bs 7121 part 1, bs 7121-1, bs 7121-3 mobile cranes, bs 7121-5 tower cranes, bs 7121-4 lorry loaders, safe use of cranes british standard, appointed person bs 7121, basic standard complex lift, lift categorisation, code of practice safe use of cranes',
     category: 'Compliance',
     readTime: '16 min read',
@@ -1130,7 +1156,7 @@ const blogPosts = {
     content: `
       <p class="lead">If you have spent any time around UK lifting operations you will have seen "BS 7121" stamped across method statements, lift plans, tender returns, and contract specifications. It is referenced more frequently than almost any other technical standard in the industry — yet many of the people relying on it could not say with confidence what it actually contains, how its various parts fit together, or what its legal status really is. This guide explains BS 7121 in full: what it is, what each part covers, how it links to LOLER 1998, and what it means in practice for anyone planning or supervising crane operations on a UK site.</p>
       <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 my-8">
-        <p class="text-gray-300 mb-0">Not sure your lifting documentation would survive scrutiny against BS 7121? Our <a href="/services/lift-plan-checking">independent lift plan checking service</a> reviews plans against LOLER 1998 and BS 7121 and returns a written Category A/B determination in 24–48 hours.</p>
+        <p class="text-gray-300 mb-0">Planning a crane lift under BS 7121? We write <a href="/services/mobile-crane-lift-plans">mobile crane lift plans</a> and provide <a href="/services/appointed-person">CPCS A61 Appointed Person</a> cover. Already have a plan? Our <a href="/services/lift-plan-checking">independent lift plan checking service</a> reviews it against LOLER 1998 and BS 7121 and returns a written Category A/B determination in 24–48 hours.</p>
         <p class="mt-4 mb-0"><a href="/contact" class="text-amber-400 font-semibold">Get a quote — reply within 4 working hours →</a></p>
       </div>
 
@@ -1810,6 +1836,7 @@ const blogPosts = {
     imageAlt: 'Tower crane operating above a UK residential development — comparison context for mobile vs tower crane selection',
     content: `
       <p class="lead">Choosing between a mobile crane and a tower crane is one of the most important decisions in construction planning. Get it wrong and you'll face delays, increased costs, and potential safety issues. Get it right and your project runs smoothly. Here's everything you need to know.</p>
+      ${serviceBox('Whichever crane you choose, the lift has to be planned by a competent person. We write <a href="/services/mobile-crane-lift-plans">mobile crane lift plans</a> to BS 7121-3 and LOLER 1998, and support <a href="/services/tower-crane">tower crane</a> projects with plan reviews and Appointed Person cover.')}
 
       <h2>The Fundamental Difference</h2>
 
@@ -2379,7 +2406,10 @@ const blogPosts = {
     title: 'Lorry Loader (HIAB) Lift Plans: UK LOLER Guide',
     // CTR fix (Jun 2026): lead with the question searchers ask (do HIAB
     // deliveries need a plan?) rather than a table-of-contents summary.
-    description: 'Yes — even routine HIAB deliveries need a lift plan under LOLER 1998. What it must cover: positioning, stabilisers, load charts, and who can write one.',
+    // CTR fix (29 Oct 2026): "hiab lifting" showed this page 134 times at
+    // position 6.3 with no clicks. Title left alone: it holds "hiab lift
+    // plan" at 2.1, the site's only top-3 priority keyword.
+    description: 'HIAB lifting on UK sites: even a routine lorry loader delivery needs a lift plan under LOLER 1998. Stabilisers, load charts, and who can write one.',
     category: 'Planning',
     readTime: '9 min read',
     date: 'February 6, 2026',
@@ -2562,6 +2592,7 @@ const blogPosts = {
     imageAlt: 'LOLER 1998 and BS 7121 standards underpinning lift plan checks — what gets verified when a lift plan is reviewed',
     content: `
       <p class="lead">A lift plan that looks complete can still be fundamentally wrong. Over 35 years reviewing lift plans for tier 1 contractors across the UK, I have seen the same problems appear thousands of times \u2014 plans that tick every box on the form but would not actually keep anyone safe on site. Plans where the numbers do not add up. Plans where the person who wrote them clearly never visited the site. Plans that would pass a cursory glance but fall apart the moment you start checking the detail.</p>
+      ${serviceBox('Need a plan reviewed before it goes to the principal contractor? Our <a href="/services/lift-plan-checking">independent lift plan checking and review service</a> checks it against LOLER 1998 and returns a written Category A/B determination in 24–48 hours.')}
 
       <p>Lift plan checking is one of the most important \u2014 and most overlooked \u2014 parts of managing lifting operations on a construction site. This guide explains what lift plan checking actually involves, why it matters, what causes plans to fail, and how to make sure yours pass first time.</p>
 
@@ -2742,6 +2773,7 @@ const blogPosts = {
     imageAlt: 'Overhead travelling bridge crane lifting a steel load inside a UK factory — overhead crane lifting operation under LOLER and BS 7121-7',
     content: `
       <p class="lead">Mobile cranes get all the attention when people talk about lift plans, but the cranes that do most of the lifting in UK industry never leave the building. Overhead travelling cranes, gantries and bridge cranes lift millions of loads every day in factories, warehouses, fabrication shops, steel stockholders and engineering workshops — and because they are fixed plant that staff use constantly, the question of whether each lift needs a written lift plan is one of the most misunderstood areas in lifting safety. This guide answers it directly: when an overhead crane lift needs a specific written plan, when a generic plan is enough, and what the law and the standards actually require.</p>
+      ${serviceBox('Need a written plan for a factory, warehouse or fabrication-shop lift? We write <a href="/services/overhead-gantry-crane-lift-plans">overhead and gantry crane lift plans</a> to LOLER 1998 and BS 7121-7, prepared by a CPCS A61 Appointed Person and delivered in 24–48 hours.')}
 
       <h2>Does an overhead crane need a lift plan?</h2>
       <p>Yes — every lifting operation carried out with an overhead crane must be planned by a competent person. This is a legal requirement under the <a href="/blog/what-is-loler-complete-guide">Lifting Operations and Lifting Equipment Regulations 1998 (LOLER)</a>, Regulation 8, which applies to all lifting equipment regardless of whether it is a mobile crane on a construction site or a fixed overhead travelling crane bolted to a factory roof. There is no exemption for fixed plant.</p>
