@@ -1,4 +1,5 @@
 import { liftDrawingExamples, LIFT_DRAWINGS_PUBLISHED } from '@/lib/liftDrawingExamples';
+import { ourSoftwareImageUrls } from '@/lib/ourSoftwareImages';
 
 // Custom sitemap.xml route handler.
 //
@@ -34,7 +35,7 @@ const OG_IMAGE = `${BASE_URL}/images/og-lift-planning.jpg`;
 const HERO_IMAGE = `${BASE_URL}/images/mobile-crane-steel-erection.webp`;
 
 const STATIC_ROUTES = [
-  { path: '',              changefreq: 'weekly',  priority: '1.0', images: [HERO_IMAGE, OG_IMAGE, ...liftDrawingExamples.map(example => `${BASE_URL}${example.drawings[0].src}`)] },
+  { path: '',              changefreq: 'weekly',  priority: '1.0', images: [HERO_IMAGE, OG_IMAGE, ...liftDrawingExamples.map(example => `${BASE_URL}${example.drawings[0].src}`), `${BASE_URL}/images/our-software/liftdraft-3d-cad.webp`] },
   { path: '/about',        changefreq: 'monthly', priority: '0.8', images: [OG_IMAGE] },
   // Services hub — parent of every /services/{slug} leaf. Priority is
   // set high (0.9) because every service leaf's BreadcrumbList JSON-LD
@@ -52,6 +53,10 @@ const STATIC_ROUTES = [
   // metadata, so the page must be crawlable.
   { path: '/image-licence', changefreq: 'yearly', priority: '0.3' },
 ];
+
+const OUR_SOFTWARE_PAGES = ['lift-plans', 'lift-plan-checking'];
+// Date the "How RMT plans and reviews lifts" section went live.
+const OUR_SOFTWARE_PUBLISHED = '2026-10-29';
 
 const SERVICE_SLUGS = [
   'appointed-person',
@@ -172,7 +177,7 @@ function buildSitemapXml() {
     entries.push(
       buildUrlEntry({
         loc: `${BASE_URL}${r.path}`,
-        lastmod: r.path === '' ? LIFT_DRAWINGS_PUBLISHED : SITE_LAST_UPDATED,
+        lastmod: r.path === '' ? OUR_SOFTWARE_PUBLISHED : SITE_LAST_UPDATED,
         changefreq: r.changefreq,
         priority: r.priority,
         images: r.images,
@@ -186,12 +191,18 @@ function buildSitemapXml() {
     entries.push(
       buildUrlEntry({
         loc: `${BASE_URL}/services/${slug}`,
-        lastmod: drawingExample ? LIFT_DRAWINGS_PUBLISHED : SITE_LAST_UPDATED,
+        lastmod: OUR_SOFTWARE_PAGES.includes(slug)
+          ? OUR_SOFTWARE_PUBLISHED
+          : drawingExample ? LIFT_DRAWINGS_PUBLISHED : SITE_LAST_UPDATED,
         changefreq: 'monthly',
         priority: '0.9',
-        images: drawingExample
-          ? drawingExample.drawings.map(drawing => `${BASE_URL}${drawing.src}`)
-          : [HERO_IMAGE],
+        images: [
+          ...(drawingExample
+            ? drawingExample.drawings.map(drawing => `${BASE_URL}${drawing.src}`)
+            : [HERO_IMAGE]),
+          // Pages carrying the "How RMT plans and reviews lifts" section.
+          ...(OUR_SOFTWARE_PAGES.includes(slug) ? ourSoftwareImageUrls() : []),
+        ],
       })
     );
   }

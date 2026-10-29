@@ -6,6 +6,7 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 import ProofStrip from '@/components/ProofStrip'
 import OurSoftware from '@/components/OurSoftware'
+import { ourSoftwareImageObjects } from '@/lib/ourSoftwareImages'
 
 export const metadata = {
   // SEO fix (Jun 2026): differentiated from the homepage, which targets the
@@ -47,6 +48,7 @@ const serviceJsonLd = {
   areaServed: { '@type': 'Country', name: 'United Kingdom' },
   serviceType: 'Lift Plan Writing',
   url: 'https://www.rmtsafetysolutions.com/services/lift-plans',
+  image: ourSoftwareImageObjects(),
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Lift Plan Services by Equipment Type',
