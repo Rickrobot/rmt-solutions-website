@@ -36,7 +36,7 @@ const points = [
   {
     icon: Database,
     title: 'Manufacturer duty data',
-    text: 'Capacities come from UK and EU manufacturer load charts, read for the exact configuration. Never estimated, never interpolated.',
+    text: 'Capacities come from UK and EU manufacturer load charts, read for the exact machine and configuration.',
   },
   {
     icon: Ruler,
