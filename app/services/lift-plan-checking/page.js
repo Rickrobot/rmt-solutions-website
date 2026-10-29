@@ -6,6 +6,7 @@ import RelatedServices from '@/components/RelatedServices'
 import LiftCheckFlow from '@/components/LiftCheckFlow'
 import ProofStrip from '@/components/ProofStrip'
 import OurSoftware from '@/components/OurSoftware'
+import { ourSoftwareImageObjects } from '@/lib/ourSoftwareImages'
 
 export const metadata = {
   title: 'Independent Lift Plan Checking & Review UK',
@@ -19,7 +20,7 @@ export const metadata = {
     title: 'Independent Lift Plan Checking & Review UK',
     description: 'Independent CPCS Appointed Person lift plan checking and review. LOLER & BS 7121 compliance check, 24–48 hour turnaround.',
     url: 'https://www.rmtsafetysolutions.com/services/lift-plan-checking',
-    images: ['/images/og-lift-planning.jpg'],
+    images: [{ url: '/images/og-liftdraft-3d-cad.jpg', width: 1200, height: 630, alt: 'LiftDraft, the 3D CAD system RMT Solutions built for lift planning, modelling a mobile crane lift' }],
     siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
@@ -45,6 +46,7 @@ const serviceSchema = {
     'Independent CPCS Appointed Person review of subcontractor lift plans. Verifies LOLER and BS 7121 compliance, technical accuracy, and site suitability. Category A or Category B determination delivered within 24–48 hours.',
   areaServed: { '@type': 'Country', name: 'United Kingdom' },
   serviceType: 'Lift Plan Review',
+  image: ourSoftwareImageObjects(),
   offers: {
     '@type': 'Offer',
     availability: 'https://schema.org/InStock',
