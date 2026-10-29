@@ -27,7 +27,8 @@ const renders = [
   },
   {
     src: '/images/our-software/excavator-3d.webp',
-    alt: '3D view of a tracked excavator lifting a pipe on a two-leg chain from the quick-hitch lifting eye, with no bucket fitted, from RMT lift planning software',
+    alt: '3D model in LiftDraft of a tracked excavator lifting a trench drag box on a four-leg chain from the quick-hitch, with the bucket removed and set down',
+    caption: '3D model in LiftDraft, bucket off and the drag box lifted from the quick-hitch',
     label: 'Excavators',
   },
 ]
@@ -124,7 +125,7 @@ export default function OurSoftware({ compact = false }) {
             <figure key={r.src} className="rounded-2xl overflow-hidden bg-slate-900 border border-slate-700">
               <Image src={r.src} alt={r.alt} width={1600} height={900} sizes="(max-width: 639px) 100vw, 50vw" className="w-full h-auto" />
               <figcaption className="px-5 py-3 text-sm text-gray-400">
-                <span className="text-white font-semibold">{r.label}</span>: 3D view from RMT&apos;s lift planning software
+                <span className="text-white font-semibold">{r.label}</span>: {r.caption || <>3D view from RMT&apos;s lift planning software</>}
               </figcaption>
             </figure>
           ))}
