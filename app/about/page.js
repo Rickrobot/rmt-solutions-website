@@ -59,6 +59,7 @@ const personJsonLd = {
     'https://www.linkedin.com/in/ricky-marsh-certiosh-tier-2-cfrar-mifsm-88b72680/',
     'https://www.rickymarsh.com/',
     'https://wildlifephotographs.co.uk/',
+    'https://www.rmtvisuals.com/',
   ],
 }
 
