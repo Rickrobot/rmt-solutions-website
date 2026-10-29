@@ -5,6 +5,7 @@ import SectionHeader from '@/components/ui/SectionHeader'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 import ProofStrip from '@/components/ProofStrip'
+import OurSoftware from '@/components/OurSoftware'
 
 export const metadata = {
   // SEO fix (Jun 2026): differentiated from the homepage, which targets the
@@ -396,6 +397,8 @@ export default function LiftPlansPage() {
           </div>
         </div>
       </section>
+
+      <OurSoftware />
 
       {/* Inline quick-quote form */}
       {/* FAQ — visible Q&A that mirrors the FAQPage JSON-LD above, so the

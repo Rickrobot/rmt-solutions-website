@@ -5,6 +5,7 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 import LiftCheckFlow from '@/components/LiftCheckFlow'
 import ProofStrip from '@/components/ProofStrip'
+import OurSoftware from '@/components/OurSoftware'
 
 export const metadata = {
   title: 'Independent Lift Plan Checking & Review UK',
@@ -305,6 +306,8 @@ export default function LiftPlanCheckingPage() {
           <LiftCheckFlow />
         </div>
       </section>
+
+      <OurSoftware />
 
       {/* What We Review */}
       <section className="py-16 bg-slate-900">
