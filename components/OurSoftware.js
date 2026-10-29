@@ -2,6 +2,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, Database, Ruler, Box, FlaskConical, ClipboardCheck, ShieldCheck } from 'lucide-react'
 
+const liftdraft = {
+  src: '/images/our-software/liftdraft-3d-cad.webp',
+  alt: 'Screenshot of LiftDraft, RMT Solutions\' own 2D and 3D CAD software, showing a 3D model of a mobile crane on outrigger mats lifting a load on four-leg slings',
+  width: 1226,
+  height: 853,
+}
+
 const renders = [
   {
     src: '/images/our-software/mobile-crane-3d.webp',
@@ -39,7 +46,7 @@ const points = [
   {
     icon: Box,
     title: '3D modelling',
-    text: 'The machine, load and rigging modelled in 3D so the site team can see the lift before the machine arrives.',
+    text: 'The machine, load and rigging modelled in 3D in LiftDraft, our own CAD system, so the site team can see the lift before the machine arrives.',
   },
   {
     icon: FlaskConical,
@@ -69,8 +76,8 @@ export default function OurSoftware({ compact = false }) {
               Our own lift planning software
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              RMT plans and reviews lifts with software we built ourselves: manufacturer duty data, 2D drawings to real
-              dimensions and full 3D models of mobile cranes, lorry loaders, telehandlers and excavators. Every plan is
+              RMT plans and reviews lifts with software we built ourselves: manufacturer duty data, our own 2D and 3D CAD
+              system, and full 3D models of mobile cranes, lorry loaders, telehandlers and excavators. Every plan is
               still checked and signed off by our Appointed Person.
             </p>
             <Link href="/services/lift-plans#our-software" className="inline-flex items-center gap-2 text-amber-400 font-semibold hover:text-amber-300">
@@ -78,7 +85,7 @@ export default function OurSoftware({ compact = false }) {
             </Link>
           </div>
           <div className="rounded-2xl overflow-hidden border border-slate-700">
-            <Image src={renders[0].src} alt={renders[0].alt} width={1600} height={900} sizes="(max-width: 1023px) 100vw, 50vw" className="w-full h-auto" />
+            <Image src={liftdraft.src} alt={liftdraft.alt} width={liftdraft.width} height={liftdraft.height} sizes="(max-width: 1023px) 100vw, 50vw" className="w-full h-auto" />
           </div>
         </div>
       </section>
@@ -97,12 +104,20 @@ export default function OurSoftware({ compact = false }) {
             A lift plan is not something you type a description into and get back. We built our own lift planning
             and review software for mobile cranes, lorry loaders, telehandlers and excavators, so every figure in a
             plan traces back to the manufacturer&apos;s data and every drawing is to the machine&apos;s real dimensions.
+            Our drawings are produced in LiftDraft, the 2D and 3D CAD system we built for lift planning.
           </p>
           <p>
             The software does the calculating and the drawing. A qualified Appointed Person does the thinking: the
             site, the ground, the people, the sequence and whether the lift should go ahead at all.
           </p>
         </div>
+
+        <figure className="rounded-2xl overflow-hidden bg-slate-900 border border-slate-700 mb-6">
+          <Image src={liftdraft.src} alt={liftdraft.alt} width={liftdraft.width} height={liftdraft.height} sizes="(max-width: 1279px) 100vw, 1216px" className="w-full h-auto" />
+          <figcaption className="px-5 py-3 text-sm text-gray-400">
+            <span className="text-white font-semibold">LiftDraft</span>: the 2D and 3D CAD system we built, here modelling a mobile crane lift
+          </figcaption>
+        </figure>
 
         <div className="grid sm:grid-cols-2 gap-6 mb-14">
           {renders.map((r) => (
