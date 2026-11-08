@@ -6,6 +6,9 @@ import FloatingCallButton from '@/components/FloatingCallButton'
 import Analytics from '@/components/Analytics'
 import CookieConsent from '@/components/CookieConsent'
 import ConversionTracking from '@/components/ConversionTracking'
+// Vercel Speed Insights (Nov 2026): real-visitor Core Web Vitals. Cookieless and
+// collects no personal data, so it sits outside the consent gate in Analytics.
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 // PERFORMANCE FIX (SEO audit, May 2026):
 // Fonts are now loaded with next/font/google instead of a CSS @import in
@@ -123,6 +126,7 @@ export default function RootLayout({ children }) {
         <div aria-hidden="true" className="lg:hidden h-[calc(4.25rem+env(safe-area-inset-bottom))]" />
         <FloatingCallButton />
         <CookieConsent />
+        <SpeedInsights />
       </body>
     </html>
   )

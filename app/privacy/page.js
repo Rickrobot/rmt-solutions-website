@@ -145,6 +145,13 @@ export default function PrivacyPage() {
                 browser, not a person we can name.
               </p>
             </Row>
+            <Row label="Page speed">
+              <p>
+                Vercel Speed Insights measures how quickly each page loads and responds in your
+                browser, so we can find slow pages. It sets no cookies, stores nothing on your
+                device and records nothing that identifies you.
+              </p>
+            </Row>
             <Row label="Server logs">
               <p>
                 Our host keeps short-lived operational logs of requests to the site, which include
@@ -232,7 +239,10 @@ export default function PrivacyPage() {
               </p>
             </Row>
             <Row label="Vercel">
-              <p>Hosts the site, serves the pages, and keeps the operational logs in section 3.</p>
+              <p>
+                Hosts the site, serves the pages, keeps the operational logs in section 3 and
+                measures page speed through Vercel Speed Insights.
+              </p>
             </Row>
             <Row label="Google">
               <p>Google Analytics 4, only where you have agreed.</p>
