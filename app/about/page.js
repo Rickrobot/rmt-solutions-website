@@ -301,6 +301,11 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
+          <p className="mt-10 text-center">
+            <Link href="/why-rmt-solutions" className="text-amber-400 hover:text-amber-300 font-semibold">
+              See how RMT compares with other ways to get a lift plan &rarr;
+            </Link>
+          </p>
         </div>
       </section>
 

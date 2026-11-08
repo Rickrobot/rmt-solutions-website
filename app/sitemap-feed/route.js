@@ -43,6 +43,8 @@ const STATIC_ROUTES = [
   { path: '/services',     changefreq: 'monthly', priority: '0.9', images: [OG_IMAGE] },
   { path: '/case-studies', changefreq: 'weekly',  priority: '0.8', images: [HERO_IMAGE] },
   { path: '/testimonials', changefreq: 'monthly', priority: '0.85', images: [OG_IMAGE] },
+  // Why choose RMT (Nov 2026): targets "independent lift planning consultant".
+  { path: '/why-rmt-solutions', changefreq: 'monthly', priority: '0.85', lastmod: '2026-11-08', images: [`${BASE_URL}/images/services/appointed-person-reviewing-lift-plan-uk.webp`, `${BASE_URL}/images/our-software/liftdraft-3d-cad.webp`, `${BASE_URL}/images/ricky-marsh.webp`] },
   { path: '/contact',      changefreq: 'monthly', priority: '0.7', images: [OG_IMAGE] },
   // Low priority and rarely changed, but it must be crawlable: it is linked
   // from every form on the site and from the cookie banner, and a privacy
@@ -177,7 +179,7 @@ function buildSitemapXml() {
     entries.push(
       buildUrlEntry({
         loc: `${BASE_URL}${r.path}`,
-        lastmod: r.path === '' ? OUR_SOFTWARE_PUBLISHED : SITE_LAST_UPDATED,
+        lastmod: r.lastmod || (r.path === '' ? OUR_SOFTWARE_PUBLISHED : SITE_LAST_UPDATED),
         changefreq: r.changefreq,
         priority: r.priority,
         images: r.images,

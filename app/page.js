@@ -710,6 +710,12 @@ export default function HomePage() {
               ))}
             </div>
           </div>
+          <p className="mt-10 text-center">
+            <Link href="/why-rmt-solutions" className="inline-flex items-center text-amber-400 hover:text-amber-300 font-semibold">
+              Why contractors choose an independent lift planning consultant
+              <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
+            </Link>
+          </p>
         </div>
       </section>
 

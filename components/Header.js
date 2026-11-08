@@ -32,6 +32,7 @@ export default function Header() {
     // The LiftPlan Studio software and rigging calculator links that sat here
     // were taken off the site in October 2026 — the site sells the consultancy
     // only. Their old URLs 301 to service pages (see next.config.js).
+    { name: 'Why RMT', href: '/why-rmt-solutions' },
     { name: 'Locations', href: '/locations' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Testimonials', href: '/testimonials' },
