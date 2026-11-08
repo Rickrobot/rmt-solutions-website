@@ -145,6 +145,13 @@ export default function PrivacyPage() {
                 browser, not a person we can name.
               </p>
             </Row>
+            <Row label="Visit counts">
+              <p>
+                Vercel Web Analytics counts page views, which pages people arrive on, the site
+                that sent them and their country. It sets no cookies, stores nothing on your
+                device and records nothing that identifies you.
+              </p>
+            </Row>
             <Row label="Page speed">
               <p>
                 Vercel Speed Insights measures how quickly each page loads and responds in your
@@ -241,7 +248,8 @@ export default function PrivacyPage() {
             <Row label="Vercel">
               <p>
                 Hosts the site, serves the pages, keeps the operational logs in section 3 and
-                measures page speed through Vercel Speed Insights.
+                counts visits and measures page speed through Vercel Web Analytics and Speed
+                Insights.
               </p>
             </Row>
             <Row label="Google">

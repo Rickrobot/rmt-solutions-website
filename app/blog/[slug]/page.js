@@ -70,6 +70,7 @@ const blogPosts = {
     imageAlt: 'Appointed Person reviewing a lift plan on a UK construction site — under CPA crane hire this planning duty sits with the hirer, not the crane company',
     content: `
       <p class="lead">Two ways to get a crane onto a UK site, and the difference between them is not the crane. It is who is legally responsible for planning the lift. Under a contract lift the crane company carries that duty. Under CPA hire you do — and a surprising number of contractors find that out about forty-eight hours before the crane is due to arrive, when the principal contractor asks who their Appointed Person is.</p>
+      ${serviceBox('Going CPA hire and need the planning covered? You can <a href="/services/appointed-person">hire an independent CPCS A61 Appointed Person</a> to plan the lift and sign off the lift plan, with no crane to sell you.')}
 
       <p>This guide sets out what each arrangement actually obliges you to do. It is written from the hirer's side of the table, because that is the side where the surprises happen.</p>
 
@@ -253,6 +254,7 @@ const blogPosts = {
     imageAlt: 'Lift planner working at a desk with drawings and a laptop — where lift plan software fits into the planning workflow',
     content: `
       <p class="lead">Search for "lift plan software" and you would think there is an app that takes a photo of your load and prints a LOLER-compliant lift plan. There isn't. What does exist is a range of genuinely useful planning tools — crane selection databases, 3D rigging studies, load chart calculators — that make a competent planner faster and their drawings better. This guide covers what the software actually does, roughly what it costs, the calculations behind any lift plan, and the question that matters legally: can software replace an Appointed Person? (Spoiler: no — and the reason is written into LOLER itself.)</p>
+      ${serviceBox('Software draws the plan; a competent person has to make the decisions. We write <a href="/services/lift-plans">lift plans signed off by a CPCS A61 Appointed Person</a>, and can act as your <a href="/services/appointed-person">Appointed Person</a> for the whole job.')}
 
       <h2>What Lift Plan Software Actually Does</h2>
       <p>The established tools in the crane world are planning aids. Depending on the product, they will:</p>
@@ -411,6 +413,7 @@ const blogPosts = {
     imageAlt: 'Steel erection lifting operations inside a UK warehouse project — the kind of site work that requires an Appointed Person to plan the lifts',
     content: `
       <p class="lead">Short answer: if lifting equipment is doing lifting operations on your site — a crane, an excavator lifting pipes, a telehandler on chains, a lorry loader making deliveries — then someone competent must plan those lifts, and on UK construction sites that competent person is, in practice, an Appointed Person. The longer answer is about <em>whose</em> Appointed Person, at what level, and how much of their time you actually need. That is what this guide covers.</p>
+      ${serviceBox('If you do need one, you do not have to employ one. You can <a href="/services/appointed-person">hire a CPCS A61 Appointed Person</a> for a single lift or a whole project, at a fixed price.')}
 
       <h2>What is an Appointed Person in Construction?</h2>
       <p>The Appointed Person (AP) is the individual named under BS 7121-1:2016 as having overall control of a lifting operation — the person who assesses the load and the site, categorises the lift, selects the equipment, produces the <a href="/blog/what-is-a-lift-plan">lift plan</a> and appoints the lifting team. LOLER 1998 Regulation 8 creates the underlying legal duty: every lifting operation must be planned by a competent person. On UK sites that competence is normally evidenced by the <a href="/blog/cpcs-appointed-person-guide">CPCS A61 card</a>. The full role is set out in our guide to <a href="/blog/appointed-person-duties-responsibilities">Appointed Person duties and responsibilities</a>.</p>
@@ -606,6 +609,7 @@ const blogPosts = {
     imageAlt: 'Lift supervisor directing a suspended-load lift on a UK site — clear signalling is the communication backbone of every lifting operation',
     content: `
       <p class="lead">Every lift plan names a slinger/signaller — but the signals themselves are where communication lives or dies. The UK's standard hand signals for lifting come from the Health and Safety (Safety Signs and Signals) Regulations 1996 and are carried into crane practice by BS 7121, which requires an agreed, understood signalling system for every lifting operation. This guide covers the standard signals, the rules that make signalling work under pressure, and a <a href="/downloads/bs7121-crane-hand-signals-poster.pdf">free printable poster</a> for the site cabin wall.</p>
+      ${serviceBox('Signals are only one part of a planned lift. We write <a href="/services/lift-plans">site-specific lift plans</a> that name the signalling method, the slinger/signaller and the lift supervisor for every lift.')}
 
       <h2>The Ground Rules Before Any Signal</h2>
       <ul>
@@ -797,6 +801,7 @@ const blogPosts = {
     imageAlt: 'A crane supervisor reviewing a lift against BS 7121 on a UK construction site — categorising the lift as basic, standard or complex',
     content: `
       <p class="lead">Not every lift carries the same risk, and UK lifting practice reflects that by sorting lifting operations into categories — basic, standard and complex. The category drives how much planning a lift needs, who has to plan it, and how closely it must be supervised. This guide explains what each category means under BS 7121, what makes a lift "complex", what people mean by a "critical lift", and why getting the category right matters before any load leaves the ground.</p>
+      ${serviceBox('Not sure which category your lift falls into? We write <a href="/services/lift-plans">lift plans</a> for basic, standard and complex lifts, and plan <a href="/services/tandem-lift-plans">tandem and multi-crane lifts</a> to BS 7121-1.')}
 
       <h2>What are lift categories?</h2>
       <p>The British Standard for the safe use of cranes, <a href="/blog/what-is-bs-7121-complete-guide">BS 7121</a>, groups lifting operations by complexity so the planning effort matches the risk. The same idea applies to lifting with any equipment, not just cranes: a routine, repetitive pick on firm ground needs far less than a heavy lift over a live road. Importantly, the category is set by the whole operation — the load, the equipment, the site and the surroundings — not by the size of the load alone.</p>
@@ -846,6 +851,7 @@ const blogPosts = {
     imageAlt: 'A 360-degree excavator lifting a pipe section on a UK construction site using a dedicated lifting point — object handling under LOLER 1998',
     content: `
       <p class="lead">The moment an excavator is used to lift and place a load — a pipe, a manhole ring, a trench box — rather than just dig, it becomes lifting equipment in the eyes of the law, and the Lifting Operations and Lifting Equipment Regulations 1998 (LOLER) apply in full. That has real consequences for the machine, the paperwork and the planning. This guide explains when LOLER applies to an excavator, what the machine must have fitted to lift legally, what the CPA guidance says, and why you still need a lift plan and an Appointed Person.</p>
+      ${serviceBox('Using an excavator as a crane? We write <a href="/services/excavator-lift-plans">excavator lift plans</a> to LOLER 1998 and BS EN ISO 10567, lifting from the quick hitch lifting eye with the bucket off.')}
 
       <h2>Can you legally use an excavator to lift?</h2>
       <p>Yes — provided the machine is suitable and equipped for it, and the operation is properly planned. Using a 360° excavator to handle objects is an established and accepted practice in UK construction, from pipe laying and drainage to handling precast units. But "object handling" is a different duty from excavating, and the law treats it differently. As soon as the excavator lifts a load using a chain, sling or lifting attachment, it is being used as lifting equipment and must meet the same legal standard as a crane doing the same job.</p>

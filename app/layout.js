@@ -9,6 +9,10 @@ import ConversionTracking from '@/components/ConversionTracking'
 // Vercel Speed Insights (Nov 2026): real-visitor Core Web Vitals. Cookieless and
 // collects no personal data, so it sits outside the consent gate in Analytics.
 import { SpeedInsights } from '@vercel/speed-insights/next'
+// Vercel Web Analytics (Nov 2026): cookieless visit counts, so the site has a true
+// visitor number again. GA4 only counts visitors who accept cookies (consent gate
+// live 17 Sep 2026), which made traffic look as if it had collapsed.
+import { Analytics as VercelAnalytics } from '@vercel/analytics/next'
 
 // PERFORMANCE FIX (SEO audit, May 2026):
 // Fonts are now loaded with next/font/google instead of a CSS @import in
@@ -127,6 +131,7 @@ export default function RootLayout({ children }) {
         <FloatingCallButton />
         <CookieConsent />
         <SpeedInsights />
+        <VercelAnalytics />
       </body>
     </html>
   )

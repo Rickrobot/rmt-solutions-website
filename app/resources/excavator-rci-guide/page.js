@@ -103,6 +103,9 @@ export default function ExcavatorRciGuidePage() {
           <p className="text-sm text-slate-400 mb-8">
             By Ricky Marsh, CPCS A61 Appointed Person · Issued June 2026
           </p>
+          <p className="text-slate-300 max-w-3xl mb-8">
+            Need the device written into a plan? We write <Link href="/services/excavator-lift-plans" className="text-amber-400 hover:text-amber-300 underline underline-offset-2">excavator lift plans</Link> to LOLER 1998 and BS EN ISO 10567, signed off by a CPCS A61 Appointed Person.
+          </p>
           <div className="flex flex-wrap gap-4">
             <a
               href="/downloads/excavator-rci-reference.pdf"
