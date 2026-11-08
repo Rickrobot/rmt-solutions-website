@@ -45,7 +45,7 @@ export const metadata = {
 const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'CPCS A61 Appointed Person Services',
+  name: 'CPCS A61 Appointed Person (Lifting Operations)',
   description:
     'CPCS A61 Appointed Person services for construction lifting operations — planning lifting operations, selecting equipment, producing and signing off lift plans, and supervising compliance to LOLER 1998 and BS 7121.',
   provider: {
@@ -282,6 +282,66 @@ export default function AppointedPersonPage() {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Nov 2026 (full GSC report 8 Nov): "appointed person lifting
+          operations" (pos 8.2) and "cpcs appointed person" (pos 9.5) are won by
+          /blog/cpcs-appointed-person-guide. The exact phrase on the CPCS card,
+          "Appointed Person - Lifting Operations", appeared nowhere on this page.
+          Title left alone (changed 10 Oct); this section carries the phrase. */}
+      <section aria-labelledby="ap-lifting-operations" className="py-24 bg-slate-900 border-t border-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4 block">
+              CPCS A61
+            </span>
+            <h2 id="ap-lifting-operations" className="font-display text-4xl font-bold text-white mb-6">
+              Appointed Person for lifting operations, on any machine
+            </h2>
+            <div className="space-y-5 text-gray-300 leading-relaxed">
+              <p>
+                The CPCS category A61 is <strong className="text-white">Appointed Person &ndash; Lifting Operations</strong>.
+                It is not limited to cranes. Any lifting operation on a construction site has to be planned by a
+                competent person, and on UK sites that competence is shown by the A61 card.
+              </p>
+              <p>
+                As your <strong className="text-white">CPCS Appointed Person</strong> we plan lifting operations for
+                mobile and tower cranes, crawler and spider cranes, lorry loaders, excavators lifting suspended
+                loads, telehandlers, overhead and gantry cranes, MEWPs and material lifts, including{' '}
+                <Link href="/services/tandem-lift-plans" className="text-amber-400 hover:text-amber-300 underline">
+                  tandem and multi-crane lifts
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
+          <div className="bg-slate-800/40 rounded-3xl p-8 border border-slate-700/50">
+            <h3 className="font-display text-2xl font-bold text-white mb-6">What you get on every lifting operation</h3>
+            <ul className="space-y-4">
+              {[
+                'A site-specific lift plan with elevation, plan and rigging drawings',
+                'The lift categorised as basic, standard or complex under BS 7121',
+                'Capacities checked against the manufacturer\u2019s published duty chart',
+                'Thorough examination and lifting accessory certificates checked',
+                'The lifting team named, with the competence each role needs',
+                'Independent review of lift plans your subcontractors submit',
+                'Every plan numbered and revision-controlled, ready for your CDM file',
+              ].map((item) => (
+                <li key={item} className="flex items-start text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-amber-400 mr-3 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-sm text-gray-400">
+              Need a plan someone else has written checked? See{' '}
+              <Link href="/services/lift-plan-checking" className="text-amber-400 hover:text-amber-300 underline">
+                independent lift plan checking
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>

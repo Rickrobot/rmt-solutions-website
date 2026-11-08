@@ -275,6 +275,46 @@ export default function LiftPlansPage() {
         </div>
       </section>
 
+      {/* Nov 2026 (full GSC report 8 Nov): "lift plan" is won by
+          /blog/what-is-a-lift-plan, not this page. Titles were last changed on
+          10 Oct, so they are left alone; instead this page now answers "what
+          does a lift plan contain" in a list Google can lift as a snippet, which
+          the guide does not do in the same commercial context. */}
+      <section aria-labelledby="whats-in-a-lift-plan" className="py-20 bg-slate-900 border-y border-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="whats-in-a-lift-plan" className="font-display text-3xl sm:text-4xl font-bold text-white mb-5">
+            What is in an RMT lift plan
+          </h2>
+          <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-10">
+            Every lift plan we write follows the same structure, so the site team, the lift supervisor and the
+            principal contractor find the same information in the same place on every job.
+          </p>
+          <ol className="grid md:grid-cols-2 gap-x-10 gap-y-4 list-none p-0 m-0">
+            {[
+              'Site constraints: overhead lines, railways, aerodromes, neighbours and the planning conditions that affect the lift',
+              'The machine and its configuration, with capacity taken from the manufacturer\u2019s published duty chart and its table reference',
+              'Load weight, centre of gravity and utilisation, checked against the project limit',
+              'Ground bearing and outrigger or track loads, with mat sizes where they are needed',
+              'The rigging arrangement: the actual gear, its safe working load, sling angles and lifting points',
+              'The lift category under BS 7121: basic, standard or complex',
+              'Exclusion zone and segregation layout',
+              'The lifting team, each role and the competence card it needs',
+              'Sequence of operations, wind and weather limits, and the stop points',
+              'Risk assessment, method statement and pre-lift checks',
+              'Drawings: elevation, plan, rigging detail and a 3D view, to the machine\u2019s real dimensions',
+              'Document number, revision and Appointed Person sign-off',
+            ].map((item, i) => (
+              <li key={item} className="flex items-start gap-3 text-gray-300 leading-relaxed">
+                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-amber-500 text-slate-900 font-display font-bold text-sm flex items-center justify-center" aria-hidden="true">
+                  {i + 1}
+                </span>
+                <span className="pt-1">{item}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
       {/* Equipment Types */}
       <section className="py-24 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
