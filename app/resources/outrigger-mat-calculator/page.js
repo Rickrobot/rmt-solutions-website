@@ -189,6 +189,7 @@ export default function OutriggerMatCalculatorPage() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/services/mobile-crane-lift-plans" className="btn-primary inline-flex items-center gap-2">Mobile crane lift plans <ArrowRight className="w-5 h-5" aria-hidden="true" /></Link>
+            <Link href="/resources/sling-angle-calculator" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold px-2 py-3">Sling angle calculator <ArrowRight className="w-5 h-5" aria-hidden="true" /></Link>
             <Link href="/resources/lift-plan-decision-tool" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold px-2 py-3">Do I need a lift plan? <ArrowRight className="w-5 h-5" aria-hidden="true" /></Link>
             <a href="tel:07803808093" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold px-2 py-3"><Phone className="w-5 h-5" aria-hidden="true" />07803 808093</a>
           </div>

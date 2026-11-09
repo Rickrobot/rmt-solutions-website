@@ -129,6 +129,7 @@ const RESOURCE_ROUTES = [
   { path: '/resources/lift-plan-drawing-examples',         priority: '0.8', lastmod: '2026-11-09' },
   // Free outrigger mat calculator (Nov 2026): a tool, so priority matches the decision tool.
   { path: '/resources/outrigger-mat-calculator',           priority: '0.8', lastmod: '2026-11-09' },
+  { path: '/resources/sling-angle-calculator',             priority: '0.8', lastmod: '2026-11-09' },
 ];
 
 // Order: home patch (Warrington) first, then regional flagships, then
