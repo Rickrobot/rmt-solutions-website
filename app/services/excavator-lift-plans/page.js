@@ -471,6 +471,7 @@ export default function ExcavatorLiftPlansPage() {
       </section>
 
       <LiftDrawingExamples type="excavator" />
+      <LiftDrawingExamples type="excavator-manhole" />
 
       {/* Image Break */}
       <section className="relative h-80">

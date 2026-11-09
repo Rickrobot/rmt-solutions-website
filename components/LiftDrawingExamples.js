@@ -4,9 +4,13 @@ import { Download, Expand, ArrowRight } from 'lucide-react'
 import { liftDrawingExamples } from '@/lib/liftDrawingExamples'
 import { IMAGE_RIGHTS } from '@/lib/imageRights'
 
-export default function LiftDrawingExamples({ type }) {
+// pageHref: the page this gallery sits on when that is not the example's own
+// service page (the /resources/lift-plan-drawing-examples hub). That page
+// supplies its own WebPage node, so only the ImageObjects are emitted here.
+export default function LiftDrawingExamples({ type, pageHref, anchor: anchorProp }) {
   const example = liftDrawingExamples.find((item) => item.id === type)
-  const pageUrl = `https://www.rmtsafetysolutions.com${example.href}`
+  const anchor = anchorProp || example.anchor || 'drawing-examples'
+  const pageUrl = `https://www.rmtsafetysolutions.com${pageHref || example.href}`
   const imageObjects = example.drawings.map((drawing) => ({
     '@type': 'ImageObject',
     '@id': `https://www.rmtsafetysolutions.com${drawing.src}#image`,
@@ -26,23 +30,23 @@ export default function LiftDrawingExamples({ type }) {
   const imageSchema = {
     '@context': 'https://schema.org',
     '@graph': [
-      {
+      ...(pageHref || example.anchor ? [] : [{
         '@type': 'WebPage',
         '@id': `${pageUrl}#webpage`,
         url: pageUrl,
         name: example.title,
         primaryImageOfPage: { '@id': imageObjects[0]['@id'] },
         image: imageObjects.map((drawing) => ({ '@id': drawing['@id'] })),
-      },
+      }]),
       ...imageObjects,
     ],
   }
   return (
-    <section id="drawing-examples" aria-labelledby="drawing-examples-heading" className="scroll-mt-28 py-20 bg-slate-950 border-y border-slate-800">
+    <section id={anchor} aria-labelledby={`${anchor}-heading`} className="scroll-mt-28 py-20 bg-slate-950 border-y border-slate-800">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(imageSchema).replace(/</g, '\\u003c') }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4">RMT drawing examples</p>
-        <h2 id="drawing-examples-heading" className="font-display text-3xl sm:text-4xl font-bold text-white mb-5">{example.title}</h2>
+        <h2 id={`${anchor}-heading`} className="font-display text-3xl sm:text-4xl font-bold text-white mb-5">{example.title}</h2>
         <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mb-8">{example.introduction}</p>
         <div className="flex flex-wrap gap-4 mb-10">
           <a href={`/downloads/lift-drawing-examples/${example.pdf}`} download className="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-slate-950 px-5 py-3 rounded-xl font-semibold transition"><Download className="w-5 h-5" aria-hidden="true" />Download drawing examples (PDF, {example.pages} pages)</a>

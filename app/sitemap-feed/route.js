@@ -101,6 +101,8 @@ const RESOURCE_IMAGES = {
   '/resources/overhead-gantry-crane-lift-plan-templates': [`${BASE_URL}/images/resources/overhead-crane-lift-plan-template-photo.webp`],
   '/resources/lift-plan-templates': [`${BASE_URL}/images/resources/lift-plan-template-plan-drawing.webp`],
   '/resources/gc14-lift-plan-template': [`${BASE_URL}/images/resources/gc14-lift-plan-rigging-drawing.webp`],
+  // the drawing examples hub carries every example drawing (Nov 2026)
+  '/resources/lift-plan-drawing-examples': liftDrawingExamples.flatMap(example => example.drawings.map(drawing => `${BASE_URL}${drawing.src}`)),
 };
 
 const RESOURCE_ROUTES = [
@@ -123,6 +125,7 @@ const RESOURCE_ROUTES = [
   // fills the one equipment gap in the template hub.
   { path: '/resources/gc14-lift-plan-template',            priority: '0.7' },
   { path: '/resources/mobile-crane-lift-plan-templates',   priority: '0.7' },
+  { path: '/resources/lift-plan-drawing-examples',         priority: '0.8', lastmod: '2026-11-09' },
 ];
 
 // Order: home patch (Warrington) first, then regional flagships, then
@@ -215,13 +218,17 @@ function buildSitemapXml() {
 
   // Associate the public drawing originals with their service landing pages.
   for (const slug of SERVICE_SLUGS) {
-    const drawingExample = liftDrawingExamples.find(example => example.href === `/services/${slug}`);
+    // every example set on the page (the excavator page carries two, Nov 2026)
+    const drawingSets = liftDrawingExamples.filter(example => example.href === `/services/${slug}`);
+    const drawingExample = drawingSets.length ? { drawings: drawingSets.flatMap(example => example.drawings) } : null;
     entries.push(
       buildUrlEntry({
         loc: `${BASE_URL}/services/${slug}`,
         lastmod: OUR_SOFTWARE_PAGES.includes(slug)
           ? OUR_SOFTWARE_PUBLISHED
-          : drawingExample ? LIFT_DRAWINGS_PUBLISHED : SITE_LAST_UPDATED,
+          : drawingExample
+            ? drawingSets.map(example => example.published || LIFT_DRAWINGS_PUBLISHED).sort().pop()
+            : SITE_LAST_UPDATED,
         changefreq: 'monthly',
         priority: '0.9',
         images: [
@@ -253,7 +260,7 @@ function buildSitemapXml() {
     entries.push(
       buildUrlEntry({
         loc: `${BASE_URL}${r.path}`,
-        lastmod: SITE_LAST_UPDATED,
+        lastmod: r.lastmod || SITE_LAST_UPDATED,
         changefreq: 'monthly',
         priority: r.priority,
         images: RESOURCE_IMAGES[r.path],

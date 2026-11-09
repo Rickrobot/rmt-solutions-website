@@ -5,6 +5,7 @@ import SectionHeader from '@/components/ui/SectionHeader'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 import ProofStrip from '@/components/ProofStrip'
+import LiftDrawingExamples from '@/components/LiftDrawingExamples'
 
 export const metadata = {
   title: 'Mobile Crane Lift Plans UK | BS 7121',
@@ -552,6 +553,8 @@ export default function MobileCraneLiftPlansPage() {
           </div>
         </div>
       </section>
+
+      <LiftDrawingExamples type="mobile-crane" />
 
       {/* Visible FAQ — mirrors the FAQPage schema so the two match, which is a
           Google rich-result requirement. */}
