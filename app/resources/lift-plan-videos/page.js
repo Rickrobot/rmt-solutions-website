@@ -10,7 +10,7 @@ const SITE = 'https://www.rmtsafetysolutions.com'
 const URL_ = `${SITE}${LIFT_PLAN_VIDEOS_PATH}`
 
 export const metadata = {
-  title: 'Lift Plan Videos | 3D Crane & Excavator Lift Plans',
+  title: 'Lift Plan Videos: Crane & Excavator in 3D',
   description:
     'Short 3D videos from RMT lift plans: a mobile crane lift and an excavator lowering a manhole ring, with the machine, load, duty and utilisation for each.',
   alternates: { canonical: URL_ },

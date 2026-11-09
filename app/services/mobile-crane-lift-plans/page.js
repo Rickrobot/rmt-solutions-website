@@ -252,6 +252,11 @@ export default function MobileCraneLiftPlansPage() {
                   </li>
                 ))}
               </ul>
+              <p className="text-gray-400 mt-6">
+                Checking a set-up yourself? Use the free{' '}
+                <Link href="/resources/outrigger-mat-calculator" className="text-amber-400 hover:text-amber-300 underline">outrigger mat calculator</Link>{' '}
+                for the maximum outrigger load and the bearing area the ground needs.
+              </p>
             </div>
             <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-10 border border-slate-700/50">
               <ShieldCheck className="w-16 h-16 text-amber-400 mb-6" />
