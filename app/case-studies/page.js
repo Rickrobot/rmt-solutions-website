@@ -1,10 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import CaseStudiesGrid from '@/components/CaseStudiesGrid'
 
 export const metadata = {
   title: 'Case Studies | Lift Planning Projects',
-  description: 'Lift planning case studies from RMT Solutions. Tower crane contracts, steel erection projects, mobile crane lifts, and excavator operations across the UK.',
+  description: 'Real lift planning jobs from RMT Solutions: Caddick housing and industrial schemes, HS2 lorry loader plans, excavator pipe lifts and a crane balcony lift.',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/case-studies',
   },
@@ -19,22 +18,18 @@ export const metadata = {
 
 // CollectionPage / ItemList JSON-LD — exposes the case studies as a
 // structured collection. Mirrors the pattern on /locations and /services.
-// The list mirrors the in-page data in components/CaseStudiesGrid.js;
-// when adding a new case study, update both files so the schema stays
-// in sync with what is actually rendered.
+// Every entry is a real RMT job with its own write-up, and the list
+// matches the featured cards rendered below. Only add a case study here
+// once its page exists; never list a job without one (Nov 2026: six
+// stand-in grid entries with no real job behind them were removed).
 const SITE = 'https://www.rmtsafetysolutions.com'
 
 const CASE_STUDIES = [
-  { name: 'Rising Main Excavator Lift Plan, Wastewater Works', category: 'Excavator' },
-  { name: 'HS2 Lorry Loader Lift Plans', category: 'Lorry Loader' },
-  { name: 'Caddick Tawd Valley Junction 4, Skelmersdale', category: 'Steel Erection' },
-  { name: 'Chorlton Baths Balcony Lift, Manchester', category: 'Mobile Crane' },
-  { name: 'Manchester Residential Development', category: 'Tower Crane' },
-  { name: 'Industrial Warehouse - Midlands', category: 'Steel Erection' },
-  { name: 'Precast Concrete Installation', category: 'Mobile Crane' },
-  { name: 'Utilities Infrastructure', category: 'Excavator' },
-  { name: 'Commercial Office Development', category: 'Tower Crane' },
-  { name: 'Retail Park Extension', category: 'Steel Erection' },
+  { name: 'Rivington Chase, Horwich: Lifting Operations Support', category: 'Appointed Person and lift plan review', path: '/case-studies/rivington-chase-horwich-loco-works' },
+  { name: 'Caddick Tawd Valley Junction 4, Skelmersdale', category: 'Steel erection', path: '/case-studies/caddick-tawd-valley-junction-4' },
+  { name: 'HS2 Lorry Loader Lift Plans', category: 'Lorry loader', path: '/case-studies/hs2-lorry-loader-lift-plans' },
+  { name: 'Rising Main Excavator Lift Plan, Wastewater Works', category: 'Excavator', path: '/case-studies/rising-main-excavator-lift-plan' },
+  { name: 'Chorlton Baths Balcony Lift, Manchester', category: 'Mobile crane', path: '/case-studies/chorlton-baths-balcony-lift' },
 ]
 
 const collectionJsonLd = {
@@ -42,7 +37,7 @@ const collectionJsonLd = {
   '@type': 'CollectionPage',
   name: 'Lift Planning Case Studies',
   description:
-    'Examples of LOLER-compliant lift planning projects delivered by RMT Solutions across the UK — tower crane contracts, steel erection, mobile crane lifts and excavator operations.',
+    'Real lifting jobs delivered by RMT Solutions: Appointed Person cover and lift plan reviews on Caddick schemes, HS2 lorry loader lift plans, excavator pipe lifts and a mobile crane balcony lift.',
   url: `${SITE}/case-studies`,
   isPartOf: {
     '@type': 'WebSite',
@@ -55,9 +50,11 @@ const collectionJsonLd = {
     itemListElement: CASE_STUDIES.map((c, i) => ({
       '@type': 'ListItem',
       position: i + 1,
+      url: `${SITE}${c.path}`,
       item: {
         '@type': 'CreativeWork',
         name: c.name,
+        url: `${SITE}${c.path}`,
         about: `${c.category} lift planning project`,
         provider: {
           '@type': 'ProfessionalService',
@@ -282,13 +279,6 @@ export default function CaseStudiesPage() {
               </div>
             </div>
           </Link>
-        </div>
-      </section>
-
-      {/* Case Studies Grid */}
-      <section className="py-24 bg-slate-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <CaseStudiesGrid />
         </div>
       </section>
 
