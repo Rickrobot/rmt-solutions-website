@@ -234,7 +234,10 @@ export default function SteelErectionPage() {
                 <Link href="/blog/mobile-crane-vs-tower-crane" className="text-amber-400 hover:text-amber-300 underline">
                   mobile crane vs tower crane
                 </Link>{' '}
-                for steelwork.
+                for steelwork. To work out the weight of a beam, column or bundle of steel, use the free{' '}
+                <Link href="/resources/load-weight-calculator" className="text-amber-400 hover:text-amber-300 underline">
+                  steel beam weight calculator
+                </Link>.
               </p>
               <ul className="space-y-3">
                 {projectTypes.map((type) => (

@@ -974,8 +974,10 @@ export default function ExcavatorLiftPlansPage() {
               <Link href="/resources/excavator-lift-plan-templates" className="text-amber-400 font-semibold underline">
                 excavator lift plan template
               </Link>{' '}
-              and risk assessment — built around CIG 0801, ready to adapt for your site. For complex,
-              tandem, blind or near-capacity lifts, let us write it for you.
+              and risk assessment — built around CIG 0801, ready to adapt for your site, and check the duty with the free{' '}
+              <Link href="/resources/excavator-lift-capacity-calculator" className="text-amber-400 font-semibold underline">
+                excavator lift capacity calculator
+              </Link>. For complex, tandem, blind or near-capacity lifts, let us write it for you.
             </p>
             <Link
               href="/resources/excavator-lift-plan-templates"

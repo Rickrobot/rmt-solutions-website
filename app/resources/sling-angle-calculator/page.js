@@ -192,6 +192,7 @@ export default function SlingAngleCalculatorPage() {
           <div className="flex flex-wrap gap-4">
             <Link href="/resources/lift-plan-drawing-examples" className="btn-primary inline-flex items-center gap-2">See example rigging drawings <ArrowRight className="w-5 h-5" aria-hidden="true" /></Link>
             <Link href="/resources/outrigger-mat-calculator" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold px-2 py-3">Outrigger mat calculator <ArrowRight className="w-5 h-5" aria-hidden="true" /></Link>
+            <Link href="/resources/excavator-lift-capacity-calculator" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold px-2 py-3">Excavator lift calculator <ArrowRight className="w-5 h-5" aria-hidden="true" /></Link>
             <a href="tel:07803808093" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold px-2 py-3"><Phone className="w-5 h-5" aria-hidden="true" />07803 808093</a>
           </div>
         </div>

@@ -274,6 +274,48 @@ export default function ResourcesPage() {
             </Link>
 
             <Link
+              href="/resources/excavator-lift-capacity-calculator"
+              className="group bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 hover:border-amber-400 rounded-2xl p-8 transition"
+            >
+              <div className="w-14 h-14 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-5">
+                <Calculator className="w-7 h-7 text-amber-400" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-white group-hover:text-amber-400 transition mb-3">
+                Excavator Lift Calculator
+              </h3>
+              <p className="text-gray-400 leading-relaxed mb-5">
+                Gross load with the quick hitch and accessories, utilisation
+                of the maker&apos;s chart and the heaviest load you can lift.
+                Free, nothing stored.
+              </p>
+              <span className="inline-flex items-center text-amber-400 font-semibold">
+                Open the calculator
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+              </span>
+            </Link>
+
+            <Link
+              href="/resources/load-weight-calculator"
+              className="group bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 hover:border-amber-400 rounded-2xl p-8 transition"
+            >
+              <div className="w-14 h-14 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-5">
+                <Calculator className="w-7 h-7 text-amber-400" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-white group-hover:text-amber-400 transition mb-3">
+                Steel &amp; Concrete Weight Calculator
+              </h3>
+              <p className="text-gray-400 leading-relaxed mb-5">
+                The weight of beams, columns, hollow sections, plate and
+                concrete, added up into the weight of the lift. Free,
+                nothing stored.
+              </p>
+              <span className="inline-flex items-center text-amber-400 font-semibold">
+                Open the calculator
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+              </span>
+            </Link>
+
+            <Link
               href="/resources/lift-plan-templates"
               className="group bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 hover:border-amber-400 rounded-2xl p-8 transition"
             >
