@@ -262,6 +262,20 @@ function buildSitemapXml() {
   }
 
   // Case study detail pages — each gets its own canonical image
+  for (const cs of [
+    { slug: 'rising-main-excavator-lift-plan', img: 'pipeline-excavator-lift-plan' },
+    { slug: 'hs2-lorry-loader-lift-plans', img: 'hs2-lorry-loader-lift-plan' },
+  ]) {
+    entries.push(
+      buildUrlEntry({
+        loc: `${BASE_URL}/case-studies/${cs.slug}`,
+        lastmod: '2026-11-09',
+        changefreq: 'yearly',
+        priority: '0.7',
+        images: [`${BASE_URL}/images/case-studies/${cs.img}.webp`],
+      })
+    );
+  }
   entries.push(
     buildUrlEntry({
       loc: `${BASE_URL}/case-studies/chorlton-baths-balcony-lift`,

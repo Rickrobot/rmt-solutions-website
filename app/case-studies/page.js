@@ -25,6 +25,8 @@ export const metadata = {
 const SITE = 'https://www.rmtsafetysolutions.com'
 
 const CASE_STUDIES = [
+  { name: 'Rising Main Excavator Lift Plan, Wastewater Works', category: 'Excavator' },
+  { name: 'HS2 Lorry Loader Lift Plans', category: 'Lorry Loader' },
   { name: 'Caddick Tawd Valley Junction 4, Skelmersdale', category: 'Steel Erection' },
   { name: 'Chorlton Baths Balcony Lift, Manchester', category: 'Mobile Crane' },
   { name: 'Manchester Residential Development', category: 'Tower Crane' },
@@ -197,6 +199,52 @@ export default function CaseStudiesPage() {
               </div>
             </div>
           </Link>
+
+          {/* Featured: anonymised case studies (Nov 2026) */}
+          {[
+            {
+              href: '/case-studies/hs2-lorry-loader-lift-plans',
+              img: '/images/case-studies/hs2-lorry-loader-lift-plan.webp',
+              alt: 'RMT example lorry loader plan drawing with stabiliser spreads, slew paths and the exclusion zone',
+              tag: 'Lorry Loader',
+              place: 'HS2 main works sites',
+              title: 'HS2 Lorry Loader Lift Plans, Rewritten and Accepted',
+              text: 'Lift plans for a tyre-fitting specialist’s truck- and van-mounted cranes, rewritten to BS 7121-4, ALLMI and the tier 1 joint venture’s own standards. Accepted and in use on HS2 sites.',
+            },
+            {
+              href: '/case-studies/rising-main-excavator-lift-plan',
+              img: '/images/case-studies/pipeline-excavator-lift-plan.webp',
+              alt: 'RMT example drawing of a midi excavator lifting from the quick-hitch lifting eye with the bucket off',
+              tag: 'Excavator',
+              place: 'Wastewater treatment works, Lancashire',
+              title: 'Rising Main Excavator Lifts, Three Machines, One Plan',
+              text: 'A lift plan and Appointed Person cover for laying a 400 mm PE rising main: three possible midi excavators, nine lift types and welded pipe strings, revised twice in six days. Every lift completed safely.',
+            },
+          ].map((c) => (
+            <Link
+              key={c.href}
+              href={c.href}
+              className="group block rounded-3xl overflow-hidden border border-slate-700/50 bg-gradient-to-b from-slate-800/50 to-slate-900/50 card-hover mb-8"
+            >
+              <div className="grid md:grid-cols-2">
+                <div className="relative h-64 md:h-auto md:min-h-[320px] bg-white">
+                  <Image src={c.img} alt={c.alt} fill className="object-cover" />
+                </div>
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="flex flex-wrap items-center gap-3 mb-4">
+                    <span className="bg-amber-500/20 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full">{c.tag}</span>
+                    <span className="text-gray-500 text-sm">{c.place}</span>
+                  </div>
+                  <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-4 group-hover:text-amber-400 transition">{c.title}</h2>
+                  <p className="text-gray-400 mb-6 leading-relaxed">{c.text}</p>
+                  <span className="inline-flex items-center text-amber-400 font-semibold">
+                    Read the case study
+                    <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                  </span>
+                </div>
+              </div>
+            </Link>
+          ))}
 
           {/* Featured: Chorlton Baths */}
           <Link
