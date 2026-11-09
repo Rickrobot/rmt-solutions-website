@@ -36,6 +36,17 @@ export const metadata = {
 // the original publication date.
 const blogPosts = [
   {
+    slug: 'rmt-lift-planning-software-development',
+    title: 'Our Lift Planning Software: Progress and What Comes Next',
+    excerpt: 'We built our own lift planning and review software, used only by RMT: 11.5 million manufacturer duty points, LiftDraft 3D CAD, LiftPlan Studio for lorry loaders and a 19-point review. Here is where it has got to, what it means for your plans and reviews, and what we are developing next.',
+    category: 'Technology',
+    readTime: '8 min read',
+    date: 'November 9, 2026',
+    dateModified: 'November 9, 2026',
+    image: '/images/blog/rmt-software-steel-erection-3d-16x9.webp',
+    imageAlt: '3D lift plan view from RMT Solutions software: a mobile crane placing a steel rafter on a portal frame, with MEWPs at the eaves and the exclusion zone marked',
+  },
+  {
     slug: 'cpa-hire-vs-contract-lift-appointed-person',
     title: 'CPA Hire vs Contract Lift: Who Provides the AP?',
     excerpt: 'Hire a crane on CPA terms and the crane company supplies the crane and the operator — planning the lift, appointing the AP and supervising it stay with you. Under a contract lift the crane company takes all three on. The difference decides who is legally on the hook, and it is usually discovered too late.',

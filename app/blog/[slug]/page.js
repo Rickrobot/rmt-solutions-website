@@ -55,6 +55,163 @@ function serviceBox(html) {
 
 // Blog posts content
 const blogPosts = {
+  // NEW (Nov 2026) — progress report on RMT's in-house software and what is
+  // being developed next. Supports /why-rmt-solutions and the service pages
+  // with internal links. No prices, and the software is described by what it
+  // does; the Appointed Person sign-off is stated plainly.
+  'rmt-lift-planning-software-development': {
+    title: 'Our Lift Planning Software: Progress and What Comes Next',
+    description: 'How RMT Solutions built its own lift planning and review software, what it does on every plan and review now, and what we are developing next.',
+    keywords: 'lift planning software UK, lift plan software, lift plan review software, lorry loader lift plan software, LiftPlan Studio, LiftDraft, Lift Planner AP, SteelCAD, crane duty data, lift plan drawings, 3D lift planning, lift plan checking, RMT Solutions software',
+    category: 'Technology',
+    readTime: '8 min read',
+    date: 'November 9, 2026',
+    dateModified: 'November 9, 2026',
+    image: '/images/blog/rmt-software-steel-erection-3d-16x9.webp',
+    imageAlt: '3D lift plan view from RMT Solutions software: a mobile crane placing a steel rafter on a portal frame, with MEWPs at the eaves and the exclusion zone marked',
+    // Google Article guidance: supply the lead image in 16:9, 4:3 and 1:1,
+    // each at least 1200 px wide, so search, Discover and image results can
+    // pick the right crop for a large thumbnail. Site-wide robots already
+    // allows max-image-preview:large.
+    schemaImages: [
+      '/images/blog/rmt-software-steel-erection-3d-16x9.webp',
+      '/images/blog/rmt-software-steel-erection-3d-4x3.webp',
+      '/images/blog/rmt-software-steel-erection-3d-1x1.webp',
+      '/images/our-software/liftdraft-3d-cad.webp',
+    ],
+    content: `
+      <p class="lead">Most lift plans that get rejected fail on the same handful of things: the wrong duty chart, accessory weight left out, a drawing that does not match the machine, ground bearing that is assumed rather than shown. We decided the best way to stop those mistakes in our own plans, and to catch them quickly in other people's, was to build our own software. This post sets out where that work has got to, what it means for a plan or review you get from us, and what we are developing over the next few months.</p>
+      ${serviceBox('Need a lift planned or a plan checked now? See our <a href="/services/lift-plans">lift plan writing service</a> and our <a href="/services/lift-plan-checking">lift plan checking service</a>, both delivered by a CPCS A61 Appointed Person.')}
+
+      <h2>Why we build our own software</h2>
+
+      <p>After 35 years in lifting operations and more than 1,000 lift plans, one thing is clear: the quality of a plan comes down to whether every figure in it can be traced back to its source. Which machine, in which configuration, on which duty table, at what radius, with what in the rigging. General packages draw a machine and do the arithmetic. They do not work the way an Appointed Person checking plans for a tier 1 contractor has to work, and they do not hold the plan to the standard a principal contractor will review it against.</p>
+
+      <p>So we built the tools around the job itself. A lift plan is not something you type a description into and get back. The software does the calculating, the checking and the drawing to a fixed standard. A qualified Appointed Person does the thinking: the site, the ground, the people, the sequence and whether the lift should go ahead at all.</p>
+
+      <p>Everything described here is built by RMT Solutions for RMT Solutions. None of it is sold or licensed to anyone else. It exists for one reason: to give our clients faster, more accurate and more consistent lift plans and reviews than they can get anywhere else.</p>
+
+      <h2>Where we are now</h2>
+
+      <h3>Manufacturer duty data, never guessed</h3>
+      <p>Our crane database holds more than 11.5 million published duty points from UK and European manufacturers' load charts, across more than 560 mobile cranes. A duty is only ever read from the published table for the exact configuration; it is never interpolated between points. For any lift it returns the safe working load at radius, the smallest configuration that does the job, and the counterweight and outrigger base, with the manufacturer's table reference so anyone reviewing the plan can check it. Lorry loaders, telehandlers and excavators have their own manufacturer data, read on the basis each machine is actually rated on.</p>
+
+      <h3>Drawings to the machine's real dimensions</h3>
+      <p>Every elevation, plan, rigging and 3D drawing comes from one drawing engine, built from the manufacturer's published dimensions. The rigging is drawn as the actual gear, from master link to shackles and slings, and exclusion zones are drawn as the barrier runs that go in on site. Drawings come out as small vector PDFs, so a full plan can be emailed rather than sent through a file transfer service.</p>
+
+      <figure>
+        <img src="/images/our-software/lorry-loader-3d.webp" alt="3D view of a lorry loader lifting a welfare cabin on four-leg slings to all four lifting eyes, with stabilisers deployed on mats, from RMT lift planning software" width="1600" height="900" loading="lazy" />
+        <figcaption>A lorry loader cabin lift modelled in 3D, all four legs to the four lifting eyes, stabilisers on mats.</figcaption>
+      </figure>
+
+      <h3>LiftDraft, our own 2D and 3D CAD</h3>
+      <p>LiftDraft is the CAD system we built for lift planning. It models the machine, the load and the rigging in 3D, so the site team can see the lift before the machine arrives, and it feeds the same drawings that go into the plan.</p>
+
+      <figure>
+        <img src="/images/our-software/liftdraft-3d-cad.webp" alt="Screenshot of LiftDraft, RMT Solutions' own 2D and 3D CAD software, showing a 3D model of a mobile crane on outrigger mats lifting a load on four-leg slings" width="1226" height="853" loading="lazy" />
+        <figcaption>LiftDraft, our own CAD system, modelling a mobile crane lift on four-leg slings.</figcaption>
+      </figure>
+
+      <h3>LiftPlan Studio, our lorry loader planning software</h3>
+      <p>LiftPlan Studio is the software we built for <a href="/services/lorry-loader-lift-plans">lorry loader lift plans</a>. It holds a database of lorry loaders and the things they lift, from site cabins and containers to the lifting accessories, so the machine, the load and the rigging are picked from verified records rather than typed in each time. Capacity is taken from the manufacturer's published duty point, the plan follows ALLMI and CPA best practice, and the risk assessment can be adjusted to the site. The issued plan is the safe system of work itself, with drawings that show the stabilisers, the mats and every leg of the rigging to the load's lifting points. Every plan it produces is checked against our own review points before it leaves the office.</p>
+
+      <h3>Safety figures tested on every change</h3>
+      <p>Every time the software changes, it is run against a fixed set of known lifts. If any height, radius, capacity, utilisation or ground bearing figure moves when it should not, the change does not go out. That is how we make sure an improvement to a drawing never quietly changes a number.</p>
+
+      <h3>A 19-point review, the same way every time</h3>
+      <p>Every lift plan we check goes through our 19-point review against BS 7121, LOLER 1998 and the manufacturer's data. Point 19, environmental management, was added in October 2026. Each plan gets a clear outcome, CAT A approved or CAT B rejected, and every finding comes with what needs to change to close it, not just a note that something is wrong. You can read more about <a href="/blog/lift-plan-checking-what-gets-checked-and-why-plans-get-rejected">what gets checked and why plans get rejected</a>.</p>
+
+      <h3>Compliance reporting for principal contractors</h3>
+      <p>Every review is logged in a register, and that register drives a compliance dashboard for the principal contractor: what plans fail on, which subcontractors and Appointed Persons are least compliant across projects, how many resubmissions it took before approval, and how much notice was given before the lift. It turns a pile of review sheets into information a safety team can act on. There is more on this on our <a href="/why-rmt-solutions">why choose RMT</a> page.</p>
+
+      <h2>Our drawings and 3D models</h2>
+
+      <p>These are examples from our own drawing engine and LiftDraft, published as public examples with no client details. Every machine is drawn to the manufacturer's dimensions and every piece of rigging is drawn as the gear that will be used. Tap any drawing to open it full size.</p>
+
+      <figure>
+        <a href="/images/lift-drawing-examples/steel-erection-3d.webp" target="_blank" rel="noopener"><img src="/images/lift-drawing-examples/steel-erection-3d.webp" alt="RMT 3D steel erection lift plan drawing showing a mobile crane, the steel frame going up bay by bay, exclusion zones, MEWP positions and a staged erection sequence" width="2382" height="1684" loading="lazy" /></a>
+        <figcaption>Steel erection in 3D: the frame going up one bay at a time, with the crane, exclusion zones, MEWP positions and each stage of the sequence.</figcaption>
+      </figure>
+
+      <figure>
+        <a href="/images/lift-drawing-examples/steel-erection-section.webp" target="_blank" rel="noopener"><img src="/images/lift-drawing-examples/steel-erection-section.webp" alt="RMT steel erection cross-section drawing showing a rafter on the hook at a gridline, the crane, the steel frame and the connection details at the column" width="2382" height="1684" loading="lazy" /></a>
+        <figcaption>Cross-section through the frame: the rafter on the hook at its gridline, with the connection details the erectors will work to.</figcaption>
+      </figure>
+
+      <figure>
+        <a href="/images/lift-drawing-examples/transformer-elevation.webp" target="_blank" rel="noopener"><img src="/images/lift-drawing-examples/transformer-elevation.webp" alt="RMT lorry loader elevation drawing showing a Fassi F905R.2 offloading a transformer to its plinth, with radius, heights and the lift sequence" width="2382" height="1684" loading="lazy" /></a>
+        <figcaption>Lorry loader elevation: a Fassi F905R.2 placing a transformer on its plinth, with radius, heights and the four-stage lift sequence.</figcaption>
+      </figure>
+
+      <figure>
+        <a href="/images/lift-drawing-examples/transformer-lifting-points.webp" target="_blank" rel="noopener"><img src="/images/lift-drawing-examples/transformer-lifting-points.webp" alt="RMT rigging detail drawing showing the master link, chain sling legs, safety-lock hooks and lifting point connections for a transformer lift" width="2382" height="1684" loading="lazy" /></a>
+        <figcaption>Rigging detail drawn as the real gear: master link, chain legs, safety-lock hooks and the connection at each lifting point.</figcaption>
+      </figure>
+
+      <figure>
+        <a href="/images/lift-drawing-examples/excavator-elevation.webp" target="_blank" rel="noopener"><img src="/images/lift-drawing-examples/excavator-elevation.webp" alt="RMT excavator lift plan elevation showing a JCB 140X LC lifting a trench box from the quick-hitch lifting eye with the bucket removed, with working radius and heights" width="2382" height="1684" loading="lazy" /></a>
+        <figcaption>Excavator elevation: a JCB 140X LC lifting a trench box from the quick-hitch lifting eye, bucket off, with the maximum working radius marked.</figcaption>
+      </figure>
+
+      <figure>
+        <a href="/images/lift-drawing-examples/telehandler-unloading-laydown-plan.webp" target="_blank" rel="noopener"><img src="/images/lift-drawing-examples/telehandler-unloading-laydown-plan.webp" alt="RMT telehandler plan drawing showing the delivery vehicle, telehandler set-up positions, the unloading exclusion zone and the laydown areas" width="2382" height="1684" loading="lazy" /></a>
+        <figcaption>Telehandler plan: the delivery vehicle, each set-up position, the unloading exclusion zone and the laydown areas on one sheet.</figcaption>
+      </figure>
+
+      <div class="grid sm:grid-cols-2 gap-4 my-8">
+        <figure style="margin:0">
+          <img src="/images/our-software/telehandler-3d.webp" alt="3D view of a telehandler carrying a palletised load on forks with the working radius marked, from RMT lift planning software" width="1600" height="900" loading="lazy" />
+          <figcaption>Telehandler in 3D, working radius marked.</figcaption>
+        </figure>
+        <figure style="margin:0">
+          <img src="/images/our-software/excavator-3d.webp" alt="3D model in LiftDraft of a tracked excavator lifting a trench drag box on a four-leg chain from the quick-hitch, with the bucket removed and set down" width="855" height="481" loading="lazy" />
+          <figcaption>Excavator in LiftDraft, bucket off, lifting from the quick-hitch.</figcaption>
+        </figure>
+      </div>
+
+      <p>More example drawing sets, with downloadable PDFs, are on our <a href="/services/steel-erection">steel erection</a>, <a href="/services/excavator-lift-plans">excavator</a>, <a href="/services/lorry-loader-lift-plans">lorry loader</a> and <a href="/services/telehandler-lift-plans">telehandler</a> service pages.</p>
+
+      <h2>What it means for you</h2>
+
+      <ul>
+        <li><strong>Speed.</strong> Quotes within four working hours, and plans and reviews typically turned round in 24 to 48 hours, because the data, the checks and the drawings are already built.</li>
+        <li><strong>Accuracy.</strong> Every capacity traces to a manufacturer's published table, and every drawing to the machine's real dimensions.</li>
+        <li><strong>Consistency.</strong> The same 19 points, in the same order, on every review, so you know what will be looked at before you submit.</li>
+        <li><strong>Professional sign-off.</strong> Nothing leaves RMT until our CPCS A61 Appointed Person has checked it and signed it off.</li>
+      </ul>
+
+      <figure>
+        <img src="/images/our-software/mobile-crane-3d.webp" alt="3D view of a mobile crane on outrigger mats lifting a load on a spreader beam, with the slew and exclusion zones marked, from RMT lift planning software" width="1600" height="900" loading="lazy" />
+        <figcaption>A mobile crane lift in 3D, with the slew and exclusion zone marked before the crane is booked.</figcaption>
+      </figure>
+
+      <h2>What we are developing over the next few months</h2>
+
+      <h3>Lift Planner AP, on desktop and tablet</h3>
+      <p>We are bringing our planning engine together into Lift Planner AP, one in-house application for mobile cranes, lorry loaders, telehandlers and excavators, running on desktop and on iPad. The aim is to have the same data, checks and drawings on a site visit as in the office, so a change found on site can be planned there and then.</p>
+
+      <h3>Steelwork planned from the fabricator's model</h3>
+      <p>SteelCAD is the structural steel CAD system we are building for steelwork lift plans and method statements. We are teaching it to read the fabricator's 3D model directly, including IFC files and native Tekla models. Erection sequences and lift plans will start from the actual steel, in the actual positions. The model gives us shape and position only; weights, capacities and duties still come from verified sources, and any mismatch is flagged for the Appointed Person to decide.</p>
+
+      <h3>A site desk study before the plan is written</h3>
+      <p>Before a plan is written, the site is checked for what is around it: overhead lines, railways, aerodromes and the need to notify the CAA, roads, schools, watercourses and old mine shafts, measured against the machine's reach and tip height. The planning consent is checked too, so working hours and crane conditions are known before the lift is booked rather than discovered afterwards.</p>
+
+      <h3>Faster reviews from a shared data library</h3>
+      <p>Manufacturers' data sheets are being built into a single library used across every review, so the machine data is never looked up twice and the review time goes on the judgement, not the paperwork.</p>
+
+      <h3>Formal document control</h3>
+      <p>Every document we write or review gets a document number and a tracked revision, and anything superseded or withdrawn is recorded formally, so a site always knows which version is current.</p>
+
+      <h2>What does not change</h2>
+
+      <p>Software makes us faster and more consistent. It does not plan a lift on its own, and it never signs one off. Every plan and every review is still the responsibility of a CPCS A61 Appointed Person with 35 years in lifting operations, and the decision on whether a lift goes ahead is always a human one.</p>
+
+      <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 my-8">
+        <p class="text-gray-300 mb-6">RMT Solutions plans and reviews lifts for contractors across the UK: <a href="/services/mobile-crane-lift-plans">mobile crane</a>, <a href="/services/lorry-loader-lift-plans">lorry loader</a>, <a href="/services/telehandler-lift-plans">telehandler</a> and <a href="/services/excavator-lift-plans">excavator lift plans</a>, independent <a href="/services/lift-plan-checking">lift plan checking</a> and a <a href="/services/appointed-person">CPCS A61 Appointed Person</a> for your lifting operations.</p>
+        <a href="/contact" class="inline-block bg-amber-500 hover:bg-amber-400 text-slate-900 px-6 py-3 rounded-xl font-semibold transition">Send us your next lift</a>
+      </div>
+    `,
+  },
   // NEW (Jul 2026) — targets the "generic lift plan" query cluster (GSC:
   // "generic lift plan" 512 imps pos 9.1, "generic lift plan template" 136
   // imps, "schedule of common lifts" — all with no dedicated page).
@@ -3428,7 +3585,7 @@ export default function BlogPost({ params }) {
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.description,
-    image: [`https://www.rmtsafetysolutions.com${post.image}`],
+    image: (post.schemaImages || [post.image]).map((src) => `https://www.rmtsafetysolutions.com${src}`),
     datePublished: new Date(post.date).toISOString(),
     dateModified: new Date(post.dateModified || post.date).toISOString(),
     author: {

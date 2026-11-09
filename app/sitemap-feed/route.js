@@ -109,6 +109,23 @@ const LOCATION_SLUGS = [
 ];
 
 const BLOG_POSTS = [
+  { slug: 'rmt-lift-planning-software-development',                          date: '2026-11-09',
+    images: [
+      '/images/blog/rmt-software-steel-erection-3d-16x9.webp',
+      '/images/blog/rmt-software-steel-erection-3d-4x3.webp',
+      '/images/blog/rmt-software-steel-erection-3d-1x1.webp',
+      '/images/our-software/liftdraft-3d-cad.webp',
+      '/images/our-software/lorry-loader-3d.webp',
+      '/images/our-software/mobile-crane-3d.webp',
+      '/images/our-software/telehandler-3d.webp',
+      '/images/our-software/excavator-3d.webp',
+      '/images/lift-drawing-examples/steel-erection-3d.webp',
+      '/images/lift-drawing-examples/steel-erection-section.webp',
+      '/images/lift-drawing-examples/transformer-elevation.webp',
+      '/images/lift-drawing-examples/transformer-lifting-points.webp',
+      '/images/lift-drawing-examples/excavator-elevation.webp',
+      '/images/lift-drawing-examples/telehandler-unloading-laydown-plan.webp',
+    ] },
   { slug: 'lifting-people-man-baskets',                                      date: '2026-07-08' },
   { slug: 'cpa-hire-vs-contract-lift-appointed-person', date: '2026-07-26' },
   { slug: 'cdm-2015-lifting-operations',                                     date: '2026-07-08' },
@@ -305,6 +322,7 @@ function buildSitemapXml() {
         lastmod: post.date,
         changefreq: 'monthly',
         priority: '0.8',
+        images: post.images ? post.images.map((src) => `${BASE_URL}${src}`) : undefined,
       })
     );
   }
