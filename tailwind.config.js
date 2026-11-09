@@ -4,6 +4,8 @@ module.exports = {
     './pages/**/*.{js,jsx}',
     './components/**/*.{js,jsx}',
     './app/**/*.{js,jsx}',
+    // Blog post HTML strings (callout boxes, galleries) live in lib/blogPosts.js
+    './lib/**/*.{js,jsx}',
   ],
   theme: {
     extend: {
