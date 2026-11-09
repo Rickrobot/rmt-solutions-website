@@ -255,7 +255,9 @@ export default function MobileCraneLiftPlansPage() {
               <p className="text-gray-400 mt-6">
                 Checking a set-up yourself? Use the free{' '}
                 <Link href="/resources/outrigger-mat-calculator" className="text-amber-400 hover:text-amber-300 underline">outrigger mat calculator</Link>{' '}
-                for the maximum outrigger load and the bearing area the ground needs.
+                for the maximum outrigger load and the bearing area the ground needs, and the{' '}
+                <Link href="/resources/crane-wind-speed-calculator" className="text-amber-400 hover:text-amber-300 underline">crane wind speed calculator</Link>{' '}
+                for panels and other loads that catch the wind.
               </p>
             </div>
             <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-10 border border-slate-700/50">
