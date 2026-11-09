@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import TemplateDrawing from '@/components/TemplateDrawing'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 
 // GC14 resource page (competitor battle plan, Jun 2026).
@@ -26,7 +27,7 @@ export const metadata = {
     description:
       'The CITB GC14 lift plan form explained section by section by a CPCS A61 Appointed Person — plus a free editable Word alternative with no signup.',
     url: 'https://www.rmtsafetysolutions.com/resources/gc14-lift-plan-template',
-    images: ['/images/og-lift-planning.jpg'],
+    images: [{ url: '/images/resources/gc14-lift-plan-rigging-drawing-og.jpg', width: 1200, height: 630, alt: "Lift plan rigging drawing: a steel rafter lifted on a two-leg chain sling from the crane hook, with leg length, sling angle and centre of gravity marked" }],
     siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
@@ -116,6 +117,18 @@ export default function Gc14LiftPlanTemplate() {
           </div>
         </div>
       </section>
+
+      <TemplateDrawing
+        src="/images/resources/gc14-lift-plan-rigging-drawing.webp"
+        width={1600}
+        height={900}
+        name="Lift plan rigging drawing example"
+        alt="Lift plan rigging drawing: a steel rafter lifted on a two-leg chain sling from the crane hook, with leg length, sling angle and centre of gravity marked"
+        caption="The rigging detail a GC14 form has no room for: a rafter on a two-leg chain sling with leg length, sling angle and centre of gravity drawn to scale."
+        href="/services/steel-erection#drawing-examples"
+        linkText="See the full drawing set →"
+        rmtOwned
+      />
 
       {/* What is GC14 */}
       <section className="py-16 bg-slate-900">

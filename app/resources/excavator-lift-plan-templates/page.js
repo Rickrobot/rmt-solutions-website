@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import TemplateDrawing from '@/components/TemplateDrawing'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import GatedDownload from '@/components/GatedDownload'
 
@@ -14,7 +15,7 @@ export const metadata = {
     title: 'Free Excavator Lift Plan Template & Risk Assessment | CPA Compliant',
     description: 'Download free CPA/SFPSG compliant excavator lift plan template and risk assessment with 23 pre-populated hazards. Professional templates from a CPCS Appointed Person.',
     url: 'https://www.rmtsafetysolutions.com/resources/excavator-lift-plan-templates',
-    images: ['/images/og-lift-planning.jpg'],
+    images: [{ url: '/images/resources/excavator-lift-plan-template-drawing-og.jpg', width: 1200, height: 630, alt: "Excavator lift plan drawing: a JCB 140X LC lifting a trench box from the quick-hitch lifting eye with the bucket removed, with working radius, slew centre and heights marked" }],
     siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
@@ -99,6 +100,18 @@ export default function ExcavatorTemplatesPage() {
           </div>
         </div>
       </section>
+
+      <TemplateDrawing
+        src="/images/resources/excavator-lift-plan-template-drawing.webp"
+        width={1600}
+        height={900}
+        name="Excavator lift plan drawing example"
+        alt="Excavator lift plan drawing: a JCB 140X LC lifting a trench box from the quick-hitch lifting eye with the bucket removed, with working radius, slew centre and heights marked"
+        caption="What the finished drawing looks like: the excavator drawn to the maker's dimensions, lifting from the quick-hitch with the bucket off, radius and heights marked."
+        href="/services/excavator-lift-plans#drawing-examples"
+        linkText="See the full drawing set →"
+        rmtOwned
+      />
 
       {/* Why These Templates */}
       <section className="py-16 bg-slate-950">

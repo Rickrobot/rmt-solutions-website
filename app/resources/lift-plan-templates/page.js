@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import TemplateDrawing from '@/components/TemplateDrawing'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import GatedDownload from '@/components/GatedDownload'
 
@@ -26,7 +27,7 @@ export const metadata = {
     description:
       'Free generic lift plan template as an editable Word document. 15-section format covering categorisation, capacity verification, ground conditions and sign-off. Prepared by a CPCS Appointed Person.',
     url: 'https://www.rmtsafetysolutions.com/resources/lift-plan-templates',
-    images: ['/images/og-lift-planning.jpg'],
+    images: [{ url: '/images/resources/lift-plan-template-plan-drawing-og.jpg', width: 1200, height: 630, alt: "Lift plan site drawing: delivery vehicle, telehandler set-up positions, exclusion zone and numbered laydown areas on one plan sheet" }],
     siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
@@ -170,6 +171,18 @@ export default function LiftPlanTemplates() {
           </div>
         </div>
       </section>
+
+      <TemplateDrawing
+        src="/images/resources/lift-plan-template-plan-drawing.webp"
+        width={1600}
+        height={900}
+        name="Lift plan site drawing example"
+        alt="Lift plan site drawing: delivery vehicle, telehandler set-up positions, exclusion zone and numbered laydown areas on one plan sheet"
+        caption="What a finished lift plan's site drawing looks like: the delivery vehicle, each set-up position, the exclusion zone and the laydown areas on one sheet."
+        href="/services/lift-plans"
+        linkText="Have the plan written for you →"
+        rmtOwned
+      />
 
       {/* No official HSE template — the answer searchers are looking for */}
       <section className="py-16 bg-slate-900">

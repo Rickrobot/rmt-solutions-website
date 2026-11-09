@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import TemplateDrawing from '@/components/TemplateDrawing'
 
 export const metadata = {
   title: 'Free Overhead Crane Lift Plan Template',
@@ -12,7 +13,7 @@ export const metadata = {
     title: 'Free Overhead & Gantry Crane Lift Plan Template | BS 7121-7',
     description: 'Download a free overhead, gantry and bridge crane lift plan template to BS 7121-7 and LOLER 1998. From a CPCS Appointed Person.',
     url: 'https://www.rmtsafetysolutions.com/resources/overhead-gantry-crane-lift-plan-templates',
-    images: ['/images/og-lift-planning.jpg'],
+    images: [{ url: '/images/resources/overhead-crane-lift-plan-template-photo-og.jpg', width: 1200, height: 630, alt: "Overhead gantry cranes over the bays of a steel fabrication workshop, the kind of lifting operation this overhead crane lift plan template covers" }],
     siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
@@ -50,6 +51,17 @@ export default function OverheadCraneTemplatesPage() {
           </div>
         </div>
       </section>
+
+      <TemplateDrawing
+        src="/images/resources/overhead-crane-lift-plan-template-photo.webp"
+        width={1600}
+        height={900}
+        name="Overhead gantry crane in a steel fabrication workshop"
+        alt="Overhead gantry cranes over the bays of a steel fabrication workshop, the kind of lifting operation this overhead crane lift plan template covers"
+        caption="Overhead travelling cranes in a working fabrication shop: the lifting this template is written for."
+        href="/services/overhead-gantry-crane-lift-plans"
+        linkText="Have the plan written for you →"
+      />
 
       {/* Why This Template */}
       <section className="py-16 bg-slate-950">

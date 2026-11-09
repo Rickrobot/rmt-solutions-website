@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import TemplateDrawing from '@/components/TemplateDrawing'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 
 // Mobile crane template page (competitor battle plan, Jun 2026).
@@ -27,7 +28,7 @@ export const metadata = {
     description:
       'Free editable mobile crane lift plan template covering outrigger loads, ground bearing, duty chart verification, slew clearances and CPCS personnel — from a CPCS A61 Appointed Person.',
     url: 'https://www.rmtsafetysolutions.com/resources/mobile-crane-lift-plan-templates',
-    images: ['/images/og-lift-planning.jpg'],
+    images: [{ url: '/images/resources/mobile-crane-lift-plan-template-3d-og.jpg', width: 1200, height: 630, alt: "3D model of a mobile crane on outrigger mats lifting a load on a spreader beam, with the slew and exclusion zone marked" }],
     siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
@@ -148,6 +149,18 @@ export default function MobileCraneLiftPlanTemplates() {
           </div>
         </div>
       </section>
+
+      <TemplateDrawing
+        src="/images/resources/mobile-crane-lift-plan-template-3d.webp"
+        width={1600}
+        height={900}
+        name="Mobile crane lift plan 3D model"
+        alt="3D model of a mobile crane on outrigger mats lifting a load on a spreader beam, with the slew and exclusion zone marked"
+        caption="A mobile crane lift modelled in 3D before the crane is booked: outriggers on mats, the load on a spreader beam, slew and exclusion zone marked."
+        href="/services/mobile-crane-lift-plans"
+        linkText="Have the plan written for you →"
+        rmtOwned
+      />
 
       {/* Honest framing: hire vs contract lift */}
       <section className="py-16 bg-slate-900">

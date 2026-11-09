@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import TemplateDrawing from '@/components/TemplateDrawing'
 
 export const metadata = {
   title: 'Free Lorry Loader Lift Plan Template (HIAB)',
@@ -15,10 +16,10 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.rmtsafetysolutions.com/images/precast-concrete-lift.webp',
+        url: 'https://www.rmtsafetysolutions.com/images/resources/lorry-loader-lift-plan-template-drawing-og.jpg',
         width: 1200,
         height: 630,
-        alt: 'Lorry loader (HIAB) vehicle-mounted crane lifting a precast load on a UK construction site',
+        alt: "Lorry loader lift plan elevation: a Fassi F905R.2 placing a transformer on its plinth, with farthest reach, stabilisers, chain slings and the radius limit marked",
       },
     ],
   },
@@ -68,6 +69,18 @@ export default function LorryLoaderTemplatesPage() {
 
         </div>
       </section>
+
+      <TemplateDrawing
+        src="/images/resources/lorry-loader-lift-plan-template-drawing.webp"
+        width={1600}
+        height={900}
+        name="Lorry loader lift plan drawing example"
+        alt="Lorry loader lift plan elevation: a Fassi F905R.2 placing a transformer on its plinth, with farthest reach, stabilisers, chain slings and the radius limit marked"
+        caption="What the finished drawing looks like: a Fassi F905R.2 placing a transformer on its plinth, with reach, stabilisers and rigging drawn to scale."
+        href="/services/lorry-loader-lift-plans#drawing-examples"
+        linkText="See the full drawing set →"
+        rmtOwned
+      />
 
       {/* Why This Template */}
       <section className="py-16 bg-slate-950">

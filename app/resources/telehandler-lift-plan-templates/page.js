@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import TemplateDrawing from '@/components/TemplateDrawing'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import GatedDownload from '@/components/GatedDownload'
 
@@ -13,7 +14,7 @@ export const metadata = {
     title: 'Free Telehandler Lift Plan Templates UK | LOLER Compliant',
     description: 'Download free LOLER-compliant telehandler lift plan templates for suspended load and fork-carried operations. Prepared by a CPCS Appointed Person with 35+ years experience.',
     url: 'https://www.rmtsafetysolutions.com/resources/telehandler-lift-plan-templates',
-    images: ['/images/og-lift-planning.jpg'],
+    images: [{ url: '/images/resources/telehandler-lift-plan-template-drawing-og.jpg', width: 1200, height: 630, alt: "Telehandler lift plan drawing: a JCB 540-140 Hi-Viz unloading a pack from a flatbed trailer with stabilisers down, the marshaller outside the zone and numbered briefing points" }],
     siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
@@ -117,6 +118,18 @@ export default function TelehandlerLiftPlanTemplates() {
           </div>
         </div>
       </section>
+
+      <TemplateDrawing
+        src="/images/resources/telehandler-lift-plan-template-drawing.webp"
+        width={1600}
+        height={731}
+        name="Telehandler lift plan drawing example"
+        alt="Telehandler lift plan drawing: a JCB 540-140 Hi-Viz unloading a pack from a flatbed trailer with stabilisers down, the marshaller outside the zone and numbered briefing points"
+        caption="What the finished drawing looks like: the telehandler drawn to scale at the delivery bay, stabilisers down, marshaller outside the zone and each briefing point numbered."
+        href="/services/telehandler-lift-plans#drawing-examples"
+        linkText="See the full drawing set →"
+        rmtOwned
+      />
 
       {/* Why Two Templates */}
       <section className="py-16 bg-slate-900">

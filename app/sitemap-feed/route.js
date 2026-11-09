@@ -92,6 +92,17 @@ const SERVICE_SLUGS = [
   'aerial-site-surveys',
 ];
 
+// Worked-example image shown on each template page (Nov 2026).
+const RESOURCE_IMAGES = {
+  '/resources/excavator-lift-plan-templates': [`${BASE_URL}/images/resources/excavator-lift-plan-template-drawing.webp`],
+  '/resources/telehandler-lift-plan-templates': [`${BASE_URL}/images/resources/telehandler-lift-plan-template-drawing.webp`],
+  '/resources/lorry-loader-lift-plan-templates': [`${BASE_URL}/images/resources/lorry-loader-lift-plan-template-drawing.webp`],
+  '/resources/mobile-crane-lift-plan-templates': [`${BASE_URL}/images/resources/mobile-crane-lift-plan-template-3d.webp`],
+  '/resources/overhead-gantry-crane-lift-plan-templates': [`${BASE_URL}/images/resources/overhead-crane-lift-plan-template-photo.webp`],
+  '/resources/lift-plan-templates': [`${BASE_URL}/images/resources/lift-plan-template-plan-drawing.webp`],
+  '/resources/gc14-lift-plan-template': [`${BASE_URL}/images/resources/gc14-lift-plan-rigging-drawing.webp`],
+};
+
 const RESOURCE_ROUTES = [
   { path: '/resources',                                    priority: '0.7' },
   { path: '/resources/excavator-lift-plan-templates',      priority: '0.7' },
@@ -245,6 +256,7 @@ function buildSitemapXml() {
         lastmod: SITE_LAST_UPDATED,
         changefreq: 'monthly',
         priority: r.priority,
+        images: RESOURCE_IMAGES[r.path],
       })
     );
   }
