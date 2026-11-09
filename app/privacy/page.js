@@ -148,8 +148,9 @@ export default function PrivacyPage() {
             <Row label="Visit counts">
               <p>
                 Vercel Web Analytics counts page views, which pages people arrive on, the site
-                that sent them and their country. It sets no cookies, stores nothing on your
-                device and records nothing that identifies you.
+                that sent them and their country, and on which page an enquiry form is sent or
+                a phone number, email address or template download is clicked. It sets no
+                cookies, stores nothing on your device and records nothing that identifies you.
               </p>
             </Row>
             <Row label="Page speed">

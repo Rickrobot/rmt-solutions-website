@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import { track as vercelTrack } from '@vercel/analytics'
 
 /**
  * ConversionTracking — site-wide conversion event tracking.
@@ -38,9 +39,38 @@ import { useEffect } from 'react'
  * blockers, consent tooling), so this can never throw in the render path.
  */
 
-/** Fire a conversion event to GA4 and tag the Clarity session. */
+/**
+ * Conversions also go to Vercel Web Analytics as custom events (Nov 2026).
+ * GA4 and Clarity only load after cookie consent, so most visitors' enquiries
+ * never reached them. Vercel Web Analytics is cookieless and runs for every
+ * visitor, so these counts show which pages actually produce enquiries.
+ * Two properties per event (the Pro plan limit): the page, and what it was.
+ */
+const VERCEL_EVENTS = {
+  generate_lead: 'Enquiry',
+  phone_call: 'Phone click',
+  email_click: 'Email click',
+  whatsapp_click: 'WhatsApp click',
+  template_download: 'Template download',
+}
+
+function trackVercel(name, params) {
+  const label = VERCEL_EVENTS[name]
+  if (!label) return
+  const what =
+    params.form_name || params.lead_source || params.file_name || params.link_location || params.event_label || ''
+  vercelTrack(label, { page: window.location.pathname, what: String(what).slice(0, 80) })
+}
+
+/** Fire a conversion event to GA4, Vercel Web Analytics, and tag the Clarity session. */
 export function trackEvent(name, params = {}) {
   if (typeof window === 'undefined') return
+
+  try {
+    trackVercel(name, params)
+  } catch {
+    // Analytics must never break the page.
+  }
 
   try {
     if (typeof window.gtag === 'function') {

@@ -131,7 +131,11 @@ export default function MobileCraneLiftPlanTemplates() {
               <Link href="/services/mobile-crane-lift-plans" className="text-amber-400 hover:text-amber-300 underline">
                 mobile crane lift plan service
               </Link>{' '}
-              covers that.
+              covers that. Already written one? Get an independent{' '}
+              <Link href="/services/lift-plan-checking" className="text-amber-400 hover:text-amber-300 underline">
+                lift plan review
+              </Link>{' '}
+              before it goes to the principal contractor.
             </p>
             <div className="flex flex-wrap gap-3">
               <a href="#download" className="bg-amber-500 hover:bg-amber-400 text-slate-900 px-6 py-3 rounded-xl font-semibold transition">

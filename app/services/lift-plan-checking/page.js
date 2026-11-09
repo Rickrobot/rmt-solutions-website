@@ -9,16 +9,18 @@ import OurSoftware from '@/components/OurSoftware'
 import { ourSoftwareImageObjects } from '@/lib/ourSoftwareImages'
 
 export const metadata = {
-  title: 'Independent Lift Plan Checking & Review UK',
-  description: 'Independent CPCS Appointed Person lift plan checking and review. LOLER & BS 7121 compliance check, Category A/B determination, 24–48 hour turnaround.',
+  // Nov 2026: "lift plan review" (about position 8) was landing on the mobile
+  // crane templates page instead of this one, so the exact phrase now leads.
+  title: 'Lift Plan Review & Checking Service UK',
+  description: 'Independent lift plan review and checking by a CPCS A61 Appointed Person: 19-point check against LOLER and BS 7121, CAT A/B outcome, 24–48 hour turnaround.',
   // Keywords absorbed from the merged /services/lift-plan-review page (Jul 2026).
   keywords: 'lift plan checking service, lift plan review, lift plan review service, lifting plan review, crane lift plan review, independent lift plan review, appointed person lift plan review, LOLER lift plan review, lift plan assessment, independent lift plan verification, category A lift plan, category B lift plan',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lift-plan-checking',
   },
   openGraph: {
-    title: 'Independent Lift Plan Checking & Review UK',
-    description: 'Independent CPCS Appointed Person lift plan checking and review. LOLER & BS 7121 compliance check, 24–48 hour turnaround.',
+    title: 'Lift Plan Review & Checking Service UK',
+    description: 'Independent lift plan review and checking by a CPCS A61 Appointed Person: 19-point check against LOLER and BS 7121, 24–48 hour turnaround.',
     url: 'https://www.rmtsafetysolutions.com/services/lift-plan-checking',
     images: [{ url: '/images/og-liftdraft-3d-cad.jpg', width: 1200, height: 630, alt: 'LiftDraft, the 3D CAD system RMT Solutions built for lift planning, modelling a mobile crane lift' }],
     siteName: 'RMT Solutions - Lift Planning Specialists',
@@ -51,7 +53,7 @@ const serviceSchema = {
     '@type': 'Offer',
     availability: 'https://schema.org/InStock',
     priceCurrency: 'GBP',
-    description: 'Per-plan, retained-service or on-site checking. Quote on application.',
+    description: 'Fixed price per lift plan, agreed up front, or an on-site day rate. No retainers.',
   },
 }
 
@@ -95,8 +97,8 @@ const PAGE_FAQS = [
     a: 'Yes. We are independent of any crane hire company, so submissions from any supplier are reviewed on their merits. Some suppliers produce excellent documentation; others routinely fall short. The check identifies which is which without fear or favour.',
   },
   {
-    q: 'Do you offer a retained service?',
-    a: 'Yes. For larger projects with frequent submissions or multi-site operations we offer a retained service at an agreed monthly fee covering unlimited checks, with an SLA on turnaround. Normally more cost-effective once you are receiving more than 4–6 plans a month.',
+    q: 'Do you offer a monthly retainer?',
+    a: 'No. Every review is a fixed price per lift plan, agreed up front, so you only pay for the plans you send. Busy projects and multi-site contractors get the same 24–48 hour turnaround on every submission, and a plan resubmitted after a Category B is checked again without a second charge.',
   },
   {
     q: 'What if I disagree with my subcontractor about a lift plan?',
@@ -117,10 +119,6 @@ const PAGE_FAQS = [
   {
     q: 'Are you independent of the crane companies?',
     a: 'Yes. We are not part of any crane hire company, plant supplier or contractor group, so submissions from any supplier are reviewed objectively on their merits. Some crane companies produce excellent documentation; others routinely fall short. The check identifies which is which without fear or favour.',
-  },
-  {
-    q: 'Do you offer a retained checking service?',
-    a: 'Yes. For larger projects with frequent submissions or multi-site operations we offer a retained service at an agreed monthly fee covering unlimited lift plan checks, with an SLA on turnaround. This is normally more cost-effective than per-plan checking once you are receiving more than four to six plans a month.',
   },
 ]
 
@@ -178,7 +176,7 @@ export default function LiftPlanCheckingPage() {
           <p className="text-amber-400 font-semibold tracking-widest uppercase text-sm mb-4">
             For Tier 1 Contractors · CPCS Appointed Person A61 · LOLER 1998
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Lift Plan Checking Service</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Lift Plan Review &amp; Checking Service</h1>
           <p className="text-xl text-slate-300 max-w-3xl mb-8">
             Independent Appointed Person review of lift plans submitted by subcontractors, crane
             hire companies, and suppliers. Every lifting operation on your site, LOLER and BS 7121
@@ -636,18 +634,15 @@ export default function LiftPlanCheckingPage() {
               </ul>
             </div>
 
-            <div className="border-2 border-amber-500 p-8 rounded-xl bg-amber-500/10 relative">
-              <div className="absolute -top-3 left-6 bg-amber-500 text-slate-900 text-xs font-bold uppercase tracking-wider px-2 py-1 rounded">
-                Most popular
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2 mt-2">Retained service</h3>
-              <p className="text-gray-400 text-sm mb-4">Agreed monthly fee</p>
-              <p className="text-gray-400 mb-4">Unlimited lift plan checks at a fixed monthly rate. Best for:</p>
+            <div className="border-2 border-amber-500 p-8 rounded-xl bg-amber-500/10">
+              <h3 className="text-xl font-semibold text-white mb-2">Regular review volumes</h3>
+              <p className="text-gray-400 text-sm mb-4">Fixed price per plan, no retainer</p>
+              <p className="text-gray-400 mb-4">The same fixed price for every lift plan, however many you send. Best for:</p>
               <ul className="text-gray-400 space-y-2 text-sm">
                 <li>• Large projects with frequent submissions</li>
                 <li>• Multi-site operations</li>
                 <li>• Long-term contractor relationships</li>
-                <li>• SLA-backed turnaround commitments</li>
+                <li>• 24–48 hour turnaround on every plan</li>
               </ul>
             </div>
 
