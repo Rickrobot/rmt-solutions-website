@@ -1,7 +1,9 @@
+import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, PlayCircle } from 'lucide-react'
 import LiftDrawingExamples from '@/components/LiftDrawingExamples'
 import { liftDrawingExamples } from '@/lib/liftDrawingExamples'
+import { liftPlanVideos, LIFT_PLAN_VIDEOS_PATH } from '@/lib/liftPlanVideos'
 
 // Lift plan drawing examples hub (Nov 2026).
 //
@@ -97,6 +99,24 @@ export default function LiftPlanDrawingExamplesPage() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* 3D videos of two of these lifts (Nov 2026) */}
+      <section aria-labelledby="lift-plan-videos-heading" className="py-14 bg-slate-950 border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="lift-plan-videos-heading" className="font-display text-2xl sm:text-3xl font-bold text-white mb-6">Watch two of these lifts in 3D</h2>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {liftPlanVideos.map((v) => (
+              <Link key={v.slug} href={`${LIFT_PLAN_VIDEOS_PATH}/${v.slug}`} className="group flex gap-4 items-center rounded-2xl bg-slate-900 border border-slate-700 hover:border-amber-400 p-3 transition">
+                <div className="relative w-40 shrink-0 aspect-video rounded-lg overflow-hidden">
+                  <Image src={v.thumbnail} alt={v.title} fill sizes="160px" className="object-cover" />
+                  <PlayCircle className="absolute inset-0 m-auto w-10 h-10 text-white/90 drop-shadow" aria-hidden="true" />
+                </div>
+                <span className="text-white font-semibold group-hover:text-amber-400 transition">{v.headline}</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -1,4 +1,5 @@
 import LiftDrawingExamples from '@/components/LiftDrawingExamples'
+import LiftPlanVideo from '@/components/LiftPlanVideo'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Clock, ShieldCheck, FileCheck, PhoneCall, CheckCircle2, AlertTriangle, ArrowRight } from 'lucide-react'
@@ -301,6 +302,9 @@ export default function ExcavatorLiftPlansPage() {
           </div>
         </div>
       </section>
+
+      {/* 3D lift plan video (Nov 2026) - also on its own watch page */}
+      <LiftPlanVideo slug="excavator-manhole-ring-lift-plan-3d" />
 
       {/* Why You Need Section */}
       <section className="py-16 bg-slate-950">

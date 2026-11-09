@@ -2,6 +2,7 @@ import { liftDrawingExamples, LIFT_DRAWINGS_PUBLISHED } from '@/lib/liftDrawingE
 import { ourSoftwareImageUrls } from '@/lib/ourSoftwareImages';
 import { blogPosts } from '@/lib/blogPosts';
 import { blogLeadImageSet } from '@/lib/blogLeadImages';
+import { liftPlanVideos, LIFT_PLAN_VIDEOS_PATH } from '@/lib/liftPlanVideos';
 
 // Every image a blog post shows, read from the post itself (Nov 2026 image
 // SEO round): the lead image, its 16:9 / 4:3 / 1:1 versions (or the post's
@@ -181,7 +182,7 @@ function escapeXml(value) {
     .replace(/'/g, '&apos;');
 }
 
-function buildUrlEntry({ loc, lastmod, changefreq, priority, images }) {
+function buildUrlEntry({ loc, lastmod, changefreq, priority, images, videos }) {
   const lines = [
     '  <url>',
     `    <loc>${escapeXml(loc)}</loc>`,
@@ -194,6 +195,22 @@ function buildUrlEntry({ loc, lastmod, changefreq, priority, images }) {
       lines.push('    <image:image>');
       lines.push(`      <image:loc>${escapeXml(img)}</image:loc>`);
       lines.push('    </image:image>');
+    }
+  }
+  // Video sitemap extension (Nov 2026): the 3D lift plan videos, listed
+  // against their own watch pages only.
+  if (Array.isArray(videos) && videos.length > 0) {
+    for (const v of videos) {
+      const seconds = Number((v.duration.match(/(\d+)S/) || [0, 0])[1]) + 60 * Number((v.duration.match(/(\d+)M/) || [0, 0])[1]);
+      lines.push('    <video:video>');
+      lines.push(`      <video:thumbnail_loc>${escapeXml(`${BASE_URL}${v.thumbnail}`)}</video:thumbnail_loc>`);
+      lines.push(`      <video:title>${escapeXml(v.title)}</video:title>`);
+      lines.push(`      <video:description>${escapeXml(v.description)}</video:description>`);
+      lines.push(`      <video:player_loc>${escapeXml(`https://www.youtube.com/embed/${v.youtubeId}`)}</video:player_loc>`);
+      lines.push(`      <video:duration>${seconds}</video:duration>`);
+      lines.push(`      <video:publication_date>${v.uploadDate}</video:publication_date>`);
+      lines.push('      <video:family_friendly>yes</video:family_friendly>');
+      lines.push('    </video:video>');
     }
   }
   lines.push('  </url>');
@@ -264,6 +281,30 @@ function buildSitemapXml() {
         changefreq: 'monthly',
         priority: r.priority,
         images: RESOURCE_IMAGES[r.path],
+      })
+    );
+  }
+
+  // 3D lift plan videos (Nov 2026): the index, then one watch page per video
+  // carrying its video entry.
+  entries.push(
+    buildUrlEntry({
+      loc: `${BASE_URL}${LIFT_PLAN_VIDEOS_PATH}`,
+      lastmod: '2026-11-09',
+      changefreq: 'monthly',
+      priority: '0.7',
+      images: liftPlanVideos.map(v => `${BASE_URL}${v.thumbnail}`),
+    })
+  );
+  for (const v of liftPlanVideos) {
+    entries.push(
+      buildUrlEntry({
+        loc: `${BASE_URL}${LIFT_PLAN_VIDEOS_PATH}/${v.slug}`,
+        lastmod: v.uploadDate.slice(0, 10),
+        changefreq: 'yearly',
+        priority: '0.7',
+        images: [`${BASE_URL}${v.thumbnail}`],
+        videos: [v],
       })
     );
   }
@@ -362,7 +403,8 @@ function buildSitemapXml() {
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset',
     '  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
-    '  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
+    '  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"',
+    '  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">',
     entries.join('\n'),
     '</urlset>',
     '',

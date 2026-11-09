@@ -6,6 +6,7 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 import ProofStrip from '@/components/ProofStrip'
 import LiftDrawingExamples from '@/components/LiftDrawingExamples'
+import LiftPlanVideo from '@/components/LiftPlanVideo'
 
 export const metadata = {
   title: 'Mobile Crane Lift Plans UK | BS 7121',
@@ -215,6 +216,9 @@ export default function MobileCraneLiftPlansPage() {
         </div>
       </section>
       <ProofStrip id="rooney" />
+
+      {/* 3D lift plan video (Nov 2026) - also on its own watch page */}
+      <LiftPlanVideo slug="mobile-crane-lift-plan-3d" />
 
       {/* What's included */}
       <section className="py-24 bg-slate-950">

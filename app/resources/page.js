@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import GatedDownload from '@/components/GatedDownload'
-import { FileText, AlertTriangle, HelpCircle, BookOpen, Scale, Users, ArrowRight, Download } from 'lucide-react'
+import { FileText, AlertTriangle, HelpCircle, BookOpen, Scale, Users, ArrowRight, Download, PlayCircle } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 
 export const metadata = {
@@ -270,6 +270,27 @@ export default function ResourcesPage() {
               </p>
               <span className="inline-flex items-center text-amber-400 font-semibold">
                 View drawing examples
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+              </span>
+            </Link>
+
+            <Link
+              href="/resources/lift-plan-videos"
+              className="group bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 hover:border-amber-400 rounded-2xl p-8 transition"
+            >
+              <div className="w-14 h-14 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-5">
+                <PlayCircle className="w-7 h-7 text-amber-400" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-white group-hover:text-amber-400 transition mb-3">
+                Lift Plan Videos
+              </h3>
+              <p className="text-gray-400 leading-relaxed mb-5">
+                Short 3D videos made from RMT lift plan drawings: a mobile
+                crane lift and an excavator lowering a manhole ring, with the
+                duty and utilisation for each.
+              </p>
+              <span className="inline-flex items-center text-amber-400 font-semibold">
+                Watch the videos
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
               </span>
             </Link>
