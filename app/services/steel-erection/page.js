@@ -6,6 +6,7 @@ import SectionHeader from '@/components/ui/SectionHeader'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 import ProofStrip from '@/components/ProofStrip'
+import LiftPlanVideo from '@/components/LiftPlanVideo'
 
 export const metadata = {
   // Fix #6/#8, Jul 2026 SEO review: title now leads on "steel erection lift
@@ -181,6 +182,7 @@ export default function SteelErectionPage() {
         </div>
       </section>
       <ProofStrip id="liddell" />
+      <LiftPlanVideo slug="steel-erection-lift-plan-3d" />
 
       {/* Services */}
       <section className="py-24 bg-slate-950">
