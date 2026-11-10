@@ -10,13 +10,13 @@ const SITE = 'https://www.rmtsafetysolutions.com'
 const URL_ = `${SITE}${LIFT_PLAN_VIDEOS_PATH}`
 
 export const metadata = {
-  title: 'Lift Plan Videos: Crane & Excavator in 3D',
+  title: 'Lift Plan Videos in 3D: Cranes, HIABs & More',
   description:
-    'Short 3D videos from RMT lift plans: a mobile crane lift and an excavator lowering a manhole ring, with the machine, load, duty and utilisation for each.',
+    '3D videos from RMT lift plans: a mobile crane, an excavator, a telehandler moving steel and a HIAB cabin lift, with the machine, load and duty for each.',
   alternates: { canonical: URL_ },
   openGraph: {
     title: 'Lift Plan Videos | RMT Solutions',
-    description: 'Short 3D videos of real RMT lift plan drawings for cranes and excavators.',
+    description: 'Short 3D videos of RMT lift plan drawings for cranes, excavators, telehandlers and lorry loaders.',
     url: URL_,
     siteName: 'RMT Solutions - Lift Planning Specialists',
     images: [{ url: `${SITE}${liftPlanVideos[0].thumbnail}`, width: 1280, height: 720, alt: liftPlanVideos[0].title }],

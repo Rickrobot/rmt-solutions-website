@@ -5,6 +5,7 @@ import Link from 'next/link'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 import ProofStrip from '@/components/ProofStrip'
+import LiftPlanVideo from '@/components/LiftPlanVideo'
 
 export const metadata = {
   // Oct 2026: "HIAB lift plan" searches surfaced the blog guide but not this
@@ -158,6 +159,7 @@ export default function LorryLoaderLiftPlansPage() {
         </div>
       </section>
       <ProofStrip id="chadwick" />
+      <LiftPlanVideo slug="lorry-loader-cabin-lift-plan-3d" />
 
       {/* When Full Plans Required */}
       <section className="py-16 bg-slate-950">
