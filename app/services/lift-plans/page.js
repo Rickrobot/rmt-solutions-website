@@ -21,7 +21,7 @@ export const metadata = {
   // homepage. The title and H1 now lead with "Lift Plans" and keep "Lift
   // Planning Services", so this page is the strongest match for both.
   title: { absolute: 'Lift Plans & Lift Planning Services UK | From £200' },
-  description: 'Lift plans for UK construction, written by a CPCS A61 Appointed Person: excavators, telehandlers, lorry loaders and cranes. From £200, 24–48hr turnaround.',
+  description: 'UK construction lift plans written by a CPCS A61 Appointed Person: excavators, telehandlers, lorry loaders and cranes. From £200 + VAT, 24–48hr turnaround.',
   keywords: ['lift planning services', 'lift planning experts', 'lift plan', 'lift plans', 'lift planning', 'lift planner', 'lift plan writing', 'lifting plan', 'lifting plans', 'excavator lift plan', 'telehandler lift plan', 'mobile crane lift plan', 'lorry loader lift plan', 'LOLER compliant'],
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lift-plans',
