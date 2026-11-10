@@ -96,15 +96,27 @@ export default function Header() {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <button
-                className="flex items-center gap-1 text-gray-400 hover:text-amber-400 transition font-medium whitespace-nowrap"
-                onClick={() => setServicesOpen(!servicesOpen)}
-                aria-expanded={servicesOpen}
-                aria-haspopup="true"
-              >
-                Services
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
-              </button>
+              {/* "Services" is a real link to the hub (Nov 2026) so the most
+                  prominent link on every page points at /services; the
+                  chevron beside it opens the menu for touch and keyboard. */}
+              <div className="flex items-center gap-1">
+                <Link
+                  href="/services"
+                  className="text-gray-400 hover:text-amber-400 transition font-medium whitespace-nowrap"
+                  onClick={() => setServicesOpen(false)}
+                >
+                  Services
+                </Link>
+                <button
+                  className="text-gray-400 hover:text-amber-400 transition"
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  aria-expanded={servicesOpen}
+                  aria-haspopup="true"
+                  aria-label="Show the services menu"
+                >
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+              </div>
 
               {/* Dropdown Panel.
                   Always in the HTML, hidden with CSS while closed (Oct 2026).
@@ -231,6 +243,16 @@ export default function Header() {
 
                 {mobileServicesOpen && (
                   <div className="pl-4 pb-2 space-y-1">
+                    <Link
+                      href="/services"
+                      className="block text-amber-400 hover:text-amber-300 transition text-sm font-semibold px-4 py-2 rounded-lg hover:bg-slate-800/50"
+                      onClick={() => {
+                        setMobileMenuOpen(false)
+                        setMobileServicesOpen(false)
+                      }}
+                    >
+                      All lift planning services &rarr;
+                    </Link>
                     {services.map((service) => (
                       <Link
                         key={service.href}
