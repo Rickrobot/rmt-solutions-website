@@ -4,6 +4,7 @@ import { Clock, ShieldCheck, FileCheck, PhoneCall, CheckCircle2, ArrowRight } fr
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 import ProofStrip from '@/components/ProofStrip'
+import LiftPlanVideo from '@/components/LiftPlanVideo'
 
 export const metadata = {
   title: 'Telehandler Lift Plans UK | LOLER Compliant',
@@ -209,6 +210,7 @@ export default function TelehandlerLiftPlansPage() {
         </div>
       </section>
       <ProofStrip id="geary" />
+      <LiftPlanVideo slug="telehandler-steel-lift-plan-3d" />
 
       {/* Trust strip */}
       <section className="bg-slate-900 border-y border-slate-700/50">

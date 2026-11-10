@@ -47,7 +47,7 @@ export default function LiftPlanVideo({ slug, background = 'bg-slate-900' }) {
               <PlayCircle className="w-5 h-5" aria-hidden="true" />Watch with the lift figures and chapters
             </Link>
             <Link href={video.drawingsAnchor} className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold">
-              See the drawings it was made from <ArrowRight className="w-5 h-5" aria-hidden="true" />
+              {video.drawingsLabel || 'See the drawings it was made from'} <ArrowRight className="w-5 h-5" aria-hidden="true" />
             </Link>
           </div>
         </div>

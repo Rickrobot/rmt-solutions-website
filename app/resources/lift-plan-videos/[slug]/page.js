@@ -87,8 +87,8 @@ export default function LiftPlanVideoPage({ params }) {
           <VideoPlayer video={video} priority />
           <p className="text-xl text-gray-300 leading-relaxed mt-8">{video.description}</p>
           <p className="text-gray-400 leading-relaxed mt-4">
-            The video is rendered from the same 3D model as the plan&apos;s elevation, exclusion zone plan and rigging
-            drawing, so the machine, the radius and the rigging match the figures on the sheets.
+            The video is rendered from the same 3D model as the plan&apos;s drawings, so the machine, the radius and
+            the load match the figures on the sheets.
           </p>
         </div>
       </section>
@@ -105,10 +105,12 @@ export default function LiftPlanVideoPage({ params }) {
                 </div>
               ))}
             </dl>
-            <p className="text-gray-400 text-sm leading-relaxed mt-4">
-              Utilisation is the gross load, including all the lifting accessories, divided by the capacity on the
-              manufacturer&apos;s chart for that configuration and radius.
-            </p>
+            {video.figures.some(([label]) => label === 'Utilisation') && (
+              <p className="text-gray-400 text-sm leading-relaxed mt-4">
+                Utilisation is the gross load, including all the lifting accessories, divided by the capacity on the
+                manufacturer&apos;s chart for that configuration and radius.
+              </p>
+            )}
           </div>
           <div>
             <h2 className="font-display text-2xl font-bold text-white mb-5">What the video shows</h2>
@@ -139,7 +141,7 @@ export default function LiftPlanVideoPage({ params }) {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href={video.serviceHref} className="btn-primary inline-flex items-center gap-2">{video.serviceLabel} <ArrowRight className="w-5 h-5" aria-hidden="true" /></Link>
-            <Link href={video.drawingsAnchor} className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold px-2 py-3">See the drawing set <ArrowRight className="w-5 h-5" aria-hidden="true" /></Link>
+            <Link href={video.drawingsAnchor} className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold px-2 py-3">{video.drawingsLabel || 'See the drawing set'} <ArrowRight className="w-5 h-5" aria-hidden="true" /></Link>
             <a href="tel:07803808093" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold px-2 py-3"><Phone className="w-5 h-5" aria-hidden="true" />07803 808093</a>
           </div>
           {others.length > 0 && (
