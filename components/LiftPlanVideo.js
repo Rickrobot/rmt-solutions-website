@@ -1,23 +1,17 @@
 import Link from 'next/link'
 import { ArrowRight, PlayCircle } from 'lucide-react'
 import { liftPlanVideos, videoObject, LIFT_PLAN_VIDEOS_PATH } from '@/lib/liftPlanVideos'
+import YouTubeFacade from '@/components/YouTubeFacade'
 
 // The YouTube player for one 3D lift plan video. Used on the watch page
 // (bare player) and, as a section, on service pages and the drawing hub.
-// The player is YouTube's privacy-enhanced (no-cookie) embed, so no YouTube
-// cookies are set until the visitor plays the video.
+// Nov 2026: the page shows the thumbnail and loads YouTube's privacy-enhanced
+// (no-cookie) player only when the visitor presses play (YouTubeFacade), so
+// the embed no longer slows the page.
 export function VideoPlayer({ video, priority = false }) {
   return (
     <div className="relative aspect-video rounded-2xl overflow-hidden border border-slate-700 bg-slate-950 shadow-2xl">
-      <iframe
-        className="absolute inset-0 w-full h-full"
-        src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}?rel=0`}
-        title={video.title}
-        loading={priority ? 'eager' : 'lazy'}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-      />
+      <YouTubeFacade youtubeId={video.youtubeId} title={video.title} thumbnail={video.thumbnail} priority={priority} />
     </div>
   )
 }
