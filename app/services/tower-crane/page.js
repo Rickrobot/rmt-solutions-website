@@ -16,6 +16,7 @@ import SectionHeader from '@/components/ui/SectionHeader'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
 import ProofStrip from '@/components/ProofStrip'
+import LiftPlanVideo from '@/components/LiftPlanVideo'
 
 export const metadata = {
   // Fix #6, Jul 2026 SEO review: the URL said tower-crane, the title said
@@ -365,6 +366,9 @@ export default function TowerCranePage() {
           </div>
         </div>
       </section>
+
+      {/* 3D lift plan video (Nov 2026) - also on its own watch page */}
+      <LiftPlanVideo slug="mobile-tower-crane-lift-plan-3d" />
 
       {/* Why a tower crane contract matters */}
       <section className="py-24 bg-slate-950">

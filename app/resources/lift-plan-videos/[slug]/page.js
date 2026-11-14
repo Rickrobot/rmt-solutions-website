@@ -125,9 +125,11 @@ export default function LiftPlanVideoPage({ params }) {
                 )
               })}
             </ol>
-            <a href={`https://www.youtube.com/shorts/${video.shortId}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold mt-6">
-              <Smartphone className="w-5 h-5" aria-hidden="true" />Watch the vertical version on YouTube Shorts
-            </a>
+            {video.shortId && (
+              <a href={`https://www.youtube.com/shorts/${video.shortId}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold mt-6">
+                <Smartphone className="w-5 h-5" aria-hidden="true" />Watch the vertical version on YouTube Shorts
+              </a>
+            )}
           </div>
         </div>
       </section>
@@ -141,7 +143,9 @@ export default function LiftPlanVideoPage({ params }) {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href={video.serviceHref} className="btn-primary inline-flex items-center gap-2">{video.serviceLabel} <ArrowRight className="w-5 h-5" aria-hidden="true" /></Link>
-            <Link href={video.drawingsAnchor} className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold px-2 py-3">{video.drawingsLabel || 'See the drawing set'} <ArrowRight className="w-5 h-5" aria-hidden="true" /></Link>
+            {video.drawingsAnchor && (
+              <Link href={video.drawingsAnchor} className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold px-2 py-3">{video.drawingsLabel || 'See the drawing set'} <ArrowRight className="w-5 h-5" aria-hidden="true" /></Link>
+            )}
             <a href="tel:07803808093" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold px-2 py-3"><Phone className="w-5 h-5" aria-hidden="true" />07803 808093</a>
           </div>
           {others.length > 0 && (
