@@ -9,6 +9,7 @@ import StatCard from '@/components/ui/StatCard'
 import CaseStudyCard from '@/components/ui/CaseStudyCard'
 import SectionHeader from '@/components/ui/SectionHeader'
 import CredentialChips from '@/components/CredentialChips'
+import CompanyFilm from '@/components/CompanyFilm'
 
 // JSON-LD Schema for SEO
 const jsonLd = {
@@ -372,6 +373,10 @@ export default function HomePage() {
           </div>
         </div>
       </header>
+
+      {/* Company film (Nov 2026): the 92-second RMT Solutions film from YouTube,
+          straight after the first screen. */}
+      <CompanyFilm />
 
       {/* What site teams say (Oct 2026). Replaced a row of client names in
           grey text. Three named quotes, verbatim from lib/testimonials.js, from
