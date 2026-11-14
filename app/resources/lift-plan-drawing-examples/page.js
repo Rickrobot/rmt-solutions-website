@@ -4,6 +4,7 @@ import { ArrowRight, PlayCircle } from 'lucide-react'
 import LiftDrawingExamples from '@/components/LiftDrawingExamples'
 import { liftDrawingExamples } from '@/lib/liftDrawingExamples'
 import { liftPlanVideos, LIFT_PLAN_VIDEOS_PATH } from '@/lib/liftPlanVideos'
+import CompanyFilm from '@/components/CompanyFilm'
 
 // Lift plan drawing examples hub (Nov 2026).
 //
@@ -101,6 +102,8 @@ export default function LiftPlanDrawingExamplesPage() {
           </ul>
         </div>
       </section>
+
+      <CompanyFilm film="drawings-3d" path="/resources/lift-plan-drawing-examples" background="bg-slate-950" />
 
       {/* 3D videos of two of these lifts (Nov 2026) */}
       <section aria-labelledby="lift-plan-videos-heading" className="py-14 bg-slate-950 border-t border-slate-800">

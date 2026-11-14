@@ -7,6 +7,7 @@ import RelatedServices from '@/components/RelatedServices'
 import ProofStrip from '@/components/ProofStrip'
 import OurSoftware from '@/components/OurSoftware'
 import { ourSoftwareImageObjects } from '@/lib/ourSoftwareImages'
+import CompanyFilm from '@/components/CompanyFilm'
 
 export const metadata = {
   // SEO fix (Jun 2026): differentiated from the homepage, which targets the
@@ -209,6 +210,8 @@ export default function LiftPlansPage() {
           </div>
         </div>
       </section>
+
+      <CompanyFilm film="lift-plans" path="/services/lift-plans" background="bg-slate-950" />
       <ProofStrip id="hebditch" />
 
       {/* Pillar intro — keyword-rich body copy targeting the high-volume

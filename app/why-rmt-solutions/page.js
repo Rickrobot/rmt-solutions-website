@@ -16,6 +16,7 @@ import InlineQuoteForm from '@/components/InlineQuoteForm'
 import ProofStrip from '@/components/ProofStrip'
 import OurSoftware from '@/components/OurSoftware'
 import CredentialChips from '@/components/CredentialChips'
+import CompanyFilm from '@/components/CompanyFilm'
 
 // "Why choose RMT" page (Nov 2026).
 //
@@ -366,6 +367,8 @@ export default function WhyRmtSolutionsPage() {
           </ul>
         </div>
       </section>
+
+      <CompanyFilm film="software" path="/why-rmt-solutions" background="bg-slate-950" />
 
       <OurSoftware compact />
 

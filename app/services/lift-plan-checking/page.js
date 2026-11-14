@@ -7,6 +7,7 @@ import LiftCheckFlow from '@/components/LiftCheckFlow'
 import ProofStrip from '@/components/ProofStrip'
 import OurSoftware from '@/components/OurSoftware'
 import { ourSoftwareImageObjects } from '@/lib/ourSoftwareImages'
+import CompanyFilm from '@/components/CompanyFilm'
 
 export const metadata = {
   // Nov 2026: "lift plan review" (about position 8) was landing on the mobile
@@ -215,6 +216,8 @@ export default function LiftPlanCheckingPage() {
           </div>
         </div>
       </section>
+
+      <CompanyFilm film="reviews" path="/services/lift-plan-checking" background="bg-slate-950" />
       <ProofStrip id="banting" />
 
       {/* Trust strip */}

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Award, Clock, Users, Shield, ArrowRight } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 import CredentialChips from '@/components/CredentialChips'
+import CompanyFilm from '@/components/CompanyFilm'
 
 export const metadata = {
   title: 'About | CPCS Appointed Person, 35 Years',
@@ -149,6 +150,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <CompanyFilm film="software" path="/about" background="bg-slate-950" />
 
       {/* About Content */}
       <section className="py-24 bg-slate-950">
