@@ -182,6 +182,7 @@ export default function SteelErectionPage() {
         </div>
       </section>
       <ProofStrip id="liddell" />
+      <LiftPlanVideo slug="steelcad-steel-erection-lift-plan-3d" background="bg-slate-950" />
       <LiftPlanVideo slug="steel-erection-lift-plan-3d" />
 
       {/* Services */}
