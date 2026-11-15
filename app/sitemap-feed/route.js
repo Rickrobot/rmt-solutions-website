@@ -145,7 +145,7 @@ const LOCATION_SLUGS = [
 ];
 
 const BLOG_POSTS = [
-  { slug: 'rmt-lift-planning-software-development',                          date: '2026-11-09' },
+  { slug: 'rmt-lift-planning-software-development',                          date: '2026-11-15' },
   { slug: 'lifting-people-man-baskets',                                      date: '2026-07-08' },
   { slug: 'cpa-hire-vs-contract-lift-appointed-person', date: '2026-07-26' },
   { slug: 'cdm-2015-lifting-operations',                                     date: '2026-07-08' },
