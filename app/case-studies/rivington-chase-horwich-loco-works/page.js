@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import CaseStudyMachines, { machineKeywords } from '@/components/CaseStudyMachines'
 import {
   ArrowRight,
   CheckCircle,
@@ -20,6 +21,32 @@ const AERIAL_IMAGE = '/images/rivington-chase-horwich-aerial.jpg'
 // so the page is never broken. Set it, commit and push to switch on the video.
 const VIDEO_ID = 'SWiyDu49WyM'
 
+const MACHINES = [
+  {
+    type: "Mobile cranes",
+    items: [
+      "Grove GMK5200-1 (precast floor slabs and stairs)",
+      "Liebherr LTM 1040-2.1 (roof trusses and dormers)"
+    ]
+  },
+  {
+    type: "Telehandlers",
+    items: [
+      "JCB 540-180",
+      "JCB 540-140",
+      "JCB 531-70",
+      "JCB 525-60 Hi-Viz"
+    ]
+  },
+  {
+    type: "Lorry loaders",
+    items: [
+      "Fassi F820RA.2.26",
+      "Fassi F710RA.2.26"
+    ]
+  }
+]
+
 export const metadata = {
   title: { absolute: 'Rivington Chase, Horwich — Lift Planning | RMT Solutions' },
   description:
@@ -35,6 +62,7 @@ export const metadata = {
     'Bolton at Home',
     'Irwell Valley Homes',
     'crane and excavator lift plans',
+    ...machineKeywords(MACHINES),
   ],
   alternates: { canonical: URL },
   openGraph: {
@@ -433,6 +461,8 @@ export default function RivingtonChaseCaseStudyPage() {
           </p>
         </div>
       </section>
+
+      <CaseStudyMachines groups={MACHINES} />
 
       {/* CTA */}
       <section className="py-24 bg-slate-950">

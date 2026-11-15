@@ -1,10 +1,45 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import CaseStudyMachines, { machineKeywords } from '@/components/CaseStudyMachines'
 import { ArrowRight, CheckCircle, MapPin, ShieldCheck, ClipboardCheck, Building2 } from 'lucide-react'
 
 const SITE = 'https://www.rmtsafetysolutions.com'
 const URL = `${SITE}/case-studies/chorlton-baths-balcony-lift`
 const HERO_IMAGE = '/images/chorlton-baths-balcony-lift.jpg'
+
+const MACHINES = [
+  {
+    type: "Mobile cranes",
+    items: [
+      "Tadano ATF 90G-4 (steel balconies)",
+      "Liebherr LTM 1060-3.1 (two cranes, Block B)",
+      "Liebherr LTM 1050-3.1 (roofing)"
+    ]
+  },
+  {
+    type: "Telehandlers",
+    items: [
+      "JCB 540-180 Hi-Viz",
+      "JCB 535-95"
+    ]
+  },
+  {
+    type: "Lorry loaders",
+    items: [
+      "PM 65026 SP on a DAF CF 460",
+      "Fassi F710RA.2.26",
+      "Fassi F545"
+    ]
+  },
+  {
+    type: "Hoists and access",
+    items: [
+      "CM Lodestar electric chain hoist (lifting gantry)",
+      "Minifor TR30S hoist",
+      "JLG 800AJ boom lift"
+    ]
+  }
+]
 
 export const metadata = {
   title: 'Chorlton Baths Balcony Lift | Case Study',
@@ -20,6 +55,7 @@ export const metadata = {
     'steel balcony lifting operation',
     'BS 7121 case study',
     'lifting operations site visit Manchester',
+    ...machineKeywords(MACHINES),
   ],
   alternates: {
     canonical: URL,
@@ -117,7 +153,7 @@ export default function ChorltonBathsBalconyLiftPage() {
     { label: 'Location', value: 'Former Chorlton Baths, Manchester M21' },
     { label: 'Main contractor', value: 'Caddick Construction' },
     { label: 'Scheme', value: '£14m extra care, 50 apartments' },
-    { label: 'Lifting equipment', value: 'Mobile crane' },
+    { label: 'Lifting equipment', value: 'Tadano ATF 90G-4 mobile crane' },
     { label: 'RMT role', value: 'Site verification visit' },
   ]
 
@@ -314,6 +350,8 @@ export default function ChorltonBathsBalconyLiftPage() {
           </div>
         </div>
       </section>
+
+      <CaseStudyMachines groups={MACHINES} />
 
       {/* Outcome */}
       <section className="py-24 bg-slate-950">

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import CaseStudyMachines, { machineKeywords } from '@/components/CaseStudyMachines'
 import {
   ArrowRight,
   CheckCircle,
@@ -17,6 +18,68 @@ const HERO_IMAGE = '/images/caddick-tawd-valley-junction-4-hero.jpg'
 const AERIAL_IMAGE = '/images/caddick-tawd-valley-junction-4-aerial.jpg'
 const VIDEO_ID = 'mhVvcC2gYsI'
 
+const MACHINES = [
+  {
+    type: "Mobile cranes",
+    items: [
+      "Liebherr LTM 1060-3.1",
+      "Tadano ATF 60G-3",
+      "Tadano ATF 70G-4"
+    ]
+  },
+  {
+    type: "City and mobile tower cranes",
+    items: [
+      "Spierings SK1265-AT6",
+      "Spierings SK599",
+      "Spierings SK377-AT3",
+      "Liebherr MK 140"
+    ]
+  },
+  {
+    type: "Telehandlers",
+    items: [
+      "JCB 540-200",
+      "JCB 540-170",
+      "JCB 540-140 Hi-Viz",
+      "JCB 535-95",
+      "JCB 531-70",
+      "Merlo P40.17",
+      "Manitou MT625T"
+    ]
+  },
+  {
+    type: "Excavators",
+    items: [
+      "Hitachi ZX225USLC-7",
+      "Hitachi ZX135US-7B",
+      "Komatsu PC290LC-11",
+      "Case CX130E (Engcon EC214 tiltrotator)"
+    ]
+  },
+  {
+    type: "Lorry loaders",
+    items: [
+      "Fassi F820RA.2.26",
+      "Fassi F710RA.2.26",
+      "Fassi F660RA.2.26",
+      "Fassi F455A",
+      "Fassi F395A.2.24",
+      "Palfinger PK 78002 SH",
+      "Palfinger PK 24001 HP-G",
+      "HIAB 166 Hi Duo"
+    ]
+  },
+  {
+    type: "MEWPs moved by telehandler",
+    items: [
+      "Skyjack SJIII 4632",
+      "Genie GS-3246",
+      "Dingli JCPT1212PA"
+    ]
+  }
+]
+
 export const metadata = {
   title: 'Caddick Tawd Valley Junction 4 | Case Study',
   // ~155 chars — keeps the SERP snippet from being truncated by Google.
@@ -33,6 +96,7 @@ export const metadata = {
     'drone aerial site survey construction',
     'West Lancashire construction lift planning',
     'Tawd Valley Developments',
+    ...machineKeywords(MACHINES),
   ],
   alternates: {
     canonical: URL,
@@ -617,6 +681,8 @@ export default function CaddickTawdValleyJunction4Page() {
           </p>
         </div>
       </section>
+
+      <CaseStudyMachines groups={MACHINES} />
 
       {/* CTA */}
       <section className="py-24 bg-slate-950">
