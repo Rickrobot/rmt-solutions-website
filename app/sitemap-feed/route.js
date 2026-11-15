@@ -3,6 +3,7 @@ import { ourSoftwareImageUrls } from '@/lib/ourSoftwareImages';
 import { blogPosts } from '@/lib/blogPosts';
 import { blogLeadImageSet } from '@/lib/blogLeadImages';
 import { liftPlanVideos, LIFT_PLAN_VIDEOS_PATH } from '@/lib/liftPlanVideos';
+import { companyFilms } from '@/components/CompanyFilm';
 
 // Every image a blog post shows, read from the post itself (Nov 2026 image
 // SEO round): the lead image, its 16:9 / 4:3 / 1:1 versions (or the post's
@@ -188,7 +189,32 @@ function escapeXml(value) {
     .replace(/'/g, '&apos;');
 }
 
+// Company films (Nov 2026): the RMT Solutions films embedded on these pages.
+// Each page gets a video entry and a lastmod no earlier than the day the film
+// went on it, so Google re-crawls it.
+const FILM_PAGES = {
+  '': ['hero'],
+  '/services/lift-plans': ['lift-plans'],
+  '/services/lift-plan-checking': ['reviews'],
+  '/resources/lift-plan-drawing-examples': ['drawings-3d'],
+  '/why-rmt-solutions': ['software'],
+  '/about': ['software'],
+};
+const FILMS_ADDED = '2026-11-14';
+function filmVideos(loc) {
+  const path = loc.replace(BASE_URL, '').replace(/\/$/, '');
+  return (FILM_PAGES[path] || []).map(key => {
+    const f = companyFilms[key];
+    return { ...f, duration: `PT${Math.floor(f.seconds / 60) ? Math.floor(f.seconds / 60) + 'M' : ''}${f.seconds % 60}S` };
+  });
+}
+
 function buildUrlEntry({ loc, lastmod, changefreq, priority, images, videos }) {
+  const films = filmVideos(loc);
+  if (films.length) {
+    videos = [...(videos || []), ...films];
+    if (!lastmod || lastmod < FILMS_ADDED) lastmod = FILMS_ADDED;
+  }
   const lines = [
     '  <url>',
     `    <loc>${escapeXml(loc)}</loc>`,
