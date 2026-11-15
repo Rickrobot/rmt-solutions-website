@@ -28,14 +28,17 @@ export function generateMetadata({ params }) {
     title: { absolute: `${video.metaTitle} | RMT Solutions` },
     description: video.metaDescription,
     alternates: { canonical: url },
+    // Nov 2026: 'website' with the thumbnail only. With type video.other and an
+    // og:video pointing at the YouTube embed, LinkedIn's Post Inspector found
+    // "no image" and shared links showed as a blank card. Google's video
+    // thumbnail comes from the VideoObject JSON-LD (lib/liftPlanVideos.js), not from these tags.
     openGraph: {
-      type: 'video.other',
+      type: 'website',
       title: video.title,
       description: video.metaDescription,
       url,
       siteName: 'RMT Solutions - Lift Planning Specialists',
       images: [{ url: `${SITE}${video.thumbnail}`, width: 1280, height: 720, alt: video.title }],
-      videos: [{ url: `https://www.youtube.com/embed/${video.youtubeId}`, width: 1280, height: 720 }],
     },
   }
 }
