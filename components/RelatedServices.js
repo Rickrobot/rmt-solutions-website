@@ -60,6 +60,10 @@ const ALL_SERVICES = {
     title: 'Telehandler Lift Plans',
     description: 'Suspended-load lift plans for telescopic handlers on hook duties. CPCS A77C compliant.',
   },
+  'forklift-lift-plans': {
+    title: 'Forklift Lift Plans',
+    description: 'Lift plans for counterbalance and rough-terrain forklifts: machinery moves, vehicle loading and fork-mounted jibs. LOLER 1998.',
+  },
   'lorry-loader-lift-plans': {
     title: 'Lorry Loader Lift Plans',
     description: 'Site-specific lift plans for HIAB and vehicle-mounted articulated cranes. Generic delivery plans also available.',
@@ -93,10 +97,11 @@ const RELATED_MAP = {
   'steel-erection':            ['tandem-lift-plans', 'tower-crane', 'method-statements-rams'],
   'tandem-lift-plans':         ['steel-erection', 'mobile-crane-lift-plans', 'lift-plans', 'appointed-person'],
   'excavator-lift-plans':      ['lift-plans', 'telehandler-lift-plans', 'lift-plan-checking'],
-  'telehandler-lift-plans':    ['excavator-lift-plans', 'lorry-loader-lift-plans', 'lift-plans'],
+  'telehandler-lift-plans':    ['excavator-lift-plans', 'lorry-loader-lift-plans', 'forklift-lift-plans'],
+  'forklift-lift-plans':       ['telehandler-lift-plans', 'overhead-gantry-crane-lift-plans', 'lift-plans'],
   'lorry-loader-lift-plans':   ['telehandler-lift-plans', 'mobile-crane-lift-plans', 'lift-plans'],
   'mobile-crane-lift-plans':   ['tower-crane', 'tandem-lift-plans', 'lift-plans', 'steel-erection'],
-  'overhead-gantry-crane-lift-plans': ['lift-plans', 'lift-plan-checking', 'steel-erection'],
+  'overhead-gantry-crane-lift-plans': ['lift-plans', 'forklift-lift-plans', 'lift-plan-checking'],
   'aerial-site-surveys':       ['lift-plans', 'mobile-crane-lift-plans', 'tower-crane'],
 }
 

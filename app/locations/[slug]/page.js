@@ -311,6 +311,7 @@ const SERVICE_LINKS = [
   { slug: 'mobile-crane-lift-plans',   title: 'Mobile Crane Lift Plans' },
   { slug: 'excavator-lift-plans',      title: 'Excavator Lift Plans' },
   { slug: 'telehandler-lift-plans',    title: 'Telehandler Lift Plans' },
+  { slug: 'forklift-lift-plans',       title: 'Forklift Lift Plans' },
   { slug: 'lorry-loader-lift-plans',   title: 'Lorry Loader Lift Plans' },
   { slug: 'aerial-site-surveys',       title: 'Aerial Site Surveys' },
 ]

@@ -1,0 +1,85 @@
+SEO FIXES — ROUND 16 (20 November 2026)
+=======================================
+
+NEW: Forklift lift plans — service page, template page and Word template
+
+From the November 2026 website review, section 6.1. Verified against a real
+`next build`: 110 pages, compiled clean, 0 new dead internal links, titles and
+descriptions inside their limits, structured data parses on both new pages.
+
+
+WHY
+--------------------------------------------------------------------------
+Search Console, UK, 21 Oct – 17 Nov 2026:
+
+  "forklift lifting plan"   55 impressions, position 5.5
+  "forklift lift plan"      50 impressions, position 7.9
+
+Both were landing on the generic template page because the site had no
+forklift page. QA Weldtech's enquiry of 17 Nov included a forklift.
+
+
+WHAT IS NEW
+--------------------------------------------------------------------------
+  NEW  app/services/forklift-lift-plans/page.js
+       /services/forklift-lift-plans
+       "Forklift Lift Plans UK | From £200 + VAT" (56 chars with suffix)
+       ~2,250 words. Service, FAQPage (8 questions, all visible on the page)
+       and BreadcrumbList schema. Inline quote form, related services.
+
+  NEW  app/resources/forklift-lift-plan-templates/page.js
+       /resources/forklift-lift-plan-templates
+       "Free Forklift Lift Plan Template (Word) UK" (58 chars with suffix)
+       FAQPage (4), DigitalDocument and BreadcrumbList schema.
+
+  NEW  public/downloads/forklift-lift-plan-template.docx
+       8 pages, 15 sections: scope, operation type, truck details (TE,
+       PUWER, pre-use checks), load and actual load centre, capacity check
+       with a lift / do-not-lift result, forks and attachments (incl.
+       fork-mounted jib and accessories schedule), ground/floor/route,
+       vehicle loading, personnel, 15 hazards with controls, 11-step method,
+       full-page layout box, emergencies, briefing record, sign-off.
+       Downloads are picked up by the existing template_download tracking.
+
+PLANNING BASIS (deliberate)
+  A forklift is not a crane, so BS 7121 and its lift categories are NOT
+  used. Both pages and the template rest on LOLER 1998, ACOP L113,
+  ACOP L117 and the manufacturer's instructions. Every capacity figure is
+  taken from the manufacturer's data for that truck and attachment — the
+  template tells the user not to estimate a reduced capacity by formula.
+
+FACTS CHECKED AGAINST HSE / CPCS
+  - Forklift lifting = lifting equipment under LOLER; also work equipment
+    under PUWER (brakes, steering, tyres).
+  - Thorough examination of chains, forks, mast/cylinders and attachments
+    every 12 months or per a written scheme; accessories and people-lifting
+    every 6 months (HSE lifting FAQ and thorough examination pages).
+  - ACOP L117 Rider-operated lift trucks (2013).
+  - CPCS A16 = industrial counterbalance forklift; A14 = rough-terrain
+    masted forklift.
+  - People never lifted on forks; non-integrated platforms only in the
+    exceptional circumstances in HSE guidance.
+
+WIRED IN (modified)
+  components/Header.js            services menu, after Telehandler
+  components/Footer.js            footer services list
+  components/RelatedServices.js   new entry; shown from telehandler and
+                                  overhead/gantry crane pages
+  app/sitemap-feed/route.js       SERVICE_SLUGS + RESOURCE_ROUTES
+  app/services/page.js            service card ("By plant type")
+  app/locations/[slug]/page.js    service list on the three city pages
+  app/page.js                     homepage lift plan quick links
+  app/resources/page.js           hub intro line + template card
+  app/resources/lift-plan-templates/page.js   equipment template list
+
+
+AFTER DEPLOY
+--------------------------------------------------------------------------
+  1. Search Console > URL Inspection > Request indexing for
+       /services/forklift-lift-plans
+       /resources/forklift-lift-plan-templates
+  2. Resubmit the sitemap.
+  3. Optional: `npm run indexnow` for Bing.
+  4. Watch "forklift lifting plan" / "forklift lift plan" in the weekly
+     website report. They should move from the generic template page to
+     the new pages.

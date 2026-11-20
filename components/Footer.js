@@ -7,6 +7,7 @@ export default function Footer() {
     { name: 'Same Day & Urgent Lift Plans', href: '/services/urgent-lift-plans' },
     { name: 'Excavator Lift Plans', href: '/services/excavator-lift-plans' },
     { name: 'Telehandler Lift Plans', href: '/services/telehandler-lift-plans' },
+    { name: 'Forklift Lift Plans', href: '/services/forklift-lift-plans' },
     { name: 'Lorry Loader Lift Plans', href: '/services/lorry-loader-lift-plans' },
     { name: 'Mobile Crane Lift Plans', href: '/services/mobile-crane-lift-plans' },
     { name: 'Overhead & Gantry Crane Lift Plans', href: '/services/overhead-gantry-crane-lift-plans' },

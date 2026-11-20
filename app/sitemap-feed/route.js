@@ -80,6 +80,7 @@ const SERVICE_SLUGS = [
   'appointed-person',
   'excavator-lift-plans',
   'telehandler-lift-plans',
+  'forklift-lift-plans',
   'lorry-loader-lift-plans',
   'mobile-crane-lift-plans',
   'overhead-gantry-crane-lift-plans',
@@ -113,6 +114,8 @@ const RESOURCE_ROUTES = [
   { path: '/resources/excavator-rci-guide',                priority: '0.7' },
   { path: '/resources/excavator-safety-devices',           priority: '0.7' },
   { path: '/resources/telehandler-lift-plan-templates',    priority: '0.7' },
+  // Forklift template (Nov 2026 website review, section 6.1).
+  { path: '/resources/forklift-lift-plan-templates',       priority: '0.7', lastmod: '2026-11-20' },
   { path: '/resources/lorry-loader-lift-plan-templates',   priority: '0.7' },
   { path: '/resources/overhead-gantry-crane-lift-plan-templates', priority: '0.7' },
   // Generic template page (Jun 2026) — targets the head "lift plan

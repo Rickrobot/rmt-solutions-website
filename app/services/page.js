@@ -84,6 +84,14 @@ const SERVICES = [
       'CPCS Appointed Person telehandler lift plans for suspended loads, work platforms and specialist attachments. LOLER 1998 compliant.',
   },
   {
+    slug: 'forklift-lift-plans',
+    name: 'Forklift Lift Plans',
+    icon: ClipboardCheck,
+    category: 'By plant type',
+    blurb:
+      'Lift plans for counterbalance and rough-terrain masted forklifts: machinery moves, vehicle loading, fork-mounted jibs and lifts over suspended floors. LOLER 1998.',
+  },
+  {
     slug: 'lorry-loader-lift-plans',
     name: 'Lorry Loader Lift Plans',
     icon: ClipboardCheck,

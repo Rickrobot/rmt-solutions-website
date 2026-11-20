@@ -114,6 +114,11 @@ const equipmentTemplates = [
     desc: 'Suspended load and fork-carried operations, with load chart configuration fields.',
   },
   {
+    href: '/resources/forklift-lift-plan-templates',
+    title: 'Forklift Lift Plan Template',
+    desc: 'Counterbalance and rough-terrain masted forklifts: capacity at the real load centre, floors, vehicle loading and jibs.',
+  },
+  {
     href: '/resources/excavator-lift-plan-templates',
     title: 'Excavator Lift Plan Template',
     desc: '180° and 360° machines, ISO 10567 capacity verification and RCI checks.',

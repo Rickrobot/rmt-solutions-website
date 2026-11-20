@@ -215,6 +215,7 @@ export default function HomePage() {
   const liftPlanTypes = [
     { name: 'Excavator Lift Plans', href: '/services/excavator-lift-plans' },
     { name: 'Telehandler Lift Plans', href: '/services/telehandler-lift-plans' },
+    { name: 'Forklift Lift Plans', href: '/services/forklift-lift-plans' },
     { name: 'Mobile Crane Lift Plans', href: '/services/mobile-crane-lift-plans' },
     { name: 'Lorry Loader Lift Plans', href: '/services/lorry-loader-lift-plans' },
     { name: 'Same Day & Urgent Lift Plans', href: '/services/urgent-lift-plans' },

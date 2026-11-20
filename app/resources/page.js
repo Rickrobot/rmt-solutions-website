@@ -170,6 +170,7 @@ export default function ResourcesPage() {
               <Link href="/services/lift-plans" className="text-amber-400 hover:text-amber-300 underline">lift plan</Link>{' '}
               from a CPCS A61 Appointed Person from £200 — for a{' '}
               <Link href="/services/telehandler-lift-plans" className="text-amber-400 hover:text-amber-300 underline">telehandler</Link>,{' '}
+              <Link href="/services/forklift-lift-plans" className="text-amber-400 hover:text-amber-300 underline">forklift</Link>,{' '}
               <Link href="/services/lorry-loader-lift-plans" className="text-amber-400 hover:text-amber-300 underline">lorry loader (HIAB)</Link>,{' '}
               <Link href="/services/mobile-crane-lift-plans" className="text-amber-400 hover:text-amber-300 underline">mobile crane</Link>{' '}
               or{' '}
@@ -519,6 +520,27 @@ export default function ResourcesPage() {
                 LOLER compliant telehandler lift plan template for suspended
                 loads, work platforms and specialist attachments. Includes
                 A77C-aligned competence record fields.
+              </p>
+              <span className="inline-flex items-center text-amber-400 font-semibold">
+                Download template
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+              </span>
+            </Link>
+
+            <Link
+              href="/resources/forklift-lift-plan-templates"
+              className="group bg-gradient-to-br from-amber-500/10 to-slate-900 border border-amber-500/30 hover:border-amber-400 rounded-2xl p-8 transition"
+            >
+              <div className="w-14 h-14 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-5">
+                <Download className="w-7 h-7 text-amber-400" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-white group-hover:text-amber-400 transition mb-3">
+                Forklift Lift Plan Template
+              </h3>
+              <p className="text-gray-400 leading-relaxed mb-5">
+                Free Word lift plan template for counterbalance and rough-terrain
+                forklifts: capacity at the real load centre, floor and route
+                checks, vehicle loading and fork-mounted jibs.
               </p>
               <span className="inline-flex items-center text-amber-400 font-semibold">
                 Download template
