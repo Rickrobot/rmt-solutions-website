@@ -380,7 +380,7 @@ const faqData = {
   'lift-plan-cost-uk': [
     {
       q: 'How much does a lift plan cost in the UK?',
-      a: 'A professional lift plan in the UK starts from £200. Simple excavator and telehandler lift plans start from £200, lorry loader (HIAB) plans from £250, and mobile crane, complex and tandem operations are quoted individually after a brief scoping call.',
+      a: 'A professional lift plan in the UK starts from £200. Our excavator, telehandler, forklift and lorry loader (HIAB) lift plans are £200 + VAT, written remotely. Mobile crane and tower crane plans need a site visit and are quoted individually, as are complex and tandem operations.',
     },
     {
       q: 'Why are lift plans priced as fixed fees rather than hourly?',

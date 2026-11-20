@@ -72,21 +72,32 @@ export default function CookieConsent() {
           a phone screen, including the quote button, on every first visit.
           Same disclosures, fewer words, and the two buttons side by side at
           every width — equal size, equal weight. */}
-      <div className="mx-auto max-w-4xl rounded-2xl border border-slate-700 bg-slate-900/95 backdrop-blur p-4 sm:p-5 shadow-2xl">
-        <p className="text-gray-300 text-sm leading-relaxed">
+      {/* Slimmer again on phones (Nov 2026 website review, section 3.3): the box
+          still covered the quote button and phone number. Phones get the short
+          wording in smaller type with compact buttons; nothing is left out:
+          both tools are named, Clarity's recording is disclosed and Reject
+          stays equal to Accept. */}
+      <div className="mx-auto max-w-4xl rounded-xl sm:rounded-2xl border border-slate-700 bg-slate-900/95 backdrop-blur p-3 sm:p-5 shadow-2xl">
+        <p className="text-gray-300 text-xs sm:text-sm leading-snug sm:leading-relaxed">
           <span id="cookie-consent-heading" className="text-white font-semibold">Cookies: </span>
-          can we use Google Analytics and Microsoft Clarity (which records what you
-          do on the page) to see how the site is used? Neither is needed for the site
-          to work, and neither runs unless you say yes.{' '}
+          <span className="sm:hidden">
+            may we use Google Analytics and Microsoft Clarity (which records what you do
+            on the page)? Neither runs unless you say yes.{' '}
+          </span>
+          <span className="hidden sm:inline">
+            can we use Google Analytics and Microsoft Clarity (which records what you
+            do on the page) to see how the site is used? Neither is needed for the site
+            to work, and neither runs unless you say yes.{' '}
+          </span>
           <Link href="/privacy" className="text-amber-400 hover:text-amber-300 underline">
             What we collect and why
           </Link>.
         </p>
-        <div className="mt-3 sm:mt-4 grid grid-cols-2 sm:flex gap-2 sm:gap-3">
+        <div className="mt-2 sm:mt-4 grid grid-cols-2 sm:flex gap-2 sm:gap-3">
           <button
             type="button"
             onClick={accept}
-            className="sm:min-w-[160px] rounded-xl bg-amber-500 px-4 sm:px-5 py-2.5 sm:py-3 font-semibold text-slate-900 transition hover:bg-amber-400"
+            className="sm:min-w-[160px] rounded-lg sm:rounded-xl bg-amber-500 px-3 sm:px-5 py-2 sm:py-3 text-sm sm:text-base font-semibold text-slate-900 transition hover:bg-amber-400"
           >
             Yes, that&apos;s fine
           </button>
@@ -95,7 +106,7 @@ export default function CookieConsent() {
           <button
             type="button"
             onClick={reject}
-            className="sm:min-w-[160px] rounded-xl border border-slate-600 bg-slate-800 px-4 sm:px-5 py-2.5 sm:py-3 font-semibold text-white transition hover:bg-slate-700"
+            className="sm:min-w-[160px] rounded-lg sm:rounded-xl border border-slate-600 bg-slate-800 px-3 sm:px-5 py-2 sm:py-3 text-sm sm:text-base font-semibold text-white transition hover:bg-slate-700"
           >
             No, thank you
           </button>

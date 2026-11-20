@@ -73,7 +73,7 @@ const faqs = [
   },
   {
     q: 'How much does a lift plan cost?',
-    a: 'Lift plan costs depend on complexity. A simple excavator or telehandler lift plan with a generic site assessment typically costs £200 to £300. Mobile crane and lorry loader lift plans usually fall in the £250 to £500 range. Complex multi-pick operations, tandem lifts, contract lifts, or plans needing a site visit can cost £500 to £1,500. We provide a fixed price on every enquiry — no hourly billing.',
+    a: 'Remote lift plans for excavators, telehandlers, forklifts and lorry loaders (HIAB) are £200 + VAT, written from your photographs, drawings and load information. Mobile crane and tower crane lift plans need a site visit to assess ground, access and set-up, so they are quoted per job, as are tandem lifts and complex multi-pick operations. We provide a fixed price on every enquiry — no hourly billing.',
   },
   {
     q: 'How long does it take to write a lift plan?',
@@ -89,7 +89,7 @@ const faqs = [
   },
   {
     q: 'Do you need a site visit to write a lift plan?',
-    a: 'For straightforward lifts with good site information and clear photographs or drawings, a site visit is not always required. For complex operations — tandem lifts, lifts near live infrastructure, lifts on poor ground, or anything outside routine practice — a site visit is recommended and is included in the quoted price. We discuss this on every enquiry before agreeing the scope.',
+    a: 'Not for most plans. Excavator, telehandler, forklift and lorry loader lift plans are written remotely from clear photographs, drawings and load information. Mobile crane and tower crane lift plans need a site visit to assess ground conditions, access and set-up; the visit is included in the quoted price. We confirm the scope on every enquiry before work starts.',
   },
 ]
 
@@ -181,6 +181,7 @@ export default function LiftPlansPage() {
             alt="Mobile crane lift planning"
             fill
             className="object-cover opacity-20"
+            priority
           />
           <div className="absolute inset-0 construction-pattern" />
           <div className="absolute inset-0 grid-bg" />

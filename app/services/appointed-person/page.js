@@ -187,6 +187,7 @@ export default function AppointedPersonPage() {
             alt="CPCS A61 Appointed Person reviewing a lift plan on a UK construction site"
             fill
             className="object-cover opacity-20"
+            priority
           />
           <div className="absolute inset-0 construction-pattern" />
           <div className="absolute inset-0 grid-bg" />

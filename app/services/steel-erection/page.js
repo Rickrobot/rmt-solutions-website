@@ -156,6 +156,7 @@ export default function SteelErectionPage() {
             alt="Steel erection with mobile crane"
             fill
             className="object-cover opacity-20"
+            priority
           />
           <div className="absolute inset-0 construction-pattern" />
           <div className="absolute inset-0 grid-bg" />

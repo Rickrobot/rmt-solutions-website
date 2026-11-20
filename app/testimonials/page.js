@@ -62,7 +62,7 @@ const aggregateRatingJsonLd = {
     ratingValue: '5.0',
     reviewCount: String(testimonials.length),
     bestRating: '5',
-    worstRating: '5',
+    worstRating: '1',
   },
 }
 

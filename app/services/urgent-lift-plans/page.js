@@ -102,7 +102,7 @@ const PAGE_FAQS = [
   },
   {
     q: 'Do you charge extra for urgent work?',
-    a: 'Standard prices apply to same-day and next-day work in almost every case — excavator and telehandler plans from £200 + VAT, lorry loader from £250 + VAT. Genuine out-of-hours work, meaning evenings and weekends, is agreed on the call before anything starts. You will not receive an invoice with a surcharge you were not told about.',
+    a: 'Standard prices apply to same-day and next-day work in almost every case — excavator, telehandler, forklift and lorry loader plans £200 + VAT. Genuine out-of-hours work, meaning evenings and weekends, is agreed on the call before anything starts. You will not receive an invoice with a surcharge you were not told about.',
   },
   {
     q: 'Do you work evenings and weekends?',
@@ -387,8 +387,8 @@ export default function UrgentLiftPlansPage() {
           </h2>
           <div className="space-y-5 text-gray-300 leading-relaxed text-lg">
             <p>
-              Standard prices apply to same-day and next-day work in almost every case — excavator and
-              telehandler plans from £200 + VAT, lorry loader and HIAB from £250 + VAT, mobile crane
+              Standard prices apply to same-day and next-day work in almost every case — excavator,
+              telehandler, forklift and lorry loader plans £200 + VAT; mobile crane, tower crane
               and complex lifts quoted individually. We publish our prices, which most of this market
               does not, and there is no surcharge for being in a hurry.
             </p>

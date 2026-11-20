@@ -18,7 +18,7 @@ const OG = '/images/case-studies/hs2-lorry-loader-lift-plan-og.jpg'
 export const metadata = {
   title: 'HS2 Lorry Loader Lift Plans | Case Study',
   description:
-    'Case study: lorry loader lift plans for a tyre-fitting specialist on HS2, rewritten to BS 7121-4, ALLMI and the joint venture’s standards, now accepted and in use.',
+    'Case study: HS2 lorry loader lift plans for a tyre-fitting specialist, rewritten to BS 7121-4, ALLMI and the joint venture’s standards and now in use.',
   keywords: [
     'HS2 lift plan',
     'lorry loader lift plan case study',

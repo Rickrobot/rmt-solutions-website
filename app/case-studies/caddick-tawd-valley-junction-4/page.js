@@ -460,7 +460,7 @@ export default function CaddickTawdValleyJunction4Page() {
                 </Link>{' '}
                 and{' '}
                 <Link
-                  href="/blog/what-is-loler-complete-guide"
+                  href="/blog/loler-acop-l113-explained"
                   className="text-amber-400 hover:text-amber-300 underline"
                 >
                   LOLER 1998

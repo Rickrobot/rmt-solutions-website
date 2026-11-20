@@ -75,7 +75,7 @@ const faqSchema = {
       name: 'When should I use a professional instead of this template?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Use a professional Appointed Person whenever the lift is Standard or Complex: near-capacity picks, poor or unverified ground, restricted sites with slew limitations, lifts near power lines or over occupied areas, tandem lifts, or whenever a principal contractor must approve the plan. A professional mobile crane lift plan with a site visit typically costs £250 to £500 — a fraction of one hour of crane standing time lost to a rejected plan.',
+        text: 'Use a professional Appointed Person whenever the lift is Standard or Complex: near-capacity picks, poor or unverified ground, restricted sites with slew limitations, lifts near power lines or over occupied areas, tandem lifts, or whenever a principal contractor must approve the plan. A professional mobile crane lift plan, site visit included, is quoted per job and typically costs less than an hour of crane standing time lost to a rejected plan.',
       },
     },
   ],
@@ -312,7 +312,7 @@ export default function MobileCraneLiftPlanTemplates() {
                 <Link href="/services/mobile-crane-lift-plans" className="text-amber-400 hover:text-amber-300 underline">
                   professional mobile crane lift plan service
                 </Link>{' '}
-                — site visit included, typically £250–£500. See{' '}
+                — site visit included, quoted per job. See{' '}
                 <Link href="/blog/lift-plan-cost-uk" className="text-amber-400 hover:text-amber-300 underline">
                   what lift plans cost
                 </Link>{' '}
@@ -357,7 +357,7 @@ export default function MobileCraneLiftPlanTemplates() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <InlineQuoteForm
             serviceName="Mobile Crane Lift Plan (from templates page)"
-            heading="Need it written with a site visit? Mobile crane plans £250-£500, 3-5 days"
+            heading="Need it written with a site visit? Mobile crane plans quoted per job, 3-5 days"
           />
         </div>
       </section>

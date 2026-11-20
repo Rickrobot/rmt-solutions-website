@@ -79,7 +79,7 @@ const PAGE_FAQS = [
   },
   {
     q: 'How much does a mobile crane lift plan cost?',
-    a: 'Mobile crane plans typically fall in the £250–£500 range, with complex operations such as tandem lifts quoted individually and usually £500–£1,500. You get a fixed written price within 4 working hours of sending the details — no hourly billing, and revisions arising from principal contractor review are included.',
+    a: 'Mobile crane lift plans need a site visit to assess ground conditions, access and the crane set-up, so each one is quoted per job, with the visit included in the price. Complex operations such as tandem lifts are also quoted individually. You get a fixed written price within 4 working hours of sending the details — no hourly billing, and revisions arising from principal contractor review are included.',
   },
   {
     q: 'How long does a mobile crane lift plan take?',
@@ -182,6 +182,7 @@ export default function MobileCraneLiftPlansPage() {
             alt="Mobile crane lifting operation on a UK construction site"
             fill
             className="object-cover opacity-20"
+            priority
           />
           <div className="absolute inset-0 construction-pattern" />
           <div className="absolute inset-0 grid-bg" />

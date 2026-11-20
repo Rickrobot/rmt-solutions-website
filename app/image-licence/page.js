@@ -14,7 +14,7 @@ import Link from 'next/link'
 export const metadata = {
   title: 'Image Licence',
   description:
-    'The terms RMT Solutions Ltd publishes its lift plan drawings and photographs under, what you can do without asking, and how to request permission to reuse an image.',
+    'The terms for RMT Solutions’ lift plan drawings and photographs: what you can do without asking, and how to request permission to reuse an image.',
   alternates: { canonical: 'https://www.rmtsafetysolutions.com/image-licence' },
   openGraph: {
     title: 'Image Licence | RMT Solutions',

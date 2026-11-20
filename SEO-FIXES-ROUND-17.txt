@@ -1,0 +1,57 @@
+SEO FIXES — ROUND 17 (20 November 2026)
+=======================================
+
+Quick fixes from the November 2026 website review, plus prices made
+consistent. Verified against a real `next build`: 110 pages, compiled clean,
+0 dead internal links (the 12 LOLER links that went through a redirect are
+fixed), every indexable title and description inside its limits.
+
+
+PRICES — ONE RULE, EVERYWHERE (Ricky, 20 Nov 2026)
+--------------------------------------------------------------------------
+  £200 + VAT: excavator, telehandler, forklift and lorry loader (HIAB) lift
+  plans, written remotely from the client's information.
+  Mobile crane and tower crane: need a site visit, so quoted per job with the
+  visit included. Tandem and complex lifts: quoted individually.
+
+  Removed: "lorry loader from £250", "£200–£300", "£250–£500", "£500–£1,500"
+  bands. Changed in:
+    app/page.js (FAQ, stat card)          app/services/lift-plans/page.js
+    app/services/lorry-loader-lift-plans  app/services/mobile-crane-lift-plans
+    app/services/urgent-lift-plans        app/locations/[slug]/page.js
+    app/resources/mobile-crane-lift-plan-templates/page.js
+    app/resources/page.js                 app/blog/page.js
+    app/blog/[slug]/page.js               lib/blogPosts.js (lift plan cost guide)
+
+
+QUICK FIXES
+--------------------------------------------------------------------------
+  Home page first screen   "Lift plans £200 + VAT · Reviews back in 24 hours ·
+                           Plans in 48 hours", and a line that mobile and
+                           tower crane plans include a site visit.
+  Cookie banner            Shorter wording, smaller type and compact buttons
+                           on phones. Both tools still named, Clarity's
+                           recording still disclosed, Reject still equal to
+                           Accept. Desktop unchanged.
+  Hero photos              `priority` on appointed-person, lift-plans,
+                           mobile-crane-lift-plans and steel-erection, so the
+                           first screen paints sooner on phones.
+  /resources title         "Free Lift Plan Templates (Word) UK | 8 Downloads"
+                           ("lift plan template" sat at position 2.4 with a
+                           3.9% click rate).
+  LOLER links              12 links now go straight to
+                           /blog/loler-acop-l113-explained instead of through
+                           the redirect; the blog index card for the deleted
+                           "What is LOLER" post is removed. (A proper LOLER
+                           guide is still on the list.)
+  Descriptions             HS2 case study and image licence trimmed under 155.
+  Title                    /resources/lift-plan-drawing-examples shortened.
+  Accessibility            Constructionline logo given its size; faint grey
+                           film caption text lightened.
+  Rating markup            worstRating 5 -> 1 on /testimonials.
+
+
+AFTER DEPLOY
+--------------------------------------------------------------------------
+  Request indexing for /resources and the home page if you want the new
+  title and price line picked up quickly. Nothing else needs doing.

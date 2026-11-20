@@ -386,8 +386,8 @@ export default function LocationPage({ params }) {
     {
       q: `Do you charge more for work in ${loc.city}?`,
       a: sameDay
-        ? `No. Prices are the same wherever the site is — excavator and telehandler plans from £200 + VAT, lorry loader from £250 + VAT, mobile crane and complex lifts quoted individually. There is no travel surcharge inside the North West.`
-        : `The plan itself costs the same wherever the site is — excavator and telehandler plans from £200 + VAT, lorry loader from £250 + VAT. Where a site visit is genuinely required we agree the travel cost with you in advance, in writing, before anything is booked. We do not apply a regional uplift to fees.`,
+        ? `No. Prices are the same wherever the site is — excavator, telehandler, forklift and lorry loader plans £200 + VAT, written remotely; mobile crane, tower crane and complex lifts quoted individually. There is no travel surcharge inside the North West.`
+        : `The plan itself costs the same wherever the site is — excavator, telehandler, forklift and lorry loader plans £200 + VAT, written remotely. Where a site visit is required, as it is for mobile crane and tower crane plans, we agree the travel cost with you in advance, in writing, before anything is booked. We do not apply a regional uplift to fees.`,
     },
     {
       q: `Will a plan from you be accepted by principal contractors in ${loc.city}?`,

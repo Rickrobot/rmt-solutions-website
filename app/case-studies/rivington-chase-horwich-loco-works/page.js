@@ -406,7 +406,7 @@ export default function RivingtonChaseCaseStudyPage() {
               BS 7121
             </Link>{' '}
             and{' '}
-            <Link href="/blog/what-is-loler-complete-guide" className="text-amber-400 hover:text-amber-300 underline">
+            <Link href="/blog/loler-acop-l113-explained" className="text-amber-400 hover:text-amber-300 underline">
               LOLER 1998
             </Link>{' '}
             before work proceeds.

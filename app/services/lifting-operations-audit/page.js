@@ -163,7 +163,7 @@ export default function LiftingOperationsAuditPage() {
             <Link href="/services/lifting-operations-audit" className="text-amber-400 hover:text-amber-300 underline">
               what to expect from a lifting operations audit
             </Link>, and our{' '}
-            <Link href="/blog/what-is-loler-complete-guide" className="text-amber-400 hover:text-amber-300 underline">
+            <Link href="/blog/loler-acop-l113-explained" className="text-amber-400 hover:text-amber-300 underline">
               complete guide to LOLER
             </Link>{' '}
             covers the regulations we audit against.

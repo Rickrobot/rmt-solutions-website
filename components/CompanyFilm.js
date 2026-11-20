@@ -132,7 +132,7 @@ export default function CompanyFilm({ film = 'hero', path = '/', background = 'b
           <p className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4">{v.eyebrow}</p>
           <h2 id={`film-${film}-heading`} className="font-display text-3xl sm:text-4xl font-bold text-white mb-5">{v.heading}</h2>
           <p className="text-gray-300 leading-relaxed mb-4">{v.text}</p>
-          <p className="text-gray-500 text-sm mb-6">{v.note ? v.note + ' ' : ''}{mins ? `${mins} min ` : ''}{secs} s.</p>
+          <p className="text-gray-400 text-sm mb-6">{v.note ? v.note + ' ' : ''}{mins ? `${mins} min ` : ''}{secs} s.</p>
           <div className="flex flex-col gap-3">
             <Link href="/contact" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold">
               Request a quote <ArrowRight className="w-5 h-5" aria-hidden="true" />

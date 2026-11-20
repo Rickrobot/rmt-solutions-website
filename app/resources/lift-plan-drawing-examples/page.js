@@ -25,7 +25,7 @@ const SETS = ORDER.map((id) => liftDrawingExamples.find((e) => e.id === id)).fil
 const FIRST = SETS[0].drawings[0]
 
 export const metadata = {
-  title: 'Lift Plan Drawing Examples | Crane, Excavator & More',
+  title: 'Lift Plan Drawing Examples | Cranes & Excavators',
   description:
     'Example lift plan drawings from a CPCS Appointed Person: elevations, exclusion zone plans, rigging and 3D views for cranes, excavators and lorry loaders.',
   alternates: { canonical: URL_ },

@@ -7,7 +7,7 @@ export const metadata = {
   // Fix #6, Jul 2026 SEO review: title and H1 were targeting different terms
   // ("free lift plan templates" vs "LOLER guidance"). Aligned, and the
   // description now mentions the permit-to-lift form as well.
-  title: 'Free Lift Plan Templates UK | LOLER Guidance',
+  title: 'Free Lift Plan Templates (Word) UK | 8 Downloads',
   description: 'Free downloadable lift plan templates, permit to lift forms, risk assessments and UK LOLER guidance for telehandlers, excavators and lorry loaders.',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/resources',
@@ -27,7 +27,7 @@ export default function ResourcesPage() {
       icon: Scale,
       category: 'Costs',
       title: 'How Much Does a Lift Plan Cost?',
-      description: 'UK lift plan prices explained with real numbers — from £200 for simple plans to £1,500 for complex operations, and what drives the price.',
+      description: 'UK lift plan prices explained with real numbers — £200 + VAT for remote plans, site-visit pricing for mobile and tower cranes, and what drives the price.',
       readTime: '8 min read',
       slug: 'lift-plan-cost-uk',
     },

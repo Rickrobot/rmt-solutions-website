@@ -12,14 +12,14 @@ export const metadata = {
   // service page — the old title only said "HIAB Plans". Leading with HIAB
   // puts the searched phrase in the title; the suffix keeps it at 49 chars.
   title: 'HIAB & Lorry Loader Lift Plans UK',
-  description: 'Lorry loader (HIAB) lift plans from £250 + VAT, by a CPCS Appointed Person. LOLER compliant plans for deliveries and site lifting.',
+  description: 'Lorry loader (HIAB) lift plans from £200 + VAT, by a CPCS Appointed Person. LOLER compliant plans for deliveries and site lifting.',
   keywords: 'lorry loader lift plan, HIAB lift plan, lorry mounted crane lift plan, loader crane lift plan, ALLMI lift plan',
   alternates: {
     canonical: 'https://www.rmtsafetysolutions.com/services/lorry-loader-lift-plans',
   },
   openGraph: {
     title: 'HIAB & Lorry Loader Lift Plans UK',
-    description: 'Lorry loader (HIAB) lift plans from £250 + VAT, by a CPCS Appointed Person. LOLER compliant plans for deliveries and site lifting.',
+    description: 'Lorry loader (HIAB) lift plans from £200 + VAT, by a CPCS Appointed Person. LOLER compliant plans for deliveries and site lifting.',
     url: 'https://www.rmtsafetysolutions.com/services/lorry-loader-lift-plans',
     images: ['/images/og-lift-planning.jpg'],
     siteName: 'RMT Solutions - Lift Planning Specialists',
@@ -45,7 +45,7 @@ const serviceSchema = {
     availability: 'https://schema.org/InStock',
     priceCurrency: 'GBP',
     price: '250',
-    description: 'Fixed-fee lorry loader (HIAB) lift plan from £250 plus VAT.',
+    description: 'Fixed-fee lorry loader (HIAB) lift plan from £200 plus VAT.',
   },
 }
 
@@ -146,7 +146,7 @@ export default function LorryLoaderLiftPlansPage() {
             industry experience. LOLER compliant plans for HIAB, Palfinger, Fassi, Atlas, and all lorry mounted crane operations.
           </p>
           <div className="mb-6">
-            <span className="inline-flex items-center bg-amber-500 text-slate-900 text-sm font-bold px-4 py-2 rounded-full">HIAB lift plans from £250 + VAT</span>
+            <span className="inline-flex items-center bg-amber-500 text-slate-900 text-sm font-bold px-4 py-2 rounded-full">HIAB lift plans from £200 + VAT</span>
           </div>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold px-8 py-3 rounded-lg font-medium transition-colors">

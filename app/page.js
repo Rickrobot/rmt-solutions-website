@@ -142,7 +142,7 @@ const faqJsonLd = {
       name: 'How much does a lift plan cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Excavator and telehandler lift plans start at £200 + VAT. Lorry loader and HIAB plans start at £250 + VAT. Mobile crane, tandem and complex lifts are quoted individually on a fixed-price basis, so there are no hourly surprises. We publish our prices, which most providers in this market do not.',
+        text: 'Excavator, telehandler, forklift and lorry loader (HIAB) lift plans are £200 + VAT, written remotely from your information. Mobile crane and tower crane work needs a site visit, so it is quoted per job on a fixed-price basis, as are tandem and complex lifts, so there are no hourly surprises. We publish our prices, which most providers in this market do not.',
       },
     },
     {
@@ -262,7 +262,7 @@ export default function HomePage() {
     { value: '35+', label: 'Years in construction', sublabel: 'Lifting operations on UK construction sites' },
     { value: '1,000+', label: 'Lift plans delivered', sublabel: 'Excavators to tandem crane lifts' },
     { value: String(testimonials.length), label: 'Named client reviews', sublabel: 'Caddick, Wates, Sunel and DGS site teams' },
-    { value: 'From £200', label: 'Published, fixed prices', sublabel: 'Excavator and telehandler lift plans, plus VAT' },
+    { value: 'From £200', label: 'Published, fixed prices', sublabel: 'Remote lift plans, plus VAT' },
   ]
 
   return (
@@ -327,6 +327,15 @@ export default function HomePage() {
                 steel erection planning, mobile crane and excavator lift plans.
               </p>
 
+              {/* Price and turnaround in the first screen (Nov 2026 website
+                  review, section 3.1). Remote plans only: mobile crane and tower
+                  crane work needs a site visit and is quoted per job. */}
+              <ul className="flex flex-wrap gap-2 mb-8 text-sm" aria-label="Prices and turnaround">
+                <li className="rounded-full bg-amber-500 px-3 py-1.5 font-bold text-slate-900">Lift plans £200 + VAT</li>
+                <li className="rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-gray-200">Reviews back in 24 hours</li>
+                <li className="rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-gray-200">Plans in 48 hours</li>
+              </ul>
+
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact" className="btn-primary flex items-center justify-center group">
                   Request a Lift Plan Quote
@@ -342,7 +351,7 @@ export default function HomePage() {
                 </a>
               </div>
               <p className="mt-4 text-sm text-gray-400">
-                Speak directly to a CPCS Appointed Person — same-day quotes UK-wide.
+                Turnaround in working hours from full job information. Mobile and tower crane plans include a site visit and are quoted per job.
               </p>
             </div>
 
@@ -417,7 +426,7 @@ export default function HomePage() {
             <span className="font-display font-bold text-lg">DGS</span>
             <span className="font-display font-bold text-lg">GMI</span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/constructionline-gold.png" alt="Constructionline Gold Member" className="h-10" loading="lazy" />
+            <img src="/images/constructionline-gold.png" alt="Constructionline Gold Member" width="204" height="103" className="h-10 w-auto" loading="lazy" />
           </div>
         </div>
       </section>

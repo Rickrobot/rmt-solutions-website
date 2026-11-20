@@ -247,7 +247,7 @@ const blogPosts = [
   {
     slug: 'lift-plan-cost-uk',
     title: 'How Much Does a Lift Plan Cost? UK Prices 2026',
-    excerpt: 'UK lift plan costs explained with real numbers: from £200 for excavator and telehandler plans, £250–£500 for mobile cranes and lorry loaders, and what drives the price — including the three ways to buy and the rejection cost nobody budgets for.',
+    excerpt: 'UK lift plan costs explained with real numbers: £200 + VAT for remote excavator, telehandler, forklift and lorry loader plans, site-visit pricing for mobile and tower cranes, and what drives the price — including the three ways to buy and the rejection cost nobody budgets for.',
     category: 'Services',
     readTime: '8 min read',
     date: 'June 11, 2026',
@@ -353,17 +353,6 @@ const blogPosts = [
     dateModified: 'January 31, 2026',
     image: '/images/blog/lift-plan-rigging-arrangement-drawing.webp',
     imageAlt: 'Rigging arrangement drawing showing two-leg chain slings, safety-lock hooks and lug centres on a transformer, with sling and shackle sizes checked against the load',
-  },
-  {
-    slug: 'what-is-loler-complete-guide',
-    title: 'What is LOLER? A Complete Guide for UK Contractors',
-    excerpt: 'Everything you need to know about LOLER regulations, compliance requirements, and why proper lift planning is essential for construction safety.',
-    category: 'Compliance',
-    readTime: '8 min read',
-    date: 'January 28, 2026',
-    dateModified: 'January 28, 2026',
-    image: '/images/services/loler-thorough-examination-lifting-equipment-uk.webp',
-    imageAlt: 'Competent person carrying out a LOLER thorough examination of lifting equipment on a UK site, inspecting a hook and chain sling for defects',
   },
   {
     slug: 'when-do-you-need-lift-plan',
