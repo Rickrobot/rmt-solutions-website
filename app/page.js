@@ -92,9 +92,13 @@ const jsonLd = {
   // sameAs disambiguates the Organization to Google's Knowledge Graph.
   // Add additional profiles (LinkedIn company page, X/Twitter, Facebook
   // business page, YouTube channel etc.) here as they go live.
+  // Nov 2026: the Google Business Profile is now linked by its permanent Maps
+  // listing ID (cid 9570864835309642056, decoded from the profile's own
+  // feature ID 0x21c79037b66c8b67:0x84d28adbede8a148) instead of a Google
+  // search-results URL, which carried a name the profile no longer uses.
   sameAs: [
     'https://find-and-update.company-information.service.gov.uk/company/08338653',
-    'https://www.google.com/search?q=RMT+Solutions+Ltd+-+Health+%26+Safety+Consultancy&stick=H4sIAAAAAAAA_-NgU1I1qDAyTDa3NDA2TzIzS7ZIMjO3MqiwMEkxskhMSUpNSbVINDSxWMSqH-QbohCcn1NakpmfV6zgU5KioKvgkZqYU5KhoKYQnJiWWlKp4AyUKs0pScxLrgQASkhtkFsAAAA',
+    'https://maps.google.com/?cid=9570864835309642056',
   ],
 }
 

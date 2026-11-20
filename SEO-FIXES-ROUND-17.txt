@@ -49,6 +49,10 @@ QUICK FIXES
   Accessibility            Constructionline logo given its size; faint grey
                            film caption text lightened.
   Rating markup            worstRating 5 -> 1 on /testimonials.
+  Business Profile link    Home page sameAs now points at the Google Business
+                           Profile by its permanent Maps listing
+                           (maps.google.com/?cid=9570864835309642056) instead
+                           of a Google search-results URL.
 
 
 AFTER DEPLOY
