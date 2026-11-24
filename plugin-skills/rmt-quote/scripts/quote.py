@@ -402,7 +402,8 @@ def credit_gate(spec, credit_path, total_inc_vat, at: dt.datetime):
                 "endole_due": "the client needs an Endole check (none on record, or over 30 days old) before work is quoted",
                 "confirm_identity": "the credit register only partly matches this client: confirm who it is with Ricky",
             }[gate]
-            problems.append(why + ". Record his answer as credit_override {decision, by, date}.")
+            problems.append(why + (". Do the Endole check with credit-watch, then re-run the credit check: this one cannot be overridden."
+                                   if gate == "endole_due" else ". Record his answer as credit_override {decision, by, date}."))
     else:
         problems.append(f"unrecognised credit gate {gate!r} in {credit_path}")
     if gate == "endole_due" and has_override:
