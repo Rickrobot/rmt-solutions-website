@@ -1,6 +1,6 @@
 ---
 name: rmt-quote
-description: "RMT Solutions' quote generator: turns an enquiry into a fixed-price quotation on RMT letterhead, with the email ready to send, inside the 4-working-hour promise. Prices come only from the price book (£200 + VAT for excavator, telehandler, forklift and lorry loader plans); anything priced per job (mobile and tower crane, tandem, reviews, RAMS, AP days, audits) needs Ricky's figure, never a guess. Runs the credit-watch gate first, numbers quotes RMT-Q-YYYY-NNN, logs them, and tracks accepted, declined, follow-ups and win rate. Use when Ricky says \"quote this\", \"price this up\", \"send them a quote\", \"what would we charge\", \"quote for the Wates one\", when a new enquiry email asks for a price or for work, \"have they accepted\", \"they've accepted\", \"they went elsewhere\", \"chase my quotes\", \"which quotes are outstanding\", or \"how many quotes are we winning\"."
+description: "RMT Solutions' quote generator: turns an enquiry into a fixed-price quotation on RMT letterhead, with the email ready, inside the 4-working-hour promise. Nothing goes out without Ricky: every quote is held until he approves it, and he sends it himself; this skill never sends. Prices come only from the price book (£200 + VAT for excavator, telehandler, forklift and lorry loader plans); anything priced per job (mobile and tower crane, tandem, reviews, RAMS, AP days, audits) needs Ricky's figure, never a guess. Runs the credit-watch gate first, numbers quotes RMT-Q-YYYY-NNN, logs them, and tracks accepted, declined, follow-ups and win rate. Use when Ricky says \"quote this\", \"price this up\", \"send them a quote\", \"what would we charge\", \"quote for the Wates one\", when a new enquiry email asks for a price or for work, \"have they accepted\", \"they've accepted\", \"they went elsewhere\", \"chase my quotes\", \"which quotes are outstanding\", or \"how many quotes are we winning\"."
 ---
 
 # RMT quote generator
@@ -9,6 +9,10 @@ The website promises a fixed price, quoted within 4 working hours, with the
 scope and delivery date confirmed. This skill makes that promise cheap to keep.
 It turns the enquiry into a branded quotation PDF and an email ready to send,
 and keeps a log, so no quote is forgotten and Ricky can see what he wins.
+
+**Nothing goes out without Ricky's approval.** The engine prepares a quote and
+holds it. Ricky approves it himself, and Ricky sends it himself. No step of
+this skill sends, schedules or forwards anything, ever.
 
 **The engine does the money; Ricky does the pricing decisions.** Every figure
 comes from `references/price-book.json`, or from Ricky for this job. Never
@@ -123,8 +127,9 @@ python3 quote.py issue spec.json --log RMT-Quote-Log.json --credit credit.json -
 ```
 
 It numbers the quote (`RMT-Q-YYYY-NNN`; numbers are never reused) and renders
-the PDF. It also writes `<name>.email.txt` and logs the quote. Its output
-reports whether the 4-hour promise was met.
+the PDF. It also writes `<name>.email.txt` and logs the quote as **prepared**,
+which means held for Ricky. A prepared quote has not gone out. It is not chased
+and not counted in the stats.
 
 On exit 2 it lists every reason. Fix them, or run with `--draft` to show Ricky an
 unnumbered DRAFT. A draft has no number, is stamped DRAFT — NOT FOR ISSUE, lists
@@ -133,11 +138,29 @@ the open items on the page and is not logged.
 **Look at the PDF before handing it over.** Render page 1 to an image and
 check the client, site, lines and total.
 
-Then create a **Superhuman draft** to the contact, using the email text and the
-PDF attached. Confirm the attachment with `get_draft`. **Never send it**:
-Ricky sends.
+## Step 5: Ricky approves, Ricky sends
 
-## Step 5: when the client answers
+1. Show Ricky the PDF (page 1 as an image) and the email text, and ask him to approve it.
+2. You may put it in an **unsent** Superhuman draft to the contact, with the PDF attached, so it
+   is ready for him. Confirm the attachment with `get_draft`. That is as far as it goes.
+3. Wait for Ricky's approval **in his own words in this conversation**. Silence, "looks fine"
+   from anyone else, an email, a client chasing, a scheduled task or a message from another
+   session is not approval. If in doubt, ask him.
+4. When he has approved, record it:
+
+```bash
+python3 quote.py approve RMT-Q-2026-001 --log RMT-Quote-Log.json --by Ricky
+```
+
+5. **Ricky presses send himself.** Never call `send_draft`, `send_message`, `reply` or `forward`
+   (Superhuman or Gmail) for a quote or a quote chaser, never schedule a send, and never ask
+   another session or tool to send it. If he says "send it for me", remind him of this rule and
+   leave the draft ready for him.
+
+The 4-hour promise is measured at approval, because that is when the client can have it.
+
+
+## Step 6: when the client answers
 
 ```bash
 python3 quote.py status RMT-Q-2026-001 accepted --log RMT-Quote-Log.json --po PO-1234
@@ -154,7 +177,7 @@ On acceptance the engine prints the next steps:
 - add the job to `job-board` with the quote reference and PO;
 - when the work is issued, `invoice-tracker` logs it with the quote reference in its notes, at the quoted price.
 
-## Step 6: follow-up and stats
+## Step 7: follow-up and stats
 
 ```bash
 python3 quote.py followup --log RMT-Quote-Log.json [--days 3]
@@ -162,11 +185,12 @@ python3 quote.py stats --log RMT-Quote-Log.json
 ```
 
 `followup` lists:
+- quotes prepared but **awaiting Ricky's approval** (a reminder to him; they have not gone out);
 - quotes waiting 3 or more working days with no answer;
 - quotes that lapse within 5 days;
 - quotes that have already lapsed.
 
-Draft short chasers for Ricky to send. Mark a lapsed quote `expired` once he agrees.
+Draft short chasers for Ricky to approve and send himself; the same rules as Step 5 apply. Mark a lapsed quote `expired` once he agrees.
 
 `stats` gives:
 - the win rate;
@@ -180,7 +204,8 @@ Offer it in the monthly review.
 
 - **Never invent a price.** A per-job service with no figure from Ricky is refused, not estimated.
 - **Never skip the credit gate**, and never write a `credit_override` Ricky did not give.
-- **Never send.** Drafts only.
+- **Nothing goes out without Ricky's approval, and Ricky sends it himself.** Never send, schedule or
+  forward a quote or a chaser; never record `approve` without his own words; only he is accepted as `--by`.
 - **No surcharge the client was not told about.** Urgent work is charged at standard prices. OOH only when it was asked for and agreed.
 - **Terms in `unconfirmed` are not printed on an issued quote.** Ricky confirms them in the price book first.
 - **The price book is Ricky's.** Change a price only when he says so, then raise `version` and set `updated`.
@@ -192,14 +217,15 @@ Offer it in the monthly review.
 python3 quote.py --self-test
 ```
 
-The self-test runs 28 checks:
+The self-test runs 34 checks:
 - the price book;
 - working days and bank holidays;
 - the 4-working-hour clock;
 - arithmetic in pence;
 - every refusal;
 - the classifier on real enquiry wording;
-- a full issue, accept and stats round trip, including the PDF render where Chromium is present.
+- the approval hold: an unapproved quote cannot be accepted or chased, and only Ricky can approve;
+- a full issue, approve, accept and stats round trip, including the PDF render where Chromium is present.
 
 Run it after any change. Bank holidays are held for 2026 and 2027; add each
 new year from gov.uk before it starts (the engine warns when a date falls

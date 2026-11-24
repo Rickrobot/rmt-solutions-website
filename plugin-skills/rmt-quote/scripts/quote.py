@@ -6,12 +6,18 @@ quote.py: RMT Solutions' quote engine
 Turns an enquiry into a fixed-price quotation on RMT letterhead, inside the
 4-working-hour promise, without ever inventing a price.
 
+Nothing goes out without Ricky. `issue` only prepares and holds a quote;
+`approve --by Ricky` records his approval; Ricky sends the email himself. This
+engine never sends anything, and nothing that uses it may send on his behalf.
+
     quote.py classify --text "<subject, body, filenames>"      suggest the lines and the questions to ask
     quote.py price    spec.json                                 validate a spec and print the totals (and the
                                                                 fee to pass to creditwatch.py --fee)
     quote.py issue    spec.json --log RMT-Quote-Log.json --credit credit.json [-o out.pdf] [--draft]
                                                                 gate, number, render the PDF, write the email
-                                                                text and log the quote
+                                                                text and log the quote as PREPARED (held)
+    quote.py approve  RMT-Q-2026-001 --log ... --by Ricky       Ricky's own approval; only then may it go out,
+                                                                and Ricky sends it himself
     quote.py status   RMT-Q-2026-001 accepted|declined|expired|withdrawn --log ... [--po ...] [--reason ...]
     quote.py followup --log ... [--days 3]                      quotes with no answer, and quotes about to lapse
     quote.py stats    --log ...                                 win rate, value won, 4-hour promise hit rate
@@ -37,7 +43,9 @@ PRICE_BOOK = SKILL / "references" / "price-book.json"
 
 REF_RE = re.compile(r"^RMT-Q-(\d{4})-(\d{3})$")
 PLACEHOLDER = re.compile(r"_{4,}|\bTBC\b|\bTBA\b|\bto be confirmed\b|\bXXX\b|\[(?!\[)[^\]]{1,80}\]", re.I)
-STATUSES = ("issued", "accepted", "declined", "expired", "withdrawn")
+STATUSES = ("prepared", "issued", "accepted", "declined", "expired", "withdrawn")
+# Only Ricky approves a quote to go out. Names accepted as Ricky for --by.
+APPROVERS = ("ricky", "ricky marsh", "michael marsh")
 CREDIT_OK = ("clear", "watch")
 CREDIT_MAX_AGE_H = 24
 PENNY = Decimal("0.01")
@@ -450,7 +458,7 @@ def build_record(spec, book, priced, at: dt.datetime, ref, gate, proforma):
         info.append({"service": "Also", "items": list(spec["info_needed_extra"])})
     valid_until = at.date() + dt.timedelta(days=book["quote_validity_days"])
     return {
-        "ref": ref, "rev": "A", "status": "issued" if ref else "draft",
+        "ref": ref, "rev": "A", "status": "prepared" if ref else "draft",
         "issued_at": at.isoformat(timespec="minutes"),
         "client": spec["client"], "site": spec["site"], "contract_no": spec.get("contract_no"),
         "summary": spec.get("summary") or "; ".join(f"{l['qty'].normalize()} × {l['name']}" for l in priced["lines"]),
@@ -550,11 +558,11 @@ def cmd_issue(a):
     mail_path = out_pdf.with_suffix(".email.txt")
     mail_path.write_text(mail, encoding="utf-8")
     if not a.draft:
-        rec["history"].append({"at": at.isoformat(timespec="minutes"), "status": "issued", "pdf": out_pdf.name})
+        rec["history"].append({"at": at.isoformat(timespec="minutes"), "status": "prepared", "pdf": out_pdf.name})
         log["quotes"].append(json.loads(json.dumps(rec, default=str)))
         save_json(a.log, log)
     sla = rec["sla"]
-    emit({"status": "draft" if a.draft else "issued", "ref": ref, "pdf": str(out_pdf), "email": str(mail_path),
+    emit({"status": "draft" if a.draft else "prepared_awaiting_ricky", "ref": ref, "pdf": str(out_pdf), "email": str(mail_path),
           "pages": info.get("pages"), "subtotal_ex_vat": str(rec["subtotal"]), "total_inc_vat": str(rec["total"]),
           "valid_until": rec["valid_until"].isoformat(), "credit_gate": gate,
           "payment": rec["payment"]["kind"],
@@ -562,8 +570,39 @@ def cmd_issue(a):
               {"due_by": sla["due_by"].isoformat(timespec="minutes"), "met": sla["met"],
                "working_hours_taken": sla["working_hours_taken"]},
           "open_items": problems if a.draft else [], "notes": rec["notes"],
-          "next": None if a.draft else "Send nothing yourself: create a Superhuman draft with the email text and the PDF attached, for Ricky to send."},
+          "next": None if a.draft else (
+              "NOT SENT and not approved. Show Ricky the PDF and the email text and wait for his own approval. "
+              "You may create an unsent Superhuman draft for him to look at; never send it, schedule it or ask "
+              "anything else to send it. When Ricky approves in his own words, run: quote.py approve "
+              + ref + " --by Ricky. Ricky sends the email himself.")},
          0)
+
+
+def cmd_approve(a):
+    """Ricky's approval: the only way a prepared quote becomes one that may go out."""
+    book, log = load_book(a.price_book), load_log(a.log)
+    q = find_quote(log, a.ref)
+    at = now(a.now)
+    if norm(a.by) not in APPROVERS:
+        fail("only Ricky approves a quote to go out: --by must be Ricky")
+    if q["status"] != "prepared":
+        fail(f"{a.ref} is {q['status']}; only a prepared quote can be approved")
+    q["status"] = "issued"
+    q["approved_by"], q["approved_at"] = a.by, at.isoformat(timespec="minutes")
+    # The 4-hour promise is about when the client gets the quote, so measure it at approval.
+    sla = q.get("sla") or {}
+    if sla.get("received"):
+        rec_t = dt.datetime.fromisoformat(str(sla["received"]))
+        due = dt.datetime.fromisoformat(str(sla["due_by"]))
+        sla["met"] = at <= due
+        sla["working_hours_taken"] = working_hours_between(rec_t, at, book["working_hours"])
+        sla["measured_at"] = "approval"
+    q["history"].append({"at": q["approved_at"], "status": "issued", "approved_by": a.by,
+                         **({"note": a.note} if a.note else {})})
+    save_json(a.log, log)
+    emit({"status": "approved", "ref": q["ref"], "approved_by": a.by,
+          "four_hour_promise_met": sla.get("met"),
+          "next": "Ricky sends the email himself from Superhuman. Do not send it for him."})
 
 
 def cmd_status(a):
@@ -572,8 +611,10 @@ def cmd_status(a):
     at = now(a.now)
     if a.new_status == q["status"]:
         fail(f"{a.ref} is already {q['status']}")
-    if q["status"] != "issued":
-        fail(f"{a.ref} is {q['status']}; only an issued quote can change status")
+    if q["status"] == "prepared" and a.new_status != "withdrawn":
+        fail(f"{a.ref} has not been approved by Ricky, so it has not gone out: it can only be withdrawn")
+    if q["status"] not in ("prepared", "issued"):
+        fail(f"{a.ref} is {q['status']}; only a prepared or issued quote can change status")
     if a.new_status == "declined" and not (a.reason or "").strip():
         fail("give --reason for a declined quote (price, timing, went elsewhere ...): it is what the stats learn from")
     q["status"] = a.new_status
@@ -597,11 +638,15 @@ def cmd_status(a):
 
 def cmd_followup(a):
     log, at = load_log(a.log), now(a.now)
-    chase, lapsing, lapsed = [], [], []
+    chase, lapsing, lapsed, waiting = [], [], [], []
     for q in log["quotes"]:
+        if q["status"] == "prepared":
+            waiting.append({"ref": q["ref"], "client": q["client"]["name"], "site": q["site"],
+                            "total_ex_vat": q["subtotal"], "prepared": q["issued_at"]})
+            continue
         if q["status"] != "issued":
             continue
-        issued = dt.date.fromisoformat(q["issued_at"][:10])
+        issued = dt.date.fromisoformat((q.get("approved_at") or q["issued_at"])[:10])
         valid = dt.date.fromisoformat(str(q["valid_until"])[:10])
         waited = working_days_between(issued, at.date())
         row = {"ref": q["ref"], "client": q["client"]["name"], "contact": q["client"].get("contact"),
@@ -613,13 +658,16 @@ def cmd_followup(a):
             lapsing.append(row)
         elif waited >= a.days:
             chase.append(row)
-    emit({"status": "success", "chase": chase, "lapsing_within_5_days": lapsing, "lapsed": lapsed,
-          "note": "Draft any chasers for Ricky to send; mark lapsed quotes with `status ... expired` once he agrees."})
+    emit({"status": "success", "awaiting_ricky_approval": waiting, "chase": chase,
+          "lapsing_within_5_days": lapsing, "lapsed": lapsed,
+          "note": "Quotes awaiting approval have not gone out: remind Ricky, never send them. Chasers are drafts "
+                  "for Ricky to approve and send; mark lapsed quotes `status ... expired` once he agrees."})
 
 
 def cmd_stats(a):
-    qs = load_log(a.log)["quotes"]
-    by = {s: [q for q in qs if q["status"] == s] for s in STATUSES}
+    allq = load_log(a.log)["quotes"]
+    qs = [q for q in allq if q["status"] != "prepared"]      # only quotes that actually went out
+    by = {s: [q for q in allq if q["status"] == s] for s in STATUSES}
     decided = len(by["accepted"]) + len(by["declined"]) + len(by["expired"])
     sla = [q["sla"]["met"] for q in qs if q.get("sla", {}).get("met") is not None]
     taken = sorted(q["sla"]["working_hours_taken"] for q in qs if q.get("sla", {}).get("working_hours_taken") is not None)
@@ -727,6 +775,18 @@ def cmd_selftest(_a):
             ok(rc == 0 and out.get("ref", "").startswith("RMT-Q-") and (td / "q.pdf").exists(), f"issue writes a numbered PDF ({out})")
             ok((td / "q.email.txt").exists() and "£933.33 + VAT" in (td / "q.email.txt").read_text(), "email text carries the price")
             ref = out.get("ref") or "RMT-Q-0000-000"
+            ok(out.get("status") == "prepared_awaiting_ricky", "issue only prepares: the quote is held for Ricky")
+            rc, out = run("status", ref, "accepted", "--log", str(td / "log.json"))
+            ok(rc == 1, "a quote Ricky has not approved cannot be marked accepted")
+            rc, out = run("followup", "--log", str(td / "log.json"))
+            ok(rc == 0 and [w["ref"] for w in out["awaiting_ricky_approval"]] == [ref] and not out["chase"],
+               "follow-up lists an unapproved quote as awaiting Ricky, never as one to chase")
+            rc, out = run("approve", ref, "--log", str(td / "log.json"), "--by", "Assistant")
+            ok(rc == 1, "nobody but Ricky can approve")
+            rc, out = run("approve", ref, "--log", str(td / "log.json"), "--by", "Ricky")
+            ok(rc == 0 and out["status"] == "approved", "Ricky approves the quote")
+            rc, out = run("approve", ref, "--log", str(td / "log.json"), "--by", "Ricky")
+            ok(rc == 1, "a quote cannot be approved twice")
             rc, out = run("status", ref, "declined", "--log", str(td / "log.json"))
             ok(rc == 1, "declined without a reason is refused")
             rc, out = run("status", ref, "accepted", "--log", str(td / "log.json"), "--po", "PO-1234")
@@ -760,7 +820,9 @@ def main(argv=None):
     s = p("issue", cmd_issue); s.add_argument("spec"); s.add_argument("--log", required=True)
     s.add_argument("--credit", help="output of creditwatch.py check, saved as JSON"); s.add_argument("-o", "--out")
     s.add_argument("--draft", action="store_true")
-    s = p("status", cmd_status); s.add_argument("ref"); s.add_argument("new_status", choices=STATUSES[1:])
+    s = p("approve", cmd_approve); s.add_argument("ref"); s.add_argument("--log", required=True)
+    s.add_argument("--by", required=True, help="Ricky, and only after he has said so himself"); s.add_argument("--note")
+    s = p("status", cmd_status); s.add_argument("ref"); s.add_argument("new_status", choices=STATUSES[2:])
     s.add_argument("--log", required=True); s.add_argument("--po"); s.add_argument("--reason")
     s = p("followup", cmd_followup); s.add_argument("--log", required=True); s.add_argument("--days", type=int, default=3)
     s = p("stats", cmd_stats); s.add_argument("--log", required=True)
