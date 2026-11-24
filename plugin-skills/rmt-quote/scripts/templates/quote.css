@@ -11,3 +11,4 @@
 .qt .qt-scope li,.qt ul.qt-need li,.qt ul.qt-terms li{margin:.5mm 0}
 .qt ul.qt-need li::marker{color:var(--accent)}
 .qt ul.qt-open{color:var(--stop);font-size:8.6pt}
+.qt .qt-visit{margin:0 0 3mm}

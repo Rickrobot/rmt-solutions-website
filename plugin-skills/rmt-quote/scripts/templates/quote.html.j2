@@ -13,7 +13,7 @@
 </header>
 
 <div class="wn-band">
-  <div><div class="lbl">Quotation</div><div class="ttl">{{ q.site|clean }}</div></div>
+  <div><div class="lbl">{{ "Desktop quotation" if q.site_visit.desktop else "Quotation" }}</div><div class="ttl">{{ q.site|clean }}</div></div>
   <div class="rt"><div class="lbl">Fixed price, ex VAT</div><div class="eff">{% if q.lines|selectattr("amount", "none")|list %}Price needed{% else %}{{ q.subtotal|gbp }}{% endif %}</div></div>
 </div>
 {% if is_draft %}
@@ -39,9 +39,12 @@
   </div>
 </div>
 
-<p class="wn-subject">Quotation: {{ q.summary|clean }}</p>
+<p class="wn-subject">{{ "Desktop quotation" if q.site_visit.desktop else "Quotation" }}: {{ q.summary|clean }}</p>
 <p>Dear {{ (q.client.contact|clean).split()[0] }},</p>
 <p>Thank you for your enquiry. Our fixed price for the work at {{ q.site|clean }} is set out below. It is the full price: there is no hourly billing, and nothing will be added that you have not agreed in advance.</p>
+{% if q.site_visit.note %}
+<div class="notice info callout qt-visit"><div class="nt">{{ "Desktop quotation: no site visit" if q.site_visit.desktop else "Site visits" }}</div><p>{{ q.site_visit.note|clean }}</p></div>
+{% endif %}
 
 {{ sec(1, "Price") }}
 <table class="data qt-price">

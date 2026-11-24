@@ -14,6 +14,14 @@ and keeps a log, so no quote is forgotten and Ricky can see what he wins.
 holds it. Ricky approves it himself, and Ricky sends it himself. No step of
 this skill sends, schedules or forwards anything, ever.
 
+**A quote with no site visit is a desktop quote, and says so** (Ricky, 24 Nov 2026). When no
+line includes a site visit, the PDF and the email are headed "Desktop quotation". They state that
+the work is done remotely from the client's information and does not include a site visit, and the
+site visit is listed under "Not included". When only some lines include a visit (a mobile crane plan,
+say), the quote names those lines and says everything else is desktop work. The wording lives in one
+place in `quote.py`, so the PDF and the email always match. A site visit is added only as a priced
+line that includes one, never by editing that wording.
+
 **The engine does the money; Ricky does the pricing decisions.** Every figure
 comes from `references/price-book.json`, or from Ricky for this job. Never
 type a price that did not come from one of those two places.
@@ -217,13 +225,14 @@ Offer it in the monthly review.
 python3 quote.py --self-test
 ```
 
-The self-test runs 34 checks:
+The self-test runs 38 checks:
 - the price book;
 - working days and bank holidays;
 - the 4-working-hour clock;
 - arithmetic in pence;
 - every refusal;
 - the classifier on real enquiry wording;
+- the desktop-quote wording (no site visit), for desktop-only, mixed and visit-only quotes;
 - the approval hold: an unapproved quote cannot be accepted or chased, and only Ricky can approve;
 - a full issue, approve, accept and stats round trip, including the PDF render where Chromium is present.
 

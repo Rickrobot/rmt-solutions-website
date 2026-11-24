@@ -13,7 +13,7 @@ Next.js never imports this folder, so it has no effect on the site or its build.
    It uses the plugin's shared letterhead (`assets/design/rmt_design.py`) and the AP signature.
 2. Add its row to the plugin README's skills table, raise the plugin version, and release
    as usual (rmt-build-standards: plugin release gates).
-3. Run `python3 skills/rmt-quote/scripts/quote.py --self-test`. It should report 34 passed.
+3. Run `python3 skills/rmt-quote/scripts/quote.py --self-test`. It should report 38 passed.
 4. **Before the first real quote**, confirm the three terms listed under `unconfirmed` in
    `references/price-book.json`, then empty that list:
    - `quote_validity_days`: 30

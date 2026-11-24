@@ -77,9 +77,10 @@ def render(rec: dict, out_pdf, *, draft: bool = False, open_items=()) -> dict:
         "delivery_by": fmt_date(rec["delivery"]["by"]) if rec["delivery"]["by"] else None,
     }
     body = env.get_template("quote.html.j2").render(**ctx)
-    page = D.page_css("Quotation", f"{ref} · Rev {rec['rev']}", draft=draft)
+    kind = "Desktop quotation" if rec.get("site_visit", {}).get("desktop") else "Quotation"
+    page = D.page_css(kind, f"{ref} · Rev {rec['rev']}", draft=draft)
     extra = (HERE / "templates" / "quote.css").read_text(encoding="utf-8")
-    title = f"{ref} · Quotation · {rec['site']}"
+    title = f"{ref} · {kind} · {rec['site']}"
     html = D.document(body, title=title, page=page + extra)
     info = D.render_pdf(html, out_pdf, title=title, subject=f"Quotation for {rec['client']['name']}",
                         keywords=f"quotation, {ref}, {rec['site']}, RMT Solutions")

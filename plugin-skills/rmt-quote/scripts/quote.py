@@ -61,6 +61,15 @@ BANK_HOLIDAYS = {
 HOLIDAY_YEARS = {int(d[:4]) for d in BANK_HOLIDAYS}
 WARNINGS: list[str] = []
 
+# Site visit wording (Ricky, 24 Nov 2026): a quote with no site visit says plainly that it is a
+# desktop quote. One wording, used by both the PDF and the email, so they can never disagree.
+DESKTOP_NOTE = ("This is a desktop quotation. The work is carried out remotely from the information you "
+                "send us, and it does not include a site visit. If you need a site visit, we can quote for one separately.")
+MIXED_NOTE = ("A site visit is included only for: {names}. Everything else is desktop work, carried out "
+              "remotely from the information you send us, and does not include a site visit.")
+DESKTOP_EXCLUSION = "A site visit. This is a desktop quotation; we can quote for a visit separately if you need one."
+MIXED_EXCLUSION = "A site visit for any item not listed above as including one."
+
 
 # ------------------------------------------------------------------ small helpers
 def emit(obj, code=0):
@@ -458,6 +467,17 @@ def build_record(spec, book, priced, at: dt.datetime, ref, gate, proforma):
     if spec.get("info_needed_extra"):
         info.append({"service": "Also", "items": list(spec["info_needed_extra"])})
     valid_until = at.date() + dt.timedelta(days=book["quote_validity_days"])
+    with_visit = []
+    for l in priced["lines"]:
+        if l["site_visit"] and l["name"] not in with_visit:
+            with_visit.append(l["name"])
+    if not with_visit:
+        visit = {"desktop": True, "with_visit": [], "note": DESKTOP_NOTE, "exclusion": DESKTOP_EXCLUSION}
+    else:
+        visit = {"desktop": False, "with_visit": with_visit,
+                 "note": MIXED_NOTE.format(names=", ".join(with_visit)) if len(with_visit) < len(
+                     {l["name"] for l in priced["lines"]}) else None,
+                 "exclusion": MIXED_EXCLUSION if len(with_visit) < len({l["name"] for l in priced["lines"]}) else None}
     return {
         "ref": ref, "rev": "A", "status": "prepared" if ref else "draft",
         "issued_at": at.isoformat(timespec="minutes"),
@@ -466,7 +486,8 @@ def build_record(spec, book, priced, at: dt.datetime, ref, gate, proforma):
         "lines": priced["lines"], "subtotal": priced["subtotal"], "vat_rate_pct": priced["vat_rate_pct"],
         "vat": priced["vat"], "total": priced["total"],
         "inclusions": book["standard_inclusions"] + list(spec.get("extra_inclusions") or []),
-        "exclusions": list(spec.get("exclusions") or []),
+        "exclusions": ([visit["exclusion"]] if visit["exclusion"] else []) + list(spec.get("exclusions") or []),
+        "site_visit": visit,
         "info_needed": info,
         "delivery": delivery(priced["lines"], at.date()),
         "valid_until": valid_until,
@@ -484,10 +505,13 @@ def build_record(spec, book, priced, at: dt.datetime, ref, gate, proforma):
 def email_text(rec):
     first = (rec["client"].get("contact") or "").split()[0] if rec["client"].get("contact") else "there"
     d = rec["delivery"]
-    lines = [f"Subject: Quotation {rec['ref'] or 'DRAFT'}: {rec['site']}", "",
+    kind = "Desktop quotation" if rec["site_visit"]["desktop"] else "Quotation"
+    lines = [f"Subject: {kind} {rec['ref'] or 'DRAFT'}: {rec['site']}", "",
              f"Hi {first},", "",
              f"Thanks for your enquiry. Our quotation for {rec['summary']} at {rec['site']} is attached.", "",
              f"Price: {gbp(rec['subtotal'])} + VAT ({gbp(rec['total'])} including VAT). It is a fixed price.",]
+    if rec["site_visit"]["note"]:
+        lines += ["", rec["site_visit"]["note"], ""]
     if d["working_days"]:
         when = f"within {d['working_days']} working day{'s' if d['working_days'] > 1 else ''} of your go-ahead and the information below"
         if d["site_visit"]:
@@ -728,6 +752,18 @@ def cmd_selftest(_a):
        "OOH needs out_of_hours_requested")
     ok(any("placeholder" in p for p in spec_problems({**spec, "site": "TBC"}, book)), "placeholder refused")
 
+    # Desktop quote wording (no site visit)
+    bk = {**book, "unconfirmed": []}
+    rec = build_record({"client": {"name": "X Ltd", "contact": "A B"}, "site": "S", "lines": [{"code": "LP-TH"}]},
+                       bk, price({"lines": [{"code": "LP-TH"}]}, bk), dt.datetime(2026, 11, 24, 10), "RMT-Q-2026-001", "clear", False)
+    mail = email_text(rec)
+    ok(rec["site_visit"]["desktop"] and rec["exclusions"][0] == DESKTOP_EXCLUSION, "remote-only quote is a desktop quote, site visit excluded")
+    ok("Subject: Desktop quotation" in mail and DESKTOP_NOTE in mail, "email says desktop quotation, no site visit")
+    rec = build_record({"client": {"name": "X Ltd", "contact": "A B"}, "site": "S", "lines": [{"code": "LP-MC", "price_ex_vat": 500}]},
+                       bk, price({"lines": [{"code": "LP-MC", "price_ex_vat": 500}]}, bk), dt.datetime(2026, 11, 24, 10), "RMT-Q-2026-001", "clear", False)
+    ok(not rec["site_visit"]["desktop"] and rec["site_visit"]["note"] is None and not rec["exclusions"],
+       "a quote where every item includes a visit makes no desktop statement")
+
     # Classifier
     c = classify("Can you do us a lift plan for a Manitou telehandler unloading 3 cabins on Thursday? Urgent", book=book)
     ok([l["code"] for l in c["suggested_lines"]] == ["LP-TH"] and c["suggested_lines"][0]["qty"] == 3, "telehandler × 3 cabins")
@@ -775,6 +811,9 @@ def cmd_selftest(_a):
         else:
             ok(rc == 0 and out.get("ref", "").startswith("RMT-Q-") and (td / "q.pdf").exists(), f"issue writes a numbered PDF ({out})")
             ok((td / "q.email.txt").exists() and "£933.33 + VAT" in (td / "q.email.txt").read_text(), "email text carries the price")
+            mail = (td / "q.email.txt").read_text()
+            ok("A site visit is included only for: Mobile crane lift plan" in mail and "Subject: Quotation" in mail,
+               "mixed quote names the item with a site visit and says the rest is desktop")
             ref = out.get("ref") or "RMT-Q-0000-000"
             ok(out.get("status") == "prepared_awaiting_ricky", "issue only prepares: the quote is held for Ricky")
             rc, out = run("status", ref, "accepted", "--log", str(td / "log.json"))
