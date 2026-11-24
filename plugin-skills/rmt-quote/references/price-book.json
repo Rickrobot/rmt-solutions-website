@@ -1,0 +1,136 @@
+{
+  "_about": "RMT Solutions' price book: the only place a quote price comes from. A price of null means the service is priced per job: the quote spec must carry Ricky's figure for that job, or the quote is refused. Never fill a null with a guess. Prices are ex VAT, in pounds. Anything listed in 'unconfirmed' is held back from issued quotes until Ricky confirms it and removes it from the list.",
+  "version": "1.0",
+  "updated": "2026-11-24",
+  "vat_rate_pct": 20,
+  "quote_validity_days": 30,
+  "payment_terms_days": 30,
+  "working_hours": {"start": "08:00", "end": "17:00"},
+  "quote_sla_working_hours": 4,
+  "unconfirmed": ["quote_validity_days", "payment_terms_days", "working_hours"],
+
+  "standard_inclusions": [
+    "A fixed price: no hourly billing and no surcharge you have not agreed in advance.",
+    "Revisions arising from the principal contractor's review, and support with the resubmission until it is accepted.",
+    "Checked and signed off by our CPCS A61 Appointed Person before it is issued."
+  ],
+
+  "services": [
+    {
+      "code": "LP-EXC", "name": "Excavator lift plan", "unit": "plan",
+      "price_ex_vat": 200, "basis": "fixed", "delivery_working_days": 2, "site_visit": false,
+      "scope": ["Site-specific lift plan to BS 7121 and LOLER 1998, written remotely from your information",
+                "Duty from the manufacturer's published lifting capacity for the exact machine and configuration",
+                "Elevation and plan drawings to the machine's real dimensions, with the rigging and exclusion zone"],
+      "info_needed": ["Machine make and model, with the quick-hitch and lifting point", "Load description and weight", "Site plan or marked-up photos showing the lift area", "Lifting accessories to be used", "Ground conditions and any nearby services or overhead lines"],
+      "keywords": ["excavator", "digger", "360", "tracked excavator", "wheeled excavator", "trench box", "drag box", "pipe lay"]
+    },
+    {
+      "code": "LP-TH", "name": "Telehandler lift plan", "unit": "plan",
+      "price_ex_vat": 200, "basis": "fixed", "delivery_working_days": 2, "site_visit": false,
+      "scope": ["Site-specific lift plan to BS 7121 and LOLER 1998, written remotely from your information",
+                "Capacity from the manufacturer's load chart for the exact machine and attachment",
+                "Drawings of each movement: unloading, travel and placing, with set-up positions and exclusion zones"],
+      "info_needed": ["Telehandler make and model, and the attachment (forks, hook, jib)", "Load description and weight", "Site plan showing delivery point, route and placing position", "Ground conditions along the route"],
+      "keywords": ["telehandler", "teleporter", "loadall", "manitou", "merlo", "genie gth", "telescopic handler"]
+    },
+    {
+      "code": "LP-FL", "name": "Forklift lift plan", "unit": "plan",
+      "price_ex_vat": 200, "basis": "fixed", "delivery_working_days": 2, "site_visit": false,
+      "scope": ["Site-specific lift plan to LOLER 1998, written remotely from your information",
+                "Capacity from the manufacturer's data plate and load centre for the exact truck",
+                "Plan drawing of the route, set-down areas and exclusion zones"],
+      "info_needed": ["Forklift make and model, and capacity at load centre", "Load description, weight and dimensions", "Site plan showing the route and set-down area"],
+      "keywords": ["forklift", "fork lift", "flt", "rough terrain forklift", "counterbalance"]
+    },
+    {
+      "code": "LP-LL", "name": "Lorry loader (HIAB) lift plan", "unit": "plan",
+      "price_ex_vat": 200, "basis": "fixed", "delivery_working_days": 2, "site_visit": false,
+      "scope": ["Site-specific lift plan to BS 7121, LOLER 1998 and ALLMI guidance, written remotely from your information",
+                "Capacity from the manufacturer's published duty for the exact lorry loader",
+                "Elevation, plan and rigging drawings showing stabilisers, mats and every leg of the rigging"],
+      "info_needed": ["Lorry loader make and model (or the hire company and vehicle)", "Load description, weight and lifting points", "Site plan or photos showing the vehicle position and landing point", "Ground conditions under the stabilisers", "Any overhead lines or buried services nearby"],
+      "keywords": ["lorry loader", "hiab", "fassi", "palfinger", "effer", "crane lorry", "lorry mounted crane", "truck mounted crane", "atlas crane"]
+    },
+    {
+      "code": "LP-MC", "name": "Mobile crane lift plan, site visit included", "unit": "plan",
+      "price_ex_vat": null, "basis": "per_job", "delivery_working_days": 2, "site_visit": true,
+      "scope": ["Site visit by the Appointed Person to assess the set-up, ground and surroundings",
+                "Lift plan to BS 7121 and LOLER 1998, with the duty read from the manufacturer's published chart for the exact configuration",
+                "Elevation, plan, rigging and 3D drawings, with outrigger loads and mat bearing"],
+      "info_needed": ["Load description, weight and lifting points", "Proposed crane, or the hire company if you want us to select it", "Site plan and the lift date", "Any ground investigation information you hold"],
+      "keywords": ["mobile crane", "all terrain", "all-terrain", "ltm", "city crane", "taxi crane", "liebherr", "tadano", "grove", "demag", "crane hire", "cpa hire"]
+    },
+    {
+      "code": "LP-TC", "name": "Tower crane lift plan, site visit included", "unit": "plan",
+      "price_ex_vat": null, "basis": "per_job", "delivery_working_days": 2, "site_visit": true,
+      "scope": ["Site visit by the Appointed Person", "Lift plan to BS 7121 and LOLER 1998 from the manufacturer's published load chart"],
+      "info_needed": ["Tower crane make, model, jib length and base", "Loads to be lifted, with weights", "Site plan showing the crane position and oversail"],
+      "keywords": ["tower crane", "self erecting", "self-erecting", "luffing", "flat top", "potain", "jib crane"]
+    },
+    {
+      "code": "LP-OH", "name": "Overhead gantry crane lift plan", "unit": "plan",
+      "price_ex_vat": null, "basis": "per_job", "delivery_working_days": 2, "site_visit": false,
+      "scope": ["Lift plan to BS 7121 and LOLER 1998 for the overhead crane and the load"],
+      "info_needed": ["Crane SWL and the latest thorough examination report", "Load description, weight and lifting points", "Layout of the bay and the travel route"],
+      "keywords": ["overhead crane", "gantry crane", "eot crane", "bridge crane", "overhead travelling"]
+    },
+    {
+      "code": "TLP", "name": "Tandem or multi-crane lift plan", "unit": "plan",
+      "price_ex_vat": null, "basis": "per_job", "delivery_working_days": 3, "site_visit": true,
+      "scope": ["Tandem lift plan to BS 7121-1 Section 14, with de-rating and load-share checks", "Site visit where the operation needs one"],
+      "info_needed": ["Both cranes, or the hire company", "Load weight, centre of gravity and lifting points", "Site plan and the lift date"],
+      "keywords": ["tandem", "two crane", "two-crane", "dual lift", "twin lift", "multi-crane", "multi crane"]
+    },
+    {
+      "code": "LPR", "name": "Lift plan review (19-point, CAT A / CAT B)", "unit": "plan",
+      "price_ex_vat": null, "basis": "per_job", "delivery_working_days": 1, "site_visit": false,
+      "scope": ["19-point review against BS 7121, LOLER 1998 and the manufacturer's data", "A clear CAT A approved or CAT B rejected outcome", "Every finding with the change needed to close it, ready to paste into the resubmission"],
+      "info_needed": ["The lift plan with its drawings", "The RAMS or method statement", "Duty or load charts used", "LOLER thorough examination certificates and operator competence cards"],
+      "keywords": ["review", "check our lift plan", "check the lift plan", "lift plan check", "approve", "approval", "comment on", "checking"]
+    },
+    {
+      "code": "MS", "name": "Method statement / RAMS", "unit": "document",
+      "price_ex_vat": null, "basis": "per_job", "delivery_working_days": 2, "site_visit": false,
+      "scope": ["Method statement and risk assessment for the work package, written to the site's facts"],
+      "info_needed": ["Scope of work and programme", "Site address and principal contractor", "Plant and equipment to be used"],
+      "keywords": ["method statement", "rams", "safe system of work", "ssow", "risk assessment"]
+    },
+    {
+      "code": "STEEL", "name": "Steel erection lift plan and sequence", "unit": "package",
+      "price_ex_vat": null, "basis": "per_job", "delivery_working_days": 3, "site_visit": true,
+      "scope": ["Erection sequence from the steel model, with each lift checked against the crane's published duty", "Lift plan and drawings for the sequence"],
+      "info_needed": ["Steel GA and marking plans, or the fabricator's model (IFC or Tekla)", "Proposed crane and MEWPs", "Programme"],
+      "keywords": ["steel erection", "steelwork", "steel frame", "portal frame", "erection sequence", "rafters"]
+    },
+    {
+      "code": "AP-DAY", "name": "Appointed Person site attendance", "unit": "day",
+      "price_ex_vat": null, "basis": "per_job", "delivery_working_days": null, "site_visit": true,
+      "scope": ["CPCS A61 Appointed Person attending site for the lifting operation"],
+      "info_needed": ["Site address, dates and start time", "The lift plan for the operation"],
+      "keywords": ["appointed person", "ap cover", "ap attendance", "attend site", "on site ap", "supervise the lift"]
+    },
+    {
+      "code": "AUD", "name": "Lifting operations audit", "unit": "site",
+      "price_ex_vat": null, "basis": "per_job", "delivery_working_days": 3, "site_visit": true,
+      "scope": ["Site audit of lifting operations against BS 7121 and LOLER 1998, with a written report"],
+      "info_needed": ["Site address and the lifting equipment in use", "Current lift plans and thorough examination records"],
+      "keywords": ["audit", "lifting operations audit", "inspection of lifting"]
+    },
+    {
+      "code": "SURV", "name": "Aerial and ground site survey", "unit": "visit",
+      "price_ex_vat": null, "basis": "per_job", "delivery_working_days": 2, "site_visit": true,
+      "scope": ["Drone and ground-level photography of the site in one visit"],
+      "info_needed": ["Site address and access arrangements", "Any airspace restrictions you are aware of"],
+      "keywords": ["drone", "aerial survey", "aerial photography", "site survey", "site photos"]
+    },
+    {
+      "code": "OOH", "name": "Out-of-hours working (evenings or weekends), as agreed", "unit": "item",
+      "price_ex_vat": null, "basis": "per_job", "delivery_working_days": null, "site_visit": false,
+      "only_on_request": true,
+      "scope": ["Work carried out in the evening or at the weekend at your request, agreed before it starts"],
+      "info_needed": [],
+      "keywords": ["weekend", "saturday", "sunday", "evening", "overnight", "night work", "out of hours", "bank holiday"]
+    }
+  ]
+}

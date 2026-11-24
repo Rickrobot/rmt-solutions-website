@@ -1,0 +1,13 @@
+.qt table.qt-price{width:100%;margin:1mm 0 2mm;break-inside:avoid}
+.qt table.qt-price th.n,.qt table.qt-price td.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.qt table.qt-price td{vertical-align:top}
+.qt table.qt-price tfoot td{border-bottom:0;padding-top:1.2mm;padding-bottom:1.2mm}
+.qt table.qt-price tfoot tr.sub td{border-top:.3mm solid var(--rule-strong);padding-top:2mm}
+.qt table.qt-price tfoot td:first-child{text-align:right;color:var(--muted)}
+.qt table.qt-price tfoot tr.tot td{border-top:.5mm solid var(--brand);font:700 10.6pt var(--head);color:var(--brand)}
+.qt table.qt-price tfoot tr.tot td:first-child{color:var(--brand)}
+.qt .qt-scope{margin:0 0 2mm;break-inside:avoid}
+.qt .qt-scope ul,.qt ul.qt-need,.qt ul.qt-terms,.qt ul.qt-open{margin:.6mm 0 1.4mm;padding-left:4.6mm}
+.qt .qt-scope li,.qt ul.qt-need li,.qt ul.qt-terms li{margin:.5mm 0}
+.qt ul.qt-need li::marker{color:var(--accent)}
+.qt ul.qt-open{color:var(--stop);font-size:8.6pt}

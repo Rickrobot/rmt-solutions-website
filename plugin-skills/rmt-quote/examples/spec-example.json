@@ -1,0 +1,18 @@
+{
+  "client": {
+    "name": "Example Contractors Ltd",
+    "code": "EXC",
+    "contact": "Sam Taylor",
+    "role": "Site Manager",
+    "email": "sam.taylor@example-contractors.co.uk",
+    "address": ["Unit 2, Example Business Park", "Leyland", "PR25 0XX"]
+  },
+  "site": "Example Business Park, Leyland",
+  "summary": "telehandler and lorry loader lift plans for the welfare set-up",
+  "enquiry": {"received": "2026-11-24T09:10", "client_ref": "EX-0457"},
+  "lines": [
+    {"code": "LP-TH", "qty": 3, "note": "Manitou MT1840: unloading and placing three welfare cabins"},
+    {"code": "LP-LL", "qty": 1, "note": "Lorry loader delivering and placing the generator"}
+  ],
+  "exclusions": ["Thorough examination certificates and operator cards are supplied by the plant hire company."]
+}

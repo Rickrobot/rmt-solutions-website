@@ -1,0 +1,116 @@
+{#- RMT quotation letter. Context from build_quote_pdf.render(). Letter layout reuses the
+    house letter classes (.wn-*) from the withdrawal notice; quote parts are .qt-* in quote.css. -#}
+{% macro sec(no, title) %}<h3 class="wn-h"><span class="no">{{ no }}</span>{{ title }}</h3>{% endmacro %}
+<main class="wn qt">
+<header class="wn-letterhead">
+  <img class="logo" src="{{ logo }}" alt="RMT Solutions">
+  <div class="co">
+    <div class="nm">{{ COMPANY.name }}</div>
+    <div>{{ COMPANY.office }}</div>
+    <div>{{ COMPANY.phone }} · {{ COMPANY.email }}</div>
+    <div class="reg">{{ COMPANY.reg }}</div>
+  </div>
+</header>
+
+<div class="wn-band">
+  <div><div class="lbl">Quotation</div><div class="ttl">{{ q.site|clean }}</div></div>
+  <div class="rt"><div class="lbl">Fixed price, ex VAT</div><div class="eff">{% if q.lines|selectattr("amount", "none")|list %}Price needed{% else %}{{ q.subtotal|gbp }}{% endif %}</div></div>
+</div>
+{% if is_draft %}
+<div class="notice stop callout"><p><b>DRAFT — NOT FOR ISSUE.</b> This quotation has not been given and must not be sent.</p>
+  {% if open_items %}<ul class="qt-open">{% for p in open_items %}<li>{{ p|clean }}</li>{% endfor %}</ul>{% endif %}</div>
+{% endif %}
+
+<div class="wn-meta">
+  <div class="to">
+    <div class="label">For the attention of</div>
+    <div class="nm">{{ q.client.contact|clean }}</div>
+    {% if q.client.get("role") %}<div>{{ q.client.role|clean }}</div>{% endif %}
+    <div class="co">{{ q.client.name|clean }}</div>
+    {% for l in q.client.get("address") or [] %}<div>{{ l|clean }}</div>{% endfor %}
+    {% if q.client.get("email") %}<div class="small">{{ q.client.email|clean }}</div>{% endif %}
+  </div>
+  <div class="side">
+    <div class="label">Reference</div><div class="v ref">{{ ref }}</div>
+    <div class="label">Date</div><div class="v">{{ issued }}</div>
+    <div class="label">Valid until</div><div class="v">{{ valid_until }}</div>
+    {% if q.get("contract_no") %}<div class="label">Your contract</div><div class="v">{{ q.contract_no|clean }}</div>{% endif %}
+    {% if q.enquiry.get("client_ref") %}<div class="label">Your reference</div><div class="v">{{ q.enquiry.client_ref|clean }}</div>{% endif %}
+  </div>
+</div>
+
+<p class="wn-subject">Quotation: {{ q.summary|clean }}</p>
+<p>Dear {{ (q.client.contact|clean).split()[0] }},</p>
+<p>Thank you for your enquiry. Our fixed price for the work at {{ q.site|clean }} is set out below. It is the full price: there is no hourly billing, and nothing will be added that you have not agreed in advance.</p>
+
+{{ sec(1, "Price") }}
+<table class="data qt-price">
+  <colgroup><col><col style="width:13mm"><col style="width:25mm"><col style="width:27mm"></colgroup>
+  <thead><tr><th>Service</th><th class="n">Qty</th><th class="n">Unit price</th><th class="n">Amount</th></tr></thead>
+  <tbody>
+  {% for l in q.lines %}
+    <tr><td><b>{{ l.name|clean }}</b>{% if l.note %}<div class="small">{{ l.note|clean }}</div>{% endif %}</td>
+        <td class="n">{{ l.qty|qty }}{% if l.unit not in ("plan", "item") %} <span class="small">{{ l.unit }}{{ "s" if l.qty != 1 else "" }}</span>{% endif %}</td>
+        <td class="n">{{ l.unit_price|gbp if l.unit_price is not none else "—" }}</td>
+        <td class="n">{{ l.amount|gbp if l.amount is not none else "—" }}</td></tr>
+  {% endfor %}
+  </tbody>
+  <tfoot>
+    <tr class="sub"><td colspan="3">Total, excluding VAT</td><td class="n">{{ q.subtotal|gbp }}</td></tr>
+    <tr><td colspan="3">VAT at {{ q.vat_rate_pct|qty }}%</td><td class="n">{{ q.vat|gbp }}</td></tr>
+    <tr class="tot"><td colspan="3">Total, including VAT</td><td class="n">{{ q.total|gbp }}</td></tr>
+  </tfoot>
+</table>
+
+{{ sec(2, "What is included") }}
+{% for l in q.lines %}
+<div class="qt-scope">
+  {% if q.lines|length > 1 %}<div class="label">{{ l.name|clean }}</div>{% endif %}
+  <ul>{% for s in l.scope %}<li>{{ s|clean }}</li>{% endfor %}</ul>
+</div>
+{% endfor %}
+<div class="qt-scope"><div class="label">On every job</div>
+  <ul>{% for s in q.inclusions %}<li>{{ s|clean }}</li>{% endfor %}</ul></div>
+{% if q.exclusions %}<div class="qt-scope"><div class="label">Not included</div>
+  <ul>{% for s in q.exclusions %}<li>{{ s|clean }}</li>{% endfor %}</ul></div>{% endif %}
+
+{% set ns = namespace(n=3) %}
+{% if q.info_needed %}
+{{ sec(ns.n, "What we need from you") }}{% set ns.n = ns.n + 1 %}
+{% for g in q.info_needed %}
+<div class="qt-scope">{% if q.info_needed|length > 1 %}<div class="label">{{ g.service|clean }}</div>{% endif %}
+  <ul class="qt-need">{% for i in g["items"] %}<li>{{ i|clean }}</li>{% endfor %}</ul></div>
+{% endfor %}
+{% endif %}
+
+{{ sec(ns.n, "Delivery") }}{% set ns.n = ns.n + 1 %}
+{% if q.delivery.working_days %}
+<p>Within <b>{{ q.delivery.working_days }} working day{{ "s" if q.delivery.working_days > 1 else "" }}</b> of your go-ahead and receipt of the information above{% if q.delivery.site_visit %}, with the site visit date agreed with you when you confirm{% endif %}. If you confirm on {{ issued }}, that is <b>{{ delivery_by }}</b>.</p>
+{% else %}
+<p>On the date{{ "s" if q.lines|length > 1 else "" }} agreed with you when you confirm.</p>
+{% endif %}
+
+{{ sec(ns.n, "Terms") }}{% set ns.n = ns.n + 1 %}
+<ul class="qt-terms">
+  <li>This is a fixed price, valid until {{ valid_until }}.</li>
+  {% if q.payment.kind == "proforma" %}
+  <li><b>Payment in advance.</b> We will send a proforma invoice when you confirm, and start as soon as it is paid.</li>
+  {% else %}
+  <li>Invoiced when the work is issued, payable within {{ q.payment.days }} days of the invoice date.</li>
+  {% endif %}
+  <li>Same-day and next-day work is charged at these prices. Evening or weekend work is only carried out, and only charged, when agreed with you beforehand.</li>
+  <li>Prices exclude VAT, which is charged at the rate in force on the invoice date.</li>
+</ul>
+
+{{ sec(ns.n, "To go ahead") }}
+<p>Reply to the email this came with, or send a purchase order quoting <span class="ref">{{ ref }}</span>. We will confirm the delivery date the same working day.</p>
+
+<div class="wn-sign">
+  <p>Yours sincerely,</p>
+  <div class="mark">{% if is_draft %}<span class="small">Draft — not signed</span>{% elif signature %}<img src="{{ signature }}" alt="Signature of {{ AP.name }}">{% endif %}</div>
+  <div class="nm">{{ AP.name }}</div>
+  <div>{{ COMPANY.name }}</div>
+  <div class="small">{{ AP.post_nominals }} · {{ AP.card_short }}</div>
+  <div class="small">{{ COMPANY.phone }} · {{ COMPANY.email }}</div>
+</div>
+</main>
