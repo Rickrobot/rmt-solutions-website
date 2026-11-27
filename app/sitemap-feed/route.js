@@ -204,6 +204,7 @@ const FILM_PAGES = {
   '/resources/lift-plan-drawing-examples': ['drawings-3d'],
   '/why-rmt-solutions': ['software'],
   '/about': ['software'],
+  '/services/minimum-standards-training-videos': ['loading-offloading'],
 };
 const FILMS_ADDED = '2026-11-14';
 function filmVideos(loc) {

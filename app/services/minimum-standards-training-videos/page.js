@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import InlineQuoteForm from '@/components/InlineQuoteForm'
 import RelatedServices from '@/components/RelatedServices'
-import LiftPlanVideo from '@/components/LiftPlanVideo'
+import CompanyFilm from '@/components/CompanyFilm'
 
 // Nov 2026 (Round 20): training films as a service. Ricky, 27 Nov 2026:
 //   - offer minimum standards films, site induction films, toolbox talk
@@ -11,8 +11,9 @@ import LiftPlanVideo from '@/components/LiftPlanVideo'
 //     RMT lift plan, so cross-linked rather than sold here);
 //   - quoted per job, no price shown;
 //   - no client films shown: the existing minimum standards series is a
-//     client's own branded work. An RMT-branded example film is to be made
-//     and added here (a LiftPlanVideo-style entry or a companyFilms entry).
+//     client's own branded work. The RMT-branded example, the loading and
+//     offloading training film (YouTube gf3TR630gPw, uploaded 27 Nov 2026),
+//     is the companyFilms entry 'loading-offloading'.
 // Search demand for these terms is close to nil in GSC, so this page is for
 // sending to contractors directly and for visitors already on the site.
 
@@ -32,7 +33,7 @@ export const metadata = {
     title: `${TITLE} | RMT Solutions`,
     description: DESCRIPTION,
     url: PAGE_URL,
-    images: ['/images/videos/rmt-solutions-film-drawings-3d.webp'],
+    images: ['/images/videos/rmt-loading-offloading-training-film.webp'],
     siteName: 'RMT Solutions - Lift Planning Specialists',
     type: 'website',
   },
@@ -159,8 +160,8 @@ export default function MinimumStandardsTrainingVideosPage() {
       <section className="relative bg-slate-900 text-white">
         <div className="absolute inset-0">
           <Image
-            src="/images/videos/rmt-solutions-film-drawings-3d.webp"
-            alt="3D construction site scene from an RMT Solutions video, with a crane, barriers and the lift team"
+            src="/images/videos/rmt-loading-offloading-training-film.webp"
+            alt="Still from the RMT Solutions loading and offloading training film: an excavator lifting a concrete block off a flatbed lorry inside an exclusion zone"
             fill
             className="object-cover opacity-20"
             priority
@@ -203,7 +204,8 @@ export default function MinimumStandardsTrainingVideosPage() {
             </p>
             <p className="text-gray-400">
               We are already producing a minimum standards series for a tier 1 main contractor, one film per section of
-              their document. The same service is open to any contractor.
+              their document. The same service is open to any contractor: watch our own loading and offloading
+              film below to see what one looks like.
             </p>
           </div>
           <div className="bg-amber-500/10 border border-amber-500/30 p-8 rounded-xl">
@@ -255,8 +257,8 @@ export default function MinimumStandardsTrainingVideosPage() {
         </div>
       </section>
 
-      {/* The 3D quality, shown with one of our lift plan videos */}
-      <LiftPlanVideo slug="excavator-manhole-ring-lift-plan-3d" background="bg-slate-950" />
+      {/* Our own example training film (RMT branded, fictional site) */}
+      <CompanyFilm film="loading-offloading" path={PAGE_PATH} background="bg-slate-950" />
 
       {/* How a film is made */}
       <section className="py-16 bg-slate-900">

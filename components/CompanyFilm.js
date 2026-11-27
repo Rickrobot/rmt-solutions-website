@@ -3,7 +3,8 @@ import { ArrowRight, PlayCircle } from 'lucide-react'
 import YouTubeFacade from '@/components/YouTubeFacade'
 
 // RMT Solutions company films (Nov 2026), on the RMT Solutions YouTube channel:
-// the 92-second hero film and four service films. Each page shows the film's
+// the 92-second hero film, four service films and the loading and offloading
+// training film (27 Nov 2026). Each page shows the film's
 // thumbnail and loads YouTube's no-cookie player only when play is pressed.
 // <CompanyFilm film="hero" path="/" /> - `path` is the page the film sits on,
 // used for the VideoObject markup.
@@ -78,6 +79,23 @@ export const companyFilms = {
     eyebrow: 'Our software in 38 seconds',
     heading: '11.5 million published crane duties. Never interpolated.',
     text: 'Every figure in an RMT plan or review is a published point from the manufacturer’s chart, read directly with the chart referenced. It is why we are fast, and why our numbers stand up.',
+  },
+  'loading-offloading': {
+    youtubeId: 'gf3TR630gPw',
+    title: 'Loading and Offloading Safely | Lifting Operations Training Film | RMT Solutions',
+    description:
+      'How to load and offload a delivery vehicle safely on a construction site: planning the lift, the exclusion zone, safe access onto the vehicle, lifting off under control with a tag line, and what to do when a load cannot come off safely. An RMT Solutions training film for site inductions, toolbox talks and pre-lift briefings.',
+    thumbnail: '/images/videos/rmt-loading-offloading-training-film.webp',
+    seconds: 128,
+    uploadDate: '2026-11-27T11:13:00+00:00',
+    eyebrow: 'Example training film',
+    heading: 'Loading and offloading, done safely',
+    text: 'Our own example film: planning the delivery, the exclusion zone, safe access onto the vehicle, lifting off under control with a tag line, and what happens when a load cannot come off safely. Yours would carry your branding, your wording and your section numbers.',
+    chapters: [
+      ['0:00', 'Introduction'], ['0:10', 'Planning the delivery'], ['0:27', 'What to think about at planning stage'],
+      ['0:45', 'On the day: exclusion zone, briefing and safe access'], ['1:09', 'Lifting off under control'],
+      ['1:29', 'When a load cannot be offloaded safely'], ['1:50', 'Summary'],
+    ],
   },
 }
 
