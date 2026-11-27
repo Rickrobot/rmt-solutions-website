@@ -92,6 +92,7 @@ const SERVICE_SLUGS = [
   'tower-crane',
   'tandem-lift-plans',
   'lift-plan-drawings-3d-videos',
+  'minimum-standards-training-videos',
   'steel-erection',
   'aerial-site-surveys',
 ];

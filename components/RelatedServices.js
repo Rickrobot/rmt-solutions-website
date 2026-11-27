@@ -48,6 +48,10 @@ const ALL_SERVICES = {
     title: 'Lift Plan Drawings & 3D Videos',
     description: 'Elevation, plan, rigging and 3D drawings to the real machine, and a 4K 3D video of the lift, included with every lift plan.',
   },
+  'minimum-standards-training-videos': {
+    title: 'Minimum Standards & Training Videos',
+    description: 'Animated 4K training films made to your own minimum standards, inductions and toolbox talks, in your branding with a professional voice-over.',
+  },
   'tandem-lift-plans': {
     title: 'Tandem & Multi-Crane Lift Plans',
     description: 'Load share calculation, crane derating, synchronised control and side loading — tandem and multi-crane lifts planned to BS 7121.',
@@ -105,7 +109,8 @@ const RELATED_MAP = {
   'forklift-lift-plans':       ['telehandler-lift-plans', 'overhead-gantry-crane-lift-plans', 'lift-plans'],
   'lorry-loader-lift-plans':   ['telehandler-lift-plans', 'mobile-crane-lift-plans', 'lift-plans'],
   'mobile-crane-lift-plans':   ['lift-plan-drawings-3d-videos', 'tower-crane', 'tandem-lift-plans', 'lift-plans'],
-  'lift-plan-drawings-3d-videos': ['lift-plans', 'mobile-crane-lift-plans', 'excavator-lift-plans'],
+  'lift-plan-drawings-3d-videos': ['lift-plans', 'minimum-standards-training-videos', 'mobile-crane-lift-plans'],
+  'minimum-standards-training-videos': ['lift-plan-drawings-3d-videos', 'lifting-operations-audit', 'method-statements-rams'],
   'overhead-gantry-crane-lift-plans': ['lift-plans', 'forklift-lift-plans', 'lift-plan-checking'],
   'aerial-site-surveys':       ['lift-plans', 'mobile-crane-lift-plans', 'tower-crane'],
 }

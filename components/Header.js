@@ -25,6 +25,7 @@ export default function Header() {
     { name: 'Tower Crane Contracts', href: '/services/tower-crane' },
     { name: 'Tandem & Multi-Crane Lift Plans', href: '/services/tandem-lift-plans' },
     { name: 'Lift Plan Drawings & 3D Videos', href: '/services/lift-plan-drawings-3d-videos' },
+    { name: 'Minimum Standards & Training Videos', href: '/services/minimum-standards-training-videos' },
     { name: 'Steel Erection Planning', href: '/services/steel-erection' },
     { name: 'Lifting Operations Audit', href: '/services/lifting-operations-audit' },
     { name: 'Aerial Site Surveys', href: '/services/aerial-site-surveys' },

@@ -1,0 +1,45 @@
+SEO FIXES — ROUND 20 (27 November 2026)
+=======================================
+
+New service page: minimum standards and training videos, as a service any
+contractor can buy.
+
+
+NEW PAGE
+--------------------------------------------------------------------------
+  /services/minimum-standards-training-videos
+    Title     Minimum Standards & Training Videos | RMT Solutions  (51)
+    Desc.     Construction training videos made to your own minimum
+              standards: site inductions, toolbox talks and lifting films in
+              4K, in your branding, with voice-over.  (155)
+    Offer     Ricky, 27 Nov 2026: minimum standards films, site induction
+              films, toolbox talk films, and lift briefing films (the last
+              already included with every RMT lift plan, so cross-linked to
+              /services/lift-plan-drawings-3d-videos). Quoted per job.
+    Examples  No client films shown: the existing minimum standards series is
+              a client's own branded work. An RMT-branded example film is to
+              be made; until then the page shows the excavator manhole ring
+              3D lift plan video as proof of the 3D quality. The page says a
+              series is being produced for "a tier 1 main contractor",
+              without naming them.
+    Searches  Close to nil in GSC for training / toolbox / induction video
+              terms. This page is for sending to contractors directly and
+              for visitors already on the site, not a ranking play.
+    Contents  Why films work on site; four kinds of film; excavator 3D video;
+              how a film is made (5 steps); price quoted per job; six FAQs
+              (rendered and FAQPage JSON-LD from one list); quote form;
+              related services.
+    Schema    Service, BreadcrumbList, FAQPage; VideoObject from the video
+              component.
+
+
+LINKED FROM
+--------------------------------------------------------------------------
+  components/Header.js            services menu, after Drawings & 3D Videos
+  components/Footer.js            services column, after Drawings & 3D Videos
+  components/RelatedServices.js   new card; related link on the drawings and
+                                  3D videos page
+  app/services/page.js            services hub card (Specialist)
+  app/sitemap-feed/route.js       SERVICE_SLUGS
+
+  After deploy: Search Console > URL Inspection > Request indexing.

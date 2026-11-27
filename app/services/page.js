@@ -140,6 +140,14 @@ const SERVICES = [
       'Elevation, plan, rigging and 3D drawings to the real machine, plus a 4K 3D video of the lift, included with every lift plan for any lifting device.',
   },
   {
+    slug: 'minimum-standards-training-videos',
+    name: 'Minimum Standards & Training Videos',
+    icon: Layers,
+    category: 'Specialist',
+    blurb:
+      'Animated 4K training films made to your own minimum standards, site inductions and toolbox talks, in your branding with a professional voice-over.',
+  },
+  {
     slug: 'steel-erection',
     name: 'Steel Erection Planning',
     icon: Wrench,
