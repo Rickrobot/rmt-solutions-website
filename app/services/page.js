@@ -132,6 +132,14 @@ const SERVICES = [
       'Two cranes on one load is one operation, not two lifts. Load share, derating and synchronised control to BS 7121, by a CPCS A61 Appointed Person.',
   },
   {
+    slug: 'lift-plan-drawings-3d-videos',
+    name: 'Lift Plan Drawings & 3D Videos',
+    icon: Layers,
+    category: 'Specialist',
+    blurb:
+      'Elevation, plan, rigging and 3D drawings to the real machine, plus a 4K 3D video of the lift, included with every lift plan for any lifting device.',
+  },
+  {
     slug: 'steel-erection',
     name: 'Steel Erection Planning',
     icon: Wrench,

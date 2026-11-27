@@ -91,6 +91,7 @@ const SERVICE_SLUGS = [
   'urgent-lift-plans',
   'tower-crane',
   'tandem-lift-plans',
+  'lift-plan-drawings-3d-videos',
   'steel-erection',
   'aerial-site-surveys',
 ];

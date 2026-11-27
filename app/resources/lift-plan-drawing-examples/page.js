@@ -91,6 +91,14 @@ export default function LiftPlanDrawingExamplesPage() {
             come from the manufacturer&apos;s own duty chart, and the gross load includes the rigging, the hook block or
             the quick hitch.
           </p>
+          <p className="text-gray-300 leading-relaxed max-w-4xl mb-8">
+            Every lift plan RMT writes, for any lifting device, comes with a drawing set like these and a 4K 3D video
+            of the lift, included in the price.{' '}
+            <Link href="/services/lift-plan-drawings-3d-videos" className="text-amber-400 hover:text-amber-300 underline">
+              See what comes with every lift plan
+            </Link>
+            .
+          </p>
           <ul className="flex flex-wrap gap-3">
             {SETS.map((s) => (
               <li key={s.id}>

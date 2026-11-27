@@ -1,0 +1,51 @@
+SEO FIXES — ROUND 19 (27 November 2026)
+=======================================
+
+New service page selling the drawings and 3D lift videos as a reason to
+choose RMT. Until now they only appeared as free Resources.
+
+
+NEW PAGE
+--------------------------------------------------------------------------
+  /services/lift-plan-drawings-3d-videos
+    Title     Lift Plan Drawings & 3D Lift Videos | RMT Solutions  (51)
+    Desc.     Elevation, plan, rigging and 3D drawings of the real machine
+              and a 4K 3D video of the lift, with every RMT lift plan:
+              cranes, HIABs, excavators and more.  (153)
+    Offer     Ricky, 27 Nov 2026: drawings and a 3D video for EVERY lifting
+              device, included in the price of the plan (matching the
+              /services/lift-plans film, which already says every plan comes
+              with drawings and a 3D animation). Prices as Round 17: £200 +
+              VAT for excavator, telehandler, forklift and lorry loader;
+              mobile and tower crane quoted per job with the site visit.
+              Drawings and videos come only with lift plans RMT writes, never
+              on their own for someone else's plan.
+    Searches  GSC 26 Aug to 25 Nov 2026 (all countries): "lift plan drawing"
+              319 impressions at 7.5, "crane lifting plan drawing" 108 at
+              10.7, "lifting plan drawing" 100 at 7.2, "3d lift plan" 50 at
+              14.4, "3d lift planning" 28 at 8.5.
+    Contents  Drawings and 3D company film; the four sheets (EL-01, PL-01,
+              RG-01, 3D-01); mobile crane 3D video; "drawn to the real
+              machine" and "what it costs"; who it helps; a grid of the other
+              seven 3D videos (tower crane, spider crane, lorry loader,
+              excavator, telehandler, steel erection); mobile crane drawing
+              gallery; links to the video and drawing hubs; seven FAQs
+              (rendered and FAQPage JSON-LD from one list); quote form;
+              related services.
+    Schema    Service, WebPage, BreadcrumbList, FAQPage; VideoObject and
+              ImageObject come from the existing video and gallery components.
+
+
+LINKED FROM
+--------------------------------------------------------------------------
+  components/Header.js            services menu, after Tandem
+  components/Footer.js            services column, after Tandem
+  components/RelatedServices.js   new card; first related link on the lift
+                                  plans, mobile crane and tower crane pages
+  app/services/page.js            services hub card (Specialist)
+  app/sitemap-feed/route.js       SERVICE_SLUGS
+  app/resources/lift-plan-videos/page.js            link under the videos
+  app/resources/lift-plan-drawing-examples/page.js  paragraph under the intro
+
+  Linked from the menu and the sitemap on day one, so Google can find it.
+  After deploy: Search Console > URL Inspection > Request indexing.

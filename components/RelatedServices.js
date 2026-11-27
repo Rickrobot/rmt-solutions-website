@@ -44,6 +44,10 @@ const ALL_SERVICES = {
     title: 'Tower Crane Contracts',
     description: 'Ongoing CPCS A61 Appointed Person contracts with 8-weekly audits, documentation management, and on-call AP support.',
   },
+  'lift-plan-drawings-3d-videos': {
+    title: 'Lift Plan Drawings & 3D Videos',
+    description: 'Elevation, plan, rigging and 3D drawings to the real machine, and a 4K 3D video of the lift, included with every lift plan.',
+  },
   'tandem-lift-plans': {
     title: 'Tandem & Multi-Crane Lift Plans',
     description: 'Load share calculation, crane derating, synchronised control and side loading — tandem and multi-crane lifts planned to BS 7121.',
@@ -86,21 +90,22 @@ const ALL_SERVICES = {
 // — by equipment type, by buyer journey, or by complementary deliverable.
 const RELATED_MAP = {
   'appointed-person':          ['lift-plans', 'lift-plan-checking', 'urgent-lift-plans', 'tower-crane'],
-  'lift-plans':                ['appointed-person', 'lift-plan-checking', 'method-statements-rams', 'excavator-lift-plans'],
+  'lift-plans':                ['lift-plan-drawings-3d-videos', 'appointed-person', 'lift-plan-checking', 'method-statements-rams'],
   'urgent-lift-plans':         ['lift-plans', 'appointed-person', 'lift-plan-checking', 'excavator-lift-plans'],
   'lift-plan-checking':        ['appointed-person', 'lift-plans', 'method-statements-rams', 'lifting-operations-audit'],
   // Rejection-recovery RAMS service (Aug 2026). Sits alongside lift plan
   // checking as the same review standard applied to the wider document set.
   'method-statements-rams':    ['lift-plan-checking', 'lift-plans', 'steel-erection', 'appointed-person'],
   'lifting-operations-audit':  ['tower-crane', 'lift-plan-checking', 'appointed-person'],
-  'tower-crane':               ['appointed-person', 'lifting-operations-audit', 'mobile-crane-lift-plans', 'steel-erection'],
+  'tower-crane':               ['lift-plan-drawings-3d-videos', 'appointed-person', 'lifting-operations-audit', 'mobile-crane-lift-plans'],
   'steel-erection':            ['tandem-lift-plans', 'tower-crane', 'method-statements-rams'],
   'tandem-lift-plans':         ['steel-erection', 'mobile-crane-lift-plans', 'lift-plans', 'appointed-person'],
   'excavator-lift-plans':      ['lift-plans', 'telehandler-lift-plans', 'lift-plan-checking'],
   'telehandler-lift-plans':    ['excavator-lift-plans', 'lorry-loader-lift-plans', 'forklift-lift-plans'],
   'forklift-lift-plans':       ['telehandler-lift-plans', 'overhead-gantry-crane-lift-plans', 'lift-plans'],
   'lorry-loader-lift-plans':   ['telehandler-lift-plans', 'mobile-crane-lift-plans', 'lift-plans'],
-  'mobile-crane-lift-plans':   ['tower-crane', 'tandem-lift-plans', 'lift-plans', 'steel-erection'],
+  'mobile-crane-lift-plans':   ['lift-plan-drawings-3d-videos', 'tower-crane', 'tandem-lift-plans', 'lift-plans'],
+  'lift-plan-drawings-3d-videos': ['lift-plans', 'mobile-crane-lift-plans', 'excavator-lift-plans'],
   'overhead-gantry-crane-lift-plans': ['lift-plans', 'forklift-lift-plans', 'lift-plan-checking'],
   'aerial-site-surveys':       ['lift-plans', 'mobile-crane-lift-plans', 'tower-crane'],
 }

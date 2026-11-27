@@ -13,6 +13,7 @@ export default function Footer() {
     { name: 'Overhead & Gantry Crane Lift Plans', href: '/services/overhead-gantry-crane-lift-plans' },
     { name: 'Tower Crane Contracts', href: '/services/tower-crane' },
     { name: 'Tandem & Multi-Crane Lift Plans', href: '/services/tandem-lift-plans' },
+    { name: 'Lift Plan Drawings & 3D Videos', href: '/services/lift-plan-drawings-3d-videos' },
     { name: 'Steel Erection Planning', href: '/services/steel-erection' },
     { name: 'Lift Plan Checking', href: '/services/lift-plan-checking' },
     { name: 'Lifting Operations Audit', href: '/services/lifting-operations-audit' },

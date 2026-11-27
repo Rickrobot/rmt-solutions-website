@@ -83,6 +83,7 @@ export default function LiftPlanVideosPage() {
           </div>
           <div className="flex flex-wrap gap-4 mt-12">
             <Link href="/resources/lift-plan-drawing-examples" className="btn-primary inline-flex items-center gap-2">Lift plan drawing examples <ArrowRight className="w-5 h-5" aria-hidden="true" /></Link>
+            <Link href="/services/lift-plan-drawings-3d-videos" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold px-2 py-3">Drawings and 3D video with every lift plan <ArrowRight className="w-5 h-5" aria-hidden="true" /></Link>
             <Link href="/services/lift-plans" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold px-2 py-3">Get a lift plan written <ArrowRight className="w-5 h-5" aria-hidden="true" /></Link>
           </div>
         </div>
