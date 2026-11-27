@@ -1,0 +1,78 @@
+SEO FIXES — ROUND 18 (27 November 2026)
+=======================================
+
+From the Search Console export for 26 Aug to 25 Nov 2026. The three
+guides with the most impressions: one gets a new title now, two keep their
+10 Nov titles until there is enough data to judge them. One file changed:
+lib/blogPosts.js.
+
+
+CHANGED NOW
+--------------------------------------------------------------------------
+  /blog/when-do-you-need-lift-plan
+    Why       22,111 impressions (most on the site), position 8.0, 0.62% CTR,
+              136 clicks. Title unchanged since August, so three months of
+              data. People search "required" / "requirements", not the
+              slug's wording: "when is a lift plan required" 218, "do you
+              need a lift plan for every lift" 213, "lift plan requirements"
+              139, "lifting plan requirements" 134, "lift plans are
+              mandatory for" 120. "when do you need a lift plan" itself: 12.
+    Title     Before  When Do You Need a Lift Plan? Free Flowchart (PDF)
+              After   When Is a Lift Plan Required? UK Rules + Free Flowchart  (55)
+    Desc.     After   Yes: LOLER requires every lift to be planned, but the
+                      detail depends on the lift. The basic, standard and
+                      complex triggers, with a free A4 flowchart.  (149)
+    Hire box  Now asks for the machine, the load and the site details in
+              writing, gives a fixed-price quote within 4 working hours,
+              uses "Lift plan writing" as the link text to /services/lift-plans
+              (a priority-one keyword with no data yet), and states the
+              Round 17 price rule: £200 + VAT for excavator, telehandler,
+              forklift and lorry loader; mobile and tower crane quoted per job
+              with a site visit. Button: "Get a fixed-price quote →".
+
+  /blog/what-is-bs-7121-complete-guide
+    Hire box  "Category A/B determination" now reads "CAT A (approved) or
+              CAT B (rejected) determination". The page body uses Basic /
+              Standard / Complex lift categories, so the old wording read as
+              a different system. Wording only; title not touched.
+
+  /blog/cpcs-appointed-person-guide
+    Order     The "hire a CPCS A61 Appointed Person" box now comes before the
+              free duties checklist box, so a searcher who wants to hire one
+              sees that first. Wording unchanged.
+
+
+HELD — CHECK AGAIN LATER (drafts ready)
+--------------------------------------------------------------------------
+  /blog/what-is-bs-7121-complete-guide   check from 8 Dec 2026
+    The title and description changed on 10 Nov; another change now would
+    leave neither version measurable. If "bs7121" + "bs 7121" are still
+    under 2% CTR with four weeks of data:
+      Title  BS 7121 Explained: Every Part and Its Current Edition  (53)
+    Before using it, the page must actually give the current edition of
+    every part it lists. The BS 7121-2 sub-parts are searched on their own
+    ("bs 7121-2" 166, "-2-1" 143, "-2-3" 111, "-2-7" 110, "bs 7121 latest
+    edition" 162, all about position 7 to 11) and the page gives no dates
+    for them, -7, -11 or -12 to -14. Check each date against BSI first.
+
+  /blog/cpcs-appointed-person-guide   switch once /services/appointed-person is indexed
+    The 23 Nov check had the service page "Discovered – currently not
+    indexed". Until Google indexes it, this guide is the only page answering
+    Appointed Person searches, so leave its 10 Nov title alone. Once the
+    service page shows impressions, move the guide to the "what is" searches
+    so it stops competing for "cpcs appointed person" / "appointed person
+    hire", which belong to the service page:
+      Title  What Is an Appointed Person? CPCS A61 Duties Explained  (54)
+      Desc.  What a CPCS A61 Appointed Person does under LOLER and BS 7121,
+             Basic vs Advanced cards, when you need one, plus a free
+             27-point duties checklist (PDF).  (151)
+    At the same time take "lift planning services", "lift planning experts"
+    and "cpcs appointed person" out of this post's keywords list.
+
+
+CHECKED
+--------------------------------------------------------------------------
+  lib/blogPosts.js loads in Node: 31 posts, new title and description
+  lengths as above. `npm run build` on the Mac Studio compiled clean (exit 0);
+  the built /blog/when-do-you-need-lift-plan page carries the new title,
+  description and quote button.
